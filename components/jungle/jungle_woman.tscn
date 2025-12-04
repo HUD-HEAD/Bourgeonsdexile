@@ -1,0 +1,59 @@
+[gd_scene load_steps=11 format=3 uid="uid://cyyx1fl7vyhle"]
+
+[ext_resource type="Texture2D" uid="uid://dvj16artsfr2g" path="res://graphics/jungle/jungle_woman/not_pregnant/idle/1.png" id="1_5vmx6"]
+[ext_resource type="Texture2D" uid="uid://cepco3vr1q46h" path="res://graphics/jungle/jungle_woman/not_pregnant/idle/2.png" id="2_jjq83"]
+[ext_resource type="Texture2D" uid="uid://cigsatec33xpv" path="res://graphics/jungle/jungle_woman/not_pregnant/idle/3.png" id="3_sx88w"]
+[ext_resource type="Texture2D" uid="uid://c4sue7vfp8ecx" path="res://graphics/jungle/jungle_woman/not_pregnant/running/1.png" id="4_c626s"]
+[ext_resource type="Texture2D" uid="uid://dn786oalyqdxt" path="res://graphics/jungle/jungle_woman/not_pregnant/running/2.png" id="5_ewd8q"]
+[ext_resource type="Texture2D" uid="uid://ds0ishyrnxewi" path="res://graphics/jungle/jungle_woman/not_pregnant/running/3.png" id="6_fg600"]
+[ext_resource type="Texture2D" uid="uid://buerc6hnxjcx0" path="res://graphics/jungle/jungle_woman/not_pregnant/running/4.png" id="7_vr2kq"]
+[ext_resource type="Texture2D" uid="uid://dru8yjutsaxk6" path="res://graphics/jungle/jungle_woman/not_pregnant/running/5.png" id="8_ec277"]
+[ext_resource type="Texture2D" uid="uid://dehjelh4f3hpj" path="res://graphics/jungle/jungle_woman/not_pregnant/running/6.png" id="9_dknnh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_haisx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5vmx6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jjq83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sx88w")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_c626s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ewd8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fg600")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vr2kq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ec277")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dknnh")
+}],
+"loop": true,
+"name": &"running",
+"speed": 5.0
+}]
+
+[node name="JungleWoman" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -131)
+sprite_frames = SubResource("SpriteFrames_haisx")
+animation = &"idle"
+frame_progress = 0.6945337
