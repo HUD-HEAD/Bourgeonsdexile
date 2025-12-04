@@ -1,4 +1,5 @@
 ## This script makes it possible to scroll on a 2D element by click and dragging anywhere on the screen.
+## #WARNING : With current implementation, only 1 scroller per scene will be functional
 
 extends Node2D
 

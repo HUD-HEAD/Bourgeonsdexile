@@ -2,14 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://4vsye4akgdus" path="res://graphics/jungle/environment/alltogether.png" id="1_633mf"]
 [ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/jungle/jungle_woman.tscn" id="2_2u04l"]
-[ext_resource type="Script" uid="uid://cgpccsevadjv3" path="res://components/utils/scroller.gd" id="2_tt4qs"]
+[ext_resource type="PackedScene" uid="uid://bcmlx764idr8b" path="res://components/utils/scroller.tscn" id="2_tt4qs"]
 
 [node name="Jungle" type="Node2D"]
 
-[node name="Alltogether" type="Sprite2D" parent="."]
+[node name="Scroller" parent="." instance=ExtResource("2_tt4qs")]
+
+[node name="Alltogether" type="Sprite2D" parent="Scroller"]
 texture = ExtResource("1_633mf")
 centered = false
-script = ExtResource("2_tt4qs")
 
 [node name="JungleWoman" parent="." instance=ExtResource("2_2u04l")]
 position = Vector2(202, 666)

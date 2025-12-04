@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcmlx764idr8b"]
+
+[ext_resource type="Script" uid="uid://cgpccsevadjv3" path="res://components/utils/scroller.gd" id="1_vtee0"]
+
+[node name="Scroller" type="Node2D"]
+script = ExtResource("1_vtee0")
