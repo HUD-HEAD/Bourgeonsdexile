@@ -1,13 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://brc35c78ohvta"]
+[gd_scene load_steps=4 format=3 uid="uid://brc35c78ohvta"]
 
 [ext_resource type="Texture2D" uid="uid://4vsye4akgdus" path="res://graphics/jungle/environment/alltogether.png" id="1_633mf"]
 [ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/jungle/jungle_woman.tscn" id="2_2u04l"]
+[ext_resource type="Script" uid="uid://cgpccsevadjv3" path="res://components/utils/scroller.gd" id="2_tt4qs"]
 
 [node name="Jungle" type="Node2D"]
 
 [node name="Alltogether" type="Sprite2D" parent="."]
 texture = ExtResource("1_633mf")
 centered = false
+script = ExtResource("2_tt4qs")
 
 [node name="JungleWoman" parent="." instance=ExtResource("2_2u04l")]
 position = Vector2(202, 666)
