@@ -1,18 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ctau0miqtmbj2"]
+[gd_scene load_steps=2 format=3 uid="uid://ctau0miqtmbj2"]
 
 [ext_resource type="PackedScene" uid="uid://brc35c78ohvta" path="res://levels/jungle.tscn" id="1_2262g"]
-[ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/jungle/jungle_woman.tscn" id="2_wdj6m"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wdj6m"]
-size = Vector2(520, 54)
 
 [node name="Main" type="Node"]
 
 [node name="Jungle" parent="." instance=ExtResource("1_2262g")]
-
-[node name="JungleWoman" parent="." instance=ExtResource("2_wdj6m")]
-position = Vector2(1783, 453)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(432, 710)
-texture = SubResource("PlaceholderTexture2D_wdj6m")
