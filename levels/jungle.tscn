@@ -12,5 +12,8 @@
 texture = ExtResource("1_633mf")
 centered = false
 
-[node name="JungleWoman" parent="." instance=ExtResource("2_2u04l")]
+[node name="Scroller2" parent="." instance=ExtResource("2_tt4qs")]
+lock_y = true
+
+[node name="JungleWoman" parent="Scroller2" instance=ExtResource("2_2u04l")]
 position = Vector2(202, 666)

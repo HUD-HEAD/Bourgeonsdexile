@@ -1,5 +1,4 @@
 ## This script makes it possible to scroll on a 2D element by click and dragging anywhere on the screen.
-## #WARNING : With current implementation, only 1 scroller per scene will be functional
 
 extends Node2D
 
@@ -9,7 +8,6 @@ extends Node2D
 
 #Current state
 var dragging : bool = false
-
 
 func _process(delta: float) -> void:
 	if dragging:
@@ -25,7 +23,7 @@ func _input(event: InputEvent) -> void:
 ## Triggers scrolling behavior
 func _start_dragging():
 	#Clear accumulated value to prevent jitter
-	InputManager.clear_mouse_movement()
+	clear_mouse_movement()
 	dragging = true
 
 ## Triggers scrolling behavior
@@ -34,10 +32,40 @@ func _stop_dragging():
 
 ## Returns offset to apply, taking into account locked axis
 func _get_offset() -> Vector2:
-	var offset = InputManager.get_mouse_movement()
+	var offset = get_mouse_movement()
 	if lock_x:
 		offset.x = 0.0
 	if lock_y:
 		offset.y = 0.0
 	
 	return offset
+
+
+
+#NOTICE : Local mouse accumulator allows for multiple scrolling components to coexist.
+#Could be moved to InputManager if unnecessary
+#region Mouse movement tracking
+
+##Accumulator for tracking mouse movement
+var mouse_acc : Vector2 = Vector2.ZERO
+
+func _unhandled_input(event) -> void:
+	_handle_mouse_movement(event)
+	
+## Update mouse accumulator, with smoothing
+func _handle_mouse_movement(event):
+	if event is InputEventMouseMotion :
+		var viewport_transform: Transform2D = get_tree().root.get_final_transform()
+		var xformed_event = event.xformed_by(viewport_transform).relative
+		mouse_acc = mouse_acc.lerp(xformed_event, 0.1)
+
+## Return mouse displacement
+func get_mouse_movement() -> Vector2:
+	var result = mouse_acc * InputManager.mouse_sensitivity
+	clear_mouse_movement()
+	return result
+
+func clear_mouse_movement():
+	mouse_acc = Vector2.ZERO
+
+#endregion
