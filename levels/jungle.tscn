@@ -1,19 +1,54 @@
-[gd_scene load_steps=4 format=3 uid="uid://brc35c78ohvta"]
+[gd_scene load_steps=7 format=3 uid="uid://brc35c78ohvta"]
 
 [ext_resource type="Texture2D" uid="uid://4vsye4akgdus" path="res://graphics/jungle/environment/alltogether.png" id="1_633mf"]
 [ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/jungle/jungle_woman.tscn" id="2_2u04l"]
 [ext_resource type="PackedScene" uid="uid://bcmlx764idr8b" path="res://components/utils/scroller.tscn" id="2_tt4qs"]
+[ext_resource type="Texture2D" uid="uid://c6vk136vsn1v3" path="res://graphics/jungle/environment/water_river.png" id="3_yi4yt"]
+[ext_resource type="Texture2D" uid="uid://bbop14nmmowfx" path="res://graphics/jungle/environment/background_river.png" id="5_on17i"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_yi4yt"]
+size = Vector2(50, 50)
 
 [node name="Jungle" type="Node2D"]
 
 [node name="Scroller" parent="." instance=ExtResource("2_tt4qs")]
+lock_y = true
 
 [node name="Alltogether" type="Sprite2D" parent="Scroller"]
 texture = ExtResource("1_633mf")
 centered = false
 
+[node name="RiverMask" type="Sprite2D" parent="Scroller"]
+clip_children = 2
+texture = ExtResource("3_yi4yt")
+centered = false
+
+[node name="ReflectionContainer" type="Node2D" parent="Scroller/RiverMask"]
+position = Vector2(202, 666)
+
+[node name="JungleWomanReflection" parent="Scroller/RiverMask/ReflectionContainer" instance=ExtResource("2_2u04l")]
+position = Vector2(0, 273)
+
+[node name="AnimatedSprite2D" parent="Scroller/RiverMask/ReflectionContainer/JungleWomanReflection" index="0"]
+self_modulate = Color(1, 1, 1, 0.47058824)
+flip_v = true
+
+[node name="PlaceholderMarker" type="Sprite2D" parent="Scroller/RiverMask/ReflectionContainer"]
+texture = SubResource("PlaceholderTexture2D_yi4yt")
+
+[node name="BackgroundRiver" type="Sprite2D" parent="Scroller"]
+visible = false
+texture = ExtResource("5_on17i")
+centered = false
+
 [node name="Scroller2" parent="." instance=ExtResource("2_tt4qs")]
+lock_x = true
 lock_y = true
 
 [node name="JungleWoman" parent="Scroller2" instance=ExtResource("2_2u04l")]
 position = Vector2(202, 666)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Scroller2/JungleWoman"]
+remote_path = NodePath("../../../Scroller/RiverMask/ReflectionContainer")
+
+[editable path="Scroller/RiverMask/ReflectionContainer/JungleWomanReflection"]
