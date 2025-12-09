@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://rbo3fm2h2obe" path="res://graphics/jungle/environment/nightjungle/night_altogether.png" id="1_8eifr"]
 [ext_resource type="Texture2D" uid="uid://cl2mukxfsqjfa" path="res://graphics/jungle/environment/illuminatedjungle/illuminated_alltogether.png" id="2_6edyn"]
-[ext_resource type="Texture2D" uid="uid://d2eyjir3nvu0h" path="res://graphics/ui/cursor/cursor_line/arrow_line.png" id="3_hbmnn"]
+[ext_resource type="Texture2D" uid="uid://bwjaobumq4x0n" path="res://graphics/ui/cursor/cursor_line/arrow_line.png" id="3_hbmnn"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xujmw"]
 size = Vector2(500, 500)
