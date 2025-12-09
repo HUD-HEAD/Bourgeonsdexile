@@ -19,6 +19,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+SignalManager="*res://components/globals/signal_manager.gd"
+CustomCursor="*res://components/globals/custom_cursor.gd"
 InputManager="*res://components/globals/input_manager.gd"
 
 [display]
