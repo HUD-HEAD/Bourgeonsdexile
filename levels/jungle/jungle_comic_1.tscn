@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://du7xk8lrsn7at"]
+
+[ext_resource type="PackedScene" uid="uid://bcmlx764idr8b" path="res://components/utils/scroller.tscn" id="1_tbmy3"]
+
+[node name="JungleComic1" type="Node2D"]
+
+[node name="Scroller" parent="." instance=ExtResource("1_tbmy3")]
+
+[node name="Camera2D" type="Camera2D" parent="Scroller"]
+limit_left = 0
+limit_right = 5000
+limit_smoothed = true
+position_smoothing_enabled = true
+editor_draw_limits = true

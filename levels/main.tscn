@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ctau0miqtmbj2"]
 
-[ext_resource type="PackedScene" uid="uid://brc35c78ohvta" path="res://levels/jungle.tscn" id="1_2262g"]
+[ext_resource type="PackedScene" uid="uid://brc35c78ohvta" path="res://levels/jungle/jungle.tscn" id="1_2262g"]
 
 [node name="Main" type="Node"]
 
