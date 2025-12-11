@@ -35,6 +35,8 @@ func _get_offset() -> Vector2:
 	var offset = get_mouse_movement()
 	if lock_x:
 		offset.x = 0.0
+	else:	#Panel should move opposite from mouse drag direction
+		offset.x = -offset.x
 	if lock_y:
 		offset.y = 0.0
 	

@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://du7xk8lrsn7at"]
+
+[ext_resource type="PackedScene" uid="uid://bcmlx764idr8b" path="res://components/utils/scroller.tscn" id="1_tbmy3"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gk8gy"]
+size = Vector2(50, 50)
+
+[node name="JungleComic1" type="Node2D"]
+
+[node name="Scroller" parent="." instance=ExtResource("1_tbmy3")]
+lock_y = true
+
+[node name="Camera2D" type="Camera2D" parent="Scroller"]
+position = Vector2(960, 540)
+limit_left = 0
+limit_right = 3840
+limit_smoothed = true
+position_smoothing_enabled = true
+editor_draw_limits = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_gk8gy")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(1870, 1030)
+texture = SubResource("PlaceholderTexture2D_gk8gy")
+centered = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(2880, 540)
+texture = SubResource("PlaceholderTexture2D_gk8gy")
+centered = false
