@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3xbb0f00akh4"]
+
+[ext_resource type="Texture2D" uid="uid://bh5www812vbqf" path="res://graphics/jungle/jungle_comic1/frame3/frame3_background1.png" id="1_2vtsb"]
+[ext_resource type="Texture2D" uid="uid://bipr6qxojr45g" path="res://graphics/jungle/jungle_comic1/frame3/frame3_background2.png" id="2_pmfxp"]
+[ext_resource type="Texture2D" uid="uid://d0crh0kuxjb8p" path="res://graphics/jungle/jungle_comic1/frame3/frame3_background3.png" id="3_wiokp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pu4xu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2vtsb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pmfxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wiokp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="JungleComic1Frame3" type="Node2D"]
+scale = Vector2(0.575, 0.575)
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pu4xu")
