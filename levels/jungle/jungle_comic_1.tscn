@@ -1,9 +1,252 @@
-[gd_scene load_steps=3 format=3 uid="uid://du7xk8lrsn7at"]
+[gd_scene load_steps=65 format=3 uid="uid://du7xk8lrsn7at"]
 
 [ext_resource type="PackedScene" uid="uid://bcmlx764idr8b" path="res://components/utils/scroller.tscn" id="1_tbmy3"]
+[ext_resource type="Texture2D" uid="uid://bk8e35r0cgct5" path="res://graphics/jungle/jungle_comic1/frame1/frame1_background.png" id="2_si3rw"]
+[ext_resource type="Texture2D" uid="uid://cohqymwnglqro" path="res://graphics/jungle/jungle_comic1/frame1/frame1_light.png" id="3_ucrt7"]
+[ext_resource type="Texture2D" uid="uid://dvshx1spa1rqh" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background1.png" id="4_t7b1l"]
+[ext_resource type="Texture2D" uid="uid://7fexdxoyjov0" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background2.png" id="5_wuvnu"]
+[ext_resource type="Texture2D" uid="uid://ckk1bsdeqb3h0" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background3.png" id="6_lmwta"]
+[ext_resource type="Texture2D" uid="uid://dyq0vaue6i7eo" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background4.png" id="7_rkaop"]
+[ext_resource type="Texture2D" uid="uid://dymblfrjwdfw5" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background5.png" id="8_pu4xu"]
+[ext_resource type="Texture2D" uid="uid://bk8ngf1p4kiw6" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background6.png" id="9_cqmf0"]
+[ext_resource type="Texture2D" uid="uid://dct46x1gi6ely" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background7.png" id="10_o8wku"]
+[ext_resource type="Texture2D" uid="uid://spkel1815sif" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background8.png" id="11_ynlpr"]
+[ext_resource type="Texture2D" uid="uid://bdhymu3mkkfku" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background9.png" id="12_0igvp"]
+[ext_resource type="Texture2D" uid="uid://c5bhkog7e4viy" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background10.png" id="13_jpuy7"]
+[ext_resource type="Texture2D" uid="uid://vbva1vf0ctxx" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background11.png" id="14_47thf"]
+[ext_resource type="Texture2D" uid="uid://c10q6c40fvduk" path="res://graphics/jungle/jungle_comic1/frame2/frame2_man/frame2_man1.png" id="15_js7ra"]
+[ext_resource type="Texture2D" uid="uid://dxtvuslv2qd0i" path="res://graphics/jungle/jungle_comic1/frame2/frame2_man/frame2_man2.png" id="16_tkhhm"]
+[ext_resource type="Texture2D" uid="uid://t2k44342do2j" path="res://graphics/jungle/jungle_comic1/frame2/frame2_man/frame2_man3.png" id="17_pja5d"]
+[ext_resource type="Texture2D" uid="uid://wtqm2elbt0p2" path="res://graphics/jungle/jungle_comic1/frame2/frame2_man/frame2_man4.png" id="18_5b7s7"]
+[ext_resource type="Texture2D" uid="uid://cgnv31r828u2b" path="res://graphics/jungle/jungle_comic1/frame2/frame2_woman/frame2_woman1.png" id="19_cur3k"]
+[ext_resource type="Texture2D" uid="uid://cv2wdhlwmx0pv" path="res://graphics/jungle/jungle_comic1/frame2/frame2_woman/frame2_woman2.png" id="20_0jxyh"]
+[ext_resource type="Texture2D" uid="uid://da2i01jiucf1s" path="res://graphics/jungle/jungle_comic1/frame2/frame2_woman/frame2_woman3.png" id="21_fcqja"]
+[ext_resource type="Texture2D" uid="uid://c68326v16qycx" path="res://graphics/jungle/jungle_comic1/frame2/frame2_woman/frame2_woman4.png" id="22_oyui7"]
+[ext_resource type="Texture2D" uid="uid://ptiqn6vacpka" path="res://graphics/jungle/jungle_comic1/frame2/frame2_woman/frame2_woman5.png" id="23_w1v5l"]
+[ext_resource type="Texture2D" uid="uid://ftlhg0511way" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction1.png" id="24_pedkw"]
+[ext_resource type="Texture2D" uid="uid://b6p4cuurhvxyo" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction2.png" id="25_ibbpb"]
+[ext_resource type="Texture2D" uid="uid://3y15vlttloko" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction3.png" id="26_ppo6s"]
+[ext_resource type="Texture2D" uid="uid://c810x0xt3fvon" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction4.png" id="27_hbr7m"]
+[ext_resource type="Texture2D" uid="uid://bmbiyxo14qtpk" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction5.png" id="28_bva4g"]
+[ext_resource type="Texture2D" uid="uid://b5d3ouridrhhp" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction6.png" id="29_kcpqv"]
+[ext_resource type="Texture2D" uid="uid://d1g66bknnq522" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction7.png" id="30_5o7bg"]
+[ext_resource type="Texture2D" uid="uid://don5lntmxuxps" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction8.png" id="31_aqgg0"]
+[ext_resource type="Texture2D" uid="uid://bh5www812vbqf" path="res://graphics/jungle/jungle_comic1/frame3/frame3_background1.png" id="32_wuvnu"]
+[ext_resource type="Texture2D" uid="uid://bipr6qxojr45g" path="res://graphics/jungle/jungle_comic1/frame3/frame3_background2.png" id="33_lmwta"]
+[ext_resource type="Texture2D" uid="uid://d0crh0kuxjb8p" path="res://graphics/jungle/jungle_comic1/frame3/frame3_background3.png" id="34_rkaop"]
+[ext_resource type="Texture2D" uid="uid://dle01bqk8s7i4" path="res://graphics/jungle/jungle_comic1/frame4/frame4_drawer.png" id="35_tkhhm"]
+[ext_resource type="Texture2D" uid="uid://82bd4afkt4qf" path="res://graphics/jungle/jungle_comic1/frame4/draweritems/frame4_box.png" id="36_pja5d"]
+[ext_resource type="Texture2D" uid="uid://bbbrw0r0b747g" path="res://graphics/jungle/jungle_comic1/frame4/draweritems/frame4_notebook.png" id="37_5b7s7"]
+[ext_resource type="Texture2D" uid="uid://cyvke2dgs7xk" path="res://graphics/jungle/jungle_comic1/frame4/draweritems/frame4_passport.png" id="38_cur3k"]
+[ext_resource type="Texture2D" uid="uid://dd5awkyogh18c" path="res://graphics/jungle/jungle_comic1/frame4/draweritems/frame4_pills.png" id="39_0jxyh"]
+[ext_resource type="Texture2D" uid="uid://bxee78yjc4ko0" path="res://graphics/jungle/jungle_comic1/frame4/frame4_table.png" id="40_fcqja"]
+[ext_resource type="Texture2D" uid="uid://86hyjp40hdyh" path="res://graphics/jungle/jungle_comic1/frame4/tableitems/frame4_biggerpills.png" id="41_oyui7"]
+[ext_resource type="Texture2D" uid="uid://dgrbe41rvrmxv" path="res://graphics/jungle/jungle_comic1/frame4/tableitems/frame4_keys.png" id="42_w1v5l"]
+[ext_resource type="Texture2D" uid="uid://dmwbccmv3iej4" path="res://graphics/jungle/jungle_comic1/frame4/tableitems/frame4_pen.png" id="43_pedkw"]
+[ext_resource type="Texture2D" uid="uid://yaby0pr2phej" path="res://graphics/jungle/jungle_comic1/frame4/tableitems/frame4_picture.png" id="44_ibbpb"]
+[ext_resource type="Texture2D" uid="uid://cdwdcjr5jd7x0" path="res://graphics/jungle/jungle_comic1/frame4/tableitems/frame4_wallet.png" id="45_ppo6s"]
+[ext_resource type="Texture2D" uid="uid://hdimigdjp30a" path="res://graphics/jungle/jungle_comic1/frame4/filters/filters.png" id="46_5b7s7"]
+[ext_resource type="Texture2D" uid="uid://csbxopldb55hu" path="res://graphics/jungle/jungle_comic1/frame4/frame4_blindlight.png" id="47_cur3k"]
+[ext_resource type="Texture2D" uid="uid://ds36f4qiwv7ub" path="res://graphics/jungle/jungle_comic1/frame5/frame5_background.png" id="48_oyui7"]
+[ext_resource type="Texture2D" uid="uid://bbws2bs3tckn8" path="res://graphics/jungle/jungle_comic1/frame5/frame5_woman/frame5_woman1.png" id="49_w1v5l"]
+[ext_resource type="Texture2D" uid="uid://63xpv8rmweb3" path="res://graphics/jungle/jungle_comic1/frame5/frame5_woman/frame5_woman2.png" id="50_pedkw"]
+[ext_resource type="Texture2D" uid="uid://bpyverllmtq1u" path="res://graphics/jungle/jungle_comic1/frame5/frame5_woman/frame5_woman3.png" id="51_ibbpb"]
+[ext_resource type="Texture2D" uid="uid://fy53f8g7cenh" path="res://graphics/jungle/jungle_comic1/frame6/frame6_background.png" id="52_pedkw"]
+[ext_resource type="Texture2D" uid="uid://m6ob8s1pc1l3" path="res://graphics/jungle/jungle_comic1/frame6/frame6_boat.png" id="53_ibbpb"]
+[ext_resource type="Script" uid="uid://bwhw2o2u7v43i" path="res://components/utils/vertical_sine_anim.gd" id="54_ibbpb"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gk8gy"]
 size = Vector2(50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_37uka"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_t7b1l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wuvnu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lmwta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rkaop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pu4xu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cqmf0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_o8wku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ynlpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_0igvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jpuy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_47thf")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fu2ni"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_js7ra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_tkhhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_pja5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_5b7s7")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c4wg1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_cur3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_0jxyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_fcqja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_oyui7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_w1v5l")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_guuja"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_pedkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ibbpb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ppo6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_hbr7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_bva4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_kcpqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_5o7bg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_aqgg0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_47thf")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pu4xu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_wuvnu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_lmwta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_rkaop")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ppo6s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("49_w1v5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_pedkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_ibbpb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_ppo6s"]
+resource_name = "boat_traverse"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0001, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(13193.044, 123.47826), -2986.0872, 3836.6667]
+}
+
+[sub_resource type="Animation" id="Animation_hbr7m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3836.6667]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bva4g"]
+_data = {
+&"RESET": SubResource("Animation_hbr7m"),
+&"boat_traverse": SubResource("Animation_ppo6s")
+}
 
 [node name="JungleComic1" type="Node2D"]
 
@@ -13,7 +256,7 @@ lock_y = true
 [node name="Camera2D" type="Camera2D" parent="Scroller"]
 position = Vector2(960, 540)
 limit_left = 0
-limit_right = 3840
+limit_right = 10533
 limit_smoothed = true
 position_smoothing_enabled = true
 editor_draw_limits = true
@@ -31,3 +274,145 @@ centered = false
 position = Vector2(2880, 540)
 texture = SubResource("PlaceholderTexture2D_gk8gy")
 centered = false
+
+[node name="JungleComic1Frame1" type="Node2D" parent="."]
+position = Vector2(994, 528)
+scale = Vector2(0.575, 0.575)
+metadata/_edit_group_ = true
+
+[node name="Frame1Background" type="Sprite2D" parent="JungleComic1Frame1"]
+texture = ExtResource("2_si3rw")
+
+[node name="Frame1Light" type="Sprite2D" parent="JungleComic1Frame1"]
+texture = ExtResource("3_ucrt7")
+
+[node name="JungleComic1Frame2" type="Node2D" parent="."]
+position = Vector2(2347, 576)
+scale = Vector2(0.575, 0.575)
+metadata/_edit_group_ = true
+
+[node name="Background" type="AnimatedSprite2D" parent="JungleComic1Frame2"]
+scale = Vector2(0.365, 0.365)
+sprite_frames = SubResource("SpriteFrames_37uka")
+
+[node name="Man" type="AnimatedSprite2D" parent="JungleComic1Frame2"]
+scale = Vector2(0.365, 0.365)
+sprite_frames = SubResource("SpriteFrames_fu2ni")
+
+[node name="Woman" type="AnimatedSprite2D" parent="JungleComic1Frame2"]
+scale = Vector2(0.365, 0.365)
+sprite_frames = SubResource("SpriteFrames_c4wg1")
+frame = 4
+frame_progress = 1.0
+
+[node name="Destruction" type="AnimatedSprite2D" parent="JungleComic1Frame2"]
+scale = Vector2(0.365, 0.365)
+sprite_frames = SubResource("SpriteFrames_guuja")
+
+[node name="JungleComic1Frame3" type="Node2D" parent="."]
+position = Vector2(3682, 579)
+scale = Vector2(0.575, 0.575)
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="JungleComic1Frame3"]
+sprite_frames = SubResource("SpriteFrames_pu4xu")
+
+[node name="JungleComic1Frame4" type="Node2D" parent="."]
+position = Vector2(5456, 595)
+scale = Vector2(0.575, 0.575)
+metadata/_edit_group_ = true
+
+[node name="Frame4Drawer" type="Sprite2D" parent="JungleComic1Frame4"]
+texture = ExtResource("35_tkhhm")
+
+[node name="Frame4Box" type="Sprite2D" parent="JungleComic1Frame4/Frame4Drawer"]
+position = Vector2(-228, 34)
+texture = ExtResource("36_pja5d")
+
+[node name="Frame4Notebook" type="Sprite2D" parent="JungleComic1Frame4/Frame4Drawer"]
+position = Vector2(-228, 34)
+texture = ExtResource("37_5b7s7")
+
+[node name="Frame4Passport" type="Sprite2D" parent="JungleComic1Frame4/Frame4Drawer"]
+position = Vector2(-228, 34)
+texture = ExtResource("38_cur3k")
+
+[node name="Frame4Pills" type="Sprite2D" parent="JungleComic1Frame4/Frame4Drawer"]
+position = Vector2(-228, 34)
+texture = ExtResource("39_0jxyh")
+
+[node name="Frame4Table" type="Sprite2D" parent="JungleComic1Frame4"]
+texture = ExtResource("40_fcqja")
+
+[node name="Frame4Biggerpills" type="Sprite2D" parent="JungleComic1Frame4/Frame4Table"]
+scale = Vector2(0.575, 0.575)
+texture = ExtResource("41_oyui7")
+
+[node name="Frame4Keys" type="Sprite2D" parent="JungleComic1Frame4/Frame4Table"]
+scale = Vector2(0.575, 0.575)
+texture = ExtResource("42_w1v5l")
+
+[node name="Frame4Pen" type="Sprite2D" parent="JungleComic1Frame4/Frame4Table"]
+scale = Vector2(0.575, 0.575)
+texture = ExtResource("43_pedkw")
+
+[node name="Frame4Picture" type="Sprite2D" parent="JungleComic1Frame4/Frame4Table"]
+scale = Vector2(0.575, 0.575)
+texture = ExtResource("44_ibbpb")
+
+[node name="Frame4Wallet" type="Sprite2D" parent="JungleComic1Frame4/Frame4Table"]
+scale = Vector2(0.575, 0.575)
+texture = ExtResource("45_ppo6s")
+
+[node name="Filters" type="Sprite2D" parent="JungleComic1Frame4"]
+texture = ExtResource("46_5b7s7")
+
+[node name="Frame4Blindlight" type="Sprite2D" parent="JungleComic1Frame4"]
+texture = ExtResource("47_cur3k")
+
+[node name="JungleComic1Frame5" type="Node2D" parent="."]
+position = Vector2(7282.9995, 619)
+scale = Vector2(0.285, 0.285)
+metadata/_edit_group_ = true
+
+[node name="Frame5Background" type="Sprite2D" parent="JungleComic1Frame5"]
+texture = ExtResource("48_oyui7")
+
+[node name="Woman" type="AnimatedSprite2D" parent="JungleComic1Frame5"]
+sprite_frames = SubResource("SpriteFrames_ppo6s")
+autoplay = "default"
+frame_progress = 0.26027757
+
+[node name="JungleComic1Frame6" type="Node2D" parent="."]
+position = Vector2(9255, 652)
+scale = Vector2(0.3, 0.3)
+metadata/_edit_group_ = true
+
+[node name="Frame6Background" type="Sprite2D" parent="JungleComic1Frame6"]
+texture = ExtResource("52_pedkw")
+
+[node name="Frame6Boat" type="Sprite2D" parent="JungleComic1Frame6"]
+position = Vector2(3836.6667, 0)
+texture = ExtResource("53_ibbpb")
+script = ExtResource("54_ibbpb")
+speed = 3.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="JungleComic1Frame6/Frame6Boat"]
+libraries = {
+&"": SubResource("AnimationLibrary_bva4g")
+}
+autoplay = "boat_traverse"
+
+[node name="JungleComic1Frame7" type="Node2D" parent="."]
+position = Vector2(994, 528)
+scale = Vector2(0.575, 0.575)
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="JungleComic1Frame7"]
+
+[node name="JungleComic1Frame8" type="Node2D" parent="."]
+position = Vector2(994, 528)
+scale = Vector2(0.575, 0.575)
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="JungleComic1Frame8"]
