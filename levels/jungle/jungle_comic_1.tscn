@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://du7xk8lrsn7at"]
+[gd_scene load_steps=53 format=3 uid="uid://du7xk8lrsn7at"]
 
 [ext_resource type="PackedScene" uid="uid://bcmlx764idr8b" path="res://components/utils/scroller.tscn" id="1_tbmy3"]
 [ext_resource type="Texture2D" uid="uid://bk8e35r0cgct5" path="res://graphics/jungle/jungle_comic1/frame1/frame1_background.png" id="2_si3rw"]
@@ -34,19 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://bh5www812vbqf" path="res://graphics/jungle/jungle_comic1/frame3/frame3_background1.png" id="32_wuvnu"]
 [ext_resource type="Texture2D" uid="uid://bipr6qxojr45g" path="res://graphics/jungle/jungle_comic1/frame3/frame3_background2.png" id="33_lmwta"]
 [ext_resource type="Texture2D" uid="uid://d0crh0kuxjb8p" path="res://graphics/jungle/jungle_comic1/frame3/frame3_background3.png" id="34_rkaop"]
-[ext_resource type="Texture2D" uid="uid://dle01bqk8s7i4" path="res://graphics/jungle/jungle_comic1/frame4/frame4_drawer.png" id="35_tkhhm"]
-[ext_resource type="Texture2D" uid="uid://82bd4afkt4qf" path="res://graphics/jungle/jungle_comic1/frame4/draweritems/frame4_box.png" id="36_pja5d"]
-[ext_resource type="Texture2D" uid="uid://bbbrw0r0b747g" path="res://graphics/jungle/jungle_comic1/frame4/draweritems/frame4_notebook.png" id="37_5b7s7"]
-[ext_resource type="Texture2D" uid="uid://cyvke2dgs7xk" path="res://graphics/jungle/jungle_comic1/frame4/draweritems/frame4_passport.png" id="38_cur3k"]
-[ext_resource type="Texture2D" uid="uid://dd5awkyogh18c" path="res://graphics/jungle/jungle_comic1/frame4/draweritems/frame4_pills.png" id="39_0jxyh"]
-[ext_resource type="Texture2D" uid="uid://bxee78yjc4ko0" path="res://graphics/jungle/jungle_comic1/frame4/frame4_table.png" id="40_fcqja"]
-[ext_resource type="Texture2D" uid="uid://86hyjp40hdyh" path="res://graphics/jungle/jungle_comic1/frame4/tableitems/frame4_biggerpills.png" id="41_oyui7"]
-[ext_resource type="Texture2D" uid="uid://dgrbe41rvrmxv" path="res://graphics/jungle/jungle_comic1/frame4/tableitems/frame4_keys.png" id="42_w1v5l"]
-[ext_resource type="Texture2D" uid="uid://dmwbccmv3iej4" path="res://graphics/jungle/jungle_comic1/frame4/tableitems/frame4_pen.png" id="43_pedkw"]
-[ext_resource type="Texture2D" uid="uid://yaby0pr2phej" path="res://graphics/jungle/jungle_comic1/frame4/tableitems/frame4_picture.png" id="44_ibbpb"]
-[ext_resource type="Texture2D" uid="uid://cdwdcjr5jd7x0" path="res://graphics/jungle/jungle_comic1/frame4/tableitems/frame4_wallet.png" id="45_ppo6s"]
-[ext_resource type="Texture2D" uid="uid://hdimigdjp30a" path="res://graphics/jungle/jungle_comic1/frame4/filters/filters.png" id="46_5b7s7"]
-[ext_resource type="Texture2D" uid="uid://csbxopldb55hu" path="res://graphics/jungle/jungle_comic1/frame4/frame4_blindlight.png" id="47_cur3k"]
+[ext_resource type="PackedScene" uid="uid://bq0ewephc3xv5" path="res://components/jungle/jungle_comic_1_frame_4.tscn" id="35_jpuy7"]
 [ext_resource type="Texture2D" uid="uid://ds36f4qiwv7ub" path="res://graphics/jungle/jungle_comic1/frame5/frame5_background.png" id="48_oyui7"]
 [ext_resource type="Texture2D" uid="uid://bbws2bs3tckn8" path="res://graphics/jungle/jungle_comic1/frame5/frame5_woman/frame5_woman1.png" id="49_w1v5l"]
 [ext_resource type="Texture2D" uid="uid://63xpv8rmweb3" path="res://graphics/jungle/jungle_comic1/frame5/frame5_woman/frame5_woman2.png" id="50_pedkw"]
@@ -211,6 +199,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_hbr7m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3836.6667]
+}
+
 [sub_resource type="Animation" id="Animation_ppo6s"]
 resource_name = "boat_traverse"
 length = 5.0
@@ -225,21 +228,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(13193.044, 123.47826), -2986.0872, 3836.6667]
-}
-
-[sub_resource type="Animation" id="Animation_hbr7m"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [3836.6667]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bva4g"]
@@ -317,58 +305,8 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="JungleComic1Frame3"]
 sprite_frames = SubResource("SpriteFrames_pu4xu")
 
-[node name="JungleComic1Frame4" type="Node2D" parent="."]
-position = Vector2(5456, 595)
-scale = Vector2(0.575, 0.575)
-metadata/_edit_group_ = true
-
-[node name="Frame4Drawer" type="Sprite2D" parent="JungleComic1Frame4"]
-texture = ExtResource("35_tkhhm")
-
-[node name="Frame4Box" type="Sprite2D" parent="JungleComic1Frame4/Frame4Drawer"]
-position = Vector2(-228, 34)
-texture = ExtResource("36_pja5d")
-
-[node name="Frame4Notebook" type="Sprite2D" parent="JungleComic1Frame4/Frame4Drawer"]
-position = Vector2(-228, 34)
-texture = ExtResource("37_5b7s7")
-
-[node name="Frame4Passport" type="Sprite2D" parent="JungleComic1Frame4/Frame4Drawer"]
-position = Vector2(-228, 34)
-texture = ExtResource("38_cur3k")
-
-[node name="Frame4Pills" type="Sprite2D" parent="JungleComic1Frame4/Frame4Drawer"]
-position = Vector2(-228, 34)
-texture = ExtResource("39_0jxyh")
-
-[node name="Frame4Table" type="Sprite2D" parent="JungleComic1Frame4"]
-texture = ExtResource("40_fcqja")
-
-[node name="Frame4Biggerpills" type="Sprite2D" parent="JungleComic1Frame4/Frame4Table"]
-scale = Vector2(0.575, 0.575)
-texture = ExtResource("41_oyui7")
-
-[node name="Frame4Keys" type="Sprite2D" parent="JungleComic1Frame4/Frame4Table"]
-scale = Vector2(0.575, 0.575)
-texture = ExtResource("42_w1v5l")
-
-[node name="Frame4Pen" type="Sprite2D" parent="JungleComic1Frame4/Frame4Table"]
-scale = Vector2(0.575, 0.575)
-texture = ExtResource("43_pedkw")
-
-[node name="Frame4Picture" type="Sprite2D" parent="JungleComic1Frame4/Frame4Table"]
-scale = Vector2(0.575, 0.575)
-texture = ExtResource("44_ibbpb")
-
-[node name="Frame4Wallet" type="Sprite2D" parent="JungleComic1Frame4/Frame4Table"]
-scale = Vector2(0.575, 0.575)
-texture = ExtResource("45_ppo6s")
-
-[node name="Filters" type="Sprite2D" parent="JungleComic1Frame4"]
-texture = ExtResource("46_5b7s7")
-
-[node name="Frame4Blindlight" type="Sprite2D" parent="JungleComic1Frame4"]
-texture = ExtResource("47_cur3k")
+[node name="JungleComic1Frame4" parent="." instance=ExtResource("35_jpuy7")]
+position = Vector2(5468, 583)
 
 [node name="JungleComic1Frame5" type="Node2D" parent="."]
 position = Vector2(7282.9995, 619)
