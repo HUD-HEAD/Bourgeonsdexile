@@ -1,0 +1,164 @@
+[gd_scene load_steps=24 format=3 uid="uid://bq0ewephc3xv5"]
+
+[ext_resource type="Texture2D" uid="uid://dle01bqk8s7i4" path="res://graphics/jungle/jungle_comic1/frame4/frame4_drawer.png" id="1_qb8vt"]
+[ext_resource type="Texture2D" uid="uid://82bd4afkt4qf" path="res://graphics/jungle/jungle_comic1/frame4/draweritems/frame4_box.png" id="2_n2g0o"]
+[ext_resource type="PackedScene" uid="uid://be8m0cbcq6bww" path="res://components/jungle/jungle_item.tscn" id="2_tphwk"]
+[ext_resource type="Texture2D" uid="uid://bbbrw0r0b747g" path="res://graphics/jungle/jungle_comic1/frame4/draweritems/frame4_notebook.png" id="3_tphwk"]
+[ext_resource type="Texture2D" uid="uid://cyvke2dgs7xk" path="res://graphics/jungle/jungle_comic1/frame4/draweritems/frame4_passport.png" id="4_71kyb"]
+[ext_resource type="Texture2D" uid="uid://dd5awkyogh18c" path="res://graphics/jungle/jungle_comic1/frame4/draweritems/frame4_pills.png" id="5_uyu3e"]
+[ext_resource type="Texture2D" uid="uid://bxee78yjc4ko0" path="res://graphics/jungle/jungle_comic1/frame4/frame4_table.png" id="6_qme1i"]
+[ext_resource type="Texture2D" uid="uid://86hyjp40hdyh" path="res://graphics/jungle/jungle_comic1/frame4/tableitems/frame4_biggerpills.png" id="7_hhjir"]
+[ext_resource type="Texture2D" uid="uid://dgrbe41rvrmxv" path="res://graphics/jungle/jungle_comic1/frame4/tableitems/frame4_keys.png" id="8_3l804"]
+[ext_resource type="Texture2D" uid="uid://dmwbccmv3iej4" path="res://graphics/jungle/jungle_comic1/frame4/tableitems/frame4_pen.png" id="9_p2opm"]
+[ext_resource type="Texture2D" uid="uid://yaby0pr2phej" path="res://graphics/jungle/jungle_comic1/frame4/tableitems/frame4_picture.png" id="10_l206v"]
+[ext_resource type="Texture2D" uid="uid://cdwdcjr5jd7x0" path="res://graphics/jungle/jungle_comic1/frame4/tableitems/frame4_wallet.png" id="11_hm6l7"]
+[ext_resource type="Texture2D" uid="uid://hdimigdjp30a" path="res://graphics/jungle/jungle_comic1/frame4/filters/filters.png" id="12_877b8"]
+[ext_resource type="Texture2D" uid="uid://csbxopldb55hu" path="res://graphics/jungle/jungle_comic1/frame4/frame4_blindlight.png" id="13_dgwin"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n2g0o"]
+size = Vector2(187.30737, 324.336)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tphwk"]
+size = Vector2(250.61382, 324.336)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_71kyb"]
+size = Vector2(399.2805, 239.20317)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uyu3e"]
+size = Vector2(179.52545, 255.84239)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qme1i"]
+size = Vector2(120.92911, 193.04349)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hhjir"]
+radius = 38.260864
+height = 169.09322
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3l804"]
+size = Vector2(31.206886, 221.17047)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l206v"]
+size = Vector2(175.4936, 237.8261)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p2opm"]
+size = Vector2(192.59415, 138.69565)
+
+[node name="JungleComic1Frame4" type="Node2D"]
+scale = Vector2(0.575, 0.575)
+
+[node name="Frame4Drawer" type="Sprite2D" parent="."]
+texture = ExtResource("1_qb8vt")
+
+[node name="JungleItem" parent="Frame4Drawer" instance=ExtResource("2_tphwk")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Drawer/JungleItem"]
+position = Vector2(252.12239, 172.75656)
+rotation = -0.33161256
+scale = Vector2(1.0211614, 1.1778235)
+shape = SubResource("RectangleShape2D_n2g0o")
+
+[node name="Frame4Box" type="Sprite2D" parent="Frame4Drawer/JungleItem"]
+position = Vector2(-227.99998, 34)
+texture = ExtResource("2_n2g0o")
+
+[node name="JungleItem2" parent="Frame4Drawer" instance=ExtResource("2_tphwk")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Drawer/JungleItem2"]
+position = Vector2(-325.28156, 49.88807)
+rotation = -0.715585
+scale = Vector2(1.0211616, 1.1778235)
+shape = SubResource("RectangleShape2D_tphwk")
+
+[node name="Frame4Notebook" type="Sprite2D" parent="Frame4Drawer/JungleItem2"]
+position = Vector2(-227.99998, 34)
+texture = ExtResource("3_tphwk")
+
+[node name="JungleItem3" parent="Frame4Drawer" instance=ExtResource("2_tphwk")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Drawer/JungleItem3"]
+position = Vector2(-655.8811, 203.4433)
+rotation = -0.128928
+scale = Vector2(1.0211614, 1.1778235)
+shape = SubResource("RectangleShape2D_71kyb")
+
+[node name="Frame4Passport" type="Sprite2D" parent="Frame4Drawer/JungleItem3"]
+position = Vector2(-227.99998, 34)
+texture = ExtResource("4_71kyb")
+
+[node name="JungleItem4" parent="Frame4Drawer" instance=ExtResource("2_tphwk")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Drawer/JungleItem4"]
+position = Vector2(3.0755632, 207.60533)
+rotation = 0.5769526
+scale = Vector2(1.0211614, 1.1778235)
+shape = SubResource("RectangleShape2D_uyu3e")
+
+[node name="Frame4Pills" type="Sprite2D" parent="Frame4Drawer/JungleItem4"]
+position = Vector2(-227.99998, 34)
+texture = ExtResource("5_uyu3e")
+
+[node name="Frame4Table" type="Sprite2D" parent="."]
+texture = ExtResource("6_qme1i")
+
+[node name="JungleItem" parent="Frame4Table" instance=ExtResource("2_tphwk")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Table/JungleItem"]
+position = Vector2(-218.2525, -207.07199)
+rotation = 0.73073214
+shape = SubResource("RectangleShape2D_qme1i")
+
+[node name="Frame4Biggerpills" type="Sprite2D" parent="Frame4Table/JungleItem"]
+scale = Vector2(0.575, 0.575)
+texture = ExtResource("7_hhjir")
+
+[node name="JungleItem2" parent="Frame4Table" instance=ExtResource("2_tphwk")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Table/JungleItem2"]
+position = Vector2(-226.08696, -22.608694)
+rotation = -0.98866993
+scale = Vector2(1.3397961, 1.1654017)
+shape = SubResource("CapsuleShape2D_hhjir")
+
+[node name="Frame4Keys" type="Sprite2D" parent="Frame4Table/JungleItem2"]
+scale = Vector2(0.575, 0.575)
+texture = ExtResource("8_3l804")
+
+[node name="JungleItem3" parent="Frame4Table" instance=ExtResource("2_tphwk")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Table/JungleItem3"]
+position = Vector2(29.565216, -36.521736)
+rotation = 1.1879138
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_3l804")
+
+[node name="Frame4Pen" type="Sprite2D" parent="Frame4Table/JungleItem3"]
+scale = Vector2(0.575, 0.575)
+texture = ExtResource("9_p2opm")
+
+[node name="JungleItem4" parent="Frame4Table" instance=ExtResource("2_tphwk")]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Frame4Table/JungleItem4"]
+position = Vector2(322.95145, -120.365814)
+rotation = 0.45751038
+shape = SubResource("RectangleShape2D_l206v")
+
+[node name="Frame4Picture" type="Sprite2D" parent="Frame4Table/JungleItem4"]
+scale = Vector2(0.575, 0.575)
+texture = ExtResource("10_l206v")
+
+[node name="JungleItem5" parent="Frame4Table" instance=ExtResource("2_tphwk")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Table/JungleItem5"]
+position = Vector2(16.47875, -210.05157)
+rotation = 0.46055657
+shape = SubResource("RectangleShape2D_p2opm")
+
+[node name="Frame4Wallet" type="Sprite2D" parent="Frame4Table/JungleItem5"]
+scale = Vector2(0.575, 0.575)
+texture = ExtResource("11_hm6l7")
+
+[node name="Filters" type="Sprite2D" parent="."]
+texture = ExtResource("12_877b8")
+
+[node name="Frame4Blindlight" type="Sprite2D" parent="."]
+texture = ExtResource("13_dgwin")
