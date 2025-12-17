@@ -26,13 +26,13 @@ position = Vector2(458, 666)
 
 [node name="JungleWomanReflection" parent="RiverMask/ReflectionContainer" instance=ExtResource("2_2u04l")]
 position = Vector2(0, 273)
-script = null
 
 [node name="AnimatedSprite2D" parent="RiverMask/ReflectionContainer/JungleWomanReflection" index="0"]
 self_modulate = Color(1, 1, 1, 0.47058824)
 flip_v = true
 
 [node name="PlaceholderMarker" type="Sprite2D" parent="RiverMask/ReflectionContainer"]
+visible = false
 texture = SubResource("PlaceholderTexture2D_yi4yt")
 
 [node name="BackgroundRiver" type="Sprite2D" parent="."]
@@ -42,9 +42,6 @@ centered = false
 
 [node name="JungleWoman" parent="." instance=ExtResource("2_2u04l")]
 position = Vector2(458, 666)
-
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="JungleWoman"]
-remote_path = NodePath("../../RiverMask/ReflectionContainer")
 
 [node name="Camera2D" type="Camera2D" parent="JungleWoman"]
 position = Vector2(0, -126)

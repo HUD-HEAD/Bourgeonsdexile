@@ -1,9 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://du7xk8lrsn7at"]
+[gd_scene load_steps=20 format=3 uid="uid://du7xk8lrsn7at"]
 
 [ext_resource type="PackedScene" uid="uid://bcmlx764idr8b" path="res://components/utils/scroller.tscn" id="1_tbmy3"]
 [ext_resource type="Texture2D" uid="uid://bk8e35r0cgct5" path="res://graphics/jungle/jungle_comic1/frame1/frame1_background.png" id="2_si3rw"]
 [ext_resource type="Texture2D" uid="uid://cohqymwnglqro" path="res://graphics/jungle/jungle_comic1/frame1/frame1_light.png" id="3_ucrt7"]
 [ext_resource type="PackedScene" uid="uid://cbouhlj8xssdp" path="res://components/jungle/comic_frames/jungle_comic_1_frame_2.tscn" id="5_7p1v8"]
+[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://levels/jungle/goto_next_scene.gd" id="17_54bx8"]
+[ext_resource type="PackedScene" uid="uid://brc35c78ohvta" path="res://levels/jungle/jungle.tscn" id="18_ej5x0"]
 [ext_resource type="PackedScene" uid="uid://b3xbb0f00akh4" path="res://components/jungle/comic_frames/jungle_comic_1_frame_3.tscn" id="32_ynlpr"]
 [ext_resource type="PackedScene" uid="uid://bq0ewephc3xv5" path="res://components/jungle/comic_frames/jungle_comic_1_frame_4.tscn" id="35_jpuy7"]
 [ext_resource type="Texture2D" uid="uid://bpt6k6p4kw33g" path="res://graphics/jungle/jungle_comic1/frame5/frame5_shadow/frame5_shadow.png" id="36_47thf"]
@@ -44,7 +46,7 @@ follow_viewport_enabled = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 14304.0
+offset_right = 17080.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -57,7 +59,7 @@ lock_y = true
 [node name="Camera2D" type="Camera2D" parent="Scroller"]
 position = Vector2(960, 540)
 limit_left = 0
-limit_right = 15115
+limit_right = 18391
 limit_smoothed = true
 position_smoothing_enabled = true
 editor_draw_limits = true
@@ -74,16 +76,28 @@ texture = ExtResource("2_si3rw")
 texture = ExtResource("3_ucrt7")
 
 [node name="JungleComic1Frame2" parent="." instance=ExtResource("5_7p1v8")]
-position = Vector2(2347, 576)
+position = Vector2(2682, 575.99994)
+scale = Vector2(0.215, 0.215)
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame2"]
+position = Vector2(2497.6746, 0)
 
 [node name="JungleComic1Frame3" parent="." instance=ExtResource("32_ynlpr")]
-position = Vector2(3682, 579)
+position = Vector2(4381, 579)
+scale = Vector2(0.64, 0.64)
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame3"]
+position = Vector2(1264.0625, 0)
 
 [node name="JungleComic1Frame4" parent="." instance=ExtResource("35_jpuy7")]
-position = Vector2(5468, 583)
+position = Vector2(6537.9995, 583)
+scale = Vector2(0.675, 0.675)
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame4"]
+position = Vector2(1195.5555, 0)
 
 [node name="JungleComic1Frame5" type="Node2D" parent="."]
-position = Vector2(7282.9995, 619)
+position = Vector2(8810, 532.99994)
 scale = Vector2(0.285, 0.285)
 metadata/_edit_group_ = true
 
@@ -103,13 +117,14 @@ autoplay = "default"
 frame_progress = 0.26027757
 
 [node name="JungleComic1Frame6" parent="." instance=ExtResource("40_jpuy7")]
-position = Vector2(9255, 652)
+position = Vector2(10999, 554.00006)
+scale = Vector2(0.33, 0.33)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame6"]
 position = Vector2(1920, 0)
 
 [node name="JungleComic1Frame7" type="Node2D" parent="."]
-position = Vector2(11228, 633)
+position = Vector2(12972, 574)
 scale = Vector2(0.26, 0.26)
 metadata/_edit_group_ = true
 
@@ -117,9 +132,14 @@ metadata/_edit_group_ = true
 texture = ExtResource("43_47thf")
 
 [node name="JungleComic1Frame8" type="Node2D" parent="."]
-position = Vector2(13632.999, 295)
+position = Vector2(15376.999, 295)
 scale = Vector2(0.425, 0.425)
 metadata/_edit_group_ = true
 
 [node name="Frame8Boatalone" type="Sprite2D" parent="JungleComic1Frame8"]
 texture = ExtResource("44_js7ra")
+
+[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(18229, 625)
+script = ExtResource("17_54bx8")
+next_scene = ExtResource("18_ej5x0")

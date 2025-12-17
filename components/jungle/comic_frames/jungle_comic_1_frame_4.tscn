@@ -44,7 +44,6 @@ size = Vector2(175.4936, 237.8261)
 size = Vector2(192.59415, 138.69565)
 
 [node name="JungleComic1Frame4" type="Node2D"]
-scale = Vector2(0.575, 0.575)
 
 [node name="Frame4Drawer" type="Sprite2D" parent="."]
 texture = ExtResource("1_qb8vt")
