@@ -26,7 +26,6 @@ animations = [{
 size = Vector2(1127.6088, 676.3044)
 
 [node name="JungleComic1Frame3" type="Node2D"]
-scale = Vector2(0.575, 0.575)
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

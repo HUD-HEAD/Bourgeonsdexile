@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://binta3daaex82"
-path="res://.godot/imported/1.png-e5beb920502b99d4884e794c60749c2a.ctex"
+uid="uid://cgukmhhl7mhbo"
+path="res://.godot/imported/background_paper.png-9d8045be4fa4b0a64697d62c51ff7096.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/jungle/jungle_woman/not_pregnant/walking/1.png"
-dest_files=["res://.godot/imported/1.png-e5beb920502b99d4884e794c60749c2a.ctex"]
+source_file="res://graphics/background_paper.png"
+dest_files=["res://.godot/imported/background_paper.png-9d8045be4fa4b0a64697d62c51ff7096.ctex"]
 
 [params]
 

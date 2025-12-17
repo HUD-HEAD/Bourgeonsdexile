@@ -9,6 +9,8 @@ extends Node2D
 #Current state
 var dragging : bool = false
 
+const SCROLLING_SENSITIVITY : float = 7.0
+
 func _process(delta: float) -> void:
 	if dragging:
 		var offset = _get_offset()
@@ -63,7 +65,7 @@ func _handle_mouse_movement(event):
 
 ## Return mouse displacement
 func get_mouse_movement() -> Vector2:
-	var result = mouse_acc * InputManager.mouse_sensitivity
+	var result = mouse_acc * SCROLLING_SENSITIVITY * InputManager.mouse_sensitivity
 	clear_mouse_movement()
 	return result
 

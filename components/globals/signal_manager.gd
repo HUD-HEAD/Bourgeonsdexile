@@ -2,3 +2,5 @@
 extends Node
 
 signal set_cursor_shape(shape_idx : int)
+
+signal obstacle_cleared
