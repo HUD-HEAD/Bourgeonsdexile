@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnfa6ows3gc8l"
-path="res://.godot/imported/8.png-783db35097e8a27d715e259b799649e5.ctex"
+uid="uid://c6e1cpmu6o211"
+path="res://.godot/imported/2.png-777ea5f63a306fb414101f94a9a8519c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/jungle/jungle_woman/newjungle/newwalkingcycle/8.png"
-dest_files=["res://.godot/imported/8.png-783db35097e8a27d715e259b799649e5.ctex"]
+source_file="res://graphics/jungle/jungle_woman/newwalkingcycle/2.png"
+dest_files=["res://.godot/imported/2.png-777ea5f63a306fb414101f94a9a8519c.ctex"]
 
 [params]
 
