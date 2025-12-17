@@ -34,15 +34,13 @@
 [ext_resource type="PackedScene" uid="uid://b3xbb0f00akh4" path="res://components/jungle/comic_frames/jungle_comic_1_frame_3.tscn" id="32_ynlpr"]
 [ext_resource type="PackedScene" uid="uid://bq0ewephc3xv5" path="res://components/jungle/comic_frames/jungle_comic_1_frame_4.tscn" id="35_jpuy7"]
 [ext_resource type="PackedScene" uid="uid://cyqwmaex0ilgv" path="res://components/jungle/comic_frames/jungle_comic_1_frame_6.tscn" id="40_jpuy7"]
+[ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="41_0igvp"]
 [ext_resource type="Texture2D" uid="uid://l5be2m0fh0vd" path="res://graphics/jungle/jungle_comic1/frame7/frame7_alltogether.png" id="43_47thf"]
 [ext_resource type="Texture2D" uid="uid://j5v7w234x34p" path="res://graphics/jungle/jungle_comic1/frame8/frame8_boatalone.png" id="44_js7ra"]
 [ext_resource type="Texture2D" uid="uid://ds36f4qiwv7ub" path="res://graphics/jungle/jungle_comic1/frame5/frame5_background.png" id="48_oyui7"]
 [ext_resource type="Texture2D" uid="uid://bbws2bs3tckn8" path="res://graphics/jungle/jungle_comic1/frame5/frame5_woman/frame5_woman1.png" id="49_w1v5l"]
 [ext_resource type="Texture2D" uid="uid://63xpv8rmweb3" path="res://graphics/jungle/jungle_comic1/frame5/frame5_woman/frame5_woman2.png" id="50_pedkw"]
 [ext_resource type="Texture2D" uid="uid://bpyverllmtq1u" path="res://graphics/jungle/jungle_comic1/frame5/frame5_woman/frame5_woman3.png" id="51_ibbpb"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gk8gy"]
-size = Vector2(50, 50)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_37uka"]
 animations = [{
@@ -182,6 +180,21 @@ animations = [{
 
 [node name="JungleComic1" type="Node2D"]
 
+[node name="PaperBackground" type="CanvasLayer" parent="."]
+layer = -1
+follow_viewport_enabled = true
+
+[node name="TextureRect" type="TextureRect" parent="PaperBackground"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 14304.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("41_0igvp")
+stretch_mode = 1
+
 [node name="Scroller" parent="." instance=ExtResource("1_tbmy3")]
 lock_y = true
 
@@ -192,20 +205,6 @@ limit_right = 15115
 limit_smoothed = true
 position_smoothing_enabled = true
 editor_draw_limits = true
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("PlaceholderTexture2D_gk8gy")
-centered = false
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(1870, 1030)
-texture = SubResource("PlaceholderTexture2D_gk8gy")
-centered = false
-
-[node name="Sprite2D3" type="Sprite2D" parent="."]
-position = Vector2(2880, 540)
-texture = SubResource("PlaceholderTexture2D_gk8gy")
-centered = false
 
 [node name="JungleComic1Frame1" type="Node2D" parent="."]
 position = Vector2(994, 528)
@@ -262,6 +261,9 @@ frame_progress = 0.26027757
 
 [node name="JungleComic1Frame6" parent="." instance=ExtResource("40_jpuy7")]
 position = Vector2(9255, 652)
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame6"]
+position = Vector2(1920, 0)
 
 [node name="JungleComic1Frame7" type="Node2D" parent="."]
 position = Vector2(11228, 633)
