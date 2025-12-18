@@ -283,5 +283,6 @@ libraries = {
 }
 autoplay = "argument"
 
-[node name="Node" type="Node" parent="."]
+[node name="PanelTransitionTrigger" type="Node" parent="." node_paths=PackedStringArray("anim_player")]
 script = ExtResource("29_f5xcq")
+anim_player = NodePath("../AnimationPlayer")
