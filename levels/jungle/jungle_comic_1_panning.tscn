@@ -15,9 +15,9 @@
 [ext_resource type="PackedScene" uid="uid://cyqwmaex0ilgv" path="res://components/jungle/comic_frames/jungle_comic_1_frame_6.tscn" id="14_krciq"]
 [ext_resource type="Texture2D" uid="uid://l5be2m0fh0vd" path="res://graphics/jungle/jungle_comic1/frame7/frame7_alltogether.png" id="15_wwxri"]
 [ext_resource type="Texture2D" uid="uid://j5v7w234x34p" path="res://graphics/jungle/jungle_comic1/frame8/frame8_boatalone.png" id="16_ia776"]
-[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://levels/jungle/goto_next_scene.gd" id="17_30y0w"]
+[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="17_30y0w"]
 [ext_resource type="PackedScene" uid="uid://brc35c78ohvta" path="res://levels/jungle/jungle.tscn" id="18_hbeey"]
-[ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://levels/jungle/autoscroller.gd" id="19_6d6w6"]
+[ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="19_6d6w6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ppo6s"]
 animations = [{

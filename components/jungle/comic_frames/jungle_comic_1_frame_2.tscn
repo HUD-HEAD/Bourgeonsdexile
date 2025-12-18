@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://cbouhlj8xssdp"]
+[gd_scene load_steps=37 format=3 uid="uid://cbouhlj8xssdp"]
 
 [ext_resource type="Texture2D" uid="uid://dvshx1spa1rqh" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background1.png" id="1_1sw1c"]
 [ext_resource type="Texture2D" uid="uid://7fexdxoyjov0" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background2.png" id="2_f5xcq"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://b5d3ouridrhhp" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction6.png" id="26_tbybx"]
 [ext_resource type="Texture2D" uid="uid://d1g66bknnq522" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction7.png" id="27_hijka"]
 [ext_resource type="Texture2D" uid="uid://don5lntmxuxps" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction8.png" id="28_oqqh3"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/panel_transition_trigger.gd" id="29_f5xcq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_37uka"]
 animations = [{
@@ -281,3 +282,6 @@ libraries = {
 &"": SubResource("AnimationLibrary_tkhhm")
 }
 autoplay = "argument"
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("29_f5xcq")
