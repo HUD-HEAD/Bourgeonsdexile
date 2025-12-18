@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cyqwmaex0ilgv"]
+[gd_scene load_steps=8 format=3 uid="uid://cyqwmaex0ilgv"]
 
 [ext_resource type="Texture2D" uid="uid://fy53f8g7cenh" path="res://graphics/jungle/jungle_comic1/frame6/frame6_background.png" id="1_5fq6s"]
 [ext_resource type="Texture2D" uid="uid://m6ob8s1pc1l3" path="res://graphics/jungle/jungle_comic1/frame6/frame6_boat.png" id="2_6enyl"]
-[ext_resource type="Script" uid="uid://bwhw2o2u7v43i" path="res://components/utils/vertical_sine_anim.gd" id="3_j3dv7"]
+[ext_resource type="Script" uid="uid://bwhw2o2u7v43i" path="res://components/utils/comics/vertical_sine_anim.gd" id="3_j3dv7"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="4_6enyl"]
 
 [sub_resource type="Animation" id="Animation_hbr7m"]
 length = 0.001
@@ -59,3 +60,7 @@ libraries = {
 &"": SubResource("AnimationLibrary_bva4g")
 }
 autoplay = "boat_traverse"
+
+[node name="AutomaticPanner" type="Node" parent="." node_paths=PackedStringArray("anim_player")]
+script = ExtResource("4_6enyl")
+anim_player = NodePath("../Frame6Background/Frame6Boat/AnimationPlayer")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bq0ewephc3xv5"]
+[gd_scene load_steps=25 format=3 uid="uid://bq0ewephc3xv5"]
 
 [ext_resource type="Texture2D" uid="uid://dle01bqk8s7i4" path="res://graphics/jungle/jungle_comic1/frame4/frame4_drawer.png" id="1_qb8vt"]
 [ext_resource type="Texture2D" uid="uid://82bd4afkt4qf" path="res://graphics/jungle/jungle_comic1/frame4/draweritems/frame4_box.png" id="2_n2g0o"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cdwdcjr5jd7x0" path="res://graphics/jungle/jungle_comic1/frame4/tableitems/frame4_wallet.png" id="11_hm6l7"]
 [ext_resource type="Texture2D" uid="uid://hdimigdjp30a" path="res://graphics/jungle/jungle_comic1/frame4/filters/filters.png" id="12_877b8"]
 [ext_resource type="Texture2D" uid="uid://csbxopldb55hu" path="res://graphics/jungle/jungle_comic1/frame4/frame4_blindlight.png" id="13_dgwin"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="15_txu23"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n2g0o"]
 size = Vector2(187.30737, 324.336)
@@ -161,3 +162,7 @@ texture = ExtResource("12_877b8")
 
 [node name="Frame4Blindlight" type="Sprite2D" parent="."]
 texture = ExtResource("13_dgwin")
+
+[node name="TransitionTriggerCounter" type="Node" parent="."]
+script = ExtResource("15_txu23")
+obstacles_to_clear = 9
