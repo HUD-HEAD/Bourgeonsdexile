@@ -18,4 +18,3 @@ func _ready() -> void:
 		timer.timeout.connect(SignalManager.next_panel.emit)
 		add_child(timer)
 		timer.start()
-		

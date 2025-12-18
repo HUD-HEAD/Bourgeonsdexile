@@ -12,9 +12,9 @@ func _ready() -> void:
 
 
 #TESTING
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_accept"):
-		_next_panel()
+#func _input(event: InputEvent) -> void:
+	#if event.is_action_pressed("ui_accept"):
+		#_next_panel()
 
 func _next_panel():
 	assert(idx < panels.size(), "idx inside panels number")
