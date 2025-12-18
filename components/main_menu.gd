@@ -6,7 +6,7 @@ extends CanvasLayer
 @export var credits : Button
 @export var quit : Button
 
-const start_scene = "res://levels/jungle/jungle_comic_1.tscn"
+const start_scene = "res://levels/jungle/jungle_comic_1_panning.tscn"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

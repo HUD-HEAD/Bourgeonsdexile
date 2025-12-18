@@ -35,6 +35,7 @@ func _process(delta: float) -> void:
 		
 		#Reached end of animation
 		if animated_sprite.frame == frame_count-1:
+			InputManager.hide_mouse()
 			_transition_next_panel()
 		
 		

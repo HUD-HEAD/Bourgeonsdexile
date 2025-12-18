@@ -9,4 +9,5 @@ func _ready() -> void:
 func _on_obstacle_cleared():
 	counter += 1
 	if counter >= obstacles_to_clear:
+		InputManager.hide_mouse()
 		SignalManager.next_panel.emit()
