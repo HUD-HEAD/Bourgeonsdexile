@@ -90,7 +90,7 @@ scale = Vector2(0.215, 0.215)
 position = Vector2(2497.6746, 0)
 
 [node name="JungleComic1Frame3" parent="." instance=ExtResource("6_7psfr")]
-position = Vector2(2880, 465)
+position = Vector2(5473, 465)
 scale = Vector2(0.64, 0.64)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame3"]
@@ -104,7 +104,7 @@ script = ExtResource("8_cijmc")
 warp_target = Vector2(200, 540)
 
 [node name="JungleComic1Frame4" parent="." instance=ExtResource("7_ipduv")]
-position = Vector2(2880, 465)
+position = Vector2(7384, 465)
 scale = Vector2(0.675, 0.675)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame4"]
@@ -113,7 +113,7 @@ script = ExtResource("5_mmya6")
 show_mouse = true
 
 [node name="JungleComic1Frame5" type="Node2D" parent="."]
-position = Vector2(2880, 465)
+position = Vector2(9421, 465)
 scale = Vector2(0.285, 0.285)
 metadata/_edit_group_ = true
 
@@ -138,14 +138,14 @@ script = ExtResource("13_6d6w6")
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame5"]
 
 [node name="JungleComic1Frame6" parent="." instance=ExtResource("14_krciq")]
-position = Vector2(2880, 464.99997)
+position = Vector2(11548.001, 460.00003)
 scale = Vector2(0.33, 0.33)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame6"]
 position = Vector2(1920, 0)
 
 [node name="JungleComic1Frame7" type="Node2D" parent="."]
-position = Vector2(2880, 465)
+position = Vector2(13782, 566)
 scale = Vector2(0.26, 0.26)
 metadata/_edit_group_ = true
 
@@ -158,7 +158,7 @@ script = ExtResource("13_6d6w6")
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame7"]
 
 [node name="JungleComic1Frame8" type="Node2D" parent="."]
-position = Vector2(2880, 465.00006)
+position = Vector2(15935.998, 262.99997)
 scale = Vector2(0.425, 0.425)
 metadata/_edit_group_ = true
 
