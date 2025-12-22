@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://cpqe48imup7qq"]
+[gd_scene load_steps=10 format=3 uid="uid://cpqe48imup7qq"]
 
 [ext_resource type="Texture2D" uid="uid://ds36f4qiwv7ub" path="res://graphics/jungle/jungle_comic1/frame5/frame5_background.png" id="1_1afk3"]
+[ext_resource type="Script" uid="uid://bwhw2o2u7v43i" path="res://components/utils/comics/vertical_sine_anim.gd" id="2_4dbym"]
 [ext_resource type="Texture2D" uid="uid://cknul64jh1sr3" path="res://graphics/jungle/jungle_comic1/frame5/frame5_shadow/frame5_shadow2.png" id="2_wg8pt"]
 [ext_resource type="Texture2D" uid="uid://bpt6k6p4kw33g" path="res://graphics/jungle/jungle_comic1/frame5/frame5_shadow/frame5_shadow.png" id="3_4dbym"]
 [ext_resource type="Texture2D" uid="uid://bbws2bs3tckn8" path="res://graphics/jungle/jungle_comic1/frame5/frame5_woman/frame5_woman1.png" id="4_qb235"]
@@ -31,6 +32,9 @@ metadata/_edit_group_ = true
 [node name="Frame5Background" type="Sprite2D" parent="."]
 clip_children = 2
 texture = ExtResource("1_1afk3")
+script = ExtResource("2_4dbym")
+amplitude = 30.0
+speed = 4.0
 
 [node name="Woman" type="AnimatedSprite2D" parent="Frame5Background"]
 sprite_frames = SubResource("SpriteFrames_ppo6s")

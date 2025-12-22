@@ -11,6 +11,7 @@ func _ready() -> void:
 
 func _process(delta):
 	offset += delta*speed
+	offset = fposmod(offset, 2*PI)
 	position.y = base_pos_y + sin(offset)*amplitude
 	
-	#print_debug("Position: ", position.y)
+	#print_debug("Position: ", position.y, "	offset: ", offset)
