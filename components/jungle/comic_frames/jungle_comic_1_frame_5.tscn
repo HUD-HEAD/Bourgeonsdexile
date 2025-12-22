@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://cpqe48imup7qq"]
+
+[ext_resource type="Texture2D" uid="uid://ds36f4qiwv7ub" path="res://graphics/jungle/jungle_comic1/frame5/frame5_background.png" id="1_1afk3"]
+[ext_resource type="Texture2D" uid="uid://cknul64jh1sr3" path="res://graphics/jungle/jungle_comic1/frame5/frame5_shadow/frame5_shadow2.png" id="2_wg8pt"]
+[ext_resource type="Texture2D" uid="uid://bpt6k6p4kw33g" path="res://graphics/jungle/jungle_comic1/frame5/frame5_shadow/frame5_shadow.png" id="3_4dbym"]
+[ext_resource type="Texture2D" uid="uid://bbws2bs3tckn8" path="res://graphics/jungle/jungle_comic1/frame5/frame5_woman/frame5_woman1.png" id="4_qb235"]
+[ext_resource type="Texture2D" uid="uid://63xpv8rmweb3" path="res://graphics/jungle/jungle_comic1/frame5/frame5_woman/frame5_woman2.png" id="5_5yxg6"]
+[ext_resource type="Texture2D" uid="uid://bpyverllmtq1u" path="res://graphics/jungle/jungle_comic1/frame5/frame5_woman/frame5_woman3.png" id="6_y1cxl"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="7_brxes"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ppo6s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_qb235")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5yxg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_y1cxl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="JungleComic1Frame5" type="Node2D"]
+metadata/_edit_group_ = true
+
+[node name="Frame5Background" type="Sprite2D" parent="."]
+clip_children = 2
+texture = ExtResource("1_1afk3")
+
+[node name="Woman" type="AnimatedSprite2D" parent="Frame5Background"]
+sprite_frames = SubResource("SpriteFrames_ppo6s")
+autoplay = "default"
+frame_progress = 0.26027757
+
+[node name="Parallax2D" type="Parallax2D" parent="Frame5Background"]
+repeat_size = Vector2(10701, 5000)
+autoscroll = Vector2(-500, 0)
+ignore_camera_scroll = true
+
+[node name="Frame5Shadow2" type="Sprite2D" parent="Frame5Background/Parallax2D"]
+texture = ExtResource("2_wg8pt")
+
+[node name="Parallax2D2" type="Parallax2D" parent="Frame5Background"]
+repeat_size = Vector2(12148, 5000)
+autoscroll = Vector2(-1000, 0)
+ignore_camera_scroll = true
+
+[node name="Frame5Shadow" type="Sprite2D" parent="Frame5Background/Parallax2D2"]
+texture = ExtResource("3_4dbym")
+
+[node name="AutomaticPanner" type="Node" parent="."]
+script = ExtResource("7_brxes")
