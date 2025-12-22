@@ -39,3 +39,20 @@ func _pan_to(panel : Node2D):
 		else abs(panel.global_position.x - camera.global_position.x)/px_per_sec
 	
 	tween.tween_property(camera, "global_position", Vector2(panel.global_position.x, camera.global_position.y), panning_speed)
+
+
+#TESTING
+## DEBUG BUILDS : Detect input 0-9 and jump to corresponding panel [UNSTABLE]
+func _unhandled_input(event: InputEvent) -> void:
+	if !OS.is_debug_build():
+		return
+	if event is InputEventKey and event.pressed:
+		#Number pressed (0..9)
+		if event.keycode >= 48 && event.keycode <= 57:
+			var idx = event.keycode - 48
+			_debug_jump_to(idx)
+
+func _debug_jump_to(target_idx : int):
+	print_debug("Jumping to panel ", target_idx)
+	idx = target_idx
+	camera.global_position.x = panels[target_idx].global_position.x
