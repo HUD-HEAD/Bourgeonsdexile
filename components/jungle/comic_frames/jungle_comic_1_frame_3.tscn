@@ -23,7 +23,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wiokp"]
-size = Vector2(1127.6088, 676.3044)
+size = Vector2(1000, 518.152)
 
 [node name="JungleComic1Frame3" type="Node2D"]
 metadata/_edit_group_ = true
@@ -37,4 +37,5 @@ collision_shape = NodePath("CollisionShape2D")
 animated_sprite = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
+position = Vector2(-118, 0)
 shape = SubResource("RectangleShape2D_wiokp")

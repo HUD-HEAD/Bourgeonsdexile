@@ -6,7 +6,7 @@ extends Area2D
 ##Sprite to update with tracked movement
 @export var animated_sprite : AnimatedSprite2D
 ##Delay between solve and transition (in seconds)
-@export var transition_delay : float = 2.0
+@export var transition_delay : float = 3.0
 
 var tracking : bool = false
 
@@ -26,11 +26,15 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if tracking && animated_sprite.frame != frame_count:
 		#Local mouse x coordinate within the area
-		var loc_mouse = get_local_mouse_position().x - tracking_area.position.x
+		var loc_mouse = get_local_mouse_position().x - (tracking_area.position.x + collision_shape.position.x)
+		
+		#Cursor progress through detection area
 		var progress =  loc_mouse / tracking_area.size.x
+		#Rounded to nearest 10 percent
+		progress = snappedf(progress, 0.1)
 		
 		#Update sprite
-		animated_sprite.frame = int(progress * frame_count)
+		animated_sprite.frame = lerp(0, frame_count-1, progress)
 		#print_debug(progress)
 		
 		#Reached end of animation
