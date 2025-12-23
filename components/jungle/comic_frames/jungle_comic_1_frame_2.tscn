@@ -1,33 +1,33 @@
 [gd_scene load_steps=37 format=3 uid="uid://cbouhlj8xssdp"]
 
-[ext_resource type="Texture2D" uid="uid://dvshx1spa1rqh" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background1.png" id="1_1sw1c"]
-[ext_resource type="Texture2D" uid="uid://7fexdxoyjov0" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background2.png" id="2_f5xcq"]
-[ext_resource type="Texture2D" uid="uid://ckk1bsdeqb3h0" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background3.png" id="3_uwugc"]
-[ext_resource type="Texture2D" uid="uid://dyq0vaue6i7eo" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background4.png" id="4_q5v43"]
-[ext_resource type="Texture2D" uid="uid://dymblfrjwdfw5" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background5.png" id="5_tkd8d"]
-[ext_resource type="Texture2D" uid="uid://bk8ngf1p4kiw6" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background6.png" id="6_hquhs"]
-[ext_resource type="Texture2D" uid="uid://dct46x1gi6ely" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background7.png" id="7_lkjc4"]
-[ext_resource type="Texture2D" uid="uid://spkel1815sif" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background8.png" id="8_glheh"]
-[ext_resource type="Texture2D" uid="uid://bdhymu3mkkfku" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background9.png" id="9_rtelw"]
-[ext_resource type="Texture2D" uid="uid://c5bhkog7e4viy" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background10.png" id="10_1cdq0"]
-[ext_resource type="Texture2D" uid="uid://vbva1vf0ctxx" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background11.png" id="11_6t6g0"]
-[ext_resource type="Texture2D" uid="uid://c10q6c40fvduk" path="res://graphics/jungle/jungle_comic1/frame2/frame2_man/frame2_man1.png" id="12_wj3ni"]
-[ext_resource type="Texture2D" uid="uid://dxtvuslv2qd0i" path="res://graphics/jungle/jungle_comic1/frame2/frame2_man/frame2_man2.png" id="13_cg353"]
-[ext_resource type="Texture2D" uid="uid://t2k44342do2j" path="res://graphics/jungle/jungle_comic1/frame2/frame2_man/frame2_man3.png" id="14_am7ol"]
-[ext_resource type="Texture2D" uid="uid://wtqm2elbt0p2" path="res://graphics/jungle/jungle_comic1/frame2/frame2_man/frame2_man4.png" id="15_2cqlv"]
-[ext_resource type="Texture2D" uid="uid://cgnv31r828u2b" path="res://graphics/jungle/jungle_comic1/frame2/frame2_woman/frame2_woman1.png" id="16_tgn5k"]
-[ext_resource type="Texture2D" uid="uid://cv2wdhlwmx0pv" path="res://graphics/jungle/jungle_comic1/frame2/frame2_woman/frame2_woman2.png" id="17_fhwsx"]
-[ext_resource type="Texture2D" uid="uid://da2i01jiucf1s" path="res://graphics/jungle/jungle_comic1/frame2/frame2_woman/frame2_woman3.png" id="18_w1snb"]
-[ext_resource type="Texture2D" uid="uid://c68326v16qycx" path="res://graphics/jungle/jungle_comic1/frame2/frame2_woman/frame2_woman4.png" id="19_fn2lh"]
-[ext_resource type="Texture2D" uid="uid://ptiqn6vacpka" path="res://graphics/jungle/jungle_comic1/frame2/frame2_woman/frame2_woman5.png" id="20_mc882"]
-[ext_resource type="Texture2D" uid="uid://ftlhg0511way" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction1.png" id="21_ahaxq"]
-[ext_resource type="Texture2D" uid="uid://b6p4cuurhvxyo" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction2.png" id="22_copxl"]
-[ext_resource type="Texture2D" uid="uid://3y15vlttloko" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction3.png" id="23_j4pf7"]
-[ext_resource type="Texture2D" uid="uid://c810x0xt3fvon" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction4.png" id="24_gw7tj"]
-[ext_resource type="Texture2D" uid="uid://bmbiyxo14qtpk" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction5.png" id="25_up6mp"]
-[ext_resource type="Texture2D" uid="uid://b5d3ouridrhhp" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction6.png" id="26_tbybx"]
-[ext_resource type="Texture2D" uid="uid://d1g66bknnq522" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction7.png" id="27_hijka"]
-[ext_resource type="Texture2D" uid="uid://don5lntmxuxps" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction8.png" id="28_oqqh3"]
+[ext_resource type="Texture2D" uid="uid://bb2c2vdmoetaq" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background1.png" id="1_1sw1c"]
+[ext_resource type="Texture2D" uid="uid://bnsw6fe16uoeb" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background2.png" id="2_f5xcq"]
+[ext_resource type="Texture2D" uid="uid://dcbwo427er5t3" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background3.png" id="3_uwugc"]
+[ext_resource type="Texture2D" uid="uid://butx3p81haevi" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background4.png" id="4_q5v43"]
+[ext_resource type="Texture2D" uid="uid://bfvabmxqbcpua" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background5.png" id="5_tkd8d"]
+[ext_resource type="Texture2D" uid="uid://b0x80dnt3jtiv" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background6.png" id="6_hquhs"]
+[ext_resource type="Texture2D" uid="uid://b83a38v5884tp" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background7.png" id="7_lkjc4"]
+[ext_resource type="Texture2D" uid="uid://ce5mgpkdj0hq4" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background8.png" id="8_glheh"]
+[ext_resource type="Texture2D" uid="uid://bddfub3fpuqoq" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background9.png" id="9_rtelw"]
+[ext_resource type="Texture2D" uid="uid://o2a5y6etsx10" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background10.png" id="10_1cdq0"]
+[ext_resource type="Texture2D" uid="uid://b01ra0s4ls2vi" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background11.png" id="11_6t6g0"]
+[ext_resource type="Texture2D" uid="uid://dnkqhhqrlsfhv" path="res://graphics/jungle/jungle_comic1/frame2/frame2_man/frame2_man1.png" id="12_wj3ni"]
+[ext_resource type="Texture2D" uid="uid://x873luo527dx" path="res://graphics/jungle/jungle_comic1/frame2/frame2_man/frame2_man2.png" id="13_cg353"]
+[ext_resource type="Texture2D" uid="uid://bapes7ab56h3e" path="res://graphics/jungle/jungle_comic1/frame2/frame2_man/frame2_man3.png" id="14_am7ol"]
+[ext_resource type="Texture2D" uid="uid://nl2lnj4b1xxy" path="res://graphics/jungle/jungle_comic1/frame2/frame2_man/frame2_man4.png" id="15_2cqlv"]
+[ext_resource type="Texture2D" uid="uid://beqa3kshm70i" path="res://graphics/jungle/jungle_comic1/frame2/frame2_woman/frame2_woman1.png" id="16_tgn5k"]
+[ext_resource type="Texture2D" uid="uid://craqhutfsy0ew" path="res://graphics/jungle/jungle_comic1/frame2/frame2_woman/frame2_woman2.png" id="17_fhwsx"]
+[ext_resource type="Texture2D" uid="uid://ccmk0hpn2711" path="res://graphics/jungle/jungle_comic1/frame2/frame2_woman/frame2_woman3.png" id="18_w1snb"]
+[ext_resource type="Texture2D" uid="uid://bjp7axawpq18a" path="res://graphics/jungle/jungle_comic1/frame2/frame2_woman/frame2_woman4.png" id="19_fn2lh"]
+[ext_resource type="Texture2D" uid="uid://c7qxnxqcylf6d" path="res://graphics/jungle/jungle_comic1/frame2/frame2_woman/frame2_woman5.png" id="20_mc882"]
+[ext_resource type="Texture2D" uid="uid://bow4ifhdb5bv5" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction1.png" id="21_ahaxq"]
+[ext_resource type="Texture2D" uid="uid://bg5y7pg1m38l2" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction2.png" id="22_copxl"]
+[ext_resource type="Texture2D" uid="uid://dvchkdwlq3wo" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction3.png" id="23_j4pf7"]
+[ext_resource type="Texture2D" uid="uid://bjbev463l8cuf" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction4.png" id="24_gw7tj"]
+[ext_resource type="Texture2D" uid="uid://dlasfaha3cejo" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction5.png" id="25_up6mp"]
+[ext_resource type="Texture2D" uid="uid://x717px6reeg6" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction6.png" id="26_tbybx"]
+[ext_resource type="Texture2D" uid="uid://c2qclx8s821r6" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction7.png" id="27_hijka"]
+[ext_resource type="Texture2D" uid="uid://cirkkungp4y15" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction8.png" id="28_oqqh3"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="29_f5xcq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_37uka"]
@@ -249,7 +249,7 @@ tracks/3/path = NodePath("Background:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(1.5333333, 1.5999999, 1.6666665, 1.7333331, 1.7999997, 1.8666663, 1.9333329, 1.9999995, 2.066667, 2.1333337, 2.2000003),
+"times": PackedFloat32Array(1.5333333, 1.5999999, 1.6666665, 1.7333331, 1.7999997, 1.8666663, 1.9333329, 1.9999995, 2.066667, 2.1333337, 2.2),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -269,9 +269,11 @@ clip_children = 2
 sprite_frames = SubResource("SpriteFrames_37uka")
 
 [node name="Man" type="AnimatedSprite2D" parent="Background"]
+position = Vector2(112, 63)
 sprite_frames = SubResource("SpriteFrames_fu2ni")
 
 [node name="Woman" type="AnimatedSprite2D" parent="Background"]
+position = Vector2(-21, 73)
 sprite_frames = SubResource("SpriteFrames_c4wg1")
 
 [node name="Destruction" type="AnimatedSprite2D" parent="."]

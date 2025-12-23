@@ -1,21 +1,21 @@
 [gd_scene load_steps=7 format=3 uid="uid://b3xbb0f00akh4"]
 
-[ext_resource type="Texture2D" uid="uid://bh5www812vbqf" path="res://graphics/jungle/jungle_comic1/frame3/frame3_background1.png" id="1_2vtsb"]
-[ext_resource type="Texture2D" uid="uid://bipr6qxojr45g" path="res://graphics/jungle/jungle_comic1/frame3/frame3_background2.png" id="2_pmfxp"]
-[ext_resource type="Texture2D" uid="uid://d0crh0kuxjb8p" path="res://graphics/jungle/jungle_comic1/frame3/frame3_background3.png" id="3_wiokp"]
+[ext_resource type="Texture2D" uid="uid://h4fc2xg0f5me" path="res://graphics/jungle/jungle_comic1/frame3/frame3_background1.png" id="1_2vtsb"]
+[ext_resource type="Texture2D" uid="uid://bylno0cgs0cky" path="res://graphics/jungle/jungle_comic1/frame3/frame3_background2.png" id="2_pmfxp"]
+[ext_resource type="Texture2D" uid="uid://56y3m7d8acwa" path="res://graphics/jungle/jungle_comic1/frame3/frame3_background3.png" id="3_wiokp"]
 [ext_resource type="Script" uid="uid://e0odvc74oscd" path="res://components/utils/comics/panel_mouse_over.gd" id="4_pmfxp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pu4xu"]
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("3_wiokp")
+}, {
+"duration": 1.0,
 "texture": ExtResource("1_2vtsb")
 }, {
 "duration": 1.0,
 "texture": ExtResource("2_pmfxp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_wiokp")
 }],
 "loop": true,
 "name": &"default",
@@ -23,7 +23,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wiokp"]
-size = Vector2(1000, 518.152)
+size = Vector2(892, 518.152)
 
 [node name="JungleComic1Frame3" type="Node2D"]
 metadata/_edit_group_ = true
@@ -37,5 +37,5 @@ collision_shape = NodePath("CollisionShape2D")
 animated_sprite = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
-position = Vector2(-118, 0)
+position = Vector2(-71, 0)
 shape = SubResource("RectangleShape2D_wiokp")

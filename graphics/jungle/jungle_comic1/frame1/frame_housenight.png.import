@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h4fc2xg0f5me"
-path="res://.godot/imported/frame3_background1.png-7bbc56704b1d32d00e9d7e00645d5fa5.ctex"
+uid="uid://buu2ydr015ogt"
+path="res://.godot/imported/frame_housenight.png-343a2531a1494c062c64143b926b01e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/comic1rexported/frame3/frame3_background1.png"
-dest_files=["res://.godot/imported/frame3_background1.png-7bbc56704b1d32d00e9d7e00645d5fa5.ctex"]
+source_file="res://graphics/jungle/jungle_comic1/frame1/frame_housenight.png"
+dest_files=["res://.godot/imported/frame_housenight.png-343a2531a1494c062c64143b926b01e8.ctex"]
 
 [params]
 

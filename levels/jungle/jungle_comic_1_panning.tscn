@@ -1,8 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://cj3vi388jtbxy"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_sqyqt"]
-[ext_resource type="Texture2D" uid="uid://bk8e35r0cgct5" path="res://graphics/jungle/jungle_comic1/frame1/frame1_background.png" id="3_mmya6"]
-[ext_resource type="Texture2D" uid="uid://cohqymwnglqro" path="res://graphics/jungle/jungle_comic1/frame1/frame1_light.png" id="4_cijmc"]
+[ext_resource type="Texture2D" uid="uid://buu2ydr015ogt" path="res://graphics/jungle/jungle_comic1/frame1/frame_housenight.png" id="2_2tda7"]
 [ext_resource type="PackedScene" uid="uid://cbouhlj8xssdp" path="res://components/jungle/comic_frames/jungle_comic_1_frame_2.tscn" id="5_cw6x3"]
 [ext_resource type="Script" uid="uid://ds0m4hygkuj81" path="res://components/utils/comics/set_mouse_visibility.gd" id="5_mmya6"]
 [ext_resource type="PackedScene" uid="uid://b3xbb0f00akh4" path="res://components/jungle/comic_frames/jungle_comic_1_frame_3.tscn" id="6_7psfr"]
@@ -11,11 +10,14 @@
 [ext_resource type="PackedScene" uid="uid://cpqe48imup7qq" path="res://components/jungle/comic_frames/jungle_comic_1_frame_5.tscn" id="10_2tda7"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="13_6d6w6"]
 [ext_resource type="PackedScene" uid="uid://cyqwmaex0ilgv" path="res://components/jungle/comic_frames/jungle_comic_1_frame_6.tscn" id="14_krciq"]
-[ext_resource type="Texture2D" uid="uid://l5be2m0fh0vd" path="res://graphics/jungle/jungle_comic1/frame7/frame7_alltogether.png" id="15_wwxri"]
-[ext_resource type="Texture2D" uid="uid://j5v7w234x34p" path="res://graphics/jungle/jungle_comic1/frame8/frame8_boatalone.png" id="16_ia776"]
+[ext_resource type="Texture2D" uid="uid://byvh1c37ea83j" path="res://graphics/jungle/jungle_comic1/frame7/frame7_alltogether.png" id="15_wwxri"]
+[ext_resource type="Texture2D" uid="uid://wq0qvrcxrq2t" path="res://graphics/jungle/jungle_comic1/frame8/frame8_boatalone.png" id="16_ia776"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="17_30y0w"]
 [ext_resource type="PackedScene" uid="uid://brc35c78ohvta" path="res://levels/jungle/jungle.tscn" id="18_hbeey"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="19_6d6w6"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t1rjd"]
+load_path = "res://.godot/imported/frame1_light.png-eceaf8eb1ea2689b37e9c0b19be40d65.ctex"
 
 [node name="JungleComic1" type="Node2D"]
 
@@ -43,15 +45,14 @@ position_smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="JungleComic1Frame1" type="Node2D" parent="."]
-position = Vector2(960, 465)
-scale = Vector2(0.575, 0.575)
+position = Vector2(960, 540)
 metadata/_edit_group_ = true
 
 [node name="Frame1Background" type="Sprite2D" parent="JungleComic1Frame1"]
-texture = ExtResource("3_mmya6")
+texture = ExtResource("2_2tda7")
 
 [node name="Frame1Light" type="Sprite2D" parent="JungleComic1Frame1"]
-texture = ExtResource("4_cijmc")
+texture = SubResource("CompressedTexture2D_t1rjd")
 
 [node name="AutomaticPanner" type="Node" parent="JungleComic1Frame1"]
 script = ExtResource("13_6d6w6")
@@ -61,18 +62,16 @@ timer_wait = 3.0
 script = ExtResource("5_mmya6")
 
 [node name="JungleComic1Frame2" parent="." instance=ExtResource("5_cw6x3")]
-position = Vector2(2880, 465.00006)
-scale = Vector2(0.215, 0.215)
+position = Vector2(2880, 540)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame2"]
-position = Vector2(2497.6746, 0)
+position = Vector2(323, 0)
 
 [node name="JungleComic1Frame3" parent="." instance=ExtResource("6_7psfr")]
-position = Vector2(5473, 465.00003)
-scale = Vector2(0.64, 0.64)
+position = Vector2(5473, 540)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame3"]
-position = Vector2(1264.0625, 0)
+position = Vector2(855, 0)
 script = ExtResource("5_mmya6")
 show_mouse = true
 
@@ -82,30 +81,28 @@ script = ExtResource("8_cijmc")
 warp_target = Vector2(200, 540)
 
 [node name="JungleComic1Frame4" parent="." instance=ExtResource("7_ipduv")]
-position = Vector2(7384, 465.00003)
+position = Vector2(7384, 540)
 scale = Vector2(0.675, 0.675)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame4"]
-position = Vector2(1195.5555, 0)
+position = Vector2(829.62964, 157.03703)
 script = ExtResource("5_mmya6")
 show_mouse = true
 
 [node name="JungleComic1Frame5" parent="." instance=ExtResource("10_2tda7")]
-position = Vector2(9421, 465.00003)
-scale = Vector2(0.285, 0.285)
+position = Vector2(9421, 540)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame5"]
+position = Vector2(-707, 0)
+rect = Rect2(-10, -10, 1420, 79)
 
 [node name="JungleComic1Frame6" parent="." instance=ExtResource("14_krciq")]
-position = Vector2(11548.001, 460.00006)
-scale = Vector2(0.33, 0.33)
+position = Vector2(11548.001, 540)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame6"]
-position = Vector2(1920, 0)
 
 [node name="JungleComic1Frame7" type="Node2D" parent="."]
-position = Vector2(13782, 566)
-scale = Vector2(0.26, 0.26)
+position = Vector2(13782, 540)
 metadata/_edit_group_ = true
 
 [node name="Frame7Alltogether" type="Sprite2D" parent="JungleComic1Frame7"]
@@ -117,8 +114,7 @@ script = ExtResource("13_6d6w6")
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame7"]
 
 [node name="JungleComic1Frame8" type="Node2D" parent="."]
-position = Vector2(15935.998, 263)
-scale = Vector2(0.425, 0.425)
+position = Vector2(15935.998, 540)
 metadata/_edit_group_ = true
 
 [node name="Frame8Boatalone" type="Sprite2D" parent="JungleComic1Frame8"]
