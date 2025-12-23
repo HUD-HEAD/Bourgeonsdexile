@@ -1,8 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://cj3vi388jtbxy"]
+[gd_scene load_steps=19 format=3 uid="uid://cj3vi388jtbxy"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_sqyqt"]
 [ext_resource type="Texture2D" uid="uid://buu2ydr015ogt" path="res://graphics/jungle/jungle_comic1/frame1/frame_housenight.png" id="2_2tda7"]
-[ext_resource type="Texture2D" uid="uid://d1lnfv2bu8neq" path="res://graphics/comic1rexported/frame_candle/frame_candle.png" id="5_cvdjs"]
+[ext_resource type="Texture2D" uid="uid://d1lnfv2bu8neq" path="res://graphics/jungle/jungle_comic1/frame_candle/frame_candle.png" id="5_cvdjs"]
 [ext_resource type="PackedScene" uid="uid://cbouhlj8xssdp" path="res://components/jungle/comic_frames/jungle_comic_1_frame_2.tscn" id="5_cw6x3"]
 [ext_resource type="Script" uid="uid://ds0m4hygkuj81" path="res://components/utils/comics/set_mouse_visibility.gd" id="5_mmya6"]
 [ext_resource type="PackedScene" uid="uid://b3xbb0f00akh4" path="res://components/jungle/comic_frames/jungle_comic_1_frame_3.tscn" id="6_7psfr"]
@@ -16,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://wq0qvrcxrq2t" path="res://graphics/jungle/jungle_comic1/frame8/frame8_boatalone.png" id="16_ia776"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="17_30y0w"]
 [ext_resource type="PackedScene" uid="uid://s3spdg0qqc77" path="res://levels/jungle/jungle_city.tscn" id="17_sqyqt"]
-[ext_resource type="PackedScene" uid="uid://56ygu64mm7sb" path="res://components/jungle/comic_frames/jungle_comic_1_switch.tscn" id="18_sqyqt"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="19_6d6w6"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t1rjd"]
@@ -64,18 +63,11 @@ timer_wait = 3.0
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame1"]
 script = ExtResource("5_mmya6")
 
-[node name="JuncleComic1TV" parent="." instance=ExtResource("10_cvdjs")]
-position = Vector2(2944, 496)
+[node name="JuncleComic1TVAndSwitch" parent="." instance=ExtResource("10_cvdjs")]
+position = Vector2(3210, 496)
 scale = Vector2(0.9, 0.9)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JuncleComic1TV"]
-
-[node name="AutomaticPanner" type="Node" parent="JuncleComic1TV"]
-script = ExtResource("13_6d6w6")
-
-[node name="JungleComic1Switch" parent="JuncleComic1TV" instance=ExtResource("18_sqyqt")]
-position = Vector2(801.96045, -81.37256)
-scale = Vector2(0.425, 0.425)
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JuncleComic1TVAndSwitch"]
 
 [node name="JungleComicCandle" type="Node2D" parent="."]
 position = Vector2(4874, 540)
@@ -159,4 +151,4 @@ next_scene = ExtResource("17_sqyqt")
 
 [node name="PanelPanner" type="Node" parent="." node_paths=PackedStringArray("panels")]
 script = ExtResource("19_6d6w6")
-panels = [NodePath("../JungleComic1Frame1"), NodePath("../JuncleComic1TV"), NodePath("../JungleComicCandle"), NodePath("../JungleComic1Frame2"), NodePath("../JungleComic1Frame3"), NodePath("../JungleComic1Frame4"), NodePath("../JungleComic1Frame5"), NodePath("../JungleComic1Frame6"), NodePath("../JungleComic1Frame7"), NodePath("../JungleComic1Frame8"), NodePath("../SceneEnder")]
+panels = [NodePath("../JungleComic1Frame1"), NodePath("../JuncleComic1TVAndSwitch"), NodePath("../JungleComicCandle"), NodePath("../JungleComic1Frame2"), NodePath("../JungleComic1Frame3"), NodePath("../JungleComic1Frame4"), NodePath("../JungleComic1Frame5"), NodePath("../JungleComic1Frame6"), NodePath("../JungleComic1Frame7"), NodePath("../JungleComic1Frame8"), NodePath("../SceneEnder")]

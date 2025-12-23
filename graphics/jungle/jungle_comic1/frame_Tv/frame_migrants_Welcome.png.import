@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bk105dqy8eqfu"
-path="res://.godot/imported/frame_tv_off.png-2cd8658b1bb89e5def244dab4f6f53d3.ctex"
+uid="uid://behve8sims82i"
+path="res://.godot/imported/frame_migrants_Welcome.png-701f9748d067cfae7701139dd5d321e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/comic1rexported/frame_Tv/frame_tv_off.png"
-dest_files=["res://.godot/imported/frame_tv_off.png-2cd8658b1bb89e5def244dab4f6f53d3.ctex"]
+source_file="res://graphics/jungle/jungle_comic1/frame_Tv/frame_migrants_Welcome.png"
+dest_files=["res://.godot/imported/frame_migrants_Welcome.png-701f9748d067cfae7701139dd5d321e3.ctex"]
 
 [params]
 

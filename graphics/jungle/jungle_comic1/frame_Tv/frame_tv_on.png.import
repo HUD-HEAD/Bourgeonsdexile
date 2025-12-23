@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1lnfv2bu8neq"
-path="res://.godot/imported/frame_candle.png-6e9cdb5eee770921b5c980f10547d74b.ctex"
+uid="uid://bc2uhbxy2v3te"
+path="res://.godot/imported/frame_tv_on.png-8ade82202a0ca61157e8779f5e8cdda2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/comic1rexported/frame_candle/frame_candle.png"
-dest_files=["res://.godot/imported/frame_candle.png-6e9cdb5eee770921b5c980f10547d74b.ctex"]
+source_file="res://graphics/jungle/jungle_comic1/frame_Tv/frame_tv_on.png"
+dest_files=["res://.godot/imported/frame_tv_on.png-8ade82202a0ca61157e8779f5e8cdda2.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c75ptvds0u5yu"
-path="res://.godot/imported/frame_switch_on.png-377cc947bf9341bee2917f622f2698c0.ctex"
+path="res://.godot/imported/frame_switch_on.png-b61e39aebb4bb3044ae78909b9569289.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/comic1rexported/frame_switch/frame_switch_on.png"
-dest_files=["res://.godot/imported/frame_switch_on.png-377cc947bf9341bee2917f622f2698c0.ctex"]
+source_file="res://graphics/jungle/jungle_comic1/frame_switch/frame_switch_on.png"
+dest_files=["res://.godot/imported/frame_switch_on.png-b61e39aebb4bb3044ae78909b9569289.ctex"]
 
 [params]
 
