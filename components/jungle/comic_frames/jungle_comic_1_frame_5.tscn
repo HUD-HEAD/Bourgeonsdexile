@@ -1,9 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://cpqe48imup7qq"]
+[gd_scene load_steps=9 format=3 uid="uid://cpqe48imup7qq"]
 
 [ext_resource type="Texture2D" uid="uid://bjcwlut10vdrf" path="res://graphics/jungle/jungle_comic1/frame5/frame5_background.png" id="1_1afk3"]
 [ext_resource type="Script" uid="uid://bwhw2o2u7v43i" path="res://components/utils/comics/vertical_sine_anim.gd" id="2_4dbym"]
 [ext_resource type="Texture2D" uid="uid://cxfu1fqpa2jm3" path="res://graphics/jungle/jungle_comic1/frame5/frame5_shadow/frame5_shadow2.png" id="2_wg8pt"]
-[ext_resource type="Texture2D" uid="uid://b3kmlvi2vvx4v" path="res://graphics/jungle/jungle_comic1/frame5/frame5_shadow/frame5_shadow.png" id="3_4dbym"]
 [ext_resource type="Texture2D" uid="uid://c3xcmr4dqpfkw" path="res://graphics/jungle/jungle_comic1/frame5/frame5_woman/frame5_woman1.png" id="4_qb235"]
 [ext_resource type="Texture2D" uid="uid://bqrgb5q0adf0b" path="res://graphics/jungle/jungle_comic1/frame5/frame5_woman/frame5_woman2.png" id="5_5yxg6"]
 [ext_resource type="Texture2D" uid="uid://dol671p3xj2ip" path="res://graphics/jungle/jungle_comic1/frame5/frame5_woman/frame5_woman3.png" id="6_y1cxl"]
@@ -33,8 +32,8 @@ metadata/_edit_group_ = true
 clip_children = 2
 texture = ExtResource("1_1afk3")
 script = ExtResource("2_4dbym")
-amplitude = 15.0
-speed = 2.0
+amplitude = 30.0
+speed = 4.0
 
 [node name="Woman" type="AnimatedSprite2D" parent="Frame5Background"]
 position = Vector2(0, 40)
@@ -51,14 +50,7 @@ ignore_camera_scroll = true
 position = Vector2(0, -156)
 texture = ExtResource("2_wg8pt")
 
-[node name="Parallax2D2" type="Parallax2D" parent="Frame5Background"]
-repeat_size = Vector2(1443, 2000)
-autoscroll = Vector2(-500, 0)
-ignore_camera_scroll = true
-
-[node name="Frame5Shadow" type="Sprite2D" parent="Frame5Background/Parallax2D2"]
-position = Vector2(0, -128)
-texture = ExtResource("3_4dbym")
-
 [node name="AutomaticPanner" type="Node" parent="."]
 script = ExtResource("7_brxes")
+
+[node name="Camera2D" type="Camera2D" parent="."]

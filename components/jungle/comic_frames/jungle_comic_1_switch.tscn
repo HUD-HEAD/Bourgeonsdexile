@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://56ygu64mm7sb"]
+
+[ext_resource type="Texture2D" uid="uid://dsrmyb8cw8fm" path="res://graphics/comic1rexported/frame_switch/frame_switch_off.png" id="1_wbg68"]
+[ext_resource type="Texture2D" uid="uid://c75ptvds0u5yu" path="res://graphics/comic1rexported/frame_switch/frame_switch_on.png" id="2_pwoah"]
+
+[node name="JungleComic1Switch" type="Node2D"]
+
+[node name="FrameSwitchOff" type="Sprite2D" parent="."]
+texture = ExtResource("1_wbg68")
+
+[node name="FrameSwitchOn" type="Sprite2D" parent="."]
+texture = ExtResource("2_pwoah")

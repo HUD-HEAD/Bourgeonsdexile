@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c60nnmob4jcv3"]
+
+[ext_resource type="Texture2D" uid="uid://behve8sims82i" path="res://graphics/comic1rexported/frame_Tv/frame_migrants_Welcome.png" id="1_upyga"]
+[ext_resource type="Texture2D" uid="uid://bk105dqy8eqfu" path="res://graphics/comic1rexported/frame_Tv/frame_tv_off.png" id="2_a82dl"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="3_a82dl"]
+
+[node name="JuncleComic1TV" type="Node2D"]
+
+[node name="FrameTvOff" type="Sprite2D" parent="."]
+texture = ExtResource("2_a82dl")
+
+[node name="FrameMigrantsWelcome" type="Sprite2D" parent="."]
+texture = ExtResource("1_upyga")
+
+[node name="PanelTransitionTrigger" type="Node" parent="."]
+script = ExtResource("3_a82dl")
