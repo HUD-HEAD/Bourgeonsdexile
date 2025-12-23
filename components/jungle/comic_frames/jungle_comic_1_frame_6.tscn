@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cyqwmaex0ilgv"]
 
-[ext_resource type="Texture2D" uid="uid://fy53f8g7cenh" path="res://graphics/jungle/jungle_comic1/frame6/frame6_background.png" id="1_5fq6s"]
-[ext_resource type="Texture2D" uid="uid://m6ob8s1pc1l3" path="res://graphics/jungle/jungle_comic1/frame6/frame6_boat.png" id="2_6enyl"]
+[ext_resource type="Texture2D" uid="uid://cmpfr15ltt737" path="res://graphics/jungle/jungle_comic1/frame6/frame6_background.png" id="1_5fq6s"]
+[ext_resource type="Texture2D" uid="uid://dgnbx8g2en04" path="res://graphics/jungle/jungle_comic1/frame6/frame6_boat.png" id="2_6enyl"]
 [ext_resource type="Script" uid="uid://bwhw2o2u7v43i" path="res://components/utils/comics/vertical_sine_anim.gd" id="3_j3dv7"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="4_6enyl"]
 
@@ -17,7 +17,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [-4810.0]
+"values": [-1353.0]
 }
 
 [sub_resource type="Animation" id="Animation_ppo6s"]
@@ -33,7 +33,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 8.333333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [-4810.0, 3836.6667]
+"values": [-1353.0, 1286.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bva4g"]
@@ -50,17 +50,19 @@ clip_children = 2
 texture = ExtResource("1_5fq6s")
 
 [node name="Frame6Boat" type="Sprite2D" parent="Frame6Background"]
-position = Vector2(-4810, 0)
+position = Vector2(-1353, 240)
 texture = ExtResource("2_6enyl")
 script = ExtResource("3_j3dv7")
-speed = 3.0
+amplitude = 30.0
+speed = 2.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Frame6Background/Frame6Boat"]
+[node name="AutomaticPanner" type="Node" parent="." node_paths=PackedStringArray("anim_player")]
+script = ExtResource("4_6enyl")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Frame6Background/Frame6Boat")
 libraries = {
 &"": SubResource("AnimationLibrary_bva4g")
 }
 autoplay = "boat_traverse"
-
-[node name="AutomaticPanner" type="Node" parent="." node_paths=PackedStringArray("anim_player")]
-script = ExtResource("4_6enyl")
-anim_player = NodePath("../Frame6Background/Frame6Boat/AnimationPlayer")

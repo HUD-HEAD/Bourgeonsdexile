@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://s3spdg0qqc77"]
+
+[ext_resource type="Texture2D" uid="uid://dccdj2vraao8d" path="res://graphics/separated_Ciity/sky.png" id="1_2dtoo"]
+[ext_resource type="Texture2D" uid="uid://qhy130rf5vmm" path="res://graphics/separated_Ciity/floor.png" id="2_uvrs6"]
+[ext_resource type="Texture2D" uid="uid://vf1q5hik88k3" path="res://graphics/separated_Ciity/houses1.png" id="4_1rybe"]
+[ext_resource type="Texture2D" uid="uid://cyv2jhd868xay" path="res://graphics/separated_Ciity/houses2.png" id="5_1bjwg"]
+[ext_resource type="Texture2D" uid="uid://d13ghx5btheqr" path="res://graphics/separated_Ciity/houses3.png" id="6_jpgwf"]
+[ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/jungle/jungle_woman.tscn" id="7_2dtoo"]
+[ext_resource type="Texture2D" uid="uid://bm2tc0liw2edx" path="res://graphics/separated_Ciity/houses4.png" id="7_8tq2l"]
+
+[node name="JungleCity" type="Node2D"]
+
+[node name="Sky" type="Sprite2D" parent="."]
+texture = ExtResource("1_2dtoo")
+centered = false
+
+[node name="Floor" type="Sprite2D" parent="."]
+position = Vector2(0, 835)
+texture = ExtResource("2_uvrs6")
+centered = false
+
+[node name="Houses1" type="Sprite2D" parent="."]
+position = Vector2(648, 533)
+texture = ExtResource("4_1rybe")
+
+[node name="Houses2" type="Sprite2D" parent="."]
+position = Vector2(1771, 532)
+texture = ExtResource("5_1bjwg")
+
+[node name="Houses3" type="Sprite2D" parent="."]
+position = Vector2(2522, 557)
+texture = ExtResource("6_jpgwf")
+
+[node name="Houses4" type="Sprite2D" parent="."]
+position = Vector2(3320, 568)
+texture = ExtResource("7_8tq2l")
+
+[node name="JungleWoman" parent="." instance=ExtResource("7_2dtoo")]
+position = Vector2(456, 847)
+
+[node name="Camera2D" type="Camera2D" parent="JungleWoman"]
+position = Vector2(0, -304)
+offset = Vector2(500, 0)

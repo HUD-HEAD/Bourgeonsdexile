@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://c60nnmob4jcv3"]
+
+[ext_resource type="Texture2D" uid="uid://behve8sims82i" path="res://graphics/jungle/jungle_comic1/frame_Tv/frame_migrants_Welcome.png" id="1_upyga"]
+[ext_resource type="Texture2D" uid="uid://bk105dqy8eqfu" path="res://graphics/jungle/jungle_comic1/frame_Tv/frame_tv_off.png" id="2_a82dl"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="3_a82dl"]
+[ext_resource type="Texture2D" uid="uid://dsrmyb8cw8fm" path="res://graphics/jungle/jungle_comic1/frame_switch/frame_switch_off.png" id="4_oigd8"]
+[ext_resource type="Texture2D" uid="uid://c75ptvds0u5yu" path="res://graphics/jungle/jungle_comic1/frame_switch/frame_switch_on.png" id="5_cq71l"]
+
+[node name="JuncleComic1TV" type="Node2D"]
+
+[node name="FrameTvOff" type="Sprite2D" parent="."]
+position = Vector2(-259, 0)
+texture = ExtResource("2_a82dl")
+
+[node name="FrameMigrantsWelcome" type="Sprite2D" parent="."]
+position = Vector2(-259, 0)
+texture = ExtResource("1_upyga")
+
+[node name="AutomaticPanner" type="Node" parent="."]
+script = ExtResource("3_a82dl")
+
+[node name="JungleComic1Switch" type="Node2D" parent="."]
+position = Vector2(542.96045, -81.37256)
+scale = Vector2(0.425, 0.425)
+
+[node name="FrameSwitchOff" type="Sprite2D" parent="JungleComic1Switch"]
+texture = ExtResource("4_oigd8")
+
+[node name="FrameSwitchOn" type="Sprite2D" parent="JungleComic1Switch"]
+texture = ExtResource("5_cq71l")

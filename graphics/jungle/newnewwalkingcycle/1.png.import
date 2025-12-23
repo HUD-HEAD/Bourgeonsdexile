@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bk8e35r0cgct5"
-path="res://.godot/imported/frame1_background.png-8178e6d420f7a24c8878d73eab8fba91.ctex"
+uid="uid://bwileca2duyer"
+path="res://.godot/imported/1.png-37b5655e80bfaa9296c9c0f0dfe6de57.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/jungle/jungle_comic1/frame1/frame1_background.png"
-dest_files=["res://.godot/imported/frame1_background.png-8178e6d420f7a24c8878d73eab8fba91.ctex"]
+source_file="res://graphics/jungle/newnewwalkingcycle/1.png"
+dest_files=["res://.godot/imported/1.png-37b5655e80bfaa9296c9c0f0dfe6de57.ctex"]
 
 [params]
 
