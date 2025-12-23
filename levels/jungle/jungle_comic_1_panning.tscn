@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://byvh1c37ea83j" path="res://graphics/jungle/jungle_comic1/frame7/frame7_alltogether.png" id="15_wwxri"]
 [ext_resource type="Texture2D" uid="uid://wq0qvrcxrq2t" path="res://graphics/jungle/jungle_comic1/frame8/frame8_boatalone.png" id="16_ia776"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="17_30y0w"]
-[ext_resource type="PackedScene" uid="uid://brc35c78ohvta" path="res://levels/jungle/jungle.tscn" id="18_hbeey"]
+[ext_resource type="PackedScene" uid="uid://s3spdg0qqc77" path="res://levels/jungle/jungle_city.tscn" id="17_sqyqt"]
 [ext_resource type="PackedScene" uid="uid://56ygu64mm7sb" path="res://components/jungle/comic_frames/jungle_comic_1_switch.tscn" id="18_sqyqt"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="19_6d6w6"]
 
@@ -155,7 +155,7 @@ script = ExtResource("13_6d6w6")
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
 position = Vector2(21721, 625)
 script = ExtResource("17_30y0w")
-next_scene = ExtResource("18_hbeey")
+next_scene = ExtResource("17_sqyqt")
 
 [node name="PanelPanner" type="Node" parent="." node_paths=PackedStringArray("panels")]
 script = ExtResource("19_6d6w6")
