@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm2tc0liw2edx"
-path="res://.godot/imported/houses4.png-2fb596aea27a4fdb3789d23316b6c98a.ctex"
+uid="uid://bbeggw5f5yk6k"
+path="res://.godot/imported/clouds.png-adad413b1653e2397a5e1c5acb7f1b54.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/separated_Ciity/houses4.png"
-dest_files=["res://.godot/imported/houses4.png-2fb596aea27a4fdb3789d23316b6c98a.ctex"]
+source_file="res://graphics/separated_Ciity/separated_Ciity/clouds.png"
+dest_files=["res://.godot/imported/clouds.png-adad413b1653e2397a5e1c5acb7f1b54.ctex"]
 
 [params]
 
