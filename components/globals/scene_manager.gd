@@ -1,7 +1,9 @@
 extends Node
 
-var current_scene : Node = null
+const START_SCENE : PackedScene = preload("res://levels/prototyping/videoplayer_demo.tscn")
 
+
+var current_scene : Node = null
 var paused : bool = false
 
 func _ready():
