@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qhy130rf5vmm"
-path="res://.godot/imported/floor.png-807b50e9c7091d9448cd367124ee1605.ctex"
+uid="uid://hlya850o5n24"
+path="res://.godot/imported/woman_helping.png-78c980d942cc2f6b1457bee9c3bf2c46.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/separated_Ciity/floor.png"
-dest_files=["res://.godot/imported/floor.png-807b50e9c7091d9448cd367124ee1605.ctex"]
+source_file="res://graphics/comic2godot/woman_helping.png"
+dest_files=["res://.godot/imported/woman_helping.png-78c980d942cc2f6b1457bee9c3bf2c46.ctex"]
 
 [params]
 

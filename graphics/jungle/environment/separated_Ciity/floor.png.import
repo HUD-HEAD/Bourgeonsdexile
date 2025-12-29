@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dccdj2vraao8d"
-path="res://.godot/imported/sky.png-d8baca25a58c8f2828966acbab474563.ctex"
+uid="uid://c0ry10gceli0j"
+path="res://.godot/imported/floor.png-7591887340596494ba91836b95116b6a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/separated_Ciity/sky.png"
-dest_files=["res://.godot/imported/sky.png-d8baca25a58c8f2828966acbab474563.ctex"]
+source_file="res://graphics/jungle/environment/separated_Ciity/floor.png"
+dest_files=["res://.godot/imported/floor.png-7591887340596494ba91836b95116b6a.ctex"]
 
 [params]
 

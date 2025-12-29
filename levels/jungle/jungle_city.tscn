@@ -1,22 +1,40 @@
-[gd_scene load_steps=8 format=3 uid="uid://s3spdg0qqc77"]
+[gd_scene load_steps=11 format=3 uid="uid://s3spdg0qqc77"]
 
-[ext_resource type="Texture2D" uid="uid://dccdj2vraao8d" path="res://graphics/separated_Ciity/sky.png" id="1_2dtoo"]
-[ext_resource type="Texture2D" uid="uid://qhy130rf5vmm" path="res://graphics/separated_Ciity/floor.png" id="2_uvrs6"]
-[ext_resource type="Texture2D" uid="uid://vf1q5hik88k3" path="res://graphics/separated_Ciity/houses1.png" id="4_1rybe"]
-[ext_resource type="Texture2D" uid="uid://cyv2jhd868xay" path="res://graphics/separated_Ciity/houses2.png" id="5_1bjwg"]
-[ext_resource type="Texture2D" uid="uid://d13ghx5btheqr" path="res://graphics/separated_Ciity/houses3.png" id="6_jpgwf"]
+[ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_1rybe"]
+[ext_resource type="Texture2D" uid="uid://ckypv1bpibrph" path="res://graphics/jungle/environment/separated_Ciity/sky.png" id="1_uvrs6"]
+[ext_resource type="Texture2D" uid="uid://bbeggw5f5yk6k" path="res://graphics/jungle/environment/separated_Ciity/clouds.png" id="2_pggw3"]
+[ext_resource type="Texture2D" uid="uid://c0ry10gceli0j" path="res://graphics/jungle/environment/separated_Ciity/floor.png" id="2_uvrs6"]
+[ext_resource type="Texture2D" uid="uid://ctvuhai6k72en" path="res://graphics/jungle/environment/separated_Ciity/houses1.png" id="4_1rybe"]
+[ext_resource type="Texture2D" uid="uid://bcbtv3eyw2klf" path="res://graphics/jungle/environment/separated_Ciity/houses2.png" id="5_1bjwg"]
+[ext_resource type="Texture2D" uid="uid://cykrp3sth2qsy" path="res://graphics/jungle/environment/separated_Ciity/houses3.png" id="6_jpgwf"]
 [ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/jungle/jungle_woman.tscn" id="7_2dtoo"]
-[ext_resource type="Texture2D" uid="uid://bm2tc0liw2edx" path="res://graphics/separated_Ciity/houses4.png" id="7_8tq2l"]
+[ext_resource type="Texture2D" uid="uid://cc2jo44beq8p8" path="res://graphics/jungle/environment/separated_Ciity/houses4.png" id="7_8tq2l"]
+[ext_resource type="Texture2D" uid="uid://ba5a2o3t37g1i" path="res://graphics/jungle/environment/separated_Ciity/line.png" id="9_pggw3"]
 
 [node name="JungleCity" type="Node2D"]
 
+[node name="BackgroundPaper" type="Sprite2D" parent="."]
+position = Vector2(-1921, 0)
+texture = ExtResource("1_1rybe")
+centered = false
+
 [node name="Sky" type="Sprite2D" parent="."]
-texture = ExtResource("1_2dtoo")
+position = Vector2(-126, 0)
+texture = ExtResource("1_uvrs6")
+centered = false
+
+[node name="Clouds" type="Sprite2D" parent="."]
+texture = ExtResource("2_pggw3")
 centered = false
 
 [node name="Floor" type="Sprite2D" parent="."]
 position = Vector2(0, 835)
 texture = ExtResource("2_uvrs6")
+centered = false
+
+[node name="Line" type="Sprite2D" parent="Floor"]
+position = Vector2(-1192, -835)
+texture = ExtResource("9_pggw3")
 centered = false
 
 [node name="Houses1" type="Sprite2D" parent="."]

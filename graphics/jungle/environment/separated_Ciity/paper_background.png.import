@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2gajyfode3e1"
-path="res://.godot/imported/houseback.png-f988dfcb7cbbb2ad1662c569561a8b60.ctex"
+uid="uid://qqjuyberfd8t"
+path="res://.godot/imported/paper_background.png-a09ab0dd3e18a373e9c18114cb920a19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/separated_Ciity/houseback.png"
-dest_files=["res://.godot/imported/houseback.png-f988dfcb7cbbb2ad1662c569561a8b60.ctex"]
+source_file="res://graphics/jungle/environment/separated_Ciity/paper_background.png"
+dest_files=["res://.godot/imported/paper_background.png-a09ab0dd3e18a373e9c18114cb920a19.ctex"]
 
 [params]
 
