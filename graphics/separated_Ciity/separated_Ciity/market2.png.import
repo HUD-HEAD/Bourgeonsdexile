@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d13ghx5btheqr"
-path="res://.godot/imported/houses3.png-95e9bfaac8384985150cd5507e8ac9cc.ctex"
+uid="uid://i8t6whpiqxmp"
+path="res://.godot/imported/market2.png-06eacd8ca4e2f32ae25cced212a62842.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/separated_Ciity/houses3.png"
-dest_files=["res://.godot/imported/houses3.png-95e9bfaac8384985150cd5507e8ac9cc.ctex"]
+source_file="res://graphics/separated_Ciity/separated_Ciity/market2.png"
+dest_files=["res://.godot/imported/market2.png-06eacd8ca4e2f32ae25cced212a62842.ctex"]
 
 [params]
 
