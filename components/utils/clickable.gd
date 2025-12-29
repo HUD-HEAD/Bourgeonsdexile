@@ -1,3 +1,4 @@
+class_name Clickable
 extends Area2D
 
 func _ready() -> void:

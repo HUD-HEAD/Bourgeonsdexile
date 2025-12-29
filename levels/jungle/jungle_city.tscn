@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://s3spdg0qqc77"]
+[gd_scene load_steps=13 format=3 uid="uid://s3spdg0qqc77"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_1rybe"]
 [ext_resource type="Texture2D" uid="uid://ckypv1bpibrph" path="res://graphics/jungle/environment/separated_Ciity/sky.png" id="1_uvrs6"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/jungle/jungle_woman.tscn" id="7_2dtoo"]
 [ext_resource type="Texture2D" uid="uid://cc2jo44beq8p8" path="res://graphics/jungle/environment/separated_Ciity/houses4.png" id="7_8tq2l"]
 [ext_resource type="Texture2D" uid="uid://ba5a2o3t37g1i" path="res://graphics/jungle/environment/separated_Ciity/line.png" id="9_pggw3"]
+[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="11_jpgwf"]
+[ext_resource type="PackedScene" uid="uid://djv5fkem5af34" path="res://levels/jungle/jungle_comic_2.tscn" id="12_jpgwf"]
 
 [node name="JungleCity" type="Node2D"]
 
@@ -59,3 +61,8 @@ position = Vector2(456, 847)
 [node name="Camera2D" type="Camera2D" parent="JungleWoman"]
 position = Vector2(0, -304)
 offset = Vector2(500, 0)
+
+[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(4815, 670)
+script = ExtResource("11_jpgwf")
+next_scene = ExtResource("12_jpgwf")
