@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd8t3ufo5lv1h"
-path="res://.godot/imported/market1.png-c26168e26551df5dfe00a9fa9a0f5b4b.ctex"
+uid="uid://bbeggw5f5yk6k"
+path="res://.godot/imported/clouds.png-fcc6454d84e028085117342bedb94dfb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/separated_Ciity/separated_Ciity/market1.png"
-dest_files=["res://.godot/imported/market1.png-c26168e26551df5dfe00a9fa9a0f5b4b.ctex"]
+source_file="res://graphics/jungle/environment/separated_Ciity/clouds.png"
+dest_files=["res://.godot/imported/clouds.png-fcc6454d84e028085117342bedb94dfb.ctex"]
 
 [params]
 

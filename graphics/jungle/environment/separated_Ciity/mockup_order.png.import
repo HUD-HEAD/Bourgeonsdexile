@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcbtv3eyw2klf"
-path="res://.godot/imported/houses2.png-17bf24628caac77d2cff82dd225370da.ctex"
+uid="uid://1gymu4lnami3"
+path="res://.godot/imported/mockup_order.png-7ec01cd18f5dbe3983d87bb9719edce8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/separated_Ciity/separated_Ciity/houses2.png"
-dest_files=["res://.godot/imported/houses2.png-17bf24628caac77d2cff82dd225370da.ctex"]
+source_file="res://graphics/jungle/environment/separated_Ciity/mockup_order.png"
+dest_files=["res://.godot/imported/mockup_order.png-7ec01cd18f5dbe3983d87bb9719edce8.ctex"]
 
 [params]
 
