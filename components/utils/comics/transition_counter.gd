@@ -8,6 +8,12 @@ func _ready() -> void:
 	SignalManager.obstacle_cleared.connect(_on_obstacle_cleared)
 
 func _on_obstacle_cleared():
+	#print_debug(owner.process_mode, "	", owner.is_processing())
+	#TODO rework counter logic
+	#HACK prevent node from processing signal if disabled
+	if owner.process_mode == ProcessMode.PROCESS_MODE_DISABLED:
+		return
+	
 	counter += 1
 	if counter >= obstacles_to_clear:
 		InputManager.hide_mouse()
