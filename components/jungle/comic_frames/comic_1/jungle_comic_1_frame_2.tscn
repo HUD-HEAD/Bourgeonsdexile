@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://cbouhlj8xssdp"]
+[gd_scene load_steps=39 format=3 uid="uid://cbouhlj8xssdp"]
 
 [ext_resource type="Texture2D" uid="uid://bb2c2vdmoetaq" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background1.png" id="1_1sw1c"]
 [ext_resource type="Texture2D" uid="uid://bnsw6fe16uoeb" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background2.png" id="2_f5xcq"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://c2qclx8s821r6" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction7.png" id="27_hijka"]
 [ext_resource type="Texture2D" uid="uid://cirkkungp4y15" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction8.png" id="28_oqqh3"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="29_f5xcq"]
+[ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/click_enable.gd" id="30_khho4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_37uka"]
 animations = [{
@@ -261,6 +262,9 @@ _data = {
 &"argument": SubResource("Animation_47thf")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khho4"]
+size = Vector2(340, 330)
+
 [node name="JungleComic1Frame2" type="Node2D"]
 metadata/_edit_group_ = true
 
@@ -288,3 +292,11 @@ autoplay = "argument"
 [node name="PanelTransitionTrigger" type="Node" parent="." node_paths=PackedStringArray("anim_player")]
 script = ExtResource("29_f5xcq")
 anim_player = NodePath("../AnimationPlayer")
+
+[node name="TriggerAnimation" type="Area2D" parent="." node_paths=PackedStringArray("node_to_enable")]
+script = ExtResource("30_khho4")
+node_to_enable = NodePath("../AnimationPlayer")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerAnimation"]
+position = Vector2(40, -60)
+shape = SubResource("RectangleShape2D_khho4")
