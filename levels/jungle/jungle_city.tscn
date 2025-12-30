@@ -15,22 +15,40 @@
 
 [node name="JungleCity" type="Node2D"]
 
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3241.0
+offset_right = 2519.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_1rybe")
+stretch_mode = 1
+
 [node name="BackgroundPaper" type="Sprite2D" parent="."]
-position = Vector2(-1921, 0)
+visible = false
+position = Vector2(1, 0)
 texture = ExtResource("1_1rybe")
 centered = false
 
 [node name="Sky" type="Sprite2D" parent="."]
-position = Vector2(-126, 0)
+position = Vector2(1796, 0)
 texture = ExtResource("1_uvrs6")
 centered = false
 
-[node name="Clouds" type="Sprite2D" parent="."]
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.9, 0.9)
+
+[node name="Clouds" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(1922, 0)
 texture = ExtResource("2_pggw3")
 centered = false
 
 [node name="Floor" type="Sprite2D" parent="."]
-position = Vector2(0, 835)
+position = Vector2(1922, 835)
 texture = ExtResource("2_uvrs6")
 centered = false
 
@@ -40,29 +58,32 @@ texture = ExtResource("9_pggw3")
 centered = false
 
 [node name="Houses1" type="Sprite2D" parent="."]
-position = Vector2(648, 533)
+position = Vector2(2570, 533)
 texture = ExtResource("4_1rybe")
 
 [node name="Houses2" type="Sprite2D" parent="."]
-position = Vector2(1771, 532)
+position = Vector2(3693, 532)
 texture = ExtResource("5_1bjwg")
 
 [node name="Houses3" type="Sprite2D" parent="."]
-position = Vector2(2522, 557)
+position = Vector2(4444, 557)
 texture = ExtResource("6_jpgwf")
 
 [node name="Houses4" type="Sprite2D" parent="."]
-position = Vector2(3320, 568)
+position = Vector2(5242, 568)
 texture = ExtResource("7_8tq2l")
 
 [node name="JungleWoman" parent="." instance=ExtResource("7_2dtoo")]
-position = Vector2(456, 847)
+position = Vector2(81, 847)
 
 [node name="Camera2D" type="Camera2D" parent="JungleWoman"]
 position = Vector2(0, -304)
 offset = Vector2(500, 0)
 
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleWoman"]
+position = Vector2(-186, 0)
+
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(4815, 670)
+position = Vector2(6737, 670)
 script = ExtResource("11_jpgwf")
 next_scene = ExtResource("12_jpgwf")
