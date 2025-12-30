@@ -68,6 +68,8 @@ position = Vector2(3210, 496)
 scale = Vector2(0.9, 0.9)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JuncleComic1TVAndSwitch"]
+script = ExtResource("5_mmya6")
+show_mouse = true
 
 [node name="JungleComicCandle" type="Node2D" parent="."]
 position = Vector2(4874, 540)
@@ -83,8 +85,10 @@ script = ExtResource("13_6d6w6")
 [node name="JungleComic1Frame2" parent="." instance=ExtResource("5_cw6x3")]
 position = Vector2(6995, 540)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame2"]
+[node name="VisibleOnScreenEnabler2D2" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame2"]
 position = Vector2(323, 0)
+script = ExtResource("5_mmya6")
+show_mouse = true
 
 [node name="JungleComic1Frame3" parent="." instance=ExtResource("6_7psfr")]
 position = Vector2(9537, 540)

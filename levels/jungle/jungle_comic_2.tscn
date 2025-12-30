@@ -21,6 +21,7 @@
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(960, 540)
+limit_enabled = false
 limit_left = 0
 limit_right = 21990
 limit_smoothed = true
@@ -35,7 +36,7 @@ follow_viewport_enabled = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 20080.0
+offset_right = 23080.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -61,7 +62,7 @@ script = ExtResource("3_e56vw")
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="ManWalking"]
 
 [node name="WalletPanel" parent="." instance=ExtResource("10_dkeqa")]
-position = Vector2(5091, 652.5)
+position = Vector2(5091, 592)
 
 [node name="PanelTransitionTrigger" type="Node" parent="WalletPanel"]
 script = ExtResource("5_exkuh")
@@ -79,7 +80,7 @@ script = ExtResource("3_e56vw")
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="DeckMan"]
 
 [node name="Man" type="Sprite2D" parent="."]
-position = Vector2(8131, 495.5)
+position = Vector2(8751.5, 495.5)
 texture = ExtResource("2_fekbj")
 
 [node name="PanelTransitionTrigger" type="Node" parent="Man"]
@@ -88,7 +89,7 @@ script = ExtResource("3_e56vw")
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Man"]
 
 [node name="WomanHelping" type="Sprite2D" parent="."]
-position = Vector2(9549, 525.5)
+position = Vector2(10169.5, 525.5)
 texture = ExtResource("9_tmikl")
 
 [node name="PanelTransitionTrigger" type="Node" parent="WomanHelping"]
@@ -97,7 +98,7 @@ script = ExtResource("3_e56vw")
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="WomanHelping"]
 
 [node name="WomanExplaining" type="Sprite2D" parent="."]
-position = Vector2(10379, 556.5)
+position = Vector2(11935, 556.5)
 texture = ExtResource("8_mtmad")
 
 [node name="PanelTransitionTrigger" type="Node" parent="WomanExplaining"]
@@ -106,7 +107,7 @@ script = ExtResource("3_e56vw")
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="WomanExplaining"]
 
 [node name="GroupWomen" type="Sprite2D" parent="."]
-position = Vector2(12035, 554.5)
+position = Vector2(13591, 554.5)
 texture = ExtResource("4_1sxs8")
 
 [node name="PanelTransitionTrigger" type="Node" parent="GroupWomen"]
@@ -115,7 +116,7 @@ script = ExtResource("3_e56vw")
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="GroupWomen"]
 
 [node name="JungleEntry" type="Sprite2D" parent="."]
-position = Vector2(14099, 545)
+position = Vector2(15655, 545)
 texture = ExtResource("6_xln60")
 
 [node name="PanelTransitionTrigger" type="Node" parent="JungleEntry"]
@@ -124,12 +125,12 @@ script = ExtResource("3_e56vw")
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleEntry"]
 
 [node name="PregnancyPanel" parent="." instance=ExtResource("12_exkuh")]
-position = Vector2(16433, 539.5)
+position = Vector2(17989, 539.5)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="PregnancyPanel"]
 
 [node name="JungleBeggining" type="Sprite2D" parent="."]
-position = Vector2(18172, 555.5)
+position = Vector2(19728, 555.5)
 texture = ExtResource("5_lk73m")
 
 [node name="PanelTransitionTrigger" type="Node" parent="JungleBeggining"]
@@ -138,7 +139,7 @@ script = ExtResource("3_e56vw")
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleBeggining"]
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(20681, 625)
+position = Vector2(22237, 625)
 script = ExtResource("14_fekbj")
 next_scene = ExtResource("14_exkuh")
 

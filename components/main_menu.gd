@@ -6,8 +6,6 @@ extends CanvasLayer
 @export var credits : Button
 @export var quit : Button
 
-const start_scene = "res://levels/jungle/jungle_comic_1_panning.tscn"
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_buttons_connect()
@@ -20,7 +18,7 @@ func _buttons_connect():
 
 ## Start game
 func _on_play_pressed():
-	SceneManager.goto_scene(start_scene)
+	SceneManager.goto_scene(SceneManager.START_SCENE)
 
 ## Open settings
 func _on_settings_pressed():

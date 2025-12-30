@@ -47,11 +47,11 @@ size = Vector2(337.69998, 245.50806)
 [node name="JungleComic1Frame4" type="Node2D"]
 
 [node name="Frame4Drawer" type="Sprite2D" parent="."]
-position = Vector2(0, 258)
+position = Vector2(0, 353)
 texture = ExtResource("1_qb8vt")
 
 [node name="JungleItem" parent="Frame4Drawer" instance=ExtResource("2_tphwk")]
-position = Vector2(347, -203)
+position = Vector2(444, -203)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Drawer/JungleItem"]
 rotation = -0.33161256
@@ -62,7 +62,7 @@ shape = SubResource("RectangleShape2D_n2g0o")
 texture = ExtResource("2_n2g0o")
 
 [node name="JungleItem2" parent="Frame4Drawer" instance=ExtResource("2_tphwk")]
-position = Vector2(-201, -257)
+position = Vector2(-148, -257)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Drawer/JungleItem2"]
 position = Vector2(-5.855961, 5.090515)
@@ -73,7 +73,7 @@ shape = SubResource("RectangleShape2D_tphwk")
 texture = ExtResource("3_tphwk")
 
 [node name="JungleItem3" parent="Frame4Drawer" instance=ExtResource("2_tphwk")]
-position = Vector2(-345, -189)
+position = Vector2(-402, -189)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Drawer/JungleItem3"]
 position = Vector2(-14.138163, 3.6475525)
@@ -84,7 +84,7 @@ shape = SubResource("RectangleShape2D_71kyb")
 texture = ExtResource("4_71kyb")
 
 [node name="JungleItem4" parent="Frame4Drawer" instance=ExtResource("2_tphwk")]
-position = Vector2(117, -140)
+position = Vector2(177, -140)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Drawer/JungleItem4"]
 rotation = 0.5769526
@@ -94,11 +94,11 @@ shape = SubResource("RectangleShape2D_uyu3e")
 texture = ExtResource("5_uyu3e")
 
 [node name="Frame4Table" type="Sprite2D" parent="."]
-position = Vector2(0, -224)
+position = Vector2(12, -224)
 texture = ExtResource("6_qme1i")
 
 [node name="JungleItem" parent="Frame4Table" instance=ExtResource("2_tphwk")]
-position = Vector2(-364, -121)
+position = Vector2(-481, -121)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Table/JungleItem"]
 position = Vector2(-1.9439049, -6.9309235)
@@ -109,7 +109,7 @@ shape = SubResource("RectangleShape2D_qme1i")
 texture = ExtResource("7_hhjir")
 
 [node name="JungleItem2" parent="Frame4Table" instance=ExtResource("2_tphwk")]
-position = Vector2(-316, 57)
+position = Vector2(-316, 174)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Table/JungleItem2"]
 rotation = -0.98866993
@@ -129,7 +129,7 @@ shape = SubResource("CapsuleShape2D_txu23")
 texture = ExtResource("9_p2opm")
 
 [node name="JungleItem4" parent="Frame4Table" instance=ExtResource("2_tphwk")]
-position = Vector2(454, -8)
+position = Vector2(501, -8)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Frame4Table/JungleItem4"]
 position = Vector2(-7.4515896, -4.2070465)
@@ -152,7 +152,7 @@ shape = SubResource("RectangleShape2D_p2opm")
 texture = ExtResource("11_hm6l7")
 
 [node name="Frame4Blindlight" type="Sprite2D" parent="."]
-position = Vector2(-663, 0)
+position = Vector2(-764, 0)
 texture = ExtResource("13_dgwin")
 
 [node name="TransitionTriggerCounter" type="Node" parent="."]

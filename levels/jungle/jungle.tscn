@@ -49,7 +49,10 @@ offset = Vector2(500, 0)
 metadata/_edit_lock_ = true
 
 [node name="Obstacle" parent="." instance=ExtResource("5_vwdhm")]
-position = Vector2(2266, 0)
+position = Vector2(1183, 0)
+
+[node name="Obstacle2" parent="." instance=ExtResource("5_vwdhm")]
+position = Vector2(2957, 0)
 
 [node name="PointClickDemo" parent="." instance=ExtResource("5_cbs17")]
 position = Vector2(971, 159)
