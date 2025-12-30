@@ -94,7 +94,7 @@ shape = SubResource("RectangleShape2D_uyu3e")
 texture = ExtResource("5_uyu3e")
 
 [node name="Frame4Table" type="Sprite2D" parent="."]
-position = Vector2(0, -224)
+position = Vector2(12, -224)
 texture = ExtResource("6_qme1i")
 
 [node name="JungleItem" parent="Frame4Table" instance=ExtResource("2_tphwk")]
