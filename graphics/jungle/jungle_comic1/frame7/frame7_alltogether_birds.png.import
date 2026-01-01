@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2pi7p41smxpl"
-path="res://.godot/imported/frame7_alltogether_birds.png-0d3c52ed780d4dfce8487df3376b5e97.ctex"
+path="res://.godot/imported/frame7_alltogether_birds.png-b1e5556da3a16c8c42f24127888d67da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/comic1rexported/frame7/frame7_alltogether_birds.png"
-dest_files=["res://.godot/imported/frame7_alltogether_birds.png-0d3c52ed780d4dfce8487df3376b5e97.ctex"]
+source_file="res://graphics/jungle/jungle_comic1/frame7/frame7_alltogether_birds.png"
+dest_files=["res://.godot/imported/frame7_alltogether_birds.png-b1e5556da3a16c8c42f24127888d67da.ctex"]
 
 [params]
 

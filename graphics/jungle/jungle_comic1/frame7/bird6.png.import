@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bsnw46m5wbbuj"
-path="res://.godot/imported/bird6.png-292da0fd110b7a889e4f8a0325e8d04e.ctex"
+path="res://.godot/imported/bird6.png-bdcd74c5a0817a6ed7588f40ed34a2e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/comic1rexported/frame7/bird6.png"
-dest_files=["res://.godot/imported/bird6.png-292da0fd110b7a889e4f8a0325e8d04e.ctex"]
+source_file="res://graphics/jungle/jungle_comic1/frame7/bird6.png"
+dest_files=["res://.godot/imported/bird6.png-bdcd74c5a0817a6ed7588f40ed34a2e0.ctex"]
 
 [params]
 

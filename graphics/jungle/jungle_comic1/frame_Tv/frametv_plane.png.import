@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfbhlmbuoewuv"
-path="res://.godot/imported/frametv_plane.png-950460b0b0faeea2a4a122fde5819b55.ctex"
+path="res://.godot/imported/frametv_plane.png-08debe1c8a35cdf6e0d73a5fbec59167.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/comic1rexported/frame_Tv/frametv_plane.png"
-dest_files=["res://.godot/imported/frametv_plane.png-950460b0b0faeea2a4a122fde5819b55.ctex"]
+source_file="res://graphics/jungle/jungle_comic1/frame_Tv/frametv_plane.png"
+dest_files=["res://.godot/imported/frametv_plane.png-08debe1c8a35cdf6e0d73a5fbec59167.ctex"]
 
 [params]
 

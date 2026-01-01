@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ha1dp1pbgh3o"
-path="res://.godot/imported/foam3.png-3d0c708762c44eac154c29b70e0a80fe.ctex"
+path="res://.godot/imported/foam3.png-747f5095ae43ede77a5b155852534ce0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/comic1rexported/frame8/foam3.png"
-dest_files=["res://.godot/imported/foam3.png-3d0c708762c44eac154c29b70e0a80fe.ctex"]
+source_file="res://graphics/jungle/jungle_comic1/frame8/foam3.png"
+dest_files=["res://.godot/imported/foam3.png-747f5095ae43ede77a5b155852534ce0.ctex"]
 
 [params]
 
