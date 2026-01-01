@@ -5,5 +5,5 @@ extends Clickable
 func _action_on_click():
 	switch_sprite.visible = !switch_sprite.visible
 	
-	SignalManager.obstacle_cleared.emit()
+	super()
 	

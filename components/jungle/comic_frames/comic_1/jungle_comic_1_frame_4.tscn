@@ -155,6 +155,6 @@ texture = ExtResource("11_hm6l7")
 position = Vector2(-764, 0)
 texture = ExtResource("13_dgwin")
 
-[node name="TransitionTriggerCounter" type="Node" parent="."]
+[node name="TransitionTriggerCounter" type="Node" parent="." node_paths=PackedStringArray("clickables")]
 script = ExtResource("15_txu23")
-obstacles_to_clear = 9
+clickables = [NodePath("../Frame4Drawer/JungleItem"), NodePath("../Frame4Drawer/JungleItem2"), NodePath("../Frame4Drawer/JungleItem3"), NodePath("../Frame4Drawer/JungleItem4"), NodePath("../Frame4Table/JungleItem"), NodePath("../Frame4Table/JungleItem2"), NodePath("../Frame4Table/JungleItem3"), NodePath("../Frame4Table/JungleItem4"), NodePath("../Frame4Table/JungleItem5")]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://be8m0cbcq6bww"]
 
-[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="1_muu1s"]
+[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/click_hide.gd" id="1_r4hvo"]
 
 [node name="JungleItem" type="Area2D"]
-script = ExtResource("1_muu1s")
+script = ExtResource("1_r4hvo")
