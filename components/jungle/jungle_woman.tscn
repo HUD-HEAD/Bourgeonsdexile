@@ -197,6 +197,7 @@ char_area = NodePath("Area2D")
 anim_sprite = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
 position = Vector2(0, -131)
 sprite_frames = SubResource("SpriteFrames_haisx")
 animation = &"walking"

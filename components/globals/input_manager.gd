@@ -8,3 +8,7 @@ func show_mouse():
 	
 func hide_mouse():
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
+
+func _unhandled_key_input(event: InputEvent) -> void:
+	if event.is_action_pressed("exit"):
+		get_tree().quit()
