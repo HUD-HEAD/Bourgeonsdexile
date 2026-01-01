@@ -2,13 +2,13 @@
 
 [ext_resource type="VideoStream" uid="uid://35rj0tvg4lql" path="res://video/video_demo.ogv" id="1_8yl6b"]
 [ext_resource type="Script" uid="uid://blr2m1o588s1t" path="res://components/utils/click_gotoscene.gd" id="2_pdnfg"]
-[ext_resource type="PackedScene" uid="uid://cj3vi388jtbxy" path="res://levels/jungle/jungle_comic_1.tscn" id="3_0fttw"]
+[ext_resource type="PackedScene" uid="uid://du7xk8lrsn7at" path="res://levels/jungle/jungle_comic_1.tscn" id="3_0fttw"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_pdnfg"]
 size = Vector2(50, 50)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_0fttw"]
-radius = 83.15047
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pdnfg"]
+size = Vector2(572, 160)
 
 [node name="VideoplayerDemo" type="Control"]
 layout_mode = 3
@@ -53,7 +53,9 @@ script = ExtResource("2_pdnfg")
 target_scene = ExtResource("3_0fttw")
 
 [node name="Sprite2D" type="Sprite2D" parent="Control/Start"]
+visible = false
 texture = SubResource("PlaceholderTexture2D_pdnfg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Start"]
-shape = SubResource("CircleShape2D_0fttw")
+position = Vector2(-187, 46)
+shape = SubResource("RectangleShape2D_pdnfg")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://s3spdg0qqc77"]
+[gd_scene load_steps=18 format=3 uid="uid://s3spdg0qqc77"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_1rybe"]
 [ext_resource type="Texture2D" uid="uid://ckypv1bpibrph" path="res://graphics/jungle/environment/separated_Ciity/sky.png" id="1_uvrs6"]
@@ -19,9 +19,6 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vdiy3"]
 size = Vector2(102, 102)
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gfnqf"]
-size = Vector2(50, 50)
 
 [node name="JungleCity" type="Node2D"]
 
@@ -84,20 +81,20 @@ position = Vector2(5242, 568)
 texture = ExtResource("7_8tq2l")
 
 [node name="JungleWoman" parent="." instance=ExtResource("7_2dtoo")]
-position = Vector2(81, 847)
-
-[node name="Camera2D" type="Camera2D" parent="JungleWoman"]
-position = Vector2(0, -304)
-offset = Vector2(500, 0)
+position = Vector2(81, 956)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleWoman"]
 position = Vector2(-186, 0)
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="JungleWoman"]
-position = Vector2(0, -331)
+position = Vector2(0, -382)
+
+[node name="Camera2D" type="Camera2D" parent="JungleWoman"]
+position = Vector2(0, -416)
+offset = Vector2(500, 0)
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(6737, 670)
+position = Vector2(6531, 670)
 script = ExtResource("11_jpgwf")
 next_scene = ExtResource("12_jpgwf")
 
@@ -114,10 +111,6 @@ script = ExtResource("16_0tvtc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle1/Npc1/Clickable"]
 shape = SubResource("RectangleShape2D_vdiy3")
-
-[node name="Sprite2D" type="Sprite2D" parent="Puzzle1/Npc1/Clickable"]
-position = Vector2(3, 3)
-texture = SubResource("PlaceholderTexture2D_gfnqf")
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Puzzle1/Npc1"]
 position = Vector2(-1, -215)

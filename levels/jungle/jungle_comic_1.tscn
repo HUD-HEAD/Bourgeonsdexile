@@ -31,7 +31,7 @@ follow_viewport_enabled = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 20080.0
+offset_right = 21944.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -41,7 +41,7 @@ stretch_mode = 1
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(960, 540)
 limit_left = 0
-limit_right = 21990
+limit_right = 23866
 limit_smoothed = true
 position_smoothing_enabled = true
 editor_draw_limits = true
@@ -149,7 +149,7 @@ script = ExtResource("3_ej5x0")
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame8"]
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(21721, 625)
+position = Vector2(22770, 625)
 script = ExtResource("17_54bx8")
 next_scene = ExtResource("16_7ejrb")
 

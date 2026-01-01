@@ -26,6 +26,8 @@ func _ready() -> void:
 func _next_panel():
 	assert(idx + 1< panels.size(), "idx inside panels number")
 	idx += 1
+	
+	InputManager.hide_mouse()
 	_pan_to(panels[idx])
 
 

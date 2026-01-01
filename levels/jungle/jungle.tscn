@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://brc35c78ohvta"]
+[gd_scene load_steps=7 format=3 uid="uid://brc35c78ohvta"]
 
 [ext_resource type="Texture2D" uid="uid://c131fhgoar0d2" path="res://graphics/jungle/environment/dayjungle/alltogether.png" id="1_633mf"]
 [ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/jungle/jungle_woman.tscn" id="2_2u04l"]
 [ext_resource type="Texture2D" uid="uid://c7gngm2pa86kt" path="res://graphics/jungle/environment/dayjungle/water_river.png" id="3_yi4yt"]
-[ext_resource type="PackedScene" uid="uid://0mic1rucdlj6" path="res://levels/prototyping/point_click_demo.tscn" id="5_cbs17"]
 [ext_resource type="Texture2D" uid="uid://d14tfjapvt6do" path="res://graphics/jungle/environment/dayjungle/background_river.png" id="5_on17i"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/obstacle.tscn" id="5_vwdhm"]
 
@@ -25,7 +24,7 @@ centered = false
 position = Vector2(458, 666)
 
 [node name="JungleWomanReflection" parent="RiverMask/ReflectionContainer" instance=ExtResource("2_2u04l")]
-position = Vector2(0, 273)
+position = Vector2(0, 209)
 
 [node name="AnimatedSprite2D" parent="RiverMask/ReflectionContainer/JungleWomanReflection" index="0"]
 self_modulate = Color(1, 1, 1, 0.47058824)
@@ -41,20 +40,13 @@ texture = ExtResource("5_on17i")
 centered = false
 
 [node name="JungleWoman" parent="." instance=ExtResource("2_2u04l")]
-position = Vector2(458, 666)
+position = Vector2(458, 687)
 
 [node name="Camera2D" type="Camera2D" parent="JungleWoman"]
-position = Vector2(0, -126)
+position = Vector2(0, -147)
 offset = Vector2(500, 0)
-metadata/_edit_lock_ = true
 
 [node name="Obstacle" parent="." instance=ExtResource("5_vwdhm")]
-position = Vector2(1183, 0)
-
-[node name="Obstacle2" parent="." instance=ExtResource("5_vwdhm")]
 position = Vector2(2957, 0)
-
-[node name="PointClickDemo" parent="." instance=ExtResource("5_cbs17")]
-position = Vector2(971, 159)
 
 [editable path="RiverMask/ReflectionContainer/JungleWomanReflection"]
