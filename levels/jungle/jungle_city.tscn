@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://s3spdg0qqc77"]
+[gd_scene load_steps=16 format=3 uid="uid://s3spdg0qqc77"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_1rybe"]
 [ext_resource type="Texture2D" uid="uid://ckypv1bpibrph" path="res://graphics/jungle/environment/separated_Ciity/sky.png" id="1_uvrs6"]
@@ -12,6 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://ba5a2o3t37g1i" path="res://graphics/jungle/environment/separated_Ciity/line.png" id="9_pggw3"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="11_jpgwf"]
 [ext_resource type="PackedScene" uid="uid://djv5fkem5af34" path="res://levels/jungle/jungle_comic_2.tscn" id="12_jpgwf"]
+[ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/obstacle.tscn" id="13_8tq2l"]
+[ext_resource type="PackedScene" uid="uid://cyq5jl4y7etbe" path="res://levels/jungle/jungle_city_puzzle_1.tscn" id="13_vf82b"]
+[ext_resource type="Texture2D" uid="uid://cbqyh6vmywdjk" path="res://graphics/separated_Ciity/separated_Ciity/npcs/npc1.png" id="15_eyf7u"]
 
 [node name="JungleCity" type="Node2D"]
 
@@ -87,3 +90,21 @@ position = Vector2(-186, 0)
 position = Vector2(6737, 670)
 script = ExtResource("11_jpgwf")
 next_scene = ExtResource("12_jpgwf")
+
+[node name="Puzzle1" type="Node2D" parent="."]
+position = Vector2(1107, 0)
+
+[node name="Npc1" type="Sprite2D" parent="Puzzle1"]
+position = Vector2(311, 818)
+texture = ExtResource("15_eyf7u")
+
+[node name="Obstacle" parent="Puzzle1" instance=ExtResource("13_8tq2l")]
+
+[node name="CityPuzzle1" parent="Puzzle1" node_paths=PackedStringArray("puzzle_pieces") instance=ExtResource("13_vf82b")]
+position = Vector2(161, 465)
+puzzle_pieces = {
+NodePath("Draggable"): NodePath("Receptacle"),
+NodePath("Draggable2"): NodePath("Receptacle2"),
+NodePath("Draggable3"): NodePath("Receptacle3"),
+NodePath("Draggable4"): NodePath("Receptacle4")
+}

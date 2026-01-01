@@ -1,0 +1,127 @@
+[gd_scene load_steps=17 format=3 uid="uid://cyq5jl4y7etbe"]
+
+[ext_resource type="Texture2D" uid="uid://dtjga43jyc4go" path="res://graphics/ui/puzzle_1/bubble2puzle1.png" id="1_1e0l2"]
+[ext_resource type="Texture2D" uid="uid://ba3y776eu6f7" path="res://graphics/ui/puzzle_1/bubble3puzle1.png" id="2_ts23a"]
+[ext_resource type="Texture2D" uid="uid://bp2p0a8c67kt1" path="res://graphics/ui/puzzle_1/bubble4puzle1.png" id="3_kixfw"]
+[ext_resource type="Texture2D" uid="uid://bmofamb26y4gd" path="res://graphics/ui/puzzle_1/emptysquare.png" id="4_4poeb"]
+[ext_resource type="Script" uid="uid://chrql2wwvrdt1" path="res://levels/jungle/drag_drop_puzzle.gd" id="4_ts23a"]
+[ext_resource type="Texture2D" uid="uid://cacvqldc3simv" path="res://graphics/ui/puzzle_1/fullsquare.png" id="5_puneu"]
+[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/draggable.gd" id="7_qrnr7"]
+[ext_resource type="Texture2D" uid="uid://bkh5wmo54cgbl" path="res://graphics/ui/puzzle_1/bubble1puzle1.png" id="8_7yep7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aeb3g"]
+size = Vector2(95, 95)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mvwgm"]
+size = Vector2(102, 102)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1e0l2"]
+size = Vector2(37, 73)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ts23a"]
+size = Vector2(48, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kixfw"]
+size = Vector2(37, 73)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4poeb"]
+size = Vector2(48, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_puneu"]
+size = Vector2(108, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1nce"]
+size = Vector2(136, 46)
+
+[node name="CityPuzzle1" type="Node2D" node_paths=PackedStringArray("puzzle_pieces", "complete_image")]
+script = ExtResource("4_ts23a")
+puzzle_pieces = {
+NodePath("Draggable"): NodePath("Receptacle"),
+NodePath("Draggable2"): NodePath("Receptacle2"),
+NodePath("Draggable3"): NodePath("Receptacle3"),
+NodePath("Draggable4"): NodePath("Receptacle4")
+}
+complete_image = NodePath("Fullsquare")
+
+[node name="Emptysquare" type="Sprite2D" parent="."]
+texture = ExtResource("4_4poeb")
+
+[node name="Fullsquare" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("5_puneu")
+
+[node name="Receptacle" type="Area2D" parent="."]
+position = Vector2(-89, -1)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Receptacle"]
+shape = SubResource("RectangleShape2D_aeb3g")
+
+[node name="Draggable" type="Area2D" parent="."]
+position = Vector2(-93, 9)
+script = ExtResource("7_qrnr7")
+metadata/_edit_group_ = true
+
+[node name="Bubble1Puzle1" type="Sprite2D" parent="Draggable"]
+texture = ExtResource("8_7yep7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Draggable"]
+shape = SubResource("RectangleShape2D_mvwgm")
+
+[node name="Receptacle2" type="Area2D" parent="."]
+position = Vector2(5, -64)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Receptacle2"]
+position = Vector2(-6, 16)
+shape = SubResource("RectangleShape2D_1e0l2")
+
+[node name="Draggable2" type="Area2D" parent="."]
+position = Vector2(-3, -36)
+script = ExtResource("7_qrnr7")
+metadata/_edit_group_ = true
+
+[node name="Bubble2Puzle1" type="Sprite2D" parent="Draggable2"]
+texture = ExtResource("1_1e0l2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Draggable2"]
+shape = SubResource("RectangleShape2D_ts23a")
+
+[node name="Receptacle3" type="Area2D" parent="."]
+position = Vector2(97, -62)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Receptacle3"]
+position = Vector2(-6, 16)
+shape = SubResource("RectangleShape2D_kixfw")
+
+[node name="Draggable3" type="Area2D" parent="."]
+position = Vector2(90, -49)
+script = ExtResource("7_qrnr7")
+metadata/_edit_group_ = true
+
+[node name="Bubble3Puzle1" type="Sprite2D" parent="Draggable3"]
+texture = ExtResource("2_ts23a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Draggable3"]
+shape = SubResource("RectangleShape2D_4poeb")
+
+[node name="Receptacle4" type="Area2D" parent="."]
+position = Vector2(79, 59)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Receptacle4"]
+position = Vector2(-34, 14)
+shape = SubResource("RectangleShape2D_puneu")
+
+[node name="Draggable4" type="Area2D" parent="."]
+position = Vector2(54, 90)
+script = ExtResource("7_qrnr7")
+metadata/_edit_group_ = true
+
+[node name="Bubble4Puzle1" type="Sprite2D" parent="Draggable4"]
+texture = ExtResource("3_kixfw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Draggable4"]
+position = Vector2(9, -12)
+shape = SubResource("RectangleShape2D_u1nce")
