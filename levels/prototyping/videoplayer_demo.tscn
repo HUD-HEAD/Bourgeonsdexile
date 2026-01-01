@@ -2,7 +2,7 @@
 
 [ext_resource type="VideoStream" uid="uid://35rj0tvg4lql" path="res://video/video_demo.ogv" id="1_8yl6b"]
 [ext_resource type="Script" uid="uid://blr2m1o588s1t" path="res://components/utils/click_gotoscene.gd" id="2_pdnfg"]
-[ext_resource type="PackedScene" uid="uid://cj3vi388jtbxy" path="res://levels/jungle/jungle_comic_1_panning.tscn" id="3_0fttw"]
+[ext_resource type="PackedScene" uid="uid://cj3vi388jtbxy" path="res://levels/jungle/jungle_comic_1.tscn" id="3_0fttw"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_pdnfg"]
 size = Vector2(50, 50)
