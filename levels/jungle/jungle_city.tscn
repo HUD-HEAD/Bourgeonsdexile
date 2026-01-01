@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://s3spdg0qqc77"]
+[gd_scene load_steps=19 format=3 uid="uid://s3spdg0qqc77"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_1rybe"]
 [ext_resource type="Texture2D" uid="uid://ckypv1bpibrph" path="res://graphics/jungle/environment/separated_Ciity/sky.png" id="1_uvrs6"]
@@ -15,6 +15,13 @@
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/obstacle.tscn" id="13_8tq2l"]
 [ext_resource type="PackedScene" uid="uid://cyq5jl4y7etbe" path="res://levels/jungle/jungle_city_puzzle_1.tscn" id="13_vf82b"]
 [ext_resource type="Texture2D" uid="uid://cbqyh6vmywdjk" path="res://graphics/separated_Ciity/separated_Ciity/npcs/npc1.png" id="15_eyf7u"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="16_0tvtc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vdiy3"]
+size = Vector2(102, 102)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gfnqf"]
+size = Vector2(50, 50)
 
 [node name="JungleCity" type="Node2D"]
 
@@ -86,6 +93,9 @@ offset = Vector2(500, 0)
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleWoman"]
 position = Vector2(-186, 0)
 
+[node name="MarkerBubbleSpawn" type="Marker2D" parent="JungleWoman"]
+position = Vector2(0, -331)
+
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
 position = Vector2(6737, 670)
 script = ExtResource("11_jpgwf")
@@ -98,9 +108,24 @@ position = Vector2(1107, 0)
 position = Vector2(311, 818)
 texture = ExtResource("15_eyf7u")
 
-[node name="Obstacle" parent="Puzzle1" instance=ExtResource("13_8tq2l")]
+[node name="Clickable" type="Area2D" parent="Puzzle1/Npc1"]
+position = Vector2(0, -28)
+script = ExtResource("16_0tvtc")
 
-[node name="CityPuzzle1" parent="Puzzle1" node_paths=PackedStringArray("puzzle_pieces") instance=ExtResource("13_vf82b")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle1/Npc1/Clickable"]
+shape = SubResource("RectangleShape2D_vdiy3")
+
+[node name="Sprite2D" type="Sprite2D" parent="Puzzle1/Npc1/Clickable"]
+position = Vector2(3, 3)
+texture = SubResource("PlaceholderTexture2D_gfnqf")
+
+[node name="MarkerBubbleSpawn" type="Marker2D" parent="Puzzle1/Npc1"]
+position = Vector2(-1, -215)
+
+[node name="Obstacle" parent="Puzzle1" instance=ExtResource("13_8tq2l")]
+collision_mask = 2
+
+[node name="CityPuzzle1" parent="Puzzle1" node_paths=PackedStringArray("puzzle_pieces", "piece_spawners", "spawn_trigger", "obstacle") instance=ExtResource("13_vf82b")]
 position = Vector2(161, 465)
 puzzle_pieces = {
 NodePath("Draggable"): NodePath("Receptacle"),
@@ -108,3 +133,6 @@ NodePath("Draggable2"): NodePath("Receptacle2"),
 NodePath("Draggable3"): NodePath("Receptacle3"),
 NodePath("Draggable4"): NodePath("Receptacle4")
 }
+piece_spawners = [NodePath("../../JungleWoman/MarkerBubbleSpawn"), NodePath("../Npc1/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../Npc1/Clickable")
+obstacle = NodePath("../Obstacle")
