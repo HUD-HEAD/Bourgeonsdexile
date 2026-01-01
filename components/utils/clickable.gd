@@ -1,6 +1,8 @@
 class_name Clickable
 extends Area2D
 
+signal clicked
+
 func _ready() -> void:
 	#Signal to change cursor when hovering in area
 	mouse_entered.connect(SignalManager.set_cursor_shape.emit.bind(Input.CURSOR_POINTING_HAND))
@@ -14,5 +16,4 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 
 func _action_on_click():
 	#print("clicked!")
-	SignalManager.obstacle_cleared.emit()
-	hide()
+	clicked.emit()

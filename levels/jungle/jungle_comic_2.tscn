@@ -5,13 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://dgq5a6r7e7rq3" path="res://graphics/comic2godot/man/man.png" id="2_fekbj"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="3_e56vw"]
 [ext_resource type="Texture2D" uid="uid://cjv88vfh05avf" path="res://graphics/comic2godot/group_women.png" id="4_1sxs8"]
-[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_exkuh"]
 [ext_resource type="Texture2D" uid="uid://ctpcowtb8p2kb" path="res://graphics/comic2godot/jungle_beggining.png" id="5_lk73m"]
 [ext_resource type="Texture2D" uid="uid://ct7wa6r8necfw" path="res://graphics/comic2godot/jungle_entry.png" id="6_xln60"]
 [ext_resource type="Texture2D" uid="uid://dfnb2m8u3gjok" path="res://graphics/comic2godot/man_walking.png" id="7_o76i3"]
 [ext_resource type="Texture2D" uid="uid://bq2tatkjr01xt" path="res://graphics/comic2godot/woman_explaining.png" id="8_mtmad"]
 [ext_resource type="Texture2D" uid="uid://hlya850o5n24" path="res://graphics/comic2godot/woman_helping.png" id="9_tmikl"]
 [ext_resource type="PackedScene" uid="uid://djyan8ubtutll" path="res://components/jungle/comic_frames/comic_2/wallet_panel.tscn" id="10_dkeqa"]
+[ext_resource type="Script" uid="uid://ds0m4hygkuj81" path="res://components/utils/comics/set_mouse_visibility.gd" id="12_1sxs8"]
 [ext_resource type="PackedScene" uid="uid://crfrjw42dcsks" path="res://components/jungle/comic_frames/comic_2/pregnancy_panel.tscn" id="12_exkuh"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="12_su3g7"]
 [ext_resource type="PackedScene" uid="uid://brc35c78ohvta" path="res://levels/jungle/jungle.tscn" id="14_exkuh"]
@@ -64,11 +64,9 @@ script = ExtResource("3_e56vw")
 [node name="WalletPanel" parent="." instance=ExtResource("10_dkeqa")]
 position = Vector2(5091, 592)
 
-[node name="PanelTransitionTrigger" type="Node" parent="WalletPanel"]
-script = ExtResource("5_exkuh")
-obstacles_to_clear = 6
-
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="WalletPanel"]
+script = ExtResource("12_1sxs8")
+show_mouse = true
 
 [node name="DeckMan" type="Sprite2D" parent="."]
 position = Vector2(6888, 518.5)
@@ -128,6 +126,8 @@ script = ExtResource("3_e56vw")
 position = Vector2(17989, 539.5)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="PregnancyPanel"]
+script = ExtResource("12_1sxs8")
+show_mouse = true
 
 [node name="JungleBeggining" type="Sprite2D" parent="."]
 position = Vector2(19728, 555.5)

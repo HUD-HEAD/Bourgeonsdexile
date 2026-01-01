@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://ckdsg3rpi65te"]
+
+[ext_resource type="Script" uid="uid://chrql2wwvrdt1" path="res://levels/jungle/drag_drop_puzzle.gd" id="1_s2m73"]
+[ext_resource type="Texture2D" uid="uid://bj1r581ujxnka" path="res://graphics/ui/puzle2/emptysquare2.png" id="2_s2m73"]
+[ext_resource type="Texture2D" uid="uid://cav0scpvse6tc" path="res://graphics/ui/puzle2/fullsquare2.png" id="3_hiiw3"]
+[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/draggable.gd" id="4_daxvp"]
+[ext_resource type="Texture2D" uid="uid://df78fjmd6nfpu" path="res://graphics/ui/puzle2/bubble1puzle2.png" id="5_8bf4l"]
+[ext_resource type="Texture2D" uid="uid://bjsfkjyr5i4gt" path="res://graphics/ui/puzle2/bubble2puzle2.png" id="6_5hfcj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bf4l"]
+size = Vector2(10, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s2m73"]
+size = Vector2(72, 103)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5hfcj"]
+size = Vector2(10, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hiiw3"]
+size = Vector2(101, 92)
+
+[node name="CityPuzzle2" type="Node2D" node_paths=PackedStringArray("puzzle_pieces", "complete_image")]
+script = ExtResource("1_s2m73")
+puzzle_pieces = {
+NodePath("Draggable"): NodePath("Receptacle"),
+NodePath("Draggable2"): NodePath("Receptacle2")
+}
+complete_image = NodePath("Fullsquare")
+
+[node name="Emptysquare" type="Sprite2D" parent="."]
+texture = ExtResource("2_s2m73")
+
+[node name="Fullsquare" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_hiiw3")
+
+[node name="Receptacle" type="Area2D" parent="."]
+position = Vector2(-72, 4)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Receptacle"]
+shape = SubResource("RectangleShape2D_8bf4l")
+
+[node name="Draggable" type="Area2D" parent="."]
+position = Vector2(-72, 4)
+script = ExtResource("4_daxvp")
+metadata/_edit_group_ = true
+
+[node name="Bubble1Puzle1" type="Sprite2D" parent="Draggable"]
+texture = ExtResource("5_8bf4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Draggable"]
+position = Vector2(-3, 0.5)
+shape = SubResource("RectangleShape2D_s2m73")
+
+[node name="Receptacle2" type="Area2D" parent="."]
+position = Vector2(68, 8)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Receptacle2"]
+shape = SubResource("RectangleShape2D_5hfcj")
+
+[node name="Draggable2" type="Area2D" parent="."]
+position = Vector2(68, 8)
+script = ExtResource("4_daxvp")
+metadata/_edit_group_ = true
+
+[node name="Bubble2Puzle1" type="Sprite2D" parent="Draggable2"]
+texture = ExtResource("6_5hfcj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Draggable2"]
+shape = SubResource("RectangleShape2D_hiiw3")

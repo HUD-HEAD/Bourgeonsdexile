@@ -3,7 +3,7 @@
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_j5r3v"]
 b = Vector2(0, 1080)
 
-[node name="Area2D" type="Area2D"]
+[node name="Obstacle" type="Area2D"]
 collision_layer = 4
 collision_mask = 0
 

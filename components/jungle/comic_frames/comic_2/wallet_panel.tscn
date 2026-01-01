@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://djyan8ubtutll"]
+[gd_scene load_steps=18 format=3 uid="uid://djyan8ubtutll"]
 
 [ext_resource type="Texture2D" uid="uid://jaktkgbj0dsf" path="res://graphics/comic2godot/wallet/bar_filling.png" id="1_o4pkc"]
 [ext_resource type="Texture2D" uid="uid://bd3f3eaws32lv" path="res://graphics/comic2godot/wallet/bar_outline.png" id="2_hfext"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://obhwni1hrmdw" path="res://graphics/comic2godot/wallet/coin5.png" id="7_jt1ui"]
 [ext_resource type="Texture2D" uid="uid://5wnr5d6ytn4y" path="res://graphics/comic2godot/wallet/coin6.png" id="8_wuyp4"]
 [ext_resource type="Texture2D" uid="uid://ntpdjkq2pg6c" path="res://graphics/comic2godot/wallet/coin2.png" id="10_0fb2c"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="11_t4wyu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iaepd"]
 radius = 83.15047
@@ -42,6 +43,7 @@ texture_progress = ExtResource("1_o4pkc")
 [node name="Coin1" type="Area2D" parent="." node_paths=PackedStringArray("progress_bar")]
 position = Vector2(-491, -232)
 script = ExtResource("5_t4wyu")
+value = 10.0
 progress_bar = NodePath("../TextureProgressBar")
 
 [node name="Coin1" type="Sprite2D" parent="Coin1"]
@@ -53,6 +55,7 @@ shape = SubResource("CircleShape2D_iaepd")
 [node name="Coin2" type="Area2D" parent="." node_paths=PackedStringArray("progress_bar")]
 position = Vector2(-311, -351)
 script = ExtResource("5_t4wyu")
+value = 10.0
 progress_bar = NodePath("../TextureProgressBar")
 
 [node name="Coin2" type="Sprite2D" parent="Coin2"]
@@ -65,6 +68,7 @@ shape = SubResource("CircleShape2D_uyiij")
 [node name="Coin3" type="Area2D" parent="." node_paths=PackedStringArray("progress_bar")]
 position = Vector2(-208, -418)
 script = ExtResource("5_t4wyu")
+value = 10.0
 progress_bar = NodePath("../TextureProgressBar")
 
 [node name="Coin3" type="Sprite2D" parent="Coin3"]
@@ -77,6 +81,7 @@ shape = SubResource("CircleShape2D_t4wyu")
 [node name="Coin4" type="Area2D" parent="." node_paths=PackedStringArray("progress_bar")]
 position = Vector2(127, -224)
 script = ExtResource("5_t4wyu")
+value = 10.0
 progress_bar = NodePath("../TextureProgressBar")
 
 [node name="Coin4" type="Sprite2D" parent="Coin4"]
@@ -89,6 +94,7 @@ shape = SubResource("CircleShape2D_jt1ui")
 [node name="Coin5" type="Area2D" parent="." node_paths=PackedStringArray("progress_bar")]
 position = Vector2(320, -403)
 script = ExtResource("5_t4wyu")
+value = 20.0
 progress_bar = NodePath("../TextureProgressBar")
 
 [node name="Coin5" type="Sprite2D" parent="Coin5"]
@@ -100,6 +106,7 @@ shape = SubResource("CircleShape2D_wuyp4")
 [node name="Coin6" type="Area2D" parent="." node_paths=PackedStringArray("progress_bar")]
 position = Vector2(0, -419)
 script = ExtResource("5_t4wyu")
+value = 20.0
 progress_bar = NodePath("../TextureProgressBar")
 
 [node name="Coin6" type="Sprite2D" parent="Coin6"]
@@ -110,3 +117,7 @@ shape = SubResource("CircleShape2D_0fb2c")
 
 [node name="CarteraSola" type="Sprite2D" parent="."]
 texture = ExtResource("4_0sav8")
+
+[node name="PanelTransitionTrigger" type="Node" parent="." node_paths=PackedStringArray("clickables")]
+script = ExtResource("11_t4wyu")
+clickables = [NodePath("../Coin1"), NodePath("../Coin2"), NodePath("../Coin3"), NodePath("../Coin4"), NodePath("../Coin5"), NodePath("../Coin6")]

@@ -1,41 +1,63 @@
 extends Area2D
+class_name Draggable
+
+signal piece_correctly_placed
+
+var receptacle : Area2D
 
 var dragging : bool = false
 
 func _ready() -> void:
+	#assert(receptacle != null)
+	
 	#TODO Refactor all interactables?
 	#Signal to change cursor when hovering in area
-	mouse_entered.connect(SignalManager.set_cursor_shape.emit.bind(Input.CURSOR_POINTING_HAND))
+	mouse_entered.connect(_on_mouse_entered)
 	mouse_exited.connect(_on_mouse_exited)
 
 	input_event.connect(_on_area_2d_input_event)
+	
 
 func _process(delta: float) -> void:
 	if dragging:
-		move_to_pos(get_viewport().get_mouse_position())
-		
+		move_to_pos(get_global_mouse_position())
 
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("select_element"):
 		_action_on_click()
-
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_released("select_element"):
+	elif event.is_action_released("select_element"):
 		dragging = false
-		input_pickable = true
+		_drop()
 
 func _action_on_click():
-	print("clicked!")
 	dragging = true
-	input_pickable = false
 	SignalManager.set_cursor_shape.emit(Input.CURSOR_MOVE)
 
 
 func move_to_pos(g_pos: Vector2) -> void:
-	global_position = lerp(global_position, g_pos, 0.5)
+	#global_position = lerp(global_position, g_pos, 0.5)
+	global_position = g_pos
 
 func _on_mouse_exited():
 	#While dragging, mouse might exit area, but cursor should stay holding
 	if !dragging:
 		SignalManager.set_cursor_shape.emit(Input.CURSOR_ARROW)
+
+func _on_mouse_entered():
+	#While dragging, mouse might exit area, but cursor should stay holding
+	if !dragging:
+		SignalManager.set_cursor_shape.emit(Input.CURSOR_POINTING_HAND)
+
+func _drop():
+	SignalManager.set_cursor_shape.emit(Input.CURSOR_POINTING_HAND)
+	
+	if is_correctly_placed():
+		piece_correctly_placed.emit()
+		print_debug("puzzle piece correct!")
+
+func is_correctly_placed() -> bool:
+	#TASK assess design, should it support drag and drop without receptacle? Or create overload?
+	if receptacle == null:
+		return false
+	return overlaps_area(receptacle)

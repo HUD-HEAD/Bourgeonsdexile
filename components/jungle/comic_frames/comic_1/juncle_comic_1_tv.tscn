@@ -39,6 +39,7 @@ position = Vector2(-88.14221, -61.476334)
 scale = Vector2(1.0000002, 1.0000002)
 shape = SubResource("RectangleShape2D_38kkl")
 
-[node name="TransitionTriggerCounter" type="Node" parent="."]
+[node name="TransitionTriggerCounter" type="Node" parent="." node_paths=PackedStringArray("clickables")]
 script = ExtResource("6_38kkl")
+clickables = [NodePath("../JungleComic1Switch/Area2D")]
 obstacles_to_clear = 3

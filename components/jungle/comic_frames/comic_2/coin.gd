@@ -5,6 +5,7 @@ extends Clickable
 @export var progress_bar : TextureProgressBar
 
 func _action_on_click():
-	progress_bar.value += value
-
 	super()
+	
+	progress_bar.value += value
+	hide()
