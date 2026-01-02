@@ -20,29 +20,38 @@ func _ready() -> void:
 	mouse_exited.connect(_on_mouse_exited)
 	tracking_area = collision_shape.shape.get_rect()
 	frame_count = animated_sprite.sprite_frames.get_frame_count("default")
+
+
+func _compute_state():
+	if !tracking:
+		return
+	#Local mouse x coordinate within the area
+	var loc_mouse = get_local_mouse_position().x - (tracking_area.position.x + collision_shape.position.x)
 	
+	#Cursor progress through detection area
+	var progress =  loc_mouse / tracking_area.size.x
+	#Rounded to nearest 10 percent
+	progress = snappedf(progress, 0.1)
+	
+	#Update sprite
+	var new_frame = lerp(0, frame_count-1, progress)
+	#Prevent skipping frames
+	#if new_frame == animated_sprite.frame+1:
+	
+	animated_sprite.frame = new_frame
+	#print_debug(progress)
+	
+	#Reached end of animation
+	if animated_sprite.frame == frame_count-1:
+		InputManager.hide_mouse()
+		_transition_next_panel()
 
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventMouseMotion:
+		var mouse_velocity = event.screen_velocity
+		if mouse_velocity.x > 0: 
+			_compute_state()
 
-func _process(delta: float) -> void:
-	if tracking && animated_sprite.frame != frame_count:
-		#Local mouse x coordinate within the area
-		var loc_mouse = get_local_mouse_position().x - (tracking_area.position.x + collision_shape.position.x)
-		
-		#Cursor progress through detection area
-		var progress =  loc_mouse / tracking_area.size.x
-		#Rounded to nearest 10 percent
-		progress = snappedf(progress, 0.1)
-		
-		#Update sprite
-		animated_sprite.frame = lerp(0, frame_count-1, progress)
-		#print_debug(progress)
-		
-		#Reached end of animation
-		if animated_sprite.frame == frame_count-1:
-			InputManager.hide_mouse()
-			_transition_next_panel()
-		
-		
 func _transition_next_panel():
 	#Prevent from going backwards in animation
 	self.process_mode = Node.PROCESS_MODE_DISABLED
