@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rppf67kbx76r"
-path="res://.godot/imported/vela2.png-df3261939d29ede14c9305ce83601a78.ctex"
+uid="uid://dgel8x7yvuj4w"
+path="res://.godot/imported/vela3.png-06772dfe3e77003c20a502a3ee407160.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/comic1rexported/frame2/candle/vela2.png"
-dest_files=["res://.godot/imported/vela2.png-df3261939d29ede14c9305ce83601a78.ctex"]
+source_file="res://graphics/jungle/jungle_comic1/frame2/candle/vela3.png"
+dest_files=["res://.godot/imported/vela3.png-06772dfe3e77003c20a502a3ee407160.ctex"]
 
 [params]
 
