@@ -68,8 +68,6 @@ position = Vector2(3210, 496)
 scale = Vector2(0.9, 0.9)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JuncleComic1TVAndSwitch"]
-script = ExtResource("4_l35no")
-show_mouse = true
 
 [node name="JungleComicCandle" type="Node2D" parent="."]
 position = Vector2(4874, 540)
