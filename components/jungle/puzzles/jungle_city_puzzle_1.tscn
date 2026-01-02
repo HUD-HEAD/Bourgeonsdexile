@@ -10,25 +10,25 @@
 [ext_resource type="Texture2D" uid="uid://bp2p0a8c67kt1" path="res://graphics/ui/puzzle_1/bubble4puzle1.png" id="8_w86f4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aeb3g"]
-size = Vector2(95, 95)
+size = Vector2(10, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mvwgm"]
 size = Vector2(66, 171)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1e0l2"]
-size = Vector2(37, 73)
+size = Vector2(10, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ts23a"]
 size = Vector2(48, 70)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kixfw"]
-size = Vector2(37, 73)
+size = Vector2(10, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4poeb"]
 size = Vector2(48, 70)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_puneu"]
-size = Vector2(108, 48)
+size = Vector2(10, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u1nce"]
 size = Vector2(136, 46)
@@ -51,7 +51,7 @@ visible = false
 texture = ExtResource("3_dbwny")
 
 [node name="Receptacle" type="Area2D" parent="."]
-position = Vector2(-89, -1)
+position = Vector2(-98, 6)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Receptacle"]
@@ -70,11 +70,10 @@ position = Vector2(-6, -3.5)
 shape = SubResource("RectangleShape2D_mvwgm")
 
 [node name="Receptacle2" type="Area2D" parent="."]
-position = Vector2(5, -64)
+position = Vector2(-3, -37)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Receptacle2"]
-position = Vector2(-6, 16)
 shape = SubResource("RectangleShape2D_1e0l2")
 
 [node name="Draggable2" type="Area2D" parent="."]
@@ -89,11 +88,10 @@ texture = ExtResource("6_bseus")
 shape = SubResource("RectangleShape2D_ts23a")
 
 [node name="Receptacle3" type="Area2D" parent="."]
-position = Vector2(97, -62)
+position = Vector2(90, -49)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Receptacle3"]
-position = Vector2(-6, 16)
 shape = SubResource("RectangleShape2D_kixfw")
 
 [node name="Draggable3" type="Area2D" parent="."]
@@ -108,11 +106,10 @@ texture = ExtResource("7_mg2ry")
 shape = SubResource("RectangleShape2D_4poeb")
 
 [node name="Receptacle4" type="Area2D" parent="."]
-position = Vector2(79, 59)
+position = Vector2(64, 78)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Receptacle4"]
-position = Vector2(-34, 14)
 shape = SubResource("RectangleShape2D_puneu")
 
 [node name="Draggable4" type="Area2D" parent="."]

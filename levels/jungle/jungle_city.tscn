@@ -101,7 +101,7 @@ script = ExtResource("11_jpgwf")
 next_scene = ExtResource("12_jpgwf")
 
 [node name="Puzzle1" type="Node2D" parent="."]
-position = Vector2(3304, 0)
+position = Vector2(4057, 0)
 
 [node name="Npc1" type="Sprite2D" parent="Puzzle1"]
 position = Vector2(311, 818)
@@ -133,7 +133,7 @@ spawn_trigger = NodePath("../Npc1/Clickable")
 obstacle = NodePath("../Obstacle")
 
 [node name="Puzzle2" type="Node2D" parent="."]
-position = Vector2(1269, 0)
+position = Vector2(2022, 0)
 
 [node name="Npc2" type="Sprite2D" parent="Puzzle2"]
 position = Vector2(311, 818)

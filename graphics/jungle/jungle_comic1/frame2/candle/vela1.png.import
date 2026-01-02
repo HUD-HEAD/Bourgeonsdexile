@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btfyr4dphxr7u"
-path="res://.godot/imported/vela1.png-a6663a69a703d1ca6aaeddb4bf402cb2.ctex"
+path="res://.godot/imported/vela1.png-e13d872f7f1096ff81bb6490cb690fb6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/comic1rexported/frame2/candle/vela1.png"
-dest_files=["res://.godot/imported/vela1.png-a6663a69a703d1ca6aaeddb4bf402cb2.ctex"]
+source_file="res://graphics/jungle/jungle_comic1/frame2/candle/vela1.png"
+dest_files=["res://.godot/imported/vela1.png-e13d872f7f1096ff81bb6490cb690fb6.ctex"]
 
 [params]
 

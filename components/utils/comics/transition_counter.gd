@@ -21,7 +21,12 @@ func _on_obstacle_cleared():
 	
 	counter += 1
 	if counter >= obstacles_to_clear:
+		#Disable interaction
+		for clickable in clickables:
+			clickable.clicked.disconnect(_on_obstacle_cleared)
+		
 		InputManager.hide_mouse()
+		
 		
 		#TASK refactor to centralize delay transition?
 		#Delay transition
