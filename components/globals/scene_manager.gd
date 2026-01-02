@@ -42,6 +42,7 @@ func _deferred_goto_scene(path):
 	# Optionally, to make it compatible with the SceneTree.change_scene_to_file() API.
 	get_tree().current_scene = current_scene
 	
+	SignalManager.set_cursor_shape.emit(Input.CURSOR_ARROW)
 	
 	# Resume game
 	resume_game()

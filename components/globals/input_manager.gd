@@ -4,10 +4,12 @@ extends Node
 var mouse_sensitivity = 1.0
 
 func show_mouse():
-	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
+#TODO remove hiding logic if unused
 func hide_mouse():
-	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
+	#Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
+	pass
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event.is_action_pressed("exit"):
