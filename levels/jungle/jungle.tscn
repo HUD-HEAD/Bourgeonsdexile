@@ -21,13 +21,14 @@ texture = ExtResource("3_yi4yt")
 centered = false
 
 [node name="ReflectionContainer" type="Node2D" parent="RiverMask"]
-position = Vector2(458, 666)
+position = Vector2(458, 652)
 
 [node name="JungleWomanReflection" parent="RiverMask/ReflectionContainer" instance=ExtResource("2_2u04l")]
 position = Vector2(0, 209)
 
 [node name="AnimatedSprite2D" parent="RiverMask/ReflectionContainer/JungleWomanReflection" index="0"]
 self_modulate = Color(1, 1, 1, 0.47058824)
+z_index = 0
 flip_v = true
 
 [node name="PlaceholderMarker" type="Sprite2D" parent="RiverMask/ReflectionContainer"]
@@ -40,7 +41,7 @@ texture = ExtResource("5_on17i")
 centered = false
 
 [node name="JungleWoman" parent="." instance=ExtResource("2_2u04l")]
-position = Vector2(458, 687)
+position = Vector2(458, 660)
 
 [node name="Camera2D" type="Camera2D" parent="JungleWoman"]
 position = Vector2(0, -147)
