@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xly54ht55d8x"
-path="res://.godot/imported/frame_switch_on.png-377cc947bf9341bee2917f622f2698c0.ctex"
+uid="uid://cjqs5hihsps77"
+path="res://.godot/imported/frame_switch_on_lightoff.png-a2be1140248fa2902f156b85def330b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/comic1rexported/frame_switch/frame_switch_on.png"
-dest_files=["res://.godot/imported/frame_switch_on.png-377cc947bf9341bee2917f622f2698c0.ctex"]
+source_file="res://graphics/comic1rexported/frame_switch/frame_switch_on_lightoff.png"
+dest_files=["res://.godot/imported/frame_switch_on_lightoff.png-a2be1140248fa2902f156b85def330b5.ctex"]
 
 [params]
 
