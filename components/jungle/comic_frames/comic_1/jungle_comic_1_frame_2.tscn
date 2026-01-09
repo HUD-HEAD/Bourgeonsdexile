@@ -21,18 +21,18 @@
 [ext_resource type="Texture2D" uid="uid://bjp7axawpq18a" path="res://graphics/jungle/jungle_comic1/frame2/frame2_woman/frame2_woman4.png" id="19_fn2lh"]
 [ext_resource type="Texture2D" uid="uid://c7qxnxqcylf6d" path="res://graphics/jungle/jungle_comic1/frame2/frame2_woman/frame2_woman5.png" id="20_mc882"]
 [ext_resource type="Texture2D" uid="uid://bow4ifhdb5bv5" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction1.png" id="21_ahaxq"]
+[ext_resource type="Texture2D" uid="uid://d0714b4ad3o7p" path="res://graphics/comic1rexported/candle_frame2/vela1.png" id="21_rr4t8"]
 [ext_resource type="Texture2D" uid="uid://bg5y7pg1m38l2" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction2.png" id="22_copxl"]
+[ext_resource type="Texture2D" uid="uid://ba6cq1bs2u40w" path="res://graphics/comic1rexported/candle_frame2/vela2.png" id="22_wc3t3"]
 [ext_resource type="Texture2D" uid="uid://dvchkdwlq3wo" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction3.png" id="23_j4pf7"]
+[ext_resource type="Texture2D" uid="uid://b82ophb0uh2c5" path="res://graphics/comic1rexported/candle_frame2/vela3.png" id="23_v3xye"]
 [ext_resource type="Texture2D" uid="uid://bjbev463l8cuf" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction4.png" id="24_gw7tj"]
 [ext_resource type="Texture2D" uid="uid://dlasfaha3cejo" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction5.png" id="25_up6mp"]
 [ext_resource type="Texture2D" uid="uid://x717px6reeg6" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction6.png" id="26_tbybx"]
 [ext_resource type="Texture2D" uid="uid://c2qclx8s821r6" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction7.png" id="27_hijka"]
 [ext_resource type="Texture2D" uid="uid://cirkkungp4y15" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction8.png" id="28_oqqh3"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="29_f5xcq"]
-[ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/click_enable.gd" id="30_khho4"]
-[ext_resource type="Texture2D" uid="uid://btfyr4dphxr7u" path="res://graphics/jungle/jungle_comic1/frame2/candle/vela1.png" id="31_rr4t8"]
-[ext_resource type="Texture2D" uid="uid://rppf67kbx76r" path="res://graphics/jungle/jungle_comic1/frame2/candle/vela2.png" id="32_wc3t3"]
-[ext_resource type="Texture2D" uid="uid://dgel8x7yvuj4w" path="res://graphics/jungle/jungle_comic1/frame2/candle/vela3.png" id="33_v3xye"]
+[ext_resource type="Script" path="res://components/utils/click_enable.gd" id="30_khho4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_37uka"]
 animations = [{
@@ -122,13 +122,13 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("31_rr4t8")
+"texture": ExtResource("21_rr4t8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("32_wc3t3")
+"texture": ExtResource("22_wc3t3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("33_v3xye")
+"texture": ExtResource("23_v3xye")
 }],
 "loop": true,
 "name": &"default",
@@ -315,7 +315,7 @@ position = Vector2(-25, 73)
 sprite_frames = SubResource("SpriteFrames_c4wg1")
 
 [node name="Candle" type="AnimatedSprite2D" parent="Background"]
-position = Vector2(340, 92)
+position = Vector2(309, 92)
 sprite_frames = SubResource("SpriteFrames_icilk")
 autoplay = "default"
 
