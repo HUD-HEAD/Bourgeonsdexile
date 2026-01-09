@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://c2mvpkmtvoiaa" path="res://graphics/comic1rexported/frame_tv/lighton/tv_plane_on.png" id="1_5w7je"]
 [ext_resource type="Texture2D" uid="uid://covyqfcp50ps" path="res://graphics/comic1rexported/frame_tv/lighton/tv_house_on.png" id="2_1ka02"]
-[ext_resource type="Texture2D" uid="uid://bk105dqy8eqfu" path="res://graphics/jungle/jungle_comic1/frame_Tv/frame_tv_off.png" id="2_a82dl"]
 [ext_resource type="Texture2D" uid="uid://c58pmdvkyjdu6" path="res://graphics/comic1rexported/frame_tv/lighton/tv_glithching_on.png" id="3_bkt1q"]
 [ext_resource type="Texture2D" uid="uid://bfktluobjs845" path="res://graphics/jungle/jungle_comic1/frame_switch/frame_switch_off.png" id="4_oigd8"]
 [ext_resource type="Texture2D" uid="uid://o3iwq3pdib56" path="res://graphics/comic1rexported/frame_tv/lighton/tv_white_on.png" id="4_to746"]
+[ext_resource type="Texture2D" uid="uid://vov4ui5w46ql" path="res://graphics/comic1rexported/frame_tv/lightoff/tvoff_lightoff.png" id="5_5w7je"]
 [ext_resource type="Script" uid="uid://bpxyc4arwakw4" path="res://components/utils/comics/lightswitch.gd" id="5_38kkl"]
 [ext_resource type="Texture2D" uid="uid://c75ptvds0u5yu" path="res://graphics/jungle/jungle_comic1/frame_switch/frame_switch_on.png" id="5_cq71l"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="6_38kkl"]
@@ -35,7 +35,7 @@ animations = [{
 "texture": ExtResource("4_to746")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_a82dl")
+"texture": ExtResource("5_5w7je")
 }],
 "loop": false,
 "name": &"default",
