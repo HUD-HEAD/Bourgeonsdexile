@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xly54ht55d8x"
-path="res://.godot/imported/frame_switch_on.png-377cc947bf9341bee2917f622f2698c0.ctex"
+path="res://.godot/imported/walk_0018.png-7ace458926b453635a096bff099d9623.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/comic1rexported/frame_switch/frame_switch_on.png"
-dest_files=["res://.godot/imported/frame_switch_on.png-377cc947bf9341bee2917f622f2698c0.ctex"]
+source_file="res://graphics/jungle/MC_walk_rough1/walk_0018.png"
+dest_files=["res://.godot/imported/walk_0018.png-7ace458926b453635a096bff099d9623.ctex"]
 
 [params]
 

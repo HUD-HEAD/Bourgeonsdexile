@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c04qsrgavtmew"
-path="res://.godot/imported/hand_nofire.png-43fc5f91a0a33409d6018cc6e0a534e2.ctex"
+path="res://.godot/imported/hand_nofire.png-02694d34320a28af6552c4240d2c54ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/comic1rexported/frame_candle/hand_nofire.png"
-dest_files=["res://.godot/imported/hand_nofire.png-43fc5f91a0a33409d6018cc6e0a534e2.ctex"]
+source_file="res://graphics/jungle/jungle_comic1/frame_candle/hand_nofire.png"
+dest_files=["res://.godot/imported/hand_nofire.png-02694d34320a28af6552c4240d2c54ef.ctex"]
 
 [params]
 

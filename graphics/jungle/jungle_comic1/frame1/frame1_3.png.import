@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cr863n17iknbj"
-path="res://.godot/imported/frame1_3.png-9c4bbd89eda109e7c3b8ef5b5d902c6e.ctex"
+path="res://.godot/imported/frame1_3.png-d60023bc8174138b5a0371ec2c36b8b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/comic1rexported/frame1/frame1_3.png"
-dest_files=["res://.godot/imported/frame1_3.png-9c4bbd89eda109e7c3b8ef5b5d902c6e.ctex"]
+source_file="res://graphics/jungle/jungle_comic1/frame1/frame1_3.png"
+dest_files=["res://.godot/imported/frame1_3.png-d60023bc8174138b5a0371ec2c36b8b1.ctex"]
 
 [params]
 

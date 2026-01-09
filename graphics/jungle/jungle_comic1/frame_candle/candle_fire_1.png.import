@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bn5g5jkbgqs8o"
-path="res://.godot/imported/candle_fire_1.png-feaabab58e55d70038db194b0f4993a5.ctex"
+path="res://.godot/imported/candle_fire_1.png-57c401193e3e9e10578c1ca68d884cfd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/comic1rexported/frame_candle/candle_fire_1.png"
-dest_files=["res://.godot/imported/candle_fire_1.png-feaabab58e55d70038db194b0f4993a5.ctex"]
+source_file="res://graphics/jungle/jungle_comic1/frame_candle/candle_fire_1.png"
+dest_files=["res://.godot/imported/candle_fire_1.png-57c401193e3e9e10578c1ca68d884cfd.ctex"]
 
 [params]
 
