@@ -22,5 +22,6 @@ theme_override_constants/margin_bottom = 50
 
 [node name="TextureButton" type="TextureButton" parent="MarginContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("1_lrojp")
 script = ExtResource("2_82c8c")
