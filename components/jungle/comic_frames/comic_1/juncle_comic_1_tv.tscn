@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dfbhlmbuoewuv" path="res://graphics/jungle/jungle_comic1/frame_Tv/frametv_plane.png" id="3_vs6qs"]
 [ext_resource type="Texture2D" uid="uid://bfktluobjs845" path="res://graphics/jungle/jungle_comic1/frame_switch/frame_switch_off.png" id="4_oigd8"]
 [ext_resource type="Texture2D" uid="uid://dbehbtk7pwgk7" path="res://graphics/jungle/jungle_comic1/frame_Tv/frametv_house.png" id="4_x1e7w"]
-[ext_resource type="Script" uid="uid://bpxyc4arwakw4" path="res://components/jungle/comic_frames/comic_1/lightswitch.gd" id="5_38kkl"]
+[ext_resource type="Script" uid="uid://bpxyc4arwakw4" path="res://components/utils/comics/lightswitch.gd" id="5_38kkl"]
 [ext_resource type="Texture2D" uid="uid://c75ptvds0u5yu" path="res://graphics/jungle/jungle_comic1/frame_switch/frame_switch_on.png" id="5_cq71l"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="6_38kkl"]
 [ext_resource type="Script" uid="uid://ds0m4hygkuj81" path="res://components/utils/comics/set_mouse_visibility.gd" id="8_x1e7w"]

@@ -1,0 +1,227 @@
+[gd_scene load_steps=26 format=3 uid="uid://bd7g0rb56ib48"]
+
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_4u7yc"]
+[ext_resource type="Texture2D" uid="uid://bqiythfqeexvr" path="res://graphics/jungle/jungle_comic1/frame_candle/candle_background.png" id="2_ps1uy"]
+[ext_resource type="Texture2D" uid="uid://c7wqq3tvqr8im" path="res://graphics/jungle/jungle_comic1/frame_candle/candle_fire_0.png" id="3_c554b"]
+[ext_resource type="Texture2D" uid="uid://bn5g5jkbgqs8o" path="res://graphics/jungle/jungle_comic1/frame_candle/candle_fire_1.png" id="4_eyl0t"]
+[ext_resource type="Texture2D" uid="uid://db7ram0chpu4" path="res://graphics/jungle/jungle_comic1/frame_candle/candle_fire_2.png" id="5_ldxfp"]
+[ext_resource type="Texture2D" uid="uid://c5o2xc87e8syw" path="res://graphics/jungle/jungle_comic1/frame_candle/candle_fire_3.png" id="6_roaln"]
+[ext_resource type="Texture2D" uid="uid://bxmgwq4r46taj" path="res://graphics/jungle/jungle_comic1/frame_candle/candle_fire_4.png" id="7_0kgdd"]
+[ext_resource type="Texture2D" uid="uid://ctqxl0bats5y1" path="res://graphics/jungle/jungle_comic1/frame_candle/candle_fire_5.png" id="8_srvui"]
+[ext_resource type="Texture2D" uid="uid://sumbnkhtbhrq" path="res://graphics/jungle/jungle_comic1/frame_candle/candle_fire_6.png" id="9_typp3"]
+[ext_resource type="Texture2D" uid="uid://bdec7h34pjat3" path="res://graphics/jungle/jungle_comic1/frame_candle/candle_fire_7.png" id="10_qcl60"]
+[ext_resource type="Texture2D" uid="uid://cs4mc1t33hgmf" path="res://graphics/jungle/jungle_comic1/frame_candle/candle_fire_8.png" id="11_d2ksi"]
+[ext_resource type="Texture2D" uid="uid://yaudjionfu84" path="res://graphics/jungle/jungle_comic1/frame_candle/candle_fire_9.png" id="12_mhsc1"]
+[ext_resource type="Texture2D" uid="uid://0blxpi2vjmo4" path="res://graphics/jungle/jungle_comic1/frame_candle/hand_fire.png" id="13_eyl0t"]
+[ext_resource type="Texture2D" uid="uid://c04qsrgavtmew" path="res://graphics/jungle/jungle_comic1/frame_candle/hand_nofire.png" id="13_imvdv"]
+[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/draggable.gd" id="13_ldxfp"]
+[ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/area_entered_enable.gd" id="13_roaln"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pw80g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ps1uy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_c554b")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_roaln"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_eyl0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ldxfp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_roaln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0kgdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_srvui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_typp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qcl60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_d2ksi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_mhsc1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ldxfp"]
+size = Vector2(93, 113)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_roaln"]
+size = Vector2(1035, 415)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ldxfp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_eyl0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_imvdv")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eyl0t"]
+size = Vector2(183, 354)
+
+[sub_resource type="Animation" id="Animation_roaln"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Candle:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Candle/CandleLit:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Candle/Draggable/Hand:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ldxfp"]
+resource_name = "light_candle"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Candle:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Candle/CandleLit:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Candle/Draggable/Hand:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.033333335),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_roaln"]
+_data = {
+&"RESET": SubResource("Animation_roaln"),
+&"light_candle": SubResource("Animation_ldxfp")
+}
+
+[node name="JungleComicCandle" type="Node2D"]
+
+[node name="AutomaticPanner" type="Node" parent="." node_paths=PackedStringArray("anim_player")]
+script = ExtResource("2_4u7yc")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="Candle" type="AnimatedSprite2D" parent="."]
+clip_children = 2
+sprite_frames = SubResource("SpriteFrames_pw80g")
+
+[node name="CandleLit" type="AnimatedSprite2D" parent="Candle"]
+visible = false
+sprite_frames = SubResource("SpriteFrames_roaln")
+autoplay = "default"
+frame_progress = 0.37137312
+
+[node name="Target" type="Area2D" parent="Candle" node_paths=PackedStringArray("node_to_enable")]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("13_roaln")
+node_to_enable = NodePath("../../AnimationPlayer")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Candle/Target"]
+position = Vector2(133.5, 93.5)
+shape = SubResource("RectangleShape2D_ldxfp")
+
+[node name="Draggable" type="Area2D" parent="Candle"]
+position = Vector2(-494, -94)
+script = ExtResource("13_ldxfp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Candle/Draggable"]
+position = Vector2(-274.5, -21.5)
+shape = SubResource("RectangleShape2D_roaln")
+
+[node name="Hand" type="AnimatedSprite2D" parent="Candle/Draggable"]
+position = Vector2(45, -2)
+sprite_frames = SubResource("SpriteFrames_ldxfp")
+
+[node name="Lighter" type="Area2D" parent="Candle/Draggable/Hand"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Candle/Draggable/Hand/Lighter"]
+position = Vector2(160.5, -44)
+shape = SubResource("RectangleShape2D_eyl0t")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_roaln")
+}
+autoplay = "light_candle"

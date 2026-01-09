@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://cbouhlj8xssdp" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_2.tscn" id="5_7p1v8"]
 [ext_resource type="PackedScene" uid="uid://c60nnmob4jcv3" path="res://components/jungle/comic_frames/comic_1/juncle_comic_1_tv.tscn" id="5_rhbtc"]
 [ext_resource type="Texture2D" uid="uid://dj0v82ndb5ddu" path="res://graphics/jungle/jungle_comic1/frame1/frame1_2.png" id="6_13xj0"]
-[ext_resource type="Texture2D" uid="uid://d1lnfv2bu8neq" path="res://graphics/jungle/jungle_comic1/frame_candle/frame_candle.png" id="6_k56k0"]
 [ext_resource type="Texture2D" uid="uid://cr863n17iknbj" path="res://graphics/jungle/jungle_comic1/frame1/frame1_3.png" id="7_vhw3u"]
 [ext_resource type="Texture2D" uid="uid://cn01oh2w837m4" path="res://graphics/jungle/jungle_comic1/frame1/frame1_4.png" id="8_4dwlt"]
 [ext_resource type="Texture2D" uid="uid://cktpk4jppqb5m" path="res://graphics/jungle/jungle_comic1/frame1/frame1_5.png" id="9_ain5h"]
@@ -14,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cpqe48imup7qq" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_5.tscn" id="11_p78bu"]
 [ext_resource type="Texture2D" uid="uid://t7vpedh330ns" path="res://graphics/jungle/jungle_comic1/frame1/frame1_7.png" id="11_pkyto"]
 [ext_resource type="Texture2D" uid="uid://csvi015jm6vp2" path="res://graphics/jungle/jungle_comic1/frame1/frame1_8.png" id="12_si3rw"]
+[ext_resource type="PackedScene" uid="uid://bd7g0rb56ib48" path="res://components/jungle/comic_frames/comic_1/jungle_comic_candle.tscn" id="13_p78bu"]
 [ext_resource type="PackedScene" uid="uid://s3spdg0qqc77" path="res://levels/jungle/jungle_city.tscn" id="16_7ejrb"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="17_13xj0"]
 [ext_resource type="Script" path="res://components/utils/goto_next_scene.gd" id="17_54bx8"]
@@ -104,14 +104,8 @@ scale = Vector2(0.9, 0.9)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JuncleComic1TVAndSwitch"]
 
-[node name="JungleComicCandle" type="Node2D" parent="."]
+[node name="JungleComicCandle" parent="." instance=ExtResource("13_p78bu")]
 position = Vector2(4874, 540)
-
-[node name="FrameCandle" type="Sprite2D" parent="JungleComicCandle"]
-texture = ExtResource("6_k56k0")
-
-[node name="AutomaticPanner" type="Node" parent="JungleComicCandle"]
-script = ExtResource("3_ej5x0")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComicCandle"]
 
