@@ -17,12 +17,12 @@
 [ext_resource type="PackedScene" uid="uid://s3spdg0qqc77" path="res://levels/jungle/jungle_city.tscn" id="16_7ejrb"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="17_13xj0"]
 [ext_resource type="Script" path="res://components/utils/goto_next_scene.gd" id="17_54bx8"]
+[ext_resource type="PackedScene" uid="uid://ck876o7lm40cb" path="res://levels/jungle/jungle_comic_1_frame_8.tscn" id="20_p78bu"]
 [ext_resource type="PackedScene" uid="uid://b3xbb0f00akh4" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_3.tscn" id="32_ynlpr"]
 [ext_resource type="PackedScene" uid="uid://bq0ewephc3xv5" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_4.tscn" id="35_jpuy7"]
 [ext_resource type="PackedScene" uid="uid://cyqwmaex0ilgv" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_6.tscn" id="40_jpuy7"]
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="41_0igvp"]
 [ext_resource type="Texture2D" uid="uid://byvh1c37ea83j" path="res://graphics/jungle/jungle_comic1/frame7/frame7_alltogether.png" id="43_47thf"]
-[ext_resource type="Texture2D" uid="uid://wq0qvrcxrq2t" path="res://graphics/jungle/jungle_comic1/frame8/frame8_boatalone.png" id="44_js7ra"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ucrt7"]
 animations = [{
@@ -158,15 +158,8 @@ script = ExtResource("3_ej5x0")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame7"]
 
-[node name="JungleComic1Frame8" type="Node2D" parent="."]
+[node name="JungleComic1Frame8" parent="." instance=ExtResource("20_p78bu")]
 position = Vector2(19999.998, 540)
-metadata/_edit_group_ = true
-
-[node name="Frame8Boatalone" type="Sprite2D" parent="JungleComic1Frame8"]
-texture = ExtResource("44_js7ra")
-
-[node name="AutomaticPanner" type="Node" parent="JungleComic1Frame8"]
-script = ExtResource("3_ej5x0")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame8"]
 
