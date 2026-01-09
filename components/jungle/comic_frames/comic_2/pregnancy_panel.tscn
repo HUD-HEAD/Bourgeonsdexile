@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://i70lw3wo2dc3" path="res://graphics/comic2godot/pregnancy/pregnancy_1.png" id="1_jd6ya"]
 [ext_resource type="Texture2D" uid="uid://2c6nrhvf8e3k" path="res://graphics/comic2godot/pregnancy/pregnancy_2.png" id="2_raeum"]
-[ext_resource type="Script" uid="uid://e0odvc74oscd" path="res://components/utils/comics/panel_mouse_over.gd" id="3_ceywx"]
+[ext_resource type="Script" path="res://components/utils/click_enable.gd" id="3_raeum"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c2o8n"]
 animations = [{
@@ -13,26 +13,24 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_raeum")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_psjyq"]
-size = Vector2(892, 518.152)
+size = Vector2(349, 276)
 
 [node name="PregnancyPanel" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_c2o8n")
+autoplay = "default"
 
-[node name="Area2D" type="Area2D" parent="AnimatedSprite2D" node_paths=PackedStringArray("collision_shape", "animated_sprite")]
-script = ExtResource("3_ceywx")
-collision_shape = NodePath("CollisionShape2D")
-animated_sprite = NodePath("..")
+[node name="Area2D" type="Area2D" parent="." node_paths=PackedStringArray("node_to_enable")]
+script = ExtResource("3_raeum")
+node_to_enable = NodePath("../AnimatedSprite2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
-position = Vector2(-71, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(61.5, 208)
 shape = SubResource("RectangleShape2D_psjyq")
-
-[node name="Camera2D" type="Camera2D" parent="."]

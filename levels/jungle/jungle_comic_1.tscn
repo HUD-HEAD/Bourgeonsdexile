@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://du7xk8lrsn7at"]
+[gd_scene load_steps=26 format=3 uid="uid://du7xk8lrsn7at"]
 
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="3_ej5x0"]
 [ext_resource type="Script" uid="uid://ds0m4hygkuj81" path="res://components/utils/comics/set_mouse_visibility.gd" id="4_l35no"]
@@ -19,6 +19,7 @@
 [ext_resource type="Script" path="res://components/utils/goto_next_scene.gd" id="17_54bx8"]
 [ext_resource type="PackedScene" uid="uid://bi4kbbnyg1r6g" path="res://levels/jungle/jungle_comic_1_frame_7.tscn" id="19_p78bu"]
 [ext_resource type="PackedScene" uid="uid://ck876o7lm40cb" path="res://levels/jungle/jungle_comic_1_frame_8.tscn" id="20_p78bu"]
+[ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="24_7ejrb"]
 [ext_resource type="PackedScene" uid="uid://b3xbb0f00akh4" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_3.tscn" id="32_ynlpr"]
 [ext_resource type="PackedScene" uid="uid://bq0ewephc3xv5" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_4.tscn" id="35_jpuy7"]
 [ext_resource type="PackedScene" uid="uid://cyqwmaex0ilgv" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_6.tscn" id="40_jpuy7"]
@@ -164,3 +165,5 @@ next_scene = ExtResource("16_7ejrb")
 [node name="PanelPanner" type="Node" parent="." node_paths=PackedStringArray("panels")]
 script = ExtResource("17_13xj0")
 panels = [NodePath("../JungleComic1Frame1"), NodePath("../JuncleComic1TVAndSwitch"), NodePath("../JungleComicCandle"), NodePath("../JungleComic1Frame2"), NodePath("../JungleComic1Frame3"), NodePath("../JungleComic1Frame4"), NodePath("../JungleComic1Frame5"), NodePath("../JungleComic1Frame6"), NodePath("../JungleComic1Frame7"), NodePath("../JungleComic1Frame8"), NodePath("../SceneEnder")]
+
+[node name="UI" parent="." instance=ExtResource("24_7ejrb")]

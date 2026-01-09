@@ -1,16 +1,17 @@
-[gd_scene load_steps=20 format=3 uid="uid://s3spdg0qqc77"]
+[gd_scene load_steps=28 format=3 uid="uid://s3spdg0qqc77"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_1rybe"]
 [ext_resource type="Texture2D" uid="uid://ckypv1bpibrph" path="res://graphics/jungle/environment/separated_Ciity/sky.png" id="1_uvrs6"]
 [ext_resource type="Texture2D" uid="uid://bbeggw5f5yk6k" path="res://graphics/jungle/environment/separated_Ciity/clouds.png" id="2_pggw3"]
 [ext_resource type="Texture2D" uid="uid://c0ry10gceli0j" path="res://graphics/jungle/environment/separated_Ciity/floor.png" id="2_uvrs6"]
 [ext_resource type="Texture2D" uid="uid://ctvuhai6k72en" path="res://graphics/jungle/environment/separated_Ciity/houses1.png" id="4_1rybe"]
+[ext_resource type="Texture2D" uid="uid://b2c33v222kq68" path="res://graphics/jungle/environment/separated_Ciity/houseback.png" id="4_aeb3g"]
 [ext_resource type="Texture2D" uid="uid://bcbtv3eyw2klf" path="res://graphics/jungle/environment/separated_Ciity/houses2.png" id="5_1bjwg"]
 [ext_resource type="Texture2D" uid="uid://cykrp3sth2qsy" path="res://graphics/jungle/environment/separated_Ciity/houses3.png" id="6_jpgwf"]
 [ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/jungle/jungle_woman.tscn" id="7_2dtoo"]
 [ext_resource type="Texture2D" uid="uid://cc2jo44beq8p8" path="res://graphics/jungle/environment/separated_Ciity/houses4.png" id="7_8tq2l"]
 [ext_resource type="Texture2D" uid="uid://ba5a2o3t37g1i" path="res://graphics/jungle/environment/separated_Ciity/line.png" id="9_pggw3"]
-[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="11_jpgwf"]
+[ext_resource type="Script" path="res://components/utils/goto_next_scene.gd" id="11_jpgwf"]
 [ext_resource type="PackedScene" uid="uid://djv5fkem5af34" path="res://levels/jungle/jungle_comic_2.tscn" id="12_jpgwf"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/obstacle.tscn" id="13_8tq2l"]
 [ext_resource type="PackedScene" uid="uid://cyq5jl4y7etbe" path="res://components/jungle/puzzles/jungle_city_puzzle_1.tscn" id="13_vf82b"]
@@ -18,90 +19,98 @@
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="16_0tvtc"]
 [ext_resource type="Texture2D" uid="uid://c8uhnohhwribg" path="res://graphics/separated_Ciity/separated_Ciity/npcs/npc2.png" id="17_7lnq1"]
 [ext_resource type="PackedScene" uid="uid://ckdsg3rpi65te" path="res://components/jungle/puzzles/jungle_city_puzzle_2.tscn" id="18_4p8wv"]
+[ext_resource type="Texture2D" uid="uid://1gymu4lnami3" path="res://graphics/jungle/environment/separated_Ciity/mockup_order.png" id="19_ivjax"]
+[ext_resource type="Texture2D" uid="uid://bd8t3ufo5lv1h" path="res://graphics/jungle/environment/separated_Ciity/market1.png" id="20_y6iwd"]
+[ext_resource type="Texture2D" uid="uid://i8t6whpiqxmp" path="res://graphics/jungle/environment/separated_Ciity/market2.png" id="21_4dc1s"]
+[ext_resource type="Texture2D" uid="uid://dpjo0kylrxboy" path="res://graphics/jungle/environment/separated_Ciity/market3.png" id="22_pxrui"]
+[ext_resource type="Texture2D" uid="uid://bs6idqsv5btxb" path="res://graphics/jungle/environment/separated_Ciity/market4.png" id="23_flk65"]
+[ext_resource type="Texture2D" uid="uid://c8uktfpc8iil3" path="res://graphics/jungle/environment/separated_Ciity/market5.png" id="24_dv2g2"]
+[ext_resource type="Texture2D" uid="uid://b0s77ol84kytn" path="res://graphics/jungle/environment/separated_Ciity/market6.png" id="25_ralbv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vdiy3"]
 size = Vector2(102, 102)
 
 [node name="JungleCity" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -1
+follow_viewport_enabled = true
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -3241.0
-offset_right = 2519.0
+offset_left = -4702.0
+offset_right = 1058.0
 offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("1_1rybe")
 stretch_mode = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="BackgroundPaper" type="Sprite2D" parent="."]
+[node name="BackgroundPaper" type="Sprite2D" parent="Background"]
 visible = false
 position = Vector2(1, 0)
 texture = ExtResource("1_1rybe")
 centered = false
 
-[node name="Sky" type="Sprite2D" parent="."]
-position = Vector2(1796, 0)
+[node name="Sky" type="Sprite2D" parent="Background"]
+position = Vector2(330, 1)
 texture = ExtResource("1_uvrs6")
 centered = false
 
-[node name="Parallax2D" type="Parallax2D" parent="."]
+[node name="Parallax2D" type="Parallax2D" parent="Background"]
 scroll_scale = Vector2(0.9, 0.9)
+scroll_offset = Vector2(-1466, -25)
 
-[node name="Clouds" type="Sprite2D" parent="Parallax2D"]
+[node name="Clouds" type="Sprite2D" parent="Background/Parallax2D"]
 position = Vector2(1922, 0)
 texture = ExtResource("2_pggw3")
 centered = false
 
-[node name="Floor" type="Sprite2D" parent="."]
-position = Vector2(1922, 835)
+[node name="Houseback" type="Sprite2D" parent="Background"]
+position = Vector2(1913, 539)
+texture = ExtResource("4_aeb3g")
+
+[node name="Houseback2" type="Sprite2D" parent="Background"]
+position = Vector2(2735, 545)
+texture = ExtResource("4_aeb3g")
+
+[node name="Floor" type="Sprite2D" parent="Background"]
+position = Vector2(456, 810)
 texture = ExtResource("2_uvrs6")
 centered = false
 
-[node name="Line" type="Sprite2D" parent="Floor"]
-position = Vector2(-1192, -835)
+[node name="Line" type="Sprite2D" parent="Background/Floor"]
+position = Vector2(-1320, -816)
 texture = ExtResource("9_pggw3")
 centered = false
 
-[node name="Houses1" type="Sprite2D" parent="."]
-position = Vector2(2570, 533)
+[node name="Houses1" type="Sprite2D" parent="Background"]
+position = Vector2(1135, 508)
 texture = ExtResource("4_1rybe")
 
-[node name="Houses2" type="Sprite2D" parent="."]
-position = Vector2(3693, 532)
+[node name="Houses2" type="Sprite2D" parent="Background"]
+position = Vector2(2079, 507)
 texture = ExtResource("5_1bjwg")
 
-[node name="Houses3" type="Sprite2D" parent="."]
-position = Vector2(4444, 557)
+[node name="Houses3" type="Sprite2D" parent="Background"]
+position = Vector2(2735, 532)
 texture = ExtResource("6_jpgwf")
 
-[node name="Houses4" type="Sprite2D" parent="."]
-position = Vector2(5242, 568)
+[node name="Houses4" type="Sprite2D" parent="Background"]
+position = Vector2(3516, 543)
 texture = ExtResource("7_8tq2l")
 
-[node name="JungleWoman" parent="." instance=ExtResource("7_2dtoo")]
-position = Vector2(81, 956)
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleWoman"]
-position = Vector2(-186, 0)
-
-[node name="MarkerBubbleSpawn" type="Marker2D" parent="JungleWoman"]
-position = Vector2(0, -382)
-
-[node name="Camera2D" type="Camera2D" parent="JungleWoman"]
-position = Vector2(0, -416)
-offset = Vector2(500, 0)
-
-[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(6531, 670)
+[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="Background"]
+position = Vector2(5065, 645)
 script = ExtResource("11_jpgwf")
 next_scene = ExtResource("12_jpgwf")
 
 [node name="Puzzle1" type="Node2D" parent="."]
-position = Vector2(4057, 0)
+position = Vector2(3329, 0)
 
 [node name="Npc1" type="Sprite2D" parent="Puzzle1"]
 position = Vector2(311, 818)
@@ -128,12 +137,12 @@ NodePath("Draggable2"): NodePath("Receptacle2"),
 NodePath("Draggable3"): NodePath("Receptacle3"),
 NodePath("Draggable4"): NodePath("Receptacle4")
 }
-piece_spawners = [NodePath("../../JungleWoman/MarkerBubbleSpawn"), NodePath("../Npc1/MarkerBubbleSpawn")]
+piece_spawners = [NodePath("../../YSorting/JungleWoman/MarkerBubbleSpawn"), NodePath("../Npc1/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../Npc1/Clickable")
 obstacle = NodePath("../Obstacle")
 
 [node name="Puzzle2" type="Node2D" parent="."]
-position = Vector2(2022, 0)
+position = Vector2(1294, 0)
 
 [node name="Npc2" type="Sprite2D" parent="Puzzle2"]
 position = Vector2(311, 818)
@@ -158,6 +167,65 @@ puzzle_pieces = {
 NodePath("Draggable"): NodePath("Receptacle"),
 NodePath("Draggable2"): NodePath("Receptacle2")
 }
-piece_spawners = [NodePath("../../JungleWoman/MarkerBubbleSpawn"), NodePath("../Npc2/MarkerBubbleSpawn")]
+piece_spawners = [NodePath("../../YSorting/JungleWoman/MarkerBubbleSpawn"), NodePath("../Npc2/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../Npc2/Clickable")
 obstacle = NodePath("../Obstacle")
+
+[node name="YSorting" type="Node2D" parent="."]
+y_sort_enabled = true
+position = Vector2(-728, 0)
+
+[node name="JungleWoman" parent="YSorting" instance=ExtResource("7_2dtoo")]
+y_sort_enabled = true
+position = Vector2(809, 956)
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="YSorting/JungleWoman"]
+position = Vector2(-186, 0)
+
+[node name="MarkerBubbleSpawn" type="Marker2D" parent="YSorting/JungleWoman"]
+position = Vector2(0, -382)
+
+[node name="Camera2D" type="Camera2D" parent="YSorting/JungleWoman"]
+position = Vector2(0, -416)
+offset = Vector2(500, 0)
+
+[node name="Market" type="Node2D" parent="YSorting"]
+y_sort_enabled = true
+position = Vector2(58, 384)
+
+[node name="Market1" type="Sprite2D" parent="YSorting/Market"]
+position = Vector2(2536, 588)
+texture = ExtResource("20_y6iwd")
+offset = Vector2(-4, -120)
+
+[node name="Market2" type="Sprite2D" parent="YSorting/Market"]
+position = Vector2(2953, 561)
+texture = ExtResource("21_4dc1s")
+offset = Vector2(-3, -57)
+
+[node name="Market3" type="Sprite2D" parent="YSorting/Market"]
+position = Vector2(3185, 527)
+texture = ExtResource("22_pxrui")
+offset = Vector2(-9, -41)
+
+[node name="Market4" type="Sprite2D" parent="YSorting/Market"]
+position = Vector2(3237, 470)
+texture = ExtResource("23_flk65")
+offset = Vector2(-5, -74)
+
+[node name="Market5" type="Sprite2D" parent="YSorting/Market"]
+position = Vector2(3633, 525)
+texture = ExtResource("24_dv2g2")
+offset = Vector2(-17, -120)
+
+[node name="Market6" type="Sprite2D" parent="YSorting/Market"]
+position = Vector2(2808, 504)
+texture = ExtResource("25_ralbv")
+offset = Vector2(3, -77)
+
+[node name="MockupOrder" type="Sprite2D" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.40392157)
+position = Vector2(-728, 0)
+texture = ExtResource("19_ivjax")
+centered = false

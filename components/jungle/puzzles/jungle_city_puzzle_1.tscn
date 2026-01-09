@@ -33,7 +33,7 @@ size = Vector2(10, 10)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u1nce"]
 size = Vector2(136, 46)
 
-[node name="CityPuzzle1" type="Node2D" node_paths=PackedStringArray("puzzle_pieces", "complete_image")]
+[node name="CityPuzzle1" type="Node2D" node_paths=PackedStringArray("puzzle_pieces", "complete_image", "outline_image")]
 script = ExtResource("1_nkjvk")
 puzzle_pieces = {
 NodePath("Draggable"): NodePath("Receptacle"),
@@ -42,6 +42,7 @@ NodePath("Draggable3"): NodePath("Receptacle3"),
 NodePath("Draggable4"): NodePath("Receptacle4")
 }
 complete_image = NodePath("Fullsquare")
+outline_image = NodePath("Emptysquare")
 
 [node name="Emptysquare" type="Sprite2D" parent="."]
 texture = ExtResource("2_j07h7")

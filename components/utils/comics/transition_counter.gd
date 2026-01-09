@@ -31,4 +31,4 @@ func _on_obstacle_cleared():
 		#TASK refactor to centralize delay transition?
 		#Delay transition
 		await get_tree().create_timer(transition_delay).timeout
-		SignalManager.next_panel.emit()
+		SignalManager.show_next_button.emit()

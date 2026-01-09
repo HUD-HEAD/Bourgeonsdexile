@@ -52,5 +52,3 @@ script = ExtResource("8_i6sxp")
 
 [node name="AutomaticPanner" type="Node" parent="."]
 script = ExtResource("2_1vgm7")
-
-[node name="Camera2D" type="Camera2D" parent="."]

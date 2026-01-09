@@ -4,17 +4,17 @@ extends Node
 ##Transition will trigger when animation ends
 @export var anim_player : AnimationPlayer
 ##If no animation player is given, will wait this long before triggering transition
-@export var timer_wait : float = 5.0
+@export var timer_wait : float = 3.0
 
 func _ready() -> void:
 	#Trigger at end of animation if present
 	if anim_player != null :
-		anim_player.animation_finished.connect(SignalManager.next_panel.emit.unbind(1))
+		anim_player.animation_finished.connect(SignalManager.show_next_button.emit.unbind(1))
 	#Otherwise create a timer and wait for timeout
 	else :
 		var timer : Timer = Timer.new()
 		timer.wait_time = timer_wait
 		timer.one_shot = true
-		timer.timeout.connect(SignalManager.next_panel.emit)
+		timer.timeout.connect(SignalManager.show_next_button.emit)
 		add_child(timer)
 		timer.start()
