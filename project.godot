@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Bourgeons d'exil"
-config/version="0.1"
+config/version="0.1.1"
 run/main_scene="uid://ctau0miqtmbj2"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 run/max_fps=200
