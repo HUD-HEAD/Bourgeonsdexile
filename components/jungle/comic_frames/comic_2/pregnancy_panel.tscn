@@ -34,5 +34,3 @@ node_to_enable = NodePath("../AnimatedSprite2D")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(61.5, 208)
 shape = SubResource("RectangleShape2D_psjyq")
-
-[node name="Camera2D" type="Camera2D" parent="."]

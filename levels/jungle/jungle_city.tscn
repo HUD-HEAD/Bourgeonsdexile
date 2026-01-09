@@ -194,28 +194,34 @@ y_sort_enabled = true
 position = Vector2(58, 384)
 
 [node name="Market1" type="Sprite2D" parent="YSorting/Market"]
-position = Vector2(2532, 452)
+position = Vector2(2536, 572)
 texture = ExtResource("20_y6iwd")
+offset = Vector2(-4, -120)
 
 [node name="Market2" type="Sprite2D" parent="YSorting/Market"]
-position = Vector2(2950, 504)
+position = Vector2(2953, 561)
 texture = ExtResource("21_4dc1s")
+offset = Vector2(-3, -57)
 
 [node name="Market3" type="Sprite2D" parent="YSorting/Market"]
-position = Vector2(3176, 486)
+position = Vector2(3185, 527)
 texture = ExtResource("22_pxrui")
+offset = Vector2(-9, -41)
 
 [node name="Market4" type="Sprite2D" parent="YSorting/Market"]
-position = Vector2(3232, 396)
+position = Vector2(3237, 470)
 texture = ExtResource("23_flk65")
+offset = Vector2(-5, -74)
 
 [node name="Market5" type="Sprite2D" parent="YSorting/Market"]
-position = Vector2(3616, 405)
+position = Vector2(3633, 525)
 texture = ExtResource("24_dv2g2")
+offset = Vector2(-17, -120)
 
 [node name="Market6" type="Sprite2D" parent="YSorting/Market"]
-position = Vector2(2811, 427)
+position = Vector2(2808, 504)
 texture = ExtResource("25_ralbv")
+offset = Vector2(3, -77)
 
 [node name="MockupOrder" type="Sprite2D" parent="."]
 visible = false
