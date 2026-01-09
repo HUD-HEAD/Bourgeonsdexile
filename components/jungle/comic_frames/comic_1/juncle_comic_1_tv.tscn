@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://behve8sims82i" path="res://graphics/jungle/jungle_comic1/frame_Tv/frame_migrants_Welcome.png" id="1_upyga"]
 [ext_resource type="Texture2D" uid="uid://bk105dqy8eqfu" path="res://graphics/jungle/jungle_comic1/frame_Tv/frame_tv_off.png" id="2_a82dl"]
 [ext_resource type="Texture2D" uid="uid://dfbhlmbuoewuv" path="res://graphics/jungle/jungle_comic1/frame_Tv/frametv_plane.png" id="3_vs6qs"]
-[ext_resource type="Texture2D" uid="uid://dsrmyb8cw8fm" path="res://graphics/jungle/jungle_comic1/frame_switch/frame_switch_off.png" id="4_oigd8"]
+[ext_resource type="Texture2D" uid="uid://bfktluobjs845" path="res://graphics/jungle/jungle_comic1/frame_switch/frame_switch_off.png" id="4_oigd8"]
 [ext_resource type="Texture2D" uid="uid://dbehbtk7pwgk7" path="res://graphics/jungle/jungle_comic1/frame_Tv/frametv_house.png" id="4_x1e7w"]
 [ext_resource type="Script" uid="uid://bpxyc4arwakw4" path="res://components/jungle/comic_frames/comic_1/lightswitch.gd" id="5_38kkl"]
 [ext_resource type="Texture2D" uid="uid://c75ptvds0u5yu" path="res://graphics/jungle/jungle_comic1/frame_switch/frame_switch_on.png" id="5_cq71l"]
@@ -33,6 +33,21 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_38kkl"]
 size = Vector2(275.29407, 552.94104)
 
+[sub_resource type="Animation" id="Animation_ox4xt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TV:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
 [sub_resource type="Animation" id="Animation_iiijh"]
 resource_name = "tv_program"
 length = 6.5
@@ -61,21 +76,6 @@ tracks/1/keys = {
 "args": [],
 "method": &"show"
 }]
-}
-
-[sub_resource type="Animation" id="Animation_ox4xt"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("TV:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dbttd"]
