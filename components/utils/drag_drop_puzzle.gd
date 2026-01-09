@@ -2,6 +2,7 @@ extends Node2D
 
 @export var puzzle_pieces : Dictionary[Draggable, Area2D]
 @export var complete_image : Sprite2D
+@export var outline_image : Sprite2D
 
 @export var piece_spawners: Array[Node2D]
 
@@ -26,8 +27,12 @@ func _ready() -> void:
 	
 	obstacle.area_entered.connect(_on_obstacle_entered)
 	spawn_trigger.process_mode = Node.PROCESS_MODE_DISABLED
+	
+	outline_image.hide()
+	
 
 func _on_obstacle_entered(area2d : Area2D):
+	outline_image.show()
 	spawn_trigger.process_mode = Node.PROCESS_MODE_INHERIT
 
 ## Called every time a puzzle piece is correctly placed
