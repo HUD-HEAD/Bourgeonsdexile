@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://cyq5jl4y7etbe"]
 
-[ext_resource type="Script" uid="uid://chrql2wwvrdt1" path="res://levels/jungle/drag_drop_puzzle.gd" id="1_nkjvk"]
+[ext_resource type="Script" uid="uid://chrql2wwvrdt1" path="res://components/utils/drag_drop_puzzle.gd" id="1_nkjvk"]
 [ext_resource type="Texture2D" uid="uid://bmofamb26y4gd" path="res://graphics/ui/puzzle_1/emptysquare.png" id="2_j07h7"]
 [ext_resource type="Texture2D" uid="uid://cacvqldc3simv" path="res://graphics/ui/puzzle_1/fullsquare.png" id="3_dbwny"]
 [ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/draggable.gd" id="4_tx8fh"]

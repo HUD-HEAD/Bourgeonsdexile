@@ -1,0 +1,56 @@
+[gd_scene load_steps=11 format=3 uid="uid://bi4kbbnyg1r6g"]
+
+[ext_resource type="Texture2D" uid="uid://byvh1c37ea83j" path="res://graphics/jungle/jungle_comic1/frame7/frame7_alltogether.png" id="1_1414u"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_1vgm7"]
+[ext_resource type="Texture2D" uid="uid://h2qm5m45yfsa" path="res://graphics/jungle/jungle_comic1/frame7/bird1.png" id="3_ynxgm"]
+[ext_resource type="Texture2D" uid="uid://dsebosijspsmj" path="res://graphics/jungle/jungle_comic1/frame7/bird2.png" id="4_i6sxp"]
+[ext_resource type="Texture2D" uid="uid://reirp75upq53" path="res://graphics/jungle/jungle_comic1/frame7/bird3.png" id="5_50k1b"]
+[ext_resource type="Texture2D" uid="uid://dy5t5uinuhvmy" path="res://graphics/jungle/jungle_comic1/frame7/bird4.png" id="6_uvtw1"]
+[ext_resource type="Texture2D" uid="uid://c1hq1p81mbey" path="res://graphics/jungle/jungle_comic1/frame7/bird5.png" id="7_md3tw"]
+[ext_resource type="Script" uid="uid://bk17pejrvpwfq" path="res://components/utils/follow_mouse.gd" id="8_i6sxp"]
+[ext_resource type="Texture2D" uid="uid://bsnw46m5wbbuj" path="res://graphics/jungle/jungle_comic1/frame7/bird6.png" id="8_wk1cn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4jaw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ynxgm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_i6sxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_50k1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_uvtw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_md3tw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wk1cn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="JungleComic1Frame7" type="Node2D"]
+metadata/_edit_group_ = true
+
+[node name="Frame7Alltogether" type="Sprite2D" parent="."]
+clip_children = 2
+texture = ExtResource("1_1414u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Frame7Alltogether"]
+position = Vector2(-850, -315)
+sprite_frames = SubResource("SpriteFrames_g4jaw")
+autoplay = "default"
+frame_progress = 0.21511903
+script = ExtResource("8_i6sxp")
+
+[node name="AutomaticPanner" type="Node" parent="."]
+script = ExtResource("2_1vgm7")
+
+[node name="Camera2D" type="Camera2D" parent="."]

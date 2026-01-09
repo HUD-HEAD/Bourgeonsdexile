@@ -1,8 +1,8 @@
 [gd_scene load_steps=17 format=3 uid="uid://cyyx1fl7vyhle"]
 
-[ext_resource type="Texture2D" uid="uid://dvj16artsfr2g" path="res://graphics/jungle/jungle_woman/not_pregnant/idle/1.png" id="1_5vmx6"]
-[ext_resource type="Texture2D" uid="uid://cepco3vr1q46h" path="res://graphics/jungle/jungle_woman/not_pregnant/idle/2.png" id="2_jjq83"]
-[ext_resource type="Texture2D" uid="uid://cigsatec33xpv" path="res://graphics/jungle/jungle_woman/not_pregnant/idle/3.png" id="3_sx88w"]
+[ext_resource type="Texture2D" uid="uid://dprmlracmkht5" path="res://graphics/animations/IDLE_woman/idle_rough_juana_0001.png" id="2_fg600"]
+[ext_resource type="Texture2D" uid="uid://dbvmhdy24mdlx" path="res://graphics/animations/IDLE_woman/idle_rough_juana_0005.png" id="3_vr2kq"]
+[ext_resource type="Texture2D" uid="uid://dguvcclky6cxs" path="res://graphics/animations/IDLE_woman/idle_rough_juana_0006.png" id="4_ec277"]
 [ext_resource type="Texture2D" uid="uid://dstux0pkr1gov" path="res://graphics/animations/walkingwomanfinal_lowres/MC_walk_0001.png" id="5_fg600"]
 [ext_resource type="Texture2D" uid="uid://chkajxjhj6qdy" path="res://graphics/animations/walkingwomanfinal_lowres/MC_walk_0006.png" id="6_vr2kq"]
 [ext_resource type="Texture2D" uid="uid://blw5858i2ihuy" path="res://graphics/animations/walkingwomanfinal_lowres/MC_walk_0011.png" id="7_ec277"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://5cm8hpku1t5o" path="res://graphics/animations/walkingwomanfinal_lowres/MC_walk_0021.png" id="9_haisx"]
 [ext_resource type="Texture2D" uid="uid://cy5rw2viwekns" path="res://graphics/animations/walkingwomanfinal_lowres/MC_walk_0026.png" id="10_lrsto"]
 [ext_resource type="Texture2D" uid="uid://d3ixyogjxaylf" path="res://graphics/animations/walkingwomanfinal_lowres/MC_walk_0031.png" id="11_6ywr7"]
-[ext_resource type="Script" uid="uid://cw23kchqxignm" path="res://components/woman.gd" id="12_c626s"]
+[ext_resource type="Script" path="res://components/woman.gd" id="12_c626s"]
 [ext_resource type="Texture2D" uid="uid://b2rx0mx3l7pid" path="res://graphics/animations/walkingwomanfinal_lowres/MC_walk_0036.png" id="12_rwhkn"]
 [ext_resource type="Texture2D" uid="uid://d2nkt2g808lv" path="res://graphics/animations/walkingwomanfinal_lowres/MC_walk_0041.png" id="13_a83k3"]
 [ext_resource type="Texture2D" uid="uid://crel76ewtewu0" path="res://graphics/animations/walkingwomanfinal_lowres/MC_walk_0046.png" id="14_mga4l"]
@@ -18,14 +18,14 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_haisx"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_5vmx6")
+"duration": 5.0,
+"texture": ExtResource("2_fg600")
 }, {
-"duration": 1.0,
-"texture": ExtResource("2_jjq83")
+"duration": 5.0,
+"texture": ExtResource("3_vr2kq")
 }, {
-"duration": 1.0,
-"texture": ExtResource("3_sx88w")
+"duration": 5.0,
+"texture": ExtResource("4_ec277")
 }],
 "loop": true,
 "name": &"idle",
@@ -80,8 +80,7 @@ anim_sprite = NodePath("AnimatedSprite2D")
 z_index = 1
 position = Vector2(0, -100)
 sprite_frames = SubResource("SpriteFrames_haisx")
-animation = &"walking"
-frame_progress = 0.485647
+animation = &"idle"
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(5, -142)
