@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c60nnmob4jcv3"]
+[gd_scene load_steps=23 format=3 uid="uid://c60nnmob4jcv3"]
 
 [ext_resource type="Texture2D" uid="uid://behve8sims82i" path="res://graphics/jungle/jungle_comic1/frame_Tv/frame_migrants_Welcome.png" id="1_upyga"]
 [ext_resource type="Texture2D" uid="uid://bk105dqy8eqfu" path="res://graphics/jungle/jungle_comic1/frame_Tv/frame_tv_off.png" id="2_a82dl"]
@@ -8,7 +8,14 @@
 [ext_resource type="Script" uid="uid://bpxyc4arwakw4" path="res://components/utils/comics/lightswitch.gd" id="5_38kkl"]
 [ext_resource type="Texture2D" uid="uid://c75ptvds0u5yu" path="res://graphics/jungle/jungle_comic1/frame_switch/frame_switch_on.png" id="5_cq71l"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="6_38kkl"]
+[ext_resource type="Texture2D" uid="uid://b4mukyucct2xx" path="res://graphics/comic1rexported/frame_switch/spark/spark1.png" id="8_10q3j"]
 [ext_resource type="Script" uid="uid://ds0m4hygkuj81" path="res://components/utils/comics/set_mouse_visibility.gd" id="8_x1e7w"]
+[ext_resource type="Texture2D" uid="uid://bwyips2hh2vwn" path="res://graphics/comic1rexported/frame_switch/spark/spark2.png" id="9_x4ok2"]
+[ext_resource type="Texture2D" uid="uid://dh8bel271rtc" path="res://graphics/comic1rexported/frame_switch/spark/spark3.png" id="10_5w7je"]
+[ext_resource type="Texture2D" uid="uid://bff8x2ifvrfgj" path="res://graphics/comic1rexported/frame_switch/spark/spark4.png" id="11_1ka02"]
+[ext_resource type="Texture2D" uid="uid://untur77k5b5e" path="res://graphics/comic1rexported/frame_switch/spark/spark5.png" id="12_bkt1q"]
+[ext_resource type="Texture2D" uid="uid://mipiyts6sp7a" path="res://graphics/comic1rexported/frame_switch/spark/spark6.png" id="13_to746"]
+[ext_resource type="Texture2D" uid="uid://dsa7fnojx0lk7" path="res://graphics/comic1rexported/frame_switch/spark/spark7.png" id="14_8bxka"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x2xsn"]
 animations = [{
@@ -28,6 +35,41 @@ animations = [{
 "loop": false,
 "name": &"default",
 "speed": 1.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bgwx2"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": null
+}, {
+"duration": 3.0,
+"texture": ExtResource("8_10q3j")
+}, {
+"duration": 3.0,
+"texture": ExtResource("9_x4ok2")
+}, {
+"duration": 3.0,
+"texture": ExtResource("10_5w7je")
+}, {
+"duration": 3.0,
+"texture": ExtResource("11_1ka02")
+}, {
+"duration": 3.0,
+"texture": ExtResource("12_bkt1q")
+}, {
+"duration": 3.0,
+"texture": ExtResource("13_to746")
+}, {
+"duration": 3.0,
+"texture": ExtResource("14_8bxka")
+}, {
+"duration": 150.0,
+"texture": null
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_38kkl"]
@@ -103,6 +145,12 @@ switch_sprite = NodePath("FrameSwitchOn")
 
 [node name="FrameSwitchOn" type="Sprite2D" parent="JungleComic1Switch/Area2D"]
 texture = ExtResource("5_cq71l")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="JungleComic1Switch/Area2D/FrameSwitchOn"]
+position = Vector2(-42.259884, 0.8766085)
+sprite_frames = SubResource("SpriteFrames_bgwx2")
+autoplay = "default"
+frame_progress = 0.9421958
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="JungleComic1Switch/Area2D"]
 position = Vector2(-88.14221, -61.476334)
