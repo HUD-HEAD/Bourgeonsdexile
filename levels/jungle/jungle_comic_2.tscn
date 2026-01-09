@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://djv5fkem5af34"]
+[gd_scene load_steps=18 format=3 uid="uid://djv5fkem5af34"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_l3y4y"]
 [ext_resource type="Texture2D" uid="uid://b6u1mta7ui6k4" path="res://graphics/comic2godot/deck/deck_man.png" id="1_sykog"]
@@ -15,7 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://crfrjw42dcsks" path="res://components/jungle/comic_frames/comic_2/pregnancy_panel.tscn" id="12_exkuh"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="12_su3g7"]
 [ext_resource type="PackedScene" uid="uid://brc35c78ohvta" path="res://levels/jungle/jungle.tscn" id="14_exkuh"]
-[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="14_fekbj"]
+[ext_resource type="Script" path="res://components/utils/goto_next_scene.gd" id="14_fekbj"]
+[ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="17_1sxs8"]
 
 [node name="JungleComic2" type="Node2D"]
 
@@ -146,3 +147,5 @@ next_scene = ExtResource("14_exkuh")
 [node name="PanelPanner" type="Node" parent="." node_paths=PackedStringArray("panels")]
 script = ExtResource("12_su3g7")
 panels = [NodePath("../StartPanel"), NodePath("../ManWalking"), NodePath("../WalletPanel"), NodePath("../DeckMan"), NodePath("../Man"), NodePath("../WomanHelping"), NodePath("../WomanExplaining"), NodePath("../GroupWomen"), NodePath("../JungleEntry"), NodePath("../PregnancyPanel"), NodePath("../JungleBeggining"), NodePath("../SceneEnder")]
+
+[node name="UI" parent="." instance=ExtResource("17_1sxs8")]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://wpdacnf6nbuu"]
+
+[ext_resource type="Texture2D" uid="uid://rmnvu1hcflfg" path="res://graphics/ui/nextButton/NextButtonPurple.png" id="1_lrojp"]
+[ext_resource type="Script" uid="uid://1nwrmi48xfyg" path="res://components/utils/ui/button_next.gd" id="2_82c8c"]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -131.0
+offset_top = -133.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_lrojp")
+script = ExtResource("2_82c8c")

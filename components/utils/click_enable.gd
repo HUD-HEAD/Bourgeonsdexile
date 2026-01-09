@@ -8,3 +8,4 @@ func _ready() -> void:
 
 func _action_on_click():
 	node_to_enable.process_mode = Node.PROCESS_MODE_INHERIT
+	super()
