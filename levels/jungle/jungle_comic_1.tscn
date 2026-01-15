@@ -1,61 +1,21 @@
-[gd_scene load_steps=26 format=3 uid="uid://du7xk8lrsn7at"]
+[gd_scene load_steps=17 format=3 uid="uid://du7xk8lrsn7at"]
 
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="3_ej5x0"]
+[ext_resource type="PackedScene" uid="uid://dxje8kcv8ykkm" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_1.tscn" id="2_7p1v8"]
 [ext_resource type="Script" uid="uid://ds0m4hygkuj81" path="res://components/utils/comics/set_mouse_visibility.gd" id="4_l35no"]
-[ext_resource type="Texture2D" uid="uid://b1kq3hpvjdvft" path="res://graphics/jungle/jungle_comic1/frame1/frame1_1.png" id="5_7ejrb"]
 [ext_resource type="PackedScene" uid="uid://cbouhlj8xssdp" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_2.tscn" id="5_7p1v8"]
 [ext_resource type="PackedScene" uid="uid://c60nnmob4jcv3" path="res://components/jungle/comic_frames/comic_1/juncle_comic_1_tv.tscn" id="5_rhbtc"]
-[ext_resource type="Texture2D" uid="uid://dj0v82ndb5ddu" path="res://graphics/jungle/jungle_comic1/frame1/frame1_2.png" id="6_13xj0"]
-[ext_resource type="Texture2D" uid="uid://cr863n17iknbj" path="res://graphics/jungle/jungle_comic1/frame1/frame1_3.png" id="7_vhw3u"]
-[ext_resource type="Texture2D" uid="uid://cn01oh2w837m4" path="res://graphics/jungle/jungle_comic1/frame1/frame1_4.png" id="8_4dwlt"]
-[ext_resource type="Texture2D" uid="uid://cktpk4jppqb5m" path="res://graphics/jungle/jungle_comic1/frame1/frame1_5.png" id="9_ain5h"]
-[ext_resource type="Texture2D" uid="uid://dui60y2f31tuq" path="res://graphics/jungle/jungle_comic1/frame1/frame1_6.png" id="10_fny6p"]
 [ext_resource type="PackedScene" uid="uid://cpqe48imup7qq" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_5.tscn" id="11_p78bu"]
-[ext_resource type="Texture2D" uid="uid://t7vpedh330ns" path="res://graphics/jungle/jungle_comic1/frame1/frame1_7.png" id="11_pkyto"]
-[ext_resource type="Texture2D" uid="uid://csvi015jm6vp2" path="res://graphics/jungle/jungle_comic1/frame1/frame1_8.png" id="12_si3rw"]
 [ext_resource type="PackedScene" uid="uid://bd7g0rb56ib48" path="res://components/jungle/comic_frames/comic_1/jungle_comic_candle.tscn" id="13_p78bu"]
 [ext_resource type="PackedScene" uid="uid://s3spdg0qqc77" path="res://levels/jungle/jungle_city.tscn" id="16_7ejrb"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="17_13xj0"]
 [ext_resource type="Script" path="res://components/utils/goto_next_scene.gd" id="17_54bx8"]
-[ext_resource type="PackedScene" uid="uid://bi4kbbnyg1r6g" path="res://levels/jungle/jungle_comic_1_frame_7.tscn" id="19_p78bu"]
-[ext_resource type="PackedScene" uid="uid://ck876o7lm40cb" path="res://levels/jungle/jungle_comic_1_frame_8.tscn" id="20_p78bu"]
+[ext_resource type="PackedScene" uid="uid://bi4kbbnyg1r6g" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_7.tscn" id="19_p78bu"]
+[ext_resource type="PackedScene" uid="uid://ck876o7lm40cb" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_8.tscn" id="20_p78bu"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="24_7ejrb"]
 [ext_resource type="PackedScene" uid="uid://b3xbb0f00akh4" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_3.tscn" id="32_ynlpr"]
 [ext_resource type="PackedScene" uid="uid://bq0ewephc3xv5" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_4.tscn" id="35_jpuy7"]
 [ext_resource type="PackedScene" uid="uid://cyqwmaex0ilgv" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_6.tscn" id="40_jpuy7"]
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="41_0igvp"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ucrt7"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_7ejrb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_13xj0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_vhw3u")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_4dwlt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_ain5h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_fny6p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_pkyto")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_si3rw")
-}],
-"loop": false,
-"name": &"default",
-"speed": 5.0
-}]
 
 [node name="JungleComic1" type="Node2D"]
 
@@ -82,19 +42,8 @@ limit_smoothed = true
 position_smoothing_enabled = true
 editor_draw_limits = true
 
-[node name="JungleComic1Frame1" type="Node2D" parent="."]
+[node name="JungleComic1Frame1" parent="." instance=ExtResource("2_7p1v8")]
 position = Vector2(960, 540)
-metadata/_edit_group_ = true
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="JungleComic1Frame1"]
-sprite_frames = SubResource("SpriteFrames_ucrt7")
-autoplay = "default"
-frame = 7
-frame_progress = 1.0
-
-[node name="AutomaticPanner" type="Node" parent="JungleComic1Frame1"]
-script = ExtResource("3_ej5x0")
-timer_wait = 3.0
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame1"]
 script = ExtResource("4_l35no")
