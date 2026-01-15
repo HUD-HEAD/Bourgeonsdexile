@@ -1,10 +1,7 @@
 extends Area2D
 class_name Draggable
 
-signal piece_correctly_placed
-
-##Assigned in drag_drop_puzzle script
-var receptacle : Area2D
+signal dropped
 
 var dragging : bool = false
 
@@ -57,13 +54,4 @@ func _on_mouse_entered():
 
 func _drop():
 	SignalManager.set_cursor_shape.emit(Input.CURSOR_POINTING_HAND)
-	
-	if is_correctly_placed():
-		piece_correctly_placed.emit()
-		print_debug("puzzle piece correct!")
-
-func is_correctly_placed() -> bool:
-	#TASK assess design, should it support drag and drop without receptacle? Or create overload?
-	if receptacle == null:
-		return false
-	return overlaps_area(receptacle)
+	dropped.emit()
