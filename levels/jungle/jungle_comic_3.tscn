@@ -1,9 +1,10 @@
-[gd_scene load_steps=27 format=3 uid="uid://deifii0sv125i"]
+[gd_scene load_steps=35 format=3 uid="uid://deifii0sv125i"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_udtka"]
 [ext_resource type="PackedScene" uid="uid://dxje8kcv8ykkm" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_1.tscn" id="2_5sp0c"]
 [ext_resource type="Script" uid="uid://ds0m4hygkuj81" path="res://components/utils/comics/set_mouse_visibility.gd" id="3_mqqsv"]
 [ext_resource type="Texture2D" uid="uid://clgc3i8r6oo83" path="res://graphics/comic3/frame_phone/frame_phone/charger.png" id="7_7jm3w"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="7_bhkmn"]
 [ext_resource type="Texture2D" uid="uid://uvkod8wtueyr" path="res://graphics/comic3/frame_food/framefood_1.png" id="7_dx01d"]
 [ext_resource type="Texture2D" uid="uid://7nwkr7fixajk" path="res://graphics/comic3/frame_phone/frame_phone/phone_1.png" id="8_dhixf"]
 [ext_resource type="Texture2D" uid="uid://cr4a34ce8cah5" path="res://graphics/comic3/frame_food/framefood_2.png" id="8_qhi8q"]
@@ -16,13 +17,51 @@
 [ext_resource type="Texture2D" uid="uid://b4vpeja2ohtxp" path="res://graphics/comic3/frame_phone/frame_phone/phone_5.png" id="12_lopnj"]
 [ext_resource type="Texture2D" uid="uid://bbogorcd4lirs" path="res://graphics/comic3/frame_phone/frame_phone/phone_6.png" id="13_c4j60"]
 [ext_resource type="Script" path="res://components/utils/goto_next_scene.gd" id="13_g37je"]
+[ext_resource type="Texture2D" uid="uid://bkm4700q54yq6" path="res://graphics/comic3/frame_food/frame_food_alltogether.png" id="13_qhi8q"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="14_pwafa"]
 [ext_resource type="Texture2D" uid="uid://dtdum0r2g4umo" path="res://graphics/comic3/frame_phone/frame_phone/phone_7.png" id="14_txuxr"]
+[ext_resource type="Texture2D" uid="uid://biq34ef87qwax" path="res://graphics/comic3/frame_food/framefood_nofood.png" id="14_ycsrx"]
 [ext_resource type="Texture2D" uid="uid://np2tw6p6q4cc" path="res://graphics/comic3/frame_phone/frame_phone/phone_8.png" id="15_dx01d"]
 [ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/draggable.gd" id="15_qhi8q"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="15_sw7mp"]
 [ext_resource type="Texture2D" uid="uid://bxmuy0l3m3fwd" path="res://graphics/comic3/frame_phone/frame_phone/phone_9.png" id="16_qhi8q"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="16_scavv"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="16_ycsrx"]
+[ext_resource type="Texture2D" uid="uid://dsvw6n00uxb7d" path="res://graphics/comic3/frame_food/fork.png" id="17_2lpqv"]
 [ext_resource type="Texture2D" uid="uid://b6gbrlsjo1mjf" path="res://graphics/comic3/frame_phone/frame_phone/phone_10.png" id="17_bhkmn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dx01d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_dx01d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qhi8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_bhkmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_pwafa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ycsrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_g37je")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ycsrx")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dx01d"]
+radius = 278.0
+height = 1171.8777
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dx01d"]
 size = Vector2(407.15228, 845.2251)
@@ -104,35 +143,36 @@ script = ExtResource("15_sw7mp")
 [node name="UI" parent="." instance=ExtResource("16_scavv")]
 
 [node name="JungleComic3FrameFood" type="Node2D" parent="."]
+position = Vector2(960, 540)
+
+[node name="Meal" type="Area2D" parent="JungleComic3FrameFood"]
+script = ExtResource("7_bhkmn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="JungleComic3FrameFood/Meal" node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_dx01d")
+script = ExtResource("14_pwafa")
+clickable = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JungleComic3FrameFood/Meal"]
+position = Vector2(41, 105)
+rotation = -1.3829085
+shape = SubResource("CapsuleShape2D_dx01d")
+
+[node name="Fork" type="Sprite2D" parent="JungleComic3FrameFood"]
+position = Vector2(-532, 42)
+texture = ExtResource("17_2lpqv")
+
+[node name="FrameFoodAlltogether" type="Sprite2D" parent="JungleComic3FrameFood"]
 visible = false
+texture = ExtResource("13_qhi8q")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="JungleComic3FrameFood"]
-
-[node name="Framefood1" type="Sprite2D" parent="JungleComic3FrameFood"]
-position = Vector2(1015, 522)
-texture = ExtResource("7_dx01d")
-
-[node name="Framefood2" type="Sprite2D" parent="JungleComic3FrameFood"]
-position = Vector2(1015, 522)
-texture = ExtResource("8_qhi8q")
-
-[node name="Framefood3" type="Sprite2D" parent="JungleComic3FrameFood"]
-position = Vector2(1015, 522)
-texture = ExtResource("9_bhkmn")
-
-[node name="Framefood4" type="Sprite2D" parent="JungleComic3FrameFood"]
-position = Vector2(1015, 522)
-texture = ExtResource("10_pwafa")
-
-[node name="Framefood5" type="Sprite2D" parent="JungleComic3FrameFood"]
-position = Vector2(1015, 522)
-texture = ExtResource("11_ycsrx")
-
-[node name="Framefood6" type="Sprite2D" parent="JungleComic3FrameFood"]
-position = Vector2(1015, 522)
-texture = ExtResource("12_g37je")
+[node name="TransitionCounter" type="Node" parent="JungleComic3FrameFood" node_paths=PackedStringArray("clickables")]
+script = ExtResource("16_ycsrx")
+clickables = [NodePath("../Meal")]
+obstacles_to_clear = 4
 
 [node name="JungleComic3FramePhone" type="Node2D" parent="."]
+visible = false
 
 [node name="PhoneOff" type="Sprite2D" parent="JungleComic3FramePhone"]
 position = Vector2(1390, 490)
