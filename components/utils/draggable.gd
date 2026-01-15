@@ -3,9 +3,13 @@ class_name Draggable
 
 signal piece_correctly_placed
 
+##Assigned in drag_drop_puzzle script
 var receptacle : Area2D
 
 var dragging : bool = false
+
+##Keep object offset relative to cursor on click
+var offset : Vector2
 
 func _ready() -> void:
 	#assert(receptacle != null)
@@ -20,7 +24,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if dragging:
-		move_to_pos(get_global_mouse_position())
+		move_to_pos(get_global_mouse_position() + offset)
 
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
@@ -31,6 +35,8 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 		_drop()
 
 func _action_on_click():
+	offset = global_position - get_global_mouse_position()
+	
 	dragging = true
 	SignalManager.set_cursor_shape.emit(Input.CURSOR_MOVE)
 
