@@ -1,0 +1,75 @@
+[gd_scene load_steps=15 format=3 uid="uid://bp16hkt28o6tp"]
+
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="1_5aap7"]
+[ext_resource type="Texture2D" uid="uid://uvkod8wtueyr" path="res://graphics/comic3/frame_food/framefood_1.png" id="2_ear0j"]
+[ext_resource type="Texture2D" uid="uid://cr4a34ce8cah5" path="res://graphics/comic3/frame_food/framefood_2.png" id="3_gbt7i"]
+[ext_resource type="Texture2D" uid="uid://drjqsvnqsowj8" path="res://graphics/comic3/frame_food/framefood_3.png" id="4_u4s8s"]
+[ext_resource type="Texture2D" uid="uid://cfl86mdck0ssd" path="res://graphics/comic3/frame_food/framefood_4.png" id="5_gyjp6"]
+[ext_resource type="Texture2D" uid="uid://bqapondatvm4o" path="res://graphics/comic3/frame_food/framefood_5.png" id="6_ekjj4"]
+[ext_resource type="Texture2D" uid="uid://7qj3atjgm13e" path="res://graphics/comic3/frame_food/framefood_6.png" id="7_4npjt"]
+[ext_resource type="Texture2D" uid="uid://biq34ef87qwax" path="res://graphics/comic3/frame_food/framefood_nofood.png" id="8_f5uc7"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="9_n4mpm"]
+[ext_resource type="Texture2D" uid="uid://dsvw6n00uxb7d" path="res://graphics/comic3/frame_food/fork.png" id="10_v0h4g"]
+[ext_resource type="Texture2D" uid="uid://bkm4700q54yq6" path="res://graphics/comic3/frame_food/frame_food_alltogether.png" id="11_hlfp0"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="12_c8x4o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dx01d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ear0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gbt7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_u4s8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gyjp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ekjj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4npjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_f5uc7")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dx01d"]
+radius = 278.0
+height = 1171.8777
+
+[node name="JungleComic3FrameFood" type="Node2D"]
+
+[node name="Meal" type="Area2D" parent="."]
+script = ExtResource("1_5aap7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Meal" node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_dx01d")
+script = ExtResource("9_n4mpm")
+clickable = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Meal"]
+position = Vector2(41, 105)
+rotation = -1.3829085
+shape = SubResource("CapsuleShape2D_dx01d")
+
+[node name="Fork" type="Sprite2D" parent="."]
+position = Vector2(-532, 42)
+texture = ExtResource("10_v0h4g")
+
+[node name="FrameFoodAlltogether" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("11_hlfp0")
+
+[node name="TransitionCounter" type="Node" parent="." node_paths=PackedStringArray("clickables")]
+script = ExtResource("12_c8x4o")
+clickables = [NodePath("../Meal")]
+obstacles_to_clear = 4

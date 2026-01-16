@@ -1,30 +1,37 @@
-[gd_scene load_steps=26 format=3 uid="uid://bd7g0rb56ib48"]
+[gd_scene load_steps=34 format=3 uid="uid://bd7g0rb56ib48"]
 
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_4u7yc"]
-[ext_resource type="Texture2D" uid="uid://bqiythfqeexvr" path="res://graphics/jungle/jungle_comic1/frame_candle/candle_background.png" id="2_ps1uy"]
-[ext_resource type="Texture2D" uid="uid://c7wqq3tvqr8im" path="res://graphics/jungle/jungle_comic1/frame_candle/candle_fire_0.png" id="3_c554b"]
-[ext_resource type="Texture2D" uid="uid://bn5g5jkbgqs8o" path="res://graphics/jungle/jungle_comic1/frame_candle/candle_fire_1.png" id="4_eyl0t"]
-[ext_resource type="Texture2D" uid="uid://db7ram0chpu4" path="res://graphics/jungle/jungle_comic1/frame_candle/candle_fire_2.png" id="5_ldxfp"]
-[ext_resource type="Texture2D" uid="uid://c5o2xc87e8syw" path="res://graphics/jungle/jungle_comic1/frame_candle/candle_fire_3.png" id="6_roaln"]
-[ext_resource type="Texture2D" uid="uid://bxmgwq4r46taj" path="res://graphics/jungle/jungle_comic1/frame_candle/candle_fire_4.png" id="7_0kgdd"]
-[ext_resource type="Texture2D" uid="uid://ctqxl0bats5y1" path="res://graphics/jungle/jungle_comic1/frame_candle/candle_fire_5.png" id="8_srvui"]
-[ext_resource type="Texture2D" uid="uid://sumbnkhtbhrq" path="res://graphics/jungle/jungle_comic1/frame_candle/candle_fire_6.png" id="9_typp3"]
-[ext_resource type="Texture2D" uid="uid://bdec7h34pjat3" path="res://graphics/jungle/jungle_comic1/frame_candle/candle_fire_7.png" id="10_qcl60"]
-[ext_resource type="Texture2D" uid="uid://cs4mc1t33hgmf" path="res://graphics/jungle/jungle_comic1/frame_candle/candle_fire_8.png" id="11_d2ksi"]
-[ext_resource type="Texture2D" uid="uid://yaudjionfu84" path="res://graphics/jungle/jungle_comic1/frame_candle/candle_fire_9.png" id="12_mhsc1"]
-[ext_resource type="Texture2D" uid="uid://0blxpi2vjmo4" path="res://graphics/jungle/jungle_comic1/frame_candle/hand_fire.png" id="13_eyl0t"]
-[ext_resource type="Texture2D" uid="uid://c04qsrgavtmew" path="res://graphics/jungle/jungle_comic1/frame_candle/hand_nofire.png" id="13_imvdv"]
-[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/draggable.gd" id="13_ldxfp"]
+[ext_resource type="Texture2D" uid="uid://ba4jex3kfwda1" path="res://graphics/comic1rexported/frame_candle/candle_background.png" id="2_pw80g"]
+[ext_resource type="Texture2D" uid="uid://dqh51txdh7rdh" path="res://graphics/comic1rexported/frame_candle/candle_fire_0.png" id="3_yujuo"]
+[ext_resource type="Texture2D" uid="uid://cu742hhnulk6u" path="res://graphics/comic1rexported/frame_candle/candle_fire_1.png" id="4_pw80g"]
+[ext_resource type="Texture2D" uid="uid://mxes1lackxvq" path="res://graphics/comic1rexported/frame_candle/candle_fire_2.png" id="5_yujuo"]
+[ext_resource type="Texture2D" uid="uid://bnytrx4o82wey" path="res://graphics/comic1rexported/frame_candle/candle_fire_3.png" id="6_ch4l4"]
+[ext_resource type="Texture2D" uid="uid://bmvax332hodv" path="res://graphics/comic1rexported/frame_candle/candle_fire_4.png" id="7_41gfw"]
+[ext_resource type="Texture2D" uid="uid://cqrrf4go8hjnj" path="res://graphics/comic1rexported/frame_candle/candle_fire_5.png" id="8_hduc6"]
+[ext_resource type="Texture2D" uid="uid://co2e2kevlwnm6" path="res://graphics/comic1rexported/frame_candle/candle_fire_6.png" id="9_fg1k7"]
+[ext_resource type="Texture2D" uid="uid://dgsxgxgyja75o" path="res://graphics/comic1rexported/frame_candle/candle_fire_7.png" id="10_klx3m"]
+[ext_resource type="Texture2D" uid="uid://baarv01h87s5" path="res://graphics/comic1rexported/frame_candle/candle_fire_8.png" id="11_vtse2"]
+[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="13_ldxfp"]
 [ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/area_entered_enable.gd" id="13_roaln"]
+[ext_resource type="Texture2D" uid="uid://dc8qleoweds5o" path="res://graphics/comic1rexported/frame_candle/match_fire1.png" id="15_imvdv"]
+[ext_resource type="Texture2D" uid="uid://bn300mf32lart" path="res://graphics/comic1rexported/frame_candle/match_fire2.png" id="16_pw80g"]
+[ext_resource type="Texture2D" uid="uid://dpfb0be3ls6xg" path="res://graphics/comic1rexported/frame_candle/match_fire3.png" id="17_yujuo"]
+[ext_resource type="Texture2D" uid="uid://p2ucatnp0bi0" path="res://graphics/comic1rexported/frame_candle/match_fire4.png" id="18_ch4l4"]
+[ext_resource type="Texture2D" uid="uid://clmgmo542h0vm" path="res://graphics/comic1rexported/frame_candle/match_fire5.png" id="19_41gfw"]
+[ext_resource type="Texture2D" uid="uid://y3uhat8nyeq7" path="res://graphics/comic1rexported/frame_candle/match_fire6.png" id="20_hduc6"]
+[ext_resource type="Texture2D" uid="uid://b070wr8hrmj8d" path="res://graphics/comic1rexported/frame_candle/match_fire7.png" id="21_fg1k7"]
+[ext_resource type="Texture2D" uid="uid://8u2cymnoa30k" path="res://graphics/comic1rexported/frame_candle/match_fire8.png" id="22_klx3m"]
+[ext_resource type="Texture2D" uid="uid://b3ldlcshyx6vy" path="res://graphics/comic1rexported/frame_candle/match_fire9.png" id="23_vtse2"]
+[ext_resource type="Texture2D" uid="uid://c6wbvvqav2h5c" path="res://graphics/comic1rexported/frame_candle/match_nofire.png" id="24_pw80g"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pw80g"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ps1uy")
+"texture": ExtResource("2_pw80g")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_c554b")
+"texture": ExtResource("3_yujuo")
 }],
 "loop": false,
 "name": &"default",
@@ -35,31 +42,28 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_eyl0t")
+"texture": ExtResource("4_pw80g")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_ldxfp")
+"texture": ExtResource("5_yujuo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_roaln")
+"texture": ExtResource("6_ch4l4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_0kgdd")
+"texture": ExtResource("7_41gfw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_srvui")
+"texture": ExtResource("8_hduc6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_typp3")
+"texture": ExtResource("9_fg1k7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_qcl60")
+"texture": ExtResource("10_klx3m")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_d2ksi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_mhsc1")
+"texture": ExtResource("11_vtse2")
 }],
 "loop": true,
 "name": &"default",
@@ -70,24 +74,57 @@ animations = [{
 size = Vector2(93, 113)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_roaln"]
-size = Vector2(1035, 415)
+size = Vector2(758.8061, 81.87735)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_roaln"]
+radius = 168.2686
+height = 628.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eyl0t"]
+size = Vector2(183, 354)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ldxfp"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("13_eyl0t")
+"texture": ExtResource("15_imvdv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_imvdv")
+"texture": ExtResource("16_pw80g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_yujuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ch4l4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_41gfw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_hduc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_fg1k7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_klx3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_vtse2")
 }],
-"loop": false,
+"loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_pw80g")
+}],
+"loop": false,
+"name": &"off",
+"speed": 5.0
 }]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eyl0t"]
-size = Vector2(183, 354)
 
 [sub_resource type="Animation" id="Animation_roaln"]
 length = 0.001
@@ -118,14 +155,14 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Candle/Draggable/Hand:frame")
+tracks/2/path = NodePath("Candle/Match/Hand:animation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0]
+"values": [&"default"]
 }
 
 [sub_resource type="Animation" id="Animation_ldxfp"]
@@ -158,14 +195,14 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Candle/Draggable/Hand:frame")
+tracks/2/path = NodePath("Candle/Match/Hand:animation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.033333335),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [0, 1]
+"values": [&"default", &"off"]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_roaln"]
@@ -188,7 +225,6 @@ sprite_frames = SubResource("SpriteFrames_pw80g")
 visible = false
 sprite_frames = SubResource("SpriteFrames_roaln")
 autoplay = "default"
-frame_progress = 0.37137312
 
 [node name="Target" type="Area2D" parent="Candle" node_paths=PackedStringArray("node_to_enable")]
 collision_layer = 4
@@ -200,25 +236,33 @@ node_to_enable = NodePath("../../AnimationPlayer")
 position = Vector2(133.5, 93.5)
 shape = SubResource("RectangleShape2D_ldxfp")
 
-[node name="Draggable" type="Area2D" parent="Candle"]
-position = Vector2(-494, -94)
+[node name="Match" type="Area2D" parent="Candle"]
+position = Vector2(-487, -90)
 script = ExtResource("13_ldxfp")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Candle/Draggable"]
-position = Vector2(-274.5, -21.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Candle/Match"]
+position = Vector2(-131.00002, 58.999992)
+rotation = 0.12198973
 shape = SubResource("RectangleShape2D_roaln")
 
-[node name="Hand" type="AnimatedSprite2D" parent="Candle/Draggable"]
-position = Vector2(45, -2)
-sprite_frames = SubResource("SpriteFrames_ldxfp")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Candle/Match"]
+position = Vector2(-589, -59.000015)
+rotation = -0.31191188
+shape = SubResource("CapsuleShape2D_roaln")
 
-[node name="Lighter" type="Area2D" parent="Candle/Draggable/Hand"]
+[node name="Lighter" type="Area2D" parent="Candle/Match"]
+position = Vector2(15, -1)
 collision_layer = 4
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Candle/Draggable/Hand/Lighter"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Candle/Match/Lighter"]
 position = Vector2(160.5, -44)
 shape = SubResource("RectangleShape2D_eyl0t")
+
+[node name="Hand" type="AnimatedSprite2D" parent="Candle/Match"]
+position = Vector2(-221, -39)
+sprite_frames = SubResource("SpriteFrames_ldxfp")
+autoplay = "default"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

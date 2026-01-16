@@ -1,11 +1,13 @@
+## Drag and drop with mouse
 extends Area2D
 class_name Draggable
 
-signal piece_correctly_placed
-
-var receptacle : Area2D
+signal dropped
 
 var dragging : bool = false
+
+##Keep object offset relative to cursor on click
+var offset : Vector2
 
 func _ready() -> void:
 	#assert(receptacle != null)
@@ -20,7 +22,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if dragging:
-		move_to_pos(get_global_mouse_position())
+		move_to_pos(get_global_mouse_position() + offset)
 
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
@@ -31,6 +33,8 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 		_drop()
 
 func _action_on_click():
+	offset = global_position - get_global_mouse_position()
+	
 	dragging = true
 	SignalManager.set_cursor_shape.emit(Input.CURSOR_MOVE)
 
@@ -51,13 +55,4 @@ func _on_mouse_entered():
 
 func _drop():
 	SignalManager.set_cursor_shape.emit(Input.CURSOR_POINTING_HAND)
-	
-	if is_correctly_placed():
-		piece_correctly_placed.emit()
-		print_debug("puzzle piece correct!")
-
-func is_correctly_placed() -> bool:
-	#TASK assess design, should it support drag and drop without receptacle? Or create overload?
-	if receptacle == null:
-		return false
-	return overlaps_area(receptacle)
+	dropped.emit()

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dj5cu3pwk4voh"]
 
-[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/draggable.gd" id="1_vmg1h"]
-[ext_resource type="Script" uid="uid://cfh8kfqvvym8u" path="res://components/utils/receptacle.gd" id="2_mvwgm"]
+[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="1_vmg1h"]
+[ext_resource type="Script" uid="uid://cfh8kfqvvym8u" path="res://components/utils/puzzles/receptacle.gd" id="2_mvwgm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vmg1h"]
 radius = 81.0

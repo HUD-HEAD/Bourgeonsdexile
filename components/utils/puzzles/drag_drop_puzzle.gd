@@ -1,0 +1,38 @@
+## A full puzzle set, where each puzzle piece fits in a receptacle
+class_name DragDropPuzzle
+extends Node2D
+
+## All puzzle pieces and their corresponding receptacle
+@export var puzzle_pieces : Dictionary[PuzzlePiece, Area2D]
+@export var complete_image : Sprite2D
+@export var outline_image : Sprite2D
+
+
+func _ready() -> void:
+	# Associate each puzzle piece with its receptacle
+	for piece in puzzle_pieces:
+		piece.piece_correctly_placed.connect(_on_correct_piece)
+		piece.set_receptacle(puzzle_pieces[piece])
+
+
+## Every time a puzzle piece is correctly placed, check if puzzle is completed
+func _on_correct_piece():
+	if _check_complete():
+		_complete_puzzle()
+
+## When puzzle is complete, disable interaction
+func _complete_puzzle():
+	print_debug("puzzle complete")
+	process_mode = Node.PROCESS_MODE_DISABLED
+	complete_image.show()
+	outline_image.hide()
+	SignalManager.obstacle_cleared.emit()
+	
+
+## Check if all puzzle pieces in puzzle are in the correct place
+func _check_complete() -> bool:
+	for piece in puzzle_pieces:
+		if !piece.is_correctly_placed():
+			return false
+	
+	return true
