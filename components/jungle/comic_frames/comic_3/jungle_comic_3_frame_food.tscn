@@ -1,55 +1,121 @@
-[gd_scene load_steps=15 format=3 uid="uid://bp16hkt28o6tp"]
+[gd_scene load_steps=24 format=3 uid="uid://bp16hkt28o6tp"]
 
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="1_5aap7"]
-[ext_resource type="Texture2D" uid="uid://uvkod8wtueyr" path="res://graphics/comic3/frame_food/framefood_1.png" id="2_ear0j"]
-[ext_resource type="Texture2D" uid="uid://cr4a34ce8cah5" path="res://graphics/comic3/frame_food/framefood_2.png" id="3_gbt7i"]
-[ext_resource type="Texture2D" uid="uid://drjqsvnqsowj8" path="res://graphics/comic3/frame_food/framefood_3.png" id="4_u4s8s"]
-[ext_resource type="Texture2D" uid="uid://cfl86mdck0ssd" path="res://graphics/comic3/frame_food/framefood_4.png" id="5_gyjp6"]
-[ext_resource type="Texture2D" uid="uid://bqapondatvm4o" path="res://graphics/comic3/frame_food/framefood_5.png" id="6_ekjj4"]
-[ext_resource type="Texture2D" uid="uid://7qj3atjgm13e" path="res://graphics/comic3/frame_food/framefood_6.png" id="7_4npjt"]
-[ext_resource type="Texture2D" uid="uid://biq34ef87qwax" path="res://graphics/comic3/frame_food/framefood_nofood.png" id="8_f5uc7"]
+[ext_resource type="Texture2D" uid="uid://4s5x4kbwruk7" path="res://graphics/comic3/frame_food/plate1/plate1_1.png" id="2_5aap7"]
+[ext_resource type="Texture2D" uid="uid://g8fw5sbl0wr3" path="res://graphics/comic3/frame_food/plate1/plate1_3.png" id="4_gbt7i"]
+[ext_resource type="Texture2D" uid="uid://dawm2wpn3s1tu" path="res://graphics/comic3/frame_food/plate1/plate1_5.png" id="6_gyjp6"]
+[ext_resource type="Texture2D" uid="uid://c7bk458qontb2" path="res://graphics/comic3/frame_food/glass/glass1.png" id="6_hlfp0"]
+[ext_resource type="Texture2D" uid="uid://cfcgd858vbdxu" path="res://graphics/comic3/frame_food/glass/glass2.png" id="7_c8x4o"]
+[ext_resource type="Texture2D" uid="uid://bd11jof3orwic" path="res://graphics/comic3/frame_food/plate1/plate1_6.png" id="7_ekjj4"]
+[ext_resource type="Texture2D" uid="uid://ccxg3iynsji3i" path="res://graphics/comic3/frame_food/glass/glass3.png" id="8_bk7fk"]
+[ext_resource type="Texture2D" uid="uid://x5xec0oqww23" path="res://graphics/comic3/frame_food/glass/glass4.png" id="9_fgxr1"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="9_n4mpm"]
 [ext_resource type="Texture2D" uid="uid://dsvw6n00uxb7d" path="res://graphics/comic3/frame_food/fork.png" id="10_v0h4g"]
-[ext_resource type="Texture2D" uid="uid://bkm4700q54yq6" path="res://graphics/comic3/frame_food/frame_food_alltogether.png" id="11_hlfp0"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="12_c8x4o"]
+[ext_resource type="Texture2D" uid="uid://dbwmkpn5luvtl" path="res://graphics/comic3/frame_food/plate2/plate2_1.png" id="13_4npjt"]
+[ext_resource type="Texture2D" uid="uid://drnnvwjl23yyn" path="res://graphics/comic3/frame_food/pramefood_noplates.png" id="13_ear0j"]
+[ext_resource type="Texture2D" uid="uid://dsvgbf4747ryv" path="res://graphics/comic3/frame_food/plate2/plate2_3.png" id="15_n4mpm"]
+[ext_resource type="Texture2D" uid="uid://dftpkro0gmmv8" path="res://graphics/comic3/frame_food/plate2/plate2_5.png" id="17_hlfp0"]
+[ext_resource type="Texture2D" uid="uid://b7lfvoqgxd3nn" path="res://graphics/comic3/frame_food/plate2/plate2_6.png" id="18_c8x4o"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_dx01d"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_4npjt"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ear0j")
+"texture": ExtResource("6_hlfp0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_gbt7i")
+"texture": ExtResource("7_c8x4o")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_u4s8s")
+"texture": ExtResource("8_bk7fk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_gyjp6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_ekjj4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_4npjt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_f5uc7")
+"texture": ExtResource("9_fgxr1")
 }],
 "loop": false,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dx01d"]
-radius = 278.0
-height = 1171.8777
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6ig8h"]
+radius = 103.0
+height = 298.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dx01d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5aap7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gbt7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gyjp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ekjj4")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f5uc7"]
+radius = 296.37982
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bk7fk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_4npjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_n4mpm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_hlfp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_c8x4o")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4npjt"]
+radius = 232.60696
 
 [node name="JungleComic3FrameFood" type="Node2D"]
 
-[node name="Meal" type="Area2D" parent="."]
+[node name="TransitionCounter" type="Node" parent="." node_paths=PackedStringArray("clickables")]
+script = ExtResource("12_c8x4o")
+clickables = [NodePath("../Meal"), NodePath("../Meal2"), NodePath("../Glass")]
+obstacles_to_clear = 4
+
+[node name="PramefoodNoplates" type="Sprite2D" parent="."]
+texture = ExtResource("13_ear0j")
+
+[node name="Glass" type="Area2D" parent="."]
+position = Vector2(509, -306)
 script = ExtResource("1_5aap7")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Glass" node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_4npjt")
+script = ExtResource("9_n4mpm")
+clickable = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Glass"]
+position = Vector2(1, -58)
+shape = SubResource("CapsuleShape2D_6ig8h")
+
+[node name="Meal" type="Area2D" parent="."]
+position = Vector2(-208, 55)
+script = ExtResource("1_5aap7")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Meal" node_paths=PackedStringArray("clickable")]
 sprite_frames = SubResource("SpriteFrames_dx01d")
@@ -57,19 +123,21 @@ script = ExtResource("9_n4mpm")
 clickable = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Meal"]
-position = Vector2(41, 105)
-rotation = -1.3829085
-shape = SubResource("CapsuleShape2D_dx01d")
+shape = SubResource("CircleShape2D_f5uc7")
+
+[node name="Meal2" type="Area2D" parent="."]
+position = Vector2(354, 160)
+script = ExtResource("1_5aap7")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Meal2" node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_bk7fk")
+script = ExtResource("9_n4mpm")
+clickable = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Meal2"]
+shape = SubResource("CircleShape2D_4npjt")
 
 [node name="Fork" type="Sprite2D" parent="."]
-position = Vector2(-532, 42)
+position = Vector2(-534, 45)
 texture = ExtResource("10_v0h4g")
-
-[node name="FrameFoodAlltogether" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("11_hlfp0")
-
-[node name="TransitionCounter" type="Node" parent="." node_paths=PackedStringArray("clickables")]
-script = ExtResource("12_c8x4o")
-clickables = [NodePath("../Meal")]
-obstacles_to_clear = 4

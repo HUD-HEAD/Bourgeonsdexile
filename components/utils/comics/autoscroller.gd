@@ -21,6 +21,8 @@ var idx : int = 0
 func _ready() -> void:
 	camera = get_viewport().get_camera_2d()
 	SignalManager.next_panel.connect(_next_panel)
+	
+	_pan_to(panels[0])
 
 ## Triggers panning to next panel in the list
 func _next_panel():
@@ -47,6 +49,8 @@ func _pan_to(panel : Node2D):
 ## DEBUG BUILDS : Detect input 0-9 and jump to corresponding panel [UNSTABLE]
 func _unhandled_input(event: InputEvent) -> void:
 	if !OS.is_debug_build():
+		return
+	if Input.is_action_pressed("debug_enable_scene_switch"):
 		return
 	if event is InputEventKey and event.pressed:
 		#Number pressed (0..9)

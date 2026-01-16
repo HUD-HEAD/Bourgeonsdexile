@@ -2,7 +2,7 @@ class_name PlacementChecker
 extends Area2D
 
 ##Assigned in drag_drop_puzzle script
-var receptacle : Area2D
+@export var receptacle : Area2D
 
 func is_correctly_placed() -> bool:
 	#TASK assess design, should it support drag and drop without receptacle? Or create overload?

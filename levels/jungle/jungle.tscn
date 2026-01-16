@@ -1,52 +1,123 @@
-[gd_scene load_steps=7 format=3 uid="uid://brc35c78ohvta"]
+[gd_scene load_steps=15 format=3 uid="uid://brc35c78ohvta"]
 
-[ext_resource type="Texture2D" uid="uid://c131fhgoar0d2" path="res://graphics/jungle/environment/dayjungle/alltogether.png" id="1_633mf"]
 [ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/jungle/jungle_woman.tscn" id="2_2u04l"]
-[ext_resource type="Texture2D" uid="uid://c7gngm2pa86kt" path="res://graphics/jungle/environment/dayjungle/water_river.png" id="3_yi4yt"]
-[ext_resource type="Texture2D" uid="uid://d14tfjapvt6do" path="res://graphics/jungle/environment/dayjungle/background_river.png" id="5_on17i"]
-[ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/obstacle.tscn" id="5_vwdhm"]
+[ext_resource type="Texture2D" uid="uid://rttwgbu6g8g3" path="res://graphics/jungle/junglepieces/jungle1.png" id="6_hqryo"]
+[ext_resource type="Texture2D" uid="uid://dvrpmuwgbi7wb" path="res://graphics/jungle/junglepieces/jungle2.png" id="7_8pokd"]
+[ext_resource type="Texture2D" uid="uid://dcgs8xdwyy2dy" path="res://graphics/jungle/junglepieces/jungle3.png" id="8_lh7rp"]
+[ext_resource type="Texture2D" uid="uid://bbhejckkbrqv6" path="res://graphics/jungle/junglepieces/jungle4.png" id="9_8pokd"]
+[ext_resource type="Texture2D" uid="uid://m31dh66akhqm" path="res://graphics/jungle/junglepieces/jungle5.png" id="10_lh7rp"]
+[ext_resource type="Texture2D" uid="uid://cvhs3af3sxo4n" path="res://graphics/jungle/junglepieces/bush.png" id="10_lwynh"]
+[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="10_x4ijf"]
+[ext_resource type="PackedScene" uid="uid://deifii0sv125i" path="res://levels/jungle/jungle_comic_3.tscn" id="11_kvykc"]
+[ext_resource type="Texture2D" uid="uid://e6dbtl7rw04o" path="res://graphics/jungle/junglepieces/water1.png" id="11_x4ijf"]
+[ext_resource type="Texture2D" uid="uid://b3h4s7fkrtkab" path="res://graphics/jungle/junglepieces/water2.png" id="12_kvykc"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_yi4yt"]
-size = Vector2(50, 50)
+[sub_resource type="Curve2D" id="Curve2D_8pokd"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 453, 767, -389.74353, 128.61536, 389.74353, -128.61536, 2284, 742, 0, 0, 0, 0, 18016, 770, -188.4297, 62.8099, 188.4297, -62.8099, 22142, 814, -454.16388, 6.4420395, 454.16388, -6.4420395, 23284, 316, -297.9444, -75.69398, 297.9444, 75.69398, 24042, 792, 0, 0, 0, 0, 32380, 777)
+}
+point_count = 7
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8pokd"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_lh7rp"]
+light_mode = 2
 
 [node name="Jungle" type="Node2D"]
 
-[node name="Alltogether" type="Sprite2D" parent="."]
-texture = ExtResource("1_633mf")
+[node name="Spawn" type="Marker2D" parent="."]
+position = Vector2(458, 773)
+
+[node name="NewJungle" type="Node2D" parent="."]
+
+[node name="Jungle1" type="Sprite2D" parent="NewJungle"]
+texture = ExtResource("6_hqryo")
 centered = false
 
-[node name="RiverMask" type="Sprite2D" parent="."]
-clip_children = 2
-texture = ExtResource("3_yi4yt")
+[node name="Jungle2" type="Sprite2D" parent="NewJungle/Jungle1"]
+position = Vector2(8000, 0)
+texture = ExtResource("7_8pokd")
 centered = false
 
-[node name="ReflectionContainer" type="Node2D" parent="RiverMask"]
-position = Vector2(458, 652)
+[node name="Jungle3" type="Sprite2D" parent="NewJungle/Jungle1/Jungle2"]
+position = Vector2(8000, 0)
+texture = ExtResource("8_lh7rp")
+centered = false
 
-[node name="JungleWomanReflection" parent="RiverMask/ReflectionContainer" instance=ExtResource("2_2u04l")]
-position = Vector2(0, 209)
+[node name="Jungle4" type="Sprite2D" parent="NewJungle/Jungle1/Jungle2/Jungle3"]
+position = Vector2(8000, 0)
+texture = ExtResource("9_8pokd")
+centered = false
 
-[node name="AnimatedSprite2D" parent="RiverMask/ReflectionContainer/JungleWomanReflection" index="0"]
+[node name="Jungle5" type="Sprite2D" parent="NewJungle/Jungle1/Jungle2/Jungle3/Jungle4"]
+position = Vector2(8000, 0)
+texture = ExtResource("10_lh7rp")
+centered = false
+
+[node name="Water1" type="Sprite2D" parent="."]
+position = Vector2(5078, 893)
+texture = ExtResource("11_x4ijf")
+metadata/_edit_lock_ = true
+
+[node name="PointLight2D2" type="PointLight2D" parent="Water1"]
+energy = 0.0
+texture = ExtResource("11_x4ijf")
+
+[node name="Water2" type="Sprite2D" parent="."]
+position = Vector2(25519, 883)
+texture = ExtResource("12_kvykc")
+metadata/_edit_lock_ = true
+
+[node name="PointLight2D3" type="PointLight2D" parent="Water2"]
+energy = 0.0
+texture = ExtResource("12_kvykc")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_8pokd")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(453, 767)
+rotates = false
+loop = false
+
+[node name="JungleWoman" parent="Path2D/PathFollow2D" node_paths=PackedStringArray("path_follow") instance=ExtResource("2_2u04l")]
+position = Vector2(5, 6)
+path_follow = NodePath("..")
+
+[node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D/JungleWoman"]
+position = Vector2(0, -233)
+offset = Vector2(500, 0)
+limit_top = 0
+limit_bottom = 1080
+
+[node name="PathFollow2D_Reflection" type="PathFollow2D" parent="Path2D"]
+position = Vector2(453, 767)
+rotates = false
+loop = false
+
+[node name="ReflectionContainer" type="Node2D" parent="Path2D/PathFollow2D_Reflection"]
+material = SubResource("CanvasItemMaterial_8pokd")
+position = Vector2(5, 6)
+
+[node name="JungleWomanReflection" parent="Path2D/PathFollow2D_Reflection/ReflectionContainer" node_paths=PackedStringArray("path_follow") instance=ExtResource("2_2u04l")]
+position = Vector2(0, 200)
+path_follow = NodePath("../..")
+
+[node name="AnimatedSprite2D" parent="Path2D/PathFollow2D_Reflection/ReflectionContainer/JungleWomanReflection" index="0"]
 self_modulate = Color(1, 1, 1, 0.47058824)
+material = SubResource("CanvasItemMaterial_lh7rp")
 flip_v = true
 
-[node name="PlaceholderMarker" type="Sprite2D" parent="RiverMask/ReflectionContainer"]
+[node name="Area2D" parent="Path2D/PathFollow2D_Reflection/ReflectionContainer/JungleWomanReflection" index="1"]
 visible = false
-texture = SubResource("PlaceholderTexture2D_yi4yt")
 
-[node name="BackgroundRiver" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("5_on17i")
-centered = false
+[node name="Bush" type="Sprite2D" parent="."]
+position = Vector2(17806, 677)
+texture = ExtResource("10_lwynh")
 
-[node name="JungleWoman" parent="." instance=ExtResource("2_2u04l")]
-position = Vector2(458, 687)
+[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(32253, 760)
+script = ExtResource("10_x4ijf")
+next_scene = ExtResource("11_kvykc")
 
-[node name="Camera2D" type="Camera2D" parent="JungleWoman"]
-position = Vector2(0, -147)
-offset = Vector2(500, 0)
-
-[node name="Obstacle" parent="." instance=ExtResource("5_vwdhm")]
-position = Vector2(2957, 0)
-
-[editable path="RiverMask/ReflectionContainer/JungleWomanReflection"]
+[editable path="Path2D/PathFollow2D_Reflection/ReflectionContainer/JungleWomanReflection"]
