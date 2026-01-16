@@ -17,3 +17,6 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 func _action_on_click():
 	#print("clicked!")
 	clicked.emit()
+	
+func disable():
+	input_pickable = false
