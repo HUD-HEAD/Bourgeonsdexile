@@ -1,10 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://deifii0sv125i"]
+[gd_scene load_steps=6 format=3 uid="uid://deifii0sv125i"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_udtka"]
-[ext_resource type="PackedScene" uid="uid://ctau0miqtmbj2" path="res://levels/main_menu.tscn" id="5_dhixf"]
 [ext_resource type="PackedScene" uid="uid://bp16hkt28o6tp" path="res://components/jungle/comic_frames/comic_3/jungle_comic_3_frame_food.tscn" id="7_mqqsv"]
 [ext_resource type="PackedScene" uid="uid://bhvy7yex87kvc" path="res://components/jungle/comic_frames/comic_3/jungle_comic_3_frame_phone.tscn" id="8_7jm3w"]
-[ext_resource type="Script" path="res://components/utils/goto_next_scene.gd" id="13_g37je"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="15_sw7mp"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="16_scavv"]
 
@@ -47,5 +45,3 @@ position = Vector2(5166, 540)
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
 position = Vector2(8393, 625)
-script = ExtResource("13_g37je")
-next_scene = ExtResource("5_dhixf")

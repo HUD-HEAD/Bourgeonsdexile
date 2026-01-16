@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cy5rw2viwekns" path="res://graphics/animations/walkingwomanfinal_lowres/MC_walk_0026.png" id="10_lrsto"]
 [ext_resource type="Texture2D" uid="uid://4g6u0ocmvivh" path="res://graphics/jungle/MC_idle/MC_idle_0010.png" id="11_4nqw3"]
 [ext_resource type="Texture2D" uid="uid://d3ixyogjxaylf" path="res://graphics/animations/walkingwomanfinal_lowres/MC_walk_0031.png" id="11_6ywr7"]
-[ext_resource type="Script" path="res://components/woman.gd" id="12_c626s"]
+[ext_resource type="Script" uid="uid://cw23kchqxignm" path="res://components/woman.gd" id="12_c626s"]
 [ext_resource type="Texture2D" uid="uid://djw08m5k8pq60" path="res://graphics/jungle/MC_idle/MC_idle_0011.png" id="12_h80ki"]
 [ext_resource type="Texture2D" uid="uid://b2rx0mx3l7pid" path="res://graphics/animations/walkingwomanfinal_lowres/MC_walk_0036.png" id="12_rwhkn"]
 [ext_resource type="Texture2D" uid="uid://d2nkt2g808lv" path="res://graphics/animations/walkingwomanfinal_lowres/MC_walk_0041.png" id="13_a83k3"]

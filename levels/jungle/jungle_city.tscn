@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bc36dmjy512da" path="res://graphics/separated_Ciity/separated_Ciity/houses2.png" id="7_dv2g2"]
 [ext_resource type="Texture2D" uid="uid://bnx4mb6hu5b76" path="res://graphics/separated_Ciity/separated_Ciity/houses3.png" id="8_ralbv"]
 [ext_resource type="Texture2D" uid="uid://dvdxyi0m5k60r" path="res://graphics/separated_Ciity/separated_Ciity/houses4.png" id="9_hi7ti"]
-[ext_resource type="Script" path="res://components/utils/goto_next_scene.gd" id="11_jpgwf"]
+[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="11_jpgwf"]
 [ext_resource type="PackedScene" uid="uid://djv5fkem5af34" path="res://levels/jungle/jungle_comic_2.tscn" id="12_jpgwf"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/obstacle.tscn" id="13_8tq2l"]
 [ext_resource type="PackedScene" uid="uid://cyq5jl4y7etbe" path="res://components/jungle/puzzles/jungle_city_puzzle_1.tscn" id="13_vf82b"]
