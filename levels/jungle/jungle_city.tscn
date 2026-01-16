@@ -1,16 +1,15 @@
-[gd_scene load_steps=29 format=3 uid="uid://s3spdg0qqc77"]
+[gd_scene load_steps=27 format=3 uid="uid://s3spdg0qqc77"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_1rybe"]
-[ext_resource type="Texture2D" uid="uid://ckypv1bpibrph" path="res://graphics/jungle/environment/separated_Ciity/sky.png" id="1_uvrs6"]
-[ext_resource type="Texture2D" uid="uid://bbeggw5f5yk6k" path="res://graphics/jungle/environment/separated_Ciity/clouds.png" id="2_pggw3"]
-[ext_resource type="Texture2D" uid="uid://c0ry10gceli0j" path="res://graphics/jungle/environment/separated_Ciity/floor.png" id="2_uvrs6"]
-[ext_resource type="Texture2D" uid="uid://ctvuhai6k72en" path="res://graphics/jungle/environment/separated_Ciity/houses1.png" id="4_1rybe"]
-[ext_resource type="Texture2D" uid="uid://b2c33v222kq68" path="res://graphics/jungle/environment/separated_Ciity/houseback.png" id="4_aeb3g"]
-[ext_resource type="Texture2D" uid="uid://bcbtv3eyw2klf" path="res://graphics/jungle/environment/separated_Ciity/houses2.png" id="5_1bjwg"]
-[ext_resource type="Texture2D" uid="uid://cykrp3sth2qsy" path="res://graphics/jungle/environment/separated_Ciity/houses3.png" id="6_jpgwf"]
+[ext_resource type="Texture2D" uid="uid://nwpw7ynann6x" path="res://graphics/separated_Ciity/separated_Ciity/sky.png" id="2_y6iwd"]
+[ext_resource type="Texture2D" uid="uid://cggs5486ea33w" path="res://graphics/separated_Ciity/separated_Ciity/clouds.png" id="3_y6iwd"]
+[ext_resource type="Texture2D" uid="uid://b1wdk4n7bc5rg" path="res://graphics/separated_Ciity/separated_Ciity/houseback.png" id="4_4dc1s"]
+[ext_resource type="Texture2D" uid="uid://pggpfcitndk1" path="res://graphics/separated_Ciity/separated_Ciity/floor.png" id="5_pxrui"]
+[ext_resource type="Texture2D" uid="uid://b3i0h576ybssi" path="res://graphics/separated_Ciity/separated_Ciity/houses1.png" id="6_flk65"]
 [ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/jungle/jungle_woman.tscn" id="7_2dtoo"]
-[ext_resource type="Texture2D" uid="uid://cc2jo44beq8p8" path="res://graphics/jungle/environment/separated_Ciity/houses4.png" id="7_8tq2l"]
-[ext_resource type="Texture2D" uid="uid://ba5a2o3t37g1i" path="res://graphics/jungle/environment/separated_Ciity/line.png" id="9_pggw3"]
+[ext_resource type="Texture2D" uid="uid://bc36dmjy512da" path="res://graphics/separated_Ciity/separated_Ciity/houses2.png" id="7_dv2g2"]
+[ext_resource type="Texture2D" uid="uid://bnx4mb6hu5b76" path="res://graphics/separated_Ciity/separated_Ciity/houses3.png" id="8_ralbv"]
+[ext_resource type="Texture2D" uid="uid://dvdxyi0m5k60r" path="res://graphics/separated_Ciity/separated_Ciity/houses4.png" id="9_hi7ti"]
 [ext_resource type="Script" path="res://components/utils/goto_next_scene.gd" id="11_jpgwf"]
 [ext_resource type="PackedScene" uid="uid://djv5fkem5af34" path="res://levels/jungle/jungle_comic_2.tscn" id="12_jpgwf"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/obstacle.tscn" id="13_8tq2l"]
@@ -20,13 +19,12 @@
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="17_4dc1s"]
 [ext_resource type="Texture2D" uid="uid://c8uhnohhwribg" path="res://graphics/separated_Ciity/separated_Ciity/npcs/npc2.png" id="17_7lnq1"]
 [ext_resource type="PackedScene" uid="uid://ckdsg3rpi65te" path="res://components/jungle/puzzles/jungle_city_puzzle_2.tscn" id="19_4dc1s"]
-[ext_resource type="Texture2D" uid="uid://1gymu4lnami3" path="res://graphics/jungle/environment/separated_Ciity/mockup_order.png" id="19_ivjax"]
-[ext_resource type="Texture2D" uid="uid://bd8t3ufo5lv1h" path="res://graphics/jungle/environment/separated_Ciity/market1.png" id="20_y6iwd"]
-[ext_resource type="Texture2D" uid="uid://i8t6whpiqxmp" path="res://graphics/jungle/environment/separated_Ciity/market2.png" id="21_4dc1s"]
-[ext_resource type="Texture2D" uid="uid://dpjo0kylrxboy" path="res://graphics/jungle/environment/separated_Ciity/market3.png" id="22_pxrui"]
-[ext_resource type="Texture2D" uid="uid://bs6idqsv5btxb" path="res://graphics/jungle/environment/separated_Ciity/market4.png" id="23_flk65"]
-[ext_resource type="Texture2D" uid="uid://c8uktfpc8iil3" path="res://graphics/jungle/environment/separated_Ciity/market5.png" id="24_dv2g2"]
-[ext_resource type="Texture2D" uid="uid://b0s77ol84kytn" path="res://graphics/jungle/environment/separated_Ciity/market6.png" id="25_ralbv"]
+[ext_resource type="Texture2D" uid="uid://byfpvtgx8gmkl" path="res://graphics/separated_Ciity/separated_Ciity/market1.png" id="20_832n5"]
+[ext_resource type="Texture2D" uid="uid://drgkliv247gva" path="res://graphics/separated_Ciity/separated_Ciity/market2.png" id="21_y6iwd"]
+[ext_resource type="Texture2D" uid="uid://ciocl1dijmhf0" path="res://graphics/separated_Ciity/separated_Ciity/market3.png" id="22_4dc1s"]
+[ext_resource type="Texture2D" uid="uid://dnfqaxq1h7yjc" path="res://graphics/separated_Ciity/separated_Ciity/market4.png" id="23_pxrui"]
+[ext_resource type="Texture2D" uid="uid://brnhxgtfuympu" path="res://graphics/separated_Ciity/separated_Ciity/market5.png" id="24_flk65"]
+[ext_resource type="Texture2D" uid="uid://uoha446r0kq0" path="res://graphics/separated_Ciity/separated_Ciity/market6.png" id="25_dv2g2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vdiy3"]
 size = Vector2(102, 102)
@@ -51,15 +49,9 @@ texture = ExtResource("1_1rybe")
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="BackgroundPaper" type="Sprite2D" parent="Background"]
-visible = false
-position = Vector2(1, 0)
-texture = ExtResource("1_1rybe")
-centered = false
-
 [node name="Sky" type="Sprite2D" parent="Background"]
 position = Vector2(330, 1)
-texture = ExtResource("1_uvrs6")
+texture = ExtResource("2_y6iwd")
 centered = false
 
 [node name="Parallax2D" type="Parallax2D" parent="Background"]
@@ -68,42 +60,33 @@ scroll_offset = Vector2(-1466, -25)
 
 [node name="Clouds" type="Sprite2D" parent="Background/Parallax2D"]
 position = Vector2(1922, 0)
-texture = ExtResource("2_pggw3")
+texture = ExtResource("3_y6iwd")
 centered = false
 
 [node name="Houseback" type="Sprite2D" parent="Background"]
-position = Vector2(1913, 539)
-texture = ExtResource("4_aeb3g")
-
-[node name="Houseback2" type="Sprite2D" parent="Background"]
-position = Vector2(2735, 545)
-texture = ExtResource("4_aeb3g")
+position = Vector2(2415, 539)
+texture = ExtResource("4_4dc1s")
 
 [node name="Floor" type="Sprite2D" parent="Background"]
 position = Vector2(456, 810)
-texture = ExtResource("2_uvrs6")
-centered = false
-
-[node name="Line" type="Sprite2D" parent="Background/Floor"]
-position = Vector2(-1320, -816)
-texture = ExtResource("9_pggw3")
+texture = ExtResource("5_pxrui")
 centered = false
 
 [node name="Houses1" type="Sprite2D" parent="Background"]
 position = Vector2(1135, 508)
-texture = ExtResource("4_1rybe")
+texture = ExtResource("6_flk65")
 
 [node name="Houses2" type="Sprite2D" parent="Background"]
 position = Vector2(2079, 507)
-texture = ExtResource("5_1bjwg")
+texture = ExtResource("7_dv2g2")
 
 [node name="Houses3" type="Sprite2D" parent="Background"]
 position = Vector2(2735, 532)
-texture = ExtResource("6_jpgwf")
+texture = ExtResource("8_ralbv")
 
 [node name="Houses4" type="Sprite2D" parent="Background"]
 position = Vector2(3516, 543)
-texture = ExtResource("7_8tq2l")
+texture = ExtResource("9_hi7ti")
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="Background"]
 position = Vector2(5065, 645)
@@ -204,37 +187,30 @@ position = Vector2(58, 384)
 
 [node name="Market1" type="Sprite2D" parent="YSorting/Market"]
 position = Vector2(2536, 588)
-texture = ExtResource("20_y6iwd")
+texture = ExtResource("20_832n5")
 offset = Vector2(-4, -120)
 
 [node name="Market2" type="Sprite2D" parent="YSorting/Market"]
 position = Vector2(2953, 561)
-texture = ExtResource("21_4dc1s")
+texture = ExtResource("21_y6iwd")
 offset = Vector2(-3, -57)
 
 [node name="Market3" type="Sprite2D" parent="YSorting/Market"]
 position = Vector2(3185, 527)
-texture = ExtResource("22_pxrui")
+texture = ExtResource("22_4dc1s")
 offset = Vector2(-9, -41)
 
 [node name="Market4" type="Sprite2D" parent="YSorting/Market"]
 position = Vector2(3237, 470)
-texture = ExtResource("23_flk65")
+texture = ExtResource("23_pxrui")
 offset = Vector2(-5, -74)
 
 [node name="Market5" type="Sprite2D" parent="YSorting/Market"]
 position = Vector2(3633, 525)
-texture = ExtResource("24_dv2g2")
+texture = ExtResource("24_flk65")
 offset = Vector2(-17, -120)
 
 [node name="Market6" type="Sprite2D" parent="YSorting/Market"]
 position = Vector2(2808, 504)
-texture = ExtResource("25_ralbv")
+texture = ExtResource("25_dv2g2")
 offset = Vector2(3, -77)
-
-[node name="MockupOrder" type="Sprite2D" parent="."]
-visible = false
-self_modulate = Color(1, 1, 1, 0.40392157)
-position = Vector2(-728, 0)
-texture = ExtResource("19_ivjax")
-centered = false
