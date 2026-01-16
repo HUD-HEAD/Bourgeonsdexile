@@ -1,10 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://brc35c78ohvta"]
+[gd_scene load_steps=14 format=3 uid="uid://brc35c78ohvta"]
 
 [ext_resource type="Texture2D" uid="uid://c131fhgoar0d2" path="res://graphics/jungle/environment/dayjungle/alltogether.png" id="1_633mf"]
 [ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/jungle/jungle_woman.tscn" id="2_2u04l"]
 [ext_resource type="Texture2D" uid="uid://c7gngm2pa86kt" path="res://graphics/jungle/environment/dayjungle/water_river.png" id="3_yi4yt"]
 [ext_resource type="Texture2D" uid="uid://d14tfjapvt6do" path="res://graphics/jungle/environment/dayjungle/background_river.png" id="5_on17i"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/obstacle.tscn" id="5_vwdhm"]
+[ext_resource type="Texture2D" uid="uid://rttwgbu6g8g3" path="res://graphics/jungle/junglepieces/jungle1.png" id="6_hqryo"]
+[ext_resource type="Texture2D" uid="uid://dvrpmuwgbi7wb" path="res://graphics/jungle/junglepieces/jungle2.png" id="7_8pokd"]
+[ext_resource type="Texture2D" uid="uid://dcgs8xdwyy2dy" path="res://graphics/jungle/junglepieces/jungle3.png" id="8_lh7rp"]
+[ext_resource type="Texture2D" uid="uid://bbhejckkbrqv6" path="res://graphics/jungle/junglepieces/jungle4.png" id="9_8pokd"]
+[ext_resource type="Texture2D" uid="uid://m31dh66akhqm" path="res://graphics/jungle/junglepieces/jungle5.png" id="10_lh7rp"]
+[ext_resource type="Texture2D" uid="uid://e6dbtl7rw04o" path="res://graphics/jungle/junglepieces/water1.png" id="11_x4ijf"]
+[ext_resource type="Texture2D" uid="uid://b3h4s7fkrtkab" path="res://graphics/jungle/junglepieces/water2.png" id="12_kvykc"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_yi4yt"]
 size = Vector2(50, 50)
@@ -12,10 +19,38 @@ size = Vector2(50, 50)
 [node name="Jungle" type="Node2D"]
 
 [node name="Alltogether" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("1_633mf")
 centered = false
 
+[node name="NewJungle" type="Node2D" parent="."]
+
+[node name="Jungle1" type="Sprite2D" parent="NewJungle"]
+texture = ExtResource("6_hqryo")
+centered = false
+
+[node name="Jungle2" type="Sprite2D" parent="NewJungle/Jungle1"]
+position = Vector2(8000, 0)
+texture = ExtResource("7_8pokd")
+centered = false
+
+[node name="Jungle3" type="Sprite2D" parent="NewJungle/Jungle1/Jungle2"]
+position = Vector2(8000, 0)
+texture = ExtResource("8_lh7rp")
+centered = false
+
+[node name="Jungle4" type="Sprite2D" parent="NewJungle/Jungle1/Jungle2/Jungle3"]
+position = Vector2(8000, 0)
+texture = ExtResource("9_8pokd")
+centered = false
+
+[node name="Jungle5" type="Sprite2D" parent="NewJungle/Jungle1/Jungle2/Jungle3/Jungle4"]
+position = Vector2(8000, 0)
+texture = ExtResource("10_lh7rp")
+centered = false
+
 [node name="RiverMask" type="Sprite2D" parent="."]
+visible = false
 clip_children = 2
 texture = ExtResource("3_yi4yt")
 centered = false
@@ -40,13 +75,23 @@ texture = ExtResource("5_on17i")
 centered = false
 
 [node name="JungleWoman" parent="." instance=ExtResource("2_2u04l")]
-position = Vector2(458, 687)
+position = Vector2(458, 773)
 
 [node name="Camera2D" type="Camera2D" parent="JungleWoman"]
-position = Vector2(0, -147)
+position = Vector2(0, -233)
 offset = Vector2(500, 0)
 
 [node name="Obstacle" parent="." instance=ExtResource("5_vwdhm")]
 position = Vector2(2957, 0)
+
+[node name="Water1" type="Sprite2D" parent="."]
+position = Vector2(5078, 893)
+texture = ExtResource("11_x4ijf")
+metadata/_edit_lock_ = true
+
+[node name="Water2" type="Sprite2D" parent="."]
+position = Vector2(25519, 883)
+texture = ExtResource("12_kvykc")
+metadata/_edit_lock_ = true
 
 [editable path="RiverMask/ReflectionContainer/JungleWomanReflection"]

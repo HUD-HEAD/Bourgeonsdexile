@@ -49,6 +49,12 @@ texture = ExtResource("1_1rybe")
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="SkyFake" type="Sprite2D" parent="Background"]
+position = Vector2(-2548, 2)
+texture = ExtResource("2_y6iwd")
+centered = false
+flip_h = true
+
 [node name="Sky" type="Sprite2D" parent="Background"]
 position = Vector2(330, 1)
 texture = ExtResource("2_y6iwd")
@@ -58,14 +64,26 @@ centered = false
 scroll_scale = Vector2(0.9, 0.9)
 scroll_offset = Vector2(-1466, -25)
 
+[node name="CloudsFake" type="Sprite2D" parent="Background/Parallax2D"]
+position = Vector2(-1814, 23)
+texture = ExtResource("3_y6iwd")
+centered = false
+flip_h = true
+
 [node name="Clouds" type="Sprite2D" parent="Background/Parallax2D"]
 position = Vector2(1922, 0)
 texture = ExtResource("3_y6iwd")
 centered = false
 
 [node name="Houseback" type="Sprite2D" parent="Background"]
-position = Vector2(2415, 539)
+position = Vector2(2415, 550)
 texture = ExtResource("4_4dc1s")
+
+[node name="FloorFake" type="Sprite2D" parent="Background"]
+position = Vector2(-4300, 816)
+texture = ExtResource("5_pxrui")
+centered = false
+flip_h = true
 
 [node name="Floor" type="Sprite2D" parent="Background"]
 position = Vector2(456, 810)
@@ -73,7 +91,7 @@ texture = ExtResource("5_pxrui")
 centered = false
 
 [node name="Houses1" type="Sprite2D" parent="Background"]
-position = Vector2(1135, 508)
+position = Vector2(1135, 516)
 texture = ExtResource("6_flk65")
 
 [node name="Houses2" type="Sprite2D" parent="Background"]
