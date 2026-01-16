@@ -1,14 +1,14 @@
 [gd_scene load_steps=12 format=3 uid="uid://ckdsg3rpi65te"]
 
-[ext_resource type="Script" uid="uid://chrql2wwvrdt1" path="res://components/utils/drag_drop_puzzle.gd" id="1_s2m73"]
+[ext_resource type="Script" uid="uid://chrql2wwvrdt1" path="res://components/utils/puzzles/drag_drop_puzzle.gd" id="1_s2m73"]
 [ext_resource type="Texture2D" uid="uid://bj1r581ujxnka" path="res://graphics/ui/puzle2/emptysquare2.png" id="2_s2m73"]
 [ext_resource type="Texture2D" uid="uid://cav0scpvse6tc" path="res://graphics/ui/puzle2/fullsquare2.png" id="3_hiiw3"]
-[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/draggable.gd" id="4_daxvp"]
+[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="4_daxvp"]
 [ext_resource type="Texture2D" uid="uid://df78fjmd6nfpu" path="res://graphics/ui/puzle2/bubble1puzle2.png" id="5_8bf4l"]
 [ext_resource type="Texture2D" uid="uid://bjsfkjyr5i4gt" path="res://graphics/ui/puzle2/bubble2puzle2.png" id="6_5hfcj"]
-[ext_resource type="PackedScene" uid="uid://xyq2m2kx86ku" path="res://components/jungle/puzzles/placement_checker.tscn" id="6_s2m73"]
-[ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/jungle/puzzles/receptacle.tscn" id="8_hiiw3"]
-[ext_resource type="Script" uid="uid://dt4apmm1b4e51" path="res://components/utils/puzzle_piece.gd" id="9_hiiw3"]
+[ext_resource type="PackedScene" uid="uid://xyq2m2kx86ku" path="res://components/utils/puzzles/placement_checker.tscn" id="6_s2m73"]
+[ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="8_hiiw3"]
+[ext_resource type="Script" uid="uid://dt4apmm1b4e51" path="res://components/utils/puzzles/puzzle_piece.gd" id="9_hiiw3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s2m73"]
 size = Vector2(72, 103)

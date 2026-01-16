@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://cyq5jl4y7etbe" path="res://components/jungle/puzzles/jungle_city_puzzle_1.tscn" id="13_vf82b"]
 [ext_resource type="Texture2D" uid="uid://cbqyh6vmywdjk" path="res://graphics/separated_Ciity/separated_Ciity/npcs/npc1.png" id="15_eyf7u"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="16_0tvtc"]
-[ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/jungle/puzzles/puzzle_spawner.gd" id="17_4dc1s"]
+[ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="17_4dc1s"]
 [ext_resource type="Texture2D" uid="uid://c8uhnohhwribg" path="res://graphics/separated_Ciity/separated_Ciity/npcs/npc2.png" id="17_7lnq1"]
 [ext_resource type="PackedScene" uid="uid://ckdsg3rpi65te" path="res://components/jungle/puzzles/jungle_city_puzzle_2.tscn" id="19_4dc1s"]
 [ext_resource type="Texture2D" uid="uid://1gymu4lnami3" path="res://graphics/jungle/environment/separated_Ciity/mockup_order.png" id="19_ivjax"]

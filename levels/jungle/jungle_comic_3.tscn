@@ -13,7 +13,7 @@
 [ext_resource type="Script" path="res://components/utils/goto_next_scene.gd" id="13_g37je"]
 [ext_resource type="Texture2D" uid="uid://dtdum0r2g4umo" path="res://graphics/comic3/frame_phone/frame_phone/phone_7.png" id="14_txuxr"]
 [ext_resource type="Texture2D" uid="uid://np2tw6p6q4cc" path="res://graphics/comic3/frame_phone/frame_phone/phone_8.png" id="15_dx01d"]
-[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/draggable.gd" id="15_qhi8q"]
+[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="15_qhi8q"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="15_sw7mp"]
 [ext_resource type="Texture2D" uid="uid://bxmuy0l3m3fwd" path="res://graphics/comic3/frame_phone/frame_phone/phone_9.png" id="16_qhi8q"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="16_scavv"]

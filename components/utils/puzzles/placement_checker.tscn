@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://xyq2m2kx86ku"]
 
-[ext_resource type="Script" uid="uid://dbrvsujabjlm" path="res://components/utils/placement_checker.gd" id="1_eeqgm"]
+[ext_resource type="Script" uid="uid://dbrvsujabjlm" path="res://components/utils/puzzles/placement_checker.gd" id="1_eeqgm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nkjvk"]
 

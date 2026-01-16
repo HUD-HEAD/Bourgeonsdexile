@@ -1,16 +1,16 @@
 [gd_scene load_steps=16 format=3 uid="uid://cyq5jl4y7etbe"]
 
-[ext_resource type="Script" uid="uid://chrql2wwvrdt1" path="res://components/utils/drag_drop_puzzle.gd" id="1_nkjvk"]
+[ext_resource type="Script" uid="uid://chrql2wwvrdt1" path="res://components/utils/puzzles/drag_drop_puzzle.gd" id="1_nkjvk"]
 [ext_resource type="Texture2D" uid="uid://bmofamb26y4gd" path="res://graphics/ui/puzzle_1/emptysquare.png" id="2_j07h7"]
 [ext_resource type="Texture2D" uid="uid://cacvqldc3simv" path="res://graphics/ui/puzzle_1/fullsquare.png" id="3_dbwny"]
-[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/draggable.gd" id="4_tx8fh"]
-[ext_resource type="PackedScene" uid="uid://xyq2m2kx86ku" path="res://components/jungle/puzzles/placement_checker.tscn" id="5_dbwny"]
+[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="4_tx8fh"]
+[ext_resource type="PackedScene" uid="uid://xyq2m2kx86ku" path="res://components/utils/puzzles/placement_checker.tscn" id="5_dbwny"]
 [ext_resource type="Texture2D" uid="uid://bkh5wmo54cgbl" path="res://graphics/ui/puzzle_1/bubble1puzle1.png" id="5_lehh5"]
 [ext_resource type="Texture2D" uid="uid://dtjga43jyc4go" path="res://graphics/ui/puzzle_1/bubble2puzle1.png" id="6_bseus"]
 [ext_resource type="Texture2D" uid="uid://ba3y776eu6f7" path="res://graphics/ui/puzzle_1/bubble3puzle1.png" id="7_mg2ry"]
-[ext_resource type="Script" uid="uid://dt4apmm1b4e51" path="res://components/utils/puzzle_piece.gd" id="8_j07h7"]
+[ext_resource type="Script" uid="uid://dt4apmm1b4e51" path="res://components/utils/puzzles/puzzle_piece.gd" id="8_j07h7"]
 [ext_resource type="Texture2D" uid="uid://bp2p0a8c67kt1" path="res://graphics/ui/puzzle_1/bubble4puzle1.png" id="8_w86f4"]
-[ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/jungle/puzzles/receptacle.tscn" id="11_tx8fh"]
+[ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="11_tx8fh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mvwgm"]
 size = Vector2(66, 171)
