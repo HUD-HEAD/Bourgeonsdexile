@@ -4,7 +4,15 @@ class_name Draggable
 
 signal dropped
 
-var dragging : bool = false
+## Is true when any piece is being dragged
+static var global_dragging : bool = false
+
+## Is true when this piece is being dragged
+var dragging : bool = false:
+	#Automatically update global dragging when piece is dragged/dropped
+	set(value):
+		dragging = value
+		global_dragging = value
 
 ##Keep object offset relative to cursor on click
 var offset : Vector2
@@ -27,7 +35,9 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("select_element"):
-		_action_on_click()
+		#Prevent multiple pieces picked up at once
+		if !global_dragging:
+			_action_on_click()
 	elif event.is_action_released("select_element"):
 		dragging = false
 		_drop()
@@ -44,13 +54,13 @@ func move_to_pos(g_pos: Vector2) -> void:
 	global_position = g_pos
 
 func _on_mouse_exited():
-	#While dragging, mouse might exit area, but cursor should stay holding
-	if !dragging:
+	#While dragging any piece, mouse might exit area, but cursor should stay holding
+	if !global_dragging:
 		SignalManager.set_cursor_shape.emit(Input.CURSOR_ARROW)
 
 func _on_mouse_entered():
-	#While dragging, mouse might exit area, but cursor should stay holding
-	if !dragging:
+	#While dragging any piece, mouse might enter area, but cursor should stay holding
+	if !global_dragging:
 		SignalManager.set_cursor_shape.emit(Input.CURSOR_POINTING_HAND)
 
 func _drop():

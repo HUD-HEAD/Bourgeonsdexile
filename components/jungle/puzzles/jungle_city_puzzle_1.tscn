@@ -13,16 +13,16 @@
 [ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="11_tx8fh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mvwgm"]
-size = Vector2(66, 171)
+size = Vector2(84, 217)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ts23a"]
-size = Vector2(48, 70)
+size = Vector2(75, 136)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4poeb"]
-size = Vector2(48, 70)
+size = Vector2(100, 141)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u1nce"]
-size = Vector2(136, 46)
+size = Vector2(190, 75)
 
 [node name="CityPuzzle1" type="Node2D" node_paths=PackedStringArray("puzzle_pieces", "complete_image", "outline_image")]
 script = ExtResource("1_nkjvk")
@@ -52,7 +52,7 @@ metadata/_edit_group_ = true
 texture = ExtResource("5_lehh5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzlePiece/Draggable"]
-position = Vector2(-6, -3.5)
+position = Vector2(-3, -9.5)
 shape = SubResource("RectangleShape2D_mvwgm")
 
 [node name="PlacementChecker" parent="PuzzlePiece/Draggable" instance=ExtResource("5_dbwny")]
@@ -71,6 +71,7 @@ metadata/_edit_group_ = true
 texture = ExtResource("6_bseus")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzlePiece2/Draggable2"]
+position = Vector2(-1.5, -6)
 shape = SubResource("RectangleShape2D_ts23a")
 
 [node name="PlacementChecker" parent="PuzzlePiece2/Draggable2" instance=ExtResource("5_dbwny")]
@@ -89,6 +90,7 @@ metadata/_edit_group_ = true
 texture = ExtResource("7_mg2ry")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzlePiece3/Draggable3"]
+position = Vector2(3, 0.5)
 shape = SubResource("RectangleShape2D_4poeb")
 
 [node name="PlacementChecker" parent="PuzzlePiece3/Draggable3" instance=ExtResource("5_dbwny")]
@@ -107,7 +109,7 @@ metadata/_edit_group_ = true
 texture = ExtResource("8_w86f4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzlePiece4/Draggable4"]
-position = Vector2(9, -12)
+position = Vector2(2, -16.5)
 shape = SubResource("RectangleShape2D_u1nce")
 
 [node name="PlacementChecker" parent="PuzzlePiece4/Draggable4" instance=ExtResource("5_dbwny")]
