@@ -66,3 +66,6 @@ func _on_mouse_entered():
 func _drop():
 	SignalManager.set_cursor_shape.emit(Input.CURSOR_POINTING_HAND)
 	dropped.emit()
+
+func disable():
+	input_pickable = false

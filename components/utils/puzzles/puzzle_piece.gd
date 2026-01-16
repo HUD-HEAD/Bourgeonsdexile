@@ -16,17 +16,24 @@ func deactivate():
 	draggable.hide()
 	draggable.process_mode = Node.PROCESS_MODE_DISABLED	
 
-## When piece is dropped (placed), emit signal if correctly placed in receptacle and snap to position
+## If piece dropped in the right place, snap to receptacle position then validate placement
 func _on_piece_dropped():
 	if placement_checker.is_correctly_placed():
-		piece_correctly_placed.emit()
-		_snap_to_receptacle()
-		print_debug("puzzle piece correct!")
+		var tween : Tween = _snap_to_receptacle()
+		tween.tween_callback(_validate_placement)
 
-func _snap_to_receptacle():
+## Signal piece is correctly placed
+func _validate_placement():
+	print_debug("puzzle piece correct!")
+	piece_correctly_placed.emit()
+
+## Snap to receptacle position
+func _snap_to_receptacle() -> Tween:
 	var tween = get_tree().create_tween()
-	tween.tween_property(draggable, "global_position", placement_checker.receptacle.global_position, 0.5)	\
+	tween.tween_property(draggable, "global_position", placement_checker.receptacle.global_position - placement_checker.position, 0.5)	\
 		.set_ease(Tween.EASE_OUT)
+	return tween
+	
 
 ## Called from drag_drop_puzzle script to associate puzzle piece with a receptacle
 func set_receptacle(receptacle : Area2D):

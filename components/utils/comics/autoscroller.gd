@@ -21,6 +21,8 @@ var idx : int = 0
 func _ready() -> void:
 	camera = get_viewport().get_camera_2d()
 	SignalManager.next_panel.connect(_next_panel)
+	
+	_pan_to(panels[0])
 
 ## Triggers panning to next panel in the list
 func _next_panel():

@@ -1,0 +1,169 @@
+[gd_scene load_steps=24 format=3 uid="uid://bhvy7yex87kvc"]
+
+[ext_resource type="Texture2D" uid="uid://7nwkr7fixajk" path="res://graphics/comic3/frame_phone/frame_phone/phone_1.png" id="1_7gkcu"]
+[ext_resource type="Texture2D" uid="uid://clgc3i8r6oo83" path="res://graphics/comic3/frame_phone/frame_phone/charger.png" id="2_x4ou1"]
+[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="3_8hdu0"]
+[ext_resource type="Texture2D" uid="uid://c2l5tg6thtkal" path="res://graphics/comic3/frame_phone/frame_phone/phone_3.png" id="4_06jsj"]
+[ext_resource type="Texture2D" uid="uid://c5ftkp01s18wt" path="res://graphics/comic3/frame_phone/frame_phone/phone_4.png" id="5_jmjt5"]
+[ext_resource type="Script" path="res://components/utils/click_hide.gd" id="5_nkld0"]
+[ext_resource type="Texture2D" uid="uid://b4vpeja2ohtxp" path="res://graphics/comic3/frame_phone/frame_phone/phone_5.png" id="6_yolvj"]
+[ext_resource type="Texture2D" uid="uid://flalr2pmrrx1" path="res://graphics/comic3/frame_phone/frame_phone/phone_2.png" id="7_6ruk1"]
+[ext_resource type="Texture2D" uid="uid://bbogorcd4lirs" path="res://graphics/comic3/frame_phone/frame_phone/phone_6.png" id="7_nkld0"]
+[ext_resource type="Texture2D" uid="uid://dtdum0r2g4umo" path="res://graphics/comic3/frame_phone/frame_phone/phone_7.png" id="8_6ruk1"]
+[ext_resource type="Texture2D" uid="uid://np2tw6p6q4cc" path="res://graphics/comic3/frame_phone/frame_phone/phone_8.png" id="9_5a6on"]
+[ext_resource type="Texture2D" uid="uid://bxmuy0l3m3fwd" path="res://graphics/comic3/frame_phone/frame_phone/phone_9.png" id="10_jhnru"]
+[ext_resource type="Script" uid="uid://chrql2wwvrdt1" path="res://components/utils/puzzles/drag_drop_puzzle.gd" id="10_jmjt5"]
+[ext_resource type="Script" uid="uid://dt4apmm1b4e51" path="res://components/utils/puzzles/puzzle_piece.gd" id="11_yolvj"]
+[ext_resource type="PackedScene" uid="uid://xyq2m2kx86ku" path="res://components/utils/puzzles/placement_checker.tscn" id="13_nkld0"]
+[ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="14_6ruk1"]
+[ext_resource type="Script" uid="uid://ca6gae53x0cd0" path="res://components/utils/puzzles/puzzle_piece_placed_enable.gd" id="15_jmjt5"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="17_nkld0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_06jsj"]
+radius = 31.06445
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dx01d"]
+size = Vector2(407.15228, 845.2251)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pwafa"]
+animations = [{
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("4_06jsj")
+}, {
+"duration": 5.0,
+"texture": ExtResource("5_jmjt5")
+}, {
+"duration": 5.0,
+"texture": ExtResource("6_yolvj")
+}, {
+"duration": 5.0,
+"texture": ExtResource("7_nkld0")
+}, {
+"duration": 5.0,
+"texture": ExtResource("8_6ruk1")
+}, {
+"duration": 5.0,
+"texture": ExtResource("9_5a6on")
+}, {
+"duration": 5.0,
+"texture": ExtResource("10_jhnru")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_jmjt5"]
+resource_name = "phone_charging"
+length = 3.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PuzzlePiece_Phone/Draggable/Phone1")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 0.16666669),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"show"
+}, {
+"args": [&"", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PuzzlePiece_Phone/Draggable")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.03333336),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"disable"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yolvj"]
+_data = {
+&"phone_charging": SubResource("Animation_jmjt5")
+}
+
+[node name="JungleComic3FramePhone" type="Node2D"]
+
+[node name="Receptacle_Charger" parent="." instance=ExtResource("14_6ruk1")]
+position = Vector2(-337, 232)
+
+[node name="Charger" type="Sprite2D" parent="Receptacle_Charger"]
+position = Vector2(-74, 149)
+texture = ExtResource("2_x4ou1")
+
+[node name="CollisionShape2D" parent="Receptacle_Charger" index="1"]
+shape = SubResource("CircleShape2D_06jsj")
+
+[node name="PuzzlePiece_Phone" type="Node2D" parent="." node_paths=PackedStringArray("draggable", "placement_checker")]
+position = Vector2(549, -140)
+script = ExtResource("11_yolvj")
+draggable = NodePath("Draggable")
+placement_checker = NodePath("Draggable/PlacementChecker")
+metadata/_custom_type_script = "uid://dt4apmm1b4e51"
+metadata/_edit_group_ = true
+
+[node name="Draggable" type="Area2D" parent="PuzzlePiece_Phone"]
+script = ExtResource("3_8hdu0")
+metadata/_custom_type_script = "uid://cxam1cepgkl3s"
+
+[node name="PhoneOnNoBattery" type="Sprite2D" parent="PuzzlePiece_Phone/Draggable"]
+texture = ExtResource("7_6ruk1")
+
+[node name="Clickable" type="Area2D" parent="PuzzlePiece_Phone/Draggable"]
+script = ExtResource("5_nkld0")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="PhoneOff" type="Sprite2D" parent="PuzzlePiece_Phone/Draggable/Clickable"]
+texture = ExtResource("1_7gkcu")
+
+[node name="CollisionShape2D_Drag" type="CollisionShape2D" parent="PuzzlePiece_Phone/Draggable/Clickable"]
+position = Vector2(1.6254883, 3.3695068)
+rotation = 0.55712956
+shape = SubResource("RectangleShape2D_dx01d")
+
+[node name="Phone1" type="AnimatedSprite2D" parent="PuzzlePiece_Phone/Draggable"]
+visible = false
+sprite_frames = SubResource("SpriteFrames_pwafa")
+
+[node name="CollisionShape2D_Drag" type="CollisionShape2D" parent="PuzzlePiece_Phone/Draggable"]
+position = Vector2(1.6254883, 3.3695068)
+rotation = 0.55712956
+shape = SubResource("RectangleShape2D_dx01d")
+
+[node name="PlacementChecker" parent="PuzzlePiece_Phone/Draggable" node_paths=PackedStringArray("receptacle") instance=ExtResource("13_nkld0")]
+position = Vector2(-216, 354)
+receptacle = NodePath("../../../Receptacle_Charger")
+
+[node name="OnPuzzlePiecePlacedEnable" type="Node" parent="." node_paths=PackedStringArray("puzzle_piece", "node_to_enable")]
+script = ExtResource("15_jmjt5")
+puzzle_piece = NodePath("../PuzzlePiece_Phone")
+node_to_enable = NodePath("../AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_yolvj")
+}
+autoplay = "phone_charging"
+
+[node name="DragDropPuzzle" type="Node2D" parent="."]
+position = Vector2(-731, -578)
+script = ExtResource("10_jmjt5")
+metadata/_custom_type_script = "uid://chrql2wwvrdt1"
+
+[node name="Transition" type="Node" parent="." node_paths=PackedStringArray("anim_player")]
+script = ExtResource("17_nkld0")
+anim_player = NodePath("../AnimationPlayer")
+
+[editable path="Receptacle_Charger"]

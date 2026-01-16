@@ -44,15 +44,6 @@ mouse_filter = 2
 texture = ExtResource("1_l3y4y")
 stretch_mode = 1
 
-[node name="StartPanel" type="Node2D" parent="."]
-position = Vector2(954, 550)
-
-[node name="PanelTransitionTrigger" type="Node" parent="StartPanel"]
-script = ExtResource("3_e56vw")
-timer_wait = 0.1
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="StartPanel"]
-
 [node name="ManWalking" type="Sprite2D" parent="."]
 position = Vector2(2946, 535.5)
 texture = ExtResource("7_o76i3")
@@ -146,6 +137,6 @@ next_scene = ExtResource("14_exkuh")
 
 [node name="PanelPanner" type="Node" parent="." node_paths=PackedStringArray("panels")]
 script = ExtResource("12_su3g7")
-panels = [NodePath("../StartPanel"), NodePath("../ManWalking"), NodePath("../WalletPanel"), NodePath("../DeckMan"), NodePath("../Man"), NodePath("../WomanHelping"), NodePath("../WomanExplaining"), NodePath("../GroupWomen"), NodePath("../JungleEntry"), NodePath("../PregnancyPanel"), NodePath("../JungleBeggining"), NodePath("../SceneEnder")]
+panels = [NodePath("../ManWalking"), NodePath("../WalletPanel"), NodePath("../DeckMan"), NodePath("../Man"), NodePath("../WomanHelping"), NodePath("../WomanExplaining"), NodePath("../GroupWomen"), NodePath("../JungleEntry"), NodePath("../PregnancyPanel"), NodePath("../JungleBeggining"), NodePath("../SceneEnder")]
 
 [node name="UI" parent="." instance=ExtResource("17_1sxs8")]

@@ -1,61 +1,12 @@
-[gd_scene load_steps=22 format=3 uid="uid://deifii0sv125i"]
+[gd_scene load_steps=8 format=3 uid="uid://deifii0sv125i"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_udtka"]
-[ext_resource type="PackedScene" uid="uid://dxje8kcv8ykkm" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_1.tscn" id="2_5sp0c"]
-[ext_resource type="Script" uid="uid://ds0m4hygkuj81" path="res://components/utils/comics/set_mouse_visibility.gd" id="3_mqqsv"]
-[ext_resource type="Texture2D" uid="uid://clgc3i8r6oo83" path="res://graphics/comic3/frame_phone/frame_phone/charger.png" id="7_7jm3w"]
+[ext_resource type="PackedScene" uid="uid://ctau0miqtmbj2" path="res://levels/main_menu.tscn" id="5_dhixf"]
 [ext_resource type="PackedScene" uid="uid://bp16hkt28o6tp" path="res://components/jungle/comic_frames/comic_3/jungle_comic_3_frame_food.tscn" id="7_mqqsv"]
-[ext_resource type="Texture2D" uid="uid://7nwkr7fixajk" path="res://graphics/comic3/frame_phone/frame_phone/phone_1.png" id="8_dhixf"]
-[ext_resource type="Texture2D" uid="uid://c2l5tg6thtkal" path="res://graphics/comic3/frame_phone/frame_phone/phone_3.png" id="10_mqqsv"]
-[ext_resource type="Texture2D" uid="uid://c5ftkp01s18wt" path="res://graphics/comic3/frame_phone/frame_phone/phone_4.png" id="11_5ocik"]
-[ext_resource type="Texture2D" uid="uid://b4vpeja2ohtxp" path="res://graphics/comic3/frame_phone/frame_phone/phone_5.png" id="12_lopnj"]
-[ext_resource type="Texture2D" uid="uid://bbogorcd4lirs" path="res://graphics/comic3/frame_phone/frame_phone/phone_6.png" id="13_c4j60"]
+[ext_resource type="PackedScene" uid="uid://bhvy7yex87kvc" path="res://components/jungle/comic_frames/comic_3/jungle_comic_3_frame_phone.tscn" id="8_7jm3w"]
 [ext_resource type="Script" path="res://components/utils/goto_next_scene.gd" id="13_g37je"]
-[ext_resource type="Texture2D" uid="uid://dtdum0r2g4umo" path="res://graphics/comic3/frame_phone/frame_phone/phone_7.png" id="14_txuxr"]
-[ext_resource type="Texture2D" uid="uid://np2tw6p6q4cc" path="res://graphics/comic3/frame_phone/frame_phone/phone_8.png" id="15_dx01d"]
-[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="15_qhi8q"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="15_sw7mp"]
-[ext_resource type="Texture2D" uid="uid://bxmuy0l3m3fwd" path="res://graphics/comic3/frame_phone/frame_phone/phone_9.png" id="16_qhi8q"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="16_scavv"]
-[ext_resource type="Texture2D" uid="uid://b6gbrlsjo1mjf" path="res://graphics/comic3/frame_phone/frame_phone/phone_10.png" id="17_bhkmn"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhi8q"]
-size = Vector2(71.5, 73.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dx01d"]
-size = Vector2(407.15228, 845.2251)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_pwafa"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("10_mqqsv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_5ocik")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_lopnj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_c4j60")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_txuxr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_dx01d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_qhi8q")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_bhkmn")
-}],
-"loop": false,
-"name": &"default",
-"speed": 5.0
-}]
 
 [node name="JungleComic3" type="Node2D"]
 
@@ -82,57 +33,19 @@ limit_smoothed = true
 position_smoothing_enabled = true
 editor_draw_limits = true
 
-[node name="JungleComic1Frame1" parent="." instance=ExtResource("2_5sp0c")]
-visible = false
-position = Vector2(960, 540)
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame1"]
-script = ExtResource("3_mqqsv")
-
-[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(22770, 625)
-script = ExtResource("13_g37je")
-
-[node name="PanelPanner" type="Node" parent="."]
+[node name="PanelPanner" type="Node" parent="." node_paths=PackedStringArray("panels")]
 script = ExtResource("15_sw7mp")
+panels = [NodePath("../JungleComic3FrameFood"), NodePath("../JungleComic3FramePhone"), NodePath("../SceneEnder")]
 
 [node name="UI" parent="." instance=ExtResource("16_scavv")]
 
 [node name="JungleComic3FrameFood" parent="." instance=ExtResource("7_mqqsv")]
-position = Vector2(960, 540)
+position = Vector2(3002, 540)
 
-[node name="JungleComic3FramePhone" type="Node2D" parent="."]
-visible = false
+[node name="JungleComic3FramePhone" parent="." instance=ExtResource("8_7jm3w")]
+position = Vector2(5166, 540)
 
-[node name="PhoneOff" type="Sprite2D" parent="JungleComic3FramePhone"]
-position = Vector2(1390, 490)
-texture = ExtResource("8_dhixf")
-
-[node name="Charger" type="Area2D" parent="JungleComic3FramePhone"]
-position = Vector2(320, 959)
-
-[node name="Charger" type="Sprite2D" parent="JungleComic3FramePhone/Charger"]
-texture = ExtResource("7_7jm3w")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="JungleComic3FramePhone/Charger"]
-position = Vector2(75, -151.99998)
-rotation = 0.5100983
-shape = SubResource("RectangleShape2D_qhi8q")
-
-[node name="PhoneSnapPoint" type="Marker2D" parent="JungleComic3FramePhone"]
-
-[node name="Phone" type="Area2D" parent="JungleComic3FramePhone"]
-position = Vector2(792, 334)
-collision_mask = 0
-script = ExtResource("15_qhi8q")
-
-[node name="CollisionShape2D_Drag" type="CollisionShape2D" parent="JungleComic3FramePhone/Phone"]
-position = Vector2(1.6255393, 3.3695045)
-rotation = 0.55712956
-shape = SubResource("RectangleShape2D_dx01d")
-
-[node name="Phone1" type="AnimatedSprite2D" parent="JungleComic3FramePhone/Phone"]
-sprite_frames = SubResource("SpriteFrames_pwafa")
-autoplay = "default"
-frame = 7
-frame_progress = 1.0
+[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(8393, 625)
+script = ExtResource("13_g37je")
+next_scene = ExtResource("5_dhixf")
