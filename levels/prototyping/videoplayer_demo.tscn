@@ -130,7 +130,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 stream = ExtResource("2_wkdf3")
-autoplay = true
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 1
