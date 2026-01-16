@@ -50,6 +50,8 @@ func _pan_to(panel : Node2D):
 func _unhandled_input(event: InputEvent) -> void:
 	if !OS.is_debug_build():
 		return
+	if Input.is_action_pressed("debug_enable_scene_switch"):
+		return
 	if event is InputEventKey and event.pressed:
 		#Number pressed (0..9)
 		if event.keycode >= 48 && event.keycode <= 57:
