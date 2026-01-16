@@ -44,4 +44,25 @@ position = Vector2(3002, 540)
 position = Vector2(5166, 540)
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(8393, 625)
+position = Vector2(8393, 540)
+
+[node name="ToBeContinued" type="Label" parent="SceneEnder"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -330.0
+offset_top = -100.5
+offset_right = 330.0
+offset_bottom = 100.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.300331, 0.72798324, 0.82265157, 1)
+theme_override_colors/font_outline_color = Color(0.007016808, 0.065259136, 0.12147876, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 72
+text = "Thanks for playing!
+To be continued"
+horizontal_alignment = 1
+vertical_alignment = 1
