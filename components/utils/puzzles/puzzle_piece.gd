@@ -1,15 +1,27 @@
 ## A puzzle piece module with components to drag and drop onto a corresponding receptacle
+@tool
 class_name PuzzlePiece
 extends Node2D
 
 signal piece_correctly_placed
 
 ## Component handling drag and drop
-@export var draggable : Draggable
+@export var draggable : Draggable:
+	set(_draggable):
+		draggable = _draggable
+		update_configuration_warnings()
+		
 ## Component checking if piece is placed in associated receptacle. Should be a child of Draggable
-@export var placement_checker : PlacementChecker
+@export var placement_checker : PlacementChecker:
+	set(_placement_checker):
+		placement_checker = _placement_checker
+		update_configuration_warnings()
 
 func _ready() -> void:
+	#Prevent some errors from tool running in editor
+	if Engine.is_editor_hint():
+		return
+
 	draggable.dropped.connect(_on_piece_dropped)
 	
 func deactivate():
@@ -33,11 +45,6 @@ func _snap_to_receptacle() -> Tween:
 	tween.tween_property(draggable, "global_position", placement_checker.receptacle.global_position - placement_checker.position, 0.5)	\
 		.set_ease(Tween.EASE_OUT)
 	return tween
-	
-
-## Called from drag_drop_puzzle script to associate puzzle piece with a receptacle
-func set_receptacle(receptacle : Area2D):
-	placement_checker.receptacle = receptacle
 
 ## Check if correctly placed in receptacle
 func is_correctly_placed():
@@ -45,6 +52,24 @@ func is_correctly_placed():
 
 ## Move puzzle piece to target position and enable interactivity
 func activate_piece(gpos : Vector2):
+
 	draggable.global_position = gpos
 	draggable.process_mode = Node.PROCESS_MODE_INHERIT
 	draggable.show()
+
+#region tooling
+func _init() -> void:
+	update_configuration_warnings()
+	
+func _get_configuration_warnings():
+	var warnings = []
+
+	if draggable == null:
+		warnings.append("Please assign Draggable component.")
+	if placement_checker == null:
+		warnings.append("Please assign Placement Checker component. Template scene available")
+
+	# Returning an empty array means "no warning".
+	return warnings
+
+#endregion
