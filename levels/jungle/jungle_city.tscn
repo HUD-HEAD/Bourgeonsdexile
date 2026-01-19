@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://s3spdg0qqc77"]
+[gd_scene load_steps=97 format=3 uid="uid://s3spdg0qqc77"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_1rybe"]
 [ext_resource type="Texture2D" uid="uid://nwpw7ynann6x" path="res://graphics/separated_Ciity/separated_Ciity/sky.png" id="2_y6iwd"]
@@ -12,22 +12,316 @@
 [ext_resource type="Texture2D" uid="uid://dvdxyi0m5k60r" path="res://graphics/separated_Ciity/separated_Ciity/houses4.png" id="9_hi7ti"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="11_jpgwf"]
 [ext_resource type="PackedScene" uid="uid://djv5fkem5af34" path="res://levels/jungle/jungle_comic_2.tscn" id="12_jpgwf"]
+[ext_resource type="Texture2D" uid="uid://boybh6n1tbi0p" path="res://graphics/npcs/NPC_apron/NPC_apron_0001.png" id="12_q6d34"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/obstacle.tscn" id="13_8tq2l"]
 [ext_resource type="PackedScene" uid="uid://cyq5jl4y7etbe" path="res://components/jungle/puzzles/jungle_city_puzzle_1.tscn" id="13_vf82b"]
-[ext_resource type="Texture2D" uid="uid://cbqyh6vmywdjk" path="res://graphics/separated_Ciity/separated_Ciity/npcs/npc1.png" id="15_eyf7u"]
+[ext_resource type="Texture2D" uid="uid://dmpfcj6c6f871" path="res://graphics/npcs/NPC_apron/NPC_apron_0002.png" id="13_xqten"]
+[ext_resource type="Texture2D" uid="uid://uw48d2gmgcx6" path="res://graphics/npcs/NPC_apron/NPC_apron_0003.png" id="14_5lbna"]
+[ext_resource type="Texture2D" uid="uid://dun2fmfq14mmw" path="res://graphics/npcs/NPC_apron/NPC_apron_0004.png" id="15_c32fv"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="16_0tvtc"]
+[ext_resource type="Texture2D" uid="uid://cwcc4rixl5duw" path="res://graphics/npcs/NPC_apron/NPC_apron_0005.png" id="16_hobs1"]
+[ext_resource type="Texture2D" uid="uid://b8b11jehcfn1n" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0001.png" id="17_0e4jn"]
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="17_4dc1s"]
-[ext_resource type="Texture2D" uid="uid://c8uhnohhwribg" path="res://graphics/separated_Ciity/separated_Ciity/npcs/npc2.png" id="17_7lnq1"]
+[ext_resource type="Texture2D" uid="uid://dwjsv7uvm7e1u" path="res://graphics/npcs/NPC_apron/NPC_apron_0006.png" id="17_umov5"]
+[ext_resource type="Texture2D" uid="uid://bujoq40kpdymp" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0002.png" id="18_1ef0d"]
+[ext_resource type="Texture2D" uid="uid://rkuf6karasmr" path="res://graphics/npcs/NPC_apron/NPC_apron_0007.png" id="18_uqsyn"]
 [ext_resource type="PackedScene" uid="uid://ckdsg3rpi65te" path="res://components/jungle/puzzles/jungle_city_puzzle_2.tscn" id="19_4dc1s"]
+[ext_resource type="Texture2D" uid="uid://cbtvmy4w5fvlj" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0003.png" id="19_7vmws"]
+[ext_resource type="Texture2D" uid="uid://hx1vd7i7a543" path="res://graphics/npcs/NPC_apron/NPC_apron_0008.png" id="19_glm23"]
 [ext_resource type="Texture2D" uid="uid://byfpvtgx8gmkl" path="res://graphics/separated_Ciity/separated_Ciity/market1.png" id="20_832n5"]
+[ext_resource type="Texture2D" uid="uid://c54iw4ncfwwwj" path="res://graphics/npcs/NPC_apron/NPC_apron_0009.png" id="20_lvrd1"]
+[ext_resource type="Texture2D" uid="uid://bwrtvk3mpsnkk" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0004.png" id="20_wnr3o"]
+[ext_resource type="Texture2D" uid="uid://bx4k38kaoxnrl" path="res://graphics/npcs/NPC_apron/NPC_apron_0010.png" id="21_1stae"]
+[ext_resource type="Texture2D" uid="uid://be7dj1xushbec" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0005.png" id="21_87pol"]
 [ext_resource type="Texture2D" uid="uid://drgkliv247gva" path="res://graphics/separated_Ciity/separated_Ciity/market2.png" id="21_y6iwd"]
 [ext_resource type="Texture2D" uid="uid://ciocl1dijmhf0" path="res://graphics/separated_Ciity/separated_Ciity/market3.png" id="22_4dc1s"]
+[ext_resource type="Texture2D" uid="uid://b48rxo77tdfe7" path="res://graphics/npcs/NPC_apron/NPC_apron_0011.png" id="22_ivtva"]
+[ext_resource type="Texture2D" uid="uid://d1cdds3qj74kq" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0006.png" id="22_kb1iy"]
+[ext_resource type="Texture2D" uid="uid://e1wjstlt7yk0" path="res://graphics/npcs/NPC_apron/NPC_apron_0012.png" id="23_3pi56"]
 [ext_resource type="Texture2D" uid="uid://dnfqaxq1h7yjc" path="res://graphics/separated_Ciity/separated_Ciity/market4.png" id="23_pxrui"]
+[ext_resource type="Texture2D" uid="uid://cb8ald7xpxtxe" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0007.png" id="23_t7cj5"]
+[ext_resource type="Texture2D" uid="uid://duyw0f3g8ywcu" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0008.png" id="24_8tpqk"]
 [ext_resource type="Texture2D" uid="uid://brnhxgtfuympu" path="res://graphics/separated_Ciity/separated_Ciity/market5.png" id="24_flk65"]
+[ext_resource type="Texture2D" uid="uid://bi27ww1gntuxk" path="res://graphics/npcs/NPC_apron/NPC_apron_0013.png" id="24_tvwsl"]
 [ext_resource type="Texture2D" uid="uid://uoha446r0kq0" path="res://graphics/separated_Ciity/separated_Ciity/market6.png" id="25_dv2g2"]
+[ext_resource type="Texture2D" uid="uid://bltpyu7rghtqy" path="res://graphics/npcs/NPC_apron/NPC_apron_0014.png" id="25_oh6sv"]
+[ext_resource type="Texture2D" uid="uid://dwdn0j07dwost" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0009.png" id="25_t1lcu"]
+[ext_resource type="Texture2D" uid="uid://krkr83nk8d71" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0010.png" id="26_epxg1"]
+[ext_resource type="Texture2D" uid="uid://dy661ru3o4i30" path="res://graphics/npcs/NPC_apron/NPC_apron_0015.png" id="26_hgldn"]
+[ext_resource type="Texture2D" uid="uid://cv478jjvs1fqn" path="res://graphics/npcs/NPC_apron/NPC_apron_0016.png" id="27_cmeir"]
+[ext_resource type="Texture2D" uid="uid://bvgb1bb0ggldr" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0011.png" id="27_qn67w"]
+[ext_resource type="Texture2D" uid="uid://3nmqroi0oj0e" path="res://graphics/npcs/NPC_apron/NPC_apron_0017.png" id="28_m436m"]
+[ext_resource type="Texture2D" uid="uid://cpjdndm4kywuj" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0012.png" id="28_ywo5f"]
+[ext_resource type="Texture2D" uid="uid://dfpbrgvax5nuy" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0013.png" id="29_h58on"]
+[ext_resource type="Texture2D" uid="uid://42gailcjyp80" path="res://graphics/npcs/NPC_apron/NPC_apron_0018.png" id="29_iit4d"]
+[ext_resource type="Texture2D" uid="uid://bbuhg0ptruuk4" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0014.png" id="30_1htsu"]
+[ext_resource type="Texture2D" uid="uid://dqj7nsn28yflc" path="res://graphics/npcs/NPC_apron/NPC_apron_0019.png" id="30_y2u6a"]
+[ext_resource type="Texture2D" uid="uid://caw2xto8araf0" path="res://graphics/npcs/NPC_apron/NPC_apron_0020.png" id="31_jbhqg"]
+[ext_resource type="Texture2D" uid="uid://b5gv33ircmnuw" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0015.png" id="31_ltqcc"]
+[ext_resource type="Texture2D" uid="uid://6ksr8ap4vaxl" path="res://graphics/npcs/NPC_apron/NPC_apron_0021.png" id="32_6gg3a"]
+[ext_resource type="Texture2D" uid="uid://dqqyuudj6ka3a" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0016.png" id="32_w01qx"]
+[ext_resource type="Texture2D" uid="uid://fpwv7d2ktppp" path="res://graphics/npcs/NPC_apron/NPC_apron_0022.png" id="33_dm5ey"]
+[ext_resource type="Texture2D" uid="uid://bmlda146o0ooc" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0017.png" id="33_i2uwx"]
+[ext_resource type="Texture2D" uid="uid://dorkpxdx4tgks" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0018.png" id="34_n8xu1"]
+[ext_resource type="Texture2D" uid="uid://bw5naogofuayt" path="res://graphics/npcs/NPC_apron/NPC_apron_0023.png" id="34_qgc5e"]
+[ext_resource type="Texture2D" uid="uid://bwj7g76vom35n" path="res://graphics/npcs/NPC_apron/NPC_apron_0024.png" id="35_6i01r"]
+[ext_resource type="Texture2D" uid="uid://p2c8g4omhyce" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0019.png" id="35_ftnp3"]
+[ext_resource type="Texture2D" uid="uid://dd6q2cculr4ij" path="res://graphics/npcs/NPC_apron/NPC_apron_0025.png" id="36_6a1y3"]
+[ext_resource type="Texture2D" uid="uid://dcgh8abrjg5p2" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0020.png" id="36_ipwtb"]
+[ext_resource type="Texture2D" uid="uid://def57omy80lab" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0021.png" id="37_613ou"]
+[ext_resource type="Texture2D" uid="uid://cedesjjaf4gy4" path="res://graphics/npcs/NPC_apron/NPC_apron_0026.png" id="37_bmptc"]
+[ext_resource type="Texture2D" uid="uid://c7yppsjlwr328" path="res://graphics/npcs/NPC_apron/NPC_apron_0027.png" id="38_85lf4"]
+[ext_resource type="Texture2D" uid="uid://c4l2gouy40yb4" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0022.png" id="38_ldo7p"]
+[ext_resource type="Texture2D" uid="uid://onp7nw88v1x3" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0023.png" id="39_0n1hy"]
+[ext_resource type="Texture2D" uid="uid://dqvaqoaxmg3uo" path="res://graphics/npcs/NPC_apron/NPC_apron_0028.png" id="39_n1e2f"]
+[ext_resource type="Texture2D" uid="uid://dncafneuv1p15" path="res://graphics/npcs/NPC_apron/NPC_apron_0029.png" id="40_bu6uh"]
+[ext_resource type="Texture2D" uid="uid://vqufbf7q5aqt" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0024.png" id="40_kr413"]
+[ext_resource type="Texture2D" uid="uid://byqic31cojiw2" path="res://graphics/npcs/NPC_apron/NPC_apron_0030.png" id="41_0emhe"]
+[ext_resource type="Texture2D" uid="uid://jp38r4u8mfwj" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0025.png" id="41_ptqxf"]
+[ext_resource type="Texture2D" uid="uid://drbig5lmjjt14" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0026.png" id="42_10pnc"]
+[ext_resource type="Texture2D" uid="uid://dilu16nkir47d" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0027.png" id="43_q584l"]
+[ext_resource type="Texture2D" uid="uid://cv2mxmxggfrvl" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0028.png" id="44_y505e"]
+[ext_resource type="Texture2D" uid="uid://bk2ps752u0qhe" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0029.png" id="45_q6d34"]
+[ext_resource type="Texture2D" uid="uid://dql6qnx8c0p70" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0030.png" id="46_xqten"]
+[ext_resource type="Texture2D" uid="uid://js2d4nekcwyd" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0031.png" id="47_5lbna"]
+[ext_resource type="Texture2D" uid="uid://cert5a1ls7x8t" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0032.png" id="48_c32fv"]
+[ext_resource type="Texture2D" uid="uid://vao5b6357g6o" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0033.png" id="49_hobs1"]
+[ext_resource type="Texture2D" uid="uid://dykg7xxbxijn2" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0034.png" id="50_umov5"]
+[ext_resource type="Texture2D" uid="uid://dno0y7lu6pkwf" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0035.png" id="51_uqsyn"]
+[ext_resource type="Texture2D" uid="uid://d2atk5ltrdgt7" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0036.png" id="52_glm23"]
+[ext_resource type="Texture2D" uid="uid://cne74obgvhwet" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0037.png" id="53_lvrd1"]
+[ext_resource type="Texture2D" uid="uid://dshbskbmrw8ps" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0038.png" id="54_1stae"]
+[ext_resource type="Texture2D" uid="uid://b88y6a4mfw45a" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0039.png" id="55_ivtva"]
+[ext_resource type="Texture2D" uid="uid://bececty2m32aw" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0040.png" id="56_3pi56"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_48jwk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_q6d34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xqten")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5lbna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_c32fv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_hobs1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_umov5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_uqsyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_glm23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_lvrd1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1stae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ivtva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_3pi56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_tvwsl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_oh6sv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_hgldn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_cmeir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_m436m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_iit4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_y2u6a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_jbhqg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_6gg3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_dm5ey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_qgc5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_6i01r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_6a1y3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_bmptc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_85lf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_n1e2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_bu6uh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_0emhe")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vdiy3"]
 size = Vector2(102, 102)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tvwsl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_0e4jn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1ef0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7vmws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_wnr3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_87pol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_kb1iy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_t7cj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_8tpqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_t1lcu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_epxg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_qn67w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ywo5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_h58on")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_1htsu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_ltqcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_w01qx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_i2uwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_n8xu1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ftnp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_ipwtb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_613ou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_ldo7p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_0n1hy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_kr413")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_ptqxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_10pnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_q584l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_y505e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_q6d34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_xqten")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_5lbna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_c32fv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_hobs1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_umov5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_uqsyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_glm23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_lvrd1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_1stae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_ivtva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_3pi56")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
 
 [node name="JungleCity" type="Node2D"]
 
@@ -114,9 +408,12 @@ next_scene = ExtResource("12_jpgwf")
 [node name="Puzzle1" type="Node2D" parent="."]
 position = Vector2(3329, 0)
 
-[node name="Npc1" type="Sprite2D" parent="Puzzle1"]
+[node name="Npc1" type="AnimatedSprite2D" parent="Puzzle1"]
 position = Vector2(311, 818)
-texture = ExtResource("15_eyf7u")
+sprite_frames = SubResource("SpriteFrames_48jwk")
+autoplay = "default"
+frame_progress = 0.1485751
+flip_h = true
 
 [node name="Clickable" type="Area2D" parent="Puzzle1/Npc1"]
 position = Vector2(0, -28)
@@ -131,14 +428,8 @@ position = Vector2(-1, -215)
 [node name="Obstacle" parent="Puzzle1" instance=ExtResource("13_8tq2l")]
 collision_mask = 2
 
-[node name="CityPuzzle1" parent="Puzzle1" node_paths=PackedStringArray("puzzle_pieces") instance=ExtResource("13_vf82b")]
+[node name="CityPuzzle1" parent="Puzzle1" instance=ExtResource("13_vf82b")]
 position = Vector2(161, 465)
-puzzle_pieces = {
-NodePath("PuzzlePiece"): NodePath("Receptacle"),
-NodePath("PuzzlePiece2"): NodePath("Receptacle2"),
-NodePath("PuzzlePiece3"): NodePath("Receptacle3"),
-NodePath("PuzzlePiece4"): NodePath("Receptacle4")
-}
 
 [node name="PuzzleSpawner" type="Node" parent="Puzzle1/CityPuzzle1" node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("17_4dc1s")
@@ -150,9 +441,11 @@ obstacle = NodePath("../../Obstacle")
 [node name="Puzzle2" type="Node2D" parent="."]
 position = Vector2(1294, 0)
 
-[node name="Npc2" type="Sprite2D" parent="Puzzle2"]
+[node name="Npc2" type="AnimatedSprite2D" parent="Puzzle2"]
 position = Vector2(311, 818)
-texture = ExtResource("17_7lnq1")
+sprite_frames = SubResource("SpriteFrames_tvwsl")
+autoplay = "default"
+frame_progress = 0.17117496
 
 [node name="Clickable" type="Area2D" parent="Puzzle2/Npc2"]
 position = Vector2(0, -28)
@@ -167,12 +460,8 @@ position = Vector2(-1, -215)
 [node name="Obstacle" parent="Puzzle2" instance=ExtResource("13_8tq2l")]
 collision_mask = 2
 
-[node name="CityPuzzle2" parent="Puzzle2" node_paths=PackedStringArray("puzzle_pieces") instance=ExtResource("19_4dc1s")]
+[node name="CityPuzzle2" parent="Puzzle2" instance=ExtResource("19_4dc1s")]
 position = Vector2(196, 529)
-puzzle_pieces = {
-NodePath("PuzzlePiece"): NodePath("Receptacle"),
-NodePath("PuzzlePiece2"): NodePath("Receptacle2")
-}
 
 [node name="PuzzleSpawner" type="Node" parent="Puzzle2/CityPuzzle2" node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("17_4dc1s")
