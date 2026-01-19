@@ -1,18 +1,24 @@
 ## A full puzzle set, where each puzzle piece fits in a receptacle
+@tool
 class_name DragDropPuzzle
 extends Node2D
 
 ## All puzzle pieces and their corresponding receptacle
-@export var puzzle_pieces : Dictionary[PuzzlePiece, Area2D]
+@export var puzzle_pieces : Array[PuzzlePiece]:
+	set(_puzzle_pieces):
+		puzzle_pieces = _puzzle_pieces
+		update_configuration_warnings()
 @export var complete_image : Sprite2D
 @export var outline_image : Sprite2D
 
 
 func _ready() -> void:
+	if Engine.is_editor_hint():
+		return
+	
 	# Associate each puzzle piece with its receptacle
 	for piece in puzzle_pieces:
 		piece.piece_correctly_placed.connect(_on_correct_piece)
-		piece.set_receptacle(puzzle_pieces[piece])
 
 
 ## Every time a puzzle piece is correctly placed, check if puzzle is completed
@@ -36,3 +42,20 @@ func _check_complete() -> bool:
 			return false
 	
 	return true
+
+#region tooling
+func _init() -> void:
+	update_configuration_warnings()
+	
+func _get_configuration_warnings():
+	var warnings = []
+
+	if puzzle_pieces.size() == 0:
+		warnings.append("No puzzle piece assigned.")
+	else:
+		for puzzle_piece in puzzle_pieces:
+			if puzzle_piece == null:
+				warnings.append("Assigned puzzle piece is null.")
+
+	return warnings
+#endregion

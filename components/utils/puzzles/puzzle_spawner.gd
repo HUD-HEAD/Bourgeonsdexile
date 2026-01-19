@@ -54,7 +54,7 @@ func _activate_next_piece():
 	if piece_idx >= puzzle.puzzle_pieces.size():
 		return
 	
-	var piece : PuzzlePiece = puzzle.puzzle_pieces.keys()[piece_idx]
+	var piece : PuzzlePiece = puzzle.puzzle_pieces[piece_idx]
 	piece.activate_piece(piece_spawners[piece_idx%piece_spawners.size()].global_position)
 	
 	_increment_idx()
