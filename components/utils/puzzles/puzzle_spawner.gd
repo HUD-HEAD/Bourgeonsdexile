@@ -34,13 +34,14 @@ func _on_obstacle_entered(area2d : Area2D):
 	_activate_puzzle()
 
 func _activate_puzzle():
-	puzzle.outline_image.show()
 	spawn_trigger.process_mode = Node.PROCESS_MODE_INHERIT
-	
 
-## On click, hide trgger and spawn puzzle pieces
+## On click, hide trigger and spawn puzzle pieces
 func _on_spawner_clicked():
 	spawn_trigger.hide()
+	
+	if piece_idx == 0:
+		puzzle.outline_image.show()
 	
 	#Spawn woman bubble
 	_activate_next_piece()
