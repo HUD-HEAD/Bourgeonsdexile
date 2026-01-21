@@ -1,10 +1,10 @@
 extends CanvasLayer
 
 @export_group("Buttons")
-@export var play : Button
-@export var settings : Button
-@export var credits : Button
-@export var quit : Button
+@export var play : BaseButton
+@export var settings : BaseButton
+@export var credits : BaseButton
+@export var quit : BaseButton
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

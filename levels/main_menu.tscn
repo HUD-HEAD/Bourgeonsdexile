@@ -1,15 +1,66 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctau0miqtmbj2"]
+[gd_scene load_steps=17 format=3 uid="uid://ctau0miqtmbj2"]
 
-[ext_resource type="Script" path="res://components/main_menu.gd" id="1_0ettg"]
+[ext_resource type="Script" uid="uid://bub701ovkw5me" path="res://components/main_menu.gd" id="1_0ettg"]
+[ext_resource type="Texture2D" uid="uid://br32guon087mt" path="res://graphics/ui/mainmenu/backgroundNina.png" id="2_duh7t"]
+[ext_resource type="Texture2D" uid="uid://bnw5lljqpcq60" path="res://graphics/ui/mainmenu/backgroundSudan.png" id="3_6ymyu"]
+[ext_resource type="Texture2D" uid="uid://driie6iy05hs4" path="res://graphics/ui/mainmenu/portrait_nina.png" id="3_nwbki"]
+[ext_resource type="Texture2D" uid="uid://cjbyi6dkuypx5" path="res://graphics/ui/mainmenu/menu_mockup1.png" id="4_3ye4h"]
+[ext_resource type="Texture2D" uid="uid://bu71rssmxbeqj" path="res://graphics/ui/mainmenu/sudan26.png" id="4_maniu"]
+[ext_resource type="Texture2D" uid="uid://dyxwhrlapr5ni" path="res://graphics/ui/mainmenu/nina26.png" id="4_pppj1"]
+[ext_resource type="Texture2D" uid="uid://b0mtu30g7ts4t" path="res://graphics/ui/mainmenu/tittle.png" id="5_nwbki"]
+[ext_resource type="Texture2D" uid="uid://b2gcfjlk8v457" path="res://graphics/ui/mainmenu/portrait_sudan.png" id="6_b8wrl"]
+[ext_resource type="Texture2D" uid="uid://ct5i3bkbx8svw" path="res://graphics/ui/mainmenu/settings.png" id="8_6flho"]
+[ext_resource type="Texture2D" uid="uid://nhtaleop2o5n" path="res://graphics/ui/mainmenu/egg1.png" id="8_7ty7c"]
+[ext_resource type="Texture2D" uid="uid://i1c3pk3cvh0p" path="res://graphics/ui/mainmenu/egg2.png" id="9_6xkr4"]
+[ext_resource type="Texture2D" uid="uid://c1iqfkuqt2r1y" path="res://graphics/ui/mainmenu/exit.png" id="9_ofye2"]
+[ext_resource type="Texture2D" uid="uid://bfn07djquliir" path="res://graphics/ui/mainmenu/egg3.png" id="10_b8wrl"]
+[ext_resource type="Script" uid="uid://prkw3tfkwh13" path="res://components/utils/ui/button_fade.gd" id="14_maniu"]
+[ext_resource type="Script" uid="uid://b20dyolly8na2" path="res://components/utils/ui/main_menu_visuals.gd" id="15_w3h5g"]
 
 [node name="MainMenu" type="CanvasLayer" node_paths=PackedStringArray("play", "settings", "credits", "quit")]
 script = ExtResource("1_0ettg")
-play = NodePath("Control/VBoxContainer/Play")
-settings = NodePath("Control/VBoxContainer/Settings")
-credits = NodePath("Control/VBoxContainer/Credits")
-quit = NodePath("Control/VBoxContainer/Quit")
+play = NodePath("Fullscreen/PlayNina")
+settings = NodePath("Fullscreen/Settings")
+credits = NodePath("Fullscreen/VBoxContainer/Credits")
+quit = NodePath("Fullscreen/Exit")
 
-[node name="Control" type="Control" parent="."]
+[node name="Center" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundSudan" type="Sprite2D" parent="Center"]
+texture = ExtResource("3_6ymyu")
+
+[node name="PortraitSudan" type="Sprite2D" parent="Center/BackgroundSudan"]
+position = Vector2(423, -34)
+texture = ExtResource("6_b8wrl")
+
+[node name="Sudan26" type="Sprite2D" parent="Center/BackgroundSudan/PortraitSudan"]
+position = Vector2(-8, 442)
+texture = ExtResource("4_maniu")
+
+[node name="BackgroundNina" type="Sprite2D" parent="Center"]
+texture = ExtResource("2_duh7t")
+
+[node name="PortraitNina" type="Sprite2D" parent="Center/BackgroundNina"]
+position = Vector2(389, -43)
+texture = ExtResource("3_nwbki")
+
+[node name="Nina26" type="Sprite2D" parent="Center/BackgroundNina/PortraitNina"]
+position = Vector2(27, 451)
+texture = ExtResource("4_pppj1")
+
+[node name="MenuMockup1" type="Sprite2D" parent="Center"]
+visible = false
+texture = ExtResource("4_3ye4h")
+
+[node name="Fullscreen" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,7 +68,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Fullscreen"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -31,20 +83,77 @@ offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Play" type="Button" parent="Control/VBoxContainer"]
+[node name="Play" type="Button" parent="Fullscreen/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 72
 text = "Play"
 
-[node name="Settings" type="Button" parent="Control/VBoxContainer"]
+[node name="Settings" type="Button" parent="Fullscreen/VBoxContainer"]
 layout_mode = 2
 text = "Settings"
 
-[node name="Credits" type="Button" parent="Control/VBoxContainer"]
+[node name="Credits" type="Button" parent="Fullscreen/VBoxContainer"]
 layout_mode = 2
 text = "Credits"
 
-[node name="Quit" type="Button" parent="Control/VBoxContainer"]
+[node name="Quit" type="Button" parent="Fullscreen/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "Quit"
+
+[node name="Tittle" type="Sprite2D" parent="Fullscreen"]
+position = Vector2(500, 144)
+texture = ExtResource("5_nwbki")
+
+[node name="PlayNina" type="TextureButton" parent="Fullscreen"]
+layout_mode = 0
+offset_left = 734.0
+offset_top = 498.0
+offset_right = 924.0
+offset_bottom = 689.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("8_7ty7c")
+
+[node name="PlayChapter2" type="TextureButton" parent="Fullscreen"]
+layout_mode = 0
+offset_left = 383.0
+offset_top = 329.0
+offset_right = 573.0
+offset_bottom = 520.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("9_6xkr4")
+
+[node name="PlayChapter3" type="TextureButton" parent="Fullscreen"]
+visible = false
+layout_mode = 0
+offset_left = 549.0
+offset_top = 805.0
+offset_right = 739.0
+offset_bottom = 996.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("10_b8wrl")
+
+[node name="Settings" type="TextureButton" parent="Fullscreen"]
+layout_mode = 0
+offset_left = 1795.0
+offset_top = 55.0
+offset_right = 1873.0
+offset_bottom = 131.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("8_6flho")
+script = ExtResource("14_maniu")
+
+[node name="Exit" type="TextureButton" parent="Fullscreen"]
+layout_mode = 0
+offset_left = 1795.0
+offset_top = 952.0
+offset_right = 1873.0
+offset_bottom = 1028.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("9_ofye2")
+script = ExtResource("14_maniu")
+
+[node name="VisualsHandler" type="Node" parent="." node_paths=PackedStringArray("chapter_pictures", "chapter_buttons")]
+script = ExtResource("15_w3h5g")
+chapter_pictures = [NodePath("../Center/BackgroundNina"), NodePath("../Center/BackgroundSudan")]
+chapter_buttons = [NodePath("../Fullscreen/PlayNina"), NodePath("../Fullscreen/PlayChapter2"), NodePath("../Fullscreen/PlayChapter3")]
