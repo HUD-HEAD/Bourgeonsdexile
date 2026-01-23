@@ -1,14 +1,15 @@
-[gd_scene load_steps=17 format=3 uid="uid://du7xk8lrsn7at"]
+[gd_scene load_steps=18 format=3 uid="uid://du7xk8lrsn7at"]
 
 [ext_resource type="PackedScene" uid="uid://dxje8kcv8ykkm" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_1.tscn" id="2_7p1v8"]
 [ext_resource type="Script" uid="uid://ds0m4hygkuj81" path="res://components/utils/comics/set_mouse_visibility.gd" id="4_l35no"]
 [ext_resource type="PackedScene" uid="uid://cbouhlj8xssdp" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_2.tscn" id="5_7p1v8"]
 [ext_resource type="PackedScene" uid="uid://c60nnmob4jcv3" path="res://components/jungle/comic_frames/comic_1/juncle_comic_1_tv.tscn" id="5_rhbtc"]
 [ext_resource type="PackedScene" uid="uid://cpqe48imup7qq" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_5.tscn" id="11_p78bu"]
+[ext_resource type="PackedScene" uid="uid://drxfjicmrdtlo" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_9.tscn" id="13_54bx8"]
 [ext_resource type="PackedScene" uid="uid://bd7g0rb56ib48" path="res://components/jungle/comic_frames/comic_1/jungle_comic_candle.tscn" id="13_p78bu"]
 [ext_resource type="PackedScene" uid="uid://s3spdg0qqc77" path="res://levels/jungle/jungle_city.tscn" id="16_7ejrb"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="17_13xj0"]
-[ext_resource type="Script" path="res://components/utils/goto_next_scene.gd" id="17_54bx8"]
+[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="17_54bx8"]
 [ext_resource type="PackedScene" uid="uid://bi4kbbnyg1r6g" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_7.tscn" id="19_p78bu"]
 [ext_resource type="PackedScene" uid="uid://ck876o7lm40cb" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_8.tscn" id="20_p78bu"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="24_7ejrb"]
@@ -27,7 +28,7 @@ follow_viewport_enabled = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 21944.0
+offset_right = 24438.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -37,7 +38,7 @@ stretch_mode = 1
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(960, 540)
 limit_left = 0
-limit_right = 23866
+limit_right = 26362
 limit_smoothed = true
 position_smoothing_enabled = true
 editor_draw_limits = true
@@ -106,13 +107,18 @@ position = Vector2(19999.998, 540)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame8"]
 
+[node name="JungleComic1Frame9" parent="." instance=ExtResource("13_54bx8")]
+position = Vector2(22527, 540)
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame9"]
+
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(22770, 625)
+position = Vector2(25490, 596)
 script = ExtResource("17_54bx8")
 next_scene = ExtResource("16_7ejrb")
 
 [node name="PanelPanner" type="Node" parent="." node_paths=PackedStringArray("panels")]
 script = ExtResource("17_13xj0")
-panels = [NodePath("../JungleComic1Frame1"), NodePath("../JuncleComic1TVAndSwitch"), NodePath("../JungleComicCandle"), NodePath("../JungleComic1Frame2"), NodePath("../JungleComic1Frame3"), NodePath("../JungleComic1Frame4"), NodePath("../JungleComic1Frame5"), NodePath("../JungleComic1Frame6"), NodePath("../JungleComic1Frame7"), NodePath("../JungleComic1Frame8"), NodePath("../SceneEnder")]
+panels = [NodePath("../JungleComic1Frame1"), NodePath("../JuncleComic1TVAndSwitch"), NodePath("../JungleComicCandle"), NodePath("../JungleComic1Frame2"), NodePath("../JungleComic1Frame3"), NodePath("../JungleComic1Frame4"), NodePath("../JungleComic1Frame5"), NodePath("../JungleComic1Frame6"), NodePath("../JungleComic1Frame7"), NodePath("../JungleComic1Frame8"), NodePath("../JungleComic1Frame9"), NodePath("../SceneEnder")]
 
 [node name="UI" parent="." instance=ExtResource("24_7ejrb")]
