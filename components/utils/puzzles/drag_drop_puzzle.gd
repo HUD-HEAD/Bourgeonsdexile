@@ -32,7 +32,10 @@ func _complete_puzzle():
 	process_mode = Node.PROCESS_MODE_DISABLED
 	complete_image.show()
 	outline_image.hide()
+	
+	#HACK
 	SignalManager.obstacle_cleared.emit()
+	SignalManager.show_next_button.emit()
 	
 
 ## Check if all puzzle pieces in puzzle are in the correct place

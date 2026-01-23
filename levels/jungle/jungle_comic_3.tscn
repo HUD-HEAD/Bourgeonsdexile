@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://deifii0sv125i"]
+[gd_scene load_steps=7 format=3 uid="uid://deifii0sv125i"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_udtka"]
+[ext_resource type="PackedScene" uid="uid://h7loww3s14t6" path="res://components/jungle/comic_frames/comic_3/jungle_comic_3_frame_folders.tscn" id="6_lc348"]
 [ext_resource type="PackedScene" uid="uid://bp16hkt28o6tp" path="res://components/jungle/comic_frames/comic_3/jungle_comic_3_frame_food.tscn" id="7_mqqsv"]
 [ext_resource type="PackedScene" uid="uid://bhvy7yex87kvc" path="res://components/jungle/comic_frames/comic_3/jungle_comic_3_frame_phone.tscn" id="8_7jm3w"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="15_sw7mp"]
@@ -33,7 +34,7 @@ editor_draw_limits = true
 
 [node name="PanelPanner" type="Node" parent="." node_paths=PackedStringArray("panels")]
 script = ExtResource("15_sw7mp")
-panels = [NodePath("../JungleComic3FrameFood"), NodePath("../JungleComic3FramePhone"), NodePath("../SceneEnder")]
+panels = [NodePath("../JungleComic3FrameFood"), NodePath("../JungleComic3FramePhone"), NodePath("../JungleComic3FrameFolders"), NodePath("../SceneEnder")]
 
 [node name="UI" parent="." instance=ExtResource("16_scavv")]
 
@@ -43,8 +44,11 @@ position = Vector2(3002, 540)
 [node name="JungleComic3FramePhone" parent="." instance=ExtResource("8_7jm3w")]
 position = Vector2(5166, 540)
 
+[node name="JungleComic3FrameFolders" parent="." instance=ExtResource("6_lc348")]
+position = Vector2(8038, 550)
+
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(8393, 540)
+position = Vector2(10428, 540)
 
 [node name="ToBeContinued" type="Label" parent="SceneEnder"]
 anchors_preset = 8
