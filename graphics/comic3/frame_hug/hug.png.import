@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmn363udphwc8"
-path="res://.godot/imported/jungle1.png-71ed426db814b83e22983d2341b42643.ctex"
+uid="uid://bpj8tyga1fxbf"
+path="res://.godot/imported/hug.png-bc15e3da9e51118a29ad407d2014c1c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/jungle/junglepieces/1/jungle1.png"
-dest_files=["res://.godot/imported/jungle1.png-71ed426db814b83e22983d2341b42643.ctex"]
+source_file="res://graphics/comic3/frame_hug/hug.png"
+dest_files=["res://.godot/imported/hug.png-bc15e3da9e51118a29ad407d2014c1c5.ctex"]
 
 [params]
 
