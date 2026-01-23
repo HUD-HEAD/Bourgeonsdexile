@@ -1,12 +1,12 @@
 [gd_scene load_steps=22 format=3 uid="uid://cjq4fleiu5245"]
 
-[ext_resource type="Texture2D" uid="uid://cu04uiwclfal2" path="res://graphics/jungle/junglepieces/1/water1.png" id="1_x26al"]
+[ext_resource type="Texture2D" uid="uid://dglmyp3qpsn7n" path="res://graphics/jungle/junglepieces/1/water1.png" id="1_nqhdg"]
 [ext_resource type="Texture2D" uid="uid://e6dbtl7rw04o" path="res://graphics/jungle/junglepieces/water1.png" id="2_mtlks"]
 [ext_resource type="Texture2D" uid="uid://cxfl1rbct1ams" path="res://graphics/jungle/junglepieces/4/water2.png" id="3_l3adg"]
 [ext_resource type="Texture2D" uid="uid://b3h4s7fkrtkab" path="res://graphics/jungle/junglepieces/water2.png" id="4_8x401"]
-[ext_resource type="Texture2D" uid="uid://b81veqact2q3x" path="res://graphics/jungle/junglepieces/1/water1_rockreflection.png" id="5_im00g"]
-[ext_resource type="Texture2D" uid="uid://cqr6x8b3ebhig" path="res://graphics/jungle/junglepieces/1/jungle1_background.png" id="6_lts4p"]
-[ext_resource type="Texture2D" uid="uid://b70veyinlj3ra" path="res://graphics/jungle/junglepieces/1/jungle1_floor.png" id="7_5y4qe"]
+[ext_resource type="Texture2D" uid="uid://dfx4vaka3gxb3" path="res://graphics/jungle/junglepieces/1/water1_rockreflection.png" id="5_nqhdg"]
+[ext_resource type="Texture2D" uid="uid://dwdic0l4f1w4c" path="res://graphics/jungle/junglepieces/1/jungle1_background.png" id="6_nqhdg"]
+[ext_resource type="Texture2D" uid="uid://n0s7y8hxs1x8" path="res://graphics/jungle/junglepieces/1/jungle1_floor.png" id="7_31ufg"]
 [ext_resource type="Texture2D" uid="uid://b1apau5hmg0nv" path="res://graphics/jungle/junglepieces/2/jungle2.png" id="8_8d2i3"]
 [ext_resource type="Texture2D" uid="uid://bp8k84c62pfcr" path="res://graphics/jungle/junglepieces/3/jungle3_background.png" id="9_mw3x0"]
 [ext_resource type="Texture2D" uid="uid://b0i0o0j5u1ds8" path="res://graphics/jungle/junglepieces/3/jungle3_floor.png" id="10_k1umw"]
@@ -38,9 +38,8 @@ position = Vector2(458, 773)
 [node name="JungleSprites" type="Node2D" parent="."]
 
 [node name="Water1" type="Sprite2D" parent="JungleSprites"]
-position = Vector2(5176, 890)
-texture = ExtResource("1_x26al")
-metadata/_edit_lock_ = true
+position = Vector2(5176, 844)
+texture = ExtResource("1_nqhdg")
 
 [node name="PointLight2D2" type="PointLight2D" parent="JungleSprites/Water1"]
 energy = 0.0
@@ -59,16 +58,16 @@ texture = ExtResource("4_8x401")
 metadata/_edit_group_ = true
 
 [node name="Water1Rockreflection" type="Sprite2D" parent="JungleSprites/Jungle1"]
-position = Vector2(3485, 892)
-texture = ExtResource("5_im00g")
+position = Vector2(3422, 874)
+texture = ExtResource("5_nqhdg")
 
 [node name="Jungle1Background" type="Sprite2D" parent="JungleSprites/Jungle1"]
-texture = ExtResource("6_lts4p")
+texture = ExtResource("6_nqhdg")
 centered = false
 
 [node name="Jungle1Floor" type="Sprite2D" parent="JungleSprites/Jungle1"]
-position = Vector2(0, 612)
-texture = ExtResource("7_5y4qe")
+position = Vector2(-35, 542)
+texture = ExtResource("7_31ufg")
 centered = false
 
 [node name="Jungle2" type="Node2D" parent="JungleSprites"]
@@ -120,7 +119,7 @@ centered = false
 curve = SubResource("Curve2D_8pokd")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(461, 767)
+position = Vector2(453, 767)
 rotates = false
 loop = false
 
