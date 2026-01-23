@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://vyxhfkygtsbs"]
+
+[ext_resource type="Texture2D" uid="uid://byr6x0vkgvudh" path="res://graphics/comic3/lajas.png" id="1_as0ai"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_owu3y"]
+
+[node name="JungleComic3FrameLajas" type="Node2D"]
+scale = Vector2(0.3, 0.3)
+
+[node name="Lajas" type="Sprite2D" parent="."]
+texture = ExtResource("1_as0ai")
+
+[node name="Transition" type="Node" parent="."]
+script = ExtResource("2_owu3y")
