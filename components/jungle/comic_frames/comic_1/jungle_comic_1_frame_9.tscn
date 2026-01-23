@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://drxfjicmrdtlo"]
+
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="1_js5ki"]
+[ext_resource type="Texture2D" uid="uid://4wxp0kmynn0e" path="res://graphics/comic1rexported/LastFrame/lastframe/city_deck_together.png" id="2_wslev"]
+
+[node name="JungleComic1Frame9" type="Node2D"]
+metadata/_edit_group_ = true
+
+[node name="AutomaticPanner" type="Node" parent="."]
+script = ExtResource("1_js5ki")
+
+[node name="CityDeckTogether" type="Sprite2D" parent="."]
+texture = ExtResource("2_wslev")
