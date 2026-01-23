@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=3 uid="uid://cqrrv6gv87h10"]
+
+[ext_resource type="Texture2D" uid="uid://dlbwa0uh0s86d" path="res://graphics/ui/pause/menu_pause2.png" id="1_vcssp"]
+[ext_resource type="Texture2D" uid="uid://b4ietau1augkw" path="res://graphics/ui/pause/play.png" id="2_8abkk"]
+[ext_resource type="Texture2D" uid="uid://dnx5ujhxtbpjk" path="res://graphics/ui/pause/exit.png" id="2_60iai"]
+[ext_resource type="Texture2D" uid="uid://ce7gqlohwl0mh" path="res://graphics/ui/pause/x1.png" id="2_mad6a"]
+[ext_resource type="Script" uid="uid://prkw3tfkwh13" path="res://components/utils/ui/button_fade.gd" id="3_d6dga"]
+[ext_resource type="Texture2D" uid="uid://c2urmxg5mww6s" path="res://graphics/ui/pause/darker_layer.png" id="3_oj8k3"]
+[ext_resource type="Texture2D" uid="uid://dubaus1nmdimo" path="res://graphics/ui/pause/settings.png" id="4_d6dga"]
+[ext_resource type="Texture2D" uid="uid://cthtfvy41mlcn" path="res://graphics/ui/pause/cross.png" id="4_oj8k3"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuPause2" type="Sprite2D" parent="Control"]
+visible = false
+texture = ExtResource("1_vcssp")
+centered = false
+
+[node name="X1" type="Sprite2D" parent="Control"]
+visible = false
+texture = ExtResource("2_mad6a")
+centered = false
+
+[node name="DarkerLayer" type="Sprite2D" parent="Control"]
+visible = false
+texture = ExtResource("3_oj8k3")
+centered = false
+
+[node name="Pause" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 1767.0
+offset_top = 33.0
+offset_right = 1902.0
+offset_bottom = 164.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_oj8k3")
+script = ExtResource("3_d6dga")
+
+[node name="Play" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 311.0
+offset_right = 259.0
+offset_bottom = 442.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("2_8abkk")
+script = ExtResource("3_d6dga")
+
+[node name="Settings" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 489.0
+offset_right = 250.0
+offset_bottom = 620.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_d6dga")
+script = ExtResource("3_d6dga")
+
+[node name="Exit" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 677.0
+offset_right = 263.0
+offset_bottom = 808.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("2_60iai")
+script = ExtResource("3_d6dga")
