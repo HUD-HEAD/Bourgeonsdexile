@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://du7xk8lrsn7at" path="res://levels/jungle/jungle_comic_1.tscn" id="3_ui6h3"]
 [ext_resource type="PackedScene" uid="uid://s3spdg0qqc77" path="res://levels/jungle/jungle_city.tscn" id="4_unh1a"]
 [ext_resource type="PackedScene" uid="uid://djv5fkem5af34" path="res://levels/jungle/jungle_comic_2.tscn" id="5_1gy63"]
-[ext_resource type="PackedScene" uid="uid://brc35c78ohvta" path="res://levels/jungle/jungle.tscn" id="6_3n5fq"]
+[ext_resource type="PackedScene" uid="uid://cjq4fleiu5245" path="res://levels/jungle/jungle.tscn" id="6_ydeoq"]
 [ext_resource type="PackedScene" uid="uid://deifii0sv125i" path="res://levels/jungle/jungle_comic_3.tscn" id="7_kkjho"]
 
 [sub_resource type="GDScript" id="GDScript_xitg3"]
@@ -14,4 +14,4 @@ script/source = "@export var ordered_scene_list : Array[PackedScene]
 
 [resource]
 script = SubResource("GDScript_xitg3")
-ordered_scene_list = Array[PackedScene]([ExtResource("1_ydeoq"), ExtResource("2_6w7w6"), ExtResource("3_ui6h3"), ExtResource("4_unh1a"), ExtResource("5_1gy63"), ExtResource("6_3n5fq"), ExtResource("7_kkjho")])
+ordered_scene_list = Array[PackedScene]([ExtResource("1_ydeoq"), ExtResource("2_6w7w6"), ExtResource("3_ui6h3"), ExtResource("4_unh1a"), ExtResource("5_1gy63"), ExtResource("6_ydeoq"), ExtResource("7_kkjho")])
