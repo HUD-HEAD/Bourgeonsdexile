@@ -1,4 +1,4 @@
-[gd_scene load_steps=97 format=3 uid="uid://s3spdg0qqc77"]
+[gd_scene load_steps=102 format=3 uid="uid://s3spdg0qqc77"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_1rybe"]
 [ext_resource type="Texture2D" uid="uid://nwpw7ynann6x" path="res://graphics/separated_Ciity/separated_Ciity/sky.png" id="2_y6iwd"]
@@ -82,10 +82,15 @@
 [ext_resource type="Texture2D" uid="uid://dilu16nkir47d" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0027.png" id="43_q584l"]
 [ext_resource type="Texture2D" uid="uid://cv2mxmxggfrvl" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0028.png" id="44_y505e"]
 [ext_resource type="Texture2D" uid="uid://bk2ps752u0qhe" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0029.png" id="45_q6d34"]
+[ext_resource type="Texture2D" uid="uid://720cixp6eagr" path="res://graphics/separated_Ciity/separated_Ciity/extrahouses/extrahouses5.png" id="46_umov5"]
 [ext_resource type="Texture2D" uid="uid://dql6qnx8c0p70" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0030.png" id="46_xqten"]
 [ext_resource type="Texture2D" uid="uid://js2d4nekcwyd" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0031.png" id="47_5lbna"]
+[ext_resource type="Texture2D" uid="uid://cc64s5cvdv80c" path="res://graphics/separated_Ciity/separated_Ciity/extrahouses/extrahouses1.png" id="47_uqsyn"]
 [ext_resource type="Texture2D" uid="uid://cert5a1ls7x8t" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0032.png" id="48_c32fv"]
+[ext_resource type="Texture2D" uid="uid://blwu0t7v23ido" path="res://graphics/separated_Ciity/separated_Ciity/extrahouses/extrahouses2.png" id="48_glm23"]
 [ext_resource type="Texture2D" uid="uid://vao5b6357g6o" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0033.png" id="49_hobs1"]
+[ext_resource type="Texture2D" uid="uid://c3w2a8nt3e54e" path="res://graphics/separated_Ciity/separated_Ciity/extrahouses/extrahouses3.png" id="49_lvrd1"]
+[ext_resource type="Texture2D" uid="uid://cgpranygbf0cq" path="res://graphics/separated_Ciity/separated_Ciity/extrahouses/extrahouses4.png" id="50_1stae"]
 [ext_resource type="Texture2D" uid="uid://dykg7xxbxijn2" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0034.png" id="50_umov5"]
 [ext_resource type="Texture2D" uid="uid://dno0y7lu6pkwf" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0035.png" id="51_uqsyn"]
 [ext_resource type="Texture2D" uid="uid://d2atk5ltrdgt7" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0036.png" id="52_glm23"]
@@ -383,6 +388,29 @@ flip_h = true
 position = Vector2(456, 810)
 texture = ExtResource("5_pxrui")
 centered = false
+
+[node name="ExtraHouses" type="Node2D" parent="Background"]
+position = Vector2(78, 0)
+
+[node name="Extrahouses5" type="Sprite2D" parent="Background/ExtraHouses"]
+position = Vector2(-1410, 678)
+texture = ExtResource("46_umov5")
+
+[node name="Extrahouses1" type="Sprite2D" parent="Background/ExtraHouses"]
+position = Vector2(110, 502)
+texture = ExtResource("47_uqsyn")
+
+[node name="Extrahouses2" type="Sprite2D" parent="Background/ExtraHouses"]
+position = Vector2(-562, 549)
+texture = ExtResource("48_glm23")
+
+[node name="Extrahouses3" type="Sprite2D" parent="Background/ExtraHouses"]
+position = Vector2(-1045, 538)
+texture = ExtResource("49_lvrd1")
+
+[node name="Extrahouses4" type="Sprite2D" parent="Background/ExtraHouses"]
+position = Vector2(-759, 684)
+texture = ExtResource("50_1stae")
 
 [node name="Houses1" type="Sprite2D" parent="Background"]
 position = Vector2(1135, 516)
