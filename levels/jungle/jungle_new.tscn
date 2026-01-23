@@ -99,13 +99,11 @@ position = Vector2(25198, 0)
 metadata/_edit_group_ = true
 
 [node name="Jungle4Background" type="Sprite2D" parent="JungleSprites/Jungle4"]
-z_index = 1
 position = Vector2(-829, -468)
 texture = ExtResource("12_7xi0o")
 centered = false
 
 [node name="Jungle4Floor" type="Sprite2D" parent="JungleSprites/Jungle4"]
-z_index = 1
 position = Vector2(-844, -482)
 texture = ExtResource("13_r20bg")
 centered = false
