@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cjq4fleiu5245"]
+[gd_scene load_steps=23 format=3 uid="uid://cjq4fleiu5245"]
 
 [ext_resource type="Texture2D" uid="uid://dglmyp3qpsn7n" path="res://graphics/jungle/junglepieces/1/water1.png" id="1_nqhdg"]
 [ext_resource type="Texture2D" uid="uid://e6dbtl7rw04o" path="res://graphics/jungle/junglepieces/water1.png" id="2_mtlks"]
@@ -18,6 +18,7 @@
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="16_aewef"]
 [ext_resource type="PackedScene" uid="uid://deifii0sv125i" path="res://levels/jungle/jungle_comic_3.tscn" id="17_aqo8c"]
 [ext_resource type="PackedScene" uid="uid://d246c0iqqddvh" path="res://components/jungle/rain.tscn" id="18_nqhdg"]
+[ext_resource type="Script" uid="uid://gchp60e2jp5r" path="res://components/utils/set_camera_bounds.gd" id="19_31ufg"]
 
 [sub_resource type="Curve2D" id="Curve2D_8pokd"]
 _data = {
@@ -48,7 +49,6 @@ texture = ExtResource("2_mtlks")
 [node name="Water2" type="Sprite2D" parent="JungleSprites"]
 position = Vector2(27963, 399)
 texture = ExtResource("3_l3adg")
-metadata/_edit_lock_ = true
 
 [node name="PointLight2D3" type="PointLight2D" parent="JungleSprites/Water2"]
 energy = 0.0
@@ -95,7 +95,7 @@ position = Vector2(1818, 687)
 texture = ExtResource("11_q8svf")
 
 [node name="Jungle4" type="Node2D" parent="JungleSprites"]
-position = Vector2(25198, 0)
+position = Vector2(25198, -14)
 metadata/_edit_group_ = true
 
 [node name="Jungle4Background" type="Sprite2D" parent="JungleSprites/Jungle4"]
@@ -124,13 +124,14 @@ rotates = false
 loop = false
 
 [node name="JungleWoman" parent="Path2D/PathFollow2D" node_paths=PackedStringArray("path_follow") instance=ExtResource("15_td1vu")]
-position = Vector2(7, 6)
 path_follow = NodePath("..")
 
 [node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D/JungleWoman"]
 position = Vector2(0, -233)
 offset = Vector2(500, 0)
-limit_top = -471
+limit_left = -9999959
+limit_top = 0
+limit_right = 10000041
 limit_bottom = 1080
 
 [node name="PathFollow2D_Reflection" type="PathFollow2D" parent="Path2D"]
@@ -140,7 +141,6 @@ loop = false
 
 [node name="ReflectionContainer" type="Node2D" parent="Path2D/PathFollow2D_Reflection"]
 material = SubResource("CanvasItemMaterial_8pokd")
-position = Vector2(5, 6)
 
 [node name="JungleWomanReflection" parent="Path2D/PathFollow2D_Reflection/ReflectionContainer" node_paths=PackedStringArray("path_follow") instance=ExtResource("15_td1vu")]
 position = Vector2(0, 200)
@@ -161,5 +161,19 @@ next_scene = ExtResource("17_aqo8c")
 
 [node name="Rain" parent="." instance=ExtResource("18_nqhdg")]
 position = Vector2(9848, -15)
+
+[node name="ChangeCameraBounds" type="VisibleOnScreenNotifier2D" parent="." node_paths=PackedStringArray("camera")]
+position = Vector2(24394, 569)
+script = ExtResource("19_31ufg")
+camera = NodePath("../Path2D/PathFollow2D/JungleWoman/Camera2D")
+limit_top = -484
+limit_bottom = 1080
+
+[node name="ChangeCameraBounds2" type="VisibleOnScreenNotifier2D" parent="." node_paths=PackedStringArray("camera")]
+position = Vector2(27661, 330)
+script = ExtResource("19_31ufg")
+camera = NodePath("../Path2D/PathFollow2D/JungleWoman/Camera2D")
+limit_top = -484
+limit_bottom = 596
 
 [editable path="Path2D/PathFollow2D_Reflection/ReflectionContainer/JungleWomanReflection"]
