@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://deifii0sv125i"]
+[gd_scene load_steps=21 format=3 uid="uid://deifii0sv125i"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_udtka"]
 [ext_resource type="PackedScene" uid="uid://vyxhfkygtsbs" path="res://components/jungle/comic_frames/comic_3/jungle_comic_3_frame_lajas.tscn" id="4_xd2lk"]
@@ -9,8 +9,17 @@
 [ext_resource type="PackedScene" uid="uid://bhvy7yex87kvc" path="res://components/jungle/comic_frames/comic_3/jungle_comic_3_frame_phone.tscn" id="8_7jm3w"]
 [ext_resource type="PackedScene" uid="uid://cu1lmj34y2sxm" path="res://components/jungle/comic_frames/comic_3/jungle_comic_3_frame_kid_lajas.tscn" id="8_jrtjm"]
 [ext_resource type="PackedScene" uid="uid://cvhdi4oiatmqi" path="res://components/jungle/comic_frames/comic_3/jungle_comic_3_frame_ayuda.tscn" id="9_ouit8"]
+[ext_resource type="Texture2D" uid="uid://dlmtr65pq5ogx" path="res://graphics/comic3panels/comic3_panel3.jpg" id="12_5ocik"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="13_c4j60"]
+[ext_resource type="Texture2D" uid="uid://csjue5mgcetx5" path="res://graphics/comic3panels/comic3_panel6.jpg" id="13_lopnj"]
+[ext_resource type="Texture2D" uid="uid://b773aeobx30ed" path="res://graphics/comic3panels/comic3_panel8.jpg" id="14_c4j60"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="15_sw7mp"]
+[ext_resource type="Texture2D" uid="uid://c5ildtf7w2jkq" path="res://graphics/comic3panels/comic3_panel11.jpg" id="15_txuxr"]
+[ext_resource type="Texture2D" uid="uid://cmkoqudo7vtdj" path="res://graphics/comic3panels/comic3_panel13.jpg" id="16_dx01d"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="16_scavv"]
+[ext_resource type="Texture2D" uid="uid://cuxwk8shhlmrm" path="res://graphics/comic3panels/comic3_panel14.jpg" id="17_qhi8q"]
+[ext_resource type="Texture2D" uid="uid://bfk2yvr65otdc" path="res://graphics/comic3panels/comic3_panel15.jpg" id="18_bhkmn"]
+[ext_resource type="Texture2D" uid="uid://dbjynsn7lo2pt" path="res://graphics/comic3panels/comic3_panel16.jpg" id="19_pwafa"]
 
 [node name="JungleComic3" type="Node2D"]
 
@@ -22,7 +31,7 @@ follow_viewport_enabled = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 21944.0
+offset_right = 36671.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -32,14 +41,14 @@ stretch_mode = 1
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(960, 540)
 limit_left = 0
-limit_right = 23866
+limit_right = 38486
 limit_smoothed = true
 position_smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="PanelPanner" type="Node" parent="." node_paths=PackedStringArray("panels")]
 script = ExtResource("15_sw7mp")
-panels = [NodePath("../JungleComic3FrameLajas"), NodePath("../JungleComic3FrameHug"), NodePath("../JungleComic3FrameBackpack"), NodePath("../JungleComic3FramePhone"), NodePath("../JungleComic3FrameFood"), NodePath("../JungleComic3FrameKidLajas"), NodePath("../JungleComic3FrameAyuda"), NodePath("../JungleComic3FrameFolders"), NodePath("../SceneEnder")]
+panels = [NodePath("../JungleComic3FrameLajas"), NodePath("../JungleComic3FrameHug"), NodePath("../Comic3Panel3"), NodePath("../JungleComic3FrameBackpack"), NodePath("../JungleComic3FramePhone"), NodePath("../Comic3Panel6"), NodePath("../JungleComic3FrameFood"), NodePath("../Comic3Panel8"), NodePath("../JungleComic3FrameKidLajas"), NodePath("../JungleComic3FrameAyuda"), NodePath("../Comic3Panel11"), NodePath("../JungleComic3FrameFolders"), NodePath("../Comic3Panel13"), NodePath("../Comic3Panel14"), NodePath("../Comic3Panel15"), NodePath("../Comic3Panel16"), NodePath("../SceneEnder")]
 
 [node name="UI" parent="." instance=ExtResource("16_scavv")]
 
@@ -49,32 +58,32 @@ position = Vector2(2903.15, 534)
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic3FrameLajas"]
 
 [node name="JungleComic3FrameHug" parent="." instance=ExtResource("5_jrtjm")]
-position = Vector2(4950, 541)
+position = Vector2(5022, 541)
 
 [node name="JungleComic3FrameBackpack" parent="." instance=ExtResource("7_7buws")]
-position = Vector2(7208, 537)
+position = Vector2(9212, 537)
 
 [node name="JungleComic3FramePhone" parent="." instance=ExtResource("8_7jm3w")]
-position = Vector2(9291, 540)
+position = Vector2(11295, 540)
 
 [node name="JungleComic3FrameFood" parent="." instance=ExtResource("7_mqqsv")]
-position = Vector2(11811, 540)
+position = Vector2(16036, 540)
 
 [node name="JungleComic3FrameKidLajas" parent="." instance=ExtResource("8_jrtjm")]
-position = Vector2(14057, 541)
+position = Vector2(20517, 541)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic3FrameKidLajas"]
 
 [node name="JungleComic3FrameAyuda" parent="." instance=ExtResource("9_ouit8")]
-position = Vector2(16390, 539)
+position = Vector2(22850, 539)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic3FrameAyuda"]
 
 [node name="JungleComic3FrameFolders" parent="." instance=ExtResource("6_lc348")]
-position = Vector2(18689, 550)
+position = Vector2(27096, 550)
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(20668.85, 540)
+position = Vector2(37115, 540)
 
 [node name="ToBeContinued" type="Label" parent="SceneEnder"]
 anchors_preset = 8
@@ -96,3 +105,83 @@ text = "Thanks for playing!
 To be continued"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Comic3Panel3" type="Sprite2D" parent="."]
+position = Vector2(7077, 540)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("12_5ocik")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Comic3Panel3"]
+
+[node name="Transition" type="Node" parent="Comic3Panel3"]
+script = ExtResource("13_c4j60")
+
+[node name="Comic3Panel6" type="Sprite2D" parent="."]
+position = Vector2(13642, 524.0005)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("13_lopnj")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Comic3Panel6"]
+
+[node name="Transition" type="Node" parent="Comic3Panel6"]
+script = ExtResource("13_c4j60")
+
+[node name="Comic3Panel8" type="Sprite2D" parent="."]
+position = Vector2(18363, 512.0005)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("14_c4j60")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Comic3Panel8"]
+
+[node name="Transition" type="Node" parent="Comic3Panel8"]
+script = ExtResource("13_c4j60")
+
+[node name="Comic3Panel11" type="Sprite2D" parent="."]
+position = Vector2(25012, 583.0001)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("15_txuxr")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Comic3Panel11"]
+
+[node name="Transition" type="Node" parent="Comic3Panel11"]
+script = ExtResource("13_c4j60")
+
+[node name="Comic3Panel13" type="Sprite2D" parent="."]
+position = Vector2(29162.998, 534.001)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("16_dx01d")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Comic3Panel13"]
+
+[node name="Transition" type="Node" parent="Comic3Panel13"]
+script = ExtResource("13_c4j60")
+
+[node name="Comic3Panel14" type="Sprite2D" parent="."]
+position = Vector2(31063, 530)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("17_qhi8q")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Comic3Panel14"]
+
+[node name="Transition" type="Node" parent="Comic3Panel14"]
+script = ExtResource("13_c4j60")
+
+[node name="Comic3Panel15" type="Sprite2D" parent="."]
+position = Vector2(33122, 516.0001)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("18_bhkmn")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Comic3Panel15"]
+
+[node name="Transition" type="Node" parent="Comic3Panel15"]
+script = ExtResource("13_c4j60")
+
+[node name="Comic3Panel16" type="Sprite2D" parent="."]
+position = Vector2(35215, 538)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("19_pwafa")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Comic3Panel16"]
+
+[node name="Transition" type="Node" parent="Comic3Panel16"]
+script = ExtResource("13_c4j60")
