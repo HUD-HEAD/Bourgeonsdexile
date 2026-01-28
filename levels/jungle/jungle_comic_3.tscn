@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://deifii0sv125i"]
+[gd_scene load_steps=23 format=3 uid="uid://deifii0sv125i"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_udtka"]
 [ext_resource type="PackedScene" uid="uid://vyxhfkygtsbs" path="res://components/jungle/comic_frames/comic_3/jungle_comic_3_frame_lajas.tscn" id="4_xd2lk"]
@@ -10,7 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://cu1lmj34y2sxm" path="res://components/jungle/comic_frames/comic_3/jungle_comic_3_frame_kid_lajas.tscn" id="8_jrtjm"]
 [ext_resource type="PackedScene" uid="uid://cvhdi4oiatmqi" path="res://components/jungle/comic_frames/comic_3/jungle_comic_3_frame_ayuda.tscn" id="9_ouit8"]
 [ext_resource type="Texture2D" uid="uid://dlmtr65pq5ogx" path="res://graphics/comic3panels/comic3_panel3.jpg" id="12_5ocik"]
+[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="12_txuxr"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="13_c4j60"]
+[ext_resource type="PackedScene" uid="uid://d2f3ss3fi8c52" path="res://levels/jungle/lajas_blancas.tscn" id="13_dx01d"]
 [ext_resource type="Texture2D" uid="uid://csjue5mgcetx5" path="res://graphics/comic3panels/comic3_panel6.jpg" id="13_lopnj"]
 [ext_resource type="Texture2D" uid="uid://b773aeobx30ed" path="res://graphics/comic3panels/comic3_panel8.jpg" id="14_c4j60"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="15_sw7mp"]
@@ -84,27 +86,8 @@ position = Vector2(27096, 550)
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
 position = Vector2(37115, 540)
-
-[node name="ToBeContinued" type="Label" parent="SceneEnder"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -330.0
-offset_top = -100.5
-offset_right = 330.0
-offset_bottom = 100.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.300331, 0.72798324, 0.82265157, 1)
-theme_override_colors/font_outline_color = Color(0.007016808, 0.065259136, 0.12147876, 1)
-theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 72
-text = "Thanks for playing!
-To be continued"
-horizontal_alignment = 1
-vertical_alignment = 1
+script = ExtResource("12_txuxr")
+next_scene = ExtResource("13_dx01d")
 
 [node name="Comic3Panel3" type="Sprite2D" parent="."]
 position = Vector2(7077, 540)

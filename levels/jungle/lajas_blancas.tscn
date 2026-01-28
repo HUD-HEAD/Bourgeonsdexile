@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://d2f3ss3fi8c52"]
+
+[ext_resource type="PackedScene" uid="uid://c0cewrgpnckyx" path="res://levels/jungle/jungle_comic_4.tscn" id="2_lm7lj"]
+[ext_resource type="Texture2D" uid="uid://bfrxjto4uo2sa" path="res://graphics/separated_lajas/sky.png" id="4_lm7lj"]
+[ext_resource type="Texture2D" uid="uid://b4celum0shjhc" path="res://graphics/separated_lajas/floor.png" id="5_3f63v"]
+[ext_resource type="Texture2D" uid="uid://dqmvc1ic64ki" path="res://graphics/separated_lajas/houses.png" id="6_h6g4n"]
+[ext_resource type="Texture2D" uid="uid://dl42jc3le60jk" path="res://graphics/separated_lajas/int1.png" id="7_dau4e"]
+[ext_resource type="Texture2D" uid="uid://dxmmdnpwj6wa0" path="res://graphics/separated_lajas/int2.png" id="8_of5dn"]
+[ext_resource type="Texture2D" uid="uid://cu2dvygmdp466" path="res://graphics/separated_lajas/ppl copia.png" id="9_jwpol"]
+[ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/jungle/jungle_woman.tscn" id="15_004no"]
+[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="16_sbmfg"]
+
+[node name="LajasBlancas" type="Node2D"]
+
+[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(6092, 697)
+script = ExtResource("16_sbmfg")
+next_scene = ExtResource("2_lm7lj")
+
+[node name="Sky" type="Sprite2D" parent="."]
+texture = ExtResource("4_lm7lj")
+centered = false
+
+[node name="Floor" type="Sprite2D" parent="."]
+position = Vector2(0, 567)
+texture = ExtResource("5_3f63v")
+centered = false
+
+[node name="Houses" type="Sprite2D" parent="."]
+position = Vector2(0, 303)
+texture = ExtResource("6_h6g4n")
+centered = false
+
+[node name="Int1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1649, 454)
+texture = ExtResource("7_dau4e")
+centered = false
+
+[node name="Int2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(4405, 493)
+texture = ExtResource("8_of5dn")
+centered = false
+
+[node name="PplCopia" type="Sprite2D" parent="."]
+position = Vector2(70, 687)
+texture = ExtResource("9_jwpol")
+centered = false
+
+[node name="Spawn" type="Marker2D" parent="."]
+position = Vector2(460, 867)
+
+[node name="JungleWoman" parent="Spawn" instance=ExtResource("15_004no")]
+position = Vector2(-5, -6)
+
+[node name="Camera2D" type="Camera2D" parent="Spawn/JungleWoman"]
+position = Vector2(0, -233)
+offset = Vector2(500, 0)
+limit_left = -9999959
+limit_top = 0
+limit_right = 10000041
+limit_bottom = 1080
