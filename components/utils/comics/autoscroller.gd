@@ -55,8 +55,8 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed:
 		#Number pressed (0..9)
 		if event.keycode >= 48 && event.keycode <= 57:
-			var idx = event.keycode - 48
-			_debug_jump_to(idx)
+			var _idx = event.keycode - 48
+			_debug_jump_to(_idx)
 
 func _debug_jump_to(target_idx : int):
 	print_debug("Jumping to panel ", target_idx)
