@@ -3,6 +3,11 @@ extends Node
 ##How sensitive is mouse movement
 var mouse_sensitivity = 1.0
 
+func _ready() -> void:
+	##Clicks on e.g. Area2Ds (Clickables) will only trigger on topmost item
+	get_viewport().physics_object_picking_first_only = true
+	get_viewport().physics_object_picking_sort = true
+
 func show_mouse():
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
