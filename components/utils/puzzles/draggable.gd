@@ -28,6 +28,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		_drop()
 
 func _action_on_click():
+	super()
 	offset = global_position - get_global_mouse_position()
 	
 	dragging = true
