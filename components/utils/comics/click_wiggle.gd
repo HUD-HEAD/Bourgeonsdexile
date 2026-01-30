@@ -5,6 +5,7 @@ const PERIOD : float = 0.2
 const WIGGLES_NO : int = 4
 
 func _action_on_click():
+	super()
 	_wiggle()
 	
 	

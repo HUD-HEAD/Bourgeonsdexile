@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6u1mta7ui6k4"
-path="res://.godot/imported/deck_man.png-8aada4b9cc7af9449e2ab916ab5debdc.ctex"
+uid="uid://ctb3eacrpcqg0"
+path="res://.godot/imported/cuadradolleno.png-5ae9c11e18e3a84bde9733a0955bd16e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/comic2godot/deck/deck_man.png"
-dest_files=["res://.godot/imported/deck_man.png-8aada4b9cc7af9449e2ab916ab5debdc.ctex"]
+source_file="res://graphics/ui/puzzle_1/stroke_Puzzle1/cuadradolleno.png"
+dest_files=["res://.godot/imported/cuadradolleno.png-5ae9c11e18e3a84bde9733a0955bd16e.ctex"]
 
 [params]
 

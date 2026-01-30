@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgq5a6r7e7rq3"
-path="res://.godot/imported/man.png-7dab950eb305653665b5e59f547ea9af.ctex"
+uid="uid://chuqje64n5d27"
+path="res://.godot/imported/outilne.png-13f6b8f0e64e2535d75af29845644ceb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/comic2godot/man/man.png"
-dest_files=["res://.godot/imported/man.png-7dab950eb305653665b5e59f547ea9af.ctex"]
+source_file="res://graphics/ui/puzzle_1/stroke_Puzzle1/outilne.png"
+dest_files=["res://.godot/imported/outilne.png-13f6b8f0e64e2535d75af29845644ceb.ctex"]
 
 [params]
 

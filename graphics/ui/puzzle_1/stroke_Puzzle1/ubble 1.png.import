@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfnb2m8u3gjok"
-path="res://.godot/imported/man_walking.png-12bf83b1dc8b111ce9251e5a6e3a3fc0.ctex"
+uid="uid://cma2eshrefux"
+path="res://.godot/imported/ubble 1.png-56d113b608ef175f47f9c8f1c9c2ea2d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/comic2godot/man_walking.png"
-dest_files=["res://.godot/imported/man_walking.png-12bf83b1dc8b111ce9251e5a6e3a3fc0.ctex"]
+source_file="res://graphics/ui/puzzle_1/stroke_Puzzle1/ubble 1.png"
+dest_files=["res://.godot/imported/ubble 1.png-56d113b608ef175f47f9c8f1c9c2ea2d.ctex"]
 
 [params]
 

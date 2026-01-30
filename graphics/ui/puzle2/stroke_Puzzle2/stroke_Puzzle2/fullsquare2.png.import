@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq2tatkjr01xt"
-path="res://.godot/imported/woman_explaining.png-87ba6d8ee20b011b2c130f130b20017b.ctex"
+uid="uid://b75sd0f4sye2k"
+path="res://.godot/imported/fullsquare2.png-2b520ac1b695b97986fc8ceb382bf27e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/comic2godot/woman_explaining.png"
-dest_files=["res://.godot/imported/woman_explaining.png-87ba6d8ee20b011b2c130f130b20017b.ctex"]
+source_file="res://graphics/ui/puzle2/stroke_Puzzle2/stroke_Puzzle2/fullsquare2.png"
+dest_files=["res://.godot/imported/fullsquare2.png-2b520ac1b695b97986fc8ceb382bf27e.ctex"]
 
 [params]
 

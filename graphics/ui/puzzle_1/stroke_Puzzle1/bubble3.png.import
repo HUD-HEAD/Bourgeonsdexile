@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hlya850o5n24"
-path="res://.godot/imported/woman_helping.png-78c980d942cc2f6b1457bee9c3bf2c46.ctex"
+uid="uid://srxp8yhnyw48"
+path="res://.godot/imported/bubble3.png-e9ef21333e9dedcca33ea22e1e055596.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/comic2godot/woman_helping.png"
-dest_files=["res://.godot/imported/woman_helping.png-78c980d942cc2f6b1457bee9c3bf2c46.ctex"]
+source_file="res://graphics/ui/puzzle_1/stroke_Puzzle1/bubble3.png"
+dest_files=["res://.godot/imported/bubble3.png-e9ef21333e9dedcca33ea22e1e055596.ctex"]
 
 [params]
 

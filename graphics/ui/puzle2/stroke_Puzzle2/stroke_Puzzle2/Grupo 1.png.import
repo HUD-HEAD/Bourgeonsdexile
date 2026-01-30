@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjv88vfh05avf"
-path="res://.godot/imported/group_women.png-ceb39f6c086afa6b0d7709d75aceed3d.ctex"
+uid="uid://cmk6mg6rt6nb6"
+path="res://.godot/imported/Grupo 1.png-a049d205c9d739ce1cd20bb06c289d20.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/comic2godot/group_women.png"
-dest_files=["res://.godot/imported/group_women.png-ceb39f6c086afa6b0d7709d75aceed3d.ctex"]
+source_file="res://graphics/ui/puzle2/stroke_Puzzle2/stroke_Puzzle2/Grupo 1.png"
+dest_files=["res://.godot/imported/Grupo 1.png-a049d205c9d739ce1cd20bb06c289d20.ctex"]
 
 [params]
 
