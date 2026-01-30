@@ -23,6 +23,7 @@ func _ready() -> void:
 		return
 
 	draggable.dropped.connect(_on_piece_dropped)
+	draggable.clicked.connect(_on_piece_clicked)
 	
 func deactivate():
 	draggable.hide()
@@ -33,6 +34,10 @@ func _on_piece_dropped():
 	if placement_checker.is_correctly_placed():
 		var tween : Tween = _snap_to_receptacle()
 		tween.tween_callback(_validate_placement)
+
+##Move PuzzlePiece to front.
+func _on_piece_clicked():
+	move_to_front()
 
 ## Signal piece is correctly placed
 func _validate_placement():

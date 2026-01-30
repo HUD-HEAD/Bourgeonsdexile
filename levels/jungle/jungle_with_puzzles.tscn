@@ -1,8 +1,35 @@
-[gd_scene load_steps=2 format=3 uid="uid://o324t3l05s7q"]
+[gd_scene load_steps=8 format=3 uid="uid://o324t3l05s7q"]
 
 [ext_resource type="PackedScene" uid="uid://cjq4fleiu5245" path="res://levels/jungle/jungle.tscn" id="1_htefp"]
+[ext_resource type="PackedScene" uid="uid://bk8xhv6jhr5c1" path="res://components/jungle/puzzles/drag_drop_puzzle_jungle1.tscn" id="2_ocj52"]
+[ext_resource type="PackedScene" uid="uid://bckdd2p5nk1ss" path="res://components/jungle/puzzles/drag_drop_puzzle_jungle2.tscn" id="3_oa6mw"]
+[ext_resource type="PackedScene" uid="uid://du6t8vnh34s11" path="res://components/jungle/puzzles/drag_drop_puzzle_jungle5.tscn" id="4_7xcka"]
+[ext_resource type="PackedScene" uid="uid://bi6q6b4cvxgc0" path="res://components/jungle/puzzles/drag_drop_puzzle_jungle6.tscn" id="5_ljamr"]
+[ext_resource type="PackedScene" uid="uid://dkhms1s0quhjk" path="res://components/jungle/puzzles/drag_drop_puzzle_jungle3.tscn" id="6_oa6mw"]
+[ext_resource type="PackedScene" uid="uid://qk7djewv8klb" path="res://components/jungle/puzzles/drag_drop_puzzle_jungle4.tscn" id="7_7xcka"]
 
 [node name="JungleWithPuzzles" type="Node2D"]
 
 [node name="Jungle" parent="." instance=ExtResource("1_htefp")]
 metadata/_edit_lock_ = true
+
+[node name="DragDropPuzzle" parent="." instance=ExtResource("2_ocj52")]
+position = Vector2(3626.0002, 765.00006)
+rotation = 0.20253715
+
+[node name="DragDropPuzzle2" parent="." instance=ExtResource("3_oa6mw")]
+position = Vector2(8517, 403)
+
+[node name="DragDropPuzzle3" parent="." instance=ExtResource("4_7xcka")]
+position = Vector2(24964.998, 616.00006)
+rotation = 0.06231493
+
+[node name="DragDropPuzzle4" parent="." instance=ExtResource("5_ljamr")]
+position = Vector2(29303, 380)
+scale = Vector2(0.8, 0.8)
+
+[node name="DragDropPuzzle5" parent="." instance=ExtResource("6_oa6mw")]
+position = Vector2(13243, 378)
+
+[node name="DragDropPuzzle6" parent="." instance=ExtResource("7_7xcka")]
+position = Vector2(16676, 409)

@@ -51,6 +51,15 @@ autoplay = "default"
 frame_progress = 0.21511903
 script = ExtResource("8_i6sxp")
 
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Frame7Alltogether"]
+position = Vector2(-850, -315)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_g4jaw")
+autoplay = "default"
+frame_progress = 0.21511903
+offset = Vector2(-70, 50)
+script = ExtResource("8_i6sxp")
+
 [node name="Frame7Toplayer" type="Sprite2D" parent="."]
 texture = ExtResource("9_j0nmg")
 
