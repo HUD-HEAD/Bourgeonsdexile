@@ -38,7 +38,10 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 		#Prevent multiple pieces picked up at once
 		if !global_dragging:
 			_action_on_click()
-	elif event.is_action_released("select_element"):
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	if dragging && event.is_action_released("select_element"):
 		dragging = false
 		_drop()
 
