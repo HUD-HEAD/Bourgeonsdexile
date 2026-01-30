@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://vgkc31qlpwka"]
+
+[ext_resource type="Texture2D" uid="uid://bv18atfd0o0q0" path="res://graphics/comic3/frame6/handwounded.png" id="1_8lisw"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_oj4ff"]
+[ext_resource type="Texture2D" uid="uid://dydmpq684x60o" path="res://graphics/comic3/frame6/band1.png" id="3_saauo"]
+[ext_resource type="Texture2D" uid="uid://c8lytbfobbog8" path="res://graphics/comic3/frame6/band2.png" id="4_7na3b"]
+[ext_resource type="Texture2D" uid="uid://dlk15m6e7vy4o" path="res://graphics/comic3/frame6/band3.png" id="5_x4ndq"]
+[ext_resource type="Texture2D" uid="uid://v3n1j3djbe5u" path="res://graphics/comic3/frame6/band4.png" id="6_ydtdj"]
+
+[node name="JungleComic3FrameCare" type="Node2D"]
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+scale = Vector2(0.9999998, 0.9999998)
+enable_node_path = NodePath("")
+
+[node name="Handwounded" type="Sprite2D" parent="."]
+position = Vector2(330, 33.99994)
+texture = ExtResource("1_8lisw")
+
+[node name="Transition" type="Node" parent="."]
+script = ExtResource("2_oj4ff")
+
+[node name="Band1" type="Sprite2D" parent="."]
+position = Vector2(-365, -393)
+texture = ExtResource("3_saauo")
+
+[node name="Band2" type="Sprite2D" parent="."]
+position = Vector2(-584.99994, -158.50003)
+texture = ExtResource("4_7na3b")
+
+[node name="Band3" type="Sprite2D" parent="."]
+position = Vector2(-889.99994, -126.000046)
+texture = ExtResource("5_x4ndq")
+
+[node name="Band4" type="Sprite2D" parent="."]
+position = Vector2(-757.49994, 176.49994)
+texture = ExtResource("6_ydtdj")
