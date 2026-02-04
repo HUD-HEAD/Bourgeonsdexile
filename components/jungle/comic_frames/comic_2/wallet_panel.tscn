@@ -40,6 +40,9 @@ offset_bottom = 431.0
 texture_over = ExtResource("2_hfext")
 texture_progress = ExtResource("1_o4pkc")
 
+[node name="CarteraSola" type="Sprite2D" parent="."]
+texture = ExtResource("4_0sav8")
+
 [node name="Coin1" type="Area2D" parent="." node_paths=PackedStringArray("progress_bar")]
 position = Vector2(-491, -232)
 script = ExtResource("5_t4wyu")
@@ -114,9 +117,6 @@ texture = ExtResource("8_wuyp4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coin6"]
 shape = SubResource("CircleShape2D_0fb2c")
-
-[node name="CarteraSola" type="Sprite2D" parent="."]
-texture = ExtResource("4_0sav8")
 
 [node name="PanelTransitionTrigger" type="Node" parent="." node_paths=PackedStringArray("clickables")]
 script = ExtResource("11_t4wyu")
