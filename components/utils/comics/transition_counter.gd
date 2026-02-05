@@ -25,8 +25,6 @@ func _on_obstacle_cleared():
 		for clickable in clickables:
 			clickable.clicked.disconnect(_on_obstacle_cleared)
 		
-		InputManager.hide_mouse()
-		
 		
 		#TASK refactor to centralize delay transition?
 		#Delay transition

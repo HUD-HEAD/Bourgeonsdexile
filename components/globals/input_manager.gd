@@ -10,11 +10,9 @@ func _ready() -> void:
 
 func show_mouse():
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	
-#TODO remove hiding logic if unused
+
 func hide_mouse():
-	#Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
-	pass
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event.is_action_pressed("exit"):
