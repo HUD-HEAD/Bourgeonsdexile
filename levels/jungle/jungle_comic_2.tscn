@@ -12,11 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://b2thr4dhispb" path="res://graphics/comic2godot/frame4/4.png" id="14_r5vgt"]
 [ext_resource type="PackedScene" uid="uid://b5asjt0f4mcsd" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_7.tscn" id="14_tvvi7"]
 [ext_resource type="PackedScene" uid="uid://o324t3l05s7q" path="res://levels/jungle/jungle_with_puzzles.tscn" id="15_1sxs8"]
+[ext_resource type="PackedScene" uid="uid://bj7e73nkbbtwn" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_9.tscn" id="15_mtmad"]
 [ext_resource type="Texture2D" uid="uid://e0p3nkkunn5u" path="res://graphics/comic2godot/frame5/5.png" id="15_r5vgt"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="17_1sxs8"]
 [ext_resource type="PackedScene" uid="uid://43c07utlirv7" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_11.tscn" id="18_tmikl"]
 [ext_resource type="Texture2D" uid="uid://boylw4aegtqki" path="res://graphics/comic2panels/comic2_panel6.jpg" id="21_t1h5n"]
-[ext_resource type="Texture2D" uid="uid://byy2jjwy2jstg" path="res://graphics/comic2godot/frame8/Sin título-1.png" id="23_wfupk"]
 [ext_resource type="Texture2D" uid="uid://gevy0733xl07" path="res://graphics/comic2godot/frame11/frame11.png" id="24_tvvi7"]
 [ext_resource type="Texture2D" uid="uid://b2oo6tlir6pf5" path="res://graphics/comic2panels/comic2_panel10.jpg" id="25_5t051"]
 [ext_resource type="Texture2D" uid="uid://0qyoh0oivc1a" path="res://graphics/comic2godot/frame10/frame10.png" id="26_wfupk"]
@@ -125,16 +125,8 @@ script = ExtResource("3_e56vw")
 [node name="Panel7" parent="." instance=ExtResource("14_tvvi7")]
 position = Vector2(15104, 553)
 
-[node name="Panel9" type="Node2D" parent="."]
+[node name="Panel9" parent="." instance=ExtResource("15_mtmad")]
 position = Vector2(17672, 553.5)
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel9"]
-
-[node name="Transition" type="Node" parent="Panel9"]
-script = ExtResource("3_e56vw")
-
-[node name="SinTítulo1" type="Sprite2D" parent="Panel9"]
-texture = ExtResource("23_wfupk")
 
 [node name="Panel10" type="Node2D" parent="."]
 position = Vector2(19538, 553.5)
