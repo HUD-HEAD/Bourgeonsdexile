@@ -1,3 +1,4 @@
+class_name TransitionerCounter
 extends Node
 
 @export var clickables : Array[Clickable]
