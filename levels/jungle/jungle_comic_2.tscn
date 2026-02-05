@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://djv5fkem5af34"]
+[gd_scene load_steps=28 format=3 uid="uid://djv5fkem5af34"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_l3y4y"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="3_e56vw"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="12_su3g7"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="14_fekbj"]
 [ext_resource type="Texture2D" uid="uid://b2thr4dhispb" path="res://graphics/comic2godot/frame4/4.png" id="14_r5vgt"]
+[ext_resource type="PackedScene" uid="uid://b5asjt0f4mcsd" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_7.tscn" id="14_tvvi7"]
 [ext_resource type="PackedScene" uid="uid://o324t3l05s7q" path="res://levels/jungle/jungle_with_puzzles.tscn" id="15_1sxs8"]
 [ext_resource type="Texture2D" uid="uid://e0p3nkkunn5u" path="res://graphics/comic2godot/frame5/5.png" id="15_r5vgt"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="17_1sxs8"]
@@ -60,7 +61,7 @@ next_scene = ExtResource("15_1sxs8")
 
 [node name="PanelPanner" type="Node" parent="." node_paths=PackedStringArray("panels")]
 script = ExtResource("12_su3g7")
-panels = [NodePath("../Panel1"), NodePath("../Panel2"), NodePath("../WalletPanel"), NodePath("../Panel4"), NodePath("../Panel5"), NodePath("../Panel6"), NodePath("../Panel7"), NodePath("../Panel8"), NodePath("../Panel9"), NodePath("../Panel10"), NodePath("../Panel11"), NodePath("../Panel12"), NodePath("../Panel13"), NodePath("../Panel14"), NodePath("../PregnancyPanel"), NodePath("../SceneEnder")]
+panels = [NodePath("../Panel1"), NodePath("../Panel2"), NodePath("../WalletPanel"), NodePath("../Panel4"), NodePath("../Panel5"), NodePath("../Panel6"), NodePath(""), NodePath("../Panel8"), NodePath("../Panel9"), NodePath("../Panel10"), NodePath("../Panel11"), NodePath("../Panel12"), NodePath("../Panel13"), NodePath("../Panel14"), NodePath("../PregnancyPanel"), NodePath("../SceneEnder")]
 
 [node name="UI" parent="." instance=ExtResource("17_1sxs8")]
 
@@ -127,21 +128,8 @@ texture = ExtResource("21_t1h5n")
 [node name="Transition" type="Node" parent="Panel6"]
 script = ExtResource("3_e56vw")
 
-[node name="Panel7" type="Node2D" parent="."]
+[node name="Panel7" parent="." instance=ExtResource("14_tvvi7")]
 position = Vector2(14517, 553)
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel7"]
-
-[node name="Transition" type="Node" parent="Panel7"]
-script = ExtResource("3_e56vw")
-
-[node name="1" type="Sprite2D" parent="Panel7"]
-position = Vector2(-547, 54)
-texture = ExtResource("17_tvvi7")
-
-[node name="2" type="Sprite2D" parent="Panel7"]
-position = Vector2(434, -52)
-texture = ExtResource("18_58fyg")
 
 [node name="Panel8" type="Node2D" parent="."]
 position = Vector2(16591, 553)
