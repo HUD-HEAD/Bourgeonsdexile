@@ -1,22 +1,55 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5asjt0f4mcsd"]
+[gd_scene load_steps=8 format=3 uid="uid://b5asjt0f4mcsd"]
 
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="1_w00jl"]
+[ext_resource type="Script" uid="uid://k1aavhe2a3rv" path="res://components/utils/area_entered_transition.gd" id="1_jt4ib"]
 [ext_resource type="Texture2D" uid="uid://coy7ml4byonu2" path="res://graphics/comic2godot/frame6and9/1.png" id="2_jt4ib"]
 [ext_resource type="Texture2D" uid="uid://ctj71vxsnh2xs" path="res://graphics/comic2godot/frame6and9/2.png" id="3_dheej"]
+[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="3_jt4ib"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dheej"]
+size = Vector2(1092, 669)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tvvi7"]
+radius = 219.8982
+height = 938.71484
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_58fyg"]
+size = Vector2(952, 601)
 
 [node name="Panel7" type="Node2D"]
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
 
-[node name="Transition" type="Node" parent="."]
-script = ExtResource("1_w00jl")
+[node name="ShadyHand" type="Area2D" parent="." node_paths=PackedStringArray("to_disable")]
+position = Vector2(541, -52)
+collision_layer = 4
+collision_mask = 4
+input_pickable = false
+script = ExtResource("1_jt4ib")
+to_disable = NodePath("../NinaHand")
 
-[node name="2" type="Sprite2D" parent="."]
-position = Vector2(434, -52)
+[node name="2" type="Sprite2D" parent="ShadyHand"]
 texture = ExtResource("3_dheej")
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShadyHand"]
+position = Vector2(-39, 27.5)
+shape = SubResource("RectangleShape2D_dheej")
 
-[node name="1" type="Sprite2D" parent="Node2D"]
-position = Vector2(-547, 54)
+[node name="NinaHand" type="Area2D" parent="."]
+position = Vector2(-970, 54)
+script = ExtResource("3_jt4ib")
+
+[node name="DraggableCollisionShape2D" type="CollisionShape2D" parent="NinaHand"]
+position = Vector2(12, -3.5)
+rotation = -1.2656564
+shape = SubResource("CapsuleShape2D_tvvi7")
+
+[node name="1" type="Sprite2D" parent="NinaHand"]
 texture = ExtResource("2_jt4ib")
+
+[node name="ShadyHandDetection" type="Area2D" parent="NinaHand"]
+collision_layer = 4
+collision_mask = 4
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NinaHand/ShadyHandDetection"]
+shape = SubResource("RectangleShape2D_58fyg")
