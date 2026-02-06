@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://ddnvdwl518yu7"]
+
+[ext_resource type="PackedScene" uid="uid://8imm2g6332ef" path="res://components/utils/puzzles/dragdrop_puzzle_template.tscn" id="1_js5te"]
+[ext_resource type="Texture2D" uid="uid://dplxd054gishe" path="res://graphics/ui/lajapuzzles/5/empty5.png" id="2_iewnw"]
+[ext_resource type="Texture2D" uid="uid://d0pc1iwsfkykl" path="res://graphics/ui/lajapuzzles/5/1_5.png" id="3_756yk"]
+[ext_resource type="PackedScene" uid="uid://b15l0pq6dea3h" path="res://components/utils/puzzles/puzzle_piece_template.tscn" id="4_gt62u"]
+[ext_resource type="Texture2D" uid="uid://bf3usbc04mvwl" path="res://graphics/ui/lajapuzzles/5/2_5.png" id="5_wb0b4"]
+[ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="6_ur555"]
+[ext_resource type="Texture2D" uid="uid://dyvxaw6asu23d" path="res://graphics/ui/lajapuzzles/5/full5.png" id="7_3hysi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8ioqk"]
+radius = 66.99208
+height = 225.778
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ra6jb"]
+size = Vector2(131, 197)
+
+[node name="DragDropPuzzle" instance=ExtResource("1_js5te")]
+
+[node name="OutlinePuzzle" parent="." index="0"]
+texture = ExtResource("2_iewnw")
+
+[node name="PuzzlePiece" parent="BuildingBlocks" index="0"]
+position = Vector2(-74, 8)
+
+[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece/Draggable" index="0"]
+texture = ExtResource("3_756yk")
+
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece/Draggable" index="1" node_paths=PackedStringArray("receptacle")]
+receptacle = NodePath("../../../Receptacle")
+
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece/Draggable" index="2"]
+position = Vector2(-3, -15)
+rotation = 0.6798536
+scale = Vector2(0.93802476, 1.0034542)
+shape = SubResource("CapsuleShape2D_8ioqk")
+
+[node name="Receptacle" parent="BuildingBlocks" index="1"]
+position = Vector2(-74, 8)
+
+[node name="PuzzlePiece2" parent="BuildingBlocks" index="2" instance=ExtResource("4_gt62u")]
+position = Vector2(74, 1)
+
+[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece2/Draggable" index="0"]
+texture = ExtResource("5_wb0b4")
+
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece2/Draggable" index="1" node_paths=PackedStringArray("receptacle")]
+receptacle = NodePath("../../../Receptacle2")
+
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece2/Draggable" index="2"]
+position = Vector2(-7, -4)
+rotation = 0.098792635
+shape = SubResource("RectangleShape2D_ra6jb")
+
+[node name="Receptacle2" parent="BuildingBlocks" index="3" instance=ExtResource("6_ur555")]
+position = Vector2(74, 1)
+
+[node name="CompletePuzzle" parent="." index="2"]
+position = Vector2(-1, 8)
+texture = ExtResource("7_3hysi")
+
+[editable path="BuildingBlocks/PuzzlePiece"]
+[editable path="BuildingBlocks/PuzzlePiece2"]
