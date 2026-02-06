@@ -1,15 +1,17 @@
-[gd_scene load_steps=11 format=3 uid="uid://c0cewrgpnckyx"]
+[gd_scene load_steps=13 format=3 uid="uid://c0cewrgpnckyx"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_p64sh"]
-[ext_resource type="Texture2D" uid="uid://bqg0fs63tc0nl" path="res://graphics/comic4panels/comic4_panel1.jpg" id="3_624pu"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="3_qar8e"]
+[ext_resource type="PackedScene" uid="uid://c1hj16bvmut1r" path="res://components/jungle/comic_frames/comic_4/jungle_comic_4_panel_1.tscn" id="3_t5lhr"]
+[ext_resource type="PackedScene" uid="uid://bx3vvp3in2pvr" path="res://components/jungle/comic_frames/comic_4/jungle_comic_4_frame_folders.tscn" id="4_drdnr"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="4_t5lhr"]
-[ext_resource type="Texture2D" uid="uid://bqcrhjbnq55i" path="res://graphics/comic4panels/comic4_panel2.jpg" id="4_yggp2"]
-[ext_resource type="Texture2D" uid="uid://dhviehyk25l33" path="res://graphics/comic4panels/comic4_panel3.jpg" id="5_t5lhr"]
+[ext_resource type="PackedScene" uid="uid://ds1b5xoce25kf" path="res://components/jungle/comic_frames/comic_4/jungle_comic_4_panel_3.tscn" id="5_xs8jl"]
+[ext_resource type="PackedScene" uid="uid://dlufjr836r473" path="res://components/jungle/comic_frames/comic_4/jungle_comic_4_panel_4.tscn" id="6_12per"]
 [ext_resource type="Texture2D" uid="uid://bi0p07io5afq" path="res://graphics/comic4panels/comic4_panel4.jpg" id="6_drdnr"]
 [ext_resource type="Texture2D" uid="uid://ct3gxon6rfose" path="res://graphics/comic4panels/comic4_panel5.jpg" id="7_xs8jl"]
 [ext_resource type="Texture2D" uid="uid://tjh5ygrknykf" path="res://graphics/comic4panels/comic4_panel6.jpg" id="8_12per"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="9_yggp2"]
+[ext_resource type="Texture2D" uid="uid://dtucairvh7qm6" path="res://graphics/comic4/story4 copia.png" id="12_12per"]
 
 [node name="JungleComic4" type="Node2D"]
 
@@ -21,7 +23,7 @@ follow_viewport_enabled = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 12546.0
+offset_right = 16673.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -31,55 +33,37 @@ stretch_mode = 1
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(960, 540)
 limit_left = 0
-limit_right = 14360
+limit_right = 18577
 limit_smoothed = true
 position_smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="UI" parent="." instance=ExtResource("3_qar8e")]
 
-[node name="Comic4Panel1" type="Sprite2D" parent="."]
-position = Vector2(2668, 534)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("3_624pu")
+[node name="Comic4Panel1" parent="." instance=ExtResource("3_t5lhr")]
+position = Vector2(2920, 534)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Comic4Panel1"]
+[node name="JungleComic4FrameFolders" parent="." instance=ExtResource("4_drdnr")]
+position = Vector2(4923, 534)
 
-[node name="Transition" type="Node" parent="Comic4Panel1"]
-script = ExtResource("4_t5lhr")
+[node name="Comic4PanelTicket" parent="." instance=ExtResource("5_xs8jl")]
+position = Vector2(6936, 534)
 
-[node name="Comic4Panel2" type="Sprite2D" parent="."]
-position = Vector2(4402, 534)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("4_yggp2")
+[node name="Comic4PanelMochil" parent="." instance=ExtResource("6_12per")]
+position = Vector2(8840, 534)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Comic4Panel2"]
-
-[node name="Transition" type="Node" parent="Comic4Panel2"]
-script = ExtResource("4_t5lhr")
-
-[node name="Comic4Panel3" type="Sprite2D" parent="."]
-position = Vector2(6181, 534)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("5_t5lhr")
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Comic4Panel3"]
-
-[node name="Transition" type="Node" parent="Comic4Panel3"]
-script = ExtResource("4_t5lhr")
-
-[node name="Comic4Panel4" type="Sprite2D" parent="."]
-position = Vector2(8156.9995, 534)
+[node name="Comic4Panel4_old" type="Sprite2D" parent="."]
+position = Vector2(10815.999, 534)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("6_drdnr")
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Comic4Panel4"]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Comic4Panel4_old"]
 
-[node name="Transition" type="Node" parent="Comic4Panel4"]
+[node name="Transition" type="Node" parent="Comic4Panel4_old"]
 script = ExtResource("4_t5lhr")
 
 [node name="Comic4Panel5" type="Sprite2D" parent="."]
-position = Vector2(9921, 534)
+position = Vector2(12580, 534)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("7_xs8jl")
 
@@ -89,7 +73,7 @@ texture = ExtResource("7_xs8jl")
 script = ExtResource("4_t5lhr")
 
 [node name="Comic4Panel6" type="Sprite2D" parent="."]
-position = Vector2(11594.999, 534)
+position = Vector2(14253.999, 534)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("8_12per")
 
@@ -99,7 +83,7 @@ texture = ExtResource("8_12per")
 script = ExtResource("4_t5lhr")
 
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(13090, 439.5)
+position = Vector2(15749, 439.5)
 
 [node name="ToBeContinued" type="Label" parent="Node2D"]
 anchors_preset = 8
@@ -119,7 +103,12 @@ text = "Thanks for playing!
 To be continued"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="PanelPanner" type="Node" parent="." node_paths=PackedStringArray("panels")]
 script = ExtResource("9_yggp2")
-panels = [NodePath("../Comic4Panel1"), NodePath("../Comic4Panel2"), NodePath("../Comic4Panel3"), NodePath("../Comic4Panel4"), NodePath("../Comic4Panel5"), NodePath("../Comic4Panel6"), NodePath("../Node2D")]
+panels = [NodePath("../Comic4Panel1"), NodePath("../JungleComic4FrameFolders"), NodePath("../Comic4PanelTicket"), NodePath("../Comic4PanelMochil"), NodePath("../Comic4Panel4_old"), NodePath("../Comic4Panel5"), NodePath("../Comic4Panel6"), NodePath("../Node2D")]
+
+[node name="Story4Copia" type="Sprite2D" parent="."]
+position = Vector2(6754, 1992)
+texture = ExtResource("12_12per")
