@@ -1,11 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://djv5fkem5af34"]
+[gd_scene load_steps=21 format=3 uid="uid://djv5fkem5af34"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_l3y4y"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="3_e56vw"]
 [ext_resource type="Texture2D" uid="uid://bseegbn4bim1t" path="res://graphics/comic2godot/frame1/frame1.png" id="6_nbn5v"]
 [ext_resource type="PackedScene" uid="uid://dpk31y77oouru" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_2.tscn" id="8_mtmad"]
 [ext_resource type="PackedScene" uid="uid://djyan8ubtutll" path="res://components/jungle/comic_frames/comic_2/wallet_panel.tscn" id="10_dkeqa"]
-[ext_resource type="Script" uid="uid://ds0m4hygkuj81" path="res://components/utils/comics/set_mouse_visibility.gd" id="12_1sxs8"]
 [ext_resource type="PackedScene" uid="uid://crfrjw42dcsks" path="res://components/jungle/comic_frames/comic_2/pregnancy_panel.tscn" id="12_exkuh"]
 [ext_resource type="PackedScene" uid="uid://ckqe0ckfq2chw" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_5.tscn" id="12_mtmad"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="12_su3g7"]
@@ -72,8 +71,6 @@ position = Vector2(5076, 553)
 position = Vector2(6989, 592)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="WalletPanel"]
-script = ExtResource("12_1sxs8")
-show_mouse = true
 
 [node name="Panel4" type="Node2D" parent="."]
 position = Vector2(8712, 553)
@@ -159,8 +156,6 @@ texture = ExtResource("28_wfupk")
 position = Vector2(29909, 540)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="PregnancyPanel"]
-script = ExtResource("12_1sxs8")
-show_mouse = true
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
 position = Vector2(32286, 625)
