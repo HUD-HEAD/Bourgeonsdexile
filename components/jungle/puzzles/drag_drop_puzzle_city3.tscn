@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cytmwcqal7dqa" path="res://graphics/ui/junglepuzzles/9/2_9.png" id="5_jfj68"]
 [ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="6_5dsy8"]
 [ext_resource type="Texture2D" uid="uid://dqgkd7hsslub" path="res://graphics/ui/junglepuzzles/9/3_9.png" id="7_qvwxu"]
-[ext_resource type="Texture2D" uid="uid://n6t1c2fkhcqn" path="res://graphics/ui/junglepuzzles/9/full9.png" id="8_ww50s"]
+[ext_resource type="Texture2D" uid="uid://df7ys7fm6wf4a" path="res://graphics/ui/citypuzzles/drawingbubbles/full9drawing.png" id="8_wnoic"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cf7dc"]
 size = Vector2(167, 201)
@@ -25,7 +25,7 @@ puzzle_pieces = [NodePath("BuildingBlocks/PuzzlePiece"), NodePath("BuildingBlock
 texture = ExtResource("2_wnoic")
 
 [node name="PuzzlePiece" parent="BuildingBlocks" index="0"]
-position = Vector2(-241, -6)
+position = Vector2(-228, -6)
 
 [node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece/Draggable" index="0"]
 texture = ExtResource("3_qaxec")
@@ -38,10 +38,10 @@ position = Vector2(-4.5, -2.5)
 shape = SubResource("RectangleShape2D_cf7dc")
 
 [node name="Receptacle" parent="BuildingBlocks" index="1"]
-position = Vector2(-241, -6)
+position = Vector2(-228, -6)
 
 [node name="PuzzlePiece3" parent="BuildingBlocks" index="2" instance=ExtResource("4_ce8re")]
-position = Vector2(-44, 8)
+position = Vector2(-39, 8)
 
 [node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece3/Draggable" index="0"]
 texture = ExtResource("5_jfj68")
@@ -54,10 +54,10 @@ position = Vector2(-1, -6)
 shape = SubResource("RectangleShape2D_nh7y2")
 
 [node name="Receptacle3" parent="BuildingBlocks" index="3" instance=ExtResource("6_5dsy8")]
-position = Vector2(-44, 8)
+position = Vector2(-39, 8)
 
 [node name="PuzzlePiece2" parent="BuildingBlocks" index="4" instance=ExtResource("4_ce8re")]
-position = Vector2(191, -2)
+position = Vector2(180, -3)
 
 [node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece2/Draggable" index="0"]
 texture = ExtResource("7_qvwxu")
@@ -71,10 +71,10 @@ rotation = 0.22016566
 shape = SubResource("RectangleShape2D_jqsfi")
 
 [node name="Receptacle2" parent="BuildingBlocks" index="5" instance=ExtResource("6_5dsy8")]
-position = Vector2(191, -2)
+position = Vector2(180, -3)
 
 [node name="CompletePuzzle" parent="." index="2"]
-texture = ExtResource("8_ww50s")
+texture = ExtResource("8_wnoic")
 
 [editable path="BuildingBlocks/PuzzlePiece"]
 [editable path="BuildingBlocks/PuzzlePiece3"]
