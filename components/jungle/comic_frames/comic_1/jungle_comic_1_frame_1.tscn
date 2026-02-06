@@ -1,55 +1,146 @@
-[gd_scene load_steps=11 format=3 uid="uid://dxje8kcv8ykkm"]
+[gd_scene load_steps=10 format=3 uid="uid://dxje8kcv8ykkm"]
 
 [ext_resource type="Texture2D" uid="uid://b1kq3hpvjdvft" path="res://graphics/jungle/jungle_comic1/frame1/frame1_1.png" id="1_8r138"]
 [ext_resource type="Texture2D" uid="uid://dj0v82ndb5ddu" path="res://graphics/jungle/jungle_comic1/frame1/frame1_2.png" id="2_pgcst"]
-[ext_resource type="Texture2D" uid="uid://cr863n17iknbj" path="res://graphics/jungle/jungle_comic1/frame1/frame1_3.png" id="3_uw430"]
 [ext_resource type="Texture2D" uid="uid://cn01oh2w837m4" path="res://graphics/jungle/jungle_comic1/frame1/frame1_4.png" id="4_u3rfc"]
-[ext_resource type="Texture2D" uid="uid://cktpk4jppqb5m" path="res://graphics/jungle/jungle_comic1/frame1/frame1_5.png" id="5_s5flc"]
-[ext_resource type="Texture2D" uid="uid://dui60y2f31tuq" path="res://graphics/jungle/jungle_comic1/frame1/frame1_6.png" id="6_g3prj"]
 [ext_resource type="Texture2D" uid="uid://t7vpedh330ns" path="res://graphics/jungle/jungle_comic1/frame1/frame1_7.png" id="7_er6hy"]
 [ext_resource type="Texture2D" uid="uid://csvi015jm6vp2" path="res://graphics/jungle/jungle_comic1/frame1/frame1_8.png" id="8_xpmsf"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="9_qx2pv"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_ucrt7"]
-animations = [{
-"frames": [{
-"duration": 2.0,
-"texture": ExtResource("1_8r138")
-}, {
-"duration": 2.0,
-"texture": ExtResource("2_pgcst")
-}, {
-"duration": 2.0,
-"texture": ExtResource("3_uw430")
-}, {
-"duration": 2.0,
-"texture": ExtResource("4_u3rfc")
-}, {
-"duration": 2.0,
-"texture": ExtResource("5_s5flc")
-}, {
-"duration": 2.0,
-"texture": ExtResource("6_g3prj")
-}, {
-"duration": 2.0,
-"texture": ExtResource("7_er6hy")
-}, {
-"duration": 2.0,
-"texture": ExtResource("8_xpmsf")
-}],
-"loop": false,
-"name": &"default",
-"speed": 5.0
-}]
+[sub_resource type="Animation" id="Animation_vek8b"]
+resource_name = "default"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D2:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D3:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(4, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D5_LightOn:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_stins"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D2:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D3:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D5_LightOn:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_stins"]
+_data = {
+&"RESET": SubResource("Animation_stins"),
+&"default": SubResource("Animation_vek8b")
+}
 
 [node name="JungleComic1Frame1" type="Node2D"]
 metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_ucrt7")
-autoplay = "default"
-frame = 7
-frame_progress = 1.0
-
-[node name="AutomaticPanner" type="Node" parent="."]
+[node name="AutomaticPanner" type="Node" parent="." node_paths=PackedStringArray("anim_player")]
 script = ExtResource("9_qx2pv")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_stins")
+}
+autoplay = "default"
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+texture = ExtResource("7_er6hy")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+texture = ExtResource("4_u3rfc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture = ExtResource("2_pgcst")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8r138")
+
+[node name="Sprite2D5_LightOn" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("8_xpmsf")

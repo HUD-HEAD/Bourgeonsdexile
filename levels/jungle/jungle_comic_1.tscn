@@ -1,7 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://du7xk8lrsn7at"]
+[gd_scene load_steps=17 format=3 uid="uid://du7xk8lrsn7at"]
 
 [ext_resource type="PackedScene" uid="uid://dxje8kcv8ykkm" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_1.tscn" id="2_7p1v8"]
-[ext_resource type="Script" uid="uid://ds0m4hygkuj81" path="res://components/utils/comics/set_mouse_visibility.gd" id="4_l35no"]
 [ext_resource type="PackedScene" uid="uid://cbouhlj8xssdp" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_2.tscn" id="5_7p1v8"]
 [ext_resource type="PackedScene" uid="uid://c60nnmob4jcv3" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_tv.tscn" id="5_rhbtc"]
 [ext_resource type="PackedScene" uid="uid://cpqe48imup7qq" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_5.tscn" id="11_p78bu"]
@@ -47,7 +46,6 @@ editor_draw_limits = true
 position = Vector2(960, 540)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame1"]
-script = ExtResource("4_l35no")
 
 [node name="JuncleComic1TVAndSwitch" parent="." instance=ExtResource("5_rhbtc")]
 position = Vector2(3210, 496)
@@ -65,16 +63,12 @@ position = Vector2(6995, 540)
 
 [node name="VisibleOnScreenEnabler2D2" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame2"]
 position = Vector2(323, 0)
-script = ExtResource("4_l35no")
-show_mouse = true
 
 [node name="JungleComic1Frame3" parent="." instance=ExtResource("32_ynlpr")]
 position = Vector2(9537, 540)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame3"]
 position = Vector2(855, 0)
-script = ExtResource("4_l35no")
-show_mouse = true
 
 [node name="JungleComic1Frame4" parent="." instance=ExtResource("35_jpuy7")]
 position = Vector2(11448, 540)
@@ -82,8 +76,6 @@ scale = Vector2(0.675, 0.675)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame4"]
 position = Vector2(829.62964, 157.03703)
-script = ExtResource("4_l35no")
-show_mouse = true
 
 [node name="JungleComic1Frame5" parent="." instance=ExtResource("11_p78bu")]
 position = Vector2(13485, 540)

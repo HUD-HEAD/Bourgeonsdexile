@@ -10,11 +10,9 @@ func _ready() -> void:
 
 func show_mouse():
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	
-#TODO remove hiding logic if unused
+
 func hide_mouse():
-	#Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
-	pass
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event.is_action_pressed("exit"):
@@ -26,15 +24,16 @@ func _unhandled_key_input(event: InputEvent) -> void:
 #TESTING
 var resource : Resource = ResourceLoader.load("res://components/utils/debug/debug_scene_list.tres")
 
+## Only enabled in debug builds
 func _debug_inputs(event : InputEvent) -> void :
 	if event.is_action_pressed("debug_speed_up"):
 		Engine.time_scale *= 2
 		print_debug("Speed up x", Engine.time_scale)
-	if event.is_action_pressed("debug_speed_down"):
+	elif event.is_action_pressed("debug_speed_down"):
 		Engine.time_scale /= 2
 		print_debug("Speed down x", Engine.time_scale)
 		
-	if Input.is_action_pressed("debug_enable_scene_switch"):
+	elif Input.is_action_pressed("debug_enable_scene_switch"):
 		if event is InputEventKey and event.pressed:
 			#Number pressed (0..9)
 			if event.keycode >= 48 && event.keycode <= 57:
@@ -42,3 +41,8 @@ func _debug_inputs(event : InputEvent) -> void :
 				print_debug("Debug loading scene ", idx)
 				if idx < resource.ordered_scene_list.size():
 					SceneManager.goto_scene(resource.ordered_scene_list[idx])
+					
+	elif Input.is_action_just_pressed_by_event("debug_next", event):
+		SignalManager.obstacle_cleared.emit()
+		SignalManager.next_panel.emit()
+	

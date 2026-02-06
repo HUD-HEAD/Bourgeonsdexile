@@ -1,4 +1,4 @@
-[gd_scene load_steps=102 format=3 uid="uid://s3spdg0qqc77"]
+[gd_scene load_steps=124 format=3 uid="uid://s3spdg0qqc77"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_1rybe"]
 [ext_resource type="Texture2D" uid="uid://nwpw7ynann6x" path="res://graphics/separated_Ciity/separated_Ciity/sky.png" id="2_y6iwd"]
@@ -98,6 +98,24 @@
 [ext_resource type="Texture2D" uid="uid://dshbskbmrw8ps" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0038.png" id="54_1stae"]
 [ext_resource type="Texture2D" uid="uid://b88y6a4mfw45a" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0039.png" id="55_ivtva"]
 [ext_resource type="Texture2D" uid="uid://bececty2m32aw" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0040.png" id="56_3pi56"]
+[ext_resource type="Texture2D" uid="uid://dybv6dxdpjkya" path="res://graphics/npcs/NPC_scratch/NPC_scratch_0001.png" id="92_6i01r"]
+[ext_resource type="PackedScene" path="res://components/jungle/puzzles/drag_drop_puzzle_city2.tscn" id="92_glm23"]
+[ext_resource type="Texture2D" uid="uid://dpfg3agtveh17" path="res://graphics/npcs/NPC_scratch/NPC_scratch_0002.png" id="93_6a1y3"]
+[ext_resource type="Texture2D" uid="uid://cip8a3d1l63fp" path="res://graphics/npcs/NPC_scratch/NPC_scratch_0003.png" id="94_bmptc"]
+[ext_resource type="Texture2D" uid="uid://crstnn7oli130" path="res://graphics/npcs/NPC_scratch/NPC_scratch_0004.png" id="95_85lf4"]
+[ext_resource type="Texture2D" uid="uid://lb3a2jwiuw8a" path="res://graphics/npcs/NPC_scratch/NPC_scratch_0005.png" id="96_n1e2f"]
+[ext_resource type="Texture2D" uid="uid://d28xiqlf6bw16" path="res://graphics/npcs/NPC_scratch/NPC_scratch_0006.png" id="97_bu6uh"]
+[ext_resource type="Texture2D" uid="uid://bc8jmkcij4bqy" path="res://graphics/npcs/NPC_scratch/NPC_scratch_0007.png" id="98_0emhe"]
+[ext_resource type="Texture2D" uid="uid://c6prohoosnstx" path="res://graphics/npcs/NPC_scratch/NPC_scratch_0008.png" id="99_48jwk"]
+[ext_resource type="Texture2D" uid="uid://dvqhwhj6637ct" path="res://graphics/npcs/NPC_scratch/NPC_scratch_0009.png" id="100_gfrou"]
+[ext_resource type="PackedScene" uid="uid://c67602tb8xxco" path="res://components/jungle/puzzles/drag_drop_puzzle_city3.tscn" id="100_lvrd1"]
+[ext_resource type="Texture2D" uid="uid://b88tau6gvsse" path="res://graphics/npcs/NPC_scratch/NPC_scratch_0010.png" id="101_g33cy"]
+[ext_resource type="Texture2D" uid="uid://brp2ino5on1c5" path="res://graphics/npcs/NPC_scratch/NPC_scratch_0011.png" id="102_4pmbw"]
+[ext_resource type="Texture2D" uid="uid://dkrbeds5wsfs1" path="res://graphics/npcs/NPC_scratch/NPC_scratch_0012.png" id="103_m43oo"]
+[ext_resource type="Texture2D" uid="uid://cx1qjlegent63" path="res://graphics/npcs/NPC_scratch/NPC_scratch_0013.png" id="104_1uobj"]
+[ext_resource type="Texture2D" uid="uid://bjlix6a0jhi5m" path="res://graphics/npcs/NPC_scratch/NPC_scratch_0014.png" id="105_ivhbv"]
+[ext_resource type="Texture2D" uid="uid://lkq8fm0m2xcs" path="res://graphics/npcs/NPC_scratch/NPC_scratch_0015.png" id="106_tb7nj"]
+[ext_resource type="Texture2D" uid="uid://b2ofbjbcdyevx" path="res://graphics/npcs/NPC_scratch/NPC_scratch_0016.png" id="107_als8u"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_48jwk"]
 animations = [{
@@ -328,6 +346,197 @@ animations = [{
 "speed": 30.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_glm23"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("92_6i01r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_6a1y3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_bmptc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_85lf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_n1e2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_bu6uh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_0emhe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_48jwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_gfrou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_g33cy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_4pmbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_m43oo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_1uobj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_ivhbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_tb7nj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_als8u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6i01r"]
+radius = 33.0
+height = 194.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6i01r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_0e4jn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1ef0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7vmws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_wnr3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_87pol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_kb1iy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_t7cj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_8tpqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_t1lcu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_epxg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_qn67w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ywo5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_h58on")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_1htsu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_ltqcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_w01qx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_i2uwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_n8xu1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ftnp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_ipwtb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_613ou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_ldo7p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_0n1hy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_kr413")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_ptqxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_10pnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_q584l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_y505e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_q6d34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_xqten")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_5lbna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_c32fv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_hobs1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_umov5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_uqsyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_glm23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_lvrd1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_1stae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_ivtva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_3pi56")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6i01r"]
+size = Vector2(102, 102)
+
 [node name="JungleCity" type="Node2D"]
 
 [node name="Background" type="CanvasLayer" parent="."]
@@ -429,7 +638,7 @@ position = Vector2(3516, 543)
 texture = ExtResource("9_hi7ti")
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="Background"]
-position = Vector2(5065, 645)
+position = Vector2(5862, 645)
 script = ExtResource("11_jpgwf")
 next_scene = ExtResource("12_jpgwf")
 
@@ -497,6 +706,72 @@ puzzle = NodePath("..")
 piece_spawners = [NodePath("../../../YSorting/JungleWoman/MarkerBubbleSpawn"), NodePath("../../Npc2/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../Npc2/Clickable")
 obstacle = NodePath("../../Obstacle")
+
+[node name="Puzzle3" type="Node2D" parent="."]
+position = Vector2(2466, 0)
+
+[node name="Npc2" type="AnimatedSprite2D" parent="Puzzle3"]
+position = Vector2(311, 818)
+sprite_frames = SubResource("SpriteFrames_glm23")
+autoplay = "default"
+
+[node name="Clickable" type="Area2D" parent="Puzzle3/Npc2"]
+position = Vector2(0, -3)
+script = ExtResource("16_0tvtc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle3/Npc2/Clickable"]
+shape = SubResource("CapsuleShape2D_6i01r")
+
+[node name="MarkerBubbleSpawn" type="Marker2D" parent="Puzzle3/Npc2"]
+position = Vector2(-1, -215)
+
+[node name="Obstacle" parent="Puzzle3" instance=ExtResource("13_8tq2l")]
+collision_mask = 2
+
+[node name="DragDropPuzzle" parent="Puzzle3" instance=ExtResource("92_glm23")]
+position = Vector2(232, 586)
+rotation = -0.015458716
+scale = Vector2(0.7, 0.7)
+
+[node name="PuzzleSpawner" type="Node" parent="Puzzle3/DragDropPuzzle" node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+script = ExtResource("17_4dc1s")
+puzzle = NodePath("..")
+piece_spawners = [NodePath("../../../YSorting/JungleWoman/MarkerBubbleSpawn"), NodePath("../../Npc2/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../../Npc2/Clickable")
+obstacle = NodePath("../../Obstacle")
+
+[node name="Puzzle4" type="Node2D" parent="."]
+position = Vector2(4269, 0)
+
+[node name="Npc1" type="AnimatedSprite2D" parent="Puzzle4"]
+position = Vector2(311, 765)
+sprite_frames = SubResource("SpriteFrames_6i01r")
+autoplay = "default"
+flip_h = true
+
+[node name="Clickable" type="Area2D" parent="Puzzle4/Npc1"]
+position = Vector2(0, -28)
+script = ExtResource("16_0tvtc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle4/Npc1/Clickable"]
+shape = SubResource("RectangleShape2D_6i01r")
+
+[node name="MarkerBubbleSpawn" type="Marker2D" parent="Puzzle4/Npc1"]
+position = Vector2(-1, -215)
+
+[node name="DragDropPuzzle2" parent="Puzzle4" instance=ExtResource("100_lvrd1")]
+position = Vector2(161, 542)
+scale = Vector2(0.7, 0.7)
+
+[node name="PuzzleSpawner" type="Node" parent="Puzzle4/DragDropPuzzle2" node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+script = ExtResource("17_4dc1s")
+puzzle = NodePath("..")
+piece_spawners = [NodePath("../../../YSorting/JungleWoman/MarkerBubbleSpawn"), NodePath("../../Npc1/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../../Npc1/Clickable")
+obstacle = NodePath("../../Obstacle")
+
+[node name="Obstacle" parent="Puzzle4" instance=ExtResource("13_8tq2l")]
+collision_mask = 2
 
 [node name="YSorting" type="Node2D" parent="."]
 y_sort_enabled = true

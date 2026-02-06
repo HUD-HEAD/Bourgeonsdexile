@@ -17,8 +17,9 @@ var camera : Camera2D
 ## Index of current panel
 var idx : int = 0
 
-
 func _ready() -> void:
+	for panel in panels:
+		assert(panel != null, "A panel is not assigned")
 	camera = get_viewport().get_camera_2d()
 	SignalManager.next_panel.connect(_next_panel)
 	
@@ -29,7 +30,6 @@ func _next_panel():
 	assert(idx + 1< panels.size(), "idx inside panels number")
 	idx += 1
 	
-	InputManager.hide_mouse()
 	_pan_to(panels[idx])
 
 
