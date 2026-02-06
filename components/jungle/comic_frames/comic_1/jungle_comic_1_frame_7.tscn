@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bi4kbbnyg1r6g"]
+[gd_scene load_steps=13 format=3 uid="uid://bi4kbbnyg1r6g"]
 
 [ext_resource type="Texture2D" uid="uid://buh8kyqwxmowe" path="res://graphics/comic1rexported/Frame7/frame7_background.png" id="1_lo0kl"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_1vgm7"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://bk17pejrvpwfq" path="res://components/utils/follow_mouse.gd" id="8_i6sxp"]
 [ext_resource type="Texture2D" uid="uid://bsnw46m5wbbuj" path="res://graphics/jungle/jungle_comic1/frame7/bird6.png" id="8_wk1cn"]
 [ext_resource type="Texture2D" uid="uid://bnafgdfr5e6fy" path="res://graphics/comic1rexported/Frame7/frame7_toplayer.png" id="9_j0nmg"]
+[ext_resource type="AudioStream" uid="uid://daslh5k4i63sy" path="res://audio/sfx/sea-waves-169411.mp3" id="11_j0nmg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g4jaw"]
 animations = [{
@@ -65,3 +66,7 @@ texture = ExtResource("9_j0nmg")
 
 [node name="AutomaticPanner" type="Node" parent="."]
 script = ExtResource("2_1vgm7")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_j0nmg")
+autoplay = true

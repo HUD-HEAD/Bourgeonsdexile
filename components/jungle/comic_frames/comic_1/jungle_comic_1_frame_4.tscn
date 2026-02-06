@@ -16,8 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://pn3pdyh745qp" path="res://graphics/jungle/jungle_comic1/frame4/tableitems/frame4_wallet.png" id="11_hm6l7"]
 [ext_resource type="Texture2D" uid="uid://c75r7njk4vwpr" path="res://graphics/jungle/jungle_comic1/frame4/frame4_blindlight.png" id="13_dgwin"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="15_txu23"]
+[ext_resource type="AudioStream" uid="uid://coljvpvmigovo" path="res://audio/sfx/clicking-interface-select-201946.mp3" id="18_tieow"]
 [ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/sfx_player.tscn" id="18_uox85"]
-[ext_resource type="AudioStream" uid="uid://2esuihwh4qer" path="res://audio/sfx/click.mp3" id="19_tieow"]
 [ext_resource type="AudioStream" uid="uid://b5v4fqb6mtolu" path="res://audio/sfx/select-denied.wav" id="19_uox85"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xlh8w"]
@@ -185,7 +185,7 @@ transition_delay = 0.2
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="SfxPlayer" parent="." node_paths=PackedStringArray("clickables") instance=ExtResource("18_uox85")]
-stream = ExtResource("19_tieow")
+stream = ExtResource("18_tieow")
 max_polyphony = 3
 clickables = [NodePath("../Frame4Drawer/JungleItem"), NodePath("../Frame4Drawer/JungleItem2"), NodePath("../Frame4Drawer/JungleItem3"), NodePath("../Frame4Table/JungleItem"), NodePath("../Frame4Table/JungleItem2"), NodePath("../Frame4Table/JungleItem3"), NodePath("../Frame4Table/JungleItem4"), NodePath("../Frame4Table/JungleItem5")]
 

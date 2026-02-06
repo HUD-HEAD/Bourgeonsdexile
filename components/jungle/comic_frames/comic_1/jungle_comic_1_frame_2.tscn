@@ -32,7 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://c2qclx8s821r6" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction7.png" id="27_hijka"]
 [ext_resource type="Texture2D" uid="uid://cirkkungp4y15" path="res://graphics/jungle/jungle_comic1/frame2/frame2_destruction/frame2_destruction8.png" id="28_oqqh3"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="29_f5xcq"]
-[ext_resource type="Script" path="res://components/utils/click_enable.gd" id="30_khho4"]
+[ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/click_enable.gd" id="30_khho4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_37uka"]
 animations = [{
@@ -339,3 +339,5 @@ node_to_enable = NodePath("../AnimationPlayer")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerAnimation"]
 position = Vector2(40, -60)
 shape = SubResource("RectangleShape2D_khho4")
+
+[node name="Audio_argument" type="AudioStreamPlayer2D" parent="."]
