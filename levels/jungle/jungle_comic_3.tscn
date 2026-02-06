@@ -50,7 +50,7 @@ editor_draw_limits = true
 
 [node name="PanelPanner" type="Node" parent="." node_paths=PackedStringArray("panels")]
 script = ExtResource("15_sw7mp")
-panels = [NodePath("../JungleComic3FrameLajas"), NodePath("../JungleComic3FrameHug"), NodePath("../Comic3Panel3"), NodePath("../JungleComic3FrameBackpack"), NodePath("../JungleComic3FramePhone"), null, NodePath("../JungleComic3FrameFood"), NodePath("../Comic3Panel8"), NodePath("../JungleComic3FrameKidLajas"), NodePath("../JungleComic3FrameAyuda"), NodePath("../Comic3Panel11"), NodePath("../JungleComic3FrameFolders"), NodePath("../Comic3Panel13"), NodePath("../Comic3Panel14"), NodePath("../Comic3Panel15"), NodePath("../Comic3Panel16"), NodePath("../SceneEnder")]
+panels = [NodePath("../JungleComic3FrameLajas"), NodePath("../JungleComic3FrameHug"), NodePath("../Comic3Panel3"), NodePath("../JungleComic3FrameBackpack"), NodePath("../JungleComic3FramePhone"), NodePath("../JungleComic3FrameCare"), NodePath("../JungleComic3FrameFood"), NodePath("../Comic3Panel8"), NodePath("../JungleComic3FrameKidLajas"), NodePath("../JungleComic3FrameAyuda"), NodePath("../Comic3Panel11"), NodePath("../JungleComic3FrameFolders"), NodePath("../Comic3Panel13"), NodePath("../Comic3Panel14"), NodePath("../Comic3Panel15"), NodePath("../Comic3Panel16"), NodePath("../SceneEnder")]
 
 [node name="UI" parent="." instance=ExtResource("16_scavv")]
 
@@ -68,6 +68,9 @@ position = Vector2(9212, 537)
 [node name="JungleComic3FramePhone" parent="." instance=ExtResource("8_7jm3w")]
 position = Vector2(11295, 540)
 
+[node name="JungleComic3FrameCare" parent="." instance=ExtResource("16_txuxr")]
+position = Vector2(13642, 524.0005)
+
 [node name="JungleComic3FrameFood" parent="." instance=ExtResource("7_mqqsv")]
 position = Vector2(16036, 540)
 
@@ -84,11 +87,6 @@ position = Vector2(22850, 540)
 [node name="JungleComic3FrameFolders" parent="." instance=ExtResource("6_lc348")]
 position = Vector2(27096, 550)
 
-[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(37115, 540)
-script = ExtResource("12_txuxr")
-next_scene = ExtResource("13_dx01d")
-
 [node name="Comic3Panel3" type="Sprite2D" parent="."]
 position = Vector2(7077, 540)
 texture = ExtResource("14_txuxr")
@@ -97,9 +95,6 @@ texture = ExtResource("14_txuxr")
 
 [node name="Transition" type="Node" parent="Comic3Panel3"]
 script = ExtResource("13_c4j60")
-
-[node name="JungleComic3FrameCare" parent="." instance=ExtResource("16_txuxr")]
-position = Vector2(13642, 524.0005)
 
 [node name="Comic3Panel8" type="Sprite2D" parent="."]
 position = Vector2(18363, 540)
@@ -154,3 +149,8 @@ texture = ExtResource("22_txuxr")
 
 [node name="Transition" type="Node" parent="Comic3Panel16"]
 script = ExtResource("13_c4j60")
+
+[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(37115, 540)
+script = ExtResource("12_txuxr")
+next_scene = ExtResource("13_dx01d")

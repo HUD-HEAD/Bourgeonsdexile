@@ -1,4 +1,5 @@
 ##Used on "passive" comic panels to trigger transition when animation is finished, or at the end of timer
+class_name TransitionerPassive
 extends Node
 
 ##Transition will trigger when animation ends

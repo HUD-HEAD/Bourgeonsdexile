@@ -24,7 +24,6 @@ func _process(delta: float) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if dragging && event.is_action_released("select_element"):
-		dragging = false
 		_drop()
 
 func _action_on_click():
@@ -52,5 +51,10 @@ func _on_mouse_entered():
 		SignalManager.set_cursor_shape.emit(Input.CURSOR_POINTING_HAND)
 
 func _drop():
+	dragging = false
 	SignalManager.set_cursor_shape.emit(Input.CURSOR_POINTING_HAND)
 	dropped.emit()
+
+func disable():
+	_drop()
+	super()

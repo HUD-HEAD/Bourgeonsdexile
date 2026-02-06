@@ -1,3 +1,4 @@
+class_name TransitionerCounter
 extends Node
 
 @export var clickables : Array[Clickable]
@@ -24,8 +25,6 @@ func _on_obstacle_cleared():
 		#Disable interaction
 		for clickable in clickables:
 			clickable.clicked.disconnect(_on_obstacle_cleared)
-		
-		InputManager.hide_mouse()
 		
 		
 		#TASK refactor to centralize delay transition?

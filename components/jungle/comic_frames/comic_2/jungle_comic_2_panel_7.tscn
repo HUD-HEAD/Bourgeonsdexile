@@ -1,0 +1,229 @@
+[gd_scene load_steps=15 format=3 uid="uid://b5asjt0f4mcsd"]
+
+[ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/area_entered_enable.gd" id="1_jt4ib"]
+[ext_resource type="Texture2D" uid="uid://dck2d2oa5u7j8" path="res://graphics/comic2godot/frame7/back.png" id="1_xdeu1"]
+[ext_resource type="Texture2D" uid="uid://rxgc5mkyqcj7" path="res://graphics/comic2godot/frame7/frame7_hand2.png" id="2_ams0i"]
+[ext_resource type="Texture2D" uid="uid://coy7ml4byonu2" path="res://graphics/comic2godot/frame6and9/1.png" id="2_jt4ib"]
+[ext_resource type="Texture2D" uid="uid://ctj71vxsnh2xs" path="res://graphics/comic2godot/frame6and9/2.png" id="3_dheej"]
+[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="3_jt4ib"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="5_dheej"]
+[ext_resource type="Texture2D" uid="uid://sapjtumatwp0" path="res://graphics/comic2godot/frame7/frame7_hand1.png" id="5_rjer4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dheej"]
+size = Vector2(1092, 669)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tvvi7"]
+radius = 219.8982
+height = 938.71484
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_58fyg"]
+size = Vector2(952, 601)
+
+[sub_resource type="Animation" id="Animation_jt4ib"]
+resource_name = "interrupt_shake"
+length = 0.5
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NinaHand")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03333333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"disable"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NinaHand/1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.03333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NinaHand/Frame7Hand1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.03333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ShadyHand/Frame7Hand2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.03333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ShadyHand/2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.03333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Back:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.03333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_xdeu1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NinaHand/1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NinaHand/Frame7Hand1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ShadyHand/Frame7Hand2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ShadyHand/2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Back:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dheej"]
+_data = {
+&"RESET": SubResource("Animation_xdeu1"),
+&"interrupt_shake": SubResource("Animation_jt4ib")
+}
+
+[node name="Panel7" type="Node2D"]
+
+[node name="Back" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_xdeu1")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+
+[node name="ShadyHand" type="Area2D" parent="." node_paths=PackedStringArray("node_to_enable")]
+position = Vector2(541, -52)
+collision_layer = 4
+collision_mask = 4
+input_pickable = false
+script = ExtResource("1_jt4ib")
+node_to_enable = NodePath("../AnimationPlayer")
+
+[node name="Frame7Hand2" type="Sprite2D" parent="ShadyHand"]
+visible = false
+texture = ExtResource("2_ams0i")
+
+[node name="2" type="Sprite2D" parent="ShadyHand"]
+texture = ExtResource("3_dheej")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShadyHand"]
+position = Vector2(-39, 27.5)
+shape = SubResource("RectangleShape2D_dheej")
+
+[node name="NinaHand" type="Area2D" parent="."]
+position = Vector2(-970, 54)
+script = ExtResource("3_jt4ib")
+
+[node name="DraggableCollisionShape2D" type="CollisionShape2D" parent="NinaHand"]
+position = Vector2(12, -3.5)
+rotation = -1.2656564
+shape = SubResource("CapsuleShape2D_tvvi7")
+
+[node name="1" type="Sprite2D" parent="NinaHand"]
+texture = ExtResource("2_jt4ib")
+
+[node name="Frame7Hand1" type="Sprite2D" parent="NinaHand"]
+visible = false
+texture = ExtResource("5_rjer4")
+
+[node name="ShadyHandDetection" type="Area2D" parent="NinaHand"]
+collision_layer = 4
+collision_mask = 4
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NinaHand/ShadyHandDetection"]
+shape = SubResource("RectangleShape2D_58fyg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_dheej")
+}
+autoplay = "interrupt_shake"
+
+[node name="TransitionerPassive" type="Node" parent="." node_paths=PackedStringArray("anim_player")]
+script = ExtResource("5_dheej")
+anim_player = NodePath("../AnimationPlayer")
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
