@@ -7,13 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://djyan8ubtutll" path="res://components/jungle/comic_frames/comic_2/wallet_panel.tscn" id="10_dkeqa"]
 [ext_resource type="Script" uid="uid://ds0m4hygkuj81" path="res://components/utils/comics/set_mouse_visibility.gd" id="12_1sxs8"]
 [ext_resource type="PackedScene" uid="uid://crfrjw42dcsks" path="res://components/jungle/comic_frames/comic_2/pregnancy_panel.tscn" id="12_exkuh"]
+[ext_resource type="PackedScene" uid="uid://ckqe0ckfq2chw" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_5.tscn" id="12_mtmad"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="12_su3g7"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="14_fekbj"]
 [ext_resource type="Texture2D" uid="uid://b2thr4dhispb" path="res://graphics/comic2godot/frame4/4.png" id="14_r5vgt"]
 [ext_resource type="PackedScene" uid="uid://b5asjt0f4mcsd" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_7.tscn" id="14_tvvi7"]
 [ext_resource type="PackedScene" uid="uid://o324t3l05s7q" path="res://levels/jungle/jungle_with_puzzles.tscn" id="15_1sxs8"]
 [ext_resource type="PackedScene" uid="uid://bj7e73nkbbtwn" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_9.tscn" id="15_mtmad"]
-[ext_resource type="Texture2D" uid="uid://e0p3nkkunn5u" path="res://graphics/comic2godot/frame5/5.png" id="15_r5vgt"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="17_1sxs8"]
 [ext_resource type="PackedScene" uid="uid://43c07utlirv7" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_11.tscn" id="18_tmikl"]
 [ext_resource type="Texture2D" uid="uid://boylw4aegtqki" path="res://graphics/comic2panels/comic2_panel6.jpg" id="21_t1h5n"]
@@ -47,11 +47,6 @@ grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("1_l3y4y")
 stretch_mode = 1
-
-[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(30734, 625)
-script = ExtResource("14_fekbj")
-next_scene = ExtResource("15_1sxs8")
 
 [node name="PanelPanner" type="Node" parent="." node_paths=PackedStringArray("panels")]
 script = ExtResource("12_su3g7")
@@ -91,16 +86,8 @@ script = ExtResource("3_e56vw")
 [node name="4" type="Sprite2D" parent="Panel4"]
 texture = ExtResource("14_r5vgt")
 
-[node name="Panel5" type="Node2D" parent="."]
+[node name="Panel5" parent="." instance=ExtResource("12_mtmad")]
 position = Vector2(10547, 553)
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel5"]
-
-[node name="Transition" type="Node" parent="Panel5"]
-script = ExtResource("3_e56vw")
-
-[node name="5" type="Sprite2D" parent="Panel5"]
-texture = ExtResource("15_r5vgt")
 
 [node name="Panel6" type="Node2D" parent="."]
 position = Vector2(12563, 553)
@@ -133,10 +120,10 @@ texture = ExtResource("25_5t051")
 script = ExtResource("3_e56vw")
 
 [node name="Panel11" parent="." instance=ExtResource("18_tmikl")]
-position = Vector2(21568, 553.5)
+position = Vector2(22124, 553.5)
 
 [node name="Panel12" type="Node2D" parent="."]
-position = Vector2(23573, 553.5)
+position = Vector2(24129, 553.5)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel12"]
 
@@ -147,7 +134,7 @@ script = ExtResource("3_e56vw")
 texture = ExtResource("26_wfupk")
 
 [node name="Panel13" type="Node2D" parent="."]
-position = Vector2(25624, 553.5)
+position = Vector2(26180, 553.5)
 
 [node name="JungleEntry" type="Sprite2D" parent="Panel13"]
 texture = ExtResource("24_tvvi7")
@@ -158,7 +145,7 @@ texture = ExtResource("24_tvvi7")
 script = ExtResource("3_e56vw")
 
 [node name="Panel14" type="Node2D" parent="."]
-position = Vector2(27536, 553.5)
+position = Vector2(28092, 553.5)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel14"]
 
@@ -169,8 +156,13 @@ script = ExtResource("3_e56vw")
 texture = ExtResource("28_wfupk")
 
 [node name="PregnancyPanel" parent="." instance=ExtResource("12_exkuh")]
-position = Vector2(29353, 540)
+position = Vector2(29909, 540)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="PregnancyPanel"]
 script = ExtResource("12_1sxs8")
 show_mouse = true
+
+[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(32286, 625)
+script = ExtResource("14_fekbj")
+next_scene = ExtResource("15_1sxs8")
