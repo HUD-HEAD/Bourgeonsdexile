@@ -1,0 +1,63 @@
+[gd_scene load_steps=16 format=3 uid="uid://t5ryyl5men4c"]
+
+[ext_resource type="PackedScene" uid="uid://d2f3ss3fi8c52" path="res://levels/jungle/lajas_blancas.tscn" id="1_ybsg7"]
+[ext_resource type="PackedScene" uid="uid://cx455fd0kkpbt" path="res://components/jungle/puzzles/drag_drop_puzzle_LB3.tscn" id="2_6ujr2"]
+[ext_resource type="PackedScene" uid="uid://b0rp3ag1qca1u" path="res://components/jungle/puzzles/drag_drop_puzzle_LB1.tscn" id="3_ofnvs"]
+[ext_resource type="PackedScene" uid="uid://dpbnilttq2thf" path="res://components/jungle/puzzles/drag_drop_puzzle_LB2.tscn" id="4_ei3u7"]
+[ext_resource type="PackedScene" uid="uid://bhqtwxr4stcnp" path="res://components/jungle/puzzles/drag_drop_puzzle_LB4.tscn" id="5_3d1qd"]
+[ext_resource type="PackedScene" uid="uid://dhktyk6ijdbuk" path="res://components/jungle/puzzles/drag_drop_puzzle_LB5.tscn" id="6_ipa1p"]
+[ext_resource type="PackedScene" uid="uid://bh1eiis125pe" path="res://components/jungle/puzzles/drag_drop_puzzle_LB6.tscn" id="7_digt6"]
+[ext_resource type="PackedScene" uid="uid://ddnvdwl518yu7" path="res://components/jungle/puzzles/drag_drop_puzzle_LB7.tscn" id="8_7lwlr"]
+[ext_resource type="PackedScene" uid="uid://bmvhhuyvjwsll" path="res://components/jungle/puzzles/drag_drop_puzzle_LB8.tscn" id="9_tu6gp"]
+[ext_resource type="PackedScene" uid="uid://ciylsrd7212qd" path="res://components/jungle/puzzles/drag_drop_puzzle_LB9.tscn" id="10_jddk7"]
+[ext_resource type="PackedScene" uid="uid://i7mqsprajlbc" path="res://components/jungle/puzzles/drag_drop_puzzle_LB10.tscn" id="11_bvssu"]
+[ext_resource type="PackedScene" uid="uid://b327i7m8yo6ne" path="res://components/jungle/puzzles/drag_drop_puzzle_LB11.tscn" id="12_rh5w5"]
+[ext_resource type="PackedScene" uid="uid://dukdhksfphdhb" path="res://components/jungle/puzzles/drag_drop_puzzle_LB12.tscn" id="13_d3rx4"]
+[ext_resource type="PackedScene" uid="uid://0qs0gh3kedj3" path="res://components/jungle/puzzles/drag_drop_puzzle_LB13.tscn" id="14_vuei2"]
+[ext_resource type="PackedScene" uid="uid://0sd3o1afbqf1" path="res://components/jungle/puzzles/drag_drop_puzzle_LB14.tscn" id="15_yqg42"]
+
+[node name="LajasBlancas" instance=ExtResource("1_ybsg7")]
+
+[node name="LajasBlancas" parent="." index="8" instance=ExtResource("1_ybsg7")]
+
+[node name="DragDropPuzzle" parent="." index="9" instance=ExtResource("2_6ujr2")]
+position = Vector2(1001, 608)
+
+[node name="DragDropPuzzle2" parent="." index="10" instance=ExtResource("3_ofnvs")]
+position = Vector2(2340, 487)
+
+[node name="DragDropPuzzle3" parent="." index="11" instance=ExtResource("4_ei3u7")]
+position = Vector2(5146, 495)
+
+[node name="DragDropPuzzle4" parent="." index="12" instance=ExtResource("5_3d1qd")]
+position = Vector2(3798, 652)
+
+[node name="DragDropPuzzle5" parent="." index="13" instance=ExtResource("6_ipa1p")]
+position = Vector2(1413, 591)
+
+[node name="DragDropPuzzle6" parent="." index="14" instance=ExtResource("7_digt6")]
+position = Vector2(3250, 641)
+
+[node name="DragDropPuzzle7" parent="." index="15" instance=ExtResource("8_7lwlr")]
+position = Vector2(736, 587)
+
+[node name="DragDropPuzzle8" parent="." index="16" instance=ExtResource("9_tu6gp")]
+position = Vector2(1834, 601)
+
+[node name="DragDropPuzzle9" parent="." index="17" instance=ExtResource("10_jddk7")]
+position = Vector2(3994, 550)
+
+[node name="DragDropPuzzle10" parent="." index="18" instance=ExtResource("11_bvssu")]
+position = Vector2(4427, 562)
+
+[node name="DragDropPuzzle11" parent="." index="19" instance=ExtResource("12_rh5w5")]
+position = Vector2(1621, 503)
+
+[node name="DragDropPuzzle12" parent="." index="20" instance=ExtResource("13_d3rx4")]
+position = Vector2(4262, 633)
+
+[node name="DragDropPuzzle13" parent="." index="21" instance=ExtResource("14_vuei2")]
+position = Vector2(3461, 646)
+
+[node name="DragDropPuzzle14" parent="." index="22" instance=ExtResource("15_yqg42")]
+position = Vector2(1197, 416)

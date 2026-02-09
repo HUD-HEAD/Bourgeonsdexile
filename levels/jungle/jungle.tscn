@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cjq4fleiu5245"]
+[gd_scene load_steps=24 format=3 uid="uid://cjq4fleiu5245"]
 
 [ext_resource type="Texture2D" uid="uid://dglmyp3qpsn7n" path="res://graphics/jungle/junglepieces/1/water1.png" id="1_nqhdg"]
 [ext_resource type="Texture2D" uid="uid://e6dbtl7rw04o" path="res://graphics/jungle/junglepieces/water1.png" id="2_mtlks"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://deifii0sv125i" path="res://levels/jungle/jungle_comic_3.tscn" id="17_aqo8c"]
 [ext_resource type="PackedScene" uid="uid://d246c0iqqddvh" path="res://components/jungle/rain.tscn" id="18_nqhdg"]
 [ext_resource type="Script" uid="uid://gchp60e2jp5r" path="res://components/utils/set_camera_bounds.gd" id="19_31ufg"]
+[ext_resource type="AudioStream" uid="uid://1bh8jat7waj1" path="res://audio/sfx/jungle-nature-229896.mp3" id="20_5j4y3"]
 
 [sub_resource type="Curve2D" id="Curve2D_8pokd"]
 _data = {
@@ -175,5 +176,9 @@ script = ExtResource("19_31ufg")
 camera = NodePath("../Path2D/PathFollow2D/JungleWoman/Camera2D")
 limit_top = -484
 limit_bottom = 596
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("20_5j4y3")
+autoplay = true
 
 [editable path="Path2D/PathFollow2D_Reflection/ReflectionContainer/JungleWomanReflection"]
