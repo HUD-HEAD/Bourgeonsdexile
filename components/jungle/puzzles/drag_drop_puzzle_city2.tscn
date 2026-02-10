@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c57ylw3q4gnr4"]
+[gd_scene format=3 uid="uid://c57ylw3q4gnr4"]
 
 [ext_resource type="PackedScene" uid="uid://8imm2g6332ef" path="res://components/utils/puzzles/dragdrop_puzzle_template.tscn" id="1_tevol"]
 [ext_resource type="Texture2D" uid="uid://1m5psqctqx70" path="res://graphics/ui/junglepuzzles/2/empty2.png" id="2_4ad4x"]
@@ -19,7 +19,7 @@ height = 216.59872
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xw64n"]
 size = Vector2(165.63376, 208.87909)
 
-[node name="DragDropPuzzle" node_paths=PackedStringArray("puzzle_pieces") instance=ExtResource("1_tevol")]
+[node name="DragDropPuzzle" unique_id=1873803394 node_paths=PackedStringArray("puzzle_pieces") instance=ExtResource("1_tevol")]
 puzzle_pieces = [NodePath("BuildingBlocks/PuzzlePiece"), NodePath("BuildingBlocks/PuzzlePiece2"), NodePath("BuildingBlocks/PuzzlePiece3")]
 
 [node name="OutlinePuzzle" parent="." index="0"]
@@ -42,7 +42,7 @@ shape = SubResource("RectangleShape2D_ollje")
 [node name="Receptacle" parent="BuildingBlocks" index="1"]
 position = Vector2(-161, 27)
 
-[node name="PuzzlePiece2" parent="BuildingBlocks" index="2" instance=ExtResource("4_nn1hj")]
+[node name="PuzzlePiece2" parent="BuildingBlocks" index="2" unique_id=1932002971 instance=ExtResource("4_nn1hj")]
 position = Vector2(-19, 1)
 
 [node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece2/Draggable" index="0"]
@@ -56,10 +56,10 @@ position = Vector2(4, -5)
 rotation = -0.08237213
 shape = SubResource("CapsuleShape2D_8tv1w")
 
-[node name="Receptacle2" parent="BuildingBlocks" index="3" instance=ExtResource("6_k7xcx")]
+[node name="Receptacle2" parent="BuildingBlocks" index="3" unique_id=2041742038 instance=ExtResource("6_k7xcx")]
 position = Vector2(-19, 1)
 
-[node name="PuzzlePiece3" parent="BuildingBlocks" index="4" instance=ExtResource("4_nn1hj")]
+[node name="PuzzlePiece3" parent="BuildingBlocks" index="4" unique_id=1700809214 instance=ExtResource("4_nn1hj")]
 position = Vector2(147, 16)
 
 [node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece3/Draggable" index="0"]
@@ -74,7 +74,7 @@ rotation = -1.458487
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_xw64n")
 
-[node name="Receptacle3" parent="BuildingBlocks" index="5" instance=ExtResource("6_k7xcx")]
+[node name="Receptacle3" parent="BuildingBlocks" index="5" unique_id=1192346744 instance=ExtResource("6_k7xcx")]
 position = Vector2(147, 16)
 
 [node name="CompletePuzzle" parent="." index="2"]

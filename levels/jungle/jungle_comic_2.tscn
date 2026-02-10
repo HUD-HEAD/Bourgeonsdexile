@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://djv5fkem5af34"]
+[gd_scene format=3 uid="uid://djv5fkem5af34"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_l3y4y"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="3_e56vw"]
@@ -21,9 +21,9 @@
 [ext_resource type="Texture2D" uid="uid://0qyoh0oivc1a" path="res://graphics/comic2godot/frame10/frame10.png" id="26_wfupk"]
 [ext_resource type="Texture2D" uid="uid://cng327eniiaxf" path="res://graphics/comic2godot/frame12/frame12.png" id="28_wfupk"]
 
-[node name="JungleComic2" type="Node2D"]
+[node name="JungleComic2" type="Node2D" unique_id=1529693680]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=879913626]
 position = Vector2(960, 540)
 limit_enabled = false
 limit_left = 0
@@ -32,11 +32,11 @@ limit_smoothed = true
 position_smoothing_enabled = true
 editor_draw_limits = true
 
-[node name="PaperBackground" type="CanvasLayer" parent="."]
+[node name="PaperBackground" type="CanvasLayer" parent="." unique_id=386031760]
 layer = -1
 follow_viewport_enabled = true
 
-[node name="TextureRect" type="TextureRect" parent="PaperBackground"]
+[node name="TextureRect" type="TextureRect" parent="PaperBackground" unique_id=1112361794]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -47,117 +47,117 @@ mouse_filter = 2
 texture = ExtResource("1_l3y4y")
 stretch_mode = 1
 
-[node name="PanelPanner" type="Node" parent="." node_paths=PackedStringArray("panels")]
+[node name="PanelPanner" type="Node" parent="." unique_id=1746052083 node_paths=PackedStringArray("panels")]
 script = ExtResource("12_su3g7")
 panels = [NodePath("../Panel1"), NodePath("../Panel2"), NodePath("../WalletPanel"), NodePath("../Panel4"), NodePath("../Panel5"), NodePath("../Panel6"), NodePath("../Panel7"), NodePath("../Panel9"), NodePath("../Panel10"), NodePath("../Panel11"), NodePath("../Panel12"), NodePath("../Panel13"), NodePath("../Panel14"), NodePath("../PregnancyPanel"), NodePath("../SceneEnder")]
 
-[node name="UI" parent="." instance=ExtResource("17_1sxs8")]
+[node name="UI" parent="." unique_id=39001016 instance=ExtResource("17_1sxs8")]
 
-[node name="Panel1" type="Node2D" parent="."]
+[node name="Panel1" type="Node2D" parent="." unique_id=226482990]
 position = Vector2(2981, 553)
 
-[node name="Frame1" type="Sprite2D" parent="Panel1"]
+[node name="Frame1" type="Sprite2D" parent="Panel1" unique_id=1744451837]
 texture = ExtResource("6_nbn5v")
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel1"]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel1" unique_id=1093343523]
 
-[node name="Transition" type="Node" parent="Panel1"]
+[node name="Transition" type="Node" parent="Panel1" unique_id=1659705266]
 script = ExtResource("3_e56vw")
 
-[node name="Panel2" parent="." instance=ExtResource("8_mtmad")]
+[node name="Panel2" parent="." unique_id=1995977721 instance=ExtResource("8_mtmad")]
 position = Vector2(5076, 553)
 
-[node name="WalletPanel" parent="." instance=ExtResource("10_dkeqa")]
+[node name="WalletPanel" parent="." unique_id=748957798 instance=ExtResource("10_dkeqa")]
 position = Vector2(6989, 592)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="WalletPanel"]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="WalletPanel" unique_id=1264381907]
 
-[node name="Panel4" type="Node2D" parent="."]
+[node name="Panel4" type="Node2D" parent="." unique_id=840944870]
 position = Vector2(8712, 553)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel4"]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel4" unique_id=1075871577]
 
-[node name="Transition" type="Node" parent="Panel4"]
+[node name="Transition" type="Node" parent="Panel4" unique_id=1560664868]
 script = ExtResource("3_e56vw")
 
-[node name="4" type="Sprite2D" parent="Panel4"]
+[node name="4" type="Sprite2D" parent="Panel4" unique_id=1094962570]
 texture = ExtResource("14_r5vgt")
 
-[node name="Panel5" parent="." instance=ExtResource("12_mtmad")]
+[node name="Panel5" parent="." unique_id=322320134 instance=ExtResource("12_mtmad")]
 position = Vector2(10547, 553)
 
-[node name="Panel6" type="Node2D" parent="."]
+[node name="Panel6" type="Node2D" parent="." unique_id=444964391]
 position = Vector2(12563, 553)
 
-[node name="Comic2Panel" type="Sprite2D" parent="Panel6"]
+[node name="Comic2Panel" type="Sprite2D" parent="Panel6" unique_id=220844797]
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("21_t1h5n")
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel6"]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel6" unique_id=29961976]
 
-[node name="Transition" type="Node" parent="Panel6"]
+[node name="Transition" type="Node" parent="Panel6" unique_id=1443469717]
 script = ExtResource("3_e56vw")
 
-[node name="Panel7" parent="." instance=ExtResource("14_tvvi7")]
+[node name="Panel7" parent="." unique_id=332429161 instance=ExtResource("14_tvvi7")]
 position = Vector2(15104, 553)
 
-[node name="Panel9" parent="." instance=ExtResource("15_mtmad")]
+[node name="Panel9" parent="." unique_id=2076499636 instance=ExtResource("15_mtmad")]
 position = Vector2(17672, 553.5)
 
-[node name="Panel10" type="Node2D" parent="."]
+[node name="Panel10" type="Node2D" parent="." unique_id=1324713941]
 position = Vector2(19538, 553.5)
 
-[node name="Comic2Panel" type="Sprite2D" parent="Panel10"]
+[node name="Comic2Panel" type="Sprite2D" parent="Panel10" unique_id=822639049]
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("25_5t051")
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel10"]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel10" unique_id=1219773409]
 
-[node name="Transition" type="Node" parent="Panel10"]
+[node name="Transition" type="Node" parent="Panel10" unique_id=80774272]
 script = ExtResource("3_e56vw")
 
-[node name="Panel11" parent="." instance=ExtResource("18_tmikl")]
+[node name="Panel11" parent="." unique_id=1835400465 instance=ExtResource("18_tmikl")]
 position = Vector2(22124, 553.5)
 
-[node name="Panel12" type="Node2D" parent="."]
+[node name="Panel12" type="Node2D" parent="." unique_id=1167769039]
 position = Vector2(24129, 553.5)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel12"]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel12" unique_id=1551194544]
 
-[node name="Transition" type="Node" parent="Panel12"]
+[node name="Transition" type="Node" parent="Panel12" unique_id=2127879640]
 script = ExtResource("3_e56vw")
 
-[node name="Frame10" type="Sprite2D" parent="Panel12"]
+[node name="Frame10" type="Sprite2D" parent="Panel12" unique_id=623910623]
 texture = ExtResource("26_wfupk")
 
-[node name="Panel13" type="Node2D" parent="."]
+[node name="Panel13" type="Node2D" parent="." unique_id=390280365]
 position = Vector2(26180, 553.5)
 
-[node name="JungleEntry" type="Sprite2D" parent="Panel13"]
+[node name="JungleEntry" type="Sprite2D" parent="Panel13" unique_id=1645546289]
 texture = ExtResource("24_tvvi7")
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel13"]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel13" unique_id=2077655564]
 
-[node name="Transition" type="Node" parent="Panel13"]
+[node name="Transition" type="Node" parent="Panel13" unique_id=28427997]
 script = ExtResource("3_e56vw")
 
-[node name="Panel14" type="Node2D" parent="."]
+[node name="Panel14" type="Node2D" parent="." unique_id=401187145]
 position = Vector2(28092, 553.5)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel14"]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel14" unique_id=1567603170]
 
-[node name="Transition" type="Node" parent="Panel14"]
+[node name="Transition" type="Node" parent="Panel14" unique_id=1888646682]
 script = ExtResource("3_e56vw")
 
-[node name="Frame12" type="Sprite2D" parent="Panel14"]
+[node name="Frame12" type="Sprite2D" parent="Panel14" unique_id=1834752637]
 texture = ExtResource("28_wfupk")
 
-[node name="PregnancyPanel" parent="." instance=ExtResource("12_exkuh")]
+[node name="PregnancyPanel" parent="." unique_id=1862232058 instance=ExtResource("12_exkuh")]
 position = Vector2(29909, 540)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="PregnancyPanel"]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="PregnancyPanel" unique_id=1925319365]
 
-[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
+[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=395772265]
 position = Vector2(32286, 625)
 script = ExtResource("14_fekbj")
 next_scene = ExtResource("15_1sxs8")

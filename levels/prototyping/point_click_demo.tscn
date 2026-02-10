@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://0mic1rucdlj6"]
+[gd_scene format=3 uid="uid://0mic1rucdlj6"]
 
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="1_gfnqf"]
 
@@ -8,15 +8,15 @@ size = Vector2(102, 102)
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gfnqf"]
 size = Vector2(50, 50)
 
-[node name="PointClickDemo" type="Node2D"]
+[node name="PointClickDemo" type="Node2D" unique_id=1617362480]
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1341152033]
 position = Vector2(623, 319)
 script = ExtResource("1_gfnqf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1356916089]
 shape = SubResource("RectangleShape2D_vdiy3")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=7999625]
 position = Vector2(3, 3)
 texture = SubResource("PlaceholderTexture2D_gfnqf")

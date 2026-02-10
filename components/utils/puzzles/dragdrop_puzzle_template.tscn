@@ -1,29 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://8imm2g6332ef"]
+[gd_scene format=3 uid="uid://8imm2g6332ef"]
 
 [ext_resource type="Script" uid="uid://chrql2wwvrdt1" path="res://components/utils/puzzles/drag_drop_puzzle.gd" id="1_6s0d0"]
 [ext_resource type="PackedScene" uid="uid://b15l0pq6dea3h" path="res://components/utils/puzzles/puzzle_piece_template.tscn" id="2_wx184"]
 [ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="3_2pncr"]
 
-[node name="DragDropPuzzle" type="Node2D" node_paths=PackedStringArray("complete_image", "outline_image")]
+[node name="DragDropPuzzle" type="Node2D" unique_id=1889271473 node_paths=PackedStringArray("complete_image", "outline_image")]
 editor_description = "To create new drag and drop puzzles, in FileSystem -> Right click --> New inherited scene, then modify and save new scene."
 script = ExtResource("1_6s0d0")
 complete_image = NodePath("CompletePuzzle")
 outline_image = NodePath("OutlinePuzzle")
 
-[node name="OutlinePuzzle" type="Sprite2D" parent="."]
+[node name="OutlinePuzzle" type="Sprite2D" parent="." unique_id=1513168459]
 editor_description = "Outline hint of puzzle. Should be at the top of hierarchy."
 
-[node name="BuildingBlocks" type="Node2D" parent="."]
+[node name="BuildingBlocks" type="Node2D" parent="." unique_id=1654234455]
 editor_description = "Helper ode to hold children. Duplicate as many PuzzlePiece and Receptacles as needed for complete puzzle."
 
-[node name="PuzzlePiece" parent="BuildingBlocks" instance=ExtResource("2_wx184")]
+[node name="PuzzlePiece" parent="BuildingBlocks" unique_id=1667760579 instance=ExtResource("2_wx184")]
 
 [node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece/Draggable" index="2"]
 shape = null
 
-[node name="Receptacle" parent="BuildingBlocks" instance=ExtResource("3_2pncr")]
+[node name="Receptacle" parent="BuildingBlocks" unique_id=1559191435 instance=ExtResource("3_2pncr")]
 
-[node name="CompletePuzzle" type="Sprite2D" parent="."]
+[node name="CompletePuzzle" type="Sprite2D" parent="." unique_id=1933061263]
 editor_description = "Image to show when puzzle is complete. Should be at the bottom of hierarchy."
 visible = false
 

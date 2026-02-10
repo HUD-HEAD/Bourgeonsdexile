@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://bq0ewephc3xv5"]
+[gd_scene format=3 uid="uid://bq0ewephc3xv5"]
 
 [ext_resource type="Texture2D" uid="uid://bytentpt5mbag" path="res://graphics/jungle/jungle_comic1/frame4/frame4_drawer.png" id="1_qb8vt"]
 [ext_resource type="Texture2D" uid="uid://cvfvfiy4rr3qe" path="res://graphics/jungle/jungle_comic1/frame4/draweritems/frame4_box.png" id="2_n2g0o"]
@@ -52,144 +52,144 @@ size = Vector2(310.5031, 425.72833)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p2opm"]
 size = Vector2(337.69998, 245.50806)
 
-[node name="JungleComic1Frame4" type="Node2D"]
+[node name="JungleComic1Frame4" type="Node2D" unique_id=409787196]
 
-[node name="Frame4Drawer" type="Sprite2D" parent="."]
+[node name="Frame4Drawer" type="Sprite2D" parent="." unique_id=369667034]
 position = Vector2(0, 353)
 texture = ExtResource("1_qb8vt")
 
-[node name="PadUnpickable" type="Area2D" parent="Frame4Drawer"]
+[node name="PadUnpickable" type="Area2D" parent="Frame4Drawer" unique_id=979681376]
 position = Vector2(318.5, -171.5)
 script = ExtResource("3_v4vw6")
 
-[node name="Pad" type="Sprite2D" parent="Frame4Drawer/PadUnpickable"]
+[node name="Pad" type="Sprite2D" parent="Frame4Drawer/PadUnpickable" unique_id=1827138147]
 texture = ExtResource("2_xlh8w")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Drawer/PadUnpickable"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Drawer/PadUnpickable" unique_id=1781565943]
 position = Vector2(-17, 14)
 shape = SubResource("RectangleShape2D_xlh8w")
 
-[node name="TamponUnpickable" type="Area2D" parent="Frame4Drawer"]
+[node name="TamponUnpickable" type="Area2D" parent="Frame4Drawer" unique_id=166016316]
 position = Vector2(-494, -216.5)
 script = ExtResource("3_v4vw6")
 
-[node name="Tampon" type="Sprite2D" parent="Frame4Drawer/TamponUnpickable"]
+[node name="Tampon" type="Sprite2D" parent="Frame4Drawer/TamponUnpickable" unique_id=533884761]
 texture = ExtResource("3_wvg57")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Drawer/TamponUnpickable"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Drawer/TamponUnpickable" unique_id=1337041637]
 position = Vector2(-43.437744, 54.573517)
 rotation = 0.45204028
 shape = SubResource("RectangleShape2D_wvg57")
 
-[node name="JungleItem" parent="Frame4Drawer" instance=ExtResource("2_tphwk")]
+[node name="JungleItem" parent="Frame4Drawer" unique_id=999679064 instance=ExtResource("2_tphwk")]
 position = Vector2(444, -203)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Drawer/JungleItem"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Drawer/JungleItem" unique_id=1567184529]
 rotation = -0.33161256
 scale = Vector2(1.0211614, 1.1778235)
 shape = SubResource("RectangleShape2D_n2g0o")
 
-[node name="Frame4Box" type="Sprite2D" parent="Frame4Drawer/JungleItem"]
+[node name="Frame4Box" type="Sprite2D" parent="Frame4Drawer/JungleItem" unique_id=1817545945]
 texture = ExtResource("2_n2g0o")
 
-[node name="JungleItem2" parent="Frame4Drawer" instance=ExtResource("2_tphwk")]
+[node name="JungleItem2" parent="Frame4Drawer" unique_id=1085642232 instance=ExtResource("2_tphwk")]
 position = Vector2(-15, -257)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Drawer/JungleItem2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Drawer/JungleItem2" unique_id=132337128]
 position = Vector2(-5.855961, 5.090515)
 rotation = -0.715585
 shape = SubResource("RectangleShape2D_tphwk")
 
-[node name="Frame4Notebook" type="Sprite2D" parent="Frame4Drawer/JungleItem2"]
+[node name="Frame4Notebook" type="Sprite2D" parent="Frame4Drawer/JungleItem2" unique_id=1190818598]
 texture = ExtResource("3_tphwk")
 
-[node name="JungleItem3" parent="Frame4Drawer" instance=ExtResource("2_tphwk")]
+[node name="JungleItem3" parent="Frame4Drawer" unique_id=763034826 instance=ExtResource("2_tphwk")]
 position = Vector2(-269, -189)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Drawer/JungleItem3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Drawer/JungleItem3" unique_id=551036499]
 position = Vector2(-14.138163, 3.6475525)
 rotation = -0.128928
 shape = SubResource("RectangleShape2D_71kyb")
 
-[node name="Frame4Passport" type="Sprite2D" parent="Frame4Drawer/JungleItem3"]
+[node name="Frame4Passport" type="Sprite2D" parent="Frame4Drawer/JungleItem3" unique_id=2047761113]
 texture = ExtResource("4_71kyb")
 
-[node name="Frame4Table" type="Sprite2D" parent="."]
+[node name="Frame4Table" type="Sprite2D" parent="." unique_id=962305065]
 position = Vector2(12, -220)
 texture = ExtResource("6_qme1i")
 
-[node name="JungleItem" parent="Frame4Table" instance=ExtResource("2_tphwk")]
+[node name="JungleItem" parent="Frame4Table" unique_id=900931304 instance=ExtResource("2_tphwk")]
 position = Vector2(-481, -121)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Table/JungleItem"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Table/JungleItem" unique_id=605078922]
 position = Vector2(-1.9439049, -6.9309235)
 rotation = 0.73073214
 shape = SubResource("RectangleShape2D_qme1i")
 
-[node name="Frame4Biggerpills" type="Sprite2D" parent="Frame4Table/JungleItem"]
+[node name="Frame4Biggerpills" type="Sprite2D" parent="Frame4Table/JungleItem" unique_id=121375632]
 texture = ExtResource("7_hhjir")
 
-[node name="JungleItem2" parent="Frame4Table" instance=ExtResource("2_tphwk")]
+[node name="JungleItem2" parent="Frame4Table" unique_id=1902639452 instance=ExtResource("2_tphwk")]
 position = Vector2(-316, 174)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Table/JungleItem2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Table/JungleItem2" unique_id=1739432317]
 rotation = -0.98866993
 shape = SubResource("CapsuleShape2D_hhjir")
 
-[node name="Frame4Keys" type="Sprite2D" parent="Frame4Table/JungleItem2"]
+[node name="Frame4Keys" type="Sprite2D" parent="Frame4Table/JungleItem2" unique_id=1497708564]
 texture = ExtResource("8_3l804")
 
-[node name="JungleItem3" parent="Frame4Table" instance=ExtResource("2_tphwk")]
+[node name="JungleItem3" parent="Frame4Table" unique_id=1374036224 instance=ExtResource("2_tphwk")]
 position = Vector2(101, 107)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Table/JungleItem3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Table/JungleItem3" unique_id=202125541]
 rotation = 1.1879138
 shape = SubResource("CapsuleShape2D_txu23")
 
-[node name="Frame4Pen" type="Sprite2D" parent="Frame4Table/JungleItem3"]
+[node name="Frame4Pen" type="Sprite2D" parent="Frame4Table/JungleItem3" unique_id=1059588609]
 texture = ExtResource("9_p2opm")
 
-[node name="JungleItem4" parent="Frame4Table" instance=ExtResource("2_tphwk")]
+[node name="JungleItem4" parent="Frame4Table" unique_id=2143417485 instance=ExtResource("2_tphwk")]
 position = Vector2(501, -8)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Frame4Table/JungleItem4"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Frame4Table/JungleItem4" unique_id=2007203200]
 position = Vector2(-7.4515896, -4.2070465)
 rotation = 0.4223697
 shape = SubResource("RectangleShape2D_l206v")
 
-[node name="Frame4Picture" type="Sprite2D" parent="Frame4Table/JungleItem4"]
+[node name="Frame4Picture" type="Sprite2D" parent="Frame4Table/JungleItem4" unique_id=1240266977]
 texture = ExtResource("10_l206v")
 
-[node name="JungleItem5" parent="Frame4Table" instance=ExtResource("2_tphwk")]
+[node name="JungleItem5" parent="Frame4Table" unique_id=149560919 instance=ExtResource("2_tphwk")]
 position = Vector2(0, -97)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Table/JungleItem5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame4Table/JungleItem5" unique_id=65089841]
 position = Vector2(-0.1342889, -5.29158)
 rotation = 0.4605565
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_p2opm")
 
-[node name="Frame4Wallet" type="Sprite2D" parent="Frame4Table/JungleItem5"]
+[node name="Frame4Wallet" type="Sprite2D" parent="Frame4Table/JungleItem5" unique_id=891791365]
 texture = ExtResource("11_hm6l7")
 
-[node name="Frame4Blindlight" type="Sprite2D" parent="."]
+[node name="Frame4Blindlight" type="Sprite2D" parent="." unique_id=1287019331]
 position = Vector2(-764, 0)
 texture = ExtResource("13_dgwin")
 
-[node name="TransitionTriggerCounter" type="Node" parent="." node_paths=PackedStringArray("clickables")]
+[node name="TransitionTriggerCounter" type="Node" parent="." unique_id=1630834598 node_paths=PackedStringArray("clickables")]
 script = ExtResource("15_txu23")
 clickables = [NodePath("../Frame4Drawer/JungleItem"), NodePath("../Frame4Drawer/JungleItem2"), NodePath("../Frame4Drawer/JungleItem3"), NodePath("../Frame4Table/JungleItem"), NodePath("../Frame4Table/JungleItem2"), NodePath("../Frame4Table/JungleItem3"), NodePath("../Frame4Table/JungleItem4"), NodePath("../Frame4Table/JungleItem5")]
 obstacles_to_clear = 6
 transition_delay = 0.2
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1033315157]
 
-[node name="SfxPlayer" parent="." node_paths=PackedStringArray("clickables") instance=ExtResource("18_uox85")]
+[node name="SfxPlayer" parent="." unique_id=164942882 node_paths=PackedStringArray("clickables") instance=ExtResource("18_uox85")]
 stream = ExtResource("18_tieow")
 max_polyphony = 3
 clickables = [NodePath("../Frame4Drawer/JungleItem"), NodePath("../Frame4Drawer/JungleItem2"), NodePath("../Frame4Drawer/JungleItem3"), NodePath("../Frame4Table/JungleItem"), NodePath("../Frame4Table/JungleItem2"), NodePath("../Frame4Table/JungleItem3"), NodePath("../Frame4Table/JungleItem4"), NodePath("../Frame4Table/JungleItem5")]
 
-[node name="SfxPlayerWiggle" parent="." node_paths=PackedStringArray("clickables") instance=ExtResource("18_uox85")]
+[node name="SfxPlayerWiggle" parent="." unique_id=1164983062 node_paths=PackedStringArray("clickables") instance=ExtResource("18_uox85")]
 stream = ExtResource("19_uox85")
 max_polyphony = 3
 clickables = [NodePath("../Frame4Drawer/PadUnpickable"), NodePath("../Frame4Drawer/TamponUnpickable")]

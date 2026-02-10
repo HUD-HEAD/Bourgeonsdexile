@@ -1,12 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://6o5rd25j0g6n"]
+[gd_scene format=3 uid="uid://6o5rd25j0g6n"]
 
 [ext_resource type="PackedScene" uid="uid://bd7g0rb56ib48" path="res://components/jungle/comic_frames/comic_1/jungle_comic_candle.tscn" id="1_fwj6i"]
 [ext_resource type="PackedScene" uid="uid://bw2hx77bhrdqm" path="res://components/utils/ui/fake_cursor.tscn" id="2_ax1k2"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=2128405639]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1944945181]
 
-[node name="JungleComicCandle" parent="." instance=ExtResource("1_fwj6i")]
+[node name="JungleComicCandle" parent="." unique_id=6148841 instance=ExtResource("1_fwj6i")]
 
-[node name="CanvasLayer" parent="." instance=ExtResource("2_ax1k2")]
+[node name="CanvasLayer" parent="." unique_id=1817139757 instance=ExtResource("2_ax1k2")]

@@ -1,13 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bw2hx77bhrdqm"]
+[gd_scene format=3 uid="uid://bw2hx77bhrdqm"]
 
 [ext_resource type="Script" uid="uid://ll0ulaf0yi10" path="res://components/utils/ui/fake_cursor.gd" id="1_7frh8"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1119556648]
 layer = 100
 
-[node name="Cursor" type="Node2D" parent="."]
+[node name="Cursor" type="Node2D" parent="." unique_id=185331758]
 modulate = Color(0.13414744, 0.39808804, 0.6963055, 1)
 script = ExtResource("1_7frh8")
 
-[node name="Sprite2D" type="Sprite2D" parent="Cursor"]
+[node name="Sprite2D" type="Sprite2D" parent="Cursor" unique_id=441989365]
 centered = false

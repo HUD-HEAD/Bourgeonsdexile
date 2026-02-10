@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://c60nnmob4jcv3"]
+[gd_scene format=3 uid="uid://c60nnmob4jcv3"]
 
 [ext_resource type="Texture2D" uid="uid://6jx5m8bdu3h6" path="res://graphics/comic1rexported/frame_tv/Frame_NewTV/tv_plane.png" id="1_0f3k4"]
 [ext_resource type="Texture2D" uid="uid://cw4mxuoe3gkqp" path="res://graphics/comic1rexported/frame_tv/Frame_NewTV/tv_house.png" id="2_yhgim"]
@@ -157,53 +157,51 @@ _data = {
 &"tv_program": SubResource("Animation_iiijh")
 }
 
-[node name="JungleComic1TV" type="Node2D"]
+[node name="JungleComic1TV" type="Node2D" unique_id=1075139342]
 
-[node name="TV" type="AnimatedSprite2D" parent="."]
+[node name="TV" type="AnimatedSprite2D" parent="." unique_id=1209582364]
 sprite_frames = SubResource("SpriteFrames_x2xsn")
 
-[node name="JungleComic1Switch" type="Node2D" parent="."]
+[node name="JungleComic1Switch" type="Node2D" parent="." unique_id=920370709]
 position = Vector2(542.96045, -81.37256)
 scale = Vector2(0.425, 0.425)
 
-[node name="Area2D" type="Area2D" parent="JungleComic1Switch" node_paths=PackedStringArray("switch_sprite")]
+[node name="Area2D" type="Area2D" parent="JungleComic1Switch" unique_id=1205829577 node_paths=PackedStringArray("switch_sprite")]
 visible = false
 position = Vector2(-2263.4365, -483.82928)
 script = ExtResource("6_w8ui6")
 switch_sprite = NodePath("FrameSwitchOn/FrameSwitchOff")
 
-[node name="FrameSwitchOn" type="Sprite2D" parent="JungleComic1Switch/Area2D"]
+[node name="FrameSwitchOn" type="Sprite2D" parent="JungleComic1Switch/Area2D" unique_id=1477134424]
 texture = ExtResource("7_0f3k4")
 
-[node name="SparkAnim" type="AnimatedSprite2D" parent="JungleComic1Switch/Area2D/FrameSwitchOn"]
+[node name="SparkAnim" type="AnimatedSprite2D" parent="JungleComic1Switch/Area2D/FrameSwitchOn" unique_id=1138014947]
 position = Vector2(-42.259884, 0.8766085)
 sprite_frames = SubResource("SpriteFrames_bgwx2")
 autoplay = "default"
 frame_progress = 0.84531903
 
-[node name="FrameSwitchOff" type="Sprite2D" parent="JungleComic1Switch/Area2D/FrameSwitchOn"]
+[node name="FrameSwitchOff" type="Sprite2D" parent="JungleComic1Switch/Area2D/FrameSwitchOn" unique_id=1211981835]
 visible = false
 texture = ExtResource("15_yhgim")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="JungleComic1Switch/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JungleComic1Switch/Area2D" unique_id=51664537]
 position = Vector2(-53.529297, -25.882385)
 scale = Vector2(1.0000002, 1.0000002)
 shape = SubResource("RectangleShape2D_10q3j")
 
-[node name="TransitionTriggerCounter" type="Node" parent="." node_paths=PackedStringArray("clickables")]
+[node name="TransitionTriggerCounter" type="Node" parent="." unique_id=214892479 node_paths=PackedStringArray("clickables")]
 script = ExtResource("16_3q4tr")
 clickables = [NodePath("../JungleComic1Switch/Area2D")]
 obstacles_to_clear = 3
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_dbttd")
-}
-autoplay = "tv_program"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1284053497]
+libraries/ = SubResource("AnimationLibrary_dbttd")
+autoplay = &"tv_program"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1940552800]
 bus = &"Sfx"
 
-[node name="SfxPlayer" parent="." node_paths=PackedStringArray("clickables") instance=ExtResource("18_yhgim")]
+[node name="SfxPlayer" parent="." unique_id=1590780289 node_paths=PackedStringArray("clickables") instance=ExtResource("18_yhgim")]
 stream = ExtResource("19_q81xc")
 clickables = [NodePath("../JungleComic1Switch/Area2D")]

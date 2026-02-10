@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://crfrjw42dcsks"]
+[gd_scene format=3 uid="uid://crfrjw42dcsks"]
 
 [ext_resource type="Texture2D" uid="uid://i70lw3wo2dc3" path="res://graphics/comic2godot/pregnancy/pregnancy_1.png" id="1_jd6ya"]
 [ext_resource type="Texture2D" uid="uid://2c6nrhvf8e3k" path="res://graphics/comic2godot/pregnancy/pregnancy_2.png" id="2_raeum"]
@@ -24,24 +24,24 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_psjyq"]
 size = Vector2(349, 276)
 
-[node name="PregnancyPanel" type="Node2D"]
+[node name="PregnancyPanel" type="Node2D" unique_id=1113327811]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=106886218]
 sprite_frames = SubResource("SpriteFrames_c2o8n")
 autoplay = "default"
 
-[node name="Area2D" type="Area2D" parent="." node_paths=PackedStringArray("node_to_enable")]
+[node name="Area2D" type="Area2D" parent="." unique_id=1377196913 node_paths=PackedStringArray("node_to_enable")]
 script = ExtResource("3_raeum")
 node_to_enable = NodePath("../AnimatedSprite2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1449317877]
 position = Vector2(61.5, 208)
 shape = SubResource("RectangleShape2D_psjyq")
 
-[node name="TransitionTriggerCounter" type="Node" parent="." node_paths=PackedStringArray("clickables")]
+[node name="TransitionTriggerCounter" type="Node" parent="." unique_id=1270788183 node_paths=PackedStringArray("clickables")]
 script = ExtResource("4_ceywx")
 clickables = [NodePath("../Area2D")]
 
-[node name="SfxPlayer" parent="." node_paths=PackedStringArray("clickables") instance=ExtResource("5_psjyq")]
+[node name="SfxPlayer" parent="." unique_id=679183344 node_paths=PackedStringArray("clickables") instance=ExtResource("5_psjyq")]
 stream = ExtResource("6_ts6dw")
 clickables = [NodePath("../Area2D")]

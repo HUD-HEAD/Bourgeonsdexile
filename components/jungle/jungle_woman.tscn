@@ -1,4 +1,4 @@
-[gd_scene load_steps=104 format=3 uid="uid://cyyx1fl7vyhle"]
+[gd_scene format=3 uid="uid://cyyx1fl7vyhle"]
 
 [ext_resource type="Texture2D" uid="uid://depu80p5p07vp" path="res://graphics/jungle/MC_idle/MC_idle_0001.png" id="2_jtg2y"]
 [ext_resource type="Texture2D" uid="uid://bgfr5tnw8f71u" path="res://graphics/jungle/MC_idle/MC_idle_0002.png" id="3_bhhd2"]
@@ -419,22 +419,22 @@ animations = [{
 radius = 48.0
 height = 212.0
 
-[node name="JungleWoman" type="Node2D" node_paths=PackedStringArray("char_area", "anim_sprite")]
+[node name="JungleWoman" type="Node2D" unique_id=700974070 node_paths=PackedStringArray("char_area", "anim_sprite")]
 script = ExtResource("12_c626s")
 char_area = NodePath("Area2D")
 anim_sprite = NodePath("AnimatedSprite2D")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=689873547]
 sprite_frames = SubResource("SpriteFrames_haisx")
 animation = &"walking"
 frame_progress = 0.6829591
 offset = Vector2(0, -100)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=960188442]
 position = Vector2(5, -142)
 collision_layer = 2
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=804085938]
 position = Vector2(0, 37)
 shape = SubResource("CapsuleShape2D_sx88w")

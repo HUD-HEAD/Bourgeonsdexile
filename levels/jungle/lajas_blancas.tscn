@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d2f3ss3fi8c52"]
+[gd_scene format=3 uid="uid://d2f3ss3fi8c52"]
 
 [ext_resource type="PackedScene" uid="uid://c0cewrgpnckyx" path="res://levels/jungle/jungle_comic_4.tscn" id="2_lm7lj"]
 [ext_resource type="Texture2D" uid="uid://bfrxjto4uo2sa" path="res://graphics/separated_lajas/sky.png" id="4_lm7lj"]
@@ -14,69 +14,69 @@
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_j5r3v"]
 b = Vector2(0, 1080)
 
-[node name="LajasBlancas" type="Node2D"]
+[node name="LajasBlancas" type="Node2D" unique_id=1909938204]
 
-[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
+[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1017138655]
 position = Vector2(6092, 697)
 script = ExtResource("16_sbmfg")
 next_scene = ExtResource("2_lm7lj")
 
-[node name="Sky" type="Sprite2D" parent="."]
+[node name="Sky" type="Sprite2D" parent="." unique_id=1988398945]
 texture = ExtResource("4_lm7lj")
 centered = false
 
-[node name="Floor" type="Sprite2D" parent="."]
+[node name="Floor" type="Sprite2D" parent="." unique_id=35201159]
 position = Vector2(0, 567)
 texture = ExtResource("5_3f63v")
 centered = false
 
-[node name="Houses" type="Sprite2D" parent="."]
+[node name="Houses" type="Sprite2D" parent="." unique_id=43092548]
 position = Vector2(0, 303)
 texture = ExtResource("6_h6g4n")
 centered = false
 
-[node name="Int1" type="Sprite2D" parent="."]
+[node name="Int1" type="Sprite2D" parent="." unique_id=916796917]
 position = Vector2(1649, 454)
 texture = ExtResource("7_dau4e")
 centered = false
 
-[node name="Obstacle" type="Area2D" parent="Int1" node_paths=PackedStringArray("node_to_reveal")]
+[node name="Obstacle" type="Area2D" parent="Int1" unique_id=1412227203 node_paths=PackedStringArray("node_to_reveal")]
 position = Vector2(0, -454)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("7_3f63v")
 node_to_reveal = NodePath("..")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Int1/Obstacle"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Int1/Obstacle" unique_id=1752693632]
 shape = SubResource("SegmentShape2D_j5r3v")
 
-[node name="Int2" type="Sprite2D" parent="."]
+[node name="Int2" type="Sprite2D" parent="." unique_id=1034865706]
 position = Vector2(4405, 493)
 texture = ExtResource("8_of5dn")
 centered = false
 
-[node name="Obstacle2" type="Area2D" parent="Int2" node_paths=PackedStringArray("node_to_reveal")]
+[node name="Obstacle2" type="Area2D" parent="Int2" unique_id=1768219270 node_paths=PackedStringArray("node_to_reveal")]
 position = Vector2(31, -493)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("7_3f63v")
 node_to_reveal = NodePath("..")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Int2/Obstacle2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Int2/Obstacle2" unique_id=430801904]
 shape = SubResource("SegmentShape2D_j5r3v")
 
-[node name="PplCopia" type="Sprite2D" parent="."]
+[node name="PplCopia" type="Sprite2D" parent="." unique_id=1411292565]
 position = Vector2(70, 687)
 texture = ExtResource("9_jwpol")
 centered = false
 
-[node name="Spawn" type="Marker2D" parent="."]
+[node name="Spawn" type="Marker2D" parent="." unique_id=1152816118]
 position = Vector2(460, 867)
 
-[node name="JungleWoman" parent="Spawn" instance=ExtResource("15_004no")]
+[node name="JungleWoman" parent="Spawn" unique_id=229281770 instance=ExtResource("15_004no")]
 position = Vector2(-5, -6)
 
-[node name="Camera2D" type="Camera2D" parent="Spawn/JungleWoman"]
+[node name="Camera2D" type="Camera2D" parent="Spawn/JungleWoman" unique_id=1035812894]
 position = Vector2(0, -233)
 offset = Vector2(500, 0)
 limit_left = -9999959

@@ -1,14 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1hj16bvmut1r"]
+[gd_scene format=3 uid="uid://c1hj16bvmut1r"]
 
 [ext_resource type="Texture2D" uid="uid://8f0medra35rx" path="res://graphics/comic4/frame_ayuda.png" id="2_6f4on"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_j528q"]
 
-[node name="Comic4Panel1" type="Node2D"]
+[node name="Comic4Panel1" type="Node2D" unique_id=2035327070]
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1669028117]
 
-[node name="Transition" type="Node" parent="."]
+[node name="Transition" type="Node" parent="." unique_id=1148343321]
 script = ExtResource("2_j528q")
 
-[node name="FrameAyuda" type="Sprite2D" parent="."]
+[node name="FrameAyuda" type="Sprite2D" parent="." unique_id=2102331414]
 texture = ExtResource("2_6f4on")

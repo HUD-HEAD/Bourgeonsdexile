@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cpvf5agmemtpm"]
+[gd_scene format=3 uid="uid://cpvf5agmemtpm"]
 
 [ext_resource type="VideoStream" uid="uid://cftg3paoqrqg1" path="res://video/video_jungle_intro_loop.ogv" id="1_dircd"]
 [ext_resource type="Script" uid="uid://blr2m1o588s1t" path="res://components/utils/click_video_transition.gd" id="2_pdnfg"]
@@ -90,7 +90,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_dircd"]
 radius = 41.04875
 
-[node name="VideoplayerDemo" type="Control"]
+[node name="VideoplayerDemo" type="Control" unique_id=1489886936]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -99,7 +99,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="VideoStream_Loop" type="VideoStreamPlayer" parent="."]
+[node name="VideoStream_Loop" type="VideoStreamPlayer" parent="." unique_id=1852339727]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -117,7 +117,7 @@ stream = ExtResource("1_dircd")
 autoplay = true
 loop = true
 
-[node name="VideoStreamP_Transition" type="VideoStreamPlayer" parent="."]
+[node name="VideoStreamP_Transition" type="VideoStreamPlayer" parent="." unique_id=1492784955]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -133,7 +133,7 @@ grow_vertical = 2
 mouse_filter = 2
 stream = ExtResource("2_wkdf3")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=1489793461]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -144,21 +144,21 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 
-[node name="Start" type="Area2D" parent="Control" node_paths=PackedStringArray("video_loop", "video_transition")]
+[node name="Start" type="Area2D" parent="Control" unique_id=1313297138 node_paths=PackedStringArray("video_loop", "video_transition")]
 script = ExtResource("2_pdnfg")
 target_scene = ExtResource("3_0fttw")
 video_loop = NodePath("../../VideoStream_Loop")
 video_transition = NodePath("../../VideoStreamP_Transition")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/Start"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/Start" unique_id=1746423609]
 sprite_frames = SubResource("SpriteFrames_8elr8")
 autoplay = "default"
 frame_progress = 0.013497023
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Start"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Start" unique_id=1393945464]
 shape = SubResource("CircleShape2D_dircd")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1934943305]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
@@ -170,6 +170,6 @@ mouse_filter = 2
 texture = ExtResource("23_88yht")
 stretch_mode = 1
 
-[node name="Frame11" type="Sprite2D" parent="TextureRect"]
+[node name="Frame11" type="Sprite2D" parent="TextureRect" unique_id=1039724458]
 position = Vector2(960, 540)
 texture = ExtResource("24_kb4k4")

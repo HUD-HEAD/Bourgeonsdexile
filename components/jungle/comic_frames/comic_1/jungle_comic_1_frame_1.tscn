@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dxje8kcv8ykkm"]
+[gd_scene format=3 uid="uid://dxje8kcv8ykkm"]
 
 [ext_resource type="Texture2D" uid="uid://b1kq3hpvjdvft" path="res://graphics/jungle/jungle_comic1/frame1/frame1_1.png" id="1_8r138"]
 [ext_resource type="Texture2D" uid="uid://dj0v82ndb5ddu" path="res://graphics/jungle/jungle_comic1/frame1/frame1_2.png" id="2_pgcst"]
@@ -136,34 +136,32 @@ _data = {
 &"default": SubResource("Animation_vek8b")
 }
 
-[node name="JungleComic1Frame1" type="Node2D"]
+[node name="JungleComic1Frame1" type="Node2D" unique_id=2057300294]
 metadata/_edit_group_ = true
 
-[node name="AutomaticPanner" type="Node" parent="." node_paths=PackedStringArray("anim_player")]
+[node name="AutomaticPanner" type="Node" parent="." unique_id=1085787382 node_paths=PackedStringArray("anim_player")]
 script = ExtResource("9_qx2pv")
 anim_player = NodePath("../AnimationPlayer")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_stins")
-}
-autoplay = "default"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=183798523]
+libraries/ = SubResource("AnimationLibrary_stins")
+autoplay = &"default"
 
-[node name="Sprite2D4" type="Sprite2D" parent="."]
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=2112821895]
 texture = ExtResource("7_er6hy")
 
-[node name="Sprite2D3" type="Sprite2D" parent="."]
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=2477032]
 texture = ExtResource("4_u3rfc")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=677936152]
 texture = ExtResource("2_pgcst")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=662318138]
 texture = ExtResource("1_8r138")
 
-[node name="Sprite2D5_LightOn" type="Sprite2D" parent="."]
+[node name="Sprite2D5_LightOn" type="Sprite2D" parent="." unique_id=41585852]
 visible = false
 texture = ExtResource("8_xpmsf")
 
-[node name="Audio_night" type="AudioStreamPlayer2D" parent="."]
+[node name="Audio_night" type="AudioStreamPlayer2D" parent="." unique_id=2031449965]
 autoplay = true
