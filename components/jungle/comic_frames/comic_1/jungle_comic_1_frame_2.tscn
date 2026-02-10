@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://cbouhlj8xssdp"]
+[gd_scene format=3 uid="uid://cbouhlj8xssdp"]
 
 [ext_resource type="Texture2D" uid="uid://bb2c2vdmoetaq" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background1.png" id="1_1sw1c"]
 [ext_resource type="Texture2D" uid="uid://bnsw6fe16uoeb" path="res://graphics/jungle/jungle_comic1/frame2/frame2_bakcground/frame2_background2.png" id="2_f5xcq"]
@@ -299,45 +299,43 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_khho4"]
 size = Vector2(340, 330)
 
-[node name="JungleComic1Frame2" type="Node2D"]
+[node name="JungleComic1Frame2" type="Node2D" unique_id=844491530]
 metadata/_edit_group_ = true
 
-[node name="Background" type="AnimatedSprite2D" parent="."]
+[node name="Background" type="AnimatedSprite2D" parent="." unique_id=183185988]
 clip_children = 2
 sprite_frames = SubResource("SpriteFrames_37uka")
 
-[node name="Man" type="AnimatedSprite2D" parent="Background"]
+[node name="Man" type="AnimatedSprite2D" parent="Background" unique_id=1928868098]
 position = Vector2(112, 63)
 sprite_frames = SubResource("SpriteFrames_fu2ni")
 
-[node name="Woman" type="AnimatedSprite2D" parent="Background"]
+[node name="Woman" type="AnimatedSprite2D" parent="Background" unique_id=2078308958]
 position = Vector2(-25, 73)
 sprite_frames = SubResource("SpriteFrames_c4wg1")
 
-[node name="Candle" type="AnimatedSprite2D" parent="Background"]
+[node name="Candle" type="AnimatedSprite2D" parent="Background" unique_id=751950332]
 position = Vector2(309, 92)
 sprite_frames = SubResource("SpriteFrames_icilk")
 autoplay = "default"
 
-[node name="Destruction" type="AnimatedSprite2D" parent="."]
+[node name="Destruction" type="AnimatedSprite2D" parent="." unique_id=1756241040]
 sprite_frames = SubResource("SpriteFrames_guuja")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_tkhhm")
-}
-autoplay = "argument"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2105864430]
+libraries/ = SubResource("AnimationLibrary_tkhhm")
+autoplay = &"argument"
 
-[node name="PanelTransitionTrigger" type="Node" parent="." node_paths=PackedStringArray("anim_player")]
+[node name="PanelTransitionTrigger" type="Node" parent="." unique_id=1927799422 node_paths=PackedStringArray("anim_player")]
 script = ExtResource("29_f5xcq")
 anim_player = NodePath("../AnimationPlayer")
 
-[node name="TriggerAnimation" type="Area2D" parent="." node_paths=PackedStringArray("node_to_enable")]
+[node name="TriggerAnimation" type="Area2D" parent="." unique_id=2048663869 node_paths=PackedStringArray("node_to_enable")]
 script = ExtResource("30_khho4")
 node_to_enable = NodePath("../AnimationPlayer")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerAnimation"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerAnimation" unique_id=1494580441]
 position = Vector2(40, -60)
 shape = SubResource("RectangleShape2D_khho4")
 
-[node name="Audio_argument" type="AudioStreamPlayer2D" parent="."]
+[node name="Audio_argument" type="AudioStreamPlayer2D" parent="." unique_id=1749153717]

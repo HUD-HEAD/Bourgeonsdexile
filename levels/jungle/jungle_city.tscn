@@ -1,4 +1,4 @@
-[gd_scene load_steps=124 format=3 uid="uid://s3spdg0qqc77"]
+[gd_scene format=3 uid="uid://s3spdg0qqc77"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_1rybe"]
 [ext_resource type="Texture2D" uid="uid://nwpw7ynann6x" path="res://graphics/separated_Ciity/separated_Ciity/sky.png" id="2_y6iwd"]
@@ -99,7 +99,7 @@
 [ext_resource type="Texture2D" uid="uid://b88y6a4mfw45a" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0039.png" id="55_ivtva"]
 [ext_resource type="Texture2D" uid="uid://bececty2m32aw" path="res://graphics/npcs/NPC_wave_hand/NPC_wave_hand_0040.png" id="56_3pi56"]
 [ext_resource type="Texture2D" uid="uid://dybv6dxdpjkya" path="res://graphics/npcs/NPC_scratch/NPC_scratch_0001.png" id="92_6i01r"]
-[ext_resource type="PackedScene" path="res://components/jungle/puzzles/drag_drop_puzzle_city2.tscn" id="92_glm23"]
+[ext_resource type="PackedScene" uid="uid://c57ylw3q4gnr4" path="res://components/jungle/puzzles/drag_drop_puzzle_city2.tscn" id="92_glm23"]
 [ext_resource type="Texture2D" uid="uid://dpfg3agtveh17" path="res://graphics/npcs/NPC_scratch/NPC_scratch_0002.png" id="93_6a1y3"]
 [ext_resource type="Texture2D" uid="uid://cip8a3d1l63fp" path="res://graphics/npcs/NPC_scratch/NPC_scratch_0003.png" id="94_bmptc"]
 [ext_resource type="Texture2D" uid="uid://crstnn7oli130" path="res://graphics/npcs/NPC_scratch/NPC_scratch_0004.png" id="95_85lf4"]
@@ -537,13 +537,13 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6i01r"]
 size = Vector2(102, 102)
 
-[node name="JungleCity" type="Node2D"]
+[node name="JungleCity" type="Node2D" unique_id=987125979]
 
-[node name="Background" type="CanvasLayer" parent="."]
+[node name="Background" type="CanvasLayer" parent="." unique_id=856416823]
 layer = -1
 follow_viewport_enabled = true
 
-[node name="TextureRect" type="TextureRect" parent="Background"]
+[node name="TextureRect" type="TextureRect" parent="Background" unique_id=1494207838]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -557,270 +557,270 @@ texture = ExtResource("1_1rybe")
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="SkyFake" type="Sprite2D" parent="Background"]
+[node name="SkyFake" type="Sprite2D" parent="Background" unique_id=479353496]
 position = Vector2(-2548, 2)
 texture = ExtResource("2_y6iwd")
 centered = false
 flip_h = true
 
-[node name="Sky" type="Sprite2D" parent="Background"]
+[node name="Sky" type="Sprite2D" parent="Background" unique_id=152898079]
 position = Vector2(330, 1)
 texture = ExtResource("2_y6iwd")
 centered = false
 
-[node name="Parallax2D" type="Parallax2D" parent="Background"]
+[node name="Parallax2D" type="Parallax2D" parent="Background" unique_id=903095176]
 scroll_scale = Vector2(0.9, 0.9)
 scroll_offset = Vector2(-1466, -25)
 
-[node name="CloudsFake" type="Sprite2D" parent="Background/Parallax2D"]
+[node name="CloudsFake" type="Sprite2D" parent="Background/Parallax2D" unique_id=503779958]
 position = Vector2(-1814, 23)
 texture = ExtResource("3_y6iwd")
 centered = false
 flip_h = true
 
-[node name="Clouds" type="Sprite2D" parent="Background/Parallax2D"]
+[node name="Clouds" type="Sprite2D" parent="Background/Parallax2D" unique_id=1687548403]
 position = Vector2(1922, 0)
 texture = ExtResource("3_y6iwd")
 centered = false
 
-[node name="Houseback" type="Sprite2D" parent="Background"]
+[node name="Houseback" type="Sprite2D" parent="Background" unique_id=701906805]
 position = Vector2(2415, 550)
 texture = ExtResource("4_4dc1s")
 
-[node name="FloorFake" type="Sprite2D" parent="Background"]
+[node name="FloorFake" type="Sprite2D" parent="Background" unique_id=660964033]
 position = Vector2(-4300, 816)
 texture = ExtResource("5_pxrui")
 centered = false
 flip_h = true
 
-[node name="Floor" type="Sprite2D" parent="Background"]
+[node name="Floor" type="Sprite2D" parent="Background" unique_id=959969838]
 position = Vector2(456, 810)
 texture = ExtResource("5_pxrui")
 centered = false
 
-[node name="ExtraHouses" type="Node2D" parent="Background"]
+[node name="ExtraHouses" type="Node2D" parent="Background" unique_id=367653874]
 position = Vector2(78, 0)
 
-[node name="Extrahouses5" type="Sprite2D" parent="Background/ExtraHouses"]
+[node name="Extrahouses5" type="Sprite2D" parent="Background/ExtraHouses" unique_id=18012662]
 position = Vector2(-1410, 678)
 texture = ExtResource("46_umov5")
 
-[node name="Extrahouses1" type="Sprite2D" parent="Background/ExtraHouses"]
+[node name="Extrahouses1" type="Sprite2D" parent="Background/ExtraHouses" unique_id=396639212]
 position = Vector2(110, 502)
 texture = ExtResource("47_uqsyn")
 
-[node name="Extrahouses2" type="Sprite2D" parent="Background/ExtraHouses"]
+[node name="Extrahouses2" type="Sprite2D" parent="Background/ExtraHouses" unique_id=1349608358]
 position = Vector2(-562, 549)
 texture = ExtResource("48_glm23")
 
-[node name="Extrahouses3" type="Sprite2D" parent="Background/ExtraHouses"]
+[node name="Extrahouses3" type="Sprite2D" parent="Background/ExtraHouses" unique_id=1975345561]
 position = Vector2(-1045, 538)
 texture = ExtResource("49_lvrd1")
 
-[node name="Extrahouses4" type="Sprite2D" parent="Background/ExtraHouses"]
+[node name="Extrahouses4" type="Sprite2D" parent="Background/ExtraHouses" unique_id=364098163]
 position = Vector2(-759, 684)
 texture = ExtResource("50_1stae")
 
-[node name="Houses1" type="Sprite2D" parent="Background"]
+[node name="Houses1" type="Sprite2D" parent="Background" unique_id=1295017345]
 position = Vector2(1135, 516)
 texture = ExtResource("6_flk65")
 
-[node name="Houses2" type="Sprite2D" parent="Background"]
+[node name="Houses2" type="Sprite2D" parent="Background" unique_id=2078139322]
 position = Vector2(2079, 507)
 texture = ExtResource("7_dv2g2")
 
-[node name="Houses3" type="Sprite2D" parent="Background"]
+[node name="Houses3" type="Sprite2D" parent="Background" unique_id=517423049]
 position = Vector2(2735, 532)
 texture = ExtResource("8_ralbv")
 
-[node name="Houses4" type="Sprite2D" parent="Background"]
+[node name="Houses4" type="Sprite2D" parent="Background" unique_id=1448770658]
 position = Vector2(3516, 543)
 texture = ExtResource("9_hi7ti")
 
-[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="Background"]
+[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="Background" unique_id=1352526241]
 position = Vector2(5862, 645)
 script = ExtResource("11_jpgwf")
 next_scene = ExtResource("12_jpgwf")
 
-[node name="Puzzle1" type="Node2D" parent="."]
+[node name="Puzzle1" type="Node2D" parent="." unique_id=2111937984]
 position = Vector2(3329, 0)
 
-[node name="Npc1" type="AnimatedSprite2D" parent="Puzzle1"]
+[node name="Npc1" type="AnimatedSprite2D" parent="Puzzle1" unique_id=563331769]
 position = Vector2(311, 818)
 sprite_frames = SubResource("SpriteFrames_48jwk")
 autoplay = "default"
 frame_progress = 0.1485751
 flip_h = true
 
-[node name="Clickable" type="Area2D" parent="Puzzle1/Npc1"]
+[node name="Clickable" type="Area2D" parent="Puzzle1/Npc1" unique_id=1756724079]
 position = Vector2(0, -28)
 script = ExtResource("16_0tvtc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle1/Npc1/Clickable"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle1/Npc1/Clickable" unique_id=671028984]
 shape = SubResource("RectangleShape2D_vdiy3")
 
-[node name="MarkerBubbleSpawn" type="Marker2D" parent="Puzzle1/Npc1"]
+[node name="MarkerBubbleSpawn" type="Marker2D" parent="Puzzle1/Npc1" unique_id=1263751325]
 position = Vector2(-1, -215)
 
-[node name="Obstacle" parent="Puzzle1" instance=ExtResource("13_8tq2l")]
+[node name="Obstacle" parent="Puzzle1" unique_id=1503668481 instance=ExtResource("13_8tq2l")]
 collision_mask = 2
 
-[node name="CityPuzzle1" parent="Puzzle1" instance=ExtResource("13_vf82b")]
+[node name="CityPuzzle1" parent="Puzzle1" unique_id=1664370194 instance=ExtResource("13_vf82b")]
 position = Vector2(161, 465)
 
-[node name="PuzzleSpawner" type="Node" parent="Puzzle1/CityPuzzle1" node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="Puzzle1/CityPuzzle1" unique_id=1970663373 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("17_4dc1s")
 puzzle = NodePath("..")
 piece_spawners = [NodePath("../../../YSorting/JungleWoman/MarkerBubbleSpawn"), NodePath("../../Npc1/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../Npc1/Clickable")
 obstacle = NodePath("../../Obstacle")
 
-[node name="Puzzle2" type="Node2D" parent="."]
+[node name="Puzzle2" type="Node2D" parent="." unique_id=664229715]
 position = Vector2(1294, 0)
 
-[node name="Npc2" type="AnimatedSprite2D" parent="Puzzle2"]
+[node name="Npc2" type="AnimatedSprite2D" parent="Puzzle2" unique_id=1108595039]
 position = Vector2(311, 818)
 sprite_frames = SubResource("SpriteFrames_tvwsl")
 autoplay = "default"
 frame_progress = 0.17117496
 
-[node name="Clickable" type="Area2D" parent="Puzzle2/Npc2"]
+[node name="Clickable" type="Area2D" parent="Puzzle2/Npc2" unique_id=1335181288]
 position = Vector2(0, -28)
 script = ExtResource("16_0tvtc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle2/Npc2/Clickable"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle2/Npc2/Clickable" unique_id=109597285]
 shape = SubResource("RectangleShape2D_vdiy3")
 
-[node name="MarkerBubbleSpawn" type="Marker2D" parent="Puzzle2/Npc2"]
+[node name="MarkerBubbleSpawn" type="Marker2D" parent="Puzzle2/Npc2" unique_id=134893488]
 position = Vector2(-1, -215)
 
-[node name="Obstacle" parent="Puzzle2" instance=ExtResource("13_8tq2l")]
+[node name="Obstacle" parent="Puzzle2" unique_id=1985664101 instance=ExtResource("13_8tq2l")]
 collision_mask = 2
 
-[node name="CityPuzzle2" parent="Puzzle2" instance=ExtResource("19_4dc1s")]
+[node name="CityPuzzle2" parent="Puzzle2" unique_id=22391943 instance=ExtResource("19_4dc1s")]
 position = Vector2(196, 529)
 
-[node name="PuzzleSpawner" type="Node" parent="Puzzle2/CityPuzzle2" node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="Puzzle2/CityPuzzle2" unique_id=1363570419 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("17_4dc1s")
 puzzle = NodePath("..")
 piece_spawners = [NodePath("../../../YSorting/JungleWoman/MarkerBubbleSpawn"), NodePath("../../Npc2/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../Npc2/Clickable")
 obstacle = NodePath("../../Obstacle")
 
-[node name="Puzzle3" type="Node2D" parent="."]
+[node name="Puzzle3" type="Node2D" parent="." unique_id=1755578293]
 position = Vector2(2466, 0)
 
-[node name="Npc2" type="AnimatedSprite2D" parent="Puzzle3"]
+[node name="Npc2" type="AnimatedSprite2D" parent="Puzzle3" unique_id=1107973786]
 position = Vector2(311, 818)
 sprite_frames = SubResource("SpriteFrames_glm23")
 autoplay = "default"
 
-[node name="Clickable" type="Area2D" parent="Puzzle3/Npc2"]
+[node name="Clickable" type="Area2D" parent="Puzzle3/Npc2" unique_id=706834356]
 position = Vector2(0, -3)
 script = ExtResource("16_0tvtc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle3/Npc2/Clickable"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle3/Npc2/Clickable" unique_id=82456525]
 shape = SubResource("CapsuleShape2D_6i01r")
 
-[node name="MarkerBubbleSpawn" type="Marker2D" parent="Puzzle3/Npc2"]
+[node name="MarkerBubbleSpawn" type="Marker2D" parent="Puzzle3/Npc2" unique_id=1466778928]
 position = Vector2(-1, -215)
 
-[node name="Obstacle" parent="Puzzle3" instance=ExtResource("13_8tq2l")]
+[node name="Obstacle" parent="Puzzle3" unique_id=337709888 instance=ExtResource("13_8tq2l")]
 collision_mask = 2
 
-[node name="DragDropPuzzle" parent="Puzzle3" instance=ExtResource("92_glm23")]
+[node name="DragDropPuzzle" parent="Puzzle3" unique_id=235220143 instance=ExtResource("92_glm23")]
 position = Vector2(232, 586)
 rotation = -0.015458716
 scale = Vector2(0.7, 0.7)
 
-[node name="PuzzleSpawner" type="Node" parent="Puzzle3/DragDropPuzzle" node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="Puzzle3/DragDropPuzzle" unique_id=638176887 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("17_4dc1s")
 puzzle = NodePath("..")
 piece_spawners = [NodePath("../../../YSorting/JungleWoman/MarkerBubbleSpawn"), NodePath("../../Npc2/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../Npc2/Clickable")
 obstacle = NodePath("../../Obstacle")
 
-[node name="Puzzle4" type="Node2D" parent="."]
+[node name="Puzzle4" type="Node2D" parent="." unique_id=132301409]
 position = Vector2(4269, 0)
 
-[node name="Npc1" type="AnimatedSprite2D" parent="Puzzle4"]
+[node name="Npc1" type="AnimatedSprite2D" parent="Puzzle4" unique_id=774511516]
 position = Vector2(311, 765)
 sprite_frames = SubResource("SpriteFrames_6i01r")
 autoplay = "default"
 flip_h = true
 
-[node name="Clickable" type="Area2D" parent="Puzzle4/Npc1"]
+[node name="Clickable" type="Area2D" parent="Puzzle4/Npc1" unique_id=223882459]
 position = Vector2(0, -28)
 script = ExtResource("16_0tvtc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle4/Npc1/Clickable"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle4/Npc1/Clickable" unique_id=938843215]
 shape = SubResource("RectangleShape2D_6i01r")
 
-[node name="MarkerBubbleSpawn" type="Marker2D" parent="Puzzle4/Npc1"]
+[node name="MarkerBubbleSpawn" type="Marker2D" parent="Puzzle4/Npc1" unique_id=790382731]
 position = Vector2(-1, -215)
 
-[node name="DragDropPuzzle2" parent="Puzzle4" instance=ExtResource("100_lvrd1")]
+[node name="DragDropPuzzle2" parent="Puzzle4" unique_id=1019054959 instance=ExtResource("100_lvrd1")]
 position = Vector2(161, 542)
 scale = Vector2(0.7, 0.7)
 
-[node name="PuzzleSpawner" type="Node" parent="Puzzle4/DragDropPuzzle2" node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="Puzzle4/DragDropPuzzle2" unique_id=1676081078 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("17_4dc1s")
 puzzle = NodePath("..")
 piece_spawners = [NodePath("../../../YSorting/JungleWoman/MarkerBubbleSpawn"), NodePath("../../Npc1/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../Npc1/Clickable")
 obstacle = NodePath("../../Obstacle")
 
-[node name="Obstacle" parent="Puzzle4" instance=ExtResource("13_8tq2l")]
+[node name="Obstacle" parent="Puzzle4" unique_id=438457573 instance=ExtResource("13_8tq2l")]
 collision_mask = 2
 
-[node name="YSorting" type="Node2D" parent="."]
+[node name="YSorting" type="Node2D" parent="." unique_id=388728091]
 y_sort_enabled = true
 position = Vector2(-728, 0)
 
-[node name="JungleWoman" parent="YSorting" instance=ExtResource("7_2dtoo")]
+[node name="JungleWoman" parent="YSorting" unique_id=1338989938 instance=ExtResource("7_2dtoo")]
 y_sort_enabled = true
 position = Vector2(809, 956)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="YSorting/JungleWoman"]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="YSorting/JungleWoman" unique_id=1967625911]
 position = Vector2(-186, 0)
 
-[node name="MarkerBubbleSpawn" type="Marker2D" parent="YSorting/JungleWoman"]
+[node name="MarkerBubbleSpawn" type="Marker2D" parent="YSorting/JungleWoman" unique_id=1504323811]
 position = Vector2(0, -382)
 
-[node name="Camera2D" type="Camera2D" parent="YSorting/JungleWoman"]
+[node name="Camera2D" type="Camera2D" parent="YSorting/JungleWoman" unique_id=128381685]
 position = Vector2(0, -416)
 offset = Vector2(500, 0)
 
-[node name="Market" type="Node2D" parent="YSorting"]
+[node name="Market" type="Node2D" parent="YSorting" unique_id=1463682477]
 y_sort_enabled = true
 position = Vector2(58, 384)
 
-[node name="Market1" type="Sprite2D" parent="YSorting/Market"]
+[node name="Market1" type="Sprite2D" parent="YSorting/Market" unique_id=924513269]
 position = Vector2(2536, 588)
 texture = ExtResource("20_832n5")
 offset = Vector2(-4, -120)
 
-[node name="Market2" type="Sprite2D" parent="YSorting/Market"]
+[node name="Market2" type="Sprite2D" parent="YSorting/Market" unique_id=1692187546]
 position = Vector2(2953, 561)
 texture = ExtResource("21_y6iwd")
 offset = Vector2(-3, -57)
 
-[node name="Market3" type="Sprite2D" parent="YSorting/Market"]
+[node name="Market3" type="Sprite2D" parent="YSorting/Market" unique_id=547270589]
 position = Vector2(3185, 527)
 texture = ExtResource("22_4dc1s")
 offset = Vector2(-9, -41)
 
-[node name="Market4" type="Sprite2D" parent="YSorting/Market"]
+[node name="Market4" type="Sprite2D" parent="YSorting/Market" unique_id=20123603]
 position = Vector2(3237, 470)
 texture = ExtResource("23_pxrui")
 offset = Vector2(-5, -74)
 
-[node name="Market5" type="Sprite2D" parent="YSorting/Market"]
+[node name="Market5" type="Sprite2D" parent="YSorting/Market" unique_id=969176993]
 position = Vector2(3633, 525)
 texture = ExtResource("24_flk65")
 offset = Vector2(-17, -120)
 
-[node name="Market6" type="Sprite2D" parent="YSorting/Market"]
+[node name="Market6" type="Sprite2D" parent="YSorting/Market" unique_id=268745367]
 position = Vector2(2808, 504)
 texture = ExtResource("25_dv2g2")
 offset = Vector2(3, -77)

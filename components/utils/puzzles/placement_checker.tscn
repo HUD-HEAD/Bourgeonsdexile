@@ -1,14 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://xyq2m2kx86ku"]
+[gd_scene format=3 uid="uid://xyq2m2kx86ku"]
 
 [ext_resource type="Script" uid="uid://dbrvsujabjlm" path="res://components/utils/puzzles/placement_checker.gd" id="1_eeqgm"]
 [ext_resource type="Shape2D" uid="uid://d1j3uncveeuwh" path="res://components/utils/puzzles/placement_checker_shape.tres" id="2_70spe"]
 
-[node name="PlacementChecker" type="Area2D"]
+[node name="PlacementChecker" type="Area2D" unique_id=663138769]
 editor_description = "Zone that checks if puzzle piece is placed within receptacle.
 Do not modify."
 input_pickable = false
 script = ExtResource("1_eeqgm")
 metadata/_custom_type_script = "uid://dbrvsujabjlm"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2092894810]
 shape = ExtResource("2_70spe")

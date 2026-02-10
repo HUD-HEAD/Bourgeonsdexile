@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://h7loww3s14t6"]
+[gd_scene format=3 uid="uid://h7loww3s14t6"]
 
 [ext_resource type="Texture2D" uid="uid://o7sq1jha66wl" path="res://graphics/comic3/frame_folders/background.png" id="1_vs1k0"]
 [ext_resource type="PackedScene" uid="uid://8imm2g6332ef" path="res://components/utils/puzzles/dragdrop_puzzle_template.tscn" id="2_x8yjl"]
@@ -37,14 +37,14 @@ size = Vector2(267, 382)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d2xft"]
 size = Vector2(267, 382)
 
-[node name="JungleComic3FrameFolders" type="Node2D"]
+[node name="JungleComic3FrameFolders" type="Node2D" unique_id=1051086939]
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="." unique_id=2004807110]
 z_index = -1
 position = Vector2(-6, -7)
 texture = ExtResource("1_vs1k0")
 
-[node name="DragDropPuzzle" parent="Background" node_paths=PackedStringArray("puzzle_pieces") instance=ExtResource("2_x8yjl")]
+[node name="DragDropPuzzle" parent="Background" unique_id=1809544936 node_paths=PackedStringArray("puzzle_pieces") instance=ExtResource("2_x8yjl")]
 z_index = 1
 position = Vector2(-941, -535)
 puzzle_pieces = [NodePath("BuildingBlocks/PuzzlePiece"), NodePath("BuildingBlocks/PuzzlePiece2"), NodePath("BuildingBlocks/PuzzlePiece3"), NodePath("BuildingBlocks/PuzzlePiece4"), NodePath("BuildingBlocks/PuzzlePiece5"), NodePath("BuildingBlocks/PuzzlePiece6")]
@@ -64,7 +64,7 @@ position = Vector2(14.978312, -13.360761)
 rotation = -0.6440265
 shape = SubResource("RectangleShape2D_tcy2o")
 
-[node name="PuzzlePiece2" parent="Background/DragDropPuzzle/BuildingBlocks" index="1" instance=ExtResource("4_p15i0")]
+[node name="PuzzlePiece2" parent="Background/DragDropPuzzle/BuildingBlocks" index="1" unique_id=26125819 instance=ExtResource("4_p15i0")]
 position = Vector2(414, 535)
 metadata/_edit_group_ = true
 
@@ -79,7 +79,7 @@ position = Vector2(-1.2387565, 6.872731)
 rotation = 0.18849556
 shape = SubResource("RectangleShape2D_p15i0")
 
-[node name="PuzzlePiece3" parent="Background/DragDropPuzzle/BuildingBlocks" index="2" instance=ExtResource("4_p15i0")]
+[node name="PuzzlePiece3" parent="Background/DragDropPuzzle/BuildingBlocks" index="2" unique_id=1066605555 instance=ExtResource("4_p15i0")]
 position = Vector2(414, 535)
 metadata/_edit_group_ = true
 
@@ -93,7 +93,7 @@ receptacle = NodePath("../../../Receptacle")
 position = Vector2(1.5, -1.0000038)
 shape = SubResource("RectangleShape2D_isi1j")
 
-[node name="PuzzlePiece4" parent="Background/DragDropPuzzle/BuildingBlocks" index="3" instance=ExtResource("4_p15i0")]
+[node name="PuzzlePiece4" parent="Background/DragDropPuzzle/BuildingBlocks" index="3" unique_id=76105834 instance=ExtResource("4_p15i0")]
 position = Vector2(414, 535)
 metadata/_edit_group_ = true
 
@@ -109,7 +109,7 @@ rotation = -0.075049154
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_0ovsn")
 
-[node name="PuzzlePiece5" parent="Background/DragDropPuzzle/BuildingBlocks" index="4" instance=ExtResource("4_p15i0")]
+[node name="PuzzlePiece5" parent="Background/DragDropPuzzle/BuildingBlocks" index="4" unique_id=1495941232 instance=ExtResource("4_p15i0")]
 position = Vector2(414, 535)
 metadata/_edit_group_ = true
 
@@ -125,7 +125,7 @@ rotation = 0.075049154
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_upw4u")
 
-[node name="PuzzlePiece6" parent="Background/DragDropPuzzle/BuildingBlocks" index="5" instance=ExtResource("4_p15i0")]
+[node name="PuzzlePiece6" parent="Background/DragDropPuzzle/BuildingBlocks" index="5" unique_id=1476803966 instance=ExtResource("4_p15i0")]
 position = Vector2(414, 535)
 metadata/_edit_group_ = true
 
@@ -145,7 +145,7 @@ shape = SubResource("RectangleShape2D_m4w58")
 z_index = -1
 position = Vector2(1032, 539)
 
-[node name="Bluefolder" type="Sprite2D" parent="Background/DragDropPuzzle/BuildingBlocks/Receptacle" index="0"]
+[node name="Bluefolder" type="Sprite2D" parent="Background/DragDropPuzzle/BuildingBlocks/Receptacle" index="0" unique_id=1340111269]
 texture = ExtResource("3_qbb1r")
 
 [node name="CollisionShape2D" parent="Background/DragDropPuzzle/BuildingBlocks/Receptacle" index="1"]
@@ -153,7 +153,7 @@ position = Vector2(5.5, 12)
 rotation = -0.038397245
 shape = SubResource("RectangleShape2D_hrlap")
 
-[node name="Receptacle2" parent="Background/DragDropPuzzle/BuildingBlocks" index="7" instance=ExtResource("4_fvgle")]
+[node name="Receptacle2" parent="Background/DragDropPuzzle/BuildingBlocks" index="7" unique_id=44677502 instance=ExtResource("4_fvgle")]
 z_index = -1
 position = Vector2(1512, 539)
 
@@ -161,14 +161,14 @@ position = Vector2(1512, 539)
 rotation = 0.036651913
 shape = SubResource("RectangleShape2D_d2xft")
 
-[node name="Redfolder" type="Sprite2D" parent="Background/DragDropPuzzle/BuildingBlocks/Receptacle2"]
+[node name="Redfolder" type="Sprite2D" parent="Background/DragDropPuzzle/BuildingBlocks/Receptacle2" unique_id=1247329300]
 texture = ExtResource("5_cy3qd")
 
-[node name="Bluefolder2" type="Sprite2D" parent="Background/DragDropPuzzle/CompletePuzzle" index="0"]
+[node name="Bluefolder2" type="Sprite2D" parent="Background/DragDropPuzzle/CompletePuzzle" index="0" unique_id=2089620297]
 position = Vector2(1032, 539)
 texture = ExtResource("3_qbb1r")
 
-[node name="Redfolder2" type="Sprite2D" parent="Background/DragDropPuzzle/CompletePuzzle" index="1"]
+[node name="Redfolder2" type="Sprite2D" parent="Background/DragDropPuzzle/CompletePuzzle" index="1" unique_id=1878912128]
 position = Vector2(1512, 539)
 texture = ExtResource("5_cy3qd")
 

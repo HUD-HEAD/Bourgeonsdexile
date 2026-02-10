@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://0sd3o1afbqf1"]
+[gd_scene format=3 uid="uid://0sd3o1afbqf1"]
 
 [ext_resource type="PackedScene" uid="uid://8imm2g6332ef" path="res://components/utils/puzzles/dragdrop_puzzle_template.tscn" id="1_cy0gs"]
 [ext_resource type="Texture2D" uid="uid://dwnjpub8s84qv" path="res://graphics/ui/lajapuzzles/halfpuzzles/3/empty3.png" id="2_gcniq"]
@@ -9,7 +9,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b11m5"]
 size = Vector2(165.42197, 120.24559)
 
-[node name="DragDropPuzzle" instance=ExtResource("1_cy0gs")]
+[node name="DragDropPuzzle" unique_id=559797596 instance=ExtResource("1_cy0gs")]
 
 [node name="OutlinePuzzle" parent="." index="0"]
 texture = ExtResource("2_gcniq")
@@ -30,7 +30,7 @@ shape = SubResource("RectangleShape2D_b11m5")
 position = Vector2(6, 109)
 texture = ExtResource("4_ww6a7")
 
-[node name="13" type="Sprite2D" parent="." index="3"]
+[node name="13" type="Sprite2D" parent="." index="3" unique_id=1597953027]
 position = Vector2(7, 170)
 texture = ExtResource("5_e8ody")
 

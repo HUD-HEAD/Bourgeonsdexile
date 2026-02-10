@@ -1,11 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bjdgt4xmkm6ml"]
+[gd_scene format=3 uid="uid://bjdgt4xmkm6ml"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_j5r3v"]
 b = Vector2(0, 1080)
 
-[node name="Obstacle" type="Area2D"]
+[node name="Obstacle" type="Area2D" unique_id=310843140]
 collision_layer = 4
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1989148257]
 shape = SubResource("SegmentShape2D_j5r3v")

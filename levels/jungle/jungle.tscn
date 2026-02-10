@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cjq4fleiu5245"]
+[gd_scene format=3 uid="uid://cjq4fleiu5245"]
 
 [ext_resource type="Texture2D" uid="uid://dglmyp3qpsn7n" path="res://graphics/jungle/junglepieces/1/water1.png" id="1_nqhdg"]
 [ext_resource type="Texture2D" uid="uid://e6dbtl7rw04o" path="res://graphics/jungle/junglepieces/water1.png" id="2_mtlks"]
@@ -32,102 +32,102 @@ point_count = 7
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_lh7rp"]
 light_mode = 2
 
-[node name="Jungle" type="Node2D"]
+[node name="Jungle" type="Node2D" unique_id=1292460998]
 
-[node name="Spawn" type="Marker2D" parent="."]
+[node name="Spawn" type="Marker2D" parent="." unique_id=871217689]
 position = Vector2(458, 773)
 
-[node name="JungleSprites" type="Node2D" parent="."]
+[node name="JungleSprites" type="Node2D" parent="." unique_id=1506606024]
 
-[node name="Water1" type="Sprite2D" parent="JungleSprites"]
+[node name="Water1" type="Sprite2D" parent="JungleSprites" unique_id=1637182483]
 position = Vector2(5176, 844)
 texture = ExtResource("1_nqhdg")
 
-[node name="PointLight2D2" type="PointLight2D" parent="JungleSprites/Water1"]
+[node name="PointLight2D2" type="PointLight2D" parent="JungleSprites/Water1" unique_id=519757281]
 energy = 0.0
 texture = ExtResource("2_mtlks")
 
-[node name="Water2" type="Sprite2D" parent="JungleSprites"]
+[node name="Water2" type="Sprite2D" parent="JungleSprites" unique_id=672181302]
 position = Vector2(27963, 399)
 texture = ExtResource("3_l3adg")
 
-[node name="PointLight2D3" type="PointLight2D" parent="JungleSprites/Water2"]
+[node name="PointLight2D3" type="PointLight2D" parent="JungleSprites/Water2" unique_id=1653953684]
 energy = 0.0
 texture = ExtResource("4_8x401")
 
-[node name="Jungle1" type="Node2D" parent="JungleSprites"]
+[node name="Jungle1" type="Node2D" parent="JungleSprites" unique_id=1811698658]
 metadata/_edit_group_ = true
 
-[node name="Water1Rockreflection" type="Sprite2D" parent="JungleSprites/Jungle1"]
+[node name="Water1Rockreflection" type="Sprite2D" parent="JungleSprites/Jungle1" unique_id=1028461992]
 position = Vector2(3422, 874)
 texture = ExtResource("5_nqhdg")
 
-[node name="Jungle1Background" type="Sprite2D" parent="JungleSprites/Jungle1"]
+[node name="Jungle1Background" type="Sprite2D" parent="JungleSprites/Jungle1" unique_id=1534124008]
 texture = ExtResource("6_nqhdg")
 centered = false
 
-[node name="Jungle1Floor" type="Sprite2D" parent="JungleSprites/Jungle1"]
+[node name="Jungle1Floor" type="Sprite2D" parent="JungleSprites/Jungle1" unique_id=223457716]
 position = Vector2(-35, 542)
 texture = ExtResource("7_31ufg")
 centered = false
 
-[node name="Jungle2" type="Node2D" parent="JungleSprites"]
+[node name="Jungle2" type="Node2D" parent="JungleSprites" unique_id=948059307]
 position = Vector2(8000, 0)
 metadata/_edit_group_ = true
 
-[node name="Jungle2" type="Sprite2D" parent="JungleSprites/Jungle2"]
+[node name="Jungle2" type="Sprite2D" parent="JungleSprites/Jungle2" unique_id=560809821]
 texture = ExtResource("8_8d2i3")
 centered = false
 
-[node name="Jungle3" type="Node2D" parent="JungleSprites"]
+[node name="Jungle3" type="Node2D" parent="JungleSprites" unique_id=812689316]
 position = Vector2(16000, 0)
 metadata/_edit_group_ = true
 
-[node name="Jungle3Background" type="Sprite2D" parent="JungleSprites/Jungle3"]
+[node name="Jungle3Background" type="Sprite2D" parent="JungleSprites/Jungle3" unique_id=1055346276]
 texture = ExtResource("9_mw3x0")
 centered = false
 
-[node name="Jungle3Floor" type="Sprite2D" parent="JungleSprites/Jungle3"]
+[node name="Jungle3Floor" type="Sprite2D" parent="JungleSprites/Jungle3" unique_id=1442720936]
 texture = ExtResource("10_k1umw")
 centered = false
 
-[node name="Bush" type="Sprite2D" parent="JungleSprites/Jungle3"]
+[node name="Bush" type="Sprite2D" parent="JungleSprites/Jungle3" unique_id=2010714487]
 position = Vector2(1818, 687)
 texture = ExtResource("11_q8svf")
 
-[node name="Jungle4" type="Node2D" parent="JungleSprites"]
+[node name="Jungle4" type="Node2D" parent="JungleSprites" unique_id=284464738]
 position = Vector2(25198, -14)
 metadata/_edit_group_ = true
 
-[node name="Jungle4Background" type="Sprite2D" parent="JungleSprites/Jungle4"]
+[node name="Jungle4Background" type="Sprite2D" parent="JungleSprites/Jungle4" unique_id=1943901093]
 position = Vector2(-829, -468)
 texture = ExtResource("12_7xi0o")
 centered = false
 
-[node name="Jungle4Floor" type="Sprite2D" parent="JungleSprites/Jungle4"]
+[node name="Jungle4Floor" type="Sprite2D" parent="JungleSprites/Jungle4" unique_id=1301046286]
 position = Vector2(-844, -482)
 texture = ExtResource("13_r20bg")
 centered = false
 
-[node name="Jungle5" type="Node2D" parent="JungleSprites"]
+[node name="Jungle5" type="Node2D" parent="JungleSprites" unique_id=1958294793]
 position = Vector2(34384, -467)
 
-[node name="Jungle5" type="Sprite2D" parent="JungleSprites/Jungle5"]
+[node name="Jungle5" type="Sprite2D" parent="JungleSprites/Jungle5" unique_id=1703863041]
 texture = ExtResource("14_7ab2f")
 centered = false
 
-[node name="Path2D" type="Path2D" parent="."]
+[node name="Path2D" type="Path2D" parent="." unique_id=1822789039]
 curve = SubResource("Curve2D_8pokd")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=262908547]
 position = Vector2(453, 767)
 rotates = false
 loop = false
 
-[node name="JungleWoman" parent="Path2D/PathFollow2D" node_paths=PackedStringArray("path_follow") instance=ExtResource("15_td1vu")]
+[node name="JungleWoman" parent="Path2D/PathFollow2D" unique_id=1358938074 node_paths=PackedStringArray("path_follow") instance=ExtResource("15_td1vu")]
 path_follow = NodePath("..")
 
-[node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D/JungleWoman"]
+[node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D/JungleWoman" unique_id=1732687290]
 position = Vector2(0, -233)
 offset = Vector2(500, 0)
 limit_left = -9999959
@@ -135,49 +135,49 @@ limit_top = 0
 limit_right = 10000041
 limit_bottom = 1080
 
-[node name="PathFollow2D_Reflection" type="PathFollow2D" parent="Path2D"]
+[node name="PathFollow2D_Reflection" type="PathFollow2D" parent="Path2D" unique_id=436572221]
 position = Vector2(453, 767)
 rotates = false
 loop = false
 
-[node name="ReflectionContainer" type="Node2D" parent="Path2D/PathFollow2D_Reflection"]
+[node name="ReflectionContainer" type="Node2D" parent="Path2D/PathFollow2D_Reflection" unique_id=60272824]
 material = SubResource("CanvasItemMaterial_8pokd")
 
-[node name="JungleWomanReflection" parent="Path2D/PathFollow2D_Reflection/ReflectionContainer" node_paths=PackedStringArray("path_follow") instance=ExtResource("15_td1vu")]
+[node name="JungleWomanReflection" parent="Path2D/PathFollow2D_Reflection/ReflectionContainer" unique_id=1520026415 node_paths=PackedStringArray("path_follow") instance=ExtResource("15_td1vu")]
 position = Vector2(0, 200)
 path_follow = NodePath("../..")
 
-[node name="AnimatedSprite2D" parent="Path2D/PathFollow2D_Reflection/ReflectionContainer/JungleWomanReflection" index="0"]
+[node name="AnimatedSprite2D" parent="Path2D/PathFollow2D_Reflection/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 self_modulate = Color(1, 1, 1, 0.47058824)
 material = SubResource("CanvasItemMaterial_lh7rp")
 flip_v = true
 
-[node name="Area2D" parent="Path2D/PathFollow2D_Reflection/ReflectionContainer/JungleWomanReflection" index="1"]
+[node name="Area2D" parent="Path2D/PathFollow2D_Reflection/ReflectionContainer/JungleWomanReflection" index="1" unique_id=960188442]
 visible = false
 
-[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="."]
+[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=267643735]
 position = Vector2(34810, 179)
 script = ExtResource("16_aewef")
 next_scene = ExtResource("17_aqo8c")
 
-[node name="Rain" parent="." instance=ExtResource("18_nqhdg")]
+[node name="Rain" parent="." unique_id=498998463 instance=ExtResource("18_nqhdg")]
 position = Vector2(9848, -15)
 
-[node name="ChangeCameraBounds" type="VisibleOnScreenNotifier2D" parent="." node_paths=PackedStringArray("camera")]
+[node name="ChangeCameraBounds" type="VisibleOnScreenNotifier2D" parent="." unique_id=1088608562 node_paths=PackedStringArray("camera")]
 position = Vector2(24394, 569)
 script = ExtResource("19_31ufg")
 camera = NodePath("../Path2D/PathFollow2D/JungleWoman/Camera2D")
 limit_top = -484
 limit_bottom = 1080
 
-[node name="ChangeCameraBounds2" type="VisibleOnScreenNotifier2D" parent="." node_paths=PackedStringArray("camera")]
+[node name="ChangeCameraBounds2" type="VisibleOnScreenNotifier2D" parent="." unique_id=678497456 node_paths=PackedStringArray("camera")]
 position = Vector2(27661, 330)
 script = ExtResource("19_31ufg")
 camera = NodePath("../Path2D/PathFollow2D/JungleWoman/Camera2D")
 limit_top = -484
 limit_bottom = 596
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=872860830]
 stream = ExtResource("20_5j4y3")
 autoplay = true
 

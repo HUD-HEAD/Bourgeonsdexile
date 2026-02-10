@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dj5cu3pwk4voh"]
+[gd_scene format=3 uid="uid://dj5cu3pwk4voh"]
 
 [ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="1_vmg1h"]
 [ext_resource type="Script" uid="uid://cfh8kfqvvym8u" path="res://components/utils/puzzles/receptacle.gd" id="2_mvwgm"]
@@ -16,27 +16,27 @@ size = Vector2(102, 102)
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xpcl3"]
 size = Vector2(50, 50)
 
-[node name="DragDropDemo" type="Node2D"]
+[node name="DragDropDemo" type="Node2D" unique_id=390096068]
 
-[node name="Receptacle" type="Area2D" parent="."]
+[node name="Receptacle" type="Area2D" parent="." unique_id=670946572]
 position = Vector2(1314, 603)
 collision_layer = 0
 script = ExtResource("2_mvwgm")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Receptacle"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Receptacle" unique_id=1497398436]
 shape = SubResource("CapsuleShape2D_vmg1h")
 
-[node name="Sprite2D" type="Sprite2D" parent="Receptacle"]
+[node name="Sprite2D" type="Sprite2D" parent="Receptacle" unique_id=1476467407]
 position = Vector2(3, 3)
 texture = SubResource("PlaceholderTexture2D_vmg1h")
 
-[node name="Draggable" type="Area2D" parent="."]
+[node name="Draggable" type="Area2D" parent="." unique_id=722314459]
 position = Vector2(623, 319)
 script = ExtResource("1_vmg1h")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Draggable"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Draggable" unique_id=24069341]
 shape = SubResource("RectangleShape2D_mvwgm")
 
-[node name="Sprite2D" type="Sprite2D" parent="Draggable"]
+[node name="Sprite2D" type="Sprite2D" parent="Draggable" unique_id=535762868]
 position = Vector2(3, 3)
 texture = SubResource("PlaceholderTexture2D_xpcl3")

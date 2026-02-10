@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://diqdn07jd14g2"]
+[gd_scene format=3 uid="uid://diqdn07jd14g2"]
 
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="1_e8six"]
 [ext_resource type="Texture2D" uid="uid://i0fx5phat35o" path="res://graphics/comic3/frame_backpack/mochil.png" id="1_em00k"]
@@ -12,37 +12,37 @@
 radius = 241.0
 height = 742.0
 
-[node name="JungleComic3FrameBackpack" type="Node2D"]
+[node name="JungleComic3FrameBackpack" type="Node2D" unique_id=2112538726]
 
-[node name="Area2D" type="Area2D" parent="." node_paths=PackedStringArray("nodes_to_show")]
+[node name="Area2D" type="Area2D" parent="." unique_id=1242085214 node_paths=PackedStringArray("nodes_to_show")]
 position = Vector2(-477, 59)
 script = ExtResource("1_e8six")
 nodes_to_show = [NodePath("../Paassport"), NodePath("../Pills"), NodePath("../Wallet"), NodePath("../Phone")]
 
-[node name="Mochil" type="Sprite2D" parent="Area2D"]
+[node name="Mochil" type="Sprite2D" parent="Area2D" unique_id=106449330]
 texture = ExtResource("1_em00k")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1600363899]
 position = Vector2(66, 0)
 shape = SubResource("CapsuleShape2D_yti6k")
 
-[node name="Paassport" type="Sprite2D" parent="."]
+[node name="Paassport" type="Sprite2D" parent="." unique_id=683147066]
 position = Vector2(279, -203)
 texture = ExtResource("2_yti6k")
 
-[node name="Pills" type="Sprite2D" parent="."]
+[node name="Pills" type="Sprite2D" parent="." unique_id=2001071663]
 position = Vector2(686, -199)
 texture = ExtResource("4_0s8tn")
 
-[node name="Wallet" type="Sprite2D" parent="."]
+[node name="Wallet" type="Sprite2D" parent="." unique_id=1873561965]
 position = Vector2(672, 236)
 texture = ExtResource("5_ejegh")
 
-[node name="Phone" type="Sprite2D" parent="."]
+[node name="Phone" type="Sprite2D" parent="." unique_id=437418748]
 position = Vector2(196, 288)
 texture = ExtResource("3_e8six")
 
-[node name="TransitionCounter" type="Node" parent="." node_paths=PackedStringArray("clickables")]
+[node name="TransitionCounter" type="Node" parent="." unique_id=1159667046 node_paths=PackedStringArray("clickables")]
 script = ExtResource("6_yti6k")
 clickables = [NodePath("../Area2D")]
 obstacles_to_clear = 4

@@ -1,11 +1,11 @@
-[gd_scene load_steps=23 format=3 uid="uid://bhvy7yex87kvc"]
+[gd_scene format=3 uid="uid://bhvy7yex87kvc"]
 
 [ext_resource type="Texture2D" uid="uid://7nwkr7fixajk" path="res://graphics/comic3/frame_phone/frame_phone/phone_1.png" id="1_7gkcu"]
 [ext_resource type="Texture2D" uid="uid://clgc3i8r6oo83" path="res://graphics/comic3/frame_phone/frame_phone/charger.png" id="2_x4ou1"]
 [ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="3_8hdu0"]
 [ext_resource type="Texture2D" uid="uid://c2l5tg6thtkal" path="res://graphics/comic3/frame_phone/frame_phone/phone_3.png" id="4_06jsj"]
 [ext_resource type="Texture2D" uid="uid://c5ftkp01s18wt" path="res://graphics/comic3/frame_phone/frame_phone/phone_4.png" id="5_jmjt5"]
-[ext_resource type="Script" path="res://components/utils/click_hide.gd" id="5_nkld0"]
+[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/click_hide.gd" id="5_nkld0"]
 [ext_resource type="Texture2D" uid="uid://b4vpeja2ohtxp" path="res://graphics/comic3/frame_phone/frame_phone/phone_5.png" id="6_yolvj"]
 [ext_resource type="Texture2D" uid="uid://flalr2pmrrx1" path="res://graphics/comic3/frame_phone/frame_phone/phone_2.png" id="7_6ruk1"]
 [ext_resource type="Texture2D" uid="uid://bbogorcd4lirs" path="res://graphics/comic3/frame_phone/frame_phone/phone_6.png" id="7_nkld0"]
@@ -93,19 +93,19 @@ _data = {
 &"phone_charging": SubResource("Animation_jmjt5")
 }
 
-[node name="JungleComic3FramePhone" type="Node2D"]
+[node name="JungleComic3FramePhone" type="Node2D" unique_id=1620228039]
 
-[node name="Receptacle_Charger" parent="." instance=ExtResource("14_6ruk1")]
+[node name="Receptacle_Charger" parent="." unique_id=1265243040 instance=ExtResource("14_6ruk1")]
 position = Vector2(-337, 232)
 
 [node name="CollisionShape2D" parent="Receptacle_Charger" index="0"]
 shape = SubResource("CircleShape2D_06jsj")
 
-[node name="Charger" type="Sprite2D" parent="Receptacle_Charger"]
+[node name="Charger" type="Sprite2D" parent="Receptacle_Charger" unique_id=1521154429]
 position = Vector2(-74, 149)
 texture = ExtResource("2_x4ou1")
 
-[node name="PuzzlePiece_Phone" type="Node2D" parent="." node_paths=PackedStringArray("draggable", "placement_checker")]
+[node name="PuzzlePiece_Phone" type="Node2D" parent="." unique_id=8375827 node_paths=PackedStringArray("draggable", "placement_checker")]
 position = Vector2(549, -140)
 script = ExtResource("11_yolvj")
 draggable = NodePath("Draggable")
@@ -113,50 +113,48 @@ placement_checker = NodePath("Draggable/PlacementChecker")
 metadata/_custom_type_script = "uid://dt4apmm1b4e51"
 metadata/_edit_group_ = true
 
-[node name="Draggable" type="Area2D" parent="PuzzlePiece_Phone"]
+[node name="Draggable" type="Area2D" parent="PuzzlePiece_Phone" unique_id=894085846]
 script = ExtResource("3_8hdu0")
 metadata/_custom_type_script = "uid://cxam1cepgkl3s"
 
-[node name="PhoneOnNoBattery" type="Sprite2D" parent="PuzzlePiece_Phone/Draggable"]
+[node name="PhoneOnNoBattery" type="Sprite2D" parent="PuzzlePiece_Phone/Draggable" unique_id=1196771254]
 texture = ExtResource("7_6ruk1")
 
-[node name="Clickable" type="Area2D" parent="PuzzlePiece_Phone/Draggable"]
+[node name="Clickable" type="Area2D" parent="PuzzlePiece_Phone/Draggable" unique_id=375759851]
 script = ExtResource("5_nkld0")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
-[node name="PhoneOff" type="Sprite2D" parent="PuzzlePiece_Phone/Draggable/Clickable"]
+[node name="PhoneOff" type="Sprite2D" parent="PuzzlePiece_Phone/Draggable/Clickable" unique_id=1207365709]
 texture = ExtResource("1_7gkcu")
 
-[node name="CollisionShape2D_Drag" type="CollisionShape2D" parent="PuzzlePiece_Phone/Draggable/Clickable"]
+[node name="CollisionShape2D_Drag" type="CollisionShape2D" parent="PuzzlePiece_Phone/Draggable/Clickable" unique_id=1106928755]
 position = Vector2(1.6254883, 3.3695068)
 rotation = 0.55712956
 shape = SubResource("RectangleShape2D_dx01d")
 
-[node name="Phone1" type="AnimatedSprite2D" parent="PuzzlePiece_Phone/Draggable"]
+[node name="Phone1" type="AnimatedSprite2D" parent="PuzzlePiece_Phone/Draggable" unique_id=1524389432]
 visible = false
 sprite_frames = SubResource("SpriteFrames_pwafa")
 
-[node name="CollisionShape2D_Drag" type="CollisionShape2D" parent="PuzzlePiece_Phone/Draggable"]
+[node name="CollisionShape2D_Drag" type="CollisionShape2D" parent="PuzzlePiece_Phone/Draggable" unique_id=296109282]
 position = Vector2(1.6254883, 3.3695068)
 rotation = 0.55712956
 shape = SubResource("RectangleShape2D_dx01d")
 
-[node name="PlacementChecker" parent="PuzzlePiece_Phone/Draggable" node_paths=PackedStringArray("receptacle") instance=ExtResource("13_nkld0")]
+[node name="PlacementChecker" parent="PuzzlePiece_Phone/Draggable" unique_id=731281300 node_paths=PackedStringArray("receptacle") instance=ExtResource("13_nkld0")]
 position = Vector2(-216, 354)
 receptacle = NodePath("../../../Receptacle_Charger")
 
-[node name="OnPuzzlePiecePlacedEnable" type="Node" parent="." node_paths=PackedStringArray("puzzle_piece", "node_to_enable")]
+[node name="OnPuzzlePiecePlacedEnable" type="Node" parent="." unique_id=426104020 node_paths=PackedStringArray("puzzle_piece", "node_to_enable")]
 script = ExtResource("15_jmjt5")
 puzzle_piece = NodePath("../PuzzlePiece_Phone")
 node_to_enable = NodePath("../AnimationPlayer")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_yolvj")
-}
-autoplay = "phone_charging"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=549376162]
+libraries/ = SubResource("AnimationLibrary_yolvj")
+autoplay = &"phone_charging"
 
-[node name="Transition" type="Node" parent="." node_paths=PackedStringArray("anim_player")]
+[node name="Transition" type="Node" parent="." unique_id=2025088976 node_paths=PackedStringArray("anim_player")]
 script = ExtResource("17_nkld0")
 anim_player = NodePath("../AnimationPlayer")
 

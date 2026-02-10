@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://bd7g0rb56ib48"]
+[gd_scene format=3 uid="uid://bd7g0rb56ib48"]
 
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_4u7yc"]
 [ext_resource type="Texture2D" uid="uid://ba4jex3kfwda1" path="res://graphics/comic1rexported/frame_candle/candle_background.png" id="2_pw80g"]
@@ -227,63 +227,61 @@ _data = {
 &"light_candle": SubResource("Animation_ldxfp")
 }
 
-[node name="JungleComicCandle" type="Node2D"]
+[node name="JungleComicCandle" type="Node2D" unique_id=1852894284]
 
-[node name="AutomaticPanner" type="Node" parent="." node_paths=PackedStringArray("anim_player")]
+[node name="AutomaticPanner" type="Node" parent="." unique_id=1001235180 node_paths=PackedStringArray("anim_player")]
 script = ExtResource("2_4u7yc")
 anim_player = NodePath("../AnimationPlayer")
 
-[node name="Candle" type="AnimatedSprite2D" parent="."]
+[node name="Candle" type="AnimatedSprite2D" parent="." unique_id=1891985411]
 clip_children = 2
 sprite_frames = SubResource("SpriteFrames_pw80g")
 
-[node name="CandleLit" type="AnimatedSprite2D" parent="Candle"]
+[node name="CandleLit" type="AnimatedSprite2D" parent="Candle" unique_id=131238695]
 visible = false
 sprite_frames = SubResource("SpriteFrames_roaln")
 autoplay = "default"
 
-[node name="Target" type="Area2D" parent="Candle" node_paths=PackedStringArray("node_to_enable")]
+[node name="Target" type="Area2D" parent="Candle" unique_id=982888426 node_paths=PackedStringArray("node_to_enable")]
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("13_roaln")
 node_to_enable = NodePath("../../AnimationPlayer")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Candle/Target"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Candle/Target" unique_id=1877739107]
 position = Vector2(133.5, 93.5)
 shape = SubResource("RectangleShape2D_ldxfp")
 
-[node name="Match" type="Area2D" parent="Candle"]
+[node name="Match" type="Area2D" parent="Candle" unique_id=2025347504]
 position = Vector2(-487, -90)
 script = ExtResource("13_ldxfp")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Candle/Match"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Candle/Match" unique_id=1863757623]
 position = Vector2(-131.00002, 58.999992)
 rotation = 0.12198973
 shape = SubResource("RectangleShape2D_roaln")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Candle/Match"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Candle/Match" unique_id=887917877]
 position = Vector2(-589, -59.000015)
 rotation = -0.31191188
 shape = SubResource("CapsuleShape2D_roaln")
 
-[node name="Lighter" type="Area2D" parent="Candle/Match"]
+[node name="Lighter" type="Area2D" parent="Candle/Match" unique_id=1290741680]
 position = Vector2(15, -1)
 collision_layer = 4
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Candle/Match/Lighter"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Candle/Match/Lighter" unique_id=681782524]
 position = Vector2(160.5, -44)
 shape = SubResource("RectangleShape2D_eyl0t")
 
-[node name="Hand" type="AnimatedSprite2D" parent="Candle/Match"]
+[node name="Hand" type="AnimatedSprite2D" parent="Candle/Match" unique_id=483531473]
 position = Vector2(-221, -39)
 sprite_frames = SubResource("SpriteFrames_ldxfp")
 autoplay = "default"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_roaln")
-}
-autoplay = "light_candle"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=726061850]
+libraries/ = SubResource("AnimationLibrary_roaln")
+autoplay = &"light_candle"
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2145540174]

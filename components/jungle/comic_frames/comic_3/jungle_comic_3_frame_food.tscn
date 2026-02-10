@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bp16hkt28o6tp"]
+[gd_scene format=3 uid="uid://bp16hkt28o6tp"]
 
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="1_5aap7"]
 [ext_resource type="Texture2D" uid="uid://4s5x4kbwruk7" path="res://graphics/comic3/frame_food/plate1/plate1_1.png" id="2_5aap7"]
@@ -88,56 +88,56 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_4npjt"]
 radius = 232.60696
 
-[node name="JungleComic3FrameFood" type="Node2D"]
+[node name="JungleComic3FrameFood" type="Node2D" unique_id=1997303602]
 
-[node name="TransitionCounter" type="Node" parent="." node_paths=PackedStringArray("clickables")]
+[node name="TransitionCounter" type="Node" parent="." unique_id=1882981836 node_paths=PackedStringArray("clickables")]
 script = ExtResource("12_c8x4o")
 clickables = [NodePath("../Meal"), NodePath("../Meal2"), NodePath("../Glass")]
 obstacles_to_clear = 4
 
-[node name="PramefoodNoplates" type="Sprite2D" parent="."]
+[node name="PramefoodNoplates" type="Sprite2D" parent="." unique_id=527075900]
 texture = ExtResource("13_ear0j")
 
-[node name="Glass" type="Area2D" parent="."]
+[node name="Glass" type="Area2D" parent="." unique_id=1753131285]
 position = Vector2(509, -306)
 script = ExtResource("1_5aap7")
 metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Glass" node_paths=PackedStringArray("clickable")]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Glass" unique_id=1942299291 node_paths=PackedStringArray("clickable")]
 sprite_frames = SubResource("SpriteFrames_4npjt")
 script = ExtResource("9_n4mpm")
 clickable = NodePath("..")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Glass"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Glass" unique_id=89482058]
 position = Vector2(1, -58)
 shape = SubResource("CapsuleShape2D_6ig8h")
 
-[node name="Meal" type="Area2D" parent="."]
+[node name="Meal" type="Area2D" parent="." unique_id=784142193]
 position = Vector2(-208, 55)
 script = ExtResource("1_5aap7")
 metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Meal" node_paths=PackedStringArray("clickable")]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Meal" unique_id=423281261 node_paths=PackedStringArray("clickable")]
 sprite_frames = SubResource("SpriteFrames_dx01d")
 script = ExtResource("9_n4mpm")
 clickable = NodePath("..")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Meal"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Meal" unique_id=472474273]
 shape = SubResource("CircleShape2D_f5uc7")
 
-[node name="Meal2" type="Area2D" parent="."]
+[node name="Meal2" type="Area2D" parent="." unique_id=1873728601]
 position = Vector2(354, 160)
 script = ExtResource("1_5aap7")
 metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Meal2" node_paths=PackedStringArray("clickable")]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Meal2" unique_id=1779388811 node_paths=PackedStringArray("clickable")]
 sprite_frames = SubResource("SpriteFrames_bk7fk")
 script = ExtResource("9_n4mpm")
 clickable = NodePath("..")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Meal2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Meal2" unique_id=278957011]
 shape = SubResource("CircleShape2D_4npjt")
 
-[node name="Fork" type="Sprite2D" parent="."]
+[node name="Fork" type="Sprite2D" parent="." unique_id=904854337]
 position = Vector2(-534, 45)
 texture = ExtResource("10_v0h4g")

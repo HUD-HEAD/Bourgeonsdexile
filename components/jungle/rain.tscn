@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://d246c0iqqddvh"]
+[gd_scene format=3 uid="uid://d246c0iqqddvh"]
 
 [sub_resource type="Gradient" id="Gradient_psjfn"]
 offsets = PackedFloat32Array(0, 0.0016447369)
@@ -19,7 +19,7 @@ gravity = Vector3(0, 98, 0)
 hue_variation_min = -2.2351742e-08
 hue_variation_max = -2.2351742e-08
 
-[node name="Rain" type="GPUParticles2D"]
+[node name="Rain" type="GPUParticles2D" unique_id=153314495]
 amount = 50
 texture = SubResource("GradientTexture2D_d1psa")
 lifetime = 5.0
