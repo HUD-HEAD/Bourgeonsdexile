@@ -8,14 +8,13 @@
 [ext_resource type="PackedScene" uid="uid://dlufjr836r473" path="res://components/jungle/comic_frames/comic_4/jungle_comic_4_panel_4.tscn" id="6_12per"]
 [ext_resource type="PackedScene" uid="uid://h67bkwvbgnvx" path="res://components/jungle/comic_frames/comic_4/jungle_comic_4_panel_6.tscn" id="9_t5lhr"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="9_yggp2"]
-[ext_resource type="PackedScene" uid="uid://cyjixim7pv8gf" path="res://components/jungle/comic_frames/comic_4/jungle_comic_4_panel_7.tscn" id="10_drdnr"]
 [ext_resource type="PackedScene" uid="uid://crqtn2a43hhe8" path="res://components/jungle/comic_frames/comic_4/jungle_comic_4_panel_phone.tscn" id="12_xs8jl"]
 
 [node name="JungleComic4" type="Node2D" unique_id=1574922119]
 
 [node name="PanelPanner" type="Node" parent="." unique_id=665689758 node_paths=PackedStringArray("panels")]
 script = ExtResource("9_yggp2")
-panels = [NodePath("../Comic4Panel1"), NodePath("../JungleComic4FrameFolders"), NodePath("../Comic4PanelTicket"), NodePath("../Comic4PanelPhone"), NodePath("../Comic4PanelMochil"), NodePath("../Comic4Panel6"), NodePath("../Comic4Panel7"), NodePath("../ToBeContinued")]
+panels = [NodePath("../Comic4Panel1"), NodePath("../JungleComic4FrameFolders"), NodePath("../Comic4PanelTicket"), NodePath("../Comic4PanelPhone"), NodePath("../Comic4PanelMochil"), NodePath("../Comic4Panel6"), NodePath("../ToBeContinued")]
 
 [node name="PaperBackground" type="CanvasLayer" parent="." unique_id=1769624388]
 layer = -1
@@ -59,11 +58,8 @@ position = Vector2(10831, 534)
 [node name="Comic4Panel6" parent="." unique_id=1529630051 instance=ExtResource("9_t5lhr")]
 position = Vector2(12980, 540)
 
-[node name="Comic4Panel7" parent="." unique_id=1855488876 instance=ExtResource("10_drdnr")]
-position = Vector2(15409, 540)
-
 [node name="ToBeContinued" type="Node2D" parent="." unique_id=334550578]
-position = Vector2(17975, 540)
+position = Vector2(15459, 540)
 
 [node name="ToBeContinued" type="Label" parent="ToBeContinued" unique_id=694913069]
 anchors_preset = 8

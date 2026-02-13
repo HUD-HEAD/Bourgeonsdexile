@@ -15,7 +15,6 @@
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="17_13xj0"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="17_54bx8"]
 [ext_resource type="PackedScene" uid="uid://bi4kbbnyg1r6g" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_7.tscn" id="19_p78bu"]
-[ext_resource type="PackedScene" uid="uid://ck876o7lm40cb" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_8.tscn" id="20_p78bu"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="24_7ejrb"]
 [ext_resource type="PackedScene" uid="uid://b3xbb0f00akh4" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_3.tscn" id="32_ynlpr"]
 [ext_resource type="PackedScene" uid="uid://bq0ewephc3xv5" path="res://components/jungle/comic_frames/comic_1/jungle_comic_1_frame_4.tscn" id="35_jpuy7"]
@@ -57,11 +56,11 @@ position = Vector2(3091, 540)
 [node name="JungleComic1FramePonytail" parent="." unique_id=918717733 instance=ExtResource("4_n38qt")]
 position = Vector2(5251, 540)
 
-[node name="JungleComic1FrameBoard" parent="." unique_id=1056075513 instance=ExtResource("5_p78bu")]
-position = Vector2(7494, 540)
-
 [node name="JungleComic1FrameSink" parent="." unique_id=1085994452 instance=ExtResource("6_7ejrb")]
-position = Vector2(9984, 540)
+position = Vector2(7529, 540)
+
+[node name="JungleComic1FrameBoard" parent="." unique_id=1056075513 instance=ExtResource("5_p78bu")]
+position = Vector2(9943, 540)
 
 [node name="JungleComic1FrameFoodReady" parent="." unique_id=1686233868 instance=ExtResource("7_13xj0")]
 position = Vector2(12372, 540)
@@ -113,23 +112,18 @@ position = Vector2(29050, 540)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame7" unique_id=806881675]
 
-[node name="JungleComic1Frame8" parent="." unique_id=1349290111 instance=ExtResource("20_p78bu")]
-position = Vector2(31203.998, 540)
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame8" unique_id=178698024]
-
 [node name="JungleComic1Frame9" parent="." unique_id=1870862331 instance=ExtResource("13_54bx8")]
-position = Vector2(33731, 540)
+position = Vector2(31470, 540)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame9" unique_id=1759255997]
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=849983846]
-position = Vector2(36694, 596)
+position = Vector2(34433, 596)
 script = ExtResource("17_54bx8")
 next_scene = ExtResource("16_7ejrb")
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("17_13xj0")
-panels = [NodePath("../JungleComic1Frame1"), NodePath("../JungleComic1FrameEntry"), NodePath("../JungleComic1FramePonytail"), NodePath("../JungleComic1FrameBoard"), NodePath("../JungleComic1FrameSink"), NodePath("../JungleComic1FrameFoodReady"), NodePath("../JuncleComic1TVAndSwitch"), NodePath("../JungleComicCandle"), NodePath("../JungleComic1Frame2"), NodePath("../JungleComic1Frame3"), NodePath("../JungleComic1Frame4"), NodePath("../JungleComic1Frame5"), NodePath("../JungleComic1Frame6"), NodePath("../JungleComic1Frame7"), NodePath("../JungleComic1Frame8"), NodePath("../JungleComic1Frame9"), NodePath("../SceneEnder")]
+panels = [NodePath("../JungleComic1Frame1"), NodePath("../JungleComic1FrameEntry"), NodePath("../JungleComic1FramePonytail"), NodePath("../JungleComic1FrameSink"), NodePath("../JungleComic1FrameBoard"), NodePath("../JungleComic1FrameFoodReady"), NodePath("../JuncleComic1TVAndSwitch"), NodePath("../JungleComicCandle"), NodePath("../JungleComic1Frame2"), NodePath("../JungleComic1Frame3"), NodePath("../JungleComic1Frame4"), NodePath("../JungleComic1Frame5"), NodePath("../JungleComic1Frame6"), NodePath("../JungleComic1Frame7"), NodePath("../JungleComic1Frame9"), NodePath("../SceneEnder")]
 
 [node name="UI" parent="." unique_id=1829896958 instance=ExtResource("24_7ejrb")]
