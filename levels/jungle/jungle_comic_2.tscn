@@ -85,7 +85,7 @@ position = Vector2(19787, 540)
 position = Vector2(22373, 553.5)
 
 [node name="Panel12" parent="." unique_id=425216191 instance=ExtResource("14_nbn5v")]
-position = Vector2(24378, 553.5)
+position = Vector2(24378, 554)
 
 [node name="Panel13" parent="." unique_id=625001368 instance=ExtResource("15_xso2w")]
 position = Vector2(26429, 553.5)
