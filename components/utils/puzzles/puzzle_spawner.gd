@@ -14,6 +14,9 @@ extends Node
 ##Index of current piece to be activated
 var piece_idx : int = 0
 
+#Needed for cases where multiple puzzles are connected to the same spawner
+var _is_active : bool = false
+
 func _ready() -> void:
 	assert(piece_spawners.size()>0)
 
@@ -23,7 +26,8 @@ func _ready() -> void:
 	_deactivate_puzzle()
 	
 func _deactivate_puzzle():
-	spawn_trigger.process_mode = Node.PROCESS_MODE_DISABLED
+	_is_active = false
+	spawn_trigger.disable()
 	puzzle.outline_image.hide()
 	
 	for piece in puzzle.puzzle_pieces:
@@ -34,11 +38,15 @@ func _on_obstacle_entered(area2d : Area2D):
 	_activate_puzzle()
 
 func _activate_puzzle():
-	spawn_trigger.process_mode = Node.PROCESS_MODE_INHERIT
+	_is_active = true
+	
+	spawn_trigger.enable()
 
 ## On click, hide trigger and spawn puzzle pieces
 func _on_spawner_clicked():
-	spawn_trigger.hide()
+	if !_is_active:
+		return
+	spawn_trigger.disable()
 	
 	if piece_idx == 0:
 		puzzle.outline_image.show()
@@ -65,10 +73,12 @@ func _increment_idx():
 	piece_idx += 1
 	if piece_idx >= puzzle.puzzle_pieces.size():
 		spawn_trigger.clicked.disconnect(_on_spawner_clicked)
-		spawn_trigger.hide()
+		spawn_trigger.disable()
 
 ## Activate NPC bubble and re-enable spawn trigger
 func _npc_bubble():
 	_activate_next_piece()
 	if piece_idx < puzzle.puzzle_pieces.size():
-		spawn_trigger.show()
+		spawn_trigger.enable()
+	
+	

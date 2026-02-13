@@ -14,12 +14,12 @@
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="14_fekbj"]
 [ext_resource type="PackedScene" uid="uid://cnyqkkr7kcq7i" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_12.tscn" id="14_nbn5v"]
 [ext_resource type="PackedScene" uid="uid://b5asjt0f4mcsd" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_7.tscn" id="14_tvvi7"]
-[ext_resource type="PackedScene" uid="uid://o324t3l05s7q" path="res://levels/jungle/jungle_with_puzzles.tscn" id="15_1sxs8"]
 [ext_resource type="PackedScene" uid="uid://bj7e73nkbbtwn" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_9.tscn" id="15_mtmad"]
 [ext_resource type="PackedScene" uid="uid://cgsvxrtoxhfja" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_13.tscn" id="15_xso2w"]
 [ext_resource type="PackedScene" uid="uid://de5wtyfnp5wnc" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_14.tscn" id="16_js07p"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="17_1sxs8"]
 [ext_resource type="PackedScene" uid="uid://43c07utlirv7" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_11.tscn" id="18_tmikl"]
+[ext_resource type="PackedScene" uid="uid://cjq4fleiu5245" path="res://levels/jungle/jungle.tscn" id="20_o76i3"]
 
 [node name="JungleComic2" type="Node2D" unique_id=1529693680]
 
@@ -105,4 +105,4 @@ position = Vector2(32832, 540)
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=395772265]
 position = Vector2(34960, 625)
 script = ExtResource("14_fekbj")
-next_scene = ExtResource("15_1sxs8")
+next_scene = ExtResource("20_o76i3")
