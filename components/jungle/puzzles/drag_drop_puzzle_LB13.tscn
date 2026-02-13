@@ -9,29 +9,30 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1tt25"]
 size = Vector2(152.8808, 187.44958)
 
-[node name="DragDropPuzzle" unique_id=439373313 instance=ExtResource("1_mclnl")]
+[node name="DragDropPuzzle" unique_id=439373313 node_paths=PackedStringArray("puzzle_pieces") instance=ExtResource("1_mclnl")]
+puzzle_pieces = [NodePath("BuildingBlocks/PuzzlePiece")]
 
-[node name="OutlinePuzzle" parent="." index="0"]
+[node name="OutlinePuzzle" parent="." index="0" unique_id=1513168459]
 texture = ExtResource("2_ljpl3")
 
-[node name="PuzzlePiece" parent="BuildingBlocks" index="0"]
+[node name="PuzzlePiece" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="0" unique_id=1667760579]
 position = Vector2(-1, 4)
 
-[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece/Draggable" index="0"]
+[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="0" unique_id=1266676352]
 texture = ExtResource("3_27ahb")
 
-[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece/Draggable" index="1" node_paths=PackedStringArray("receptacle")]
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="1" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
 receptacle = NodePath("../../../Receptacle")
 
-[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece/Draggable" index="2"]
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="2" unique_id=1105802255]
 position = Vector2(-1.2588123, -1.7811384)
 rotation = -0.09817319
 shape = SubResource("RectangleShape2D_1tt25")
 
-[node name="Receptacle" parent="BuildingBlocks" index="1"]
+[node name="Receptacle" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="1" unique_id=1559191435]
 position = Vector2(-1, 4)
 
-[node name="CompletePuzzle" parent="." index="2"]
+[node name="CompletePuzzle" parent="." index="2" unique_id=1933061263]
 position = Vector2(45, 1)
 texture = ExtResource("4_btl34")
 
