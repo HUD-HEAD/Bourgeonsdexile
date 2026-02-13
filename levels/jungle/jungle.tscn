@@ -7,18 +7,22 @@
 [ext_resource type="Texture2D" uid="uid://dfx4vaka3gxb3" path="res://graphics/jungle/junglepieces/1/water1_rockreflection.png" id="5_nqhdg"]
 [ext_resource type="Texture2D" uid="uid://dwdic0l4f1w4c" path="res://graphics/jungle/junglepieces/1/jungle1_background.png" id="6_nqhdg"]
 [ext_resource type="Texture2D" uid="uid://n0s7y8hxs1x8" path="res://graphics/jungle/junglepieces/1/jungle1_floor.png" id="7_31ufg"]
-[ext_resource type="Texture2D" uid="uid://b1apau5hmg0nv" path="res://graphics/jungle/junglepieces/2/jungle2.png" id="8_8d2i3"]
+[ext_resource type="Texture2D" uid="uid://dtbj1n54uak3i" path="res://graphics/jungle/junglepieces/1/garbage_jungle1.png" id="8_fm5rk"]
 [ext_resource type="Texture2D" uid="uid://bp8k84c62pfcr" path="res://graphics/jungle/junglepieces/3/jungle3_background.png" id="9_mw3x0"]
+[ext_resource type="Texture2D" uid="uid://df76bh7tstdb6" path="res://graphics/jungle/junglepieces/2/v2/background.png" id="9_oqjtf"]
 [ext_resource type="Texture2D" uid="uid://b0i0o0j5u1ds8" path="res://graphics/jungle/junglepieces/3/jungle3_floor.png" id="10_k1umw"]
+[ext_resource type="Texture2D" uid="uid://b83yfl72cdhju" path="res://graphics/jungle/junglepieces/2/v2/floor.png" id="10_t8mqy"]
 [ext_resource type="Texture2D" uid="uid://f7lv6snpnokf" path="res://graphics/jungle/junglepieces/3/bush.png" id="11_q8svf"]
 [ext_resource type="Texture2D" uid="uid://bn5lx2quhsng4" path="res://graphics/jungle/junglepieces/4/jungle4_background.png" id="12_7xi0o"]
 [ext_resource type="Texture2D" uid="uid://btdl1qqmm5lwn" path="res://graphics/jungle/junglepieces/4/jungle4_floor.png" id="13_r20bg"]
 [ext_resource type="Texture2D" uid="uid://m31dh66akhqm" path="res://graphics/jungle/junglepieces/jungle5.png" id="14_7ab2f"]
+[ext_resource type="Texture2D" uid="uid://ckx75on8fpxew" path="res://graphics/jungle/junglepieces/4/mockupgarbage4.png" id="14_t8mqy"]
 [ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/jungle/jungle_woman.tscn" id="15_td1vu"]
 [ext_resource type="SpriteFrames" uid="uid://bmcc5l21n4h6s" path="res://components/jungle/resources/companion_1_sprite_frames.tres" id="16_17nyf"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="16_aewef"]
 [ext_resource type="PackedScene" uid="uid://deifii0sv125i" path="res://levels/jungle/jungle_comic_3.tscn" id="17_aqo8c"]
 [ext_resource type="SpriteFrames" uid="uid://dqrsyjauj12el" path="res://components/jungle/resources/companion_2_sprite_frames.tres" id="17_k7em6"]
+[ext_resource type="Texture2D" uid="uid://cayrp4ctmmk1b" path="res://graphics/jungle/junglepieces/4/garbage_jungle4.png" id="17_vjysh"]
 [ext_resource type="PackedScene" uid="uid://d246c0iqqddvh" path="res://components/jungle/rain.tscn" id="18_nqhdg"]
 [ext_resource type="Script" uid="uid://gchp60e2jp5r" path="res://components/utils/set_camera_bounds.gd" id="19_31ufg"]
 [ext_resource type="AudioStream" uid="uid://1bh8jat7waj1" path="res://audio/sfx/jungle-nature-229896.mp3" id="20_5j4y3"]
@@ -51,7 +55,7 @@ energy = 0.0
 texture = ExtResource("2_mtlks")
 
 [node name="Water2" type="Sprite2D" parent="JungleSprites" unique_id=672181302]
-position = Vector2(27963, 399)
+position = Vector2(27904, 608)
 texture = ExtResource("3_l3adg")
 
 [node name="PointLight2D3" type="PointLight2D" parent="JungleSprites/Water2" unique_id=1653953684]
@@ -74,12 +78,21 @@ position = Vector2(-35, 542)
 texture = ExtResource("7_31ufg")
 centered = false
 
+[node name="GarbageJungle1" type="Sprite2D" parent="JungleSprites/Jungle1" unique_id=1301964264]
+position = Vector2(6366, 699)
+texture = ExtResource("8_fm5rk")
+
 [node name="Jungle2" type="Node2D" parent="JungleSprites" unique_id=948059307]
 position = Vector2(8000, 0)
 metadata/_edit_group_ = true
 
 [node name="Jungle2" type="Sprite2D" parent="JungleSprites/Jungle2" unique_id=560809821]
-texture = ExtResource("8_8d2i3")
+texture = ExtResource("9_oqjtf")
+centered = false
+
+[node name="Floor" type="Sprite2D" parent="JungleSprites/Jungle2" unique_id=109681541]
+position = Vector2(16, 512)
+texture = ExtResource("10_t8mqy")
 centered = false
 
 [node name="Jungle3" type="Node2D" parent="JungleSprites" unique_id=812689316]
@@ -103,14 +116,24 @@ position = Vector2(25198, -14)
 metadata/_edit_group_ = true
 
 [node name="Jungle4Background" type="Sprite2D" parent="JungleSprites/Jungle4" unique_id=1943901093]
-position = Vector2(-829, -468)
+position = Vector2(-1270, -482)
 texture = ExtResource("12_7xi0o")
 centered = false
 
 [node name="Jungle4Floor" type="Sprite2D" parent="JungleSprites/Jungle4" unique_id=1301046286]
-position = Vector2(-844, -482)
+position = Vector2(-870, 278)
 texture = ExtResource("13_r20bg")
 centered = false
+
+[node name="GarbageJungle4" type="Sprite2D" parent="JungleSprites/Jungle4" unique_id=1623248129]
+position = Vector2(1570, 478)
+texture = ExtResource("17_vjysh")
+
+[node name="Mockupgarbage4" type="Sprite2D" parent="JungleSprites" unique_id=1316751311]
+visible = false
+self_modulate = Color(1, 1, 1, 0.29411766)
+position = Vector2(29344, 304)
+texture = ExtResource("14_t8mqy")
 
 [node name="Jungle5" type="Node2D" parent="JungleSprites" unique_id=1958294793]
 position = Vector2(34384, -467)
