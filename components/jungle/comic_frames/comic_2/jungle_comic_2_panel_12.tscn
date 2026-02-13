@@ -10,6 +10,7 @@
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=163506306]
 position = Vector2(-812, 0)
+rect = Rect2(-10, -10, 1704, 20)
 
 [node name="Transition" type="Node" parent="." unique_id=7325851]
 script = ExtResource("1_nw6cm")

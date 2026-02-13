@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dwubwe8axq0cl" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_1.tscn" id="4_xln60"]
 [ext_resource type="PackedScene" uid="uid://dnigk6m1ntgvl" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_4.tscn" id="7_o76i3"]
 [ext_resource type="PackedScene" uid="uid://dpk31y77oouru" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_2.tscn" id="8_mtmad"]
+[ext_resource type="PackedScene" uid="uid://bsb8x1gm6ll7g" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_phone.tscn" id="8_o76i3"]
 [ext_resource type="PackedScene" uid="uid://bhe7ytmf514r1" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_6.tscn" id="9_mtmad"]
 [ext_resource type="PackedScene" uid="uid://djyan8ubtutll" path="res://components/jungle/comic_frames/comic_2/wallet_panel.tscn" id="10_dkeqa"]
 [ext_resource type="PackedScene" uid="uid://crfrjw42dcsks" path="res://components/jungle/comic_frames/comic_2/pregnancy_panel.tscn" id="12_exkuh"]
@@ -48,7 +49,7 @@ stretch_mode = 1
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1746052083 node_paths=PackedStringArray("panels")]
 script = ExtResource("12_su3g7")
-panels = [NodePath("../Panel1"), NodePath("../Panel2"), NodePath("../WalletPanel"), NodePath("../Panel4"), NodePath("../Panel5"), NodePath("../Panel6"), NodePath("../Panel7"), NodePath("../Panel9"), NodePath("../Panel10"), NodePath("../Panel11"), NodePath("../Panel12"), NodePath("../Panel13"), NodePath("../Panel14"), NodePath("../PregnancyPanel"), NodePath("../SceneEnder")]
+panels = [NodePath("../Panel1"), NodePath("../Panel2"), NodePath("../WalletPanel"), NodePath("../Panel4"), NodePath("../PanelPhone"), NodePath("../Panel5"), NodePath("../Panel6"), NodePath("../Panel7"), NodePath("../Panel9"), NodePath("../Panel10"), NodePath("../Panel11"), NodePath("../Panel12"), NodePath("../Panel13"), NodePath("../Panel14"), NodePath("../PregnancyPanel"), NodePath("../SceneEnder")]
 
 [node name="UI" parent="." unique_id=39001016 instance=ExtResource("17_1sxs8")]
 
@@ -66,39 +67,42 @@ position = Vector2(6989, 592)
 [node name="Panel4" parent="." unique_id=1050670671 instance=ExtResource("7_o76i3")]
 position = Vector2(8712, 553)
 
+[node name="PanelPhone" parent="." unique_id=2042325380 instance=ExtResource("8_o76i3")]
+position = Vector2(10622, 540)
+
 [node name="Panel5" parent="." unique_id=322320134 instance=ExtResource("12_mtmad")]
-position = Vector2(10547, 553)
+position = Vector2(13221, 553)
 
 [node name="Panel6" parent="." unique_id=1128737468 instance=ExtResource("9_mtmad")]
-position = Vector2(12563, 540)
+position = Vector2(15237, 540)
 
 [node name="Panel7" parent="." unique_id=332429161 instance=ExtResource("14_tvvi7")]
-position = Vector2(15104, 553)
+position = Vector2(17778, 553)
 
 [node name="Panel9" parent="." unique_id=2076499636 instance=ExtResource("15_mtmad")]
-position = Vector2(17672, 553.5)
+position = Vector2(20346, 553.5)
 
 [node name="Panel10" parent="." unique_id=820675275 instance=ExtResource("12_tmikl")]
-position = Vector2(19787, 540)
+position = Vector2(22461, 540)
 
 [node name="Panel11" parent="." unique_id=1835400465 instance=ExtResource("18_tmikl")]
-position = Vector2(22373, 553.5)
+position = Vector2(25047, 553.5)
 
 [node name="Panel12" parent="." unique_id=425216191 instance=ExtResource("14_nbn5v")]
-position = Vector2(24378, 554)
+position = Vector2(27052, 554)
 
 [node name="Panel13" parent="." unique_id=625001368 instance=ExtResource("15_xso2w")]
-position = Vector2(26429, 553.5)
+position = Vector2(29103, 553.5)
 
 [node name="Panel14" parent="." unique_id=916438103 instance=ExtResource("16_js07p")]
-position = Vector2(28341, 553.5)
+position = Vector2(31015, 553.5)
 
 [node name="PregnancyPanel" parent="." unique_id=1862232058 instance=ExtResource("12_exkuh")]
-position = Vector2(30158, 540)
+position = Vector2(32832, 540)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="PregnancyPanel" unique_id=1925319365]
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=395772265]
-position = Vector2(32286, 625)
+position = Vector2(34960, 625)
 script = ExtResource("14_fekbj")
 next_scene = ExtResource("15_1sxs8")
