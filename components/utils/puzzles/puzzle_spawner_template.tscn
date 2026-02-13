@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://skt0xd3mmvd"]
+
+[ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="1_xtpdb"]
+[ext_resource type="Texture2D" uid="uid://cajxb73hamrob" path="res://graphics/separated_lajas/queue/queue1/1.png" id="2_ag2mp"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="3_8lbti"]
+[ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/obstacle.tscn" id="4_aw3qr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y1a81"]
+radius = 88.005684
+
+[node name="PuzzleTemplate" type="Node2D" unique_id=1754884165]
+
+[node name="PuzzleSpawner" type="Node" parent="." unique_id=1455650157 node_paths=PackedStringArray("piece_spawners", "spawn_trigger", "obstacle")]
+script = ExtResource("1_xtpdb")
+piece_spawners = [null, NodePath("../Npc/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../Npc/Clickable")
+obstacle = NodePath("../Obstacle")
+
+[node name="Npc" type="Sprite2D" parent="." unique_id=2093839101]
+position = Vector2(1259, 819)
+texture = ExtResource("2_ag2mp")
+
+[node name="MarkerBubbleSpawn" type="Marker2D" parent="Npc" unique_id=1006045612]
+position = Vector2(120, -133)
+
+[node name="Clickable" type="Area2D" parent="Npc" unique_id=1975113136]
+script = ExtResource("3_8lbti")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Npc/Clickable" unique_id=918266892]
+shape = SubResource("CircleShape2D_y1a81")
+
+[node name="Obstacle" parent="." unique_id=310843140 instance=ExtResource("4_aw3qr")]
+position = Vector2(1001, 0)
+collision_mask = 2
