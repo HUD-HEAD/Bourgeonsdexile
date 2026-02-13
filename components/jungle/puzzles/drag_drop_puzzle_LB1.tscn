@@ -75,6 +75,7 @@ position = Vector2(1, -0.5)
 shape = SubResource("RectangleShape2D_16ttr")
 
 [node name="Receptacle3" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="5" unique_id=1792290929 instance=ExtResource("6_0wrxp")]
+position = Vector2(58, 64)
 
 [node name="PuzzlePiece4" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="6" unique_id=468251664 instance=ExtResource("4_n6cij")]
 position = Vector2(-145, 63)
