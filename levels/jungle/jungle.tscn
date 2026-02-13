@@ -38,9 +38,18 @@
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="35_ljtv2"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/obstacle.tscn" id="36_t8bry"]
 
+[sub_resource type="Gradient" id="Gradient_t8bry"]
+offsets = PackedFloat32Array(0, 0.14906304, 0.5562181, 1)
+colors = PackedColorArray(0.06012004, 0.0324, 0.27, 0, 0.05882353, 0.03137255, 0.27058825, 1, 0.05882353, 0.03137255, 0.27058825, 0.9828777, 0.06012004, 0.0324, 0.27, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tglbk"]
+gradient = SubResource("Gradient_t8bry")
+width = 3500
+height = 1080
+
 [sub_resource type="Curve2D" id="Curve2D_8pokd"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 453, 767, -389.74353, 128.61536, 389.74353, -128.61536, 2284, 742, 0, 0, 0, 0, 18016, 770, -188.4297, 62.8099, 188.4297, -62.8099, 24551, 829, -454.16388, 6.4420395, 454.16388, -6.4420395, 25567, 364, -356.8931, -4.9555283, 356.8931, 4.9555283, 26835, 344, 0, 0, 0, 0, 34903, 275)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 805, -389.74353, 128.61536, 389.74353, -128.61536, 2284, 742, 0, 0, 0, 0, 18016, 770, -188.4297, 62.8099, 188.4297, -62.8099, 24551, 829, -454.16388, 6.4420395, 454.16388, -6.4420395, 25567, 364, -356.8931, -4.9555283, 356.8931, 4.9555283, 26835, 344, 0, 0, 0, 0, 34903, 275)
 }
 point_count = 7
 
@@ -124,6 +133,13 @@ centered = false
 position = Vector2(1818, 687)
 texture = ExtResource("11_q8svf")
 
+[node name="Transition" type="Sprite2D" parent="JungleSprites/Jungle3" unique_id=1966639896]
+z_index = 10
+position = Vector2(458, 0)
+scale = Vector2(1.2948569, 1)
+texture = SubResource("GradientTexture2D_tglbk")
+centered = false
+
 [node name="Jungle4" type="Node2D" parent="JungleSprites" unique_id=284464738]
 position = Vector2(25198, -14)
 metadata/_edit_group_ = true
@@ -160,7 +176,8 @@ z_index = 1
 curve = SubResource("Curve2D_8pokd")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=262908547]
-position = Vector2(453, 767)
+position = Vector2(459.85278, 816.4505)
+progress = 460.0
 rotates = false
 loop = false
 
@@ -179,7 +196,8 @@ limit_bottom = 1080
 position = Vector2(0, -384)
 
 [node name="PathFollowCompanion1" type="PathFollow2D" parent="Path2D" unique_id=1631182314]
-position = Vector2(453, 767)
+position = Vector2(513.4349, 817.3796)
+progress = 513.59
 rotates = false
 loop = false
 
@@ -205,12 +223,12 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 shape = SubResource("CircleShape2D_1yhnw")
 
 [node name="PathFollowCompanion2" type="PathFollow2D" parent="Path2D" unique_id=350753670]
-position = Vector2(453, 767)
+position = Vector2(256.69696, 812.1905)
+progress = 256.8
 rotates = false
 loop = false
 
 [node name="JungleWoman" parent="Path2D/PathFollowCompanion2" unique_id=292361228 node_paths=PackedStringArray("model", "path_follow") instance=ExtResource("15_td1vu")]
-position = Vector2(-253, 0)
 script = ExtResource("20_t8bry")
 model = NodePath("../../PathFollow2D/JungleWoman")
 path_follow = NodePath("..")
@@ -223,15 +241,18 @@ frame_progress = 0.0
 position = Vector2(0, -384)
 
 [node name="PathFollow2D_Reflection" type="PathFollow2D" parent="Path2D" unique_id=436572221]
-position = Vector2(453, 767)
+position = Vector2(459.85278, 816.4505)
+progress = 460.0
 rotates = false
 loop = false
 
 [node name="ReflectionContainer" type="Node2D" parent="Path2D/PathFollow2D_Reflection" unique_id=60272824]
 material = SubResource("CanvasItemMaterial_8pokd")
 
-[node name="JungleWomanReflection" parent="Path2D/PathFollow2D_Reflection/ReflectionContainer" unique_id=1520026415 node_paths=PackedStringArray("path_follow") instance=ExtResource("15_td1vu")]
+[node name="JungleWomanReflection" parent="Path2D/PathFollow2D_Reflection/ReflectionContainer" unique_id=1520026415 node_paths=PackedStringArray("model", "path_follow") instance=ExtResource("15_td1vu")]
 position = Vector2(0, 200)
+script = ExtResource("20_t8bry")
+model = NodePath("../../../PathFollow2D/JungleWoman")
 path_follow = NodePath("../..")
 
 [node name="Woman" parent="Path2D/PathFollow2D_Reflection/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
@@ -272,7 +293,7 @@ camera = NodePath("../Path2D/PathFollow2D/JungleWoman/Camera2D")
 limit_top = -484
 limit_bottom = 596
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=872860830]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1466730914]
 stream = ExtResource("20_5j4y3")
 autoplay = true
 
@@ -297,7 +318,7 @@ position = Vector2(-0.99975586, 765.00006)
 rotation = 0.20253715
 
 [node name="Puzzle2" type="Node2D" parent="Puzzles" unique_id=1859247285]
-position = Vector2(8847, 0)
+position = Vector2(10238, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle2" unique_id=552698774 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("35_ljtv2")
@@ -311,7 +332,7 @@ position = Vector2(-239, 0)
 collision_mask = 2
 
 [node name="DragDropPuzzle2" parent="Puzzles/Puzzle2" unique_id=52554836 instance=ExtResource("29_kdrkc")]
-position = Vector2(-330, 403)
+position = Vector2(-330, 232)
 
 [node name="Puzzle3" type="Node2D" parent="Puzzles" unique_id=1643202236]
 position = Vector2(13216, 0)
