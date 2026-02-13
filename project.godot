@@ -13,11 +13,11 @@ config_version=5
 config/name="Bourgeons d'exil"
 config/version="0.1.2"
 run/main_scene="uid://ctau0miqtmbj2"
-config/features=PackedStringArray("4.6", "GL Compatibility")
+config/features=PackedStringArray("4.5", "GL Compatibility")
 run/max_fps=200
-boot_splash/stretch_mode=0
 boot_splash/image="uid://c333exnf8xct4"
 config/icon="uid://b7siukyc2fyv2"
+boot_splash/stretch_mode=0
 
 [autoload]
 
