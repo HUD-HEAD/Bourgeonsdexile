@@ -87,7 +87,7 @@ position = Vector2(1079, 0)
 position = Vector2(1090, 608)
 
 [node name="Puzzle6" parent="Int1" unique_id=1529593029 instance=ExtResource("15_h6dcd")]
-position = Vector2(-900, -454)
+position = Vector2(-756, -454)
 
 [node name="PuzzleSpawner" parent="Int1/Puzzle6" index="0" unique_id=1455650157 node_paths=PackedStringArray("puzzle", "piece_spawners")]
 puzzle = NodePath("../DragDropPuzzle8")

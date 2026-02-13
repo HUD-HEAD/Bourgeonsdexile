@@ -14,19 +14,15 @@ extends Node
 ##Index of current piece to be activated
 var piece_idx : int = 0
 
-#Needed for cases where multiple puzzles are connected to the same spawner
-var _is_active : bool = false
 
 func _ready() -> void:
 	assert(piece_spawners.size()>0)
-
-	spawn_trigger.clicked.connect(_on_spawner_clicked)
+	
 	obstacle.area_entered.connect(_on_obstacle_entered)
 
 	_deactivate_puzzle()
 	
 func _deactivate_puzzle():
-	_is_active = false
 	spawn_trigger.disable()
 	puzzle.outline_image.hide()
 	
@@ -35,17 +31,13 @@ func _deactivate_puzzle():
 	
 	
 func _on_obstacle_entered(area2d : Area2D):
-	_activate_puzzle()
-
-func _activate_puzzle():
-	_is_active = true
-	
+	#Might trigger multiple times
+	if !spawn_trigger.clicked.is_connected(_on_spawner_clicked):
+		spawn_trigger.clicked.connect(_on_spawner_clicked)
 	spawn_trigger.enable()
 
 ## On click, hide trigger and spawn puzzle pieces
 func _on_spawner_clicked():
-	if !_is_active:
-		return
 	spawn_trigger.disable()
 	
 	if piece_idx == 0:
