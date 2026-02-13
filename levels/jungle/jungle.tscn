@@ -128,7 +128,7 @@ position = Vector2(25198, -14)
 metadata/_edit_group_ = true
 
 [node name="Jungle4Background" type="Sprite2D" parent="JungleSprites/Jungle4" unique_id=1943901093]
-position = Vector2(-1270, -482)
+position = Vector2(-1270, -305)
 texture = ExtResource("12_7xi0o")
 centered = false
 
