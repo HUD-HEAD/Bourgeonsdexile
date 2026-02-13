@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://d246c0iqqddvh" path="res://components/jungle/rain.tscn" id="18_nqhdg"]
 [ext_resource type="Script" uid="uid://gchp60e2jp5r" path="res://components/utils/set_camera_bounds.gd" id="19_31ufg"]
 [ext_resource type="AudioStream" uid="uid://1bh8jat7waj1" path="res://audio/sfx/jungle-nature-229896.mp3" id="20_5j4y3"]
+[ext_resource type="Texture2D" uid="uid://b7xm7ba3pfgj" path="res://graphics/jungle/rain/3.png" id="21_alrnr"]
 
 [sub_resource type="Curve2D" id="Curve2D_8pokd"]
 _data = {
@@ -194,6 +195,10 @@ next_scene = ExtResource("17_aqo8c")
 
 [node name="Rain" parent="." unique_id=498998463 instance=ExtResource("18_nqhdg")]
 position = Vector2(9848, -15)
+
+[node name="Rain2" parent="." unique_id=153314495 instance=ExtResource("18_nqhdg")]
+position = Vector2(9848, -15)
+texture = ExtResource("21_alrnr")
 
 [node name="ChangeCameraBounds" type="VisibleOnScreenNotifier2D" parent="." unique_id=1088608562 node_paths=PackedStringArray("camera")]
 position = Vector2(24394, 569)
