@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://h67bkwvbgnvx"]
+
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="1_64kig"]
+[ext_resource type="Texture2D" uid="uid://7dce446op38r" path="res://graphics/comic4/frame6comic4.png" id="2_kg6ms"]
+
+[node name="Comic4Panel6" type="Node2D" unique_id=1529630051]
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=125851740]
+script = ExtResource("1_64kig")
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=316766298]
+
+[node name="Frame6Comic4" type="Sprite2D" parent="." unique_id=717591427]
+texture = ExtResource("2_kg6ms")

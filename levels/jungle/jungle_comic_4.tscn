@@ -4,16 +4,18 @@
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="3_qar8e"]
 [ext_resource type="PackedScene" uid="uid://c1hj16bvmut1r" path="res://components/jungle/comic_frames/comic_4/jungle_comic_4_panel_1.tscn" id="3_t5lhr"]
 [ext_resource type="PackedScene" uid="uid://bx3vvp3in2pvr" path="res://components/jungle/comic_frames/comic_4/jungle_comic_4_frame_folders.tscn" id="4_drdnr"]
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="4_t5lhr"]
 [ext_resource type="PackedScene" uid="uid://ds1b5xoce25kf" path="res://components/jungle/comic_frames/comic_4/jungle_comic_4_panel_3.tscn" id="5_xs8jl"]
 [ext_resource type="PackedScene" uid="uid://dlufjr836r473" path="res://components/jungle/comic_frames/comic_4/jungle_comic_4_panel_4.tscn" id="6_12per"]
-[ext_resource type="Texture2D" uid="uid://bi0p07io5afq" path="res://graphics/comic4panels/comic4_panel4.jpg" id="6_drdnr"]
-[ext_resource type="Texture2D" uid="uid://ct3gxon6rfose" path="res://graphics/comic4panels/comic4_panel5.jpg" id="7_xs8jl"]
-[ext_resource type="Texture2D" uid="uid://tjh5ygrknykf" path="res://graphics/comic4panels/comic4_panel6.jpg" id="8_12per"]
+[ext_resource type="PackedScene" uid="uid://h67bkwvbgnvx" path="res://components/jungle/comic_frames/comic_4/jungle_comic_4_panel_6.tscn" id="9_t5lhr"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="9_yggp2"]
-[ext_resource type="Texture2D" uid="uid://dtucairvh7qm6" path="res://graphics/comic4/story4 copia.png" id="12_12per"]
+[ext_resource type="PackedScene" uid="uid://cyjixim7pv8gf" path="res://components/jungle/comic_frames/comic_4/jungle_comic_4_panel_7.tscn" id="10_drdnr"]
+[ext_resource type="PackedScene" uid="uid://crqtn2a43hhe8" path="res://components/jungle/comic_frames/comic_4/jungle_comic_4_panel_phone.tscn" id="12_xs8jl"]
 
 [node name="JungleComic4" type="Node2D" unique_id=1574922119]
+
+[node name="PanelPanner" type="Node" parent="." unique_id=665689758 node_paths=PackedStringArray("panels")]
+script = ExtResource("9_yggp2")
+panels = [NodePath("../Comic4Panel1"), NodePath("../JungleComic4FrameFolders"), NodePath("../Comic4PanelTicket"), NodePath("../Comic4PanelPhone"), NodePath("../Comic4PanelMochil"), null, null, NodePath("../ToBeContinued")]
 
 [node name="PaperBackground" type="CanvasLayer" parent="." unique_id=1769624388]
 layer = -1
@@ -23,7 +25,7 @@ follow_viewport_enabled = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 16673.0
+offset_right = 18542.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -33,7 +35,6 @@ stretch_mode = 1
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1122510056]
 position = Vector2(960, 540)
 limit_left = 0
-limit_right = 18577
 limit_smoothed = true
 position_smoothing_enabled = true
 editor_draw_limits = true
@@ -49,43 +50,22 @@ position = Vector2(4923, 534)
 [node name="Comic4PanelTicket" parent="." unique_id=929245075 instance=ExtResource("5_xs8jl")]
 position = Vector2(6936, 534)
 
+[node name="Comic4PanelPhone" parent="." unique_id=916748018 instance=ExtResource("12_xs8jl")]
+position = Vector2(8737, 540)
+
 [node name="Comic4PanelMochil" parent="." unique_id=873382784 instance=ExtResource("6_12per")]
-position = Vector2(8840, 534)
+position = Vector2(10831, 534)
 
-[node name="Comic4Panel4_old" type="Sprite2D" parent="." unique_id=211718467]
-position = Vector2(10815.999, 534)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("6_drdnr")
+[node name="Comic4Panel6" parent="." unique_id=1529630051 instance=ExtResource("9_t5lhr")]
+position = Vector2(12980, 540)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Comic4Panel4_old" unique_id=1016833681]
+[node name="Comic4Panel7" parent="." unique_id=1855488876 instance=ExtResource("10_drdnr")]
+position = Vector2(15054, 540)
 
-[node name="Transition" type="Node" parent="Comic4Panel4_old" unique_id=776145558]
-script = ExtResource("4_t5lhr")
+[node name="ToBeContinued" type="Node2D" parent="." unique_id=334550578]
+position = Vector2(17620, 439.5)
 
-[node name="Comic4Panel5" type="Sprite2D" parent="." unique_id=1891798458]
-position = Vector2(12580, 534)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("7_xs8jl")
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Comic4Panel5" unique_id=1742442629]
-
-[node name="Transition" type="Node" parent="Comic4Panel5" unique_id=1552062566]
-script = ExtResource("4_t5lhr")
-
-[node name="Comic4Panel6" type="Sprite2D" parent="." unique_id=1416097471]
-position = Vector2(14253.999, 534)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("8_12per")
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Comic4Panel6" unique_id=531058988]
-
-[node name="Transition" type="Node" parent="Comic4Panel6" unique_id=1962649477]
-script = ExtResource("4_t5lhr")
-
-[node name="Node2D" type="Node2D" parent="." unique_id=334550578]
-position = Vector2(15749, 439.5)
-
-[node name="ToBeContinued" type="Label" parent="Node2D" unique_id=694913069]
+[node name="ToBeContinued" type="Label" parent="ToBeContinued" unique_id=694913069]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -104,11 +84,3 @@ To be continued"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
-
-[node name="PanelPanner" type="Node" parent="." unique_id=665689758 node_paths=PackedStringArray("panels")]
-script = ExtResource("9_yggp2")
-panels = [NodePath("../Comic4Panel1"), NodePath("../JungleComic4FrameFolders"), NodePath("../Comic4PanelTicket"), NodePath("../Comic4PanelMochil"), NodePath("../Comic4Panel4_old"), NodePath("../Comic4Panel5"), NodePath("../Comic4Panel6"), NodePath("../Node2D")]
-
-[node name="Story4Copia" type="Sprite2D" parent="." unique_id=988620968]
-position = Vector2(6754, 1992)
-texture = ExtResource("12_12per")
