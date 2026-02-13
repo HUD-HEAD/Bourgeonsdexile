@@ -6,7 +6,6 @@
 [node name="Comic4Panel7" type="Node2D" unique_id=1855488876]
 
 [node name="Frame7" type="Sprite2D" parent="." unique_id=1161963604]
-position = Vector2(554, 0)
 texture = ExtResource("1_31ijy")
 
 [node name="TransitionerPassive" type="Node" parent="." unique_id=347940170]
