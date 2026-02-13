@@ -1,3 +1,4 @@
+class_name Woman
 extends Node2D
 
 @export var char_area : Area2D
