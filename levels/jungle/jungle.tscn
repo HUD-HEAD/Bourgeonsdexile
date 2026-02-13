@@ -27,6 +27,12 @@
 [ext_resource type="Script" uid="uid://gchp60e2jp5r" path="res://components/utils/set_camera_bounds.gd" id="19_31ufg"]
 [ext_resource type="AudioStream" uid="uid://1bh8jat7waj1" path="res://audio/sfx/jungle-nature-229896.mp3" id="20_5j4y3"]
 [ext_resource type="Texture2D" uid="uid://b7xm7ba3pfgj" path="res://graphics/jungle/rain/3.png" id="21_alrnr"]
+[ext_resource type="PackedScene" uid="uid://mn5d8k3suhx3" path="res://components/jungle/puzzles/drag_drop_puzzle_jungle1.tscn" id="28_aav6d"]
+[ext_resource type="PackedScene" uid="uid://c3ec4v87kvi86" path="res://components/jungle/puzzles/drag_drop_puzzle_jungle2.tscn" id="29_kdrkc"]
+[ext_resource type="PackedScene" uid="uid://cqmidgct1vdmf" path="res://components/jungle/puzzles/drag_drop_puzzle_jungle5.tscn" id="30_1yhnw"]
+[ext_resource type="PackedScene" uid="uid://b7280mshbm13l" path="res://components/jungle/puzzles/drag_drop_puzzle_jungle6.tscn" id="31_ljtv2"]
+[ext_resource type="PackedScene" uid="uid://b88g225o2t0is" path="res://components/jungle/puzzles/drag_drop_puzzle_jungle3.tscn" id="32_t8bry"]
+[ext_resource type="PackedScene" uid="uid://c8pymntn6ge5" path="res://components/jungle/puzzles/drag_drop_puzzle_jungle4.tscn" id="33_tglbk"]
 
 [sub_resource type="Curve2D" id="Curve2D_8pokd"]
 _data = {
@@ -240,6 +246,27 @@ limit_bottom = 596
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=872860830]
 stream = ExtResource("20_5j4y3")
 autoplay = true
+
+[node name="DragDropPuzzle" parent="." unique_id=804077741 instance=ExtResource("28_aav6d")]
+position = Vector2(3626.0002, 765.00006)
+rotation = 0.20253715
+
+[node name="DragDropPuzzle2" parent="." unique_id=52554836 instance=ExtResource("29_kdrkc")]
+position = Vector2(8517, 403)
+
+[node name="DragDropPuzzle3" parent="." unique_id=789965 instance=ExtResource("30_1yhnw")]
+position = Vector2(24964.998, 616.00006)
+rotation = 0.06231493
+
+[node name="DragDropPuzzle4" parent="." unique_id=452636563 instance=ExtResource("31_ljtv2")]
+position = Vector2(29303, 380)
+scale = Vector2(0.8, 0.8)
+
+[node name="DragDropPuzzle5" parent="." unique_id=496082450 instance=ExtResource("32_t8bry")]
+position = Vector2(13243, 378)
+
+[node name="DragDropPuzzle6" parent="." unique_id=1419407559 instance=ExtResource("33_tglbk")]
+position = Vector2(16676, 409)
 
 [editable path="Path2D/PathFollowCompanion1/JungleWoman"]
 [editable path="Path2D/PathFollowCompanion2/JungleWoman"]
