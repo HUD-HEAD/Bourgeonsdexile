@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://d246c0iqqddvh" path="res://components/jungle/rain.tscn" id="18_nqhdg"]
 [ext_resource type="Script" uid="uid://gchp60e2jp5r" path="res://components/utils/set_camera_bounds.gd" id="19_31ufg"]
 [ext_resource type="AudioStream" uid="uid://1bh8jat7waj1" path="res://audio/sfx/jungle-nature-229896.mp3" id="20_5j4y3"]
+[ext_resource type="Script" uid="uid://bchnidsm7kci0" path="res://components/jungle/companion.gd" id="20_t8bry"]
 [ext_resource type="Texture2D" uid="uid://b7xm7ba3pfgj" path="res://graphics/jungle/rain/3.png" id="21_alrnr"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="21_kdrkc"]
 [ext_resource type="PackedScene" uid="uid://mn5d8k3suhx3" path="res://components/jungle/puzzles/drag_drop_puzzle_jungle1.tscn" id="28_aav6d"]
@@ -175,15 +176,17 @@ limit_right = 10000041
 limit_bottom = 1080
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Path2D/PathFollow2D/JungleWoman" unique_id=686947029]
-position = Vector2(0, -234)
+position = Vector2(0, -384)
 
 [node name="PathFollowCompanion1" type="PathFollow2D" parent="Path2D" unique_id=1631182314]
 position = Vector2(453, 767)
 rotates = false
 loop = false
 
-[node name="JungleWoman" parent="Path2D/PathFollowCompanion1" unique_id=700974070 node_paths=PackedStringArray("path_follow") instance=ExtResource("15_td1vu")]
+[node name="JungleWoman" parent="Path2D/PathFollowCompanion1" unique_id=700974070 node_paths=PackedStringArray("model", "path_follow") instance=ExtResource("15_td1vu")]
 position = Vector2(-139, 0)
+script = ExtResource("20_t8bry")
+model = NodePath("../../PathFollow2D/JungleWoman")
 path_follow = NodePath("..")
 
 [node name="Woman" parent="Path2D/PathFollowCompanion1/JungleWoman" index="0" unique_id=689873547]
@@ -191,7 +194,7 @@ sprite_frames = ExtResource("16_17nyf")
 frame_progress = 0.0
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Path2D/PathFollowCompanion1/JungleWoman" unique_id=1125285841]
-position = Vector2(0, -234)
+position = Vector2(0, -384)
 
 [node name="Clickable" type="Area2D" parent="Path2D/PathFollowCompanion1" unique_id=1984324414]
 position = Vector2(-191, -113)
@@ -206,8 +209,10 @@ position = Vector2(453, 767)
 rotates = false
 loop = false
 
-[node name="JungleWoman" parent="Path2D/PathFollowCompanion2" unique_id=292361228 node_paths=PackedStringArray("path_follow") instance=ExtResource("15_td1vu")]
+[node name="JungleWoman" parent="Path2D/PathFollowCompanion2" unique_id=292361228 node_paths=PackedStringArray("model", "path_follow") instance=ExtResource("15_td1vu")]
 position = Vector2(-253, 0)
+script = ExtResource("20_t8bry")
+model = NodePath("../../PathFollow2D/JungleWoman")
 path_follow = NodePath("..")
 
 [node name="Woman" parent="Path2D/PathFollowCompanion2/JungleWoman" index="0" unique_id=689873547]
@@ -215,7 +220,7 @@ sprite_frames = ExtResource("17_k7em6")
 frame_progress = 0.0
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Path2D/PathFollowCompanion2/JungleWoman" unique_id=1619587080]
-position = Vector2(0, -234)
+position = Vector2(0, -384)
 
 [node name="PathFollow2D_Reflection" type="PathFollow2D" parent="Path2D" unique_id=436572221]
 position = Vector2(453, 767)
