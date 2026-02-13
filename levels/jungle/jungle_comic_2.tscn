@@ -1,25 +1,24 @@
 [gd_scene format=3 uid="uid://djv5fkem5af34"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_l3y4y"]
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="3_e56vw"]
-[ext_resource type="Texture2D" uid="uid://bseegbn4bim1t" path="res://graphics/comic2godot/frame1/frame1.png" id="6_nbn5v"]
+[ext_resource type="PackedScene" uid="uid://dwubwe8axq0cl" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_1.tscn" id="4_xln60"]
+[ext_resource type="PackedScene" uid="uid://dnigk6m1ntgvl" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_4.tscn" id="7_o76i3"]
 [ext_resource type="PackedScene" uid="uid://dpk31y77oouru" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_2.tscn" id="8_mtmad"]
+[ext_resource type="PackedScene" uid="uid://bhe7ytmf514r1" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_6.tscn" id="9_mtmad"]
 [ext_resource type="PackedScene" uid="uid://djyan8ubtutll" path="res://components/jungle/comic_frames/comic_2/wallet_panel.tscn" id="10_dkeqa"]
 [ext_resource type="PackedScene" uid="uid://crfrjw42dcsks" path="res://components/jungle/comic_frames/comic_2/pregnancy_panel.tscn" id="12_exkuh"]
 [ext_resource type="PackedScene" uid="uid://ckqe0ckfq2chw" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_5.tscn" id="12_mtmad"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="12_su3g7"]
+[ext_resource type="PackedScene" uid="uid://smu7l0sn2pr2" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_10.tscn" id="12_tmikl"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="14_fekbj"]
-[ext_resource type="Texture2D" uid="uid://b2thr4dhispb" path="res://graphics/comic2godot/frame4/4.png" id="14_r5vgt"]
+[ext_resource type="PackedScene" uid="uid://cnyqkkr7kcq7i" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_12.tscn" id="14_nbn5v"]
 [ext_resource type="PackedScene" uid="uid://b5asjt0f4mcsd" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_7.tscn" id="14_tvvi7"]
 [ext_resource type="PackedScene" uid="uid://o324t3l05s7q" path="res://levels/jungle/jungle_with_puzzles.tscn" id="15_1sxs8"]
 [ext_resource type="PackedScene" uid="uid://bj7e73nkbbtwn" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_9.tscn" id="15_mtmad"]
+[ext_resource type="PackedScene" uid="uid://cgsvxrtoxhfja" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_13.tscn" id="15_xso2w"]
+[ext_resource type="PackedScene" uid="uid://de5wtyfnp5wnc" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_14.tscn" id="16_js07p"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="17_1sxs8"]
 [ext_resource type="PackedScene" uid="uid://43c07utlirv7" path="res://components/jungle/comic_frames/comic_2/jungle_comic_2_panel_11.tscn" id="18_tmikl"]
-[ext_resource type="Texture2D" uid="uid://boylw4aegtqki" path="res://graphics/comic2panels/comic2_panel6.jpg" id="21_t1h5n"]
-[ext_resource type="Texture2D" uid="uid://gevy0733xl07" path="res://graphics/comic2godot/frame11/frame11.png" id="24_tvvi7"]
-[ext_resource type="Texture2D" uid="uid://b2oo6tlir6pf5" path="res://graphics/comic2panels/comic2_panel10.jpg" id="25_5t051"]
-[ext_resource type="Texture2D" uid="uid://0qyoh0oivc1a" path="res://graphics/comic2godot/frame10/frame10.png" id="26_wfupk"]
-[ext_resource type="Texture2D" uid="uid://cng327eniiaxf" path="res://graphics/comic2godot/frame12/frame12.png" id="28_wfupk"]
 
 [node name="JungleComic2" type="Node2D" unique_id=1529693680]
 
@@ -53,16 +52,8 @@ panels = [NodePath("../Panel1"), NodePath("../Panel2"), NodePath("../WalletPanel
 
 [node name="UI" parent="." unique_id=39001016 instance=ExtResource("17_1sxs8")]
 
-[node name="Panel1" type="Node2D" parent="." unique_id=226482990]
+[node name="Panel1" parent="." unique_id=2064506817 instance=ExtResource("4_xln60")]
 position = Vector2(2981, 553)
-
-[node name="Frame1" type="Sprite2D" parent="Panel1" unique_id=1744451837]
-texture = ExtResource("6_nbn5v")
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel1" unique_id=1093343523]
-
-[node name="Transition" type="Node" parent="Panel1" unique_id=1659705266]
-script = ExtResource("3_e56vw")
 
 [node name="Panel2" parent="." unique_id=1995977721 instance=ExtResource("8_mtmad")]
 position = Vector2(5076, 553)
@@ -72,31 +63,14 @@ position = Vector2(6989, 592)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="WalletPanel" unique_id=1264381907]
 
-[node name="Panel4" type="Node2D" parent="." unique_id=840944870]
+[node name="Panel4" parent="." unique_id=1050670671 instance=ExtResource("7_o76i3")]
 position = Vector2(8712, 553)
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel4" unique_id=1075871577]
-
-[node name="Transition" type="Node" parent="Panel4" unique_id=1560664868]
-script = ExtResource("3_e56vw")
-
-[node name="4" type="Sprite2D" parent="Panel4" unique_id=1094962570]
-texture = ExtResource("14_r5vgt")
 
 [node name="Panel5" parent="." unique_id=322320134 instance=ExtResource("12_mtmad")]
 position = Vector2(10547, 553)
 
-[node name="Panel6" type="Node2D" parent="." unique_id=444964391]
-position = Vector2(12563, 553)
-
-[node name="Comic2Panel" type="Sprite2D" parent="Panel6" unique_id=220844797]
-scale = Vector2(0.45, 0.45)
-texture = ExtResource("21_t1h5n")
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel6" unique_id=29961976]
-
-[node name="Transition" type="Node" parent="Panel6" unique_id=1443469717]
-script = ExtResource("3_e56vw")
+[node name="Panel6" parent="." unique_id=1128737468 instance=ExtResource("9_mtmad")]
+position = Vector2(12563, 540)
 
 [node name="Panel7" parent="." unique_id=332429161 instance=ExtResource("14_tvvi7")]
 position = Vector2(15104, 553)
@@ -104,56 +78,23 @@ position = Vector2(15104, 553)
 [node name="Panel9" parent="." unique_id=2076499636 instance=ExtResource("15_mtmad")]
 position = Vector2(17672, 553.5)
 
-[node name="Panel10" type="Node2D" parent="." unique_id=1324713941]
-position = Vector2(19538, 553.5)
-
-[node name="Comic2Panel" type="Sprite2D" parent="Panel10" unique_id=822639049]
-scale = Vector2(0.45, 0.45)
-texture = ExtResource("25_5t051")
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel10" unique_id=1219773409]
-
-[node name="Transition" type="Node" parent="Panel10" unique_id=80774272]
-script = ExtResource("3_e56vw")
+[node name="Panel10" parent="." unique_id=820675275 instance=ExtResource("12_tmikl")]
+position = Vector2(19787, 540)
 
 [node name="Panel11" parent="." unique_id=1835400465 instance=ExtResource("18_tmikl")]
-position = Vector2(22124, 553.5)
+position = Vector2(22373, 553.5)
 
-[node name="Panel12" type="Node2D" parent="." unique_id=1167769039]
-position = Vector2(24129, 553.5)
+[node name="Panel12" parent="." unique_id=425216191 instance=ExtResource("14_nbn5v")]
+position = Vector2(24378, 553.5)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel12" unique_id=1551194544]
+[node name="Panel13" parent="." unique_id=625001368 instance=ExtResource("15_xso2w")]
+position = Vector2(26429, 553.5)
 
-[node name="Transition" type="Node" parent="Panel12" unique_id=2127879640]
-script = ExtResource("3_e56vw")
-
-[node name="Frame10" type="Sprite2D" parent="Panel12" unique_id=623910623]
-texture = ExtResource("26_wfupk")
-
-[node name="Panel13" type="Node2D" parent="." unique_id=390280365]
-position = Vector2(26180, 553.5)
-
-[node name="JungleEntry" type="Sprite2D" parent="Panel13" unique_id=1645546289]
-texture = ExtResource("24_tvvi7")
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel13" unique_id=2077655564]
-
-[node name="Transition" type="Node" parent="Panel13" unique_id=28427997]
-script = ExtResource("3_e56vw")
-
-[node name="Panel14" type="Node2D" parent="." unique_id=401187145]
-position = Vector2(28092, 553.5)
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panel14" unique_id=1567603170]
-
-[node name="Transition" type="Node" parent="Panel14" unique_id=1888646682]
-script = ExtResource("3_e56vw")
-
-[node name="Frame12" type="Sprite2D" parent="Panel14" unique_id=1834752637]
-texture = ExtResource("28_wfupk")
+[node name="Panel14" parent="." unique_id=916438103 instance=ExtResource("16_js07p")]
+position = Vector2(28341, 553.5)
 
 [node name="PregnancyPanel" parent="." unique_id=1862232058 instance=ExtResource("12_exkuh")]
-position = Vector2(29909, 540)
+position = Vector2(30158, 540)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="PregnancyPanel" unique_id=1925319365]
 

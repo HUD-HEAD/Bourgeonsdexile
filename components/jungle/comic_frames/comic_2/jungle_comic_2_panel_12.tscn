@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cnyqkkr7kcq7i"]
+
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="1_nw6cm"]
+[ext_resource type="Texture2D" uid="uid://ctv47gl8d6o6r" path="res://graphics/comic2godot/frame10/frame10_background.png" id="2_nw6cm"]
+[ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/jungle/jungle_woman.tscn" id="4_qtrgl"]
+
+[node name="Panel12" type="Node2D" unique_id=425216191]
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=163506306]
+
+[node name="Transition" type="Node" parent="." unique_id=7325851]
+script = ExtResource("1_nw6cm")
+
+[node name="Frame10" type="Sprite2D" parent="." unique_id=1355111726]
+clip_children = 2
+texture = ExtResource("2_nw6cm")
+
+[node name="JungleWoman" parent="Frame10" unique_id=700974070 instance=ExtResource("4_qtrgl")]
+position = Vector2(-833, 290)
