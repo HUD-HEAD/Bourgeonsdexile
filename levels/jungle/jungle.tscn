@@ -15,8 +15,10 @@
 [ext_resource type="Texture2D" uid="uid://btdl1qqmm5lwn" path="res://graphics/jungle/junglepieces/4/jungle4_floor.png" id="13_r20bg"]
 [ext_resource type="Texture2D" uid="uid://m31dh66akhqm" path="res://graphics/jungle/junglepieces/jungle5.png" id="14_7ab2f"]
 [ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/jungle/jungle_woman.tscn" id="15_td1vu"]
+[ext_resource type="SpriteFrames" uid="uid://bmcc5l21n4h6s" path="res://components/jungle/resources/companion_1_sprite_frames.tres" id="16_17nyf"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="16_aewef"]
 [ext_resource type="PackedScene" uid="uid://deifii0sv125i" path="res://levels/jungle/jungle_comic_3.tscn" id="17_aqo8c"]
+[ext_resource type="SpriteFrames" uid="uid://dqrsyjauj12el" path="res://components/jungle/resources/companion_2_sprite_frames.tres" id="17_k7em6"]
 [ext_resource type="PackedScene" uid="uid://d246c0iqqddvh" path="res://components/jungle/rain.tscn" id="18_nqhdg"]
 [ext_resource type="Script" uid="uid://gchp60e2jp5r" path="res://components/utils/set_camera_bounds.gd" id="19_31ufg"]
 [ext_resource type="AudioStream" uid="uid://1bh8jat7waj1" path="res://audio/sfx/jungle-nature-229896.mp3" id="20_5j4y3"]
@@ -135,6 +137,32 @@ limit_top = 0
 limit_right = 10000041
 limit_bottom = 1080
 
+[node name="PathFollowCompanion1" type="PathFollow2D" parent="Path2D" unique_id=1631182314]
+position = Vector2(453, 767)
+rotates = false
+loop = false
+
+[node name="JungleWoman" parent="Path2D/PathFollowCompanion1" unique_id=700974070 node_paths=PackedStringArray("path_follow") instance=ExtResource("15_td1vu")]
+position = Vector2(-139, 0)
+path_follow = NodePath("..")
+
+[node name="Woman" parent="Path2D/PathFollowCompanion1/JungleWoman" index="0" unique_id=689873547]
+sprite_frames = ExtResource("16_17nyf")
+frame_progress = 0.0
+
+[node name="PathFollowCompanion2" type="PathFollow2D" parent="Path2D" unique_id=350753670]
+position = Vector2(453, 767)
+rotates = false
+loop = false
+
+[node name="JungleWoman" parent="Path2D/PathFollowCompanion2" unique_id=292361228 node_paths=PackedStringArray("path_follow") instance=ExtResource("15_td1vu")]
+position = Vector2(-253, 0)
+path_follow = NodePath("..")
+
+[node name="Woman" parent="Path2D/PathFollowCompanion2/JungleWoman" index="0" unique_id=689873547]
+sprite_frames = ExtResource("17_k7em6")
+frame_progress = 0.0
+
 [node name="PathFollow2D_Reflection" type="PathFollow2D" parent="Path2D" unique_id=436572221]
 position = Vector2(453, 767)
 rotates = false
@@ -185,4 +213,6 @@ limit_bottom = 596
 stream = ExtResource("20_5j4y3")
 autoplay = true
 
+[editable path="Path2D/PathFollowCompanion1/JungleWoman"]
+[editable path="Path2D/PathFollowCompanion2/JungleWoman"]
 [editable path="Path2D/PathFollow2D_Reflection/ReflectionContainer/JungleWomanReflection"]
