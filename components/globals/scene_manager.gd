@@ -1,6 +1,6 @@
 extends Node
 
-const START_SCENE : PackedScene = preload("res://levels/prototyping/videoplayer_demo.tscn")
+const START_SCENE : PackedScene = preload("res://scenes/prototyping/videoplayer_demo.tscn")
 
 
 var current_scene : Node = null

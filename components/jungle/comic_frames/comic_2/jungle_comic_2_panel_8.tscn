@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dl6khtykqgnwy"]
 
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_q73fo"]
-[ext_resource type="Texture2D" uid="uid://dck2d2oa5u7j8" path="res://graphics/comic2godot/frame7/back.png" id="3_1rl3l"]
-[ext_resource type="Texture2D" uid="uid://cugvtht20g2a6" path="res://graphics/comic2godot/frame7/han1.png" id="4_oh3xa"]
-[ext_resource type="Texture2D" uid="uid://bmbeqfiwr2nnk" path="res://graphics/comic2godot/frame7/hand 2.png" id="5_b7vw8"]
+[ext_resource type="Texture2D" uid="uid://dck2d2oa5u7j8" path="res://graphics/chapter1/comics/comic2/frame7/back.png" id="3_1rl3l"]
+[ext_resource type="Texture2D" uid="uid://cugvtht20g2a6" path="res://graphics/chapter1/comics/comic2/frame7/han1.png" id="4_oh3xa"]
+[ext_resource type="Texture2D" uid="uid://bmbeqfiwr2nnk" path="res://graphics/chapter1/comics/comic2/frame7/hand 2.png" id="5_b7vw8"]
 
 [node name="Panel8" type="Node2D" unique_id=319119419]
 

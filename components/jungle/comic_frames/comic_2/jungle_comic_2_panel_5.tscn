@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://ckqe0ckfq2chw"]
 
-[ext_resource type="Texture2D" uid="uid://c5u5m2mo5scii" path="res://graphics/comic2godot/frame5/frame5_man.png" id="2_77aar"]
-[ext_resource type="Texture2D" uid="uid://drnirktaslngk" path="res://graphics/comic2godot/frame5/frame5_bubble1.png" id="3_cvs8s"]
-[ext_resource type="Texture2D" uid="uid://7rxbmgbm1jsm" path="res://graphics/comic2godot/frame5/frame5_bubble2.png" id="4_tghyq"]
-[ext_resource type="Texture2D" uid="uid://r035h288eoyl" path="res://graphics/comic2godot/frame5/frame5_bubble3.png" id="5_bh0bb"]
+[ext_resource type="Texture2D" uid="uid://c5u5m2mo5scii" path="res://graphics/chapter1/comics/comic2/frame5/frame5_man.png" id="2_77aar"]
+[ext_resource type="Texture2D" uid="uid://drnirktaslngk" path="res://graphics/chapter1/comics/comic2/frame5/frame5_bubble1.png" id="3_cvs8s"]
+[ext_resource type="Texture2D" uid="uid://7rxbmgbm1jsm" path="res://graphics/chapter1/comics/comic2/frame5/frame5_bubble2.png" id="4_tghyq"]
+[ext_resource type="Texture2D" uid="uid://r035h288eoyl" path="res://graphics/chapter1/comics/comic2/frame5/frame5_bubble3.png" id="5_bh0bb"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="6_cvs8s"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="6_tghyq"]
 

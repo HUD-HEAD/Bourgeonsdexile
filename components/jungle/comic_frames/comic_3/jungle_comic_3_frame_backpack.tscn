@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://diqdn07jd14g2"]
 
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="1_e8six"]
-[ext_resource type="Texture2D" uid="uid://d22en1s6mnitp" path="res://graphics/comic3/frame4/mochil.png" id="2_0s8tn"]
-[ext_resource type="Texture2D" uid="uid://d333b8kexonxo" path="res://graphics/comic3/frame_backpack/paassport.png" id="2_yti6k"]
-[ext_resource type="Texture2D" uid="uid://w8uh0fvrlddi" path="res://graphics/comic3/frame4/closedback.png" id="3_0s8tn"]
-[ext_resource type="Texture2D" uid="uid://by05t0qg8u6dy" path="res://graphics/comic3/frame_backpack/phone.png" id="3_e8six"]
-[ext_resource type="Texture2D" uid="uid://bgnj3352dju1s" path="res://graphics/comic3/frame_backpack/pills.png" id="4_0s8tn"]
-[ext_resource type="Texture2D" uid="uid://c86lcw644tk6h" path="res://graphics/comic3/frame_backpack/wallet.png" id="5_ejegh"]
+[ext_resource type="Texture2D" uid="uid://d22en1s6mnitp" path="res://graphics/chapter1/comics/comic3/frame4/mochil.png" id="2_0s8tn"]
+[ext_resource type="Texture2D" uid="uid://d333b8kexonxo" path="res://graphics/chapter1/comics/comic3/frame_backpack/paassport.png" id="2_yti6k"]
+[ext_resource type="Texture2D" uid="uid://w8uh0fvrlddi" path="res://graphics/chapter1/comics/comic3/frame4/closedback.png" id="3_0s8tn"]
+[ext_resource type="Texture2D" uid="uid://by05t0qg8u6dy" path="res://graphics/chapter1/comics/comic3/frame_backpack/phone.png" id="3_e8six"]
+[ext_resource type="Texture2D" uid="uid://bgnj3352dju1s" path="res://graphics/chapter1/comics/comic3/frame_backpack/pills.png" id="4_0s8tn"]
+[ext_resource type="Texture2D" uid="uid://c86lcw644tk6h" path="res://graphics/chapter1/comics/comic3/frame_backpack/wallet.png" id="5_ejegh"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="6_yti6k"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yti6k"]

@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://crqtn2a43hhe8"]
 
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="1_6y4fh"]
-[ext_resource type="Texture2D" uid="uid://bcg5p1dmi5e6" path="res://graphics/comic4/framphonecomic4/1.png" id="2_obnax"]
-[ext_resource type="Texture2D" uid="uid://cdhvuuqqn6jcw" path="res://graphics/comic4/framphonecomic4/2.png" id="3_cdliw"]
-[ext_resource type="Texture2D" uid="uid://dfotos10nh20b" path="res://graphics/comic4/framphonecomic4/3.png" id="4_qqiuk"]
-[ext_resource type="Texture2D" uid="uid://r20bgdyl1r4k" path="res://graphics/comic4/framphonecomic4/4.png" id="5_n74ow"]
-[ext_resource type="Texture2D" uid="uid://bh71obal50vx8" path="res://graphics/comic4/framphonecomic4/5.png" id="6_olm8x"]
-[ext_resource type="Texture2D" uid="uid://cxq1cmpf2swo5" path="res://graphics/comic4/framphonecomic4/6.png" id="7_yo64q"]
+[ext_resource type="Texture2D" uid="uid://bcg5p1dmi5e6" path="res://graphics/chapter1/comics/comic4/framphonecomic4/1.png" id="2_obnax"]
+[ext_resource type="Texture2D" uid="uid://cdhvuuqqn6jcw" path="res://graphics/chapter1/comics/comic4/framphonecomic4/2.png" id="3_cdliw"]
+[ext_resource type="Texture2D" uid="uid://dfotos10nh20b" path="res://graphics/chapter1/comics/comic4/framphonecomic4/3.png" id="4_qqiuk"]
+[ext_resource type="Texture2D" uid="uid://r20bgdyl1r4k" path="res://graphics/chapter1/comics/comic4/framphonecomic4/4.png" id="5_n74ow"]
+[ext_resource type="Texture2D" uid="uid://bh71obal50vx8" path="res://graphics/chapter1/comics/comic4/framphonecomic4/5.png" id="6_olm8x"]
+[ext_resource type="Texture2D" uid="uid://cxq1cmpf2swo5" path="res://graphics/chapter1/comics/comic4/framphonecomic4/6.png" id="7_yo64q"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="8_mwl3t"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="9_n0wu7"]
 

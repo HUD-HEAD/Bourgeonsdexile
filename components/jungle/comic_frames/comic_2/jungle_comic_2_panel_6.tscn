@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bhe7ytmf514r1"]
 
-[ext_resource type="Texture2D" uid="uid://m08k4kkri455" path="res://graphics/comic2godot/frame5.5/frame5.5.png" id="1_um84m"]
+[ext_resource type="Texture2D" uid="uid://m08k4kkri455" path="res://graphics/chapter1/comics/comic2/frame5.5/frame5.5.png" id="1_um84m"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_4augw"]
 
 [node name="Panel6" type="Node2D" unique_id=1128737468]

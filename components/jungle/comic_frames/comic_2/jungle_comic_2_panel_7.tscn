@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://b5asjt0f4mcsd"]
 
 [ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/area_entered_enable.gd" id="1_jt4ib"]
-[ext_resource type="Texture2D" uid="uid://dck2d2oa5u7j8" path="res://graphics/comic2godot/frame7/back.png" id="1_xdeu1"]
-[ext_resource type="Texture2D" uid="uid://rxgc5mkyqcj7" path="res://graphics/comic2godot/frame7/frame7_hand2.png" id="2_ams0i"]
-[ext_resource type="Texture2D" uid="uid://coy7ml4byonu2" path="res://graphics/comic2godot/frame6and9/1.png" id="2_jt4ib"]
-[ext_resource type="Texture2D" uid="uid://ctj71vxsnh2xs" path="res://graphics/comic2godot/frame6and9/2.png" id="3_dheej"]
+[ext_resource type="Texture2D" uid="uid://dck2d2oa5u7j8" path="res://graphics/chapter1/comics/comic2/frame7/back.png" id="1_xdeu1"]
+[ext_resource type="Texture2D" uid="uid://rxgc5mkyqcj7" path="res://graphics/chapter1/comics/comic2/frame7/frame7_hand2.png" id="2_ams0i"]
+[ext_resource type="Texture2D" uid="uid://coy7ml4byonu2" path="res://graphics/chapter1/comics/comic2/frame6and9/1.png" id="2_jt4ib"]
+[ext_resource type="Texture2D" uid="uid://ctj71vxsnh2xs" path="res://graphics/chapter1/comics/comic2/frame6and9/2.png" id="3_dheej"]
 [ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="3_jt4ib"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="5_dheej"]
-[ext_resource type="Texture2D" uid="uid://sapjtumatwp0" path="res://graphics/comic2godot/frame7/frame7_hand1.png" id="5_rjer4"]
+[ext_resource type="Texture2D" uid="uid://sapjtumatwp0" path="res://graphics/chapter1/comics/comic2/frame7/frame7_hand1.png" id="5_rjer4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dheej"]
 size = Vector2(1092, 669)

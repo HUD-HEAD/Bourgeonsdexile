@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://i7mqsprajlbc"]
 
 [ext_resource type="PackedScene" uid="uid://8imm2g6332ef" path="res://components/utils/puzzles/dragdrop_puzzle_template.tscn" id="1_qitio"]
-[ext_resource type="Texture2D" uid="uid://cf4qtxx3qi4n2" path="res://graphics/ui/lajapuzzles/10/empty10.png" id="2_bka3s"]
-[ext_resource type="Texture2D" uid="uid://y50f1hs04atg" path="res://graphics/ui/lajapuzzles/10/1_10.png" id="3_kjceg"]
+[ext_resource type="Texture2D" uid="uid://cf4qtxx3qi4n2" path="res://graphics/chapter1/levels/lajas_blancas/puzzles/10/empty10.png" id="2_bka3s"]
+[ext_resource type="Texture2D" uid="uid://y50f1hs04atg" path="res://graphics/chapter1/levels/lajas_blancas/puzzles/10/1_10.png" id="3_kjceg"]
 [ext_resource type="PackedScene" uid="uid://b15l0pq6dea3h" path="res://components/utils/puzzles/puzzle_piece_template.tscn" id="4_snerg"]
-[ext_resource type="Texture2D" uid="uid://bw8fd1kkj566t" path="res://graphics/ui/lajapuzzles/10/2_10.png" id="5_k4ifk"]
+[ext_resource type="Texture2D" uid="uid://bw8fd1kkj566t" path="res://graphics/chapter1/levels/lajas_blancas/puzzles/10/2_10.png" id="5_k4ifk"]
 [ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="6_h0oco"]
-[ext_resource type="Texture2D" uid="uid://d30gdrstlas2s" path="res://graphics/ui/lajapuzzles/10/full10.png" id="7_r5ixl"]
+[ext_resource type="Texture2D" uid="uid://d30gdrstlas2s" path="res://graphics/chapter1/levels/lajas_blancas/puzzles/10/full10.png" id="7_r5ixl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xj0y8"]
 size = Vector2(152, 148)

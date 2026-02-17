@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://dlufjr836r473"]
 
-[ext_resource type="Texture2D" uid="uid://d22en1s6mnitp" path="res://graphics/comic3/frame4/mochil.png" id="2_gks51"]
+[ext_resource type="Texture2D" uid="uid://d22en1s6mnitp" path="res://graphics/chapter1/comics/comic3/frame4/mochil.png" id="2_gks51"]
 [ext_resource type="PackedScene" uid="uid://8imm2g6332ef" path="res://components/utils/puzzles/dragdrop_puzzle_template.tscn" id="3_868go"]
-[ext_resource type="Texture2D" uid="uid://b13sqvsicu285" path="res://graphics/comic4/framebackpack/paassport.png" id="3_bj5mn"]
-[ext_resource type="Texture2D" uid="uid://dltoxuw1jmlnj" path="res://graphics/comic4/framebackpack/phone.png" id="4_q7hyt"]
+[ext_resource type="Texture2D" uid="uid://b13sqvsicu285" path="res://graphics/chapter1/comics/comic4/framebackpack/paassport.png" id="3_bj5mn"]
+[ext_resource type="Texture2D" uid="uid://dltoxuw1jmlnj" path="res://graphics/chapter1/comics/comic4/framebackpack/phone.png" id="4_q7hyt"]
 [ext_resource type="PackedScene" uid="uid://b15l0pq6dea3h" path="res://components/utils/puzzles/puzzle_piece_template.tscn" id="5_868go"]
-[ext_resource type="Texture2D" uid="uid://dqw5cfdfvcv7p" path="res://graphics/comic4/framebackpack/pills.png" id="5_gks51"]
-[ext_resource type="Texture2D" uid="uid://d2i7kgbhlpepv" path="res://graphics/comic4/framebackpack/wallet.png" id="6_8hajh"]
-[ext_resource type="Texture2D" uid="uid://w8uh0fvrlddi" path="res://graphics/comic3/frame4/closedback.png" id="8_gks51"]
+[ext_resource type="Texture2D" uid="uid://dqw5cfdfvcv7p" path="res://graphics/chapter1/comics/comic4/framebackpack/pills.png" id="5_gks51"]
+[ext_resource type="Texture2D" uid="uid://d2i7kgbhlpepv" path="res://graphics/chapter1/comics/comic4/framebackpack/wallet.png" id="6_8hajh"]
+[ext_resource type="Texture2D" uid="uid://w8uh0fvrlddi" path="res://graphics/chapter1/comics/comic3/frame4/closedback.png" id="8_gks51"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8hajh"]
 size = Vector2(294.10425, 446.4494)

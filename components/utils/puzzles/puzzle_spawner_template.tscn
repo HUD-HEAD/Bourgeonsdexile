@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://skt0xd3mmvd"]
 
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="1_xtpdb"]
-[ext_resource type="Texture2D" uid="uid://cajxb73hamrob" path="res://graphics/separated_lajas/queue/queue1/1.png" id="2_ag2mp"]
+[ext_resource type="Texture2D" uid="uid://cajxb73hamrob" path="res://graphics/chapter1/levels/lajas_blancas/npcs/queue1/1.png" id="2_ag2mp"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="3_8lbti"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/obstacle.tscn" id="4_aw3qr"]
 

@@ -12,7 +12,7 @@ Structure of the folders in the Godot project (words in brackets should be repla
 ├── components
 ├── graphics
 	├── chapter[#]
-		└──  comics
+		└── comics
 			└──  comic[#]
 				└──  panel_[name]
 					├── [name].png
@@ -48,6 +48,6 @@ Structure of the folders in the Godot project (words in brackets should be repla
 	└── ui
 		├── buttons
 		└── cursor
-├── levels
+├── scenes
 └── video
 ```

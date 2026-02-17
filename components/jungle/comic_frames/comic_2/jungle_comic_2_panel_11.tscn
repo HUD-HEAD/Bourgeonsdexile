@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://43c07utlirv7"]
 
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="1_b7mxx"]
-[ext_resource type="Texture2D" uid="uid://coy7ml4byonu2" path="res://graphics/comic2godot/frame6and9/1.png" id="2_82mtj"]
-[ext_resource type="Texture2D" uid="uid://ctj71vxsnh2xs" path="res://graphics/comic2godot/frame6and9/2.png" id="3_cplt7"]
+[ext_resource type="Texture2D" uid="uid://coy7ml4byonu2" path="res://graphics/chapter1/comics/comic2/frame6and9/1.png" id="2_82mtj"]
+[ext_resource type="Texture2D" uid="uid://ctj71vxsnh2xs" path="res://graphics/chapter1/comics/comic2/frame6and9/2.png" id="3_cplt7"]
 [ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/area_entered_enable.gd" id="3_ohj2j"]
-[ext_resource type="Texture2D" uid="uid://dsqq8a4k56jaf" path="res://graphics/comic2godot/frame6and9/3.png" id="4_7e5fl"]
+[ext_resource type="Texture2D" uid="uid://dsqq8a4k56jaf" path="res://graphics/chapter1/comics/comic2/frame6and9/3.png" id="4_7e5fl"]
 [ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="6_hrpj4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tfiam"]

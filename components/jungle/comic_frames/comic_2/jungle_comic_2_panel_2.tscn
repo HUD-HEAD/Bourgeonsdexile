@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dpk31y77oouru"]
 
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="1_751tj"]
-[ext_resource type="Texture2D" uid="uid://bdod2ihx4qcym" path="res://graphics/comic2godot/FRAME2/frame2_background.png" id="2_wfqva"]
-[ext_resource type="Texture2D" uid="uid://dtbh7fbbfpuf7" path="res://graphics/comic2godot/FRAME2/frame2_bubble.png" id="3_nuprl"]
+[ext_resource type="Texture2D" uid="uid://bdod2ihx4qcym" path="res://graphics/chapter1/comics/comic2/FRAME2/frame2_background.png" id="2_wfqva"]
+[ext_resource type="Texture2D" uid="uid://dtbh7fbbfpuf7" path="res://graphics/chapter1/comics/comic2/FRAME2/frame2_bubble.png" id="3_nuprl"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="4_nuprl"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_ds1i7"]
 

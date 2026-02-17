@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://burtt46lw24w3"]
+
+[ext_resource type="PackedScene" uid="uid://s3spdg0qqc77" path="res://scenes/chapter1/levels/jungle_city.tscn" id="1_8hpuf"]
+[ext_resource type="PackedScene" uid="uid://c67602tb8xxco" path="res://components/jungle/puzzles/drag_drop_puzzle_city3.tscn" id="4_dts2i"]
+[ext_resource type="PackedScene" uid="uid://c57ylw3q4gnr4" path="res://components/jungle/puzzles/drag_drop_puzzle_city2.tscn" id="99_85bnq"]
+
+[node name="JungleCity" type="Node2D" unique_id=669800673]
+
+[node name="JungleCity" parent="." unique_id=761651538 instance=ExtResource("1_8hpuf")]
+
+[node name="DragDropPuzzle" parent="." unique_id=1264050739 instance=ExtResource("99_85bnq")]
+position = Vector2(2698, 586)
+rotation = -0.015458716
+scale = Vector2(0.7, 0.7)
+
+[node name="DragDropPuzzle2" parent="." unique_id=1104489357 instance=ExtResource("4_dts2i")]
+position = Vector2(4469, 536)
+scale = Vector2(0.7, 0.7)

@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://b7280mshbm13l"]
 
 [ext_resource type="PackedScene" uid="uid://8imm2g6332ef" path="res://components/utils/puzzles/dragdrop_puzzle_template.tscn" id="1_2n52l"]
-[ext_resource type="Texture2D" uid="uid://cas4g8aj68o8j" path="res://graphics/ui/junglepuzzles/7/empty7.png" id="2_x6neh"]
-[ext_resource type="Texture2D" uid="uid://dqwnrh3q1t73c" path="res://graphics/ui/junglepuzzles/7/1_7.png" id="3_6hlc3"]
+[ext_resource type="Texture2D" uid="uid://cas4g8aj68o8j" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles/7/empty7.png" id="2_x6neh"]
+[ext_resource type="Texture2D" uid="uid://dqwnrh3q1t73c" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles/7/1_7.png" id="3_6hlc3"]
 [ext_resource type="PackedScene" uid="uid://b15l0pq6dea3h" path="res://components/utils/puzzles/puzzle_piece_template.tscn" id="4_85pab"]
-[ext_resource type="Texture2D" uid="uid://dkms76dmkgk0m" path="res://graphics/ui/junglepuzzles/7/2_7.png" id="5_xasvo"]
+[ext_resource type="Texture2D" uid="uid://dkms76dmkgk0m" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles/7/2_7.png" id="5_xasvo"]
 [ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="6_rlmsm"]
-[ext_resource type="Texture2D" uid="uid://1qwomohmbcan" path="res://graphics/ui/junglepuzzles/7/full7.png" id="7_crc3x"]
+[ext_resource type="Texture2D" uid="uid://1qwomohmbcan" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles/7/full7.png" id="7_crc3x"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1vb3e"]
 radius = 88.553345

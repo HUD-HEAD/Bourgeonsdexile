@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d246c0iqqddvh"]
 
-[ext_resource type="Texture2D" uid="uid://bbac3pmodof0a" path="res://graphics/jungle/rain/1.png" id="1_gr836"]
+[ext_resource type="Texture2D" uid="uid://bbac3pmodof0a" path="res://graphics/chapter1/levels/jungle/environment/rain/1.png" id="1_gr836"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mtlks"]
 particle_flag_align_y = true

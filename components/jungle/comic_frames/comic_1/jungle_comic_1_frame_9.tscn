@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://drxfjicmrdtlo"]
 
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="1_js5ki"]
-[ext_resource type="Texture2D" uid="uid://4wxp0kmynn0e" path="res://graphics/comic1rexported/LastFrame/lastframe/city_deck_together.png" id="2_wslev"]
+[ext_resource type="Texture2D" uid="uid://4wxp0kmynn0e" path="res://graphics/chapter1/comics/comic1/LastFrame/lastframe/city_deck_together.png" id="2_wslev"]
 [ext_resource type="AudioStream" uid="uid://daslh5k4i63sy" path="res://audio/sfx/sea-waves-169411.mp3" id="3_wslev"]
 
 [node name="JungleComic1Frame9" type="Node2D" unique_id=1499592311]

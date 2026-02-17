@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bf82dcdcxwmvn"]
 
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="1_wi4w6"]
-[ext_resource type="Texture2D" uid="uid://d0q07sb6nm7jl" path="res://graphics/comic1rexported/framefood.png" id="2_yij4g"]
+[ext_resource type="Texture2D" uid="uid://d0q07sb6nm7jl" path="res://graphics/chapter1/comics/comic1/framefood.png" id="2_yij4g"]
 
 [node name="JungleComic1FrameFoodReady" type="Node2D" unique_id=1686233868]
 metadata/_edit_group_ = true

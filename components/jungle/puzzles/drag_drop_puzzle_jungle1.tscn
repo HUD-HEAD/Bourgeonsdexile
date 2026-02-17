@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://mn5d8k3suhx3"]
 
 [ext_resource type="PackedScene" uid="uid://8imm2g6332ef" path="res://components/utils/puzzles/dragdrop_puzzle_template.tscn" id="1_6ghm6"]
-[ext_resource type="Texture2D" uid="uid://sy1dxgn3tmgk" path="res://graphics/ui/junglepuzzles/3/empty3.png" id="2_pg1hc"]
-[ext_resource type="Texture2D" uid="uid://dvgoga0qaipjf" path="res://graphics/ui/junglepuzzles/3/1_3.png" id="3_wmj4s"]
+[ext_resource type="Texture2D" uid="uid://sy1dxgn3tmgk" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles/3/empty3.png" id="2_pg1hc"]
+[ext_resource type="Texture2D" uid="uid://dvgoga0qaipjf" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles/3/1_3.png" id="3_wmj4s"]
 [ext_resource type="PackedScene" uid="uid://b15l0pq6dea3h" path="res://components/utils/puzzles/puzzle_piece_template.tscn" id="4_o273r"]
-[ext_resource type="Texture2D" uid="uid://dxw1nrwfm6dt5" path="res://graphics/ui/junglepuzzles/3/2_3.png" id="5_s8fo4"]
+[ext_resource type="Texture2D" uid="uid://dxw1nrwfm6dt5" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles/3/2_3.png" id="5_s8fo4"]
 [ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="6_cs28l"]
-[ext_resource type="Texture2D" uid="uid://chh83l5je2j8f" path="res://graphics/ui/junglepuzzles/3/full3.png" id="7_tetxg"]
+[ext_resource type="Texture2D" uid="uid://chh83l5je2j8f" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles/3/full3.png" id="7_tetxg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kmyer"]
 size = Vector2(157, 273)

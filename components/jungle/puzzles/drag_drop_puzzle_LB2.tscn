@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://dpbnilttq2thf"]
 
 [ext_resource type="PackedScene" uid="uid://8imm2g6332ef" path="res://components/utils/puzzles/dragdrop_puzzle_template.tscn" id="1_ueyiw"]
-[ext_resource type="Texture2D" uid="uid://cfftjxmhb8yj" path="res://graphics/ui/lajapuzzles/big_lajapuzzles/8/empty8.png" id="2_m32yl"]
-[ext_resource type="Texture2D" uid="uid://t5mccblyntmj" path="res://graphics/ui/lajapuzzles/big_lajapuzzles/8/1_8.png" id="3_q6su1"]
+[ext_resource type="Texture2D" uid="uid://cfftjxmhb8yj" path="res://graphics/chapter1/levels/lajas_blancas/puzzles/big_lajapuzzles/8/empty8.png" id="2_m32yl"]
+[ext_resource type="Texture2D" uid="uid://t5mccblyntmj" path="res://graphics/chapter1/levels/lajas_blancas/puzzles/big_lajapuzzles/8/1_8.png" id="3_q6su1"]
 [ext_resource type="PackedScene" uid="uid://b15l0pq6dea3h" path="res://components/utils/puzzles/puzzle_piece_template.tscn" id="4_uagnw"]
-[ext_resource type="Texture2D" uid="uid://k5lpscfgqa5i" path="res://graphics/ui/lajapuzzles/big_lajapuzzles/8/2_8.png" id="5_fs37y"]
+[ext_resource type="Texture2D" uid="uid://k5lpscfgqa5i" path="res://graphics/chapter1/levels/lajas_blancas/puzzles/big_lajapuzzles/8/2_8.png" id="5_fs37y"]
 [ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="6_8nnvv"]
-[ext_resource type="Texture2D" uid="uid://6jmu7tiwxrbg" path="res://graphics/ui/lajapuzzles/big_lajapuzzles/8/3_8.png" id="7_jowmj"]
-[ext_resource type="Texture2D" uid="uid://8ufx1k2u1cd3" path="res://graphics/ui/lajapuzzles/big_lajapuzzles/8/4_8.png" id="8_snfhi"]
-[ext_resource type="Texture2D" uid="uid://mc2x1eoukned" path="res://graphics/ui/lajapuzzles/big_lajapuzzles/8/5_8.png" id="9_1jngj"]
+[ext_resource type="Texture2D" uid="uid://6jmu7tiwxrbg" path="res://graphics/chapter1/levels/lajas_blancas/puzzles/big_lajapuzzles/8/3_8.png" id="7_jowmj"]
+[ext_resource type="Texture2D" uid="uid://8ufx1k2u1cd3" path="res://graphics/chapter1/levels/lajas_blancas/puzzles/big_lajapuzzles/8/4_8.png" id="8_snfhi"]
+[ext_resource type="Texture2D" uid="uid://mc2x1eoukned" path="res://graphics/chapter1/levels/lajas_blancas/puzzles/big_lajapuzzles/8/5_8.png" id="9_1jngj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lbf7b"]
 size = Vector2(205, 48)

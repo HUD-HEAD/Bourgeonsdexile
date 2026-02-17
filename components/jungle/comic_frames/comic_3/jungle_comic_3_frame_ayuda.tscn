@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cvhdi4oiatmqi"]
 
-[ext_resource type="Texture2D" uid="uid://b72v0abe0asc1" path="res://graphics/comic3/frame10/frame_ayuda.png" id="1_1a3om"]
+[ext_resource type="Texture2D" uid="uid://b72v0abe0asc1" path="res://graphics/chapter1/comics/comic3/frame10/frame_ayuda.png" id="1_1a3om"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_g56er"]
 
 [node name="JungleComic3FrameAyuda" type="Node2D" unique_id=639988020]

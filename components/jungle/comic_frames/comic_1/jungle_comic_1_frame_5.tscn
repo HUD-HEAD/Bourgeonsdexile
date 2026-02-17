@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cpqe48imup7qq"]
 
-[ext_resource type="Texture2D" uid="uid://bjcwlut10vdrf" path="res://graphics/jungle/jungle_comic1/frame5/frame5_background.png" id="1_1afk3"]
+[ext_resource type="Texture2D" uid="uid://bjcwlut10vdrf" path="res://graphics/chapter1/comics/jungle_comic1/frame5/frame5_background.png" id="1_1afk3"]
 [ext_resource type="Script" uid="uid://bwhw2o2u7v43i" path="res://components/utils/comics/vertical_sine_anim.gd" id="2_4dbym"]
-[ext_resource type="Texture2D" uid="uid://cxfu1fqpa2jm3" path="res://graphics/jungle/jungle_comic1/frame5/frame5_shadow/frame5_shadow2.png" id="2_wg8pt"]
-[ext_resource type="Texture2D" uid="uid://c3xcmr4dqpfkw" path="res://graphics/jungle/jungle_comic1/frame5/frame5_woman/frame5_woman1.png" id="4_qb235"]
-[ext_resource type="Texture2D" uid="uid://bqrgb5q0adf0b" path="res://graphics/jungle/jungle_comic1/frame5/frame5_woman/frame5_woman2.png" id="5_5yxg6"]
-[ext_resource type="Texture2D" uid="uid://dol671p3xj2ip" path="res://graphics/jungle/jungle_comic1/frame5/frame5_woman/frame5_woman3.png" id="6_y1cxl"]
+[ext_resource type="Texture2D" uid="uid://cxfu1fqpa2jm3" path="res://graphics/chapter1/comics/jungle_comic1/frame5/frame5_shadow/frame5_shadow2.png" id="2_wg8pt"]
+[ext_resource type="Texture2D" uid="uid://c3xcmr4dqpfkw" path="res://graphics/chapter1/comics/jungle_comic1/frame5/frame5_woman/frame5_woman1.png" id="4_qb235"]
+[ext_resource type="Texture2D" uid="uid://bqrgb5q0adf0b" path="res://graphics/chapter1/comics/jungle_comic1/frame5/frame5_woman/frame5_woman2.png" id="5_5yxg6"]
+[ext_resource type="Texture2D" uid="uid://dol671p3xj2ip" path="res://graphics/chapter1/comics/jungle_comic1/frame5/frame5_woman/frame5_woman3.png" id="6_y1cxl"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="7_brxes"]
 [ext_resource type="AudioStream" uid="uid://bxm32ub0fm2xg" path="res://audio/sfx/bus-idle-to-drive-off-65780.mp3" id="8_w1rhg"]
 

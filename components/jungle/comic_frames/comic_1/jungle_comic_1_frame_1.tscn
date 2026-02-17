@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://dxje8kcv8ykkm"]
 
-[ext_resource type="Texture2D" uid="uid://b1kq3hpvjdvft" path="res://graphics/jungle/jungle_comic1/frame1/frame1_1.png" id="1_8r138"]
-[ext_resource type="Texture2D" uid="uid://dj0v82ndb5ddu" path="res://graphics/jungle/jungle_comic1/frame1/frame1_2.png" id="2_pgcst"]
+[ext_resource type="Texture2D" uid="uid://b1kq3hpvjdvft" path="res://graphics/chapter1/comics/jungle_comic1/frame1/frame1_1.png" id="1_8r138"]
+[ext_resource type="Texture2D" uid="uid://dj0v82ndb5ddu" path="res://graphics/chapter1/comics/jungle_comic1/frame1/frame1_2.png" id="2_pgcst"]
 [ext_resource type="AudioStream" uid="uid://kp7q8fyr211" path="res://audio/sfx/night_ambiance.mp3" id="2_stins"]
-[ext_resource type="Texture2D" uid="uid://cn01oh2w837m4" path="res://graphics/jungle/jungle_comic1/frame1/frame1_4.png" id="4_u3rfc"]
-[ext_resource type="Texture2D" uid="uid://t7vpedh330ns" path="res://graphics/jungle/jungle_comic1/frame1/frame1_7.png" id="7_er6hy"]
-[ext_resource type="Texture2D" uid="uid://csvi015jm6vp2" path="res://graphics/jungle/jungle_comic1/frame1/frame1_8.png" id="8_xpmsf"]
+[ext_resource type="Texture2D" uid="uid://cn01oh2w837m4" path="res://graphics/chapter1/comics/jungle_comic1/frame1/frame1_4.png" id="4_u3rfc"]
+[ext_resource type="Texture2D" uid="uid://t7vpedh330ns" path="res://graphics/chapter1/comics/jungle_comic1/frame1/frame1_7.png" id="7_er6hy"]
+[ext_resource type="Texture2D" uid="uid://csvi015jm6vp2" path="res://graphics/chapter1/comics/jungle_comic1/frame1/frame1_8.png" id="8_xpmsf"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="9_qx2pv"]
 
 [sub_resource type="Animation" id="Animation_stins"]
