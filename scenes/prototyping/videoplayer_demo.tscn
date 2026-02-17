@@ -23,7 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://c8ilyirsimrdv" path="res://graphics/ui/buttons/StartButton/17.png" id="20_espb0"]
 [ext_resource type="Texture2D" uid="uid://kqpc82kuphi2" path="res://graphics/ui/buttons/StartButton/18.png" id="21_4a4ol"]
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="23_88yht"]
-[ext_resource type="Texture2D" uid="uid://b1kq3hpvjdvft" path="res://graphics/chapter1/comics/jungle_comic1/frame1/frame1_1.png" id="24_kb4k4"]
+[ext_resource type="Texture2D" uid="uid://b1kq3hpvjdvft" path="res://graphics/chapter1/comics/dontuse_jungle_comic1/frame1/frame1_1.png" id="24_kb4k4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8elr8"]
 animations = [{
