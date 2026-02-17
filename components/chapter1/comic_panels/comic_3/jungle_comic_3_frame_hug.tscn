@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cupsjhdxr50yp"]
+
+[ext_resource type="Texture2D" uid="uid://bpj8tyga1fxbf" path="res://graphics/chapter1/comics/comic3/frame_hug/hug.png" id="1_kq3vu"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_0v3up"]
+
+[node name="JungleComic3FrameHug" type="Node2D" unique_id=1952944772]
+
+[node name="FrameKidlajas" type="Sprite2D" parent="." unique_id=307047125]
+texture = ExtResource("1_kq3vu")
+
+[node name="Transition" type="Node" parent="." unique_id=1540958446]
+script = ExtResource("2_0v3up")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=749044343]

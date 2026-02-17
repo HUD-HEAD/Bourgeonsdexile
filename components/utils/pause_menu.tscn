@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://cqrrv6gv87h10"]
 
-[ext_resource type="Texture2D" uid="uid://dlbwa0uh0s86d" path="res://graphics/ui/pause/menu_pause2.png" id="1_vcssp"]
-[ext_resource type="Texture2D" uid="uid://b4ietau1augkw" path="res://graphics/ui/pause/play.png" id="2_8abkk"]
-[ext_resource type="Texture2D" uid="uid://dnx5ujhxtbpjk" path="res://graphics/ui/pause/exit.png" id="2_60iai"]
-[ext_resource type="Texture2D" uid="uid://ce7gqlohwl0mh" path="res://graphics/ui/pause/x1.png" id="2_mad6a"]
+[ext_resource type="Texture2D" uid="uid://dlbwa0uh0s86d" path="res://graphics/ui/buttons/pause/menu_pause2.png" id="1_vcssp"]
+[ext_resource type="Texture2D" uid="uid://b4ietau1augkw" path="res://graphics/ui/buttons/pause/play.png" id="2_8abkk"]
+[ext_resource type="Texture2D" uid="uid://dnx5ujhxtbpjk" path="res://graphics/ui/buttons/pause/exit.png" id="2_60iai"]
+[ext_resource type="Texture2D" uid="uid://ce7gqlohwl0mh" path="res://graphics/ui/buttons/pause/x1.png" id="2_mad6a"]
 [ext_resource type="Script" uid="uid://prkw3tfkwh13" path="res://components/utils/ui/button_fade.gd" id="3_d6dga"]
-[ext_resource type="Texture2D" uid="uid://c2urmxg5mww6s" path="res://graphics/ui/pause/darker_layer.png" id="3_oj8k3"]
-[ext_resource type="Texture2D" uid="uid://dubaus1nmdimo" path="res://graphics/ui/pause/settings.png" id="4_d6dga"]
-[ext_resource type="Texture2D" uid="uid://cthtfvy41mlcn" path="res://graphics/ui/pause/cross.png" id="4_oj8k3"]
+[ext_resource type="Texture2D" uid="uid://c2urmxg5mww6s" path="res://graphics/ui/buttons/pause/darker_layer.png" id="3_oj8k3"]
+[ext_resource type="Texture2D" uid="uid://dubaus1nmdimo" path="res://graphics/ui/buttons/pause/settings.png" id="4_d6dga"]
+[ext_resource type="Texture2D" uid="uid://cthtfvy41mlcn" path="res://graphics/ui/buttons/pause/cross.png" id="4_oj8k3"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=261222394]
 
