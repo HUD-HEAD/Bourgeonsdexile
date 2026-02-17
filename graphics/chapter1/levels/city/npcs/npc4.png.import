@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu2dvygmdp466"
-path="res://.godot/imported/ppl copia.png-088b010b043173a2b6648dd9419e5ffb.ctex"
+uid="uid://7ywnfrktquao"
+path="res://.godot/imported/npc4.png-fb3c724a32e241c0c02aea681bfde762.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter1/levels/lajas_blancas/environment/ppl copia.png"
-dest_files=["res://.godot/imported/ppl copia.png-088b010b043173a2b6648dd9419e5ffb.ctex"]
+source_file="res://graphics/chapter1/levels/city/npcs/npc4.png"
+dest_files=["res://.godot/imported/npc4.png-fb3c724a32e241c0c02aea681bfde762.ctex"]
 
 [params]
 

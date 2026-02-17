@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bytentpt5mbag" path="res://graphics/chapter1/comics/jungle_comic1/frame4/frame4_drawer.png" id="1_qb8vt"]
 [ext_resource type="Texture2D" uid="uid://cvfvfiy4rr3qe" path="res://graphics/chapter1/comics/jungle_comic1/frame4/draweritems/frame4_box.png" id="2_n2g0o"]
-[ext_resource type="PackedScene" uid="uid://be8m0cbcq6bww" path="res://components/jungle/jungle_item.tscn" id="2_tphwk"]
+[ext_resource type="PackedScene" uid="uid://be8m0cbcq6bww" path="res://components/chapter1/jungle_item.tscn" id="2_tphwk"]
 [ext_resource type="Texture2D" uid="uid://yxh4erxklx83" path="res://graphics/chapter1/comics/comic1/Frame4_NewAssets/pad.png" id="2_xlh8w"]
 [ext_resource type="Texture2D" uid="uid://6aw0r8su70ia" path="res://graphics/chapter1/comics/jungle_comic1/frame4/draweritems/frame4_notebook.png" id="3_tphwk"]
 [ext_resource type="Script" uid="uid://f3pxhdups7wf" path="res://components/utils/comics/click_wiggle.gd" id="3_v4vw6"]

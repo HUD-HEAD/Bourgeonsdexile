@@ -2,13 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_p64sh"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="3_qar8e"]
-[ext_resource type="PackedScene" uid="uid://c1hj16bvmut1r" path="res://components/jungle/comic_frames/comic_4/jungle_comic_4_panel_1.tscn" id="3_t5lhr"]
-[ext_resource type="PackedScene" uid="uid://bx3vvp3in2pvr" path="res://components/jungle/comic_frames/comic_4/jungle_comic_4_frame_folders.tscn" id="4_drdnr"]
-[ext_resource type="PackedScene" uid="uid://ds1b5xoce25kf" path="res://components/jungle/comic_frames/comic_4/jungle_comic_4_panel_3.tscn" id="5_xs8jl"]
-[ext_resource type="PackedScene" uid="uid://dlufjr836r473" path="res://components/jungle/comic_frames/comic_4/jungle_comic_4_panel_4.tscn" id="6_12per"]
-[ext_resource type="PackedScene" uid="uid://h67bkwvbgnvx" path="res://components/jungle/comic_frames/comic_4/jungle_comic_4_panel_6.tscn" id="9_t5lhr"]
+[ext_resource type="PackedScene" uid="uid://c1hj16bvmut1r" path="res://components/chapter1/comic_panels/comic_4/jungle_comic_4_panel_1.tscn" id="3_t5lhr"]
+[ext_resource type="PackedScene" uid="uid://bx3vvp3in2pvr" path="res://components/chapter1/comic_panels/comic_4/jungle_comic_4_frame_folders.tscn" id="4_drdnr"]
+[ext_resource type="PackedScene" uid="uid://ds1b5xoce25kf" path="res://components/chapter1/comic_panels/comic_4/jungle_comic_4_panel_3.tscn" id="5_xs8jl"]
+[ext_resource type="PackedScene" uid="uid://dlufjr836r473" path="res://components/chapter1/comic_panels/comic_4/jungle_comic_4_panel_4.tscn" id="6_12per"]
+[ext_resource type="PackedScene" uid="uid://h67bkwvbgnvx" path="res://components/chapter1/comic_panels/comic_4/jungle_comic_4_panel_6.tscn" id="9_t5lhr"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="9_yggp2"]
-[ext_resource type="PackedScene" uid="uid://crqtn2a43hhe8" path="res://components/jungle/comic_frames/comic_4/jungle_comic_4_panel_phone.tscn" id="12_xs8jl"]
+[ext_resource type="PackedScene" uid="uid://crqtn2a43hhe8" path="res://components/chapter1/comic_panels/comic_4/jungle_comic_4_panel_phone.tscn" id="12_xs8jl"]
 
 [node name="JungleComic4" type="Node2D" unique_id=1574922119]
 

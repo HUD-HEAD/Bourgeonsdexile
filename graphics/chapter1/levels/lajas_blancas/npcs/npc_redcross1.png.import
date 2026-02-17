@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7ywnfrktquao"
-path="res://.godot/imported/npc4.png-e26c393046c2e8bcf9c80e3bdbfa5de1.ctex"
+uid="uid://bm1w5c4d7gypv"
+path="res://.godot/imported/npc_redcross1.png-8dd22ef88fe5c108b808b4b57cc140ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter1/levels/city/environment/npcs/npc4.png"
-dest_files=["res://.godot/imported/npc4.png-e26c393046c2e8bcf9c80e3bdbfa5de1.ctex"]
+source_file="res://graphics/chapter1/levels/lajas_blancas/npcs/npc_redcross1.png"
+dest_files=["res://.godot/imported/npc_redcross1.png-8dd22ef88fe5c108b808b4b57cc140ef.ctex"]
 
 [params]
 

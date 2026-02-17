@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cyyx1fl7vyhle"]
 
-[ext_resource type="SpriteFrames" uid="uid://11536kgivixc" path="res://components/jungle/resources/nina_sprite_frames.tres" id="2_k1wq5"]
+[ext_resource type="SpriteFrames" uid="uid://11536kgivixc" path="res://components/chapter1/main_characters/nina_sprite_frames.tres" id="2_k1wq5"]
 [ext_resource type="Texture2D" uid="uid://bqmwvwxnvy503" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow1.png" id="3_6frku"]
 [ext_resource type="Texture2D" uid="uid://dnon84uyke6c4" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow2.png" id="4_5pwjv"]
 [ext_resource type="Texture2D" uid="uid://dkm7pj8kxf23p" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow3.png" id="5_ujwkm"]

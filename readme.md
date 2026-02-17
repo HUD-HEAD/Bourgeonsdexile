@@ -22,17 +22,18 @@ Structure of the folders in the Godot project (words in brackets should be repla
 			└── [level_name]
 				├── environment
 					├── background
+						└── [background_name].png
 					└── items
-						└── [object_name].png
-				├── puzzles
+						└── [item_name].png
+				├── npcs
+					└── [npc_name]
+						└── [animation_name]
+							└── [animation_name]_frame[#].png
+				└── puzzles
 					└── puzzle[#]
 						├── empty.png
 						├── full.png
 						└── bubble[#].png
-				└── npcs
-					└── [npc_name]
-						└── [animation_name]
-							└── [animation_name]_frame[#].png
 		└── main_characters
 			└── [main_character_name]
 				└── [animation_name]

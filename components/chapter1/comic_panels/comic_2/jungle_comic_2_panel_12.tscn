@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="1_nw6cm"]
 [ext_resource type="Texture2D" uid="uid://ctv47gl8d6o6r" path="res://graphics/chapter1/comics/comic2/frame10/frame10_background.png" id="2_nw6cm"]
-[ext_resource type="SpriteFrames" uid="uid://bmcc5l21n4h6s" path="res://components/jungle/resources/companion_1_sprite_frames.tres" id="4_qea40"]
-[ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/jungle/jungle_woman.tscn" id="4_qtrgl"]
-[ext_resource type="SpriteFrames" uid="uid://dqrsyjauj12el" path="res://components/jungle/resources/companion_2_sprite_frames.tres" id="5_3mhfa"]
+[ext_resource type="SpriteFrames" uid="uid://bmcc5l21n4h6s" path="res://components/chapter1/main_characters/companion_1_sprite_frames.tres" id="4_qea40"]
+[ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/chapter1/main_characters/jungle_woman.tscn" id="4_qtrgl"]
+[ext_resource type="SpriteFrames" uid="uid://dqrsyjauj12el" path="res://components/chapter1/main_characters/companion_2_sprite_frames.tres" id="5_3mhfa"]
 
 [node name="Panel12" type="Node2D" unique_id=425216191]
 
