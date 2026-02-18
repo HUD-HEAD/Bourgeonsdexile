@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://6o5rd25j0g6n"]
 
-[ext_resource type="PackedScene" uid="uid://bd7g0rb56ib48" path="res://components/chapter1/comic_panels/comic_1/jungle_comic_candle.tscn" id="1_fwj6i"]
+[ext_resource type="PackedScene" uid="uid://bd7g0rb56ib48" path="res://components/chapter1/comic_panels/comic_1/panel_candle.tscn" id="1_fwj6i"]
 [ext_resource type="PackedScene" uid="uid://bw2hx77bhrdqm" path="res://components/utils/ui/fake_cursor.tscn" id="2_ax1k2"]
 
 [node name="Node2D" type="Node2D" unique_id=2128405639]

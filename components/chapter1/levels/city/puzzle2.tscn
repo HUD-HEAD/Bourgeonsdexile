@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://ckdsg3rpi65te"]
+
+[ext_resource type="Script" uid="uid://chrql2wwvrdt1" path="res://components/utils/puzzles/drag_drop_puzzle.gd" id="1_s2m73"]
+[ext_resource type="Texture2D" uid="uid://bj1r581ujxnka" path="res://graphics/chapter1/levels/city/puzzles/puzzle2/simple/empty.png" id="2_s2m73"]
+[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="4_daxvp"]
+[ext_resource type="Texture2D" uid="uid://df78fjmd6nfpu" path="res://graphics/chapter1/levels/city/puzzles/puzzle2/simple/piece1.png" id="5_8bf4l"]
+[ext_resource type="Texture2D" uid="uid://bjsfkjyr5i4gt" path="res://graphics/chapter1/levels/city/puzzles/puzzle2/simple/piece2.png" id="6_5hfcj"]
+[ext_resource type="PackedScene" uid="uid://xyq2m2kx86ku" path="res://components/utils/puzzles/placement_checker.tscn" id="6_s2m73"]
+[ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="8_hiiw3"]
+[ext_resource type="Script" uid="uid://dt4apmm1b4e51" path="res://components/utils/puzzles/puzzle_piece.gd" id="9_hiiw3"]
+[ext_resource type="Texture2D" uid="uid://b2v6h2xx2y05c" path="res://graphics/chapter1/levels/city/puzzles/puzzle2/full_arrow.png" id="9_uaovy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s2m73"]
+size = Vector2(127, 111)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hiiw3"]
+size = Vector2(140, 117)
+
+[node name="CityPuzzle2" type="Node2D" unique_id=636231198 node_paths=PackedStringArray("puzzle_pieces", "complete_image", "outline_image")]
+script = ExtResource("1_s2m73")
+puzzle_pieces = [NodePath("PuzzlePiece"), NodePath("PuzzlePiece2")]
+complete_image = NodePath("Fullsquare")
+outline_image = NodePath("Emptysquare")
+
+[node name="Emptysquare" type="Sprite2D" parent="." unique_id=378736329]
+texture = ExtResource("2_s2m73")
+
+[node name="Receptacle" parent="." unique_id=1753590750 instance=ExtResource("8_hiiw3")]
+position = Vector2(-72, 4)
+
+[node name="Receptacle2" parent="." unique_id=800679547 instance=ExtResource("8_hiiw3")]
+position = Vector2(68, 8)
+
+[node name="PuzzlePiece" type="Node2D" parent="." unique_id=107123918 node_paths=PackedStringArray("draggable", "placement_checker")]
+script = ExtResource("9_hiiw3")
+draggable = NodePath("Draggable")
+placement_checker = NodePath("Draggable/PlacementChecker")
+
+[node name="Draggable" type="Area2D" parent="PuzzlePiece" unique_id=813576259]
+position = Vector2(-72, 4)
+script = ExtResource("4_daxvp")
+metadata/_edit_group_ = true
+
+[node name="Bubble1Puzle1" type="Sprite2D" parent="PuzzlePiece/Draggable" unique_id=1908186241]
+texture = ExtResource("5_8bf4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzlePiece/Draggable" unique_id=1646367993]
+position = Vector2(-1.5, -3.5)
+shape = SubResource("RectangleShape2D_s2m73")
+
+[node name="PlacementChecker" parent="PuzzlePiece/Draggable" unique_id=1205918569 node_paths=PackedStringArray("receptacle") instance=ExtResource("6_s2m73")]
+receptacle = NodePath("../../../Receptacle")
+
+[node name="PuzzlePiece2" type="Node2D" parent="." unique_id=475507319 node_paths=PackedStringArray("draggable", "placement_checker")]
+script = ExtResource("9_hiiw3")
+draggable = NodePath("Draggable2")
+placement_checker = NodePath("Draggable2/PlacementChecker")
+
+[node name="Draggable2" type="Area2D" parent="PuzzlePiece2" unique_id=1482094845]
+position = Vector2(68, 8)
+script = ExtResource("4_daxvp")
+metadata/_edit_group_ = true
+
+[node name="Bubble2Puzle1" type="Sprite2D" parent="PuzzlePiece2/Draggable2" unique_id=1666263139]
+texture = ExtResource("6_5hfcj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzlePiece2/Draggable2" unique_id=1980375599]
+position = Vector2(-1, -9.5)
+shape = SubResource("RectangleShape2D_hiiw3")
+
+[node name="PlacementChecker" parent="PuzzlePiece2/Draggable2" unique_id=2071805638 node_paths=PackedStringArray("receptacle") instance=ExtResource("6_s2m73")]
+receptacle = NodePath("../../../Receptacle2")
+
+[node name="Fullsquare" type="Sprite2D" parent="." unique_id=691156988]
+texture = ExtResource("9_uaovy")

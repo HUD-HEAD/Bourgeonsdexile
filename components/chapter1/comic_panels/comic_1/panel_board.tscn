@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://sxqkfw5v3ue"]
+
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="1_o12fu"]
+[ext_resource type="Texture2D" uid="uid://cab2chrg01h1" path="res://graphics/chapter1/comics/comic1/panel_board/board.png" id="2_kvwue"]
+[ext_resource type="Texture2D" uid="uid://bo41q8vxqxlk7" path="res://graphics/chapter1/comics/comic1/panel_board/knife.png" id="3_stnbv"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="4_ial8g"]
+[ext_resource type="Texture2D" uid="uid://dftekw6egqr3r" path="res://graphics/chapter1/comics/comic1/panel_board/anim_onion/1.png" id="5_gsn35"]
+[ext_resource type="Texture2D" uid="uid://cp52w2vw1gxr3" path="res://graphics/chapter1/comics/comic1/panel_board/anim_onion/2.png" id="6_y11nq"]
+[ext_resource type="Texture2D" uid="uid://b674rltaxp0wj" path="res://graphics/chapter1/comics/comic1/panel_board/anim_onion/3.png" id="7_bpiwf"]
+[ext_resource type="Texture2D" uid="uid://d2iytm2c6djdq" path="res://graphics/chapter1/comics/comic1/panel_board/anim_onion/4.png" id="8_rg20k"]
+[ext_resource type="Texture2D" uid="uid://dcrq7m0e3f03v" path="res://graphics/chapter1/comics/comic1/panel_board/anim_onion/5.png" id="9_qplq4"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="10_gj2vg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_poopq"]
+radius = 244.03279
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_auuql"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_gsn35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_y11nq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bpiwf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rg20k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qplq4")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="JungleComic1FrameBoard" type="Node2D" unique_id=1056075513]
+metadata/_edit_group_ = true
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=129050537]
+position = Vector2(-707, 0)
+rect = Rect2(-10, -10, 1420, 79)
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=1563112949 node_paths=PackedStringArray("clickables")]
+script = ExtResource("1_o12fu")
+clickables = [NodePath("../Clickable")]
+obstacles_to_clear = 4
+transition_delay = 0.1
+metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="Board" type="Sprite2D" parent="." unique_id=200788425]
+texture = ExtResource("2_kvwue")
+
+[node name="Knife" type="Sprite2D" parent="." unique_id=598072117]
+position = Vector2(721, 13)
+texture = ExtResource("3_stnbv")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=526937004]
+script = ExtResource("4_ial8g")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1161191401]
+shape = SubResource("CircleShape2D_poopq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Clickable/CollisionShape2D" unique_id=832982765 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_auuql")
+script = ExtResource("10_gj2vg")
+clickable = NodePath("../..")
