@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1p3kigpchsgm"
-path="res://.godot/imported/city_deck.png-92bb4841a1f7e0469d370366d6445c07.ctex"
+uid="uid://beqa3kshm70i"
+path="res://.godot/imported/frame2_woman1.png-8cfc564b76bf403d25cf65f51464d014.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter1/comics/comic1/panel_arrival/city_deck.png"
-dest_files=["res://.godot/imported/city_deck.png-92bb4841a1f7e0469d370366d6445c07.ctex"]
+source_file="res://graphics/chapter1/comics/comic1/panel_argument/anim_woman/frame2_woman1.png"
+dest_files=["res://.godot/imported/frame2_woman1.png-8cfc564b76bf403d25cf65f51464d014.ctex"]
 
 [params]
 

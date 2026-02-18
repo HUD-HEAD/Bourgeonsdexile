@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1p3kigpchsgm"
-path="res://.godot/imported/city_deck.png-92bb4841a1f7e0469d370366d6445c07.ctex"
+uid="uid://dsebosijspsmj"
+path="res://.godot/imported/bird2.png-cfa3b26a8842a480e9965e88b0e2799e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter1/comics/comic1/panel_arrival/city_deck.png"
-dest_files=["res://.godot/imported/city_deck.png-92bb4841a1f7e0469d370366d6445c07.ctex"]
+source_file="res://graphics/chapter1/comics/comic1/panel_boat_closeup/anim_bird/bird2.png"
+dest_files=["res://.godot/imported/bird2.png-cfa3b26a8842a480e9965e88b0e2799e.ctex"]
 
 [params]
 

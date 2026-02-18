@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1p3kigpchsgm"
-path="res://.godot/imported/city_deck.png-92bb4841a1f7e0469d370366d6445c07.ctex"
+uid="uid://bwyips2hh2vwn"
+path="res://.godot/imported/spark2.png-68567264f199e1f131effe38ac623386.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter1/comics/comic1/panel_arrival/city_deck.png"
-dest_files=["res://.godot/imported/city_deck.png-92bb4841a1f7e0469d370366d6445c07.ctex"]
+source_file="res://graphics/chapter1/comics/comic1/panel_switch/anim_spark/spark2.png"
+dest_files=["res://.godot/imported/spark2.png-68567264f199e1f131effe38ac623386.ctex"]
 
 [params]
 

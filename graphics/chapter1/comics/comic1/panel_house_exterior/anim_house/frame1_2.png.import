@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1p3kigpchsgm"
-path="res://.godot/imported/city_deck.png-92bb4841a1f7e0469d370366d6445c07.ctex"
+uid="uid://dj0v82ndb5ddu"
+path="res://.godot/imported/frame1_2.png-1b53ac767efc13113190295c8473d7f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter1/comics/comic1/panel_arrival/city_deck.png"
-dest_files=["res://.godot/imported/city_deck.png-92bb4841a1f7e0469d370366d6445c07.ctex"]
+source_file="res://graphics/chapter1/comics/comic1/panel_house_exterior/anim_house/frame1_2.png"
+dest_files=["res://.godot/imported/frame1_2.png-1b53ac767efc13113190295c8473d7f3.ctex"]
 
 [params]
 
