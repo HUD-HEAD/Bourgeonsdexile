@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://d246c0iqqddvh"]
+
+[ext_resource type="Texture2D" uid="uid://bbac3pmodof0a" path="res://graphics/chapter1/levels/jungle/environment/rain/1.png" id="1_gr836"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mtlks"]
+particle_flag_align_y = true
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1500, 1, 1)
+direction = Vector3(0.5, 1, 0)
+spread = 0.0
+initial_velocity_min = 450.0
+initial_velocity_max = 600.0
+gravity = Vector3(0, 98, 0)
+
+[node name="Rain" type="GPUParticles2D" unique_id=153314495]
+amount = 50
+texture = ExtResource("1_gr836")
+lifetime = 5.0
+visibility_rect = Rect2(-1500, 0, 3000, 1080)
+process_material = SubResource("ParticleProcessMaterial_mtlks")

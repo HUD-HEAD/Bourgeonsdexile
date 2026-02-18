@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dpk31y77oouru"]
+
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="1_751tj"]
+[ext_resource type="Texture2D" uid="uid://bdod2ihx4qcym" path="res://graphics/chapter1/comics/comic2/FRAME2/frame2_background.png" id="2_wfqva"]
+[ext_resource type="Texture2D" uid="uid://dtbh7fbbfpuf7" path="res://graphics/chapter1/comics/comic2/FRAME2/frame2_bubble.png" id="3_nuprl"]
+[ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="4_nuprl"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_ds1i7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ds1i7"]
+radius = 113.0
+height = 492.0
+
+[node name="Panel2" type="Node2D" unique_id=84839214]
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=840851329]
+
+[node name="Transition" type="Node" parent="." unique_id=1126593060]
+script = ExtResource("1_751tj")
+
+[node name="Frame2Background" type="Sprite2D" parent="." unique_id=1887507888]
+texture = ExtResource("2_wfqva")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=1570566548 node_paths=PackedStringArray("nodes_to_show")]
+position = Vector2(441, -168)
+script = ExtResource("4_nuprl")
+nodes_to_show = [NodePath("../Frame2Bubble")]
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=751443835]
+shape = SubResource("CapsuleShape2D_ds1i7")
+
+[node name="Frame2Bubble" type="Sprite2D" parent="." unique_id=1915610806]
+position = Vector2(-8, -313)
+texture = ExtResource("3_nuprl")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=100746718 node_paths=PackedStringArray("clickables")]
+script = ExtResource("5_ds1i7")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"

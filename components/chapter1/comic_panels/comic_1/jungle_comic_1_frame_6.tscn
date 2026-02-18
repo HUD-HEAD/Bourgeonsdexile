@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://cyqwmaex0ilgv"]
+
+[ext_resource type="Texture2D" uid="uid://cmpfr15ltt737" path="res://graphics/chapter1/comics/dontuse_jungle_comic1/frame6/frame6_background.png" id="1_5fq6s"]
+[ext_resource type="Texture2D" uid="uid://dgnbx8g2en04" path="res://graphics/chapter1/comics/dontuse_jungle_comic1/frame6/frame6_boat.png" id="2_6enyl"]
+[ext_resource type="Script" uid="uid://bwhw2o2u7v43i" path="res://components/utils/comics/vertical_sine_anim.gd" id="3_j3dv7"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="4_6enyl"]
+[ext_resource type="AudioStream" uid="uid://faine180cya3" path="res://audio/sfx/boat-gently-bumping-dock-40994.mp3" id="5_4ndws"]
+
+[sub_resource type="Animation" id="Animation_hbr7m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [-1353.0]
+}
+
+[sub_resource type="Animation" id="Animation_ppo6s"]
+resource_name = "boat_traverse"
+length = 8.333337
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8.333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1353.0, 1286.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bva4g"]
+_data = {
+&"RESET": SubResource("Animation_hbr7m"),
+&"boat_traverse": SubResource("Animation_ppo6s")
+}
+
+[node name="JungleComic1Frame6" type="Node2D" unique_id=618598756]
+metadata/_edit_group_ = true
+
+[node name="Frame6Background" type="Sprite2D" parent="." unique_id=524227348]
+clip_children = 2
+texture = ExtResource("1_5fq6s")
+
+[node name="Frame6Boat" type="Sprite2D" parent="Frame6Background" unique_id=219422816]
+position = Vector2(-1353, 240)
+texture = ExtResource("2_6enyl")
+script = ExtResource("3_j3dv7")
+amplitude = 30.0
+speed = 2.0
+
+[node name="AutomaticPanner" type="Node" parent="." unique_id=1452193000 node_paths=PackedStringArray("anim_player")]
+script = ExtResource("4_6enyl")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1892650686]
+root_node = NodePath("../Frame6Background/Frame6Boat")
+libraries/ = SubResource("AnimationLibrary_bva4g")
+autoplay = &"boat_traverse"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=915433529]
+stream = ExtResource("5_4ndws")
+autoplay = true
