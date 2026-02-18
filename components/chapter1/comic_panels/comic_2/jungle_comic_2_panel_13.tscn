@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cgsvxrtoxhfja"]
+
+[ext_resource type="Texture2D" uid="uid://gevy0733xl07" path="res://graphics/chapter1/comics/comic2/frame11/frame11.png" id="1_6g6ab"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_unyn1"]
+
+[node name="Panel13" type="Node2D" unique_id=625001368]
+
+[node name="JungleEntry" type="Sprite2D" parent="." unique_id=1294146490]
+texture = ExtResource("1_6g6ab")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1898139479]
+
+[node name="Transition" type="Node" parent="." unique_id=1671555409]
+script = ExtResource("2_unyn1")

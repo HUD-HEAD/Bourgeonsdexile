@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://0sd3o1afbqf1"]
+
+[ext_resource type="PackedScene" uid="uid://8imm2g6332ef" path="res://components/utils/puzzles/dragdrop_puzzle_template.tscn" id="1_cy0gs"]
+[ext_resource type="Texture2D" uid="uid://dwnjpub8s84qv" path="res://graphics/chapter1/levels/lajas_blancas/puzzles/halfpuzzles/3/empty3.png" id="2_gcniq"]
+[ext_resource type="Texture2D" uid="uid://w52scqtk7qtk" path="res://graphics/chapter1/levels/lajas_blancas/puzzles/halfpuzzles/3/2_3.png" id="3_04cc4"]
+[ext_resource type="Texture2D" uid="uid://gmj8qsouv22r" path="res://graphics/chapter1/levels/lajas_blancas/puzzles/halfpuzzles/3/full3.png" id="4_ww6a7"]
+[ext_resource type="Texture2D" uid="uid://35og1odpedxx" path="res://graphics/chapter1/levels/lajas_blancas/puzzles/halfpuzzles/3/1_3.png" id="5_e8ody"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b11m5"]
+size = Vector2(165.42197, 120.24559)
+
+[node name="DragDropPuzzle" unique_id=559797596 node_paths=PackedStringArray("puzzle_pieces") instance=ExtResource("1_cy0gs")]
+puzzle_pieces = [NodePath("BuildingBlocks/PuzzlePiece")]
+
+[node name="OutlinePuzzle" parent="." index="0" unique_id=1513168459]
+texture = ExtResource("2_gcniq")
+
+[node name="13" type="Sprite2D" parent="OutlinePuzzle" index="0" unique_id=1597953027]
+position = Vector2(7, 170)
+texture = ExtResource("5_e8ody")
+
+[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="0" unique_id=1266676352]
+texture = ExtResource("3_04cc4")
+
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="1" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+receptacle = NodePath("../../../Receptacle")
+
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="2" unique_id=1105802255]
+position = Vector2(1.7479404, -1.9221087)
+rotation = -0.06154058
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_b11m5")
+
+[node name="CompletePuzzle" parent="." index="2" unique_id=1933061263]
+position = Vector2(6, 109)
+texture = ExtResource("4_ww6a7")
+
+[editable path="BuildingBlocks/PuzzlePiece"]

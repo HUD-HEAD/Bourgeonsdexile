@@ -1,0 +1,415 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dqrsyjauj12el"]
+
+[ext_resource type="Texture2D" uid="uid://cktyf6symgx3a" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0001.png" id="1_81eav"]
+[ext_resource type="Texture2D" uid="uid://d0v1wun78ae1d" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0010.png" id="2_1alwc"]
+[ext_resource type="Texture2D" uid="uid://26jmcmmn1m4k" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0002.png" id="2_07od4"]
+[ext_resource type="Texture2D" uid="uid://t8h635lkptsy" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0003.png" id="3_myj0a"]
+[ext_resource type="Texture2D" uid="uid://yxdurvrudibo" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0011.png" id="3_pfkps"]
+[ext_resource type="Texture2D" uid="uid://dbdeogx6fe0l4" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0004.png" id="4_s2fqs"]
+[ext_resource type="Texture2D" uid="uid://ee15jxpa2pjb" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0012.png" id="4_u2dwb"]
+[ext_resource type="Texture2D" uid="uid://8i7filbuoijn" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0005.png" id="5_dto4d"]
+[ext_resource type="Texture2D" uid="uid://c5d6cfpm18i70" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0013.png" id="5_yxk02"]
+[ext_resource type="Texture2D" uid="uid://ddy0mu8q1l5dy" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0014.png" id="6_fp6at"]
+[ext_resource type="Texture2D" uid="uid://dqnedkxm7fork" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0006.png" id="6_gfvr2"]
+[ext_resource type="Texture2D" uid="uid://bvelgtm56f08r" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0007.png" id="7_io08c"]
+[ext_resource type="Texture2D" uid="uid://su502bbrfc0u" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0015.png" id="7_tnh4t"]
+[ext_resource type="Texture2D" uid="uid://mjran1fxl8or" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0016.png" id="8_1jxk5"]
+[ext_resource type="Texture2D" uid="uid://cba0o64pupef5" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0008.png" id="8_8dsrn"]
+[ext_resource type="Texture2D" uid="uid://c0a1rg8s7d5v3" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0009.png" id="9_4ro6n"]
+[ext_resource type="Texture2D" uid="uid://bxcyqyfna2jdd" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0017.png" id="9_u6jdk"]
+[ext_resource type="Texture2D" uid="uid://8dc5hgw5xx1b" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0018.png" id="10_v1h71"]
+[ext_resource type="Texture2D" uid="uid://cmog7qm11os5w" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0019.png" id="11_odax2"]
+[ext_resource type="Texture2D" uid="uid://hbshpmjq63fe" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0021.png" id="12_n810j"]
+[ext_resource type="Texture2D" uid="uid://c42nijegmhkc1" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0031.png" id="13_uig6u"]
+[ext_resource type="Texture2D" uid="uid://cfdkipk40mviw" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0001.png" id="14_3k5qp"]
+[ext_resource type="Texture2D" uid="uid://bbua180ge6jcb" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0010.png" id="15_4so2u"]
+[ext_resource type="Texture2D" uid="uid://c7uhgyjf85ay1" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0011.png" id="16_8ae8e"]
+[ext_resource type="Texture2D" uid="uid://cwh5tpcwav2y" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0012.png" id="17_fynip"]
+[ext_resource type="Texture2D" uid="uid://cxtxat7wnje37" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0013.png" id="18_ic1bm"]
+[ext_resource type="Texture2D" uid="uid://cbbc603jir6dw" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0014.png" id="19_cinlb"]
+[ext_resource type="Texture2D" uid="uid://djouenb81hd8k" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0015.png" id="20_1t1jy"]
+[ext_resource type="Texture2D" uid="uid://cj7eekqbll1ql" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0020.png" id="20_kga37"]
+[ext_resource type="Texture2D" uid="uid://blyhildvphssi" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0016.png" id="21_kjxsn"]
+[ext_resource type="Texture2D" uid="uid://dc7a0ouutj053" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0017.png" id="22_jbbx0"]
+[ext_resource type="Texture2D" uid="uid://wqiw62dbcvi7" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0022.png" id="22_xqx4b"]
+[ext_resource type="Texture2D" uid="uid://c3nv8ocj0o4td" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0018.png" id="23_6nwsh"]
+[ext_resource type="Texture2D" uid="uid://c8e5nsmgssnk8" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0023.png" id="23_tcctn"]
+[ext_resource type="Texture2D" uid="uid://bh4bh4m72f8iw" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0019.png" id="24_07v1f"]
+[ext_resource type="Texture2D" uid="uid://c5lmrxh1kiman" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0024.png" id="24_56wri"]
+[ext_resource type="Texture2D" uid="uid://b6jfukt0pm358" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0025.png" id="25_2doi0"]
+[ext_resource type="Texture2D" uid="uid://cproqxwxu61ht" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0021.png" id="25_5govl"]
+[ext_resource type="Texture2D" uid="uid://d2xwali4pjn46" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0031.png" id="26_crde2"]
+[ext_resource type="Texture2D" uid="uid://dxbr3deity721" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0026.png" id="26_t8a80"]
+[ext_resource type="Texture2D" uid="uid://2v5412dehehi" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0027.png" id="27_1gakj"]
+[ext_resource type="Texture2D" uid="uid://dg7vant6tjqkb" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0041.png" id="27_15bp4"]
+[ext_resource type="Texture2D" uid="uid://fq1s4jpgpplc" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0028.png" id="28_av2mh"]
+[ext_resource type="Texture2D" uid="uid://bjttg0cobt5su" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0051.png" id="28_g6d4x"]
+[ext_resource type="Texture2D" uid="uid://dr8j44v82akl3" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0029.png" id="29_jyee2"]
+[ext_resource type="Texture2D" uid="uid://duiqj1ajmoq6t" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0030.png" id="30_w3khu"]
+[ext_resource type="Texture2D" uid="uid://8cqg5i8loo87" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0032.png" id="32_5fw4t"]
+[ext_resource type="Texture2D" uid="uid://cg8x8qithqut" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0033.png" id="33_gq3tx"]
+[ext_resource type="Texture2D" uid="uid://56mr7ocjb0ip" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0034.png" id="34_nowbr"]
+[ext_resource type="Texture2D" uid="uid://pgk8yxwtwwhc" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0035.png" id="35_jhm0d"]
+[ext_resource type="Texture2D" uid="uid://dx1k45cka1xho" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0036.png" id="36_e3qb6"]
+[ext_resource type="Texture2D" uid="uid://bj5dxx2f0x6u" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0037.png" id="37_4b16a"]
+[ext_resource type="Texture2D" uid="uid://rhq31tcty6c2" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0038.png" id="38_4xxdj"]
+[ext_resource type="Texture2D" uid="uid://dowiuo7jviovd" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0039.png" id="39_fk0vg"]
+[ext_resource type="Texture2D" uid="uid://doblpa0iy0m2i" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_idle/NPC_companion2_idle_0040.png" id="40_m3hpd"]
+[ext_resource type="Texture2D" uid="uid://bwjettfvgt01n" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0002.png" id="42_fukm1"]
+[ext_resource type="Texture2D" uid="uid://b2pdw41njrrir" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0003.png" id="43_chns2"]
+[ext_resource type="Texture2D" uid="uid://bd3c32exwdpbg" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0004.png" id="44_puxbk"]
+[ext_resource type="Texture2D" uid="uid://daxpqc611xob1" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0005.png" id="45_0bsg8"]
+[ext_resource type="Texture2D" uid="uid://kqsgurn0ocql" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0006.png" id="46_q88s3"]
+[ext_resource type="Texture2D" uid="uid://cste02cn1i47i" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0007.png" id="47_5yux3"]
+[ext_resource type="Texture2D" uid="uid://cix6dqg28s5m0" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0008.png" id="48_mus3w"]
+[ext_resource type="Texture2D" uid="uid://dsjiq00tmmjq3" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0009.png" id="49_utj0u"]
+[ext_resource type="Texture2D" uid="uid://b1w8wbqo8rdcx" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0020.png" id="60_04hvc"]
+[ext_resource type="Texture2D" uid="uid://btrkx56wjpcqo" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0022.png" id="62_viean"]
+[ext_resource type="Texture2D" uid="uid://7o0y5rm7mlwb" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0023.png" id="63_1m6js"]
+[ext_resource type="Texture2D" uid="uid://c1bcgpsyh2rqa" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0024.png" id="64_el3ou"]
+[ext_resource type="Texture2D" uid="uid://dk7jodq6q4wqs" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0025.png" id="65_7rt3h"]
+[ext_resource type="Texture2D" uid="uid://c3vdhrsr1rngw" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0026.png" id="66_b8oje"]
+[ext_resource type="Texture2D" uid="uid://d0tglmco5kl2l" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0027.png" id="67_rd2hg"]
+[ext_resource type="Texture2D" uid="uid://b66kp87gd3o6y" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0028.png" id="68_7yxg1"]
+[ext_resource type="Texture2D" uid="uid://bu1htik56s2pc" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0029.png" id="69_73mgm"]
+[ext_resource type="Texture2D" uid="uid://dwchk38lkjpd" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0030.png" id="70_1da4v"]
+[ext_resource type="Texture2D" uid="uid://8nfi5puwpfk0" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0032.png" id="72_y32ft"]
+[ext_resource type="Texture2D" uid="uid://cptxmbhx4a52i" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0033.png" id="73_xhmup"]
+[ext_resource type="Texture2D" uid="uid://brkc2vg0g48sx" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0034.png" id="74_uc4gx"]
+[ext_resource type="Texture2D" uid="uid://c3novj3opfndm" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0035.png" id="75_qwv42"]
+[ext_resource type="Texture2D" uid="uid://vs6qwmas6nln" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0036.png" id="76_x67du"]
+[ext_resource type="Texture2D" uid="uid://bprxlwkeas5rr" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0037.png" id="77_xfnjm"]
+[ext_resource type="Texture2D" uid="uid://df00cli7mglw7" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0038.png" id="78_yf07u"]
+[ext_resource type="Texture2D" uid="uid://cb6s3opg735gx" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0039.png" id="79_cthpw"]
+[ext_resource type="Texture2D" uid="uid://c5bty7d3u23n5" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0040.png" id="80_pbgby"]
+[ext_resource type="Texture2D" uid="uid://b4hcdl7lp853u" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0042.png" id="82_2ihas"]
+[ext_resource type="Texture2D" uid="uid://c5ue0loac60yt" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0043.png" id="83_5dyhb"]
+[ext_resource type="Texture2D" uid="uid://dtmdj8m6eh206" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0044.png" id="84_xtx7w"]
+[ext_resource type="Texture2D" uid="uid://djryessxvx67b" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0045.png" id="85_hx7dw"]
+[ext_resource type="Texture2D" uid="uid://cqbb70nm74eoa" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0046.png" id="86_vtd32"]
+[ext_resource type="Texture2D" uid="uid://be3eswbjcund1" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0047.png" id="87_nd4vy"]
+[ext_resource type="Texture2D" uid="uid://snugqidciui2" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0048.png" id="88_5llhc"]
+[ext_resource type="Texture2D" uid="uid://lwe6ctbsoysv" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0049.png" id="89_rvvee"]
+[ext_resource type="Texture2D" uid="uid://ndcvb6sg7qc6" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0050.png" id="90_r56op"]
+[ext_resource type="Texture2D" uid="uid://dmjlfgtm4vo5c" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0052.png" id="92_hk1hd"]
+[ext_resource type="Texture2D" uid="uid://cy45fyayly658" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0053.png" id="93_2adcf"]
+[ext_resource type="Texture2D" uid="uid://bct5saqeri154" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0054.png" id="94_j1nxj"]
+[ext_resource type="Texture2D" uid="uid://ddmgfot2epwvc" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0055.png" id="95_oigk3"]
+[ext_resource type="Texture2D" uid="uid://bci4273j41xos" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0056.png" id="96_pg6ws"]
+[ext_resource type="Texture2D" uid="uid://f6qs7fry8cmi" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0057.png" id="97_b07np"]
+[ext_resource type="Texture2D" uid="uid://ca7cbme2ipyjb" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0058.png" id="98_pw1gk"]
+[ext_resource type="Texture2D" uid="uid://cu8htfrfll4t4" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0059.png" id="99_t4wxq"]
+[ext_resource type="Texture2D" uid="uid://bo27tferhx1ik" path="res://graphics/chapter1/main_characters/companions/companion2/NPC_companion2_walk/NPC_companion2_walk_0060.png" id="100_0m6sw"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_81eav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_07od4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_myj0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_s2fqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dto4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gfvr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_io08c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8dsrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4ro6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1alwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pfkps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_u2dwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yxk02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fp6at")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tnh4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1jxk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_u6jdk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_v1h71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_odax2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_kga37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_n810j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_xqx4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_tcctn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_56wri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_2doi0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_t8a80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_1gakj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_av2mh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_jyee2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_w3khu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_uig6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_5fw4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_gq3tx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_nowbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_jhm0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_e3qb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_4b16a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_4xxdj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_fk0vg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_m3hpd")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_3k5qp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_fukm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_chns2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_puxbk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_0bsg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_q88s3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_5yux3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_mus3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_utj0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4so2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_8ae8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_fynip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ic1bm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_cinlb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_1t1jy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_kjxsn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_jbbx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_6nwsh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_07v1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_04hvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_5govl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_viean")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_1m6js")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_el3ou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_7rt3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_b8oje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_rd2hg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_7yxg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_73mgm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_1da4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_crde2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_y32ft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_xhmup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_uc4gx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_qwv42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_x67du")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_xfnjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_yf07u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_cthpw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_pbgby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_15bp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_2ihas")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_5dyhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_xtx7w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_hx7dw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_vtd32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_nd4vy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_5llhc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_rvvee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_r56op")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_g6d4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_hk1hd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_2adcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_j1nxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_oigk3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_pg6ws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_b07np")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_pw1gk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_t4wxq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_0m6sw")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 30.0
+}]

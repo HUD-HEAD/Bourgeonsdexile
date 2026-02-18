@@ -24,6 +24,9 @@ func _action_on_click():
 func disable():
 	input_pickable = false
 	
+func enable():
+	input_pickable = true
+	
 func _on_mouse_entered():
 	hovering_count += 1
 	SignalManager.set_cursor_shape.emit(Input.CURSOR_POINTING_HAND)

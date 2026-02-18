@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bf82dcdcxwmvn"]
+
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="1_wi4w6"]
+[ext_resource type="Texture2D" uid="uid://d0q07sb6nm7jl" path="res://graphics/chapter1/comics/comic1/framefood.png" id="2_yij4g"]
+
+[node name="JungleComic1FrameFoodReady" type="Node2D" unique_id=1686233868]
+metadata/_edit_group_ = true
+
+[node name="AutomaticPanner" type="Node" parent="." unique_id=2015626319]
+script = ExtResource("1_wi4w6")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=95109771]
+position = Vector2(-707, 0)
+rect = Rect2(-10, -10, 1420, 79)
+
+[node name="Framefood" type="Sprite2D" parent="." unique_id=1733341095]
+texture = ExtResource("2_yij4g")
