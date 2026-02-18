@@ -16,6 +16,8 @@ func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
 	
+	complete_image.z_index = 1
+	complete_image.hide()
 	# Associate each puzzle piece with its receptacle
 	for piece in puzzle_pieces:
 		piece.piece_correctly_placed.connect(_on_correct_piece)
