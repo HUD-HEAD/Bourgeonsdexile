@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfp5ou6ojwppk"
-path="res://.godot/imported/soup_frame1.png-2c26e5e8ca6127a9279d7e2ce2a91706.ctex"
+uid="uid://c8v1ql0kusgfa"
+path="res://.godot/imported/soup_frame3.png-063ee8d271210a5983f8202478eb7e78.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/comic1rexported/framesoup/soup_frame1.png"
-dest_files=["res://.godot/imported/soup_frame1.png-2c26e5e8ca6127a9279d7e2ce2a91706.ctex"]
+source_file="res://graphics/chapter1/comics/comic1/panel_soup/anim_soup/soup_frame3.png"
+dest_files=["res://.godot/imported/soup_frame3.png-063ee8d271210a5983f8202478eb7e78.ctex"]
 
 [params]
 
