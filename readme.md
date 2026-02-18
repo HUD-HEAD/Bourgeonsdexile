@@ -33,7 +33,7 @@ Structure of the folders in the Godot project (words in brackets should be repla
 					└── puzzle[#]
 						├── empty.png
 						├── full.png
-						└── bubble[#].png
+						└── piece[#].png
 		└── main_characters
 			└── [main_character_name]
 				└── anim_[animation_name]_[##]fps
