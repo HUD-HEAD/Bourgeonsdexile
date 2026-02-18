@@ -1,0 +1,207 @@
+[gd_scene format=3 uid="uid://c60nnmob4jcv3"]
+
+[ext_resource type="Texture2D" uid="uid://6jx5m8bdu3h6" path="res://graphics/chapter1/comics/comic1/panel_tv/anim_tv/tv_plane.png" id="1_dwrql"]
+[ext_resource type="Texture2D" uid="uid://cw4mxuoe3gkqp" path="res://graphics/chapter1/comics/comic1/panel_tv/anim_tv/tv_house.png" id="2_1hmxl"]
+[ext_resource type="Texture2D" uid="uid://dj144pqsyk6si" path="res://graphics/chapter1/comics/comic1/panel_tv/anim_tv/tv_blur.png" id="3_1kwvk"]
+[ext_resource type="Texture2D" uid="uid://gf7hvntl7y1e" path="res://graphics/chapter1/comics/comic1/panel_tv/anim_tv/tv_white.png" id="4_vqmbj"]
+[ext_resource type="Texture2D" uid="uid://dt3qokc5hrhyu" path="res://graphics/chapter1/comics/comic1/panel_tv/anim_tv/tv_off.png" id="5_vtmap"]
+[ext_resource type="Script" uid="uid://bpxyc4arwakw4" path="res://components/utils/comics/lightswitch.gd" id="6_lljc5"]
+[ext_resource type="Texture2D" uid="uid://cefrjwaaexs3" path="res://graphics/chapter1/comics/comic1/panel_switch/frame_switch_on.png" id="7_no0tu"]
+[ext_resource type="Texture2D" uid="uid://b4mukyucct2xx" path="res://graphics/chapter1/comics/comic1/panel_switch/anim_spark/spark1.png" id="8_u1u4e"]
+[ext_resource type="Texture2D" uid="uid://bwyips2hh2vwn" path="res://graphics/chapter1/comics/comic1/panel_switch/anim_spark/spark2.png" id="9_nmxya"]
+[ext_resource type="Texture2D" uid="uid://dh8bel271rtc" path="res://graphics/chapter1/comics/comic1/panel_switch/anim_spark/spark3.png" id="10_vy6lu"]
+[ext_resource type="Texture2D" uid="uid://bff8x2ifvrfgj" path="res://graphics/chapter1/comics/comic1/panel_switch/anim_spark/spark4.png" id="11_jc4ik"]
+[ext_resource type="Texture2D" uid="uid://untur77k5b5e" path="res://graphics/chapter1/comics/comic1/panel_switch/anim_spark/spark5.png" id="12_6mm8v"]
+[ext_resource type="Texture2D" uid="uid://mipiyts6sp7a" path="res://graphics/chapter1/comics/comic1/panel_switch/anim_spark/spark6.png" id="13_e7d3w"]
+[ext_resource type="Texture2D" uid="uid://dsa7fnojx0lk7" path="res://graphics/chapter1/comics/comic1/panel_switch/anim_spark/spark7.png" id="14_uqbxa"]
+[ext_resource type="Texture2D" uid="uid://v3enbp1hm8h1" path="res://graphics/chapter1/comics/comic1/panel_switch/frame_switch_off.png" id="15_88hdc"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="16_wjbi5"]
+[ext_resource type="AudioStream" uid="uid://b6hvqeom3hopf" path="res://audio/sfx/tv-shutdown-2-386173.mp3" id="17_u62ak"]
+[ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/sfx_player.tscn" id="18_h38fu"]
+[ext_resource type="AudioStream" uid="uid://2esuihwh4qer" path="res://audio/sfx/click.mp3" id="19_77jm7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x2xsn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dwrql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1hmxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1kwvk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vqmbj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vtmap")
+}],
+"loop": false,
+"name": &"default",
+"speed": 30.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bgwx2"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": null
+}, {
+"duration": 3.0,
+"texture": ExtResource("8_u1u4e")
+}, {
+"duration": 3.0,
+"texture": ExtResource("9_nmxya")
+}, {
+"duration": 3.0,
+"texture": ExtResource("10_vy6lu")
+}, {
+"duration": 3.0,
+"texture": ExtResource("11_jc4ik")
+}, {
+"duration": 3.0,
+"texture": ExtResource("12_6mm8v")
+}, {
+"duration": 3.0,
+"texture": ExtResource("13_e7d3w")
+}, {
+"duration": 3.0,
+"texture": ExtResource("14_uqbxa")
+}, {
+"duration": 150.0,
+"texture": null
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_10q3j"]
+size = Vector2(168.2356, 324.70587)
+
+[sub_resource type="Animation" id="Animation_ox4xt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TV:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("JungleComic1Switch/Area2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_iiijh"]
+resource_name = "tv_program"
+length = 6.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TV:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4, 4.1, 4.266667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_u62ak")
+}],
+"times": PackedFloat32Array(4)
+}
+tracks/1/use_blend = true
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("JungleComic1Switch/Area2D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 6.0000005),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dbttd"]
+_data = {
+&"RESET": SubResource("Animation_ox4xt"),
+&"tv_program": SubResource("Animation_iiijh")
+}
+
+[node name="JungleComic1TV" type="Node2D" unique_id=1075139342]
+
+[node name="TV" type="AnimatedSprite2D" parent="." unique_id=1209582364]
+sprite_frames = SubResource("SpriteFrames_x2xsn")
+
+[node name="JungleComic1Switch" type="Node2D" parent="." unique_id=920370709]
+position = Vector2(542.96045, -81.37256)
+scale = Vector2(0.425, 0.425)
+
+[node name="Area2D" type="Area2D" parent="JungleComic1Switch" unique_id=1205829577 node_paths=PackedStringArray("switch_sprite")]
+visible = false
+position = Vector2(-2263.4365, -483.82928)
+script = ExtResource("6_lljc5")
+switch_sprite = NodePath("FrameSwitchOn/FrameSwitchOff")
+
+[node name="FrameSwitchOn" type="Sprite2D" parent="JungleComic1Switch/Area2D" unique_id=1477134424]
+texture = ExtResource("7_no0tu")
+
+[node name="SparkAnim" type="AnimatedSprite2D" parent="JungleComic1Switch/Area2D/FrameSwitchOn" unique_id=1138014947]
+position = Vector2(-42.259884, 0.8766085)
+sprite_frames = SubResource("SpriteFrames_bgwx2")
+autoplay = "default"
+frame_progress = 0.84531903
+
+[node name="FrameSwitchOff" type="Sprite2D" parent="JungleComic1Switch/Area2D/FrameSwitchOn" unique_id=1211981835]
+visible = false
+texture = ExtResource("15_88hdc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JungleComic1Switch/Area2D" unique_id=51664537]
+position = Vector2(-53.529297, -25.882385)
+scale = Vector2(1.0000002, 1.0000002)
+shape = SubResource("RectangleShape2D_10q3j")
+
+[node name="TransitionTriggerCounter" type="Node" parent="." unique_id=214892479 node_paths=PackedStringArray("clickables")]
+script = ExtResource("16_wjbi5")
+clickables = [NodePath("../JungleComic1Switch/Area2D")]
+obstacles_to_clear = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1284053497]
+libraries/ = SubResource("AnimationLibrary_dbttd")
+autoplay = &"tv_program"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1940552800]
+bus = &"Sfx"
+
+[node name="SfxPlayer" parent="." unique_id=1590780289 node_paths=PackedStringArray("clickables") instance=ExtResource("18_h38fu")]
+stream = ExtResource("19_77jm7")
+clickables = [NodePath("../JungleComic1Switch/Area2D")]
