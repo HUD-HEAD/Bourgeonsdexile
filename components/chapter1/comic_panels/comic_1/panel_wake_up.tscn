@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://b3xbb0f00akh4"]
+
+[ext_resource type="Texture2D" uid="uid://h4fc2xg0f5me" path="res://graphics/chapter1/comics/comic1/panel_wake_up/frame3_background1.png" id="1_2vtsb"]
+[ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/click_enable.gd" id="1_872db"]
+[ext_resource type="Texture2D" uid="uid://bylno0cgs0cky" path="res://graphics/chapter1/comics/comic1/panel_wake_up/frame3_background2.png" id="2_pmfxp"]
+[ext_resource type="Texture2D" uid="uid://56y3m7d8acwa" path="res://graphics/chapter1/comics/comic1/panel_wake_up/frame3_background3.png" id="3_wiokp"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_ite8x"]
+[ext_resource type="AudioStream" uid="uid://kp7q8fyr211" path="res://audio/sfx/night_ambiance.mp3" id="6_yupug"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pu4xu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_wiokp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_2vtsb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pmfxp")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_872db"]
+radius = 151.02069
+
+[node name="JungleComic1Frame3" type="Node2D" unique_id=1023980199]
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1860705983]
+sprite_frames = SubResource("SpriteFrames_pu4xu")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=578017789 node_paths=PackedStringArray("node_to_enable")]
+script = ExtResource("1_872db")
+node_to_enable = NodePath("../AnimatedSprite2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=851083274]
+position = Vector2(-40, 65.5)
+shape = SubResource("CircleShape2D_872db")
+
+[node name="TransitionTriggerCounter" type="Node" parent="." unique_id=32426841 node_paths=PackedStringArray("clickables")]
+script = ExtResource("5_ite8x")
+clickables = [NodePath("../Area2D")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1175061688]
+stream = ExtResource("6_yupug")
+autoplay = true
