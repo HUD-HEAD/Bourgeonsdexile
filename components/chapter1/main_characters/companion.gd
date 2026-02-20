@@ -12,6 +12,7 @@ func _ready() -> void:
 		walk_along_path = true
 
 func _process(delta: float) -> void:
+	anim_sprite.animation = model.anim_sprite.animation
 	if model.walking :
 		if walk_along_path:
 			path_follow.progress += WALK_SPEED*delta
