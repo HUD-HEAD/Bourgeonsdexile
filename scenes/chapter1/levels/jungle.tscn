@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://cjq4fleiu5245"]
 
 [ext_resource type="Texture2D" uid="uid://dglmyp3qpsn7n" path="res://graphics/chapter1/levels/jungle/environment/junglepieces/1/water1.png" id="1_nqhdg"]
-[ext_resource type="Texture2D" uid="uid://e6dbtl7rw04o" path="res://graphics/chapter1/levels/jungle/environment/junglepieces/water1.png" id="2_mtlks"]
 [ext_resource type="Texture2D" uid="uid://cxfl1rbct1ams" path="res://graphics/chapter1/levels/jungle/environment/junglepieces/4/water2.png" id="3_l3adg"]
-[ext_resource type="Texture2D" uid="uid://b3h4s7fkrtkab" path="res://graphics/chapter1/levels/jungle/environment/junglepieces/water2.png" id="4_8x401"]
 [ext_resource type="Texture2D" uid="uid://dfx4vaka3gxb3" path="res://graphics/chapter1/levels/jungle/environment/junglepieces/1/water1_rockreflection.png" id="5_nqhdg"]
 [ext_resource type="Texture2D" uid="uid://dwdic0l4f1w4c" path="res://graphics/chapter1/levels/jungle/environment/junglepieces/1/jungle1_background.png" id="6_nqhdg"]
 [ext_resource type="Texture2D" uid="uid://n0s7y8hxs1x8" path="res://graphics/chapter1/levels/jungle/environment/junglepieces/1/jungle1_floor.png" id="7_31ufg"]
@@ -13,8 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://b0i0o0j5u1ds8" path="res://graphics/chapter1/levels/jungle/environment/junglepieces/3/jungle3_floor.png" id="10_k1umw"]
 [ext_resource type="Texture2D" uid="uid://b83yfl72cdhju" path="res://graphics/chapter1/levels/jungle/environment/junglepieces/2/v2/floor.png" id="10_t8mqy"]
 [ext_resource type="Texture2D" uid="uid://f7lv6snpnokf" path="res://graphics/chapter1/levels/jungle/environment/junglepieces/3/bush.png" id="11_q8svf"]
-[ext_resource type="Texture2D" uid="uid://bn5lx2quhsng4" path="res://graphics/chapter1/levels/jungle/environment/junglepieces/4/jungle4_background.png" id="12_7xi0o"]
-[ext_resource type="Texture2D" uid="uid://btdl1qqmm5lwn" path="res://graphics/chapter1/levels/jungle/environment/junglepieces/4/jungle4_floor.png" id="13_r20bg"]
 [ext_resource type="Texture2D" uid="uid://m31dh66akhqm" path="res://graphics/chapter1/levels/jungle/environment/junglepieces/jungle5.png" id="14_7ab2f"]
 [ext_resource type="Texture2D" uid="uid://ckx75on8fpxew" path="res://graphics/chapter1/levels/jungle/environment/junglepieces/4/mockupgarbage4.png" id="14_t8mqy"]
 [ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/chapter1/main_characters/jungle_woman.tscn" id="15_td1vu"]
@@ -22,7 +18,6 @@
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="16_aewef"]
 [ext_resource type="PackedScene" uid="uid://deifii0sv125i" path="res://scenes/chapter1/comics/jungle_comic_3.tscn" id="17_aqo8c"]
 [ext_resource type="SpriteFrames" uid="uid://dqrsyjauj12el" path="res://components/chapter1/main_characters/companion_2_sprite_frames.tres" id="17_k7em6"]
-[ext_resource type="Texture2D" uid="uid://cayrp4ctmmk1b" path="res://graphics/chapter1/levels/jungle/environment/junglepieces/4/garbage_jungle4.png" id="17_vjysh"]
 [ext_resource type="PackedScene" uid="uid://d246c0iqqddvh" path="res://components/chapter1/levels/jungle/rain.tscn" id="18_nqhdg"]
 [ext_resource type="Script" uid="uid://gchp60e2jp5r" path="res://components/utils/set_camera_bounds.gd" id="19_31ufg"]
 [ext_resource type="AudioStream" uid="uid://1bh8jat7waj1" path="res://audio/sfx/jungle-nature-229896.mp3" id="20_5j4y3"]
@@ -67,22 +62,6 @@ light_mode = 2
 position = Vector2(458, 773)
 
 [node name="JungleSprites" type="Node2D" parent="." unique_id=1506606024]
-
-[node name="Water1" type="Sprite2D" parent="JungleSprites" unique_id=1637182483]
-position = Vector2(5176, 844)
-texture = ExtResource("1_nqhdg")
-
-[node name="PointLight2D2" type="PointLight2D" parent="JungleSprites/Water1" unique_id=519757281]
-energy = 0.0
-texture = ExtResource("2_mtlks")
-
-[node name="Water2" type="Sprite2D" parent="JungleSprites" unique_id=672181302]
-position = Vector2(27904, 608)
-texture = ExtResource("3_l3adg")
-
-[node name="PointLight2D3" type="PointLight2D" parent="JungleSprites/Water2" unique_id=1653953684]
-energy = 0.0
-texture = ExtResource("4_8x401")
 
 [node name="Jungle1" type="Node2D" parent="JungleSprites" unique_id=1811698658]
 metadata/_edit_group_ = true
@@ -141,22 +120,12 @@ texture = SubResource("GradientTexture2D_tglbk")
 centered = false
 
 [node name="Jungle4" type="Node2D" parent="JungleSprites" unique_id=284464738]
-position = Vector2(25198, -14)
+position = Vector2(25219, -14)
 metadata/_edit_group_ = true
 
-[node name="Jungle4Background" type="Sprite2D" parent="JungleSprites/Jungle4" unique_id=1943901093]
-position = Vector2(-1270, -305)
-texture = ExtResource("12_7xi0o")
-centered = false
-
-[node name="Jungle4Floor" type="Sprite2D" parent="JungleSprites/Jungle4" unique_id=1301046286]
-position = Vector2(-870, 278)
-texture = ExtResource("13_r20bg")
-centered = false
-
-[node name="GarbageJungle4" type="Sprite2D" parent="JungleSprites/Jungle4" unique_id=1623248129]
-position = Vector2(1570, 478)
-texture = ExtResource("17_vjysh")
+[node name="Mockupgarbage4" type="Sprite2D" parent="JungleSprites/Jungle4" unique_id=1820755942]
+position = Vector2(4163, 315)
+texture = ExtResource("14_t8mqy")
 
 [node name="Mockupgarbage4" type="Sprite2D" parent="JungleSprites" unique_id=1316751311]
 visible = false
@@ -170,6 +139,22 @@ position = Vector2(34384, -467)
 [node name="Jungle5" type="Sprite2D" parent="JungleSprites/Jungle5" unique_id=1703863041]
 texture = ExtResource("14_7ab2f")
 centered = false
+
+[node name="Water1" type="Sprite2D" parent="JungleSprites" unique_id=1637182483]
+position = Vector2(5176, 844)
+texture = ExtResource("1_nqhdg")
+
+[node name="PointLight2D2" type="PointLight2D" parent="JungleSprites/Water1" unique_id=519757281]
+energy = 0.0
+texture = ExtResource("1_nqhdg")
+
+[node name="Water2" type="Sprite2D" parent="JungleSprites" unique_id=672181302]
+position = Vector2(27929, 608)
+texture = ExtResource("3_l3adg")
+
+[node name="PointLight2D3" type="PointLight2D" parent="JungleSprites/Water2" unique_id=1653953684]
+energy = 0.0
+texture = ExtResource("3_l3adg")
 
 [node name="Path2D" type="Path2D" parent="." unique_id=1822789039]
 z_index = 1
