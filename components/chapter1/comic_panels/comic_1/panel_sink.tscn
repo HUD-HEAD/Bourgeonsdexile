@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://v2juo5s051v4"]
 
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="1_sbw73"]
 [ext_resource type="Texture2D" uid="uid://bxx4qyf00p3vr" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/PANEL_comic1_sink_0001.png" id="2_1r7xj"]
 [ext_resource type="Texture2D" uid="uid://fo36fgp5osi" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/PANEL_comic1_sink_0002.png" id="3_wint5"]
 [ext_resource type="Texture2D" uid="uid://d1jbf8id4l7ni" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/PANEL_comic1_sink_0003.png" id="4_3sa61"]
@@ -16,6 +15,12 @@
 [ext_resource type="Texture2D" uid="uid://bhrdnknggva23" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/PANEL_comic1_sink_0013.png" id="14_nu4hx"]
 [ext_resource type="Texture2D" uid="uid://b7iw0bqc5ow2k" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/PANEL_comic1_sink_0014.png" id="15_n67o8"]
 [ext_resource type="Texture2D" uid="uid://benp122sygmpc" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/PANEL_comic1_sink_0015.png" id="16_bmf81"]
+[ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/click_enable.gd" id="17_6pmpa"]
+[ext_resource type="Texture2D" uid="uid://drsa4m18nn3dn" path="res://graphics/chapter1/comics/comic1/panel_sink/framesink.png" id="18_6pmpa"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="18_uosyy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6pmpa"]
+size = Vector2(589, 391)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mxey2"]
 animations = [{
@@ -70,17 +75,122 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="Animation" id="Animation_uosyy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Framesink:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Clickable:input_pickable")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_6pmpa"]
+resource_name = "sink"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Framesink:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.13333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Clickable:input_pickable")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uosyy"]
+_data = {
+&"RESET": SubResource("Animation_uosyy"),
+&"sink": SubResource("Animation_6pmpa")
+}
+
 [node name="JungleComic1FrameSink" type="Node2D" unique_id=1085994452]
 metadata/_edit_group_ = true
-
-[node name="AutomaticPanner" type="Node" parent="." unique_id=1521905089]
-script = ExtResource("1_sbw73")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=2130898294]
 position = Vector2(-707, 0)
 rect = Rect2(-10, -10, 1420, 79)
 
+[node name="Clickable" type="Area2D" parent="." unique_id=741486681 node_paths=PackedStringArray("node_to_enable")]
+position = Vector2(-411, -358)
+script = ExtResource("17_6pmpa")
+node_to_enable = NodePath("../AnimationPlayer")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1506160868]
+position = Vector2(231.5, 92.5)
+shape = SubResource("RectangleShape2D_6pmpa")
+
+[node name="Framesink" type="Sprite2D" parent="." unique_id=1957673214]
+scale = Vector2(0.92, 0.92)
+texture = ExtResource("18_6pmpa")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1259930244]
+visible = false
 sprite_frames = SubResource("SpriteFrames_mxey2")
 autoplay = "default"
 frame_progress = 0.4575779
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1802027321]
+libraries/ = SubResource("AnimationLibrary_uosyy")
+autoplay = &"sink"
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=321118562 node_paths=PackedStringArray("clickables")]
+script = ExtResource("18_uosyy")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"
