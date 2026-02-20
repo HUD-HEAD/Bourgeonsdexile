@@ -29,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://mn5d8k3suhx3" path="res://components/chapter1/levels/jungle/puzzle1.tscn" id="28_aav6d"]
 [ext_resource type="PackedScene" uid="uid://c3ec4v87kvi86" path="res://components/chapter1/levels/jungle/puzzle2.tscn" id="29_kdrkc"]
 [ext_resource type="PackedScene" uid="uid://cqmidgct1vdmf" path="res://components/chapter1/levels/jungle/puzzle5.tscn" id="30_1yhnw"]
+[ext_resource type="Script" uid="uid://bhkx6r42i55jn" path="res://scenes/chapter1/levels/wait_stop_rain.gd" id="31_c3f0v"]
 [ext_resource type="PackedScene" uid="uid://b7280mshbm13l" path="res://components/chapter1/levels/jungle/puzzle6.tscn" id="31_ljtv2"]
 [ext_resource type="Texture2D" uid="uid://bow4ifhdb5bv5" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction1.png" id="32_2wqw0"]
 [ext_resource type="Texture2D" uid="uid://4n7my7ycpy30" path="res://graphics/chapter1/main_characters/enemies/enemiesprite1.png" id="32_808hi"]
@@ -428,14 +429,13 @@ next_scene = ExtResource("17_aqo8c")
 [node name="Rain" parent="." unique_id=498998463 instance=ExtResource("18_nqhdg")]
 position = Vector2(9848, -15)
 
+[node name="Rain2" parent="Rain" unique_id=153314495 instance=ExtResource("18_nqhdg")]
+texture = ExtResource("21_alrnr")
+
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Rain" unique_id=402594264]
 editor_description = "Needed for rain to appear"
 position = Vector2(-430, 864)
 occluder = SubResource("OccluderPolygon2D_c5nq0")
-
-[node name="Rain2" parent="." unique_id=153314495 instance=ExtResource("18_nqhdg")]
-position = Vector2(9848, -15)
-texture = ExtResource("21_alrnr")
 
 [node name="ChangeCameraBounds" type="VisibleOnScreenNotifier2D" parent="." unique_id=1088608562 node_paths=PackedStringArray("camera")]
 position = Vector2(24394, 569)
@@ -491,6 +491,12 @@ collision_mask = 2
 
 [node name="DragDropPuzzle2" parent="Puzzles/Puzzle2" unique_id=52554836 instance=ExtResource("29_kdrkc")]
 position = Vector2(-330, 232)
+
+[node name="WaitStopRain" type="Node2D" parent="Puzzles/Puzzle2" unique_id=764478138 node_paths=PackedStringArray("puzzle", "rains", "nina")]
+script = ExtResource("31_c3f0v")
+puzzle = NodePath("../DragDropPuzzle2")
+rains = [NodePath("../../../Rain"), NodePath("../../../Rain/Rain2")]
+nina = NodePath("../../../Path2D/PathFollow2D/Nina")
 
 [node name="Puzzle3" type="Node2D" parent="Puzzles" unique_id=1643202236]
 position = Vector2(13216, 0)
