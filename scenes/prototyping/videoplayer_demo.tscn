@@ -24,6 +24,8 @@
 [ext_resource type="Texture2D" uid="uid://kqpc82kuphi2" path="res://graphics/ui/buttons/StartButton/18.png" id="21_4a4ol"]
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="23_88yht"]
 [ext_resource type="Texture2D" uid="uid://b1kq3hpvjdvft" path="res://graphics/chapter1/comics/comic1/panel_house_exterior/anim_house/frame1_1.png" id="24_kb4k4"]
+[ext_resource type="AudioStream" uid="uid://g6ld4o8wo8dc" path="res://audio/chapter1/ambient/video_intro_transition.wav" id="25_x8avl"]
+[ext_resource type="AudioStream" uid="uid://d0gxi5v7ldmhf" path="res://audio/chapter1/ambient/video_intro_loop.wav" id="26_ueb35"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8elr8"]
 animations = [{
@@ -151,6 +153,7 @@ script = ExtResource("2_pdnfg")
 target_scene = ExtResource("3_0fttw")
 video_loop = NodePath("../../VideoStream_Loop")
 video_transition = NodePath("../../VideoStreamP_Transition")
+audio_transition = ExtResource("25_x8avl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/Start" unique_id=1746423609]
 sprite_frames = SubResource("SpriteFrames_8elr8")
@@ -175,3 +178,7 @@ stretch_mode = 1
 [node name="Frame11" type="Sprite2D" parent="TextureRect" unique_id=1039724458]
 position = Vector2(960, 540)
 texture = ExtResource("24_kb4k4")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1448924273]
+stream = ExtResource("26_ueb35")
+autoplay = true

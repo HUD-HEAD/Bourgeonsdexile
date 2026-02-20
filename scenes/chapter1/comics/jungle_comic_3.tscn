@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="12_txuxr"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="13_c4j60"]
 [ext_resource type="PackedScene" uid="uid://d2f3ss3fi8c52" path="res://scenes/chapter1/levels/lajas_blancas.tscn" id="13_dx01d"]
-[ext_resource type="Texture2D" uid="uid://fpqit37tutf7" path="res://graphics/chapter1/comics/comic3/frame3/frame3.png" id="14_txuxr"]
+[ext_resource type="PackedScene" uid="uid://ho5wjpeqrptp" path="res://components/chapter1/comic_panels/comic_3/panel_arrival.tscn" id="13_w6r1n"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="15_sw7mp"]
 [ext_resource type="PackedScene" uid="uid://clojdgf3punl6" path="res://components/chapter1/comic_panels/comic_3/panel_phone_canteen.tscn" id="15_w6r1n"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="16_scavv"]
@@ -87,14 +87,8 @@ position = Vector2(22850, 540)
 [node name="JungleComic3FrameFolders" parent="." unique_id=1516495874 instance=ExtResource("6_lc348")]
 position = Vector2(27096, 550)
 
-[node name="Comic3Panel3" type="Sprite2D" parent="." unique_id=1733649947]
+[node name="Comic3Panel3" parent="." unique_id=725178069 instance=ExtResource("13_w6r1n")]
 position = Vector2(7077, 540)
-texture = ExtResource("14_txuxr")
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Comic3Panel3" unique_id=1400185265]
-
-[node name="Transition" type="Node" parent="Comic3Panel3" unique_id=80808107]
-script = ExtResource("13_c4j60")
 
 [node name="Comic3Panel8" parent="." unique_id=357404315 instance=ExtResource("15_w6r1n")]
 position = Vector2(18363, 540)

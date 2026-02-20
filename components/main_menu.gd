@@ -6,9 +6,13 @@ extends CanvasLayer
 @export var credits : BaseButton
 @export var quit : BaseButton
 
+@export var audio_click_chapter : AudioStream
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_buttons_connect()
+	
+	AudioManager.audio_sfx.stream = audio_click_chapter
 
 func _buttons_connect():
 	play.pressed.connect(_on_play_pressed)
@@ -18,7 +22,9 @@ func _buttons_connect():
 
 ## Start game
 func _on_play_pressed():
+	AudioManager.audio_sfx.play()
 	SceneManager.goto_scene(SceneManager.START_SCENE)
+	
 
 ## Open settings
 func _on_settings_pressed():

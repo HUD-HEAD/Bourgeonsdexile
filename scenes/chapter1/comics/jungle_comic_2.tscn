@@ -12,7 +12,6 @@
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="12_su3g7"]
 [ext_resource type="PackedScene" uid="uid://smu7l0sn2pr2" path="res://components/chapter1/comic_panels/comic_2/panel10.tscn" id="12_tmikl"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="14_fekbj"]
-[ext_resource type="PackedScene" uid="uid://43c07utlirv7" path="res://components/chapter1/comic_panels/comic_2/panel11.tscn" id="14_nbn5v"]
 [ext_resource type="PackedScene" uid="uid://b5asjt0f4mcsd" path="res://components/chapter1/comic_panels/comic_2/panel7.tscn" id="14_tvvi7"]
 [ext_resource type="PackedScene" uid="uid://bj7e73nkbbtwn" path="res://components/chapter1/comic_panels/comic_2/panel9.tscn" id="15_mtmad"]
 [ext_resource type="PackedScene" uid="uid://cgsvxrtoxhfja" path="res://components/chapter1/comic_panels/comic_2/panel13.tscn" id="15_xso2w"]
@@ -20,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="17_1sxs8"]
 [ext_resource type="PackedScene" uid="uid://43c07utlirv7" path="res://components/chapter1/comic_panels/comic_2/panel11.tscn" id="18_tmikl"]
 [ext_resource type="PackedScene" uid="uid://cjq4fleiu5245" path="res://scenes/chapter1/levels/jungle.tscn" id="20_o76i3"]
+[ext_resource type="PackedScene" uid="uid://cnyqkkr7kcq7i" path="res://components/chapter1/comic_panels/comic_2/panel12.tscn" id="20_ox075"]
 
 [node name="JungleComic2" type="Node2D" unique_id=1529693680]
 
@@ -88,7 +88,7 @@ position = Vector2(22461, 540)
 [node name="Panel11" parent="." unique_id=1835400465 instance=ExtResource("18_tmikl")]
 position = Vector2(25047, 553.5)
 
-[node name="Panel12" parent="." unique_id=425216191 instance=ExtResource("14_nbn5v")]
+[node name="Panel12" parent="." unique_id=425216191 instance=ExtResource("20_ox075")]
 position = Vector2(27052, 554)
 
 [node name="Panel13" parent="." unique_id=625001368 instance=ExtResource("15_xso2w")]
