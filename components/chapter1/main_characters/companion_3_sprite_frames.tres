@@ -1,0 +1,71 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dg15c2titrtgq"]
+
+[ext_resource type="Texture2D" uid="uid://dvyh4362emgl4" path="res://graphics/chapter1/main_characters/companions/companion3/anim_idle_6fps/idle_0001.png" id="1_yhx2p"]
+[ext_resource type="Texture2D" uid="uid://dlsuvc00cpivh" path="res://graphics/chapter1/main_characters/companions/companion3/anim_idle_6fps/idle_0002.png" id="2_lqtof"]
+[ext_resource type="Texture2D" uid="uid://45ab5hu4hf4l" path="res://graphics/chapter1/main_characters/companions/companion3/anim_idle_6fps/idle_0003.png" id="3_wamyh"]
+[ext_resource type="Texture2D" uid="uid://d1i5k78ghhhsd" path="res://graphics/chapter1/main_characters/companions/companion3/anim_idle_6fps/idle_0004.png" id="4_7uoom"]
+[ext_resource type="Texture2D" uid="uid://cqw2431180xvf" path="res://graphics/chapter1/main_characters/companions/companion3/anim_idle_6fps/idle_0005.png" id="5_0p7vd"]
+[ext_resource type="Texture2D" uid="uid://c5ow0h7r7g3vn" path="res://graphics/chapter1/main_characters/companions/companion3/anim_idle_6fps/idle_0006.png" id="6_ext83"]
+[ext_resource type="Texture2D" uid="uid://ds3c8ic62lx2x" path="res://graphics/chapter1/main_characters/companions/companion3/anim_walk_5fps/walk_0001.png" id="7_xq2ks"]
+[ext_resource type="Texture2D" uid="uid://doc5ljodrcalv" path="res://graphics/chapter1/main_characters/companions/companion3/anim_walk_5fps/walk_0002.png" id="8_08jm1"]
+[ext_resource type="Texture2D" uid="uid://cwah14s7f71uq" path="res://graphics/chapter1/main_characters/companions/companion3/anim_walk_5fps/walk_0003.png" id="9_niutq"]
+[ext_resource type="Texture2D" uid="uid://vecim5ok88ml" path="res://graphics/chapter1/main_characters/companions/companion3/anim_walk_5fps/walk_0004.png" id="10_egsct"]
+[ext_resource type="Texture2D" uid="uid://b1pnq4lgmr6wf" path="res://graphics/chapter1/main_characters/companions/companion3/anim_walk_5fps/walk_0005.png" id="11_obhsh"]
+[ext_resource type="Texture2D" uid="uid://dv3cbxv2ixryw" path="res://graphics/chapter1/main_characters/companions/companion3/anim_walk_5fps/walk_0006.png" id="12_d4s35"]
+[ext_resource type="Texture2D" uid="uid://da6tkf3a1amgx" path="res://graphics/chapter1/main_characters/companions/companion3/anim_walk_5fps/walk_0007.png" id="13_l0lkr"]
+[ext_resource type="Texture2D" uid="uid://30ndvpg01op7" path="res://graphics/chapter1/main_characters/companions/companion3/anim_walk_5fps/walk_0008.png" id="14_au6xm"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yhx2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_lqtof")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wamyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7uoom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0p7vd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ext83")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_xq2ks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_08jm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_niutq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_egsct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_obhsh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_d4s35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_l0lkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_au6xm")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]

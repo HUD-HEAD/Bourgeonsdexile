@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://d246c0iqqddvh" path="res://components/chapter1/levels/jungle/rain.tscn" id="18_nqhdg"]
 [ext_resource type="Script" uid="uid://gchp60e2jp5r" path="res://components/utils/set_camera_bounds.gd" id="19_31ufg"]
 [ext_resource type="PackedScene" uid="uid://kkmgx1eqpc4i" path="res://components/chapter1/main_characters/char_reflection.tscn" id="19_c5nq0"]
+[ext_resource type="SpriteFrames" uid="uid://dg15c2titrtgq" path="res://components/chapter1/main_characters/companion_3_sprite_frames.tres" id="19_jh4yo"]
 [ext_resource type="AudioStream" uid="uid://1bh8jat7waj1" path="res://audio/sfx/jungle-nature-229896.mp3" id="20_5j4y3"]
 [ext_resource type="Script" uid="uid://bchnidsm7kci0" path="res://components/chapter1/main_characters/companion.gd" id="20_t8bry"]
 [ext_resource type="Texture2D" uid="uid://b7xm7ba3pfgj" path="res://graphics/chapter1/levels/jungle/environment/rain/3.png" id="21_alrnr"]
@@ -98,6 +99,33 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="Animation" id="Animation_jh4yo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../../Path2D/PathFollowCompanion3:process_mode")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../../Path2D/ReflectionCompanion3:process_mode")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
 [sub_resource type="Animation" id="Animation_2wqw0"]
 resource_name = "trauma"
 length = 5.0
@@ -132,9 +160,34 @@ tracks/1/keys = {
 "method": &"_start_walking"
 }]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../Path2D/PathFollowCompanion3:process_mode")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../../Path2D/ReflectionCompanion3:process_mode")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jh4yo"]
 _data = {
+&"RESET": SubResource("Animation_jh4yo"),
 &"trauma": SubResource("Animation_2wqw0")
 }
 
@@ -309,6 +362,25 @@ frame_progress = 0.0
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Path2D/PathFollowCompanion2/Companion2" unique_id=1619587080]
 position = Vector2(0, -384)
 
+[node name="PathFollowCompanion3" type="PathFollow2D" parent="Path2D" unique_id=1552837252]
+position = Vector2(160.57846, 809.76324)
+progress = 160.65
+rotates = false
+loop = false
+
+[node name="Companion3" parent="Path2D/PathFollowCompanion3" unique_id=1541481373 node_paths=PackedStringArray("model", "path_follow") instance=ExtResource("15_td1vu")]
+script = ExtResource("20_t8bry")
+model = NodePath("../../PathFollow2D/Nina")
+path_follow = NodePath("..")
+
+[node name="Woman" parent="Path2D/PathFollowCompanion3/Companion3" index="0" unique_id=689873547]
+sprite_frames = ExtResource("19_jh4yo")
+animation = &"idle"
+frame_progress = 0.0
+
+[node name="MarkerBubbleSpawn" type="Marker2D" parent="Path2D/PathFollowCompanion3/Companion3" unique_id=579923902]
+position = Vector2(0, -384)
+
 [node name="ReflectionNina" parent="Path2D" unique_id=732020292 instance=ExtResource("19_c5nq0")]
 position = Vector2(459.85278, 816.4505)
 
@@ -335,6 +407,17 @@ model = NodePath("../../../PathFollow2D/Nina")
 
 [node name="Woman" parent="Path2D/ReflectionCompanion2/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 sprite_frames = ExtResource("17_k7em6")
+frame_progress = 0.0
+
+[node name="ReflectionCompanion3" parent="Path2D" unique_id=2137896206 instance=ExtResource("19_c5nq0")]
+position = Vector2(160.57846, 809.76324)
+progress = 160.65
+
+[node name="JungleWomanReflection" parent="Path2D/ReflectionCompanion3/ReflectionContainer" parent_id_path=PackedInt32Array(2137896206, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
+model = NodePath("../../../PathFollow2D/Nina")
+
+[node name="Woman" parent="Path2D/ReflectionCompanion3/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
+sprite_frames = ExtResource("19_jh4yo")
 frame_progress = 0.0
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=267643735]
@@ -450,13 +533,14 @@ position = Vector2(-204.00003, 311.00003)
 scale = Vector2(2.32, 2.32)
 sprite_frames = SubResource("SpriteFrames_hi6ya")
 
-[node name="Node2D" type="Node2D" parent="Puzzles/Puzzle4/DragDropPuzzle6" unique_id=1405346968 node_paths=PackedStringArray("puzzle", "anim_destruction")]
+[node name="Node2D" type="Node2D" parent="Puzzles/Puzzle4/DragDropPuzzle6" unique_id=1405346968 node_paths=PackedStringArray("puzzle", "anim_destruction", "anim_trauma")]
 visible = false
 script = ExtResource("40_26s4d")
 puzzle = NodePath("..")
 anim_destruction = NodePath("../Destruction")
+anim_trauma = NodePath("../Trauma")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Puzzles/Puzzle4/DragDropPuzzle6" unique_id=689862560]
+[node name="Trauma" type="AnimationPlayer" parent="Puzzles/Puzzle4/DragDropPuzzle6" unique_id=689862560]
 libraries/ = SubResource("AnimationLibrary_jh4yo")
 
 [node name="Enemies" type="Area2D" parent="Puzzles/Puzzle4" unique_id=2015052226]
@@ -518,9 +602,12 @@ collision_mask = 2
 
 [editable path="Path2D/PathFollowCompanion1/Companion1"]
 [editable path="Path2D/PathFollowCompanion2/Companion2"]
+[editable path="Path2D/PathFollowCompanion3/Companion3"]
 [editable path="Path2D/ReflectionNina"]
 [editable path="Path2D/ReflectionNina/ReflectionContainer/JungleWomanReflection"]
 [editable path="Path2D/ReflectionCompanion1"]
 [editable path="Path2D/ReflectionCompanion1/ReflectionContainer/JungleWomanReflection"]
 [editable path="Path2D/ReflectionCompanion2"]
 [editable path="Path2D/ReflectionCompanion2/ReflectionContainer/JungleWomanReflection"]
+[editable path="Path2D/ReflectionCompanion3"]
+[editable path="Path2D/ReflectionCompanion3/ReflectionContainer/JungleWomanReflection"]
