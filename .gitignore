@@ -1,6 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+export_presets.cfg
 
 # Imported translations (automatically generated from CSV files)
 *.translation
@@ -15,3 +16,6 @@ mono_crash.*.json
 
 # .NET (C#) related
 .vs/
+
+# Mac
+*.DS_Store
