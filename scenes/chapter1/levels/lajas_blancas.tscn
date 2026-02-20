@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dp8crmuh1gouf" path="res://graphics/chapter1/levels/lajas_blancas/npcs/queue1/2.png" id="28_y1a81"]
 [ext_resource type="Texture2D" uid="uid://bw76e3q2pa5st" path="res://graphics/chapter1/levels/lajas_blancas/npcs/queue1/3.png" id="29_h6dcd"]
 [ext_resource type="Texture2D" uid="uid://dmdneisslgnmg" path="res://graphics/chapter1/levels/lajas_blancas/npcs/queue1/4.png" id="30_004no"]
+[ext_resource type="Script" uid="uid://crd3mglfc10su" path="res://components/chapter1/levels/lajas_blancas/advance_queue.gd" id="30_67up0"]
 [ext_resource type="Texture2D" uid="uid://co8wbousnpcik" path="res://graphics/chapter1/levels/lajas_blancas/npcs/queue1/5.png" id="31_sbmfg"]
 [ext_resource type="PackedScene" uid="uid://cx455fd0kkpbt" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB3.tscn" id="43_nx082"]
 [ext_resource type="PackedScene" uid="uid://b0rp3ag1qca1u" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB1.tscn" id="45_i6383"]
@@ -260,6 +261,21 @@ offset = Vector2(500, 0)
 [node name="NpcRedcross1" type="Sprite2D" parent="YSorting" unique_id=404862580]
 position = Vector2(3738, 787)
 texture = ExtResource("6_a464j")
+
+[node name="Node" type="Node" parent="." unique_id=1527114385 node_paths=PackedStringArray("queue_spots")]
+script = ExtResource("30_67up0")
+queue_spots = [NodePath("../Queue1/Puzzle4/Npc"), NodePath("../Int1/Puzzle5/Npc"), NodePath("../Int1/Puzzle6/Npc")]
+
+[node name="VisibleOnScreenEnabler2D2" type="VisibleOnScreenEnabler2D" parent="Node" unique_id=623709463]
+rect = Rect2(1421, 126, 1190, 941)
+
+[node name="Node2" type="Node" parent="." unique_id=1112621384 node_paths=PackedStringArray("queue_spots")]
+script = ExtResource("30_67up0")
+queue_spots = [NodePath("../Queue2/Puzzle1/Npc"), NodePath("../Queue2/Puzzle2/Npc"), NodePath("../Queue2/Puzzle3/Npc")]
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Node2" unique_id=933704728]
+position = Vector2(5822, 650)
+rect = Rect2(-1433, -562, 1702, 797)
 
 [editable path="Int1/Puzzle5"]
 [editable path="Int1/Puzzle6"]
