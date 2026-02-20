@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxx4qyf00p3vr"
-path="res://.godot/imported/PANEL_comic1_sink_0001.png-7831a5378cbecb5512331cd3aad2e7f6.ctex"
+uid="uid://b26iq8fn71chu"
+path="res://.godot/imported/sink_0005.png-d27e7418d6b41855e60c131d303fb6ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/PANEL_comic1_sink_0001.png"
-dest_files=["res://.godot/imported/PANEL_comic1_sink_0001.png-7831a5378cbecb5512331cd3aad2e7f6.ctex"]
+source_file="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0005.png"
+dest_files=["res://.godot/imported/sink_0005.png-d27e7418d6b41855e60c131d303fb6ba.ctex"]
 
 [params]
 
