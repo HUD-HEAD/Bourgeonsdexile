@@ -1,12 +1,85 @@
 [gd_scene format=3 uid="uid://vyxhfkygtsbs"]
 
-[ext_resource type="Texture2D" uid="uid://binbji58h3sl5" path="res://graphics/chapter1/comics/comic3/frame1/frame1.png" id="1_as0ai"]
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_owu3y"]
+[ext_resource type="Texture2D" uid="uid://el2r6hjrjesy" path="res://graphics/chapter1/comics/comic3/frame1/background.png" id="2_kbw2m"]
+[ext_resource type="Texture2D" uid="uid://kdd67niwbol8" path="res://graphics/chapter1/comics/comic3/frame1/jungel right.png" id="3_reawd"]
+[ext_resource type="Texture2D" uid="uid://b20pvcs1uf35c" path="res://graphics/chapter1/comics/comic3/frame1/jungle left.png" id="4_2bryf"]
+[ext_resource type="Script" uid="uid://001fo68fi8nn" path="res://components/utils/puzzles/draggable_restricted.gd" id="4_reawd"]
+[ext_resource type="Script" uid="uid://dbrvsujabjlm" path="res://components/utils/puzzles/placement_checker.gd" id="5_mouw2"]
+[ext_resource type="Script" uid="uid://dt4apmm1b4e51" path="res://components/utils/puzzles/puzzle_piece.gd" id="7_pkspt"]
+[ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="9_5fo7e"]
+[ext_resource type="Script" uid="uid://chrql2wwvrdt1" path="res://components/utils/puzzles/drag_drop_puzzle.gd" id="9_mouw2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2bryf"]
+size = Vector2(582, 992)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yi2ir"]
+radius = 103.01942
 
 [node name="JungleComic3FrameLajas" type="Node2D" unique_id=721998954]
 
-[node name="Lajas" type="Sprite2D" parent="." unique_id=208266206]
-texture = ExtResource("1_as0ai")
+[node name="Background" type="Sprite2D" parent="." unique_id=548461213]
+texture = ExtResource("2_kbw2m")
 
-[node name="Transition" type="Node" parent="." unique_id=601134167]
-script = ExtResource("2_owu3y")
+[node name="DragDropPuzzle" type="Node2D" parent="." unique_id=2105087556 node_paths=PackedStringArray("puzzle_pieces")]
+script = ExtResource("9_mouw2")
+puzzle_pieces = [NodePath("PuzzlePiece"), NodePath("PuzzlePiece2")]
+metadata/_custom_type_script = "uid://chrql2wwvrdt1"
+
+[node name="PuzzlePiece" type="Node2D" parent="DragDropPuzzle" unique_id=1123657211 node_paths=PackedStringArray("draggable", "placement_checker")]
+script = ExtResource("7_pkspt")
+draggable = NodePath("DraggableRestricted")
+placement_checker = NodePath("DraggableRestricted/PlacementChecker")
+metadata/_custom_type_script = "uid://dt4apmm1b4e51"
+
+[node name="DraggableRestricted" type="Area2D" parent="DragDropPuzzle/PuzzlePiece" unique_id=1527548207]
+position = Vector2(-292, 0)
+script = ExtResource("4_reawd")
+left = -300.0
+metadata/_custom_type_script = "uid://001fo68fi8nn"
+
+[node name="JungleLeft" type="Sprite2D" parent="DragDropPuzzle/PuzzlePiece/DraggableRestricted" unique_id=1240081232]
+texture = ExtResource("4_2bryf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragDropPuzzle/PuzzlePiece/DraggableRestricted" unique_id=1366299093]
+shape = SubResource("RectangleShape2D_2bryf")
+
+[node name="PlacementChecker" type="Area2D" parent="DragDropPuzzle/PuzzlePiece/DraggableRestricted" unique_id=344214105 node_paths=PackedStringArray("receptacle")]
+script = ExtResource("5_mouw2")
+receptacle = NodePath("../../../Receptacle")
+metadata/_custom_type_script = "uid://dbrvsujabjlm"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragDropPuzzle/PuzzlePiece/DraggableRestricted/PlacementChecker" unique_id=460567880]
+shape = SubResource("CircleShape2D_yi2ir")
+
+[node name="PuzzlePiece2" type="Node2D" parent="DragDropPuzzle" unique_id=146754018 node_paths=PackedStringArray("draggable", "placement_checker")]
+script = ExtResource("7_pkspt")
+draggable = NodePath("DraggableRestricted2")
+placement_checker = NodePath("DraggableRestricted2/PlacementChecker")
+metadata/_custom_type_script = "uid://dt4apmm1b4e51"
+
+[node name="DraggableRestricted2" type="Area2D" parent="DragDropPuzzle/PuzzlePiece2" unique_id=1315339221]
+position = Vector2(194, 0)
+script = ExtResource("4_reawd")
+right = 300.0
+metadata/_custom_type_script = "uid://001fo68fi8nn"
+
+[node name="JungelRight" type="Sprite2D" parent="DragDropPuzzle/PuzzlePiece2/DraggableRestricted2" unique_id=942034338]
+texture = ExtResource("3_reawd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragDropPuzzle/PuzzlePiece2/DraggableRestricted2" unique_id=1508997846]
+position = Vector2(1, 7)
+shape = SubResource("RectangleShape2D_2bryf")
+
+[node name="PlacementChecker" type="Area2D" parent="DragDropPuzzle/PuzzlePiece2/DraggableRestricted2" unique_id=1056556761 node_paths=PackedStringArray("receptacle")]
+script = ExtResource("5_mouw2")
+receptacle = NodePath("../../../Receptacle2")
+metadata/_custom_type_script = "uid://dbrvsujabjlm"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragDropPuzzle/PuzzlePiece2/DraggableRestricted2/PlacementChecker" unique_id=914240384]
+shape = SubResource("CircleShape2D_yi2ir")
+
+[node name="Receptacle" parent="DragDropPuzzle" unique_id=600273107 instance=ExtResource("9_5fo7e")]
+position = Vector2(-566, 0)
+
+[node name="Receptacle2" parent="DragDropPuzzle" unique_id=875631436 instance=ExtResource("9_5fo7e")]
+position = Vector2(485, 0)

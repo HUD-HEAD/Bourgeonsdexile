@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c50ikux21dg2l"
-path="res://.godot/imported/hug.png-8dd8e968f17e07ae4a50df2c132e1614.ctex"
+uid="uid://7wocpfdofap"
+path="res://.godot/imported/gravida_title.png-2985ffdc6d9f22d534b97374d0ed35c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter1/comics/comic3/frame2/hug.png"
-dest_files=["res://.godot/imported/hug.png-8dd8e968f17e07ae4a50df2c132e1614.ctex"]
+source_file="res://graphics/menus/main_menu/gravida_title.png"
+dest_files=["res://.godot/imported/gravida_title.png-2985ffdc6d9f22d534b97374d0ed35c8.ctex"]
 
 [params]
 

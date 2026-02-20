@@ -16,8 +16,9 @@ func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
 	
-	complete_image.z_index = 1
-	complete_image.hide()
+	if complete_image:
+		complete_image.z_index = 1
+		complete_image.hide()
 	# Associate each puzzle piece with its receptacle
 	for piece in puzzle_pieces:
 		piece.piece_correctly_placed.connect(_on_correct_piece)
@@ -32,8 +33,11 @@ func _on_correct_piece():
 func _complete_puzzle():
 	print_debug("puzzle complete")
 	process_mode = Node.PROCESS_MODE_DISABLED
-	complete_image.show()
-	outline_image.hide()
+	
+	if complete_image :
+		complete_image.show()
+	if outline_image :
+		outline_image.hide()
 	
 	#HACK
 	SignalManager.obstacle_cleared.emit()

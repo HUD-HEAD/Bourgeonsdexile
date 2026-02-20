@@ -3,16 +3,16 @@
 [ext_resource type="Script" uid="uid://bub701ovkw5me" path="res://components/main_menu.gd" id="1_0ettg"]
 [ext_resource type="Texture2D" uid="uid://br32guon087mt" path="res://graphics/menus/main_menu/backgroundNina.png" id="2_duh7t"]
 [ext_resource type="Texture2D" uid="uid://bnw5lljqpcq60" path="res://graphics/menus/main_menu/backgroundSudan.png" id="3_6ymyu"]
-[ext_resource type="Texture2D" uid="uid://driie6iy05hs4" path="res://graphics/menus/main_menu/portrait_nina.png" id="3_nwbki"]
 [ext_resource type="Texture2D" uid="uid://cjbyi6dkuypx5" path="res://graphics/menus/main_menu/menu_mockup1.png" id="4_3ye4h"]
 [ext_resource type="Texture2D" uid="uid://bu71rssmxbeqj" path="res://graphics/menus/main_menu/sudan26.png" id="4_maniu"]
 [ext_resource type="Texture2D" uid="uid://dyxwhrlapr5ni" path="res://graphics/menus/main_menu/nina26.png" id="4_pppj1"]
-[ext_resource type="Texture2D" uid="uid://b0mtu30g7ts4t" path="res://graphics/menus/main_menu/tittle.png" id="5_nwbki"]
 [ext_resource type="Texture2D" uid="uid://b2gcfjlk8v457" path="res://graphics/menus/main_menu/portrait_sudan.png" id="6_b8wrl"]
+[ext_resource type="Texture2D" uid="uid://ypof6rn4llng" path="res://graphics/menus/main_menu/portrait_nina.png" id="6_vr0hv"]
 [ext_resource type="Texture2D" uid="uid://ct5i3bkbx8svw" path="res://graphics/menus/main_menu/settings.png" id="8_6flho"]
 [ext_resource type="Texture2D" uid="uid://nhtaleop2o5n" path="res://graphics/menus/main_menu/egg1.png" id="8_7ty7c"]
 [ext_resource type="Texture2D" uid="uid://i1c3pk3cvh0p" path="res://graphics/menus/main_menu/egg2.png" id="9_6xkr4"]
 [ext_resource type="Texture2D" uid="uid://c1iqfkuqt2r1y" path="res://graphics/menus/main_menu/exit.png" id="9_ofye2"]
+[ext_resource type="Texture2D" uid="uid://7wocpfdofap" path="res://graphics/menus/main_menu/gravida_title.png" id="9_vr0hv"]
 [ext_resource type="Texture2D" uid="uid://bfn07djquliir" path="res://graphics/menus/main_menu/egg3.png" id="10_b8wrl"]
 [ext_resource type="Script" uid="uid://prkw3tfkwh13" path="res://components/utils/ui/button_fade.gd" id="14_maniu"]
 [ext_resource type="Script" uid="uid://b20dyolly8na2" path="res://components/utils/ui/main_menu_visuals.gd" id="15_w3h5g"]
@@ -50,7 +50,7 @@ texture = ExtResource("2_duh7t")
 
 [node name="PortraitNina" type="Sprite2D" parent="Center/BackgroundNina" unique_id=701311001]
 position = Vector2(389, -43)
-texture = ExtResource("3_nwbki")
+texture = ExtResource("6_vr0hv")
 
 [node name="Nina26" type="Sprite2D" parent="Center/BackgroundNina/PortraitNina" unique_id=577158681]
 position = Vector2(27, 451)
@@ -102,8 +102,9 @@ theme_override_font_sizes/font_size = 16
 text = "Quit"
 
 [node name="Tittle" type="Sprite2D" parent="Fullscreen" unique_id=979857287]
-position = Vector2(500, 144)
-texture = ExtResource("5_nwbki")
+position = Vector2(64, 51)
+texture = ExtResource("9_vr0hv")
+centered = false
 
 [node name="PlayNina" type="TextureButton" parent="Fullscreen" unique_id=207728598]
 layout_mode = 0
