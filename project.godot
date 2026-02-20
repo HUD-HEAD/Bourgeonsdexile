@@ -14,7 +14,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="Ciconia"
+config/name="Gravida"
 config/version="0.1.3"
 run/main_scene="uid://ctau0miqtmbj2"
 config/features=PackedStringArray("4.6", "GL Compatibility")
