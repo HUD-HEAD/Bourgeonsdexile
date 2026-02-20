@@ -50,7 +50,7 @@ editor_draw_limits = true
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1862196438 node_paths=PackedStringArray("panels")]
 script = ExtResource("15_sw7mp")
-panels = [NodePath("../JungleComic3FrameLajas"), NodePath("../JungleComic3FrameHug"), NodePath("../Comic3Panel3"), NodePath("../JungleComic3FrameBackpack"), NodePath("../JungleComic3FramePhone"), NodePath("../JungleComic3FrameCare"), NodePath("../JungleComic3FrameFood"), NodePath(""), NodePath("../JungleComic3FrameKidLajas"), NodePath("../JungleComic3FrameAyuda"), NodePath("../Comic3Panel11"), NodePath("../JungleComic3FrameFolders"), NodePath("../Comic3Panel13"), NodePath("../Comic3Panel14"), NodePath("../Comic3Panel15"), NodePath("../Comic3Panel16"), NodePath("../SceneEnder")]
+panels = [NodePath("../JungleComic3FrameLajas"), NodePath("../JungleComic3FrameHug"), NodePath("../Comic3Panel3"), NodePath("../JungleComic3FrameBackpack"), NodePath("../JungleComic3FramePhone"), NodePath("../JungleComic3FrameCare"), NodePath("../JungleComic3FrameFood"), NodePath("../Comic3Panel8"), NodePath("../JungleComic3FrameKidLajas"), NodePath("../JungleComic3FrameAyuda"), NodePath("../Comic3Panel11"), NodePath("../JungleComic3FrameFolders"), NodePath("../Comic3Panel13"), NodePath("../Comic3Panel14"), NodePath("../Comic3Panel15"), NodePath("../Comic3Panel16"), NodePath("../SceneEnder")]
 
 [node name="UI" parent="." unique_id=1396622433 instance=ExtResource("16_scavv")]
 
