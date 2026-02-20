@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://bfn07djquliir" path="res://graphics/menus/main_menu/egg3.png" id="10_b8wrl"]
 [ext_resource type="Script" uid="uid://prkw3tfkwh13" path="res://components/utils/ui/button_fade.gd" id="14_maniu"]
 [ext_resource type="Script" uid="uid://b20dyolly8na2" path="res://components/utils/ui/main_menu_visuals.gd" id="15_w3h5g"]
+[ext_resource type="AudioStream" uid="uid://5oal57qd8k25" path="res://audio/chapter1/sfx/click_selection.wav" id="17_a3hrp"]
+[ext_resource type="AudioStream" uid="uid://uea041hlh4dy" path="res://audio/chapter1/soundtrack/music_menu.wav" id="18_25m6f"]
 
 [node name="MainMenu" type="CanvasLayer" unique_id=1477541867 node_paths=PackedStringArray("play", "settings", "credits", "quit")]
 script = ExtResource("1_0ettg")
@@ -23,6 +25,7 @@ play = NodePath("Fullscreen/PlayNina")
 settings = NodePath("Fullscreen/Settings")
 credits = NodePath("Fullscreen/VBoxContainer/Credits")
 quit = NodePath("Fullscreen/Exit")
+audio_click_chapter = ExtResource("17_a3hrp")
 
 [node name="Center" type="Control" parent="." unique_id=82372461]
 layout_mode = 3
@@ -158,3 +161,7 @@ script = ExtResource("14_maniu")
 script = ExtResource("15_w3h5g")
 chapter_pictures = [NodePath("../Center/BackgroundNina"), NodePath("../Center/BackgroundSudan")]
 chapter_buttons = [NodePath("../Fullscreen/PlayNina"), NodePath("../Fullscreen/PlayChapter2"), NodePath("../Fullscreen/PlayChapter3")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2013448306]
+stream = ExtResource("18_25m6f")
+autoplay = true
