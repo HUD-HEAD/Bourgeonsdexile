@@ -1,12 +1,45 @@
 [gd_scene format=3 uid="uid://vyxhfkygtsbs"]
 
-[ext_resource type="Texture2D" uid="uid://binbji58h3sl5" path="res://graphics/chapter1/comics/comic3/frame1/frame1.png" id="1_as0ai"]
+[ext_resource type="Texture2D" uid="uid://el2r6hjrjesy" path="res://graphics/chapter1/comics/comic3/frame1/background.png" id="2_kbw2m"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_owu3y"]
+[ext_resource type="Texture2D" uid="uid://kdd67niwbol8" path="res://graphics/chapter1/comics/comic3/frame1/jungel right.png" id="3_reawd"]
+[ext_resource type="Texture2D" uid="uid://b20pvcs1uf35c" path="res://graphics/chapter1/comics/comic3/frame1/jungle left.png" id="4_2bryf"]
+[ext_resource type="Script" uid="uid://001fo68fi8nn" path="res://components/utils/puzzles/draggable_restricted.gd" id="4_reawd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2bryf"]
+size = Vector2(582, 992)
 
 [node name="JungleComic3FrameLajas" type="Node2D" unique_id=721998954]
 
-[node name="Lajas" type="Sprite2D" parent="." unique_id=208266206]
-texture = ExtResource("1_as0ai")
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1400228380]
 
 [node name="Transition" type="Node" parent="." unique_id=601134167]
 script = ExtResource("2_owu3y")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=548461213]
+texture = ExtResource("2_kbw2m")
+
+[node name="DraggableRestricted" type="Area2D" parent="." unique_id=1527548207]
+position = Vector2(-290, 0)
+script = ExtResource("4_reawd")
+left = -300.0
+metadata/_custom_type_script = "uid://001fo68fi8nn"
+
+[node name="JungleLeft" type="Sprite2D" parent="DraggableRestricted" unique_id=1240081232]
+texture = ExtResource("4_2bryf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DraggableRestricted" unique_id=1366299093]
+shape = SubResource("RectangleShape2D_2bryf")
+
+[node name="DraggableRestricted2" type="Area2D" parent="." unique_id=1315339221]
+position = Vector2(194, 0)
+script = ExtResource("4_reawd")
+right = 300.0
+metadata/_custom_type_script = "uid://001fo68fi8nn"
+
+[node name="JungelRight" type="Sprite2D" parent="DraggableRestricted2" unique_id=942034338]
+texture = ExtResource("3_reawd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DraggableRestricted2" unique_id=1508997846]
+position = Vector2(1, 7)
+shape = SubResource("RectangleShape2D_2bryf")
