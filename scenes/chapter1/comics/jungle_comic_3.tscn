@@ -14,9 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://d2f3ss3fi8c52" path="res://scenes/chapter1/levels/lajas_blancas.tscn" id="13_dx01d"]
 [ext_resource type="Texture2D" uid="uid://fpqit37tutf7" path="res://graphics/chapter1/comics/comic3/frame3/frame3.png" id="14_txuxr"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="15_sw7mp"]
+[ext_resource type="PackedScene" uid="uid://clojdgf3punl6" path="res://components/chapter1/comic_panels/comic_3/panel_phone_canteen.tscn" id="15_w6r1n"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="16_scavv"]
 [ext_resource type="PackedScene" uid="uid://vgkc31qlpwka" path="res://components/chapter1/comic_panels/comic_3/panel_care.tscn" id="16_txuxr"]
-[ext_resource type="Texture2D" uid="uid://bxpyf7wtwdipg" path="res://graphics/chapter1/comics/comic3/frame8/frame8.png" id="17_dx01d"]
 [ext_resource type="Texture2D" uid="uid://vjebgpcuufta" path="res://graphics/chapter1/comics/comic3/frame11/FRAME11.png" id="18_txuxr"]
 [ext_resource type="Texture2D" uid="uid://vxktq75n2g2w" path="res://graphics/chapter1/comics/comic3/frame13/frame13.png" id="19_txuxr"]
 [ext_resource type="Texture2D" uid="uid://blp6vcnik8usn" path="res://graphics/chapter1/comics/comic3/frame14/frame14.png" id="20_txuxr"]
@@ -50,7 +50,7 @@ editor_draw_limits = true
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1862196438 node_paths=PackedStringArray("panels")]
 script = ExtResource("15_sw7mp")
-panels = [NodePath("../JungleComic3FrameLajas"), NodePath("../JungleComic3FrameHug"), NodePath("../Comic3Panel3"), NodePath("../JungleComic3FrameBackpack"), NodePath("../JungleComic3FramePhone"), NodePath("../JungleComic3FrameCare"), NodePath("../JungleComic3FrameFood"), NodePath("../Comic3Panel8"), NodePath("../JungleComic3FrameKidLajas"), NodePath("../JungleComic3FrameAyuda"), NodePath("../Comic3Panel11"), NodePath("../JungleComic3FrameFolders"), NodePath("../Comic3Panel13"), NodePath("../Comic3Panel14"), NodePath("../Comic3Panel15"), NodePath("../Comic3Panel16"), NodePath("../SceneEnder")]
+panels = [NodePath("../JungleComic3FrameLajas"), NodePath("../JungleComic3FrameHug"), NodePath("../Comic3Panel3"), NodePath("../JungleComic3FrameBackpack"), NodePath("../JungleComic3FramePhone"), NodePath("../JungleComic3FrameCare"), NodePath("../JungleComic3FrameFood"), NodePath(""), NodePath("../JungleComic3FrameKidLajas"), NodePath("../JungleComic3FrameAyuda"), NodePath("../Comic3Panel11"), NodePath("../JungleComic3FrameFolders"), NodePath("../Comic3Panel13"), NodePath("../Comic3Panel14"), NodePath("../Comic3Panel15"), NodePath("../Comic3Panel16"), NodePath("../SceneEnder")]
 
 [node name="UI" parent="." unique_id=1396622433 instance=ExtResource("16_scavv")]
 
@@ -96,14 +96,8 @@ texture = ExtResource("14_txuxr")
 [node name="Transition" type="Node" parent="Comic3Panel3" unique_id=80808107]
 script = ExtResource("13_c4j60")
 
-[node name="Comic3Panel8" type="Sprite2D" parent="." unique_id=912258863]
+[node name="Comic3Panel8" parent="." unique_id=357404315 instance=ExtResource("15_w6r1n")]
 position = Vector2(18363, 540)
-texture = ExtResource("17_dx01d")
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Comic3Panel8" unique_id=2146291790]
-
-[node name="Transition" type="Node" parent="Comic3Panel8" unique_id=130297405]
-script = ExtResource("13_c4j60")
 
 [node name="Comic3Panel11" type="Sprite2D" parent="." unique_id=77087253]
 position = Vector2(25012, 540)
