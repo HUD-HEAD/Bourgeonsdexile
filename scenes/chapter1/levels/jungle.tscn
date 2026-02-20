@@ -533,15 +533,11 @@ position = Vector2(-204.00003, 311.00003)
 scale = Vector2(2.32, 2.32)
 sprite_frames = SubResource("SpriteFrames_hi6ya")
 
-[node name="Node2D" type="Node2D" parent="Puzzles/Puzzle4/DragDropPuzzle6" unique_id=1405346968 node_paths=PackedStringArray("puzzle", "anim_destruction", "anim_trauma")]
-visible = false
+[node name="Trauma" type="AnimationPlayer" parent="Puzzles/Puzzle4/DragDropPuzzle6" unique_id=689862560 node_paths=PackedStringArray("puzzle", "anim_destruction")]
+libraries/ = SubResource("AnimationLibrary_jh4yo")
 script = ExtResource("40_26s4d")
 puzzle = NodePath("..")
 anim_destruction = NodePath("../Destruction")
-anim_trauma = NodePath("../Trauma")
-
-[node name="Trauma" type="AnimationPlayer" parent="Puzzles/Puzzle4/DragDropPuzzle6" unique_id=689862560]
-libraries/ = SubResource("AnimationLibrary_jh4yo")
 
 [node name="Enemies" type="Area2D" parent="Puzzles/Puzzle4" unique_id=2015052226]
 position = Vector2(452, 794)
