@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://dnigk6m1ntgvl"]
 
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="1_kl8qb"]
-[ext_resource type="Texture2D" uid="uid://b2thr4dhispb" path="res://graphics/chapter1/comics/comic2/frame4/4.png" id="2_ngdn4"]
+[ext_resource type="Texture2D" uid="uid://cmatfynrjtoeo" path="res://graphics/chapter1/comics/comic2/frame4/keanu_saying_no.png" id="2_6xkyb"]
+[ext_resource type="Texture2D" uid="uid://s0kowkp2sk5k" path="res://graphics/chapter1/comics/comic2/frame4/hand_money.png" id="3_nn1u6"]
+[ext_resource type="Script" uid="uid://001fo68fi8nn" path="res://components/utils/puzzles/draggable_restricted.gd" id="4_mrifc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6xkyb"]
+radius = 170.00294
 
 [node name="Panel4" type="Node2D" unique_id=1050670671]
 
@@ -10,5 +15,20 @@
 [node name="Transition" type="Node" parent="." unique_id=1021552933]
 script = ExtResource("1_kl8qb")
 
-[node name="4" type="Sprite2D" parent="." unique_id=1455879754]
-texture = ExtResource("2_ngdn4")
+[node name="KeanuSayingNo" type="Sprite2D" parent="." unique_id=1988772709]
+clip_children = 2
+texture = ExtResource("2_6xkyb")
+
+[node name="DraggableRestricted" type="Area2D" parent="KeanuSayingNo" unique_id=1064461294]
+position = Vector2(-336, 449)
+script = ExtResource("4_mrifc")
+right = 218.0
+up = -241.0
+metadata/_custom_type_script = "uid://001fo68fi8nn"
+
+[node name="HandMoney" type="Sprite2D" parent="KeanuSayingNo/DraggableRestricted" unique_id=115469026]
+texture = ExtResource("3_nn1u6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KeanuSayingNo/DraggableRestricted" unique_id=898332500]
+position = Vector2(106, -178)
+shape = SubResource("CircleShape2D_6xkyb")
