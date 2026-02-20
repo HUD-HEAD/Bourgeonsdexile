@@ -1,14 +1,44 @@
 [gd_scene format=3 uid="uid://dwubwe8axq0cl"]
 
-[ext_resource type="Texture2D" uid="uid://bseegbn4bim1t" path="res://graphics/chapter1/comics/comic2/frame1/frame1.png" id="1_vj4db"]
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_avgt7"]
+[ext_resource type="Texture2D" uid="uid://dyoeysci3hrhh" path="res://graphics/chapter1/comics/comic2/frame1/background.png" id="3_e8aoj"]
+[ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="3_yhwe0"]
+[ext_resource type="Texture2D" uid="uid://de4u0h53rl4ty" path="res://graphics/chapter1/comics/comic2/frame1/boat.png" id="4_yhwe0"]
+[ext_resource type="Texture2D" uid="uid://b1gx2xct17enk" path="res://graphics/chapter1/comics/comic2/frame1/keanu.png" id="5_utbsd"]
+[ext_resource type="Texture2D" uid="uid://jose5lawwu18" path="res://graphics/chapter1/comics/comic2/frame1/rope.png" id="6_53mc4"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="6_e8aoj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e8aoj"]
+size = Vector2(508, 376)
 
 [node name="Panel1" type="Node2D" unique_id=2064506817]
 
-[node name="Frame1" type="Sprite2D" parent="." unique_id=131897617]
-texture = ExtResource("1_vj4db")
-
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1428104103]
 
-[node name="Transition" type="Node" parent="." unique_id=1174704338]
-script = ExtResource("2_avgt7")
+[node name="Background" type="Sprite2D" parent="." unique_id=1801480598]
+texture = ExtResource("3_e8aoj")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=670539493 node_paths=PackedStringArray("nodes_to_show")]
+position = Vector2(577, -142)
+script = ExtResource("3_yhwe0")
+nodes_to_show = [NodePath("../Keanu")]
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="Boat" type="Sprite2D" parent="Clickable" unique_id=1443642146]
+texture = ExtResource("4_yhwe0")
+
+[node name="Rope" type="Sprite2D" parent="Clickable/Boat" unique_id=863263682]
+position = Vector2(-202, 72)
+texture = ExtResource("6_53mc4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1969322330]
+position = Vector2(-6, -19)
+shape = SubResource("RectangleShape2D_e8aoj")
+
+[node name="Keanu" type="Sprite2D" parent="." unique_id=941464262]
+position = Vector2(583, -45)
+texture = ExtResource("5_utbsd")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=1687319936 node_paths=PackedStringArray("clickables")]
+script = ExtResource("6_e8aoj")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"
