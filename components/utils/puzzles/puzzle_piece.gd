@@ -26,6 +26,7 @@ func _ready() -> void:
 	draggable.clicked.connect(_on_piece_clicked)
 	
 func deactivate():
+	#draggable.input_pickable = false
 	draggable.hide()
 	draggable.process_mode = Node.PROCESS_MODE_DISABLED	
 
@@ -59,6 +60,7 @@ func is_correctly_placed():
 func activate_piece(gpos : Vector2):
 
 	draggable.global_position = gpos
+	#draggable.input_pickable = true
 	draggable.process_mode = Node.PROCESS_MODE_INHERIT
 	draggable.show()
 

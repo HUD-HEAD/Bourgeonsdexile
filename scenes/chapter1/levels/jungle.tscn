@@ -29,10 +29,21 @@
 [ext_resource type="PackedScene" uid="uid://c3ec4v87kvi86" path="res://components/chapter1/levels/jungle/puzzle2.tscn" id="29_kdrkc"]
 [ext_resource type="PackedScene" uid="uid://cqmidgct1vdmf" path="res://components/chapter1/levels/jungle/puzzle5.tscn" id="30_1yhnw"]
 [ext_resource type="PackedScene" uid="uid://b7280mshbm13l" path="res://components/chapter1/levels/jungle/puzzle6.tscn" id="31_ljtv2"]
+[ext_resource type="Texture2D" uid="uid://bow4ifhdb5bv5" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction1.png" id="32_2wqw0"]
+[ext_resource type="Texture2D" uid="uid://4n7my7ycpy30" path="res://graphics/chapter1/main_characters/enemies/enemiesprite1.png" id="32_808hi"]
 [ext_resource type="PackedScene" uid="uid://b88g225o2t0is" path="res://components/chapter1/levels/jungle/puzzle3.tscn" id="32_t8bry"]
+[ext_resource type="Texture2D" uid="uid://dituvwkbu4vw8" path="res://graphics/chapter1/main_characters/enemies/enemiesprite2.png" id="33_aa6lj"]
+[ext_resource type="Texture2D" uid="uid://bg5y7pg1m38l2" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction2.png" id="33_jh4yo"]
 [ext_resource type="PackedScene" uid="uid://c8pymntn6ge5" path="res://components/chapter1/levels/jungle/puzzle4.tscn" id="33_tglbk"]
+[ext_resource type="Texture2D" uid="uid://dvchkdwlq3wo" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction3.png" id="34_c3f0v"]
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="35_ljtv2"]
+[ext_resource type="Texture2D" uid="uid://bjbev463l8cuf" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction4.png" id="35_skl6x"]
+[ext_resource type="Texture2D" uid="uid://dlasfaha3cejo" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction5.png" id="36_7a5p8"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/obstacle.tscn" id="36_t8bry"]
+[ext_resource type="Texture2D" uid="uid://x717px6reeg6" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction6.png" id="37_h7yo2"]
+[ext_resource type="Texture2D" uid="uid://c2qclx8s821r6" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction7.png" id="38_rw1nd"]
+[ext_resource type="Texture2D" uid="uid://cirkkungp4y15" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction8.png" id="39_n2v0f"]
+[ext_resource type="Script" uid="uid://ctq2520bx0vpb" path="res://components/chapter1/levels/jungle/trauma.gd" id="40_26s4d"]
 
 [sub_resource type="Gradient" id="Gradient_t8bry"]
 offsets = PackedFloat32Array(0, 0.14906304, 0.5562181, 1)
@@ -54,6 +65,81 @@ radius = 146.38
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_c5nq0"]
 polygon = PackedVector2Array(-1407, 182, -1608, 593, 2660, 677, 2590, 175)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hi6ya"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_2wqw0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_jh4yo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_c3f0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_skl6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_7a5p8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_h7yo2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_rw1nd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_n2v0f")
+}],
+"loop": false,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="Animation" id="Animation_2wqw0"]
+resource_name = "trauma"
+length = 5.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Destruction")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../../Path2D/PathFollow2D/Nina")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"_stop_walking"
+}, {
+"args": [],
+"method": &"_start_walking"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jh4yo"]
+_data = {
+&"trauma": SubResource("Animation_2wqw0")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_808hi"]
+size = Vector2(419.67188, 431.14734)
 
 [node name="Jungle" type="Node2D" unique_id=1292460998]
 
@@ -113,7 +199,7 @@ texture = ExtResource("11_q8svf")
 
 [node name="Transition" type="Sprite2D" parent="JungleSprites/Jungle3" unique_id=1966639896]
 z_index = 10
-position = Vector2(458, 0)
+position = Vector2(555, 0)
 scale = Vector2(1.2948569, 1)
 texture = SubResource("GradientTexture2D_tglbk")
 centered = false
@@ -341,13 +427,13 @@ collision_mask = 2
 position = Vector2(27, 378)
 
 [node name="Puzzle4" type="Node2D" parent="Puzzles" unique_id=755089703]
-position = Vector2(16649, 0)
+position = Vector2(16447, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle4" unique_id=216941170 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("35_ljtv2")
 puzzle = NodePath("../DragDropPuzzle6")
-piece_spawners = [NodePath("../../../Path2D/PathFollow2D/Nina/MarkerBubbleSpawn"), NodePath("../../../Path2D/PathFollowCompanion1/Companion1/MarkerBubbleSpawn"), NodePath("../../../Path2D/PathFollowCompanion2/Companion2/MarkerBubbleSpawn")]
-spawn_trigger = NodePath("../../../Path2D/PathFollowCompanion1/Clickable")
+piece_spawners = [NodePath("../../../Path2D/PathFollow2D/Nina/MarkerBubbleSpawn"), NodePath("../../../Path2D/PathFollowCompanion1/Companion1/MarkerBubbleSpawn"), NodePath("../Enemies/MarkerEnemy")]
+spawn_trigger = NodePath("../Enemies")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Puzzles/Puzzle4" unique_id=2075705112 instance=ExtResource("36_t8bry")]
@@ -356,6 +442,42 @@ collision_mask = 2
 
 [node name="DragDropPuzzle6" parent="Puzzles/Puzzle4" unique_id=1419407559 instance=ExtResource("33_tglbk")]
 position = Vector2(27, 409)
+
+[node name="Destruction" type="AnimatedSprite2D" parent="Puzzles/Puzzle4/DragDropPuzzle6" unique_id=2044289450]
+visible = false
+z_index = 100
+position = Vector2(-204.00003, 311.00003)
+scale = Vector2(2.32, 2.32)
+sprite_frames = SubResource("SpriteFrames_hi6ya")
+
+[node name="Node2D" type="Node2D" parent="Puzzles/Puzzle4/DragDropPuzzle6" unique_id=1405346968 node_paths=PackedStringArray("puzzle", "anim_destruction")]
+visible = false
+script = ExtResource("40_26s4d")
+puzzle = NodePath("..")
+anim_destruction = NodePath("../Destruction")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Puzzles/Puzzle4/DragDropPuzzle6" unique_id=689862560]
+libraries/ = SubResource("AnimationLibrary_jh4yo")
+
+[node name="Enemies" type="Area2D" parent="Puzzles/Puzzle4" unique_id=2015052226]
+position = Vector2(452, 794)
+scale = Vector2(0.61, 0.61)
+script = ExtResource("21_kdrkc")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="Enemiesprite1" type="Sprite2D" parent="Puzzles/Puzzle4/Enemies" unique_id=484849167]
+texture = ExtResource("32_808hi")
+
+[node name="Enemiesprite2" type="Sprite2D" parent="Puzzles/Puzzle4/Enemies" unique_id=235485957]
+position = Vector2(-194, 0)
+texture = ExtResource("33_aa6lj")
+
+[node name="MarkerEnemy" type="Marker2D" parent="Puzzles/Puzzle4/Enemies" unique_id=91322150]
+position = Vector2(36, -270)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzles/Puzzle4/Enemies" unique_id=1789449637]
+position = Vector2(-91.802734, -15.573486)
+shape = SubResource("RectangleShape2D_808hi")
 
 [node name="Puzzle5" type="Node2D" parent="Puzzles" unique_id=2026587298]
 position = Vector2(24925, 0)
