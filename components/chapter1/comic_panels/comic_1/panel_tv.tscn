@@ -16,9 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://dsa7fnojx0lk7" path="res://graphics/chapter1/comics/comic1/panel_switch/anim_spark/spark7.png" id="14_uqbxa"]
 [ext_resource type="Texture2D" uid="uid://v3enbp1hm8h1" path="res://graphics/chapter1/comics/comic1/panel_switch/frame_switch_off.png" id="15_88hdc"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="16_wjbi5"]
-[ext_resource type="AudioStream" uid="uid://b6hvqeom3hopf" path="res://audio/sfx/tv-shutdown-2-386173.mp3" id="17_u62ak"]
+[ext_resource type="AudioStream" uid="uid://b6hvqeom3hopf" path="res://audio/sfx_old/tv-shutdown-2-386173.mp3" id="17_u62ak"]
 [ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/sfx_player.tscn" id="18_h38fu"]
-[ext_resource type="AudioStream" uid="uid://2esuihwh4qer" path="res://audio/sfx/click.mp3" id="19_77jm7"]
+[ext_resource type="AudioStream" uid="uid://2esuihwh4qer" path="res://audio/sfx_old/click.mp3" id="19_77jm7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x2xsn"]
 animations = [{

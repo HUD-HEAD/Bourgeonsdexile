@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bqrgb5q0adf0b" path="res://graphics/chapter1/comics/comic1/panel_bus/frame5_woman/frame5_woman2.png" id="5_5yxg6"]
 [ext_resource type="Texture2D" uid="uid://dol671p3xj2ip" path="res://graphics/chapter1/comics/comic1/panel_bus/frame5_woman/frame5_woman3.png" id="6_y1cxl"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="7_brxes"]
-[ext_resource type="AudioStream" uid="uid://bxm32ub0fm2xg" path="res://audio/sfx/bus-idle-to-drive-off-65780.mp3" id="8_w1rhg"]
+[ext_resource type="AudioStream" uid="uid://bxm32ub0fm2xg" path="res://audio/sfx_old/bus-idle-to-drive-off-65780.mp3" id="8_w1rhg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ppo6s"]
 animations = [{

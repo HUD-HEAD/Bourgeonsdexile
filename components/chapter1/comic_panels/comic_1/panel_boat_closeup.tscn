@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://bk17pejrvpwfq" path="res://components/utils/follow_mouse.gd" id="8_i6sxp"]
 [ext_resource type="Texture2D" uid="uid://bsnw46m5wbbuj" path="res://graphics/chapter1/comics/comic1/panel_boat_closeup/anim_bird/bird6.png" id="8_wk1cn"]
 [ext_resource type="Texture2D" uid="uid://bnafgdfr5e6fy" path="res://graphics/chapter1/comics/comic1/panel_boat_closeup/frame7_toplayer.png" id="9_j0nmg"]
-[ext_resource type="AudioStream" uid="uid://daslh5k4i63sy" path="res://audio/sfx/sea-waves-169411.mp3" id="11_j0nmg"]
+[ext_resource type="AudioStream" uid="uid://daslh5k4i63sy" path="res://audio/sfx_old/sea-waves-169411.mp3" id="11_j0nmg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g4jaw"]
 animations = [{
