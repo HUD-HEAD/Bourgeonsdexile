@@ -30,6 +30,7 @@ func _deactivate_puzzle():
 	
 	for piece in puzzle.puzzle_pieces:
 		piece.deactivate()
+		piece.draggable.hide()
 	
 	
 func _on_obstacle_entered(area2d : Area2D):
@@ -77,3 +78,4 @@ func _npc_bubble():
 	
 func _on_puzzle_complete():
 	obstacle.process_mode = Node.PROCESS_MODE_DISABLED
+	_deactivate_puzzle()
