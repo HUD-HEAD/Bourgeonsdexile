@@ -15,9 +15,6 @@
 [node name="PanelPanner" type="Node" parent="." unique_id=665689758 node_paths=PackedStringArray("panels")]
 script = ExtResource("9_yggp2")
 panels = [NodePath("../Comic4Panel1"), NodePath("../JungleComic4FrameFolders"), NodePath("../Comic4PanelTicket"), NodePath("../Comic4PanelPhone"), NodePath("../Comic4PanelMochil"), NodePath("../Comic4Panel6"), NodePath("../ToBeContinued")]
-constant_speed_pan = null
-px_per_sec = null
-panning_time = null
 
 [node name="PaperBackground" type="CanvasLayer" parent="." unique_id=1769624388]
 layer = -1
