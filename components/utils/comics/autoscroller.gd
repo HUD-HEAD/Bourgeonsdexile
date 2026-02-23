@@ -27,9 +27,10 @@ func _ready() -> void:
 
 ## Triggers panning to next panel in the list
 func _next_panel():
-	assert(idx + 1< panels.size(), "idx inside panels number")
+	assert(idx  1< panels.size(), "idx inside panels number")
 	idx += 1
 	
+	##Dummy nmod
 	_pan_to(panels[idx])
 
 
