@@ -23,7 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://8u2cymnoa30k" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_match/match_fire8.png" id="22_klx3m"]
 [ext_resource type="Texture2D" uid="uid://b3ldlcshyx6vy" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_match/match_fire9.png" id="23_vtse2"]
 [ext_resource type="Texture2D" uid="uid://c6wbvvqav2h5c" path="res://graphics/chapter1/comics/comic1/panel_light_candle/match_nofire.png" id="24_pw80g"]
-[ext_resource type="AudioStream" uid="uid://cgboq83pej5yh" path="res://audio/sfx/lightmatch.mp3" id="24_yujuo"]
+[ext_resource type="AudioStream" uid="uid://cgboq83pej5yh" path="res://audio/sfx_old/lightmatch.mp3" id="24_yujuo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pw80g"]
 animations = [{

@@ -22,7 +22,7 @@
 [ext_resource type="Script" uid="uid://gchp60e2jp5r" path="res://components/utils/set_camera_bounds.gd" id="19_31ufg"]
 [ext_resource type="PackedScene" uid="uid://kkmgx1eqpc4i" path="res://components/chapter1/main_characters/char_reflection.tscn" id="19_c5nq0"]
 [ext_resource type="SpriteFrames" uid="uid://dg15c2titrtgq" path="res://components/chapter1/main_characters/companion_3_sprite_frames.tres" id="19_jh4yo"]
-[ext_resource type="AudioStream" uid="uid://1bh8jat7waj1" path="res://audio/sfx/jungle-nature-229896.mp3" id="20_5j4y3"]
+[ext_resource type="AudioStream" uid="uid://1bh8jat7waj1" path="res://audio/sfx_old/jungle-nature-229896.mp3" id="20_5j4y3"]
 [ext_resource type="Script" uid="uid://bchnidsm7kci0" path="res://components/chapter1/main_characters/companion.gd" id="20_t8bry"]
 [ext_resource type="Texture2D" uid="uid://b7xm7ba3pfgj" path="res://graphics/chapter1/levels/jungle/environment/rain/3.png" id="21_alrnr"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="21_kdrkc"]
