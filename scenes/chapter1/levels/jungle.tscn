@@ -427,7 +427,8 @@ script = ExtResource("16_aewef")
 next_scene = ExtResource("17_aqo8c")
 
 [node name="Rain" parent="." unique_id=498998463 instance=ExtResource("18_nqhdg")]
-position = Vector2(9848, -15)
+position = Vector2(8252, -53)
+amount = 1000
 
 [node name="Rain2" parent="Rain" unique_id=153314495 instance=ExtResource("18_nqhdg")]
 texture = ExtResource("21_alrnr")
@@ -476,7 +477,7 @@ position = Vector2(-0.99975586, 765.00006)
 rotation = 0.20253715
 
 [node name="Puzzle2" type="Node2D" parent="Puzzles" unique_id=1859247285]
-position = Vector2(10238, 0)
+position = Vector2(8768, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle2" unique_id=552698774 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("35_ljtv2")

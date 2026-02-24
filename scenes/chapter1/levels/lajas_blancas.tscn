@@ -72,14 +72,14 @@ shape = SubResource("SegmentShape2D_j5r3v")
 debug_color = Color(0.8252278, 0.2592846, 0.75617933, 0.41960785)
 
 [node name="Puzzle5" parent="Int1" unique_id=706341858 instance=ExtResource("15_h6dcd")]
-position = Vector2(-1065, -454)
+position = Vector2(-1065, -455)
 
 [node name="PuzzleSpawner" parent="Int1/Puzzle5" index="0" unique_id=1455650157 node_paths=PackedStringArray("puzzle", "piece_spawners")]
 puzzle = NodePath("../DragDropPuzzle")
 piece_spawners = [NodePath("../../../YSorting/Spawn/JungleWoman2/MarkerBubbleSpawn"), NodePath("../Npc/MarkerBubbleSpawn")]
 
 [node name="Npc" parent="Int1/Puzzle5" index="1" unique_id=2093839101]
-position = Vector2(1259, 778.5)
+position = Vector2(1172, 771)
 texture = ExtResource("31_sbmfg")
 
 [node name="Obstacle" parent="Int1/Puzzle5" index="2" unique_id=310843140]
