@@ -55,13 +55,16 @@ func _snap_to_receptacle() -> Tween:
 ## Check if correctly placed in receptacle
 func is_correctly_placed():
 	return placement_checker.is_correctly_placed()
-
-## Move puzzle piece to target position and enable interactivity
-func activate_piece(gpos : Vector2):
+	
+## Move puzzle piece to target position and show
+func spawn_piece(gpos : Vector2):
 	draggable.global_position = gpos
+	draggable.show()
+
+## Enable interactivity
+func enable_piece():
 	#draggable.input_pickable = true
 	draggable.process_mode = Node.PROCESS_MODE_INHERIT
-	draggable.show()
 
 #region tooling
 func _init() -> void:

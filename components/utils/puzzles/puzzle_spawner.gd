@@ -42,40 +42,28 @@ func _on_obstacle_entered(area2d : Area2D):
 ## On click, hide trigger and spawn puzzle pieces
 func _on_spawner_clicked():
 	spawn_trigger.disable()
+	_spawn_puzzle()
+
+func _spawn_puzzle():
+	#Spawn all pieces
+	var pieces_amount =  puzzle.puzzle_pieces.size()
+	for idx in pieces_amount:
+		_spawn_piece(idx)
+		#Delay spawn next piece
+		await get_tree().create_timer(0.5).timeout
 	
-	if piece_idx == 0:
-		puzzle.outline_image.show()
+	#Show outline
+	puzzle.outline_image.show()
 	
-	#Spawn woman bubble
-	_activate_next_piece()
-	
-	#Spawn NPC bubble after delay
-	var timer: SceneTreeTimer = get_tree().create_timer(1.0)
-	timer.timeout.connect(_npc_bubble)
-	
-## Activate given puzzle piece then increment index
-func _activate_next_piece():
-	if piece_idx >= puzzle.puzzle_pieces.size():
-		return
-	
+	#Enable interactivity
+	for piece in puzzle.puzzle_pieces:
+		piece.enable_piece()
+
+## Activate given puzzle piece. #NOTICE does NOT check if idx is valid
+func _spawn_piece(piece_idx : int):	
 	var piece : PuzzlePiece = puzzle.puzzle_pieces[piece_idx]
-	piece.activate_piece(piece_spawners[piece_idx%piece_spawners.size()].global_position)
-	
-	_increment_idx()
+	piece.spawn_piece(piece_spawners[piece_idx%piece_spawners.size()].global_position)
 
-## Increment index of puzzle piece
-func _increment_idx():
-	piece_idx += 1
-	if piece_idx >= puzzle.puzzle_pieces.size():
-		spawn_trigger.clicked.disconnect(_on_spawner_clicked)
-		spawn_trigger.disable()
-
-## Activate NPC bubble and re-enable spawn trigger
-func _npc_bubble():
-	_activate_next_piece()
-	if piece_idx < puzzle.puzzle_pieces.size():
-		spawn_trigger.enable()
-	
 func _on_puzzle_complete():
 	obstacle.process_mode = Node.PROCESS_MODE_DISABLED
 	_deactivate_puzzle()
