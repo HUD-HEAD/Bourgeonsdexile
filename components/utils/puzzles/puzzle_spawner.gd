@@ -34,6 +34,9 @@ func _deactivate_puzzle():
 	
 	
 func _on_obstacle_entered(area2d : Area2D):
+	#Signal is one shot
+	obstacle.area_entered.disconnect(_on_obstacle_entered)
+	
 	#Might trigger multiple times
 	if !spawn_trigger.clicked.is_connected(_on_spawner_clicked):
 		spawn_trigger.clicked.connect(_on_spawner_clicked)
@@ -41,6 +44,8 @@ func _on_obstacle_entered(area2d : Area2D):
 
 ## On click, hide trigger and spawn puzzle pieces
 func _on_spawner_clicked():
+	#Signal is one shot
+	spawn_trigger.clicked.disconnect(_on_spawner_clicked)
 	spawn_trigger.disable()
 	_spawn_puzzle()
 
