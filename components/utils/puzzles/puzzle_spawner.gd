@@ -11,10 +11,6 @@ extends Node
 ## Obstacle triggering puzzle activation
 @export var obstacle : Area2D
 
-##Index of current piece to be activated
-var piece_idx : int = 0
-
-
 func _ready() -> void:
 	assert(piece_spawners.size()>0)
 	
@@ -65,9 +61,27 @@ func _spawn_puzzle():
 		piece.enable_piece()
 
 ## Activate given puzzle piece. #NOTICE does NOT check if idx is valid
-func _spawn_piece(piece_idx : int):	
+func _spawn_piece(piece_idx : int):
 	var piece : PuzzlePiece = puzzle.puzzle_pieces[piece_idx]
-	piece.spawn_piece(piece_spawners[piece_idx%piece_spawners.size()].global_position)
+	var target_pos = piece_spawners[piece_idx%piece_spawners.size()].global_position
+	
+	#Offset vertically from previous piece
+	target_pos += _compute_piece_offset(piece_idx)
+	
+	piece.spawn_piece(target_pos)
+
+## Return offset to apply to not overlap previous piece from same spawner
+func _compute_piece_offset(piece_idx : int) -> Vector2:
+	var prev_piece_idx = piece_idx-piece_spawners.size()
+	#No previous piece spawned here
+	if prev_piece_idx < 0 :
+		return Vector2.ZERO
+	
+	#HACK #WARNING dirty implementation
+	var prev_piece_dimension =  puzzle.puzzle_pieces[prev_piece_idx]	\
+		.draggable.find_child("PuzzlePieceSprite", false).texture.get_height()
+		
+	return Vector2.UP * prev_piece_dimension
 
 func _on_puzzle_complete():
 	obstacle.process_mode = Node.PROCESS_MODE_DISABLED
