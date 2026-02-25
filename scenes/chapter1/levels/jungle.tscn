@@ -25,8 +25,8 @@
 [ext_resource type="SpriteFrames" uid="uid://dg15c2titrtgq" path="res://components/chapter1/main_characters/companion_3_sprite_frames.tres" id="19_jh4yo"]
 [ext_resource type="AudioStream" uid="uid://1bh8jat7waj1" path="res://audio/sfx_old/jungle-nature-229896.mp3" id="20_5j4y3"]
 [ext_resource type="Script" uid="uid://bchnidsm7kci0" path="res://components/chapter1/main_characters/companion.gd" id="20_t8bry"]
-[ext_resource type="Texture2D" uid="uid://b7xm7ba3pfgj" path="res://graphics/chapter1/levels/jungle/environment/rain/3.png" id="21_alrnr"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="21_kdrkc"]
+[ext_resource type="Script" uid="uid://c6535mmpn7tng" path="res://components/chapter1/levels/jungle/rain_starter.gd" id="25_h7yo2"]
 [ext_resource type="PackedScene" uid="uid://mn5d8k3suhx3" path="res://components/chapter1/levels/jungle/puzzle1.tscn" id="28_aav6d"]
 [ext_resource type="PackedScene" uid="uid://c3ec4v87kvi86" path="res://components/chapter1/levels/jungle/puzzle2.tscn" id="29_kdrkc"]
 [ext_resource type="Script" uid="uid://bhkx6r42i55jn" path="res://scenes/chapter1/levels/wait_stop_rain.gd" id="31_c3f0v"]
@@ -67,9 +67,6 @@ point_count = 7
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1yhnw"]
 radius = 146.38
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_c5nq0"]
-polygon = PackedVector2Array(-1407, 182, -1608, 593, 2660, 677, 2590, 175)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hi6ya"]
 animations = [{
@@ -496,15 +493,12 @@ next_scene = ExtResource("17_aqo8c")
 
 [node name="Rain" parent="." unique_id=498998463 instance=ExtResource("18_nqhdg")]
 position = Vector2(8252, -53)
-amount = 1000
+amount = 5000
 
-[node name="Rain2" parent="Rain" unique_id=153314495 instance=ExtResource("18_nqhdg")]
-texture = ExtResource("21_alrnr")
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="Rain" unique_id=402594264]
-editor_description = "Needed for rain to appear"
-position = Vector2(-430, 864)
-occluder = SubResource("OccluderPolygon2D_c5nq0")
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Rain" unique_id=2096811711 node_paths=PackedStringArray("rain")]
+position = Vector2(-979, 551)
+script = ExtResource("25_h7yo2")
+rain = NodePath("..")
 
 [node name="ChangeCameraBounds" type="VisibleOnScreenNotifier2D" parent="." unique_id=1088608562 node_paths=PackedStringArray("camera")]
 position = Vector2(24394, 569)
@@ -564,7 +558,7 @@ position = Vector2(-495, 360)
 [node name="WaitStopRain" type="Node2D" parent="Puzzles/Puzzle2" unique_id=764478138 node_paths=PackedStringArray("puzzle", "rains", "nina")]
 script = ExtResource("31_c3f0v")
 puzzle = NodePath("../DragDropPuzzle2")
-rains = [NodePath("../../../Rain"), NodePath("../../../Rain/Rain2")]
+rains = [NodePath("../../../Rain")]
 nina = NodePath("../../../Path2D/PathFollow2D/Nina")
 
 [node name="Puzzle4" type="Node2D" parent="Puzzles" unique_id=1658305612]
