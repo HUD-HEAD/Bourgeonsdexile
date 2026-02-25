@@ -170,7 +170,6 @@ shape = SubResource("RectangleShape2D_u8td4")
 position = Vector2(25, -2)
 
 [node name="CompletePuzzle" parent="." index="2" unique_id=1933061263]
-visible = true
 position = Vector2(-3, 3)
 texture = ExtResource("11_ee1vd")
 
