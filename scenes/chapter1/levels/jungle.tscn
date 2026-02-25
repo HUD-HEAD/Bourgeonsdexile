@@ -534,7 +534,7 @@ spawn_trigger = NodePath("../../../Path2D/PathFollowCompanion1/Clickable")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Puzzles/Puzzle3" unique_id=44249265 instance=ExtResource("36_t8bry")]
-position = Vector2(-239, 0)
+position = Vector2(-2143, 0)
 collision_mask = 2
 
 [node name="DragDropPuzzle5" parent="Puzzles/Puzzle3" unique_id=496082450 instance=ExtResource("32_t8bry")]
