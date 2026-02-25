@@ -129,10 +129,34 @@ tracks/1/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../CanvasLayer/Control/TextureRect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../../Path2D/PathFollow2D:progress")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [460.0]
+}
 
 [sub_resource type="Animation" id="Animation_2wqw0"]
 resource_name = "trauma"
-length = 5.0
+length = 8.0
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -154,7 +178,7 @@ tracks/1/path = NodePath("../../../Path2D/PathFollow2D/Nina")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 5),
+"times": PackedFloat32Array(0, 7.9),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
@@ -188,6 +212,30 @@ tracks/3/keys = {
 "update": 1,
 "values": [4]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../../CanvasLayer/Control/TextureRect:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(8),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../../Path2D/PathFollow2D:progress")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(7.7798176),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [19433.77]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jh4yo"]
 _data = {
@@ -197,6 +245,12 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_808hi"]
 size = Vector2(419.67188, 431.14734)
+
+[sub_resource type="Gradient" id="Gradient_h7yo2"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_rw1nd"]
+gradient = SubResource("Gradient_h7yo2")
 
 [node name="Jungle" type="Node2D" unique_id=1292460998]
 
@@ -335,6 +389,7 @@ loop = false
 [node name="Companion1" parent="Path2D/PathFollowCompanion1" unique_id=700974070 node_paths=PackedStringArray("model", "path_follow") instance=ExtResource("15_td1vu")]
 script = ExtResource("20_t8bry")
 model = NodePath("../../PathFollow2D/Nina")
+offset_from_model = -100.0
 path_follow = NodePath("..")
 
 [node name="Woman" parent="Path2D/PathFollowCompanion1/Companion1" index="0" unique_id=689873547]
@@ -361,6 +416,7 @@ loop = false
 [node name="Companion2" parent="Path2D/PathFollowCompanion2" unique_id=292361228 node_paths=PackedStringArray("model", "path_follow") instance=ExtResource("15_td1vu")]
 script = ExtResource("20_t8bry")
 model = NodePath("../../PathFollow2D/Nina")
+offset_from_model = -200.0
 path_follow = NodePath("..")
 
 [node name="Woman" parent="Path2D/PathFollowCompanion2/Companion2" index="0" unique_id=689873547]
@@ -379,6 +435,7 @@ loop = false
 [node name="Companion3" parent="Path2D/PathFollowCompanion3" unique_id=1541481373 node_paths=PackedStringArray("model", "path_follow") instance=ExtResource("15_td1vu")]
 script = ExtResource("20_t8bry")
 model = NodePath("../../PathFollow2D/Nina")
+offset_from_model = -300.0
 path_follow = NodePath("..")
 
 [node name="Woman" parent="Path2D/PathFollowCompanion3/Companion3" index="0" unique_id=689873547]
@@ -394,6 +451,7 @@ position = Vector2(459.85278, 816.4505)
 
 [node name="JungleWomanReflection" parent="Path2D/ReflectionNina/ReflectionContainer" parent_id_path=PackedInt32Array(732020292, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
+offset_from_model = 0.0
 
 [node name="ReflectionCompanion1" parent="Path2D" unique_id=1639842222 instance=ExtResource("19_c5nq0")]
 position = Vector2(359.35126, 814.48834)
@@ -401,6 +459,7 @@ progress = 359.48
 
 [node name="JungleWomanReflection" parent="Path2D/ReflectionCompanion1/ReflectionContainer" parent_id_path=PackedInt32Array(1639842222, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
+offset_from_model = -100.0
 
 [node name="Woman" parent="Path2D/ReflectionCompanion1/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 sprite_frames = ExtResource("16_17nyf")
@@ -412,6 +471,7 @@ progress = 256.8
 
 [node name="JungleWomanReflection" parent="Path2D/ReflectionCompanion2/ReflectionContainer" parent_id_path=PackedInt32Array(1162299954, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
+offset_from_model = -200.0
 
 [node name="Woman" parent="Path2D/ReflectionCompanion2/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 sprite_frames = ExtResource("17_k7em6")
@@ -423,6 +483,7 @@ progress = 160.65
 
 [node name="JungleWomanReflection" parent="Path2D/ReflectionCompanion3/ReflectionContainer" parent_id_path=PackedInt32Array(2137896206, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
+offset_from_model = -300.0
 
 [node name="Woman" parent="Path2D/ReflectionCompanion3/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 sprite_frames = ExtResource("19_jh4yo")
@@ -564,11 +625,12 @@ position = Vector2(-204.00003, 311.00003)
 scale = Vector2(2.32, 2.32)
 sprite_frames = SubResource("SpriteFrames_hi6ya")
 
-[node name="Trauma" type="AnimationPlayer" parent="Puzzles/Puzzle5/DragDropPuzzle6" unique_id=689862560 node_paths=PackedStringArray("puzzle", "anim_destruction")]
+[node name="Trauma" type="AnimationPlayer" parent="Puzzles/Puzzle5/DragDropPuzzle6" unique_id=689862560 node_paths=PackedStringArray("puzzle", "anim_destruction", "blackout")]
 libraries/ = SubResource("AnimationLibrary_jh4yo")
 script = ExtResource("40_26s4d")
 puzzle = NodePath("..")
 anim_destruction = NodePath("../Destruction")
+blackout = NodePath("../../../../CanvasLayer/Control/TextureRect")
 
 [node name="Enemies" type="Area2D" parent="Puzzles/Puzzle5" unique_id=2015052226]
 position = Vector2(2160, 711)
@@ -629,6 +691,30 @@ collision_mask = 2
 
 [node name="DragDropPuzzle" parent="Puzzles/Puzzle7" unique_id=274836859 instance=ExtResource("48_rw1nd")]
 position = Vector2(56, 865)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=314951155]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=696890455]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=1678123227]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture1D_rw1nd")
+stretch_mode = 1
 
 [editable path="Path2D/PathFollowCompanion1/Companion1"]
 [editable path="Path2D/PathFollowCompanion2/Companion2"]
