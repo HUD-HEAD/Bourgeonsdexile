@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hd30vs0r76rv"
-path="res://.godot/imported/frameticket.png-c254089c42896bfd0867699e64e2d793.ctex"
+uid="uid://clropkqipu57f"
+path="res://.godot/imported/frame6_alltogether.png-b5fbd4340d00c703fe5ec8ccac6be1f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter1/comics/comic4/frameticket.png"
-dest_files=["res://.godot/imported/frameticket.png-c254089c42896bfd0867699e64e2d793.ctex"]
+source_file="res://graphics/chapter1/comics/comic1/panel_boat_crossing/frame6_alltogether.png"
+dest_files=["res://.godot/imported/frame6_alltogether.png-b5fbd4340d00c703fe5ec8ccac6be1f4.ctex"]
 
 [params]
 
