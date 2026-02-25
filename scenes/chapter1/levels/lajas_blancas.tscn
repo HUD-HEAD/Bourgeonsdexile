@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://dmdneisslgnmg" path="res://graphics/chapter1/levels/lajas_blancas/npcs/queue1/4.png" id="30_004no"]
 [ext_resource type="Script" uid="uid://crd3mglfc10su" path="res://components/chapter1/levels/lajas_blancas/advance_queue.gd" id="30_67up0"]
 [ext_resource type="Texture2D" uid="uid://co8wbousnpcik" path="res://graphics/chapter1/levels/lajas_blancas/npcs/queue1/5.png" id="31_sbmfg"]
+[ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="32_h15xc"]
 [ext_resource type="PackedScene" uid="uid://cx455fd0kkpbt" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB3.tscn" id="43_nx082"]
 [ext_resource type="PackedScene" uid="uid://b0rp3ag1qca1u" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB1.tscn" id="45_i6383"]
 [ext_resource type="PackedScene" uid="uid://dpbnilttq2thf" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB2.tscn" id="46_qi2ms"]
@@ -32,8 +33,11 @@
 [ext_resource type="PackedScene" uid="uid://0qs0gh3kedj3" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB13.tscn" id="56_572nb"]
 [ext_resource type="PackedScene" uid="uid://0sd3o1afbqf1" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB14.tscn" id="57_s3fhf"]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_j5r3v"]
-b = Vector2(0, 1080)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lvato"]
+size = Vector2(871, 413)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h15xc"]
+size = Vector2(921, 384)
 
 [node name="LajasBlancas" type="Node2D" unique_id=1909938204]
 
@@ -56,24 +60,41 @@ position = Vector2(0, 303)
 texture = ExtResource("6_h6g4n")
 centered = false
 
+[node name="BackgroundMask" type="TextureRect" parent="." unique_id=2012671307]
+visible = false
+z_index = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 6176.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("32_h15xc")
+stretch_mode = 1
+
 [node name="Int1" type="Sprite2D" parent="." unique_id=916796917]
+z_index = 1
 position = Vector2(1649, 454)
 texture = ExtResource("7_dau4e")
 centered = false
 
-[node name="Obstacle" type="Area2D" parent="Int1" unique_id=1412227203 node_paths=PackedStringArray("node_to_reveal")]
-position = Vector2(0, -454)
+[node name="AreaReveal" type="Area2D" parent="Int1" unique_id=1412227203 node_paths=PackedStringArray("node_to_reveal", "background_mask")]
+position = Vector2(402, 178)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("7_3f63v")
 node_to_reveal = NodePath("..")
+background_mask = NodePath("../../BackgroundMask")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Int1/Obstacle" unique_id=1752693632]
-shape = SubResource("SegmentShape2D_j5r3v")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Int1/AreaReveal" unique_id=1752693632]
+position = Vector2(48.5, 41.5)
+shape = SubResource("RectangleShape2D_lvato")
 debug_color = Color(0.8252278, 0.2592846, 0.75617933, 0.41960785)
 
 [node name="Puzzle5" parent="Int1" unique_id=706341858 instance=ExtResource("15_h6dcd")]
-position = Vector2(-1065, -455)
+position = Vector2(-950, -455)
 
 [node name="PuzzleSpawner" parent="Int1/Puzzle5" index="0" unique_id=1455650157 node_paths=PackedStringArray("puzzle", "piece_spawners")]
 puzzle = NodePath("../DragDropPuzzle")
@@ -132,19 +153,22 @@ position = Vector2(1143, 487)
 script = ExtResource("11_lvato")
 
 [node name="Int2" type="Sprite2D" parent="." unique_id=1034865706]
+z_index = 1
 position = Vector2(4405, 493)
 texture = ExtResource("8_of5dn")
 centered = false
 
-[node name="Obstacle2" type="Area2D" parent="Int2" unique_id=1768219270 node_paths=PackedStringArray("node_to_reveal")]
-position = Vector2(31, -493)
+[node name="AreaReveal" type="Area2D" parent="Int2" unique_id=1768219270 node_paths=PackedStringArray("node_to_reveal", "background_mask")]
+position = Vector2(510, 247)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("7_3f63v")
 node_to_reveal = NodePath("..")
+background_mask = NodePath("../../BackgroundMask")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Int2/Obstacle2" unique_id=430801904]
-shape = SubResource("SegmentShape2D_j5r3v")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Int2/AreaReveal" unique_id=430801904]
+position = Vector2(-23.5, -47)
+shape = SubResource("RectangleShape2D_h15xc")
 debug_color = Color(0.8252278, 0.2592846, 0.75617933, 0.41960785)
 
 [node name="ToDo" type="Node2D" parent="." unique_id=643192834]
@@ -262,6 +286,7 @@ position = Vector2(58, 384)
 position = Vector2(1188, 867)
 
 [node name="JungleWoman2" parent="YSorting/Spawn" unique_id=700974070 instance=ExtResource("15_004no")]
+z_index = 1
 y_sort_enabled = true
 
 [node name="Woman" parent="YSorting/Spawn/JungleWoman2" index="0" unique_id=689873547]
@@ -284,20 +309,23 @@ offset = Vector2(500, 0)
 position = Vector2(3738, 787)
 texture = ExtResource("6_a464j")
 
-[node name="Node" type="Node" parent="." unique_id=1527114385 node_paths=PackedStringArray("queue_spots")]
+[node name="AdvanceQueue" type="Node" parent="." unique_id=1527114385 node_paths=PackedStringArray("queue_spots")]
 script = ExtResource("30_67up0")
 queue_spots = [NodePath("../Queue1/Puzzle4/Npc"), NodePath("../Int1/Puzzle5/Npc"), NodePath("../Int1/Puzzle6/Npc")]
 
-[node name="VisibleOnScreenEnabler2D2" type="VisibleOnScreenEnabler2D" parent="Node" unique_id=623709463]
+[node name="VisibleOnScreenEnabler2D2" type="VisibleOnScreenEnabler2D" parent="AdvanceQueue" unique_id=623709463]
 rect = Rect2(1421, 126, 1190, 941)
+metadata/_edit_lock_ = true
 
-[node name="Node2" type="Node" parent="." unique_id=1112621384 node_paths=PackedStringArray("queue_spots")]
+[node name="AdvanceQueue2" type="Node" parent="." unique_id=1112621384 node_paths=PackedStringArray("queue_spots")]
 script = ExtResource("30_67up0")
 queue_spots = [NodePath("../Queue2/Puzzle1/Npc"), NodePath("../Queue2/Puzzle2/Npc"), NodePath("../Queue2/Puzzle3/Npc")]
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Node2" unique_id=933704728]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="AdvanceQueue2" unique_id=933704728]
 position = Vector2(5822, 650)
 rect = Rect2(-1433, -562, 1702, 797)
+
+[node name="Background" type="CanvasLayer" parent="." unique_id=451260150]
 
 [editable path="Int1/Puzzle5"]
 [editable path="Int1/Puzzle6"]
