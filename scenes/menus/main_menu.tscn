@@ -45,6 +45,7 @@ position = Vector2(423, -34)
 texture = ExtResource("6_b8wrl")
 
 [node name="Sudan26" type="Sprite2D" parent="Center/BackgroundSudan/PortraitSudan" unique_id=1963026402]
+visible = false
 position = Vector2(-8, 442)
 texture = ExtResource("4_maniu")
 
