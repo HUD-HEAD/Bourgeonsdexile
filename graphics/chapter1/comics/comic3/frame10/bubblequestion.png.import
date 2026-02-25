@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hd30vs0r76rv"
-path="res://.godot/imported/frameticket.png-c254089c42896bfd0867699e64e2d793.ctex"
+uid="uid://m7twj1jj3ods"
+path="res://.godot/imported/bubblequestion.png-97ba9cf1ef38d19cacb81eeb5ac6bca1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter1/comics/comic4/frameticket.png"
-dest_files=["res://.godot/imported/frameticket.png-c254089c42896bfd0867699e64e2d793.ctex"]
+source_file="res://graphics/chapter1/comics/comic3/frame10/bubblequestion.png"
+dest_files=["res://.godot/imported/bubblequestion.png-97ba9cf1ef38d19cacb81eeb5ac6bca1.ctex"]
 
 [params]
 
