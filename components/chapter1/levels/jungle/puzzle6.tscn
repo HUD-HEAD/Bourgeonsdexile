@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b4eymt1xuqyxn" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/6/5_6.png" id="9_3b6oc"]
 [ext_resource type="Texture2D" uid="uid://7di6dp22qr3" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/6/6_6.png" id="10_i12rp"]
 [ext_resource type="Texture2D" uid="uid://37wmratk0v0k" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/6/7_6.png" id="11_wwv4s"]
-[ext_resource type="Texture2D" uid="uid://bdur64dvvh3cv" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/6/full6.png" id="12_46yje"]
+[ext_resource type="Texture2D" uid="uid://b4nk4pu4m3yco" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/6/feedback6.png" id="12_77vfr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1vb3e"]
 radius = 43.462975
@@ -166,7 +166,7 @@ position = Vector2(14, 83)
 
 [node name="CompletePuzzle" parent="." index="2" unique_id=1933061263]
 position = Vector2(-4, 17)
-texture = ExtResource("12_46yje")
+texture = ExtResource("12_77vfr")
 
 [editable path="BuildingBlocks/PuzzlePiece"]
 [editable path="BuildingBlocks/PuzzlePiece3"]

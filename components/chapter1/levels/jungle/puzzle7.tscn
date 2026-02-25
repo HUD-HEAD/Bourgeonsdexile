@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://byajxveegrn53" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/7/2_7.png" id="5_tx0sk"]
 [ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="6_fso1c"]
 [ext_resource type="Texture2D" uid="uid://w6m5ef17xwb" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/7/3_7.png" id="7_qjp8k"]
-[ext_resource type="Texture2D" uid="uid://uyl8433frv3v" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/7/full7.png" id="8_vubgh"]
+[ext_resource type="Texture2D" uid="uid://chgkgnaswbtd0" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/7/feedback7.png" id="8_fh3gs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r2lgq"]
 size = Vector2(110.99242, 151.9975)
@@ -78,7 +78,7 @@ shape = SubResource("RectangleShape2D_i88af")
 position = Vector2(60, -27)
 
 [node name="CompletePuzzle" parent="." index="2" unique_id=1933061263]
-texture = ExtResource("8_vubgh")
+texture = ExtResource("8_fh3gs")
 
 [editable path="BuildingBlocks/PuzzlePiece"]
 [editable path="BuildingBlocks/PuzzlePiece2"]

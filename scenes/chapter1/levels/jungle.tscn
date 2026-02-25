@@ -47,6 +47,7 @@
 [ext_resource type="Texture2D" uid="uid://c2qclx8s821r6" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction7.png" id="38_rw1nd"]
 [ext_resource type="Texture2D" uid="uid://cirkkungp4y15" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction8.png" id="39_n2v0f"]
 [ext_resource type="Script" uid="uid://ctq2520bx0vpb" path="res://components/chapter1/levels/jungle/trauma.gd" id="40_26s4d"]
+[ext_resource type="Texture2D" uid="uid://duvp26kbidk5d" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/6/puzzle6ground.png" id="47_h7yo2"]
 [ext_resource type="PackedScene" uid="uid://cqmidgct1vdmf" path="res://components/chapter1/levels/jungle/puzzle7.tscn" id="48_rw1nd"]
 
 [sub_resource type="Gradient" id="Gradient_t8bry"]
@@ -497,7 +498,7 @@ position = Vector2(-239, 0)
 collision_mask = 2
 
 [node name="DragDropPuzzle2" parent="Puzzles/Puzzle2" unique_id=52554836 instance=ExtResource("29_kdrkc")]
-position = Vector2(-1934, 359)
+position = Vector2(-495, 360)
 
 [node name="WaitStopRain" type="Node2D" parent="Puzzles/Puzzle2" unique_id=764478138 node_paths=PackedStringArray("puzzle", "rains", "nina")]
 script = ExtResource("31_c3f0v")
@@ -581,9 +582,13 @@ shape = SubResource("RectangleShape2D_808hi")
 [node name="Puzzle6" type="Node2D" parent="Puzzles" unique_id=2026587298]
 position = Vector2(24925, 0)
 
+[node name="Puzzle6Ground" type="Sprite2D" parent="Puzzles/Puzzle6" unique_id=1677411471]
+position = Vector2(2, 477)
+texture = ExtResource("47_h7yo2")
+
 [node name="DragDropPuzzle3" parent="Puzzles/Puzzle6" unique_id=789965 instance=ExtResource("31_ljtv2")]
-position = Vector2(77, 584)
-rotation = 0.06231493
+position = Vector2(61, 584)
+rotation = 0.009316981
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle6" unique_id=178166462 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
@@ -600,9 +605,8 @@ collision_mask = 2
 [node name="Puzzle7" type="Node2D" parent="Puzzles" unique_id=810012491]
 position = Vector2(29214, -496)
 
-[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle7" unique_id=1827650439 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle7" unique_id=1827650439 node_paths=PackedStringArray("piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("35_ljtv2")
-puzzle = NodePath("")
 piece_spawners = [NodePath("../../../Path2D/PathFollow2D/Nina/MarkerBubbleSpawn"), NodePath("../../../Path2D/PathFollowCompanion1/Companion1/MarkerBubbleSpawn"), NodePath("../../../Path2D/PathFollowCompanion2/Companion2/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../../Path2D/PathFollowCompanion1/Clickable")
 obstacle = NodePath("../Obstacle")

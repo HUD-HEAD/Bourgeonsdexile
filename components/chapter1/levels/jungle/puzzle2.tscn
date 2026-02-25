@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://d5nppvpkxpqo" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/2/4_2.png" id="8_3brn7"]
 [ext_resource type="Texture2D" uid="uid://cppd2fa1166f0" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/2/5_2.png" id="9_4rj3n"]
 [ext_resource type="Texture2D" uid="uid://boxdvllbow6un" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/2/6_2.png" id="10_goef4"]
-[ext_resource type="Texture2D" uid="uid://bkvn4rr1bxccd" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/2/full2.png" id="11_2x83t"]
+[ext_resource type="Texture2D" uid="uid://dy07cjdwsktur" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/2/feedback2.png" id="11_ee1vd"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8mv6x"]
 polygon = PackedVector2Array(-121, -98, 21, -108, 115, -60, 121, 76, -114, 75)
@@ -170,7 +170,9 @@ shape = SubResource("RectangleShape2D_u8td4")
 position = Vector2(25, -2)
 
 [node name="CompletePuzzle" parent="." index="2" unique_id=1933061263]
-texture = ExtResource("11_2x83t")
+visible = true
+position = Vector2(-3, 3)
+texture = ExtResource("11_ee1vd")
 
 [editable path="BuildingBlocks/PuzzlePiece"]
 [editable path="BuildingBlocks/PuzzlePiece2"]
