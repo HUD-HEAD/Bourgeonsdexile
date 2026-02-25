@@ -3,10 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://cjq4fleiu5245" path="res://scenes/chapter1/levels/jungle.tscn" id="1_htefp"]
 [ext_resource type="PackedScene" uid="uid://mn5d8k3suhx3" path="res://components/chapter1/levels/jungle/puzzle1.tscn" id="2_ocj52"]
 [ext_resource type="PackedScene" uid="uid://c3ec4v87kvi86" path="res://components/chapter1/levels/jungle/puzzle2.tscn" id="3_oa6mw"]
-[ext_resource type="PackedScene" uid="uid://cqmidgct1vdmf" path="res://components/chapter1/levels/jungle/puzzle5.tscn" id="4_7xcka"]
+[ext_resource type="PackedScene" uid="uid://b7280mshbm13l" path="res://components/chapter1/levels/jungle/puzzle6.tscn" id="4_7xcka"]
 [ext_resource type="PackedScene" uid="uid://b7280mshbm13l" path="res://components/chapter1/levels/jungle/puzzle6.tscn" id="5_ljamr"]
 [ext_resource type="PackedScene" uid="uid://b88g225o2t0is" path="res://components/chapter1/levels/jungle/puzzle3.tscn" id="6_oa6mw"]
-[ext_resource type="PackedScene" uid="uid://c8pymntn6ge5" path="res://components/chapter1/levels/jungle/puzzle4.tscn" id="7_7xcka"]
+[ext_resource type="PackedScene" uid="uid://c8pymntn6ge5" path="res://components/chapter1/levels/jungle/puzzle5.tscn" id="7_7xcka"]
 
 [node name="JungleWithPuzzles" type="Node2D" unique_id=1037501490]
 
