@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="6_0wrxp"]
 [ext_resource type="Texture2D" uid="uid://b7vxkjsg8atys" path="res://graphics/chapter1/levels/lajas_blancas/puzzles/big_lajapuzzles/7/3_7.png" id="7_225hd"]
 [ext_resource type="Texture2D" uid="uid://b35vs3py0fqys" path="res://graphics/chapter1/levels/lajas_blancas/puzzles/big_lajapuzzles/7/4_7.png" id="8_646rv"]
+[ext_resource type="Texture2D" uid="uid://c3tuvvmk3nsdx" path="res://graphics/chapter1/levels/lajas_blancas/puzzles/7/fullbig7.png" id="9_nrhsv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tnh8y"]
 size = Vector2(172.67435, 82.0975)
@@ -92,6 +93,9 @@ shape = SubResource("RectangleShape2D_5ntdh")
 
 [node name="Receptacle4" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="7" unique_id=170141382 instance=ExtResource("6_0wrxp")]
 position = Vector2(-145, 63)
+
+[node name="CompletePuzzle" parent="." index="2" unique_id=1933061263]
+texture = ExtResource("9_nrhsv")
 
 [editable path="BuildingBlocks/PuzzlePiece"]
 [editable path="BuildingBlocks/PuzzlePiece2"]
