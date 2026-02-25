@@ -512,6 +512,17 @@ position = Vector2(13216, 0)
 [node name="DragDropPuzzle" parent="Puzzles/Puzzle4" unique_id=1889271473 instance=ExtResource("33_h7yo2")]
 position = Vector2(1420, 259)
 
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle4" unique_id=235583806 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+script = ExtResource("35_ljtv2")
+puzzle = NodePath("../DragDropPuzzle")
+piece_spawners = [NodePath("../../../Path2D/PathFollow2D/Nina/MarkerBubbleSpawn"), NodePath("../../../Path2D/PathFollowCompanion1/Companion1/MarkerBubbleSpawn"), NodePath("../../../Path2D/PathFollowCompanion2/Companion2/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../../../Path2D/PathFollowCompanion1/Clickable")
+obstacle = NodePath("../Obstacle")
+
+[node name="Obstacle" parent="Puzzles/Puzzle4" unique_id=1393710936 instance=ExtResource("36_t8bry")]
+position = Vector2(1686, 0)
+collision_mask = 2
+
 [node name="Puzzle3" type="Node2D" parent="Puzzles" unique_id=1643202236]
 position = Vector2(13216, 0)
 
@@ -540,7 +551,7 @@ spawn_trigger = NodePath("../Enemies")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Puzzles/Puzzle5" unique_id=2075705112 instance=ExtResource("36_t8bry")]
-position = Vector2(-239, 0)
+position = Vector2(911, 0)
 collision_mask = 2
 
 [node name="DragDropPuzzle6" parent="Puzzles/Puzzle5" unique_id=1419407559 instance=ExtResource("33_tglbk")]
