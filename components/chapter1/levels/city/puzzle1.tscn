@@ -43,7 +43,7 @@ position = Vector2(-93, 9)
 script = ExtResource("4_tx8fh")
 metadata/_edit_group_ = true
 
-[node name="Bubble1Puzle1" type="Sprite2D" parent="PuzzlePiece/Draggable" unique_id=1549936163]
+[node name="PuzzlePieceSprite" type="Sprite2D" parent="PuzzlePiece/Draggable" unique_id=1549936163]
 texture = ExtResource("5_lehh5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzlePiece/Draggable" unique_id=1987916916]
@@ -63,7 +63,7 @@ position = Vector2(-3, -36)
 script = ExtResource("4_tx8fh")
 metadata/_edit_group_ = true
 
-[node name="Bubble2Puzle1" type="Sprite2D" parent="PuzzlePiece2/Draggable2" unique_id=245735456]
+[node name="PuzzlePieceSprite" type="Sprite2D" parent="PuzzlePiece2/Draggable2" unique_id=245735456]
 texture = ExtResource("6_bseus")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzlePiece2/Draggable2" unique_id=1521006642]
@@ -83,7 +83,7 @@ position = Vector2(90, -49)
 script = ExtResource("4_tx8fh")
 metadata/_edit_group_ = true
 
-[node name="Bubble3Puzle1" type="Sprite2D" parent="PuzzlePiece3/Draggable3" unique_id=1930149817]
+[node name="PuzzlePieceSprite" type="Sprite2D" parent="PuzzlePiece3/Draggable3" unique_id=1930149817]
 texture = ExtResource("7_mg2ry")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzlePiece3/Draggable3" unique_id=1332459575]
