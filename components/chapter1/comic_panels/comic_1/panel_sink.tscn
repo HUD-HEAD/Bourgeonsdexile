@@ -1,23 +1,25 @@
 [gd_scene format=3 uid="uid://v2juo5s051v4"]
 
-[ext_resource type="Texture2D" uid="uid://bxx4qyf00p3vr" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/PANEL_comic1_sink_0001.png" id="2_1r7xj"]
-[ext_resource type="Texture2D" uid="uid://fo36fgp5osi" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/PANEL_comic1_sink_0002.png" id="3_wint5"]
-[ext_resource type="Texture2D" uid="uid://d1jbf8id4l7ni" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/PANEL_comic1_sink_0003.png" id="4_3sa61"]
-[ext_resource type="Texture2D" uid="uid://cwp3r3yljqlr7" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/PANEL_comic1_sink_0004.png" id="5_2ar4c"]
-[ext_resource type="Texture2D" uid="uid://b26iq8fn71chu" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/PANEL_comic1_sink_0005.png" id="6_v72ji"]
-[ext_resource type="Texture2D" uid="uid://76o8wn8kbbhc" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/PANEL_comic1_sink_0006.png" id="7_d3yaf"]
-[ext_resource type="Texture2D" uid="uid://mo6sucdwswsj" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/PANEL_comic1_sink_0007.png" id="8_to0pm"]
-[ext_resource type="Texture2D" uid="uid://ece1wykm2wj7" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/PANEL_comic1_sink_0008.png" id="9_vbfev"]
-[ext_resource type="Texture2D" uid="uid://c1gpa40aeqh4y" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/PANEL_comic1_sink_0009.png" id="10_22qti"]
-[ext_resource type="Texture2D" uid="uid://bijjgamay701a" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/PANEL_comic1_sink_0010.png" id="11_upcog"]
-[ext_resource type="Texture2D" uid="uid://byk6m1yvjrubv" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/PANEL_comic1_sink_0011.png" id="12_hrdn6"]
-[ext_resource type="Texture2D" uid="uid://7a0ctkltq7dl" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/PANEL_comic1_sink_0012.png" id="13_tbd1x"]
-[ext_resource type="Texture2D" uid="uid://bhrdnknggva23" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/PANEL_comic1_sink_0013.png" id="14_nu4hx"]
-[ext_resource type="Texture2D" uid="uid://b7iw0bqc5ow2k" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/PANEL_comic1_sink_0014.png" id="15_n67o8"]
-[ext_resource type="Texture2D" uid="uid://benp122sygmpc" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/PANEL_comic1_sink_0015.png" id="16_bmf81"]
+[ext_resource type="Texture2D" uid="uid://bxx4qyf00p3vr" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0001.png" id="2_1r7xj"]
+[ext_resource type="Texture2D" uid="uid://fo36fgp5osi" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0002.png" id="3_wint5"]
+[ext_resource type="Texture2D" uid="uid://d1jbf8id4l7ni" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0003.png" id="4_3sa61"]
+[ext_resource type="Texture2D" uid="uid://cwp3r3yljqlr7" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0004.png" id="5_2ar4c"]
+[ext_resource type="Texture2D" uid="uid://b26iq8fn71chu" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0005.png" id="6_v72ji"]
+[ext_resource type="Texture2D" uid="uid://76o8wn8kbbhc" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0006.png" id="7_d3yaf"]
+[ext_resource type="Texture2D" uid="uid://mo6sucdwswsj" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0007.png" id="8_to0pm"]
+[ext_resource type="Texture2D" uid="uid://ece1wykm2wj7" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0008.png" id="9_vbfev"]
+[ext_resource type="Texture2D" uid="uid://c1gpa40aeqh4y" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0009.png" id="10_22qti"]
+[ext_resource type="Texture2D" uid="uid://bijjgamay701a" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0010.png" id="11_upcog"]
+[ext_resource type="Texture2D" uid="uid://byk6m1yvjrubv" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0011.png" id="12_hrdn6"]
+[ext_resource type="Texture2D" uid="uid://7a0ctkltq7dl" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0012.png" id="13_tbd1x"]
+[ext_resource type="Texture2D" uid="uid://bhrdnknggva23" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0013.png" id="14_nu4hx"]
+[ext_resource type="Texture2D" uid="uid://b7iw0bqc5ow2k" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0014.png" id="15_n67o8"]
+[ext_resource type="Texture2D" uid="uid://benp122sygmpc" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0015.png" id="16_bmf81"]
 [ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/click_enable.gd" id="17_6pmpa"]
 [ext_resource type="Texture2D" uid="uid://drsa4m18nn3dn" path="res://graphics/chapter1/comics/comic1/panel_sink/framesink.png" id="18_6pmpa"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="18_uosyy"]
+[ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/sfx_player.tscn" id="19_uosyy"]
+[ext_resource type="AudioStream" uid="uid://b3pu703nptyk7" path="res://audio/chapter1/ambient/panel_4_water_droops_pot.wav" id="20_c2xss"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6pmpa"]
 size = Vector2(589, 391)
@@ -194,3 +196,7 @@ autoplay = &"sink"
 script = ExtResource("18_uosyy")
 clickables = [NodePath("../Clickable")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="SfxPlayer" parent="." unique_id=1408259736 node_paths=PackedStringArray("clickables") instance=ExtResource("19_uosyy")]
+stream = ExtResource("20_c2xss")
+clickables = [NodePath("../Clickable")]
