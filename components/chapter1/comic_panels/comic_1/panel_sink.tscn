@@ -179,7 +179,8 @@ position = Vector2(231.5, 92.5)
 shape = SubResource("RectangleShape2D_6pmpa")
 
 [node name="Framesink" type="Sprite2D" parent="." unique_id=1957673214]
-scale = Vector2(0.92, 0.92)
+position = Vector2(-15, 17)
+scale = Vector2(0.96, 0.96)
 texture = ExtResource("18_6pmpa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1259930244]

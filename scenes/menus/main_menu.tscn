@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://br32guon087mt" path="res://graphics/menus/main_menu/backgroundNina.png" id="2_duh7t"]
 [ext_resource type="Texture2D" uid="uid://bnw5lljqpcq60" path="res://graphics/menus/main_menu/backgroundSudan.png" id="3_6ymyu"]
 [ext_resource type="Texture2D" uid="uid://cjbyi6dkuypx5" path="res://graphics/menus/main_menu/menu_mockup1.png" id="4_3ye4h"]
-[ext_resource type="Texture2D" uid="uid://bu71rssmxbeqj" path="res://graphics/menus/main_menu/sudan26.png" id="4_maniu"]
 [ext_resource type="Texture2D" uid="uid://dyxwhrlapr5ni" path="res://graphics/menus/main_menu/nina26.png" id="4_pppj1"]
+[ext_resource type="Texture2D" uid="uid://bmvuxta6jgxnc" path="res://graphics/menus/main_menu/amani19.png" id="5_25m6f"]
 [ext_resource type="Texture2D" uid="uid://b2gcfjlk8v457" path="res://graphics/menus/main_menu/portrait_sudan.png" id="6_b8wrl"]
 [ext_resource type="Texture2D" uid="uid://ypof6rn4llng" path="res://graphics/menus/main_menu/portrait_nina.png" id="6_vr0hv"]
 [ext_resource type="Texture2D" uid="uid://ct5i3bkbx8svw" path="res://graphics/menus/main_menu/settings.png" id="8_6flho"]
@@ -45,9 +45,8 @@ position = Vector2(423, -34)
 texture = ExtResource("6_b8wrl")
 
 [node name="Sudan26" type="Sprite2D" parent="Center/BackgroundSudan/PortraitSudan" unique_id=1963026402]
-visible = false
-position = Vector2(-8, 442)
-texture = ExtResource("4_maniu")
+position = Vector2(-8, 466)
+texture = ExtResource("5_25m6f")
 
 [node name="BackgroundNina" type="Sprite2D" parent="Center" unique_id=284706347]
 texture = ExtResource("2_duh7t")
@@ -57,7 +56,7 @@ position = Vector2(389, -43)
 texture = ExtResource("6_vr0hv")
 
 [node name="Nina26" type="Sprite2D" parent="Center/BackgroundNina/PortraitNina" unique_id=577158681]
-position = Vector2(27, 451)
+position = Vector2(27, 374)
 texture = ExtResource("4_pppj1")
 
 [node name="MenuMockup1" type="Sprite2D" parent="Center" unique_id=724884841]
