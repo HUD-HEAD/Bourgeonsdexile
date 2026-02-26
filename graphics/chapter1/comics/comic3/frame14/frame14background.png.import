@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://q244b0lmhasl"
-path="res://.godot/imported/paper_background.png-28729746c61c6ba9c81e62062bf84d62.ctex"
+uid="uid://drxavewyu4yc0"
+path="res://.godot/imported/frame14background.png-a9625e27484e16d51424695af39968fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter1/levels/city/environment/paper_background.png"
-dest_files=["res://.godot/imported/paper_background.png-28729746c61c6ba9c81e62062bf84d62.ctex"]
+source_file="res://graphics/chapter1/comics/comic3/frame14/frame14background.png"
+dest_files=["res://.godot/imported/frame14background.png-a9625e27484e16d51424695af39968fe.ctex"]
 
 [params]
 

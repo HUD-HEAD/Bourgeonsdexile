@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="17_13xj0"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="17_54bx8"]
 [ext_resource type="PackedScene" uid="uid://bi4kbbnyg1r6g" path="res://components/chapter1/comic_panels/comic_1/panel_boat_closeup.tscn" id="19_p78bu"]
+[ext_resource type="AudioStream" uid="uid://curu5rxi6emup" path="res://audio/chapter1/soundtrack/STARTING_THEME.wav" id="21_imely"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="24_7ejrb"]
 [ext_resource type="PackedScene" uid="uid://b3xbb0f00akh4" path="res://components/chapter1/comic_panels/comic_1/panel_wake_up.tscn" id="32_ynlpr"]
 [ext_resource type="PackedScene" uid="uid://bq0ewephc3xv5" path="res://components/chapter1/comic_panels/comic_1/panel_drawer.tscn" id="35_jpuy7"]
@@ -127,3 +128,8 @@ script = ExtResource("17_13xj0")
 panels = [NodePath("../JungleComic1Frame1"), NodePath("../JungleComic1FrameEntry"), NodePath("../JungleComic1FramePonytail"), NodePath("../JungleComic1FrameSink"), NodePath("../JungleComic1FrameBoard"), NodePath("../JungleComic1FrameFoodReady"), NodePath("../JuncleComic1TVAndSwitch"), NodePath("../JungleComicCandle"), NodePath("../JungleComic1Frame2"), NodePath("../JungleComic1Frame3"), NodePath("../JungleComic1Frame4"), NodePath("../JungleComic1Frame5"), NodePath("../JungleComic1Frame6"), NodePath("../JungleComic1Frame7"), NodePath("../JungleComic1Frame9"), NodePath("../SceneEnder")]
 
 [node name="UI" parent="." unique_id=1829896958 instance=ExtResource("24_7ejrb")]
+
+[node name="Theme" type="AudioStreamPlayer" parent="." unique_id=314277606]
+stream = ExtResource("21_imely")
+autoplay = true
+bus = &"Music"

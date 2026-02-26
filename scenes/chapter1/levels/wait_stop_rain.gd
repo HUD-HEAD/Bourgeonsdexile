@@ -13,10 +13,9 @@ func _on_puzzle_complete():
 		var tween : Tween = rain.create_tween()
 		tween.tween_property(rain, "amount_ratio", 0.0, 5)
 		tween.tween_callback(_on_tween_finished.bind(rain))
-		rain.emitting = false
 
 
 func _on_tween_finished(rain : GPUParticles2D):
 	rain.emitting = false
-	rain.process_mode = Node.PROCESS_MODE_DISABLED
+	await get_tree().create_timer(2).timeout
 	SignalManager.obstacle_cleared.emit()

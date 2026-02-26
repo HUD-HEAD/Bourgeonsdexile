@@ -7,16 +7,24 @@ particle_flag_align_y = true
 particle_flag_disable_z = true
 emission_shape = 3
 emission_box_extents = Vector3(1500, 1, 1)
-direction = Vector3(0.5, 1, 0)
+direction = Vector3(0.1, 1, 0)
 spread = 0.0
-initial_velocity_min = 450.0
-initial_velocity_max = 600.0
+initial_velocity_min = 668.63
+initial_velocity_max = 818.63
 gravity = Vector3(0, 98, 0)
 collision_mode = 2
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_00on5"]
+polygon = PackedVector2Array(-1407, 182, -1608, 593, 2660, 677, 2590, 175)
+
 [node name="Rain" type="GPUParticles2D" unique_id=153314495]
-amount = 50
+amount = 1000
 texture = ExtResource("1_gr836")
 lifetime = 5.0
 visibility_rect = Rect2(-1500, 0, 3000, 1080)
 process_material = SubResource("ParticleProcessMaterial_mtlks")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=249120607]
+editor_description = "Needed for rain to appear"
+position = Vector2(-430, 982)
+occluder = SubResource("OccluderPolygon2D_00on5")

@@ -96,7 +96,7 @@ position = Vector2(137, -111)
 texture = ExtResource("8_3m15l")
 
 [node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(388244673, 2116105691) index="1" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
-receptacle = NodePath("../../../Receptacle2")
+receptacle = NodePath("../../../Receptacle4")
 
 [node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(388244673, 2116105691) index="2" unique_id=1105802255]
 position = Vector2(-18.477005, 9.043152)

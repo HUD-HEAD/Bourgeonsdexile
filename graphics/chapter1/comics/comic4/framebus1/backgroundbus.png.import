@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu71rssmxbeqj"
-path="res://.godot/imported/sudan26.png-5df11c1f6f54d67c670afe19d8c78b65.ctex"
+uid="uid://bbgi5vlsm1bhe"
+path="res://.godot/imported/backgroundbus.png-79f2a1f3359f5852ba44e22a1d78eac2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/menus/main_menu/sudan26.png"
-dest_files=["res://.godot/imported/sudan26.png-5df11c1f6f54d67c670afe19d8c78b65.ctex"]
+source_file="res://graphics/chapter1/comics/comic4/framebus1/backgroundbus.png"
+dest_files=["res://.godot/imported/backgroundbus.png-79f2a1f3359f5852ba44e22a1d78eac2.ctex"]
 
 [params]
 
