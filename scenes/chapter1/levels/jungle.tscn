@@ -40,6 +40,7 @@
 [ext_resource type="PackedScene" uid="uid://c8pymntn6ge5" path="res://components/chapter1/levels/jungle/puzzle5.tscn" id="33_tglbk"]
 [ext_resource type="Texture2D" uid="uid://dvchkdwlq3wo" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction3.png" id="34_c3f0v"]
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="35_ljtv2"]
+[ext_resource type="Texture2D" uid="uid://dxryv082uocw8" path="res://graphics/chapter1/levels/city/npcs/npc3.png" id="35_rw1nd"]
 [ext_resource type="Texture2D" uid="uid://bjbev463l8cuf" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction4.png" id="35_skl6x"]
 [ext_resource type="Texture2D" uid="uid://dlasfaha3cejo" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction5.png" id="36_7a5p8"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/obstacle.tscn" id="36_t8bry"]
@@ -255,6 +256,7 @@ gradient = SubResource("Gradient_h7yo2")
 position = Vector2(458, 773)
 
 [node name="JungleSprites" type="Node2D" parent="." unique_id=1506606024]
+z_index = -1
 
 [node name="Jungle1" type="Node2D" parent="JungleSprites" unique_id=1811698658]
 metadata/_edit_group_ = true
@@ -354,10 +356,10 @@ energy = 0.0
 texture = ExtResource("3_l3adg")
 
 [node name="Path2D" type="Path2D" parent="." unique_id=1822789039]
-z_index = 1
 curve = SubResource("Curve2D_8pokd")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=262908547]
+z_index = 1
 position = Vector2(459.85278, 816.4505)
 progress = 460.0
 rotates = false
@@ -375,9 +377,10 @@ limit_right = 10000041
 limit_bottom = 1080
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Path2D/PathFollow2D/Nina" unique_id=686947029]
-position = Vector2(0, -384)
+position = Vector2(88.14722, -384)
 
 [node name="PathFollowCompanion1" type="PathFollow2D" parent="Path2D" unique_id=1631182314]
+z_index = 1
 position = Vector2(359.35126, 814.48834)
 progress = 359.48
 rotates = false
@@ -405,6 +408,7 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 shape = SubResource("CircleShape2D_1yhnw")
 
 [node name="PathFollowCompanion2" type="PathFollow2D" parent="Path2D" unique_id=350753670]
+z_index = 1
 position = Vector2(256.69696, 812.1905)
 progress = 256.8
 rotates = false
@@ -421,9 +425,10 @@ sprite_frames = ExtResource("17_k7em6")
 frame_progress = 0.0
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Path2D/PathFollowCompanion2/Companion2" unique_id=1619587080]
-position = Vector2(0, -384)
+position = Vector2(-34.69696, -384)
 
 [node name="PathFollowCompanion3" type="PathFollow2D" parent="Path2D" unique_id=1552837252]
+z_index = 1
 position = Vector2(160.57846, 809.76324)
 progress = 160.65
 rotates = false
@@ -519,6 +524,7 @@ stream = ExtResource("20_5j4y3")
 autoplay = true
 
 [node name="Puzzles" type="Node2D" parent="." unique_id=865858153]
+z_index = -1
 
 [node name="Puzzle1" type="Node2D" parent="Puzzles" unique_id=1754884165]
 position = Vector2(3627, 0)
@@ -565,7 +571,7 @@ nina = NodePath("../../../Path2D/PathFollow2D/Nina")
 position = Vector2(13216, 0)
 
 [node name="DragDropPuzzle" parent="Puzzles/Puzzle4" unique_id=1889271473 instance=ExtResource("33_h7yo2")]
-position = Vector2(1420, 259)
+position = Vector2(2051, 259)
 
 [node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle4" unique_id=235583806 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("35_ljtv2")
@@ -584,7 +590,7 @@ position = Vector2(13216, 0)
 [node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle3" unique_id=62716125 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("35_ljtv2")
 puzzle = NodePath("../DragDropPuzzle5")
-piece_spawners = [NodePath("../../../Path2D/PathFollow2D/Nina/MarkerBubbleSpawn"), NodePath("../../../Path2D/PathFollowCompanion1/Companion1/MarkerBubbleSpawn"), NodePath("../../../Path2D/PathFollowCompanion2/Companion2/MarkerBubbleSpawn")]
+piece_spawners = [NodePath("../../../Path2D/PathFollow2D/Nina/MarkerBubbleSpawn"), NodePath("../PlaceholderNPC/MarkerNPC"), NodePath("../../../Path2D/PathFollowCompanion1/Companion1/MarkerBubbleSpawn"), NodePath("../../../Path2D/PathFollowCompanion2/Companion2/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../../Path2D/PathFollowCompanion1/Clickable")
 obstacle = NodePath("../Obstacle")
 
@@ -594,6 +600,14 @@ collision_mask = 2
 
 [node name="DragDropPuzzle5" parent="Puzzles/Puzzle3" unique_id=496082450 instance=ExtResource("32_t8bry")]
 position = Vector2(-1623, 340)
+
+[node name="PlaceholderNPC" type="Sprite2D" parent="Puzzles/Puzzle3" unique_id=577064758]
+position = Vector2(-1144, 584)
+scale = Vector2(1.525, 1.525)
+texture = ExtResource("35_rw1nd")
+
+[node name="MarkerNPC" type="Marker2D" parent="Puzzles/Puzzle3/PlaceholderNPC" unique_id=1153432582]
+position = Vector2(46.55712, -116.065575)
 
 [node name="Puzzle5" type="Node2D" parent="Puzzles" unique_id=755089703]
 position = Vector2(16447, 0)
