@@ -63,25 +63,23 @@ func _spawn_puzzle():
 ## Activate given puzzle piece. #NOTICE does NOT check if idx is valid
 func _spawn_piece(piece_idx : int):
 	var piece : PuzzlePiece = puzzle.puzzle_pieces[piece_idx]
-	var target_pos = piece_spawners[piece_idx%piece_spawners.size()].global_position
-	
-	#Offset vertically from previous piece
-	target_pos += _compute_piece_offset(piece_idx)
-	
+	var target_pos = _compute_spawn_position(piece_idx)
 	piece.spawn_piece(target_pos)
 
-## Return offset to apply to not overlap previous piece from same spawner
-func _compute_piece_offset(piece_idx : int) -> Vector2:
+func _compute_spawn_position(piece_idx : int):
 	var prev_piece_idx = piece_idx-piece_spawners.size()
 	#No previous piece spawned here
 	if prev_piece_idx < 0 :
-		return Vector2.ZERO
+		return  piece_spawners[piece_idx%piece_spawners.size()].global_position
 	
-	#HACK #WARNING dirty implementation
-	var prev_piece_dimension =  puzzle.puzzle_pieces[prev_piece_idx]	\
-		.draggable.find_child("PuzzlePieceSprite", false).texture.get_height()
-		
-	return Vector2.UP * prev_piece_dimension
+	var prev_piece = puzzle.puzzle_pieces[prev_piece_idx]
+	var current_piece = puzzle.puzzle_pieces[piece_idx]
+	
+	#Offset vertically from previous piece
+	var y_offset = prev_piece.get_dimensions().y/2 + current_piece.get_dimensions().y/2
+	
+	return prev_piece.draggable.global_position + y_offset*Vector2.UP
+
 
 func _on_puzzle_complete():
 	obstacle.process_mode = Node.PROCESS_MODE_DISABLED
