@@ -3,6 +3,8 @@
 class_name DragDropPuzzle
 extends Node2D
 
+signal puzzle_complete
+
 ## All puzzle pieces and their corresponding receptacle
 @export var puzzle_pieces : Array[PuzzlePiece]:
 	set(_puzzle_pieces):
@@ -10,7 +12,6 @@ extends Node2D
 		update_configuration_warnings()
 @export var complete_image : Sprite2D
 @export var outline_image : Sprite2D
-
 
 func _ready() -> void:
 	if Engine.is_editor_hint():
@@ -32,7 +33,8 @@ func _on_correct_piece():
 ## When puzzle is complete, disable interaction
 func _complete_puzzle():
 	print_debug("puzzle complete")
-	process_mode = Node.PROCESS_MODE_DISABLED
+	for piece in puzzle_pieces:
+		piece.deactivate()
 	
 	if complete_image :
 		complete_image.show()
@@ -42,7 +44,8 @@ func _complete_puzzle():
 	#HACK
 	SignalManager.obstacle_cleared.emit()
 	SignalManager.show_next_button.emit()
-	
+	puzzle_complete.emit()
+
 
 ## Check if all puzzle pieces in puzzle are in the correct place
 func _check_complete() -> bool:

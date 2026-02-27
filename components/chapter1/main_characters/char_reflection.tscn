@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://kkmgx1eqpc4i"]
+
+[ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/chapter1/main_characters/jungle_woman.tscn" id="1_ypw13"]
+[ext_resource type="Script" uid="uid://bchnidsm7kci0" path="res://components/chapter1/main_characters/companion.gd" id="2_2q0qh"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8pokd"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_lh7rp"]
+light_mode = 2
+
+[node name="Reflection" type="PathFollow2D" unique_id=732020292]
+progress = 460.0
+rotates = false
+loop = false
+
+[node name="ReflectionContainer" type="Node2D" parent="." unique_id=334837576]
+material = SubResource("CanvasItemMaterial_8pokd")
+
+[node name="JungleWomanReflection" parent="ReflectionContainer" unique_id=700974070 node_paths=PackedStringArray("path_follow") instance=ExtResource("1_ypw13")]
+position = Vector2(0, 200)
+script = ExtResource("2_2q0qh")
+path_follow = NodePath("../..")
+
+[node name="Woman" parent="ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
+self_modulate = Color(1, 1, 1, 0.47058824)
+material = SubResource("CanvasItemMaterial_lh7rp")
+flip_v = true
+
+[node name="Shadow" parent="ReflectionContainer/JungleWomanReflection/Woman" index="0" unique_id=1632501669]
+visible = false
+use_parent_material = true
+
+[node name="Area2D" parent="ReflectionContainer/JungleWomanReflection" index="1" unique_id=960188442]
+visible = false
+
+[editable path="ReflectionContainer/JungleWomanReflection"]

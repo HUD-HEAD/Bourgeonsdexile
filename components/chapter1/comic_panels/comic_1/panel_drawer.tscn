@@ -17,8 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://c75r7njk4vwpr" path="res://graphics/chapter1/comics/comic1/panel_drawer/frame4_blindlight.png" id="15_lqc0o"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="16_or7gk"]
 [ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/sfx_player.tscn" id="17_rq1xm"]
-[ext_resource type="AudioStream" uid="uid://coljvpvmigovo" path="res://audio/sfx/clicking-interface-select-201946.mp3" id="18_ue3nj"]
-[ext_resource type="AudioStream" uid="uid://b5v4fqb6mtolu" path="res://audio/sfx/select-denied.wav" id="19_x8pvg"]
+[ext_resource type="AudioStream" uid="uid://coljvpvmigovo" path="res://audio/sfx_old/clicking-interface-select-201946.mp3" id="18_ue3nj"]
+[ext_resource type="AudioStream" uid="uid://b5v4fqb6mtolu" path="res://audio/sfx_old/select-denied.wav" id="19_x8pvg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xlh8w"]
 size = Vector2(409, 243)

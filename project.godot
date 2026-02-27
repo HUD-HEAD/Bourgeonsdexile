@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Gravida"
-config/version="0.1.3"
+config/version="0.1.4"
 run/main_scene="uid://ctau0miqtmbj2"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 run/max_fps=200
@@ -29,6 +29,7 @@ SignalManager="*res://components/globals/signal_manager.gd"
 CustomCursor="*res://components/globals/custom_cursor.gd"
 InputManager="*res://components/globals/input_manager.gd"
 SceneManager="*res://components/globals/scene_manager.gd"
+AudioManager="*uid://ciqufic027swg"
 
 [display]
 
@@ -82,3 +83,4 @@ debug_next={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true

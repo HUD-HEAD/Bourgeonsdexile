@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dxje8kcv8ykkm"]
 
 [ext_resource type="Texture2D" uid="uid://b1kq3hpvjdvft" path="res://graphics/chapter1/comics/comic1/panel_house_exterior/anim_house/frame1_1.png" id="1_8r138"]
+[ext_resource type="AudioStream" uid="uid://cy0xlynno0pyf" path="res://audio/chapter1/ambient/PANEL_1_Light_on.wav" id="2_34243"]
 [ext_resource type="Texture2D" uid="uid://dj0v82ndb5ddu" path="res://graphics/chapter1/comics/comic1/panel_house_exterior/anim_house/frame1_2.png" id="2_pgcst"]
-[ext_resource type="AudioStream" uid="uid://kp7q8fyr211" path="res://audio/sfx/night_ambiance.mp3" id="2_stins"]
 [ext_resource type="Texture2D" uid="uid://cn01oh2w837m4" path="res://graphics/chapter1/comics/comic1/panel_house_exterior/anim_house/frame1_4.png" id="4_u3rfc"]
 [ext_resource type="Texture2D" uid="uid://t7vpedh330ns" path="res://graphics/chapter1/comics/comic1/panel_house_exterior/anim_house/frame1_7.png" id="7_er6hy"]
 [ext_resource type="Texture2D" uid="uid://csvi015jm6vp2" path="res://graphics/chapter1/comics/comic1/panel_house_exterior/anim_house/frame1_8.png" id="8_xpmsf"]
@@ -113,20 +113,16 @@ tracks/3/keys = {
 tracks/4/type = "audio"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Audio_night")
+tracks/4/path = NodePath("Sfx")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "clips": [{
-"end_offset": 0.0,
+"end_offset": 33.26398,
 "start_offset": 0.0,
-"stream": ExtResource("2_stins")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": null
+"stream": ExtResource("2_34243")
 }],
-"times": PackedFloat32Array(6, 10)
+"times": PackedFloat32Array(8)
 }
 tracks/4/use_blend = true
 
@@ -163,5 +159,4 @@ texture = ExtResource("1_8r138")
 visible = false
 texture = ExtResource("8_xpmsf")
 
-[node name="Audio_night" type="AudioStreamPlayer2D" parent="." unique_id=2031449965]
-autoplay = true
+[node name="Sfx" type="AudioStreamPlayer" parent="." unique_id=673379569]

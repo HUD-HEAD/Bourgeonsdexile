@@ -17,6 +17,8 @@ signal piece_correctly_placed
 		placement_checker = _placement_checker
 		update_configuration_warnings()
 
+var _sprite : Sprite2D
+
 func _ready() -> void:
 	#Prevent some errors from tool running in editor
 	if Engine.is_editor_hint():
@@ -25,8 +27,12 @@ func _ready() -> void:
 	draggable.dropped.connect(_on_piece_dropped)
 	draggable.clicked.connect(_on_piece_clicked)
 	
+	#HACK #WARNING dirty implementation
+	_sprite = draggable.find_child("PuzzlePieceSprite", false)
+	
+##Deactivates functionality, but does not hide piece. This should be done in caller
 func deactivate():
-	draggable.hide()
+	#draggable.input_pickable = false
 	draggable.process_mode = Node.PROCESS_MODE_DISABLED	
 
 ## If piece dropped in the right place, snap to receptacle position then validate placement
@@ -54,13 +60,20 @@ func _snap_to_receptacle() -> Tween:
 ## Check if correctly placed in receptacle
 func is_correctly_placed():
 	return placement_checker.is_correctly_placed()
-
-## Move puzzle piece to target position and enable interactivity
-func activate_piece(gpos : Vector2):
-
+	
+## Move puzzle piece to target position and show
+func spawn_piece(gpos : Vector2):
 	draggable.global_position = gpos
-	draggable.process_mode = Node.PROCESS_MODE_INHERIT
 	draggable.show()
+
+## Enable interactivity
+func enable_piece():
+	#draggable.input_pickable = true
+	draggable.process_mode = Node.PROCESS_MODE_INHERIT
+
+## Returns the *visual* piece dimensions
+func get_dimensions() -> Vector2:
+	return _sprite.texture.get_size()
 
 #region tooling
 func _init() -> void:

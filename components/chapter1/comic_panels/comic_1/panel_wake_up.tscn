@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bylno0cgs0cky" path="res://graphics/chapter1/comics/comic1/panel_wake_up/frame3_background2.png" id="2_pmfxp"]
 [ext_resource type="Texture2D" uid="uid://56y3m7d8acwa" path="res://graphics/chapter1/comics/comic1/panel_wake_up/frame3_background3.png" id="3_wiokp"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_ite8x"]
-[ext_resource type="AudioStream" uid="uid://kp7q8fyr211" path="res://audio/sfx/night_ambiance.mp3" id="6_yupug"]
+[ext_resource type="AudioStream" uid="uid://kp7q8fyr211" path="res://audio/sfx_old/night_ambiance.mp3" id="6_yupug"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pu4xu"]
 animations = [{

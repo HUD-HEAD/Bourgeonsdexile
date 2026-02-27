@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://ho5wjpeqrptp"]
+
+[ext_resource type="Texture2D" uid="uid://fpqit37tutf7" path="res://graphics/chapter1/comics/comic3/frame3/frame3.png" id="1_v5yf5"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_h5rkj"]
+[ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/chapter1/main_characters/jungle_woman.tscn" id="3_jfo1i"]
+[ext_resource type="SpriteFrames" uid="uid://bmcc5l21n4h6s" path="res://components/chapter1/main_characters/companion_1_sprite_frames.tres" id="4_rofvx"]
+[ext_resource type="SpriteFrames" uid="uid://dqrsyjauj12el" path="res://components/chapter1/main_characters/companion_2_sprite_frames.tres" id="5_7itc7"]
+
+[node name="Node2D" type="Node2D" unique_id=1013697846]
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=714095959]
+position = Vector2(-812, 0)
+rect = Rect2(-10, -10, 1704, 20)
+
+[node name="Transition" type="Node" parent="." unique_id=1934453717]
+script = ExtResource("2_h5rkj")
+
+[node name="Frame10" type="Sprite2D" parent="." unique_id=1982593682]
+clip_children = 2
+texture = ExtResource("1_v5yf5")
+
+[node name="JungleWoman" parent="Frame10" unique_id=700974070 instance=ExtResource("3_jfo1i")]
+position = Vector2(-471, 290)
+
+[node name="JungleWoman2" parent="Frame10" unique_id=582263270 instance=ExtResource("3_jfo1i")]
+position = Vector2(-571, 290)
+
+[node name="Woman" parent="Frame10/JungleWoman2" index="0" unique_id=689873547]
+sprite_frames = ExtResource("4_rofvx")
+frame_progress = 0.0
+
+[node name="JungleWoman3" parent="Frame10" unique_id=1177839373 instance=ExtResource("3_jfo1i")]
+position = Vector2(-669, 290)
+
+[node name="Woman" parent="Frame10/JungleWoman3" index="0" unique_id=689873547]
+sprite_frames = ExtResource("5_7itc7")
+frame_progress = 0.0
+
+[editable path="Frame10/JungleWoman2"]
+[editable path="Frame10/JungleWoman3"]
