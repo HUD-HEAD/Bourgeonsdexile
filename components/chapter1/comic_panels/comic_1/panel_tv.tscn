@@ -127,7 +127,7 @@ tracks/0/keys = {
 tracks/1/type = "audio"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("AudioStreamPlayer")
+tracks/1/path = NodePath("TvSounds")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -204,9 +204,9 @@ obstacles_to_clear = 3
 libraries/ = SubResource("AnimationLibrary_dbttd")
 autoplay = &"tv_program"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1940552800]
+[node name="TvSounds" type="AudioStreamPlayer" parent="." unique_id=1940552800]
 bus = &"Sfx"
 
-[node name="SfxPlayer" parent="." unique_id=1590780289 node_paths=PackedStringArray("clickables") instance=ExtResource("18_h38fu")]
+[node name="Lightswitch" parent="." unique_id=1590780289 node_paths=PackedStringArray("clickables") instance=ExtResource("18_h38fu")]
 stream = ExtResource("19_dwrql")
 clickables = [NodePath("../JungleComic1Switch/Area2D")]
