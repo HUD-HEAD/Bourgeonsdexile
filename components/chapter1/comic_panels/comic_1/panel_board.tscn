@@ -74,4 +74,5 @@ clickable = NodePath("../..")
 
 [node name="SfxPlayer" parent="." unique_id=1408259736 node_paths=PackedStringArray("clickables") instance=ExtResource("11_6of6h")]
 stream = ExtResource("12_3ib38")
+max_polyphony = 4
 clickables = [NodePath("../Clickable")]
