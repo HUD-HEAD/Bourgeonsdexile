@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/click_enable.gd" id="1_872db"]
 [ext_resource type="Texture2D" uid="uid://bylno0cgs0cky" path="res://graphics/chapter1/comics/comic1/panel_wake_up/frame3_background2.png" id="2_pmfxp"]
 [ext_resource type="Texture2D" uid="uid://56y3m7d8acwa" path="res://graphics/chapter1/comics/comic1/panel_wake_up/frame3_background3.png" id="3_wiokp"]
+[ext_resource type="AudioStream" uid="uid://bhs58s20ognbo" path="res://audio/chapter1/ambient/PANEL_10_WOMAN_BREATHING_INTERACTIVE.wav" id="4_51w12"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_ite8x"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pu4xu"]
@@ -32,6 +33,11 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1860705983]
 sprite_frames = SubResource("SpriteFrames_pu4xu")
 autoplay = "default"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AnimatedSprite2D" unique_id=1543377760]
+stream = ExtResource("4_51w12")
+autoplay = true
+bus = &"Sfx"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=578017789 node_paths=PackedStringArray("node_to_enable")]
 script = ExtResource("1_872db")

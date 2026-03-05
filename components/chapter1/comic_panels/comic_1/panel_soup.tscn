@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://dfp5ou6ojwppk" path="res://graphics/chapter1/comics/comic1/panel_soup/anim_soup/soup_frame1.png" id="2_aguu3"]
 [ext_resource type="Texture2D" uid="uid://bvti1vb4g5rwb" path="res://graphics/chapter1/comics/comic1/panel_soup/anim_soup/soup_frame2.png" id="3_4mev8"]
 [ext_resource type="Texture2D" uid="uid://c8v1ql0kusgfa" path="res://graphics/chapter1/comics/comic1/panel_soup/anim_soup/soup_frame3.png" id="4_bowvt"]
+[ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/click_enable.gd" id="5_4mev8"]
+[ext_resource type="AudioStream" uid="uid://ccutgl61fodoy" path="res://audio/chapter1/ambient/PANEL_6_SOUP_INTERACTIVE.wav" id="5_bowvt"]
 [ext_resource type="Texture2D" uid="uid://bei3qn06k152w" path="res://graphics/chapter1/comics/comic1/panel_soup/anim_soup/soup_frame4.png" id="5_n4ovr"]
-[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="6_4mev8"]
-[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="7_bowvt"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="7_n4ovr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wvcef"]
@@ -25,7 +25,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 1.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bowvt"]
@@ -38,13 +38,19 @@ metadata/_edit_group_ = true
 position = Vector2(-707, 0)
 rect = Rect2(-10, -10, 1420, 79)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1288377514 node_paths=PackedStringArray("clickable")]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1288377514]
 sprite_frames = SubResource("SpriteFrames_wvcef")
-script = ExtResource("6_4mev8")
-clickable = NodePath("../Clickable")
+autoplay = "default"
+frame = 3
+frame_progress = 1.0
 
-[node name="Clickable" type="Area2D" parent="." unique_id=1666531657]
-script = ExtResource("7_bowvt")
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AnimatedSprite2D" unique_id=218577586]
+stream = ExtResource("5_bowvt")
+autoplay = true
+
+[node name="Clickable" type="Area2D" parent="." unique_id=1666531657 node_paths=PackedStringArray("node_to_enable")]
+script = ExtResource("5_4mev8")
+node_to_enable = NodePath("../AnimatedSprite2D")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=127405962]
@@ -54,6 +60,5 @@ shape = SubResource("RectangleShape2D_bowvt")
 [node name="TransitionerCounter" type="Node" parent="." unique_id=471631494 node_paths=PackedStringArray("clickables")]
 script = ExtResource("7_n4ovr")
 clickables = [NodePath("../Clickable")]
-obstacles_to_clear = 3
-transition_delay = 0.5
+transition_delay = 4.0
 metadata/_custom_type_script = "uid://c44tybeisilbv"
