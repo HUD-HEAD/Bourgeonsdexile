@@ -1,3 +1,4 @@
+class_name AudioTransition
 extends Node
 
 @export var fade_out_player : AudioStreamPlayer

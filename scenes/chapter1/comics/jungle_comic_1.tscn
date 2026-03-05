@@ -19,6 +19,7 @@
 [ext_resource type="AudioStream" uid="uid://d1jjetsntvge2" path="res://audio/chapter1/soundtrack/MIGRATION-THEME.wav" id="22_ixmb8"]
 [ext_resource type="Script" uid="uid://cs5lt11waw0wm" path="res://scenes/chapter1/comics/audio_transition.gd" id="23_mi8ho"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="24_7ejrb"]
+[ext_resource type="AudioStream" uid="uid://dt8b3qx12b5jb" path="res://audio/chapter1/ambient/PANEL_9_10_CRICKETS_NIGHT.wav" id="24_ujwga"]
 [ext_resource type="PackedScene" uid="uid://b3xbb0f00akh4" path="res://components/chapter1/comic_panels/comic_1/panel_wake_up.tscn" id="32_ynlpr"]
 [ext_resource type="PackedScene" uid="uid://bq0ewephc3xv5" path="res://components/chapter1/comic_panels/comic_1/panel_drawer.tscn" id="35_jpuy7"]
 [ext_resource type="PackedScene" uid="uid://cyqwmaex0ilgv" path="res://components/chapter1/comic_panels/comic_1/panel_boat_crossing.tscn" id="40_jpuy7"]
@@ -101,6 +102,9 @@ scale = Vector2(0.675, 0.675)
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame4" unique_id=1628047132]
 position = Vector2(829.62964, 157.03703)
 
+[node name="FadeOutCrickets" type="VisibleOnScreenNotifier2D" parent="JungleComic1Frame4" unique_id=895855347]
+position = Vector2(1718.5184, 0)
+
 [node name="JungleComic1Frame5" parent="." unique_id=1056592833 instance=ExtResource("11_p78bu")]
 position = Vector2(24689, 540)
 
@@ -145,8 +149,24 @@ bus = &"Music"
 stream = ExtResource("22_ixmb8")
 bus = &"Music"
 
-[node name="Node" type="Node" parent="Audio" unique_id=2064368662 node_paths=PackedStringArray("fade_out_player", "fade_in_player", "visible_notif")]
+[node name="CrossFadeStartMigration" type="Node" parent="Audio" unique_id=1997574062 node_paths=PackedStringArray("fade_out_player", "fade_in_player", "visible_notif")]
 script = ExtResource("23_mi8ho")
 fade_out_player = NodePath("../ThemeStart")
 fade_in_player = NodePath("../ThemeMigration")
 visible_notif = NodePath("../../JungleComic1Frame3/AudioTransitionTrigger")
+metadata/_custom_type_script = "uid://cs5lt11waw0wm"
+
+[node name="Crickets" type="AudioStreamPlayer" parent="Audio" unique_id=1840641282]
+stream = ExtResource("24_ujwga")
+
+[node name="FadeInCrickets" type="Node" parent="Audio" unique_id=570663985 node_paths=PackedStringArray("fade_in_player", "visible_notif")]
+script = ExtResource("23_mi8ho")
+fade_in_player = NodePath("../Crickets")
+visible_notif = NodePath("../../JungleComic1Frame3/AudioTransitionTrigger")
+metadata/_custom_type_script = "uid://cs5lt11waw0wm"
+
+[node name="FadeOutCrickets" type="Node" parent="Audio" unique_id=933992618 node_paths=PackedStringArray("fade_out_player", "visible_notif")]
+script = ExtResource("23_mi8ho")
+fade_out_player = NodePath("../Crickets")
+visible_notif = NodePath("../../JungleComic1Frame4/FadeOutCrickets")
+metadata/_custom_type_script = "uid://cs5lt11waw0wm"
