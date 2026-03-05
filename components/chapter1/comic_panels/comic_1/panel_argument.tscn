@@ -303,7 +303,7 @@ tracks/5/keys = {
 "start_offset": 0.0,
 "stream": ExtResource("32_bosar")
 }],
-"times": PackedFloat32Array(0)
+"times": PackedFloat32Array(0.06666667)
 }
 tracks/5/use_blend = true
 tracks/6/type = "audio"
@@ -318,7 +318,7 @@ tracks/6/keys = {
 "start_offset": 0.0,
 "stream": ExtResource("33_xn0vl")
 }],
-"times": PackedFloat32Array(0)
+"times": PackedFloat32Array(0.06666667)
 }
 tracks/6/use_blend = true
 
