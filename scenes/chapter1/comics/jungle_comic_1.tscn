@@ -49,83 +49,85 @@ limit_smoothed = true
 position_smoothing_enabled = true
 editor_draw_limits = true
 
-[node name="JungleComic1Frame1" parent="." unique_id=2146162469 instance=ExtResource("2_7p1v8")]
+[node name="Panels" type="Node2D" parent="." unique_id=606931740]
+
+[node name="JungleComic1Frame1" parent="Panels" unique_id=2146162469 instance=ExtResource("2_7p1v8")]
 position = Vector2(960, 540)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame1" unique_id=1598927959]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComic1Frame1" unique_id=1598927959]
 
-[node name="JungleComic1FrameEntry" parent="." unique_id=1346650827 instance=ExtResource("3_k56k0")]
+[node name="JungleComic1FrameEntry" parent="Panels" unique_id=1346650827 instance=ExtResource("3_k56k0")]
 position = Vector2(3091, 540)
 
-[node name="JungleComic1FramePonytail" parent="." unique_id=918717733 instance=ExtResource("4_n38qt")]
+[node name="JungleComic1FramePonytail" parent="Panels" unique_id=918717733 instance=ExtResource("4_n38qt")]
 position = Vector2(5251, 540)
 
-[node name="JungleComic1FrameSink" parent="." unique_id=1085994452 instance=ExtResource("6_7ejrb")]
+[node name="JungleComic1FrameSink" parent="Panels" unique_id=1085994452 instance=ExtResource("6_7ejrb")]
 position = Vector2(7529, 540)
 
-[node name="JungleComic1FrameBoard" parent="." unique_id=1056075513 instance=ExtResource("5_p78bu")]
+[node name="JungleComic1FrameBoard" parent="Panels" unique_id=1056075513 instance=ExtResource("5_p78bu")]
 position = Vector2(9943, 540)
 
-[node name="JungleComic1FrameFoodReady" parent="." unique_id=1686233868 instance=ExtResource("7_13xj0")]
+[node name="JungleComic1FrameFoodReady" parent="Panels" unique_id=1686233868 instance=ExtResource("7_13xj0")]
 position = Vector2(12372, 540)
 
-[node name="JuncleComic1TVAndSwitch" parent="." unique_id=1376057279 instance=ExtResource("5_rhbtc")]
+[node name="JuncleComic1TVAndSwitch" parent="Panels" unique_id=1376057279 instance=ExtResource("5_rhbtc")]
 position = Vector2(14414, 496)
 scale = Vector2(0.9, 0.9)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JuncleComic1TVAndSwitch" unique_id=448529434]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panels/JuncleComic1TVAndSwitch" unique_id=448529434]
 
-[node name="JungleComicCandle" parent="." unique_id=209932194 instance=ExtResource("13_p78bu")]
+[node name="JungleComicCandle" parent="Panels" unique_id=209932194 instance=ExtResource("13_p78bu")]
 position = Vector2(16385, 540)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComicCandle" unique_id=2085245549]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComicCandle" unique_id=2085245549]
 
-[node name="JungleComic1Frame2" parent="." unique_id=1369925370 instance=ExtResource("5_7p1v8")]
+[node name="JungleComic1Frame2" parent="Panels" unique_id=1369925370 instance=ExtResource("5_7p1v8")]
 position = Vector2(18199, 540)
 
-[node name="VisibleOnScreenEnabler2D2" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame2" unique_id=1385282076]
+[node name="VisibleOnScreenEnabler2D2" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComic1Frame2" unique_id=1385282076]
 position = Vector2(323, 0)
 
-[node name="JungleComic1Frame3" parent="." unique_id=1672422329 instance=ExtResource("32_ynlpr")]
+[node name="JungleComic1Frame3" parent="Panels" unique_id=1672422329 instance=ExtResource("32_ynlpr")]
 position = Vector2(20741, 540)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame3" unique_id=752101071]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComic1Frame3" unique_id=752101071]
 position = Vector2(855, 0)
 
-[node name="AudioTransitionTrigger" type="VisibleOnScreenNotifier2D" parent="JungleComic1Frame3" unique_id=1286396627]
+[node name="AudioTransitionTrigger" type="VisibleOnScreenNotifier2D" parent="Panels/JungleComic1Frame3" unique_id=1286396627]
 position = Vector2(-1236, 62)
 
-[node name="JungleComic1Frame4" parent="." unique_id=879625787 instance=ExtResource("35_jpuy7")]
+[node name="JungleComic1Frame4" parent="Panels" unique_id=879625787 instance=ExtResource("35_jpuy7")]
 position = Vector2(22652, 540)
 scale = Vector2(0.675, 0.675)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame4" unique_id=1628047132]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComic1Frame4" unique_id=1628047132]
 position = Vector2(829.62964, 157.03703)
 
-[node name="FadeOutCrickets" type="VisibleOnScreenNotifier2D" parent="JungleComic1Frame4" unique_id=895855347]
+[node name="FadeOutCrickets" type="VisibleOnScreenNotifier2D" parent="Panels/JungleComic1Frame4" unique_id=895855347]
 position = Vector2(1718.5184, 0)
 
-[node name="JungleComic1Frame5" parent="." unique_id=1056592833 instance=ExtResource("11_p78bu")]
+[node name="JungleComic1Frame5" parent="Panels" unique_id=1056592833 instance=ExtResource("11_p78bu")]
 position = Vector2(24689, 540)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame5" unique_id=1344838745]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComic1Frame5" unique_id=1344838745]
 position = Vector2(-707, 0)
 rect = Rect2(-10, -10, 1420, 79)
 
-[node name="JungleComic1Frame6" parent="." unique_id=67005951 instance=ExtResource("40_jpuy7")]
+[node name="JungleComic1Frame6" parent="Panels" unique_id=67005951 instance=ExtResource("40_jpuy7")]
 position = Vector2(26816, 540)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame6" unique_id=1653906629]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComic1Frame6" unique_id=1653906629]
 
-[node name="JungleComic1Frame7" parent="." unique_id=183188217 instance=ExtResource("19_p78bu")]
+[node name="JungleComic1Frame7" parent="Panels" unique_id=183188217 instance=ExtResource("19_p78bu")]
 position = Vector2(29050, 540)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame7" unique_id=806881675]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComic1Frame7" unique_id=806881675]
 
-[node name="JungleComic1Frame9" parent="." unique_id=1870862331 instance=ExtResource("13_54bx8")]
+[node name="JungleComic1Frame9" parent="Panels" unique_id=1870862331 instance=ExtResource("13_54bx8")]
 position = Vector2(31470, 540)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic1Frame9" unique_id=1759255997]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComic1Frame9" unique_id=1759255997]
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=849983846]
 position = Vector2(34433, 596)
@@ -134,7 +136,7 @@ next_scene = ExtResource("16_7ejrb")
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("17_13xj0")
-panels = [NodePath("../JungleComic1Frame1"), NodePath("../JungleComic1FrameEntry"), NodePath("../JungleComic1FramePonytail"), NodePath("../JungleComic1FrameSink"), NodePath("../JungleComic1FrameBoard"), NodePath("../JungleComic1FrameFoodReady"), NodePath("../JuncleComic1TVAndSwitch"), NodePath("../JungleComicCandle"), NodePath("../JungleComic1Frame2"), NodePath("../JungleComic1Frame3"), NodePath("../JungleComic1Frame4"), NodePath("../JungleComic1Frame5"), NodePath("../JungleComic1Frame6"), NodePath("../JungleComic1Frame7"), NodePath("../JungleComic1Frame9"), NodePath("../SceneEnder")]
+panels = [NodePath("../Panels/JungleComic1Frame1"), NodePath("../Panels/JungleComic1FrameEntry"), NodePath("../Panels/JungleComic1FramePonytail"), NodePath("../Panels/JungleComic1FrameSink"), NodePath("../Panels/JungleComic1FrameBoard"), NodePath("../Panels/JungleComic1FrameFoodReady"), NodePath("../Panels/JuncleComic1TVAndSwitch"), NodePath("../Panels/JungleComicCandle"), NodePath("../Panels/JungleComic1Frame2"), NodePath("../Panels/JungleComic1Frame3"), NodePath("../Panels/JungleComic1Frame4"), NodePath("../Panels/JungleComic1Frame5"), NodePath("../Panels/JungleComic1Frame6"), NodePath("../Panels/JungleComic1Frame7"), NodePath("../Panels/JungleComic1Frame9"), NodePath("../SceneEnder")]
 
 [node name="UI" parent="." unique_id=1829896958 instance=ExtResource("24_7ejrb")]
 
@@ -153,7 +155,7 @@ bus = &"Music"
 script = ExtResource("23_mi8ho")
 fade_out_player = NodePath("../ThemeStart")
 fade_in_player = NodePath("../ThemeMigration")
-visible_notif = NodePath("../../JungleComic1Frame3/AudioTransitionTrigger")
+visible_notif = NodePath("../../Panels/JungleComic1Frame3/AudioTransitionTrigger")
 metadata/_custom_type_script = "uid://cs5lt11waw0wm"
 
 [node name="Crickets" type="AudioStreamPlayer" parent="Audio" unique_id=1840641282]
@@ -162,11 +164,11 @@ stream = ExtResource("24_ujwga")
 [node name="FadeInCrickets" type="Node" parent="Audio" unique_id=570663985 node_paths=PackedStringArray("fade_in_player", "visible_notif")]
 script = ExtResource("23_mi8ho")
 fade_in_player = NodePath("../Crickets")
-visible_notif = NodePath("../../JungleComic1Frame3/AudioTransitionTrigger")
+visible_notif = NodePath("../../Panels/JungleComic1Frame3/AudioTransitionTrigger")
 metadata/_custom_type_script = "uid://cs5lt11waw0wm"
 
 [node name="FadeOutCrickets" type="Node" parent="Audio" unique_id=933992618 node_paths=PackedStringArray("fade_out_player", "visible_notif")]
 script = ExtResource("23_mi8ho")
 fade_out_player = NodePath("../Crickets")
-visible_notif = NodePath("../../JungleComic1Frame4/FadeOutCrickets")
+visible_notif = NodePath("../../Panels/JungleComic1Frame4/FadeOutCrickets")
 metadata/_custom_type_script = "uid://cs5lt11waw0wm"
