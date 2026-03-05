@@ -33,6 +33,8 @@
 [ext_resource type="Texture2D" uid="uid://cirkkungp4y15" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction8.png" id="28_oqqh3"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="29_f5xcq"]
 [ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/click_enable.gd" id="30_khho4"]
+[ext_resource type="AudioStream" uid="uid://bahokpj1lihaw" path="res://audio/chapter1/soundtrack/TENSE-MOMENT.wav" id="32_bosar"]
+[ext_resource type="AudioStream" uid="uid://bg2futiccmapt" path="res://audio/chapter1/ambient/PANEL_9_MAN_SCREAMING_INTERACTIVE.wav" id="33_xn0vl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_37uka"]
 animations = [{
@@ -289,6 +291,36 @@ tracks/4/keys = {
 "method": &"hide"
 }]
 }
+tracks/5/type = "audio"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Music")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("32_bosar")
+}],
+"times": PackedFloat32Array(0.06666667)
+}
+tracks/5/use_blend = true
+tracks/6/type = "audio"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Sfx")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("33_xn0vl")
+}],
+"times": PackedFloat32Array(0.06666667)
+}
+tracks/6/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tkhhm"]
 _data = {
@@ -338,4 +370,8 @@ node_to_enable = NodePath("../AnimationPlayer")
 position = Vector2(40, -60)
 shape = SubResource("RectangleShape2D_khho4")
 
-[node name="Audio_argument" type="AudioStreamPlayer2D" parent="." unique_id=1749153717]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=864387841]
+bus = &"Music"
+
+[node name="Sfx" type="AudioStreamPlayer" parent="." unique_id=127431579]
+bus = &"Sfx"
