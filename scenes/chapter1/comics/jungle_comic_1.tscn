@@ -88,6 +88,9 @@ position = Vector2(18199, 540)
 [node name="VisibleOnScreenEnabler2D2" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComic1Frame2" unique_id=1385282076]
 position = Vector2(323, 0)
 
+[node name="FadeInCrickets" type="VisibleOnScreenNotifier2D" parent="Panels/JungleComic1Frame2" unique_id=988843202]
+position = Vector2(-602, 0)
+
 [node name="JungleComic1Frame3" parent="Panels" unique_id=1672422329 instance=ExtResource("32_ynlpr")]
 position = Vector2(20741, 540)
 
@@ -105,7 +108,7 @@ scale = Vector2(0.675, 0.675)
 position = Vector2(829.62964, 157.03703)
 
 [node name="FadeOutCrickets" type="VisibleOnScreenNotifier2D" parent="Panels/JungleComic1Frame4" unique_id=895855347]
-position = Vector2(1718.5184, 0)
+position = Vector2(-1068.1481, 0)
 
 [node name="JungleComic1Frame5" parent="Panels" unique_id=1056592833 instance=ExtResource("11_p78bu")]
 position = Vector2(24689, 540)
@@ -164,7 +167,7 @@ stream = ExtResource("24_ujwga")
 [node name="FadeInCrickets" type="Node" parent="Audio" unique_id=570663985 node_paths=PackedStringArray("fade_in_player", "visible_notif")]
 script = ExtResource("23_mi8ho")
 fade_in_player = NodePath("../Crickets")
-visible_notif = NodePath("../../Panels/JungleComic1Frame3/AudioTransitionTrigger")
+visible_notif = NodePath("../../Panels/JungleComic1Frame2/FadeInCrickets")
 metadata/_custom_type_script = "uid://cs5lt11waw0wm"
 
 [node name="FadeOutCrickets" type="Node" parent="Audio" unique_id=933992618 node_paths=PackedStringArray("fade_out_player", "visible_notif")]
