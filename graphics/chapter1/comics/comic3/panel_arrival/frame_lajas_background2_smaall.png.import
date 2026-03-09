@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qdrsw87bt465"
-path="res://.godot/imported/frame_kidlajas.png-fb0bc779c5ce4cdfdbf6a3aeeac8d9c7.ctex"
+uid="uid://db6pwyvykl6bc"
+path="res://.godot/imported/frame_lajas_background2_smaall.png-4d8f8feeed3dd16045cde151d629969b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter1/comics/comic3/frame_lajasblancas/frame_kidlajas.png"
-dest_files=["res://.godot/imported/frame_kidlajas.png-fb0bc779c5ce4cdfdbf6a3aeeac8d9c7.ctex"]
+source_file="res://graphics/chapter1/comics/comic3/panel_arrival/frame_lajas_background2_smaall.png"
+dest_files=["res://.godot/imported/frame_lajas_background2_smaall.png-4d8f8feeed3dd16045cde151d629969b.ctex"]
 
 [params]
 
