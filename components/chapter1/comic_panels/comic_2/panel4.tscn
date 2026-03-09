@@ -2,22 +2,75 @@
 
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="1_kl8qb"]
 [ext_resource type="Texture2D" uid="uid://cmatfynrjtoeo" path="res://graphics/chapter1/comics/comic2/frame4/keanu_saying_no.png" id="2_6xkyb"]
+[ext_resource type="Texture2D" uid="uid://dgtdec6plyyvf" path="res://graphics/chapter1/comics/comic2/frame4/keanu_saying_no2.png" id="3_mrifc"]
 [ext_resource type="Texture2D" uid="uid://s0kowkp2sk5k" path="res://graphics/chapter1/comics/comic2/frame4/hand_money.png" id="3_nn1u6"]
 [ext_resource type="Script" uid="uid://001fo68fi8nn" path="res://components/utils/puzzles/draggable_restricted.gd" id="4_mrifc"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_lgclf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6xkyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mrifc")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_6xkyb"]
 radius = 170.00294
+
+[sub_resource type="Animation" id="Animation_us60e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KeanuSayingNo:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_jr6xp"]
+resource_name = "transition"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KeanuSayingNo:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.23333335),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_64bem"]
+_data = {
+&"RESET": SubResource("Animation_us60e"),
+&"transition": SubResource("Animation_jr6xp")
+}
 
 [node name="Panel4" type="Node2D" unique_id=1050670671]
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1697990906]
 
-[node name="Transition" type="Node" parent="." unique_id=1021552933]
+[node name="Transition" type="Node" parent="." unique_id=1021552933 node_paths=PackedStringArray("anim_player")]
 script = ExtResource("1_kl8qb")
+anim_player = NodePath("../AnimationPlayer")
+timer_wait = 2.0
 
-[node name="KeanuSayingNo" type="Sprite2D" parent="." unique_id=1988772709]
+[node name="KeanuSayingNo" type="AnimatedSprite2D" parent="." unique_id=2107387592]
 clip_children = 2
-texture = ExtResource("2_6xkyb")
+sprite_frames = SubResource("SpriteFrames_lgclf")
 
 [node name="DraggableRestricted" type="Area2D" parent="KeanuSayingNo" unique_id=1064461294]
 position = Vector2(-336, 449)
@@ -32,3 +85,6 @@ texture = ExtResource("3_nn1u6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KeanuSayingNo/DraggableRestricted" unique_id=898332500]
 position = Vector2(106, -178)
 shape = SubResource("CircleShape2D_6xkyb")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=38084592]
+libraries/ = SubResource("AnimationLibrary_64bem")
