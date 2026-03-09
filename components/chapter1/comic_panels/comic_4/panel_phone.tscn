@@ -1,8 +1,6 @@
 [gd_scene format=3 uid="uid://crqtn2a43hhe8"]
 
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="1_6y4fh"]
-[ext_resource type="Texture2D" uid="uid://bcg5p1dmi5e6" path="res://graphics/chapter1/comics/comic4/framphonecomic4/1.png" id="2_obnax"]
-[ext_resource type="Texture2D" uid="uid://cdhvuuqqn6jcw" path="res://graphics/chapter1/comics/comic4/framphonecomic4/2.png" id="3_cdliw"]
 [ext_resource type="Texture2D" uid="uid://dfotos10nh20b" path="res://graphics/chapter1/comics/comic4/framphonecomic4/3.png" id="4_qqiuk"]
 [ext_resource type="Texture2D" uid="uid://r20bgdyl1r4k" path="res://graphics/chapter1/comics/comic4/framphonecomic4/4.png" id="5_n74ow"]
 [ext_resource type="Texture2D" uid="uid://bh71obal50vx8" path="res://graphics/chapter1/comics/comic4/framphonecomic4/5.png" id="6_olm8x"]
@@ -13,12 +11,6 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_jjqx6"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_obnax")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_cdliw")
-}, {
 "duration": 1.0,
 "texture": ExtResource("4_qqiuk")
 }, {
@@ -44,7 +36,7 @@ radius = 63.1981
 [node name="TransitionerCounter" type="Node" parent="." unique_id=1966250972 node_paths=PackedStringArray("clickables")]
 script = ExtResource("1_6y4fh")
 clickables = [NodePath("../Clickable")]
-obstacles_to_clear = 5
+obstacles_to_clear = 3
 transition_delay = 0.1
 metadata/_custom_type_script = "uid://c44tybeisilbv"
 

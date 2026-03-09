@@ -5,7 +5,24 @@
 [ext_resource type="Texture2D" uid="uid://ifxsxyc3xtjp" path="res://graphics/chapter1/comics/comic4/panelmissingboard/posters/2.png" id="3_arsgw"]
 [ext_resource type="Texture2D" uid="uid://dnocjgy14qfwx" path="res://graphics/chapter1/comics/comic4/panelmissingboard/posters/3.png" id="4_lmdhm"]
 [ext_resource type="Texture2D" uid="uid://bvkra1wenqi40" path="res://graphics/chapter1/comics/comic4/panelmissingboard/posters/4.png" id="5_2k27y"]
+[ext_resource type="Texture2D" uid="uid://c2enjlc3bpyg1" path="res://graphics/chapter1/comics/comic4/panelmissingboard/NPCAnim/1.png" id="6_lw7vi"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="6_s4ind"]
+[ext_resource type="Texture2D" uid="uid://dr4ou01aytlde" path="res://graphics/chapter1/comics/comic4/panelmissingboard/NPCAnim/2.png" id="7_cqg6m"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="9_lmdhm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_arsgw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_lw7vi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cqg6m")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s4ind"]
 size = Vector2(259, 321)
@@ -23,6 +40,12 @@ size = Vector2(216, 322)
 
 [node name="Missingpeoplebackground" type="Sprite2D" parent="." unique_id=1856382918]
 texture = ExtResource("1_0t1sk")
+
+[node name="DeskWorker" type="AnimatedSprite2D" parent="." unique_id=868426683]
+position = Vector2(283, -10)
+sprite_frames = SubResource("SpriteFrames_arsgw")
+frame = 1
+frame_progress = 1.0
 
 [node name="Posters" type="Node2D" parent="." unique_id=857600807]
 
@@ -99,3 +122,8 @@ texture = ExtResource("4_lmdhm")
 visible = false
 scale = Vector2(2.94, 2.94)
 texture = ExtResource("5_2k27y")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=745698545 node_paths=PackedStringArray("clickables")]
+script = ExtResource("9_lmdhm")
+clickables = [NodePath("../Posters/1/Clickable"), NodePath("../Posters/2/Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"
