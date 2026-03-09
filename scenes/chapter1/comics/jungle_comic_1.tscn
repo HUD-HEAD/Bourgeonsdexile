@@ -143,7 +143,7 @@ next_scene = ExtResource("16_7ejrb")
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("17_13xj0")
-panels = [NodePath("../Panels/JungleComic1Frame1"), NodePath("../Panels/JungleComic1FrameEntry"), NodePath("../Panels/JungleComic1FramePonytail"), NodePath("../Panels/JungleComic1FrameSink"), NodePath("../Panels/JungleComic1FrameBoard"), NodePath("../Panels/JungleComic1FrameFoodReady"), NodePath("../Panels/JuncleComic1TVAndSwitch"), NodePath("../Panels/JungleComicCandle"), NodePath("../Panels/JungleComic1Frame2"), NodePath("../Panels/JungleComic1Frame3"), NodePath("../Panels/JungleComic1Frame4"), NodePath("../Panels/JungleComic1Frame5"), NodePath("../Panels/JungleComic1Frame6"), NodePath("../Panels/JungleComic1Frame7"), NodePath("../Panels/JungleComic1Frame9"), NodePath("../SceneEnder")]
+panels = [NodePath("../Panels/JungleComic1Frame1"), NodePath("../Panels/JungleComic1FrameEntry"), NodePath("../Panels/JungleComic1FramePonytail"), NodePath("../Panels/JungleComic1FrameSink"), NodePath("../Panels/JungleComic1FrameBoard"), NodePath("../Panels/JungleComic1FrameFoodReady"), NodePath("../Panels/JuncleComic1TVAndSwitch"), NodePath("../Panels/JungleComicCandle"), NodePath("../Panels/JungleComic1Frame2"), NodePath("../Panels/JungleComic1Frame3"), NodePath("../Panels/JungleComic1Frame4"), NodePath("../Panels/JungleComic1Frame5"), NodePath("../Panels/JungleComic1FramePhoneBus"), NodePath("../Panels/JungleComic1Frame6"), NodePath("../Panels/JungleComic1Frame7"), NodePath("../Panels/JungleComic1Frame9"), NodePath("../SceneEnder")]
 
 [node name="UI" parent="." unique_id=1829896958 instance=ExtResource("24_7ejrb")]
 
