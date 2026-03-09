@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://b72v0abe0asc1" path="res://graphics/chapter1/comics/comic3/frame10/frame_ayuda.png" id="1_1a3om"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_g56er"]
+[ext_resource type="Texture2D" uid="uid://q80laypxs4o1" path="res://graphics/chapter1/comics/comic3/frame10/bubbleinfo.png" id="3_j1n0v"]
+[ext_resource type="Texture2D" uid="uid://m7twj1jj3ods" path="res://graphics/chapter1/comics/comic3/frame10/bubblequestion.png" id="4_v5k8l"]
 
 [node name="JungleComic3FrameAyuda" type="Node2D" unique_id=639988020]
 
@@ -10,3 +12,11 @@ texture = ExtResource("1_1a3om")
 
 [node name="Transition" type="Node" parent="." unique_id=2035449912]
 script = ExtResource("2_g56er")
+
+[node name="Bubbleinfo" type="Sprite2D" parent="." unique_id=379813044]
+position = Vector2(679, 750)
+texture = ExtResource("3_j1n0v")
+
+[node name="Bubblequestion" type="Sprite2D" parent="." unique_id=626038736]
+position = Vector2(247, 808)
+texture = ExtResource("4_v5k8l")
