@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cpqe48imup7qq" path="res://components/chapter1/comic_panels/comic_1/panel_bus.tscn" id="11_p78bu"]
 [ext_resource type="PackedScene" uid="uid://drxfjicmrdtlo" path="res://components/chapter1/comic_panels/comic_1/panel_arrival.tscn" id="13_54bx8"]
 [ext_resource type="PackedScene" uid="uid://bd7g0rb56ib48" path="res://components/chapter1/comic_panels/comic_1/panel_candle.tscn" id="13_p78bu"]
+[ext_resource type="PackedScene" uid="uid://c4cui6mh277i5" path="res://components/chapter1/comic_panels/comic_1/panel_phone_bus.tscn" id="14_fwjes"]
 [ext_resource type="PackedScene" uid="uid://s3spdg0qqc77" path="res://scenes/chapter1/levels/jungle_city.tscn" id="16_7ejrb"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="17_13xj0"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="17_54bx8"]
@@ -117,18 +118,21 @@ position = Vector2(24689, 540)
 position = Vector2(-707, 0)
 rect = Rect2(-10, -10, 1420, 79)
 
+[node name="JungleComic1FramePhoneBus" parent="Panels" unique_id=119112911 instance=ExtResource("14_fwjes")]
+position = Vector2(26707, 540)
+
 [node name="JungleComic1Frame6" parent="Panels" unique_id=67005951 instance=ExtResource("40_jpuy7")]
-position = Vector2(26816, 540)
+position = Vector2(29794, 540)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComic1Frame6" unique_id=1653906629]
 
 [node name="JungleComic1Frame7" parent="Panels" unique_id=183188217 instance=ExtResource("19_p78bu")]
-position = Vector2(29050, 540)
+position = Vector2(32028, 540)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComic1Frame7" unique_id=806881675]
 
 [node name="JungleComic1Frame9" parent="Panels" unique_id=1870862331 instance=ExtResource("13_54bx8")]
-position = Vector2(31470, 540)
+position = Vector2(34448, 540)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComic1Frame9" unique_id=1759255997]
 

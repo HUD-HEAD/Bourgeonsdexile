@@ -127,6 +127,8 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_k4pwe"]
+
 [sub_resource type="Animation" id="Animation_roaln"]
 length = 0.001
 tracks/0/type = "value"
@@ -266,6 +268,10 @@ position = Vector2(-589, -59.000015)
 rotation = -0.31191188
 shape = SubResource("CapsuleShape2D_roaln")
 
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Candle/Match" unique_id=1908803437]
+position = Vector2(175, -44)
+shape = SubResource("RectangleShape2D_eyl0t")
+
 [node name="Lighter" type="Area2D" parent="Candle/Match" unique_id=1290741680]
 position = Vector2(15, -1)
 collision_layer = 4
@@ -279,6 +285,12 @@ shape = SubResource("RectangleShape2D_eyl0t")
 position = Vector2(-221, -39)
 sprite_frames = SubResource("SpriteFrames_ldxfp")
 autoplay = "default"
+
+[node name="FeedbackCandle" type="AnimatedSprite2D" parent="Candle/Match/Hand" unique_id=1694066717]
+position = Vector2(239, 112)
+sprite_frames = SubResource("SpriteFrames_k4pwe")
+autoplay = "default"
+frame_progress = 0.60710746
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=726061850]
 libraries/ = SubResource("AnimationLibrary_roaln")

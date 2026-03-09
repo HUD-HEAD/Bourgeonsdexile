@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7mhlmxdmhrsm"
-path="res://.godot/imported/frameponytail.png-811f545ad0ec286b6dc4ecf0fd5451c8.ctex"
+uid="uid://coch67lqo3ff6"
+path="res://.godot/imported/frameponytail1.png-d9e407c086ec04c70cfb36859f0fd3a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter1/comics/comic1/frameponytail.png"
-dest_files=["res://.godot/imported/frameponytail.png-811f545ad0ec286b6dc4ecf0fd5451c8.ctex"]
+source_file="res://graphics/chapter1/comics/comic1/panel_ponytail/frameponytail1.png"
+dest_files=["res://.godot/imported/frameponytail1.png-d9e407c086ec04c70cfb36859f0fd3a6.ctex"]
 
 [params]
 
