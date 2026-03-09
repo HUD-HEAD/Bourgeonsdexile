@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vxktq75n2g2w"
-path="res://.godot/imported/frame13.png-365d741578ccb3140e8b8f59727dea8b.ctex"
+uid="uid://ce2jeafy8bs6f"
+path="res://.godot/imported/frame13_bubble.png-3cd189c30cf156e09dd550a3c08df6e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter1/comics/comic3/frame13/frame13.png"
-dest_files=["res://.godot/imported/frame13.png-365d741578ccb3140e8b8f59727dea8b.ctex"]
+source_file="res://graphics/chapter1/comics/comic3/frame13/frame13_bubble.png"
+dest_files=["res://.godot/imported/frame13_bubble.png-3cd189c30cf156e09dd550a3c08df6e4.ctex"]
 
 [params]
 
