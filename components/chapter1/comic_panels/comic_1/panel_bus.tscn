@@ -3,28 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://bjcwlut10vdrf" path="res://graphics/chapter1/comics/comic1/panel_bus/frame5_background.png" id="1_1afk3"]
 [ext_resource type="Script" uid="uid://bwhw2o2u7v43i" path="res://components/utils/comics/vertical_sine_anim.gd" id="2_4dbym"]
 [ext_resource type="Texture2D" uid="uid://cxfu1fqpa2jm3" path="res://graphics/chapter1/comics/comic1/panel_bus/frame5_shadow/frame5_shadow2.png" id="2_wg8pt"]
-[ext_resource type="Texture2D" uid="uid://c3xcmr4dqpfkw" path="res://graphics/chapter1/comics/comic1/panel_bus/frame5_woman/frame5_woman1.png" id="4_qb235"]
-[ext_resource type="Texture2D" uid="uid://bqrgb5q0adf0b" path="res://graphics/chapter1/comics/comic1/panel_bus/frame5_woman/frame5_woman2.png" id="5_5yxg6"]
-[ext_resource type="Texture2D" uid="uid://dol671p3xj2ip" path="res://graphics/chapter1/comics/comic1/panel_bus/frame5_woman/frame5_woman3.png" id="6_y1cxl"]
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="7_brxes"]
+[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/click_hide.gd" id="4_6h86t"]
+[ext_resource type="Texture2D" uid="uid://b26r8bk41cnp5" path="res://graphics/chapter1/comics/comic1/panel_bus/frame5_woman/woman1.png" id="7_7jsop"]
+[ext_resource type="Texture2D" uid="uid://dpfsmoqw4d3qe" path="res://graphics/chapter1/comics/comic1/panel_bus/frame5_woman/womanback.png" id="8_7jgqu"]
 [ext_resource type="AudioStream" uid="uid://bxm32ub0fm2xg" path="res://audio/sfx_old/bus-idle-to-drive-off-65780.mp3" id="8_w1rhg"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="9_l13a5"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_ppo6s"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_qb235")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_5yxg6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_y1cxl")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6h86t"]
+radius = 79.0
+height = 346.0
 
 [node name="JungleComic1Frame5" type="Node2D" unique_id=100253018]
 metadata/_edit_group_ = true
@@ -36,11 +23,20 @@ script = ExtResource("2_4dbym")
 amplitude = 30.0
 speed = 4.0
 
-[node name="Woman" type="AnimatedSprite2D" parent="Frame5Background" unique_id=1057390776]
-position = Vector2(0, 40)
-sprite_frames = SubResource("SpriteFrames_ppo6s")
-autoplay = "default"
-frame_progress = 0.26027757
+[node name="Woman1" type="Sprite2D" parent="Frame5Background" unique_id=679559823]
+position = Vector2(0, 23)
+texture = ExtResource("7_7jsop")
+
+[node name="Clickable" type="Area2D" parent="Frame5Background/Woman1" unique_id=1613450228]
+script = ExtResource("4_6h86t")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="Womanback" type="Sprite2D" parent="Frame5Background/Woman1/Clickable" unique_id=1034580827]
+texture = ExtResource("8_7jgqu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame5Background/Woman1/Clickable" unique_id=2091466112]
+position = Vector2(-8, 0)
+shape = SubResource("CapsuleShape2D_6h86t")
 
 [node name="Parallax2D" type="Parallax2D" parent="Frame5Background" unique_id=1668668129]
 repeat_size = Vector2(1443, 2000)
@@ -51,11 +47,11 @@ ignore_camera_scroll = true
 position = Vector2(0, -156)
 texture = ExtResource("2_wg8pt")
 
-[node name="AutomaticPanner" type="Node" parent="." unique_id=747342260]
-script = ExtResource("7_brxes")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1952229620]
-
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=568060378]
 stream = ExtResource("8_w1rhg")
 autoplay = true
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=1255102592 node_paths=PackedStringArray("clickables")]
+script = ExtResource("9_l13a5")
+clickables = [NodePath("../Frame5Background/Woman1/Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"
