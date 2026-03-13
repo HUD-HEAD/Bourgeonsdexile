@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://d4bsi1yifdim4" path="res://graphics/chapter1/comics/comic1/panel_arrival/city_deck_boat.png" id="3_jns1y"]
 [ext_resource type="Texture2D" uid="uid://bnafgdfr5e6fy" path="res://graphics/chapter1/comics/comic1/panel_boat_closeup/frame7_toplayer.png" id="4_ki3ua"]
 [ext_resource type="Material" uid="uid://muqqkyjl54xq" path="res://components/utils/puzzles/mask_out/mat_mask_out.tres" id="6_qmbah"]
+[ext_resource type="Script" uid="uid://byyj2i6spyg7m" path="res://components/utils/circle.gd" id="7_0hbji"]
 [ext_resource type="Texture2D" uid="uid://bo41q8vxqxlk7" path="res://graphics/chapter1/comics/comic1/panel_board/knife.png" id="7_gqjjt"]
 
 [sub_resource type="Gradient" id="Gradient_e4ls3"]
@@ -111,3 +112,9 @@ visible = false
 position = Vector2(-20, 17)
 rotation = -0.7590647
 shape = SubResource("CapsuleShape2D_1a784")
+
+[node name="Circle" type="Node2D" parent="." unique_id=271317609]
+position = Vector2(909, -702)
+script = ExtResource("7_0hbji")
+radius = 160.83
+metadata/_custom_type_script = "uid://byyj2i6spyg7m"
