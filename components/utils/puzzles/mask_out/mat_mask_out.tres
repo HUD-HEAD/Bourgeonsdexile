@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://muqqkyjl54xq"]
+
+[ext_resource type="Shader" uid="uid://qjdrxnkm2lp1" path="res://components/utils/puzzles/mask_out/mask_out.gdshader" id="1_fclmc"]
+
+[resource]
+shader = ExtResource("1_fclmc")
