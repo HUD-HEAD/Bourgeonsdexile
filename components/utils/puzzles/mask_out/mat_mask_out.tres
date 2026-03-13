@@ -1,6 +1,4 @@
-[gd_resource type="ShaderMaterial" format=3 uid="uid://muqqkyjl54xq"]
-
-[ext_resource type="Shader" uid="uid://qjdrxnkm2lp1" path="res://components/utils/puzzles/mask_out/mask_out.gdshader" id="1_fclmc"]
+[gd_resource type="CanvasItemMaterial" format=3 uid="uid://muqqkyjl54xq"]
 
 [resource]
-shader = ExtResource("1_fclmc")
+blend_mode = 2
