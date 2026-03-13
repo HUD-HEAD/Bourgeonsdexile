@@ -103,7 +103,7 @@ position = Vector2(54, 90)
 script = ExtResource("4_tx8fh")
 metadata/_edit_group_ = true
 
-[node name="Bubble4Puzle1" type="Sprite2D" parent="PuzzlePiece4/Draggable4" unique_id=841981961]
+[node name="PuzzlePieceSprite" type="Sprite2D" parent="PuzzlePiece4/Draggable4" unique_id=841981961]
 texture = ExtResource("8_w86f4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzlePiece4/Draggable4" unique_id=454089391]
