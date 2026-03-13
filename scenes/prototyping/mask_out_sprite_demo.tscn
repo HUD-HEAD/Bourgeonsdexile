@@ -82,6 +82,10 @@ material = SubResource("ShaderMaterial_wknx2")
 script = ExtResource("1_0hbji")
 metadata/_custom_type_script = "uid://cxam1cepgkl3s"
 
+[node name="MaskSpriteOutline" type="Sprite2D" parent="BackBufferCopy/MaskOut/Draggable" unique_id=192889155]
+scale = Vector2(1.425, 1.425)
+texture = ExtResource("7_gqjjt")
+
 [node name="MaskSprite" type="Sprite2D" parent="BackBufferCopy/MaskOut/Draggable" unique_id=941286264]
 material = ExtResource("6_qmbah")
 texture = ExtResource("7_gqjjt")
@@ -95,6 +99,10 @@ shape = SubResource("CapsuleShape2D_1a784")
 position = Vector2(720, 147)
 script = ExtResource("1_0hbji")
 metadata/_custom_type_script = "uid://cxam1cepgkl3s"
+
+[node name="MaskSpriteOutline" type="Sprite2D" parent="BackBufferCopy/MaskOut/Draggable2" unique_id=2087903988]
+scale = Vector2(1.425, 1.425)
+texture = ExtResource("7_gqjjt")
 
 [node name="MaskSprite" type="Sprite2D" parent="BackBufferCopy/MaskOut/Draggable2" unique_id=1455175165]
 material = ExtResource("6_qmbah")
