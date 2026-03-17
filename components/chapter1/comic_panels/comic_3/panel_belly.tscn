@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dexx74rhechxm"]
+
+[ext_resource type="Texture2D" uid="uid://dltj7ss00chju" path="res://graphics/chapter1/comics/comic3/frame15/frame15.png" id="1_82yks"]
+[ext_resource type="Texture2D" uid="uid://cqw18hwht02f4" path="res://graphics/chapter1/comics/comic3/frame16/frame16.png" id="2_amswv"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="3_jyss4"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="4_amswv"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_jyss4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_amswv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_82yks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_amswv")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_amswv"]
+radius = 168.0119
+
+[node name="PanelBelly" type="Node2D" unique_id=547145415]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=624768580 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_amswv")
+script = ExtResource("3_jyss4")
+clickable = NodePath("../Clickable")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=317260654]
+enable_node_path = NodePath("")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=1134044798]
+position = Vector2(-14, 217)
+script = ExtResource("4_amswv")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=640253695]
+position = Vector2(0, 10)
+shape = SubResource("CircleShape2D_amswv")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=1122676674 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_jyss4")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"
