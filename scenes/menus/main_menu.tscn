@@ -4,12 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://br32guon087mt" path="res://graphics/menus/main_menu/backgroundNina.png" id="2_duh7t"]
 [ext_resource type="Texture2D" uid="uid://bnw5lljqpcq60" path="res://graphics/menus/main_menu/backgroundSudan.png" id="3_6ymyu"]
 [ext_resource type="Texture2D" uid="uid://cjbyi6dkuypx5" path="res://graphics/menus/main_menu/menu_mockup1.png" id="4_3ye4h"]
+[ext_resource type="Texture2D" uid="uid://dx77tga8am1ov" path="res://graphics/menus/main_menu/CHAPTER 2/amani.png" id="4_287l7"]
 [ext_resource type="Texture2D" uid="uid://dyxwhrlapr5ni" path="res://graphics/menus/main_menu/nina26.png" id="4_pppj1"]
 [ext_resource type="Texture2D" uid="uid://bmvuxta6jgxnc" path="res://graphics/menus/main_menu/amani19.png" id="5_25m6f"]
-[ext_resource type="Texture2D" uid="uid://b2gcfjlk8v457" path="res://graphics/menus/main_menu/portrait_sudan.png" id="6_b8wrl"]
+[ext_resource type="Texture2D" uid="uid://bornqda88pwg0" path="res://graphics/menus/main_menu/CHAPTER 3/geneva.png" id="6_8hoqd"]
 [ext_resource type="Texture2D" uid="uid://ypof6rn4llng" path="res://graphics/menus/main_menu/portrait_nina.png" id="6_vr0hv"]
+[ext_resource type="Texture2D" uid="uid://cnh31hnfo56ua" path="res://graphics/menus/main_menu/CHAPTER 3/zlata.png" id="7_555wk"]
 [ext_resource type="Texture2D" uid="uid://ct5i3bkbx8svw" path="res://graphics/menus/main_menu/settings.png" id="8_6flho"]
 [ext_resource type="Texture2D" uid="uid://nhtaleop2o5n" path="res://graphics/menus/main_menu/egg1.png" id="8_7ty7c"]
+[ext_resource type="Texture2D" uid="uid://d26lcrjxp7yip" path="res://graphics/menus/main_menu/CHAPTER 3/zlata30.png" id="8_awvna"]
 [ext_resource type="Texture2D" uid="uid://i1c3pk3cvh0p" path="res://graphics/menus/main_menu/egg2.png" id="9_6xkr4"]
 [ext_resource type="Texture2D" uid="uid://c1iqfkuqt2r1y" path="res://graphics/menus/main_menu/exit.png" id="9_ofye2"]
 [ext_resource type="Texture2D" uid="uid://7wocpfdofap" path="res://graphics/menus/main_menu/gravida_title.png" id="9_vr0hv"]
@@ -37,16 +40,27 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="BackgroundSudan" type="Sprite2D" parent="Center" unique_id=1804832468]
+[node name="BackgroundAmani" type="Sprite2D" parent="Center" unique_id=1804832468]
 texture = ExtResource("3_6ymyu")
 
-[node name="PortraitSudan" type="Sprite2D" parent="Center/BackgroundSudan" unique_id=1914837719]
+[node name="PortraitAmani" type="Sprite2D" parent="Center/BackgroundAmani" unique_id=1914837719]
 position = Vector2(423, -34)
-texture = ExtResource("6_b8wrl")
+texture = ExtResource("4_287l7")
 
-[node name="Sudan26" type="Sprite2D" parent="Center/BackgroundSudan/PortraitSudan" unique_id=1963026402]
+[node name="Amani19" type="Sprite2D" parent="Center/BackgroundAmani/PortraitAmani" unique_id=1963026402]
 position = Vector2(-8, 466)
 texture = ExtResource("5_25m6f")
+
+[node name="BackgroundZlata" type="Sprite2D" parent="Center" unique_id=1410888145]
+texture = ExtResource("6_8hoqd")
+
+[node name="PortraitZlata" type="Sprite2D" parent="Center/BackgroundZlata" unique_id=448217785]
+position = Vector2(423, -34)
+texture = ExtResource("7_555wk")
+
+[node name="Zlata30" type="Sprite2D" parent="Center/BackgroundZlata/PortraitZlata" unique_id=1069966983]
+position = Vector2(-8, 466)
+texture = ExtResource("8_awvna")
 
 [node name="BackgroundNina" type="Sprite2D" parent="Center" unique_id=284706347]
 texture = ExtResource("2_duh7t")
@@ -128,12 +142,11 @@ mouse_default_cursor_shape = 2
 texture_normal = ExtResource("9_6xkr4")
 
 [node name="PlayChapter3" type="TextureButton" parent="Fullscreen" unique_id=479857537]
-visible = false
 layout_mode = 0
-offset_left = 549.0
-offset_top = 805.0
-offset_right = 739.0
-offset_bottom = 996.0
+offset_left = 379.0
+offset_top = 750.0
+offset_right = 569.0
+offset_bottom = 941.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("10_b8wrl")
 
@@ -159,7 +172,7 @@ script = ExtResource("14_maniu")
 
 [node name="VisualsHandler" type="Node" parent="." unique_id=891412753 node_paths=PackedStringArray("chapter_pictures", "chapter_buttons")]
 script = ExtResource("15_w3h5g")
-chapter_pictures = [NodePath("../Center/BackgroundNina"), NodePath("../Center/BackgroundSudan")]
+chapter_pictures = [NodePath("../Center/BackgroundNina"), NodePath("../Center/BackgroundAmani"), NodePath("../Center/BackgroundZlata")]
 chapter_buttons = [NodePath("../Fullscreen/PlayNina"), NodePath("../Fullscreen/PlayChapter2"), NodePath("../Fullscreen/PlayChapter3")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2013448306]
