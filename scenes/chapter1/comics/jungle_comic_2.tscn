@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://bsb8x1gm6ll7g" path="res://components/chapter1/comic_panels/comic_2/panel_phone.tscn" id="8_o76i3"]
 [ext_resource type="PackedScene" uid="uid://bhe7ytmf514r1" path="res://components/chapter1/comic_panels/comic_2/panel6.tscn" id="9_mtmad"]
 [ext_resource type="PackedScene" uid="uid://djyan8ubtutll" path="res://components/chapter1/comic_panels/comic_2/panel_wallet.tscn" id="10_dkeqa"]
-[ext_resource type="PackedScene" uid="uid://crfrjw42dcsks" path="res://components/chapter1/comic_panels/comic_2/panel_belly.tscn" id="12_exkuh"]
 [ext_resource type="PackedScene" uid="uid://ckqe0ckfq2chw" path="res://components/chapter1/comic_panels/comic_2/panel5.tscn" id="12_mtmad"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="12_su3g7"]
 [ext_resource type="PackedScene" uid="uid://smu7l0sn2pr2" path="res://components/chapter1/comic_panels/comic_2/panel10.tscn" id="12_tmikl"]
@@ -49,7 +48,7 @@ stretch_mode = 1
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1746052083 node_paths=PackedStringArray("panels")]
 script = ExtResource("12_su3g7")
-panels = [NodePath("../Panel1"), NodePath("../Panel2"), NodePath("../WalletPanel"), NodePath("../Panel4"), NodePath("../PanelPhone"), NodePath("../Panel5"), NodePath("../Panel6"), NodePath("../Panel7"), NodePath("../Panel9"), NodePath("../Panel10"), NodePath("../Panel11"), NodePath("../Panel12"), NodePath("../Panel13"), NodePath("../Panel14"), NodePath("../PregnancyPanel"), NodePath("../SceneEnder")]
+panels = [NodePath("../Panel1"), NodePath("../Panel2"), NodePath("../WalletPanel"), NodePath("../Panel4"), NodePath("../PanelPhone"), NodePath("../Panel5"), NodePath("../Panel6"), NodePath("../Panel7"), NodePath("../Panel9"), NodePath("../Panel10"), NodePath("../Panel11"), NodePath("../Panel12"), NodePath("../Panel13"), NodePath("../Panel14"), NodePath("../SceneEnder")]
 
 [node name="UI" parent="." unique_id=39001016 instance=ExtResource("17_1sxs8")]
 
@@ -96,11 +95,6 @@ position = Vector2(29103, 553.5)
 
 [node name="Panel14" parent="." unique_id=916438103 instance=ExtResource("16_js07p")]
 position = Vector2(31015, 553.5)
-
-[node name="PregnancyPanel" parent="." unique_id=1862232058 instance=ExtResource("12_exkuh")]
-position = Vector2(32832, 540)
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="PregnancyPanel" unique_id=1925319365]
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=395772265]
 position = Vector2(34960, 625)

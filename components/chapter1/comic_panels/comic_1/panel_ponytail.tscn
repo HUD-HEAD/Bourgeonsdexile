@@ -1,17 +1,49 @@
 [gd_scene format=3 uid="uid://d2r6mc3y6126v"]
 
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="1_njfm3"]
-[ext_resource type="Texture2D" uid="uid://7mhlmxdmhrsm" path="res://graphics/chapter1/comics/comic1/frameponytail.png" id="2_gisb2"]
+[ext_resource type="Texture2D" uid="uid://coch67lqo3ff6" path="res://graphics/chapter1/comics/comic1/panel_ponytail/frameponytail1.png" id="1_2n6ho"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="2_b5os6"]
+[ext_resource type="Texture2D" uid="uid://c2xpj702cxmrl" path="res://graphics/chapter1/comics/comic1/panel_ponytail/frameponytail2.png" id="2_qnnkq"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="3_b5os6"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_2n6ho"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qnnkq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2n6ho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qnnkq")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2n6ho"]
+radius = 341.09384
 
 [node name="JungleComic1FramePonytail" type="Node2D" unique_id=918717733]
 metadata/_edit_group_ = true
-
-[node name="AutomaticPanner" type="Node" parent="." unique_id=1020982734]
-script = ExtResource("1_njfm3")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1041682448]
 position = Vector2(-707, 0)
 rect = Rect2(-10, -10, 1420, 79)
 
-[node name="Frameponytail" type="Sprite2D" parent="." unique_id=678503200]
-texture = ExtResource("2_gisb2")
+[node name="Frameponytail" type="AnimatedSprite2D" parent="." unique_id=166075116 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_qnnkq")
+script = ExtResource("2_b5os6")
+clickable = NodePath("Clickable")
+
+[node name="Clickable" type="Area2D" parent="Frameponytail" unique_id=210362435]
+position = Vector2(4, 0)
+script = ExtResource("3_b5os6")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frameponytail/Clickable" unique_id=1475697150]
+shape = SubResource("CircleShape2D_2n6ho")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=535270377 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_2n6ho")
+clickables = [NodePath("../Frameponytail/Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"

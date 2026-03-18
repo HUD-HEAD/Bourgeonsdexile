@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://c4cui6mh277i5"]
+
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="1_fqn0n"]
+[ext_resource type="Texture2D" uid="uid://ddxhof3j5h77x" path="res://graphics/chapter1/comics/comic1/panel_phone/panel_busphone/panel_phone.png" id="2_rn82r"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="4_5xm4u"]
+[ext_resource type="Texture2D" uid="uid://btpb4dnqc2oyu" path="res://graphics/chapter1/comics/comic1/panel_phone/panel_busphone/gallerypictures/bday.png" id="5_fqn0n"]
+[ext_resource type="Texture2D" uid="uid://dhv303hmsh8x2" path="res://graphics/chapter1/comics/comic1/panel_phone/panel_busphone/gallerypictures/dog.png" id="6_onvg6"]
+[ext_resource type="Texture2D" uid="uid://drug8gvkmdcnm" path="res://graphics/chapter1/comics/comic1/panel_phone/panel_busphone/gallerypictures/grandma.png" id="7_3s8k2"]
+[ext_resource type="Texture2D" uid="uid://b07nsg5i0380y" path="res://graphics/chapter1/comics/comic1/panel_phone/panel_busphone/gallerypictures/them.png" id="8_5xm4u"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="10_s0myt"]
+[ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/sfx_player.tscn" id="11_e223k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_auuql"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_fqn0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_onvg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3s8k2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5xm4u")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i86vt"]
+size = Vector2(326, 405)
+
+[node name="JungleComic1FramePhoneBus" type="Node2D" unique_id=119112911]
+metadata/_edit_group_ = true
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=2112979347]
+position = Vector2(-707, 0)
+rect = Rect2(-10, -10, 1420, 79)
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=535785009 node_paths=PackedStringArray("clickables")]
+script = ExtResource("1_fqn0n")
+clickables = [NodePath("../Clickable")]
+obstacles_to_clear = 3
+transition_delay = 0.1
+metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="PhoneBackground" type="Sprite2D" parent="." unique_id=142629639]
+texture = ExtResource("2_rn82r")
+
+[node name="PhoneGallery" type="AnimatedSprite2D" parent="." unique_id=1655677320 node_paths=PackedStringArray("clickable")]
+position = Vector2(24, -81)
+sprite_frames = SubResource("SpriteFrames_auuql")
+script = ExtResource("10_s0myt")
+clickable = NodePath("../Clickable")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=215765054]
+script = ExtResource("4_5xm4u")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=455340339]
+position = Vector2(23, -80.5)
+shape = SubResource("RectangleShape2D_i86vt")
+
+[node name="SfxPlayer" parent="." unique_id=1408259736 node_paths=PackedStringArray("clickables") instance=ExtResource("11_e223k")]
+max_polyphony = 4
+clickables = [NodePath("../Clickable")]
