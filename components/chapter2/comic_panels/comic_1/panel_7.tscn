@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ce8o5ip5g0vpt"]
+
+[ext_resource type="Texture2D" uid="uid://dsb4p40tl6unc" path="res://graphics/chapter2/comics/comic1/frameadjusting/frameadjustinghead.png" id="1_dqnie"]
+
+[node name="Panel1" type="Node2D" unique_id=299868253]
+
+[node name="Frameadjustinghead" type="Sprite2D" parent="." unique_id=1989711782]
+texture = ExtResource("1_dqnie")

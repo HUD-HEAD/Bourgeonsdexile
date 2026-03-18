@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://by0uwcf5syiic"]
+
+[ext_resource type="Texture2D" uid="uid://dk02a1jadktl3" path="res://graphics/chapter2/comics/comic1/framedoor/framedoor_background.png" id="1_gftme"]
+[ext_resource type="Texture2D" uid="uid://xsilt4rqhlc7" path="res://graphics/chapter2/comics/comic1/framedoor/door1.png" id="2_epowo"]
+[ext_resource type="Texture2D" uid="uid://mu20vh3wp6tu" path="res://graphics/chapter2/comics/comic1/framedoor/door2.png" id="3_8kpxd"]
+
+[node name="Panel1" type="Node2D" unique_id=299868253]
+
+[node name="FramedoorBackground" type="Sprite2D" parent="." unique_id=1213990610]
+position = Vector2(2, 1)
+texture = ExtResource("1_gftme")
+
+[node name="Door1" type="Sprite2D" parent="." unique_id=2039428075]
+position = Vector2(-232, 35)
+texture = ExtResource("2_epowo")
+
+[node name="Door2" type="Sprite2D" parent="." unique_id=1362712810]
+position = Vector2(239, 22)
+texture = ExtResource("3_8kpxd")
