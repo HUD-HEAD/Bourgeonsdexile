@@ -19,7 +19,7 @@
 [ext_resource type="Script" uid="uid://cs5lt11waw0wm" path="res://scenes/chapter1/comics/audio_transition.gd" id="24_b0wbo"]
 [ext_resource type="AudioStream" uid="uid://dt8b3qx12b5jb" path="res://audio/chapter1/ambient/PANEL_9_10_CRICKETS_NIGHT.wav" id="25_kyud6"]
 
-[node name="JungleComic1" type="Node2D" unique_id=150562309]
+[node name="ChapterIIComic1" type="Node2D" unique_id=150562309]
 metadata/_edit_vertical_guides_ = [3098.0, 5247.0, 7539.0, 9944.0, 12375.0, 14408.0, 16384.0, 18203.0, 20749.0, 22655.0, 24690.0, 26712.0, 29795.0, 32039.0, 34449.0]
 
 [node name="PaperBackground" type="CanvasLayer" parent="." unique_id=1029947148]
@@ -51,7 +51,7 @@ editor_draw_limits = true
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("20_kue4r")
-panels = [NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath("")]
+panels = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 
 [node name="UI" parent="." unique_id=1829896958 instance=ExtResource("21_e3e0c")]
 
@@ -66,26 +66,23 @@ bus = &"Music"
 stream = ExtResource("23_f535n")
 bus = &"Music"
 
-[node name="CrossFadeStartMigration" type="Node" parent="Audio" unique_id=1997574062 node_paths=PackedStringArray("fade_out_player", "fade_in_player", "visible_notif")]
+[node name="CrossFadeStartMigration" type="Node" parent="Audio" unique_id=1997574062 node_paths=PackedStringArray("fade_out_player", "fade_in_player")]
 script = ExtResource("24_b0wbo")
 fade_out_player = NodePath("../ThemeStart")
 fade_in_player = NodePath("../ThemeMigration")
-visible_notif = NodePath("")
 metadata/_custom_type_script = "uid://cs5lt11waw0wm"
 
 [node name="Crickets" type="AudioStreamPlayer" parent="Audio" unique_id=1840641282]
 stream = ExtResource("25_kyud6")
 
-[node name="FadeInCrickets" type="Node" parent="Audio" unique_id=570663985 node_paths=PackedStringArray("fade_in_player", "visible_notif")]
+[node name="FadeInCrickets" type="Node" parent="Audio" unique_id=570663985 node_paths=PackedStringArray("fade_in_player")]
 script = ExtResource("24_b0wbo")
 fade_in_player = NodePath("../Crickets")
-visible_notif = NodePath("")
 metadata/_custom_type_script = "uid://cs5lt11waw0wm"
 
-[node name="FadeOutCrickets" type="Node" parent="Audio" unique_id=933992618 node_paths=PackedStringArray("fade_out_player", "visible_notif")]
+[node name="FadeOutCrickets" type="Node" parent="Audio" unique_id=933992618 node_paths=PackedStringArray("fade_out_player")]
 script = ExtResource("24_b0wbo")
 fade_out_player = NodePath("../Crickets")
-visible_notif = NodePath("")
 metadata/_custom_type_script = "uid://cs5lt11waw0wm"
 
 [node name="Panel1" parent="." unique_id=9427924 instance=ExtResource("9_erqdw")]
@@ -107,13 +104,16 @@ position = Vector2(16386, 531)
 position = Vector2(17836, 566)
 
 [node name="Panel7" parent="." unique_id=3961592 instance=ExtResource("15_tg4ti")]
-position = Vector2(20751, 543)
+position = Vector2(22663, 530)
 
 [node name="Panel8" parent="." unique_id=257799841 instance=ExtResource("16_1j3oo")]
-position = Vector2(22709, 557)
+position = Vector2(20749, 550)
 
 [node name="Panel9" parent="." unique_id=668551988 instance=ExtResource("17_jd0lm")]
-position = Vector2(24687, 572)
+position = Vector2(24681, 517)
 
 [node name="Panel10" parent="." unique_id=1665425851 instance=ExtResource("18_040dt")]
-position = Vector2(26712, 523)
+position = Vector2(28943, 536)
+
+[node name="Panel11" parent="." unique_id=2131438045 instance=ExtResource("15_tg4ti")]
+position = Vector2(26721, 528)

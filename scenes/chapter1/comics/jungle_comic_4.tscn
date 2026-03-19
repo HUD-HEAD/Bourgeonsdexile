@@ -8,8 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dlufjr836r473" path="res://components/chapter1/comic_panels/comic_4/panel_backpack.tscn" id="6_12per"]
 [ext_resource type="PackedScene" uid="uid://h67bkwvbgnvx" path="res://components/chapter1/comic_panels/comic_4/panel_bus.tscn" id="9_t5lhr"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="9_yggp2"]
-[ext_resource type="Texture2D" uid="uid://cr731pysnr5fv" path="res://graphics/chapter1/comics/comic4/panelbusjungle/background.png" id="10_ot2ku"]
-[ext_resource type="Texture2D" uid="uid://b2jjt6q4ksgrl" path="res://graphics/chapter1/comics/comic4/panelbusjungle/bus.png" id="11_p7egh"]
+[ext_resource type="PackedScene" uid="uid://bjp2jprdkpbul" path="res://components/chapter1/comic_panels/comic_4/panel_topview.tscn" id="10_8767r"]
 [ext_resource type="PackedScene" uid="uid://crqtn2a43hhe8" path="res://components/chapter1/comic_panels/comic_4/panel_phone.tscn" id="12_xs8jl"]
 
 [node name="JungleComic4" type="Node2D" unique_id=1574922119]
@@ -17,7 +16,7 @@ metadata/_edit_vertical_guides_ = [5131.0]
 
 [node name="PanelPanner" type="Node" parent="." unique_id=665689758 node_paths=PackedStringArray("panels")]
 script = ExtResource("9_yggp2")
-panels = [NodePath("../PanelMissingPosters"), NodePath(""), NodePath("../JungleComic4FrameFolders"), NodePath("../Comic4PanelTicket"), NodePath("../Comic4PanelPhone"), NodePath("../Comic4PanelMochil"), NodePath("../Comic4Panel6"), NodePath("")]
+panels = [NodePath("../PanelMissingPosters"), null, NodePath("../JungleComic4FrameFolders"), NodePath("../Comic4PanelTicket"), NodePath("../Comic4PanelPhone"), NodePath("../Comic4PanelMochil"), NodePath("../Comic4Panel6"), null]
 
 [node name="PaperBackground" type="CanvasLayer" parent="." unique_id=1769624388]
 layer = -1
@@ -61,10 +60,5 @@ position = Vector2(11258, 534)
 [node name="Comic4Panel6" parent="." unique_id=1529630051 instance=ExtResource("9_t5lhr")]
 position = Vector2(13407, 540)
 
-[node name="Background" type="Sprite2D" parent="." unique_id=560704542]
-position = Vector2(15821, 541)
-texture = ExtResource("10_ot2ku")
-
-[node name="Bus" type="Sprite2D" parent="." unique_id=744849538]
-position = Vector2(15914, 526)
-texture = ExtResource("11_p7egh")
+[node name="PanelTopview" parent="." unique_id=184560352 instance=ExtResource("10_8767r")]
+position = Vector2(15765, 535)
