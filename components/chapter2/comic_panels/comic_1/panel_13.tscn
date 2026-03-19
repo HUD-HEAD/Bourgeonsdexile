@@ -6,14 +6,14 @@
 
 [node name="Panel1" type="Node2D" unique_id=299868253]
 
-[node name="FramedoorBackground" type="Sprite2D" parent="." unique_id=1213990610]
+[node name="FramedoorBackground" type="Sprite2D" parent="." unique_id=1291906729]
 position = Vector2(2, 1)
 texture = ExtResource("1_gftme")
 
-[node name="Door1" type="Sprite2D" parent="." unique_id=2039428075]
+[node name="Door1" type="Sprite2D" parent="." unique_id=935592221]
 position = Vector2(-232, 35)
 texture = ExtResource("2_epowo")
 
-[node name="Door2" type="Sprite2D" parent="." unique_id=1362712810]
+[node name="Door2" type="Sprite2D" parent="." unique_id=1969644175]
 position = Vector2(239, 22)
 texture = ExtResource("3_8kpxd")
