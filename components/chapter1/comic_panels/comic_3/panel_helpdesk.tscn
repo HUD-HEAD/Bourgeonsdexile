@@ -6,7 +6,6 @@
 [node name="Comic3PanelHelpdesk" type="Node2D" unique_id=1630972808]
 
 [node name="Comic3Panel11" type="Sprite2D" parent="." unique_id=1692926312]
-position = Vector2(27262, 540)
 texture = ExtResource("1_1ivkq")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Comic3Panel11" unique_id=1154240545]

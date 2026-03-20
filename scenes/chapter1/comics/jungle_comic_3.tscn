@@ -95,11 +95,11 @@ position = Vector2(27487, 540)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic3FrameAyuda" unique_id=1172786784]
 
+[node name="Comic3PanelHelpdesk" parent="." unique_id=1630972808 instance=ExtResource("16_w6r1n")]
+position = Vector2(29575, 534)
+
 [node name="JungleComic3FrameFolders" parent="." unique_id=1516495874 instance=ExtResource("6_lc348")]
 position = Vector2(31733, 550)
-
-[node name="Comic3PanelHelpdesk" parent="." unique_id=1630972808 instance=ExtResource("16_w6r1n")]
-position = Vector2(2387, 0)
 
 [node name="PanelWorker" parent="." unique_id=2091360115 instance=ExtResource("17_w6r1n")]
 position = Vector2(33800, 540)
