@@ -91,12 +91,12 @@ position = Vector2(27199, 553.5)
 position = Vector2(29762, 554)
 
 [node name="Panel13" parent="." unique_id=625001368 instance=ExtResource("15_xso2w")]
-position = Vector2(34128, 553.5)
+position = Vector2(32226, 553.5)
 
 [node name="Panel14" parent="." unique_id=916438103 instance=ExtResource("16_js07p")]
-position = Vector2(36040, 553.5)
+position = Vector2(34138, 553.5)
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=395772265]
-position = Vector2(39122, 625)
+position = Vector2(37220, 625)
 script = ExtResource("14_fekbj")
 next_scene = ExtResource("20_o76i3")

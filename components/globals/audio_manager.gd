@@ -17,7 +17,7 @@ func _ready() -> void:
 	audio_sfx_click = AudioStreamPlayer.new()
 	add_child(audio_sfx_click)
 	audio_sfx_click.bus = "Sfx"
-	audio_sfx_click.stream = load("res://audio/chapter1/sfx/CLICK_SELECTION_ARROW.wav")
+	#audio_sfx_click.stream = load("res://audio/chapter1/sfx/CLICK_SELECTION_ARROW.wav")
 
 
 func play_click():

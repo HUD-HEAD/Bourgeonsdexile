@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://v7cuyk3oyojm" path="res://graphics/chapter1/comics/comic3/panel_phonelajas/background.png" id="1_2qyw0"]
 [ext_resource type="Texture2D" uid="uid://c1afdlt8n1gta" path="res://graphics/chapter1/comics/comic3/panel_phonelajas/mask.png" id="2_72xlw"]
 [ext_resource type="Texture2D" uid="uid://i7s27phwtfkc" path="res://graphics/chapter1/comics/comic3/panel_phonelajas/phone.png" id="3_dgwuu"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="4_72xlw"]
 
 [node name="JungleComic3PhoneInterface" type="Node2D" unique_id=72668983]
 
@@ -10,7 +11,15 @@
 texture = ExtResource("1_2qyw0")
 
 [node name="Mask" type="Sprite2D" parent="." unique_id=1707675557]
+position = Vector2(125, -107)
 texture = ExtResource("2_72xlw")
 
 [node name="Phone" type="Sprite2D" parent="." unique_id=971557552]
 texture = ExtResource("3_dgwuu")
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=1861450409]
+script = ExtResource("4_72xlw")
+timer_wait = 1.0
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=812845349]

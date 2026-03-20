@@ -47,3 +47,5 @@ clickable = NodePath("..")
 script = ExtResource("6_k7nq2")
 clickables = [NodePath("../Ayuda/Clickable")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1410974472]
