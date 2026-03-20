@@ -39,7 +39,7 @@ follow_viewport_enabled = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 33955.0
+offset_right = 39888.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -82,21 +82,21 @@ position = Vector2(17778, 553)
 position = Vector2(20346, 553.5)
 
 [node name="PanelPanKeanuWomen" parent="." unique_id=125241824 instance=ExtResource("13_2nmvc")]
-position = Vector2(22461, 553.5)
+position = Vector2(23034, 553.5)
 
 [node name="Panel11" parent="." unique_id=1835400465 instance=ExtResource("18_tmikl")]
-position = Vector2(27462, 553.5)
+position = Vector2(27199, 553.5)
 
 [node name="Panel12" parent="." unique_id=425216191 instance=ExtResource("20_ox075")]
-position = Vector2(29467, 554)
+position = Vector2(29762, 554)
 
 [node name="Panel13" parent="." unique_id=625001368 instance=ExtResource("15_xso2w")]
-position = Vector2(31518, 553.5)
+position = Vector2(34128, 553.5)
 
 [node name="Panel14" parent="." unique_id=916438103 instance=ExtResource("16_js07p")]
-position = Vector2(33430, 553.5)
+position = Vector2(36040, 553.5)
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=395772265]
-position = Vector2(37375, 625)
+position = Vector2(39122, 625)
 script = ExtResource("14_fekbj")
 next_scene = ExtResource("20_o76i3")
