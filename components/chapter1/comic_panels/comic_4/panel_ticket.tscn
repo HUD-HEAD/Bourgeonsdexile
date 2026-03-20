@@ -1,14 +1,43 @@
 [gd_scene format=3 uid="uid://ds1b5xoce25kf"]
 
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="1_k3lyu"]
-[ext_resource type="Texture2D" uid="uid://hd30vs0r76rv" path="res://graphics/chapter1/comics/comic4/frameticket/frameticket.png" id="2_1wa25"]
+[ext_resource type="Texture2D" uid="uid://byqcyeatrdsop" path="res://graphics/chapter1/comics/comic4/frameticket/ticket.png" id="2_4elbd"]
+[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="3_u1nb2"]
+[ext_resource type="Texture2D" uid="uid://bmhc067bx3v7w" path="res://graphics/chapter1/comics/comic4/frameticket/hand2.png" id="4_8q1kj"]
+[ext_resource type="Script" uid="uid://k1aavhe2a3rv" path="res://components/utils/area_entered_transition.gd" id="5_u1nb2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1nb2"]
+size = Vector2(340.04868, 390.23834)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4elbd"]
+radius = 194.36725
+height = 702.9258
 
 [node name="Comic4PanelTicket" type="Node2D" unique_id=1002948641]
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=302844977]
 
-[node name="Transition" type="Node" parent="." unique_id=1003137057]
-script = ExtResource("1_k3lyu")
+[node name="Area2D" type="Area2D" parent="." unique_id=89160719 node_paths=PackedStringArray("to_disable")]
+script = ExtResource("5_u1nb2")
+to_disable = NodePath("../Draggable")
 
-[node name="FrameAyuda" type="Sprite2D" parent="." unique_id=482978919]
-texture = ExtResource("2_1wa25")
+[node name="Ticket" type="Sprite2D" parent="Area2D" unique_id=1881277271]
+position = Vector2(347, -147)
+texture = ExtResource("2_4elbd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1738819088]
+position = Vector2(-111.91967, -15.556578)
+rotation = -0.5528702
+shape = SubResource("RectangleShape2D_u1nb2")
+
+[node name="Draggable" type="Area2D" parent="." unique_id=1137443458]
+position = Vector2(-681, 349)
+script = ExtResource("3_u1nb2")
+metadata/_custom_type_script = "uid://cxam1cepgkl3s"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Draggable" unique_id=1195773331]
+rotation = 0.71134037
+shape = SubResource("CapsuleShape2D_4elbd")
+
+[node name="Hand2" type="Sprite2D" parent="Draggable" unique_id=1018888720]
+position = Vector2(16, 24)
+texture = ExtResource("4_8q1kj")

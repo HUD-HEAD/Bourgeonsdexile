@@ -56,8 +56,6 @@ panels = [NodePath("../JungleComic3FrameLajas"), NodePath("../JungleComic3PhoneI
 [node name="JungleComic3FrameLajas" parent="." unique_id=2139961229 instance=ExtResource("4_xd2lk")]
 position = Vector2(2903.15, 534)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic3FrameLajas" unique_id=1533090669]
-
 [node name="JungleComic3PhoneInterface" parent="." unique_id=72668983 instance=ExtResource("5_nn42y")]
 position = Vector2(5072, 536)
 
