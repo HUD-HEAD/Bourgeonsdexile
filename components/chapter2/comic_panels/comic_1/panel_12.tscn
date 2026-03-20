@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c6knungwprlgs"]
+
+[ext_resource type="Texture2D" uid="uid://dra5gfvf60eti" path="res://graphics/chapter2/comics/comic1/framehands/tgether.png" id="1_pmt6i"]
+
+[node name="Panel1" type="Node2D" unique_id=299868253]
+
+[node name="Tgether" type="Sprite2D" parent="." unique_id=66807286]
+texture = ExtResource("1_pmt6i")

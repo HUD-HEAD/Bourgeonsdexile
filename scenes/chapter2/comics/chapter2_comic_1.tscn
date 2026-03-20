@@ -1,0 +1,120 @@
+[gd_scene format=3 uid="uid://diaoe5umvfijd"]
+
+[ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_o35dc"]
+[ext_resource type="PackedScene" uid="uid://nrfkhc1421if" path="res://components/chapter2/comic_panels/comic_1/panel_2.tscn" id="2_k5ynj"]
+[ext_resource type="PackedScene" uid="uid://c0wro4keqrw1k" path="res://components/chapter2/comic_panels/comic_1/panel_4.tscn" id="9_erqdw"]
+[ext_resource type="PackedScene" uid="uid://bof4aq2qkhfv7" path="res://components/chapter2/comic_panels/comic_1/panel_5.tscn" id="10_4a5vy"]
+[ext_resource type="PackedScene" uid="uid://186uwrt8f1pa" path="res://components/chapter2/comic_panels/comic_1/panel_6.tscn" id="11_a6kkx"]
+[ext_resource type="PackedScene" uid="uid://ce8o5ip5g0vpt" path="res://components/chapter2/comic_panels/comic_1/panel_7.tscn" id="12_xuvnd"]
+[ext_resource type="PackedScene" uid="uid://bvxqa00feogmd" path="res://components/chapter2/comic_panels/comic_1/panel_8.tscn" id="13_mqxr3"]
+[ext_resource type="PackedScene" uid="uid://dbsinxyf8802o" path="res://components/chapter2/comic_panels/comic_1/panel_9.tscn" id="14_tjkkq"]
+[ext_resource type="PackedScene" uid="uid://1o8ot3deeivy" path="res://components/chapter2/comic_panels/comic_1/panel_10.tscn" id="15_tg4ti"]
+[ext_resource type="PackedScene" uid="uid://mj2dhiwddodh" path="res://components/chapter2/comic_panels/comic_1/panel_11.tscn" id="16_1j3oo"]
+[ext_resource type="PackedScene" uid="uid://c6knungwprlgs" path="res://components/chapter2/comic_panels/comic_1/panel_12.tscn" id="17_jd0lm"]
+[ext_resource type="PackedScene" uid="uid://by0uwcf5syiic" path="res://components/chapter2/comic_panels/comic_1/panel_13.tscn" id="18_040dt"]
+[ext_resource type="PackedScene" uid="uid://38344vnrt72b" path="res://components/chapter2/comic_panels/comic_1/panel_14.tscn" id="19_erqdw"]
+[ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="20_kue4r"]
+[ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="21_e3e0c"]
+[ext_resource type="AudioStream" uid="uid://curu5rxi6emup" path="res://audio/chapter1/soundtrack/STARTING_THEME.wav" id="22_cnpa1"]
+[ext_resource type="AudioStream" uid="uid://d1jjetsntvge2" path="res://audio/chapter1/soundtrack/MIGRATION-THEME.wav" id="23_f535n"]
+[ext_resource type="Script" uid="uid://cs5lt11waw0wm" path="res://scenes/chapter1/comics/audio_transition.gd" id="24_b0wbo"]
+[ext_resource type="AudioStream" uid="uid://dt8b3qx12b5jb" path="res://audio/chapter1/ambient/PANEL_9_10_CRICKETS_NIGHT.wav" id="25_kyud6"]
+
+[node name="ChapterIIComic1" type="Node2D" unique_id=150562309]
+metadata/_edit_vertical_guides_ = [3098.0, 5247.0, 7539.0, 9944.0, 12375.0, 14408.0, 16384.0, 18203.0, 20749.0, 22655.0, 24690.0, 26712.0, 29795.0, 32039.0, 34449.0]
+
+[node name="PaperBackground" type="CanvasLayer" parent="." unique_id=1029947148]
+layer = -1
+follow_viewport_enabled = true
+
+[node name="TextureRect" type="TextureRect" parent="PaperBackground" unique_id=1111791010]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 37962.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_o35dc")
+stretch_mode = 1
+
+[node name="Panel1" parent="PaperBackground" unique_id=299868253 instance=ExtResource("2_k5ynj")]
+position = Vector2(3099, 538)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=485993154]
+position = Vector2(960, 540)
+limit_left = 0
+limit_smoothed = true
+position_smoothing_enabled = true
+editor_draw_limits = true
+
+[node name="Panels" type="Node2D" parent="." unique_id=606931740]
+
+[node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
+script = ExtResource("20_kue4r")
+panels = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+
+[node name="UI" parent="." unique_id=1829896958 instance=ExtResource("21_e3e0c")]
+
+[node name="Audio" type="Node" parent="." unique_id=619569792]
+
+[node name="ThemeStart" type="AudioStreamPlayer" parent="Audio" unique_id=314277606]
+stream = ExtResource("22_cnpa1")
+autoplay = true
+bus = &"Music"
+
+[node name="ThemeMigration" type="AudioStreamPlayer" parent="Audio" unique_id=642829476]
+stream = ExtResource("23_f535n")
+bus = &"Music"
+
+[node name="CrossFadeStartMigration" type="Node" parent="Audio" unique_id=1997574062 node_paths=PackedStringArray("fade_out_player", "fade_in_player")]
+script = ExtResource("24_b0wbo")
+fade_out_player = NodePath("../ThemeStart")
+fade_in_player = NodePath("../ThemeMigration")
+metadata/_custom_type_script = "uid://cs5lt11waw0wm"
+
+[node name="Crickets" type="AudioStreamPlayer" parent="Audio" unique_id=1840641282]
+stream = ExtResource("25_kyud6")
+
+[node name="FadeInCrickets" type="Node" parent="Audio" unique_id=570663985 node_paths=PackedStringArray("fade_in_player")]
+script = ExtResource("24_b0wbo")
+fade_in_player = NodePath("../Crickets")
+metadata/_custom_type_script = "uid://cs5lt11waw0wm"
+
+[node name="FadeOutCrickets" type="Node" parent="Audio" unique_id=933992618 node_paths=PackedStringArray("fade_out_player")]
+script = ExtResource("24_b0wbo")
+fade_out_player = NodePath("../Crickets")
+metadata/_custom_type_script = "uid://cs5lt11waw0wm"
+
+[node name="Panel1" parent="." unique_id=9427924 instance=ExtResource("9_erqdw")]
+position = Vector2(7534, 527)
+
+[node name="Panel2" parent="." unique_id=169044954 instance=ExtResource("10_4a5vy")]
+position = Vector2(9945, 498)
+
+[node name="Panel3" parent="." unique_id=1046666900 instance=ExtResource("11_a6kkx")]
+position = Vector2(12371, 550)
+
+[node name="Panel4" parent="." unique_id=563210966 instance=ExtResource("12_xuvnd")]
+position = Vector2(14406, 539)
+
+[node name="Panel5" parent="." unique_id=1478472780 instance=ExtResource("13_mqxr3")]
+position = Vector2(16386, 531)
+
+[node name="Panel6" parent="." unique_id=774722281 instance=ExtResource("14_tjkkq")]
+position = Vector2(17836, 566)
+
+[node name="Panel7" parent="." unique_id=3961592 instance=ExtResource("15_tg4ti")]
+position = Vector2(22663, 530)
+
+[node name="Panel8" parent="." unique_id=257799841 instance=ExtResource("16_1j3oo")]
+position = Vector2(20749, 550)
+
+[node name="Panel9" parent="." unique_id=668551988 instance=ExtResource("17_jd0lm")]
+position = Vector2(24681, 517)
+
+[node name="Panel10" parent="." unique_id=1665425851 instance=ExtResource("18_040dt")]
+position = Vector2(28943, 536)
+
+[node name="Panel11" parent="." unique_id=1942828207 instance=ExtResource("19_erqdw")]
+position = Vector2(26750, 536)

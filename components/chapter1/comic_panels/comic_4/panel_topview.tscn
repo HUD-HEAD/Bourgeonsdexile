@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bjp2jprdkpbul"]
+
+[ext_resource type="Texture2D" uid="uid://cr731pysnr5fv" path="res://graphics/chapter1/comics/comic4/panelbusjungle/background.png" id="1_34ewk"]
+[ext_resource type="Texture2D" uid="uid://b2jjt6q4ksgrl" path="res://graphics/chapter1/comics/comic4/panelbusjungle/bus.png" id="2_47tvq"]
+
+[node name="PanelTopview" type="Node2D" unique_id=184560352]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=113925711]
+texture = ExtResource("1_34ewk")
+
+[node name="Bus" type="Sprite2D" parent="." unique_id=1053622675]
+position = Vector2(86, 207)
+texture = ExtResource("2_47tvq")

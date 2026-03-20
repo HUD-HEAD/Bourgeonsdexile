@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dbsinxyf8802o"]
+
+[ext_resource type="Texture2D" uid="uid://byaqv12xt3plo" path="res://graphics/chapter2/comics/comic1/frameobjects/kitenge.png" id="1_3p7sb"]
+[ext_resource type="Texture2D" uid="uid://dqcstacyka672" path="res://graphics/chapter2/comics/comic1/frameobjects/jerrycan.png" id="2_x1plt"]
+[ext_resource type="Texture2D" uid="uid://c0ni6br3a7ofl" path="res://graphics/chapter2/comics/comic1/frameobjects/flour.png" id="3_lcwgu"]
+[ext_resource type="Texture2D" uid="uid://c6l35y64fx38m" path="res://graphics/chapter2/comics/comic1/frameobjects/coins.png" id="4_dkuml"]
+[ext_resource type="Texture2D" uid="uid://ccmeohgv4hk1u" path="res://graphics/chapter2/comics/comic1/frameobjects/id.png" id="5_nixq6"]
+[ext_resource type="Texture2D" uid="uid://crire2c81qf75" path="res://graphics/chapter2/comics/comic1/frameobjects/phone.png" id="6_mwbw1"]
+[ext_resource type="Texture2D" uid="uid://54ys8mn6gy73" path="res://graphics/chapter2/comics/comic1/frameobjects/soap.png" id="7_d0jbh"]
+
+[node name="Panel1" type="Node2D" unique_id=299868253]
+
+[node name="Kitenge" type="Sprite2D" parent="." unique_id=262679388]
+position = Vector2(3, 1)
+texture = ExtResource("1_3p7sb")
+
+[node name="Jerrycan" type="Sprite2D" parent="." unique_id=2079555010]
+position = Vector2(597, -220)
+scale = Vector2(0.63503647, 0.63503647)
+texture = ExtResource("2_x1plt")
+
+[node name="Flour" type="Sprite2D" parent="." unique_id=1628045201]
+position = Vector2(475, 232)
+scale = Vector2(0.43984962, 0.4398496)
+texture = ExtResource("3_lcwgu")
+
+[node name="Coins" type="Sprite2D" parent="." unique_id=1230529356]
+position = Vector2(771, 102)
+rotation = -0.15429868
+scale = Vector2(0.5484325, 0.5484325)
+texture = ExtResource("4_dkuml")
+
+[node name="Id" type="Sprite2D" parent="." unique_id=304402267]
+position = Vector2(911, -279)
+rotation = -0.3421098
+scale = Vector2(0.46581197, 0.46581197)
+texture = ExtResource("5_nixq6")
+
+[node name="Phone" type="Sprite2D" parent="." unique_id=424547]
+position = Vector2(939, 200)
+rotation = 0.1768627
+scale = Vector2(0.27999997, 0.27999997)
+texture = ExtResource("6_mwbw1")
+
+[node name="Soap" type="Sprite2D" parent="." unique_id=651406339]
+position = Vector2(907, -85.99994)
+scale = Vector2(0.4800012, 0.4800012)
+texture = ExtResource("7_d0jbh")
