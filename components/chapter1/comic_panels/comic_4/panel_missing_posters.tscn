@@ -3,12 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://djtopj5qv66y1" path="res://graphics/chapter1/comics/comic4/panelmissingboard/missingpeoplebackground.png" id="1_0t1sk"]
 [ext_resource type="Texture2D" uid="uid://c1voa43flkpre" path="res://graphics/chapter1/comics/comic4/panelmissingboard/posters/1.png" id="2_ivfxd"]
 [ext_resource type="Texture2D" uid="uid://ifxsxyc3xtjp" path="res://graphics/chapter1/comics/comic4/panelmissingboard/posters/2.png" id="3_arsgw"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="4_2k27y"]
 [ext_resource type="Texture2D" uid="uid://dnocjgy14qfwx" path="res://graphics/chapter1/comics/comic4/panelmissingboard/posters/3.png" id="4_lmdhm"]
 [ext_resource type="Texture2D" uid="uid://bvkra1wenqi40" path="res://graphics/chapter1/comics/comic4/panelmissingboard/posters/4.png" id="5_2k27y"]
 [ext_resource type="Texture2D" uid="uid://c2enjlc3bpyg1" path="res://graphics/chapter1/comics/comic4/panelmissingboard/NPCAnim/1.png" id="6_lw7vi"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="6_s4ind"]
 [ext_resource type="Texture2D" uid="uid://dr4ou01aytlde" path="res://graphics/chapter1/comics/comic4/panelmissingboard/NPCAnim/2.png" id="7_cqg6m"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="9_lmdhm"]
+[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/click_hide.gd" id="10_lw7vi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_arsgw"]
 animations = [{
@@ -36,16 +38,19 @@ size = Vector2(190, 167)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lmdhm"]
 size = Vector2(216, 322)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2k27y"]
+size = Vector2(771.78955, 436.6316)
+
 [node name="PanelMissingPosters" type="Node2D" unique_id=56505651]
 
 [node name="Missingpeoplebackground" type="Sprite2D" parent="." unique_id=1856382918]
 texture = ExtResource("1_0t1sk")
 
-[node name="DeskWorker" type="AnimatedSprite2D" parent="." unique_id=868426683]
+[node name="DeskWorker" type="AnimatedSprite2D" parent="." unique_id=868426683 node_paths=PackedStringArray("clickable")]
 position = Vector2(283, -10)
 sprite_frames = SubResource("SpriteFrames_arsgw")
-frame = 1
-frame_progress = 1.0
+script = ExtResource("4_2k27y")
+clickable = NodePath("../Posters/4/Clickable")
 
 [node name="Posters" type="Node2D" parent="." unique_id=857600807]
 
@@ -55,7 +60,7 @@ texture = ExtResource("2_ivfxd")
 
 [node name="Clickable" type="Area2D" parent="Posters/1" unique_id=981452831 node_paths=PackedStringArray("nodes_to_show")]
 script = ExtResource("6_s4ind")
-nodes_to_show = [NodePath("../../../PostersBig/1")]
+nodes_to_show = [NodePath("../../../PostersBig/Area2D")]
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Posters/1/Clickable" unique_id=1016683762]
@@ -68,7 +73,7 @@ texture = ExtResource("3_arsgw")
 
 [node name="Clickable" type="Area2D" parent="Posters/2" unique_id=740779893 node_paths=PackedStringArray("nodes_to_show")]
 script = ExtResource("6_s4ind")
-nodes_to_show = [NodePath("../../../PostersBig/2")]
+nodes_to_show = [NodePath("../../../PostersBig/Area2D2")]
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Posters/2/Clickable" unique_id=118218656]
@@ -81,7 +86,7 @@ texture = ExtResource("4_lmdhm")
 
 [node name="Clickable" type="Area2D" parent="Posters/3" unique_id=1611180423 node_paths=PackedStringArray("nodes_to_show")]
 script = ExtResource("6_s4ind")
-nodes_to_show = [NodePath("../../../PostersBig/3")]
+nodes_to_show = [NodePath("../../../PostersBig/Area2D3")]
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Posters/3/Clickable" unique_id=597827050]
@@ -94,7 +99,7 @@ texture = ExtResource("5_2k27y")
 
 [node name="Clickable" type="Area2D" parent="Posters/4" unique_id=1660834676 node_paths=PackedStringArray("nodes_to_show")]
 script = ExtResource("6_s4ind")
-nodes_to_show = [NodePath("../../../PostersBig/4")]
+nodes_to_show = [NodePath("../../../PostersBig/Area2D4")]
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Posters/4/Clickable" unique_id=1715076213]
@@ -103,27 +108,59 @@ shape = SubResource("RectangleShape2D_lmdhm")
 
 [node name="PostersBig" type="Node2D" parent="." unique_id=1835929493]
 
-[node name="1" type="Sprite2D" parent="PostersBig" unique_id=874376169]
+[node name="Area2D" type="Area2D" parent="PostersBig" unique_id=1103725055]
 visible = false
 scale = Vector2(2.375, 2.375)
+script = ExtResource("10_lw7vi")
+
+[node name="1" type="Sprite2D" parent="PostersBig/Area2D" unique_id=874376169]
 texture = ExtResource("2_ivfxd")
 
-[node name="2" type="Sprite2D" parent="PostersBig" unique_id=696329223]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PostersBig/Area2D" unique_id=1400114721]
+position = Vector2(1.4736995, -1.4736911)
+shape = SubResource("RectangleShape2D_2k27y")
+
+[node name="Area2D2" type="Area2D" parent="PostersBig" unique_id=655492370]
 visible = false
-scale = Vector2(2.245, 2.245)
+scale = Vector2(2.375, 2.375)
+script = ExtResource("10_lw7vi")
+
+[node name="2" type="Sprite2D" parent="PostersBig/Area2D2" unique_id=696329223]
+scale = Vector2(0.9452631, 0.9452631)
 texture = ExtResource("3_arsgw")
 
-[node name="3" type="Sprite2D" parent="PostersBig" unique_id=1096805509]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PostersBig/Area2D2" unique_id=2033128424]
+position = Vector2(1.4736995, -1.4736911)
+shape = SubResource("RectangleShape2D_2k27y")
+
+[node name="Area2D3" type="Area2D" parent="PostersBig" unique_id=616970661]
 visible = false
-scale = Vector2(3.84, 3.84)
+scale = Vector2(2.375, 2.375)
+script = ExtResource("10_lw7vi")
+
+[node name="3" type="Sprite2D" parent="PostersBig/Area2D3" unique_id=1096805509]
+scale = Vector2(1.616842, 1.616842)
 texture = ExtResource("4_lmdhm")
 
-[node name="4" type="Sprite2D" parent="PostersBig" unique_id=1472349334]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PostersBig/Area2D3" unique_id=1635843026]
+position = Vector2(1.4736995, -1.4736911)
+shape = SubResource("RectangleShape2D_2k27y")
+
+[node name="Area2D4" type="Area2D" parent="PostersBig" unique_id=1086452847]
 visible = false
-scale = Vector2(2.94, 2.94)
+scale = Vector2(2.375, 2.375)
+script = ExtResource("10_lw7vi")
+
+[node name="4" type="Sprite2D" parent="PostersBig/Area2D4" unique_id=1472349334]
+scale = Vector2(1.2378948, 1.2378948)
 texture = ExtResource("5_2k27y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PostersBig/Area2D4" unique_id=1303896663]
+position = Vector2(1.4736995, -1.4736911)
+shape = SubResource("RectangleShape2D_2k27y")
 
 [node name="TransitionerCounter" type="Node" parent="." unique_id=745698545 node_paths=PackedStringArray("clickables")]
 script = ExtResource("9_lmdhm")
-clickables = [NodePath("../Posters/1/Clickable"), NodePath("../Posters/2/Clickable")]
+clickables = [NodePath("../Posters/1/Clickable"), NodePath("../Posters/2/Clickable"), NodePath("../Posters/3/Clickable"), NodePath("../Posters/4/Clickable")]
+transition_delay = 2.0
 metadata/_custom_type_script = "uid://c44tybeisilbv"
