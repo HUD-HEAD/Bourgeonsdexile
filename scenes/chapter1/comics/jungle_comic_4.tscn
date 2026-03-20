@@ -16,7 +16,7 @@ metadata/_edit_vertical_guides_ = [5131.0]
 
 [node name="PanelPanner" type="Node" parent="." unique_id=665689758 node_paths=PackedStringArray("panels")]
 script = ExtResource("9_yggp2")
-panels = [NodePath("../PanelMissingPosters"), null, NodePath("../JungleComic4FrameFolders"), NodePath("../Comic4PanelTicket"), NodePath("../Comic4PanelPhone"), NodePath("../Comic4PanelMochil"), NodePath("../Comic4Panel6"), null]
+panels = [NodePath("../PanelMissingPosters"), NodePath("../JungleComic4FrameFolders"), NodePath("../Comic4PanelTicket"), NodePath("../Comic4PanelPhone"), NodePath("../Comic4PanelMochil"), NodePath("../Comic4Panel6"), NodePath("../PanelTopview")]
 
 [node name="PaperBackground" type="CanvasLayer" parent="." unique_id=1769624388]
 layer = -1
