@@ -7,6 +7,9 @@
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="5_v5k8l"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="6_k7nq2"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v5k8l"]
+size = Vector2(440, 304)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_j1n0v"]
 animations = [{
 "frames": [{
@@ -21,31 +24,26 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_v5k8l"]
-size = Vector2(440, 304)
-
 [node name="JungleComic3FrameAyuda" type="Node2D" unique_id=639988020]
 
 [node name="Ayuda" type="Sprite2D" parent="." unique_id=2063702875]
 texture = ExtResource("1_1a3om")
 
-[node name="Bubble" type="AnimatedSprite2D" parent="Ayuda" unique_id=2032495367 node_paths=PackedStringArray("clickable")]
+[node name="Clickable" type="Area2D" parent="Ayuda" unique_id=1736714326]
 position = Vector2(599, -219)
-sprite_frames = SubResource("SpriteFrames_j1n0v")
-frame = 1
-frame_progress = 1.0
-script = ExtResource("5_v5k8l")
-clickable = NodePath("Clickable")
-
-[node name="Clickable" type="Area2D" parent="Ayuda/Bubble" unique_id=1736714326]
 script = ExtResource("5_k7nq2")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ayuda/Bubble/Clickable" unique_id=1664996053]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ayuda/Clickable" unique_id=1664996053]
 position = Vector2(-21, -28)
 shape = SubResource("RectangleShape2D_v5k8l")
 
+[node name="Bubble" type="AnimatedSprite2D" parent="Ayuda/Clickable" unique_id=2032495367 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_j1n0v")
+script = ExtResource("5_v5k8l")
+clickable = NodePath("..")
+
 [node name="TransitionerCounter" type="Node" parent="." unique_id=895306961 node_paths=PackedStringArray("clickables")]
 script = ExtResource("6_k7nq2")
-clickables = [NodePath("../Ayuda/Bubble/Clickable")]
+clickables = [NodePath("../Ayuda/Clickable")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
