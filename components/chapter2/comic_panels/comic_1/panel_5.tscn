@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bof4aq2qkhfv7"]
+
+[ext_resource type="Texture2D" uid="uid://erwb3cn3yj8a" path="res://graphics/chapter2/comics/comic1/framegame/1.png" id="1_eyguj"]
+[ext_resource type="Texture2D" uid="uid://b3vfcglcitsyb" path="res://graphics/chapter2/comics/comic1/framegame/2.png" id="2_wdjjo"]
+[ext_resource type="Texture2D" uid="uid://0ct7s8c2dorl" path="res://graphics/chapter2/comics/comic1/framegame/3.png" id="3_ppft7"]
+[ext_resource type="Texture2D" uid="uid://cx4cn3iss8s6g" path="res://graphics/chapter2/comics/comic1/framegame/4.png" id="4_jmwom"]
+[ext_resource type="Texture2D" uid="uid://c2t7ipb6yqf6t" path="res://graphics/chapter2/comics/comic1/framegame/big.png" id="5_c720a"]
+
+[node name="Panel1" type="Node2D" unique_id=299868253]
+
+[node name="1" type="Sprite2D" parent="." unique_id=1684712064]
+position = Vector2(140, -70)
+texture = ExtResource("1_eyguj")
+
+[node name="2" type="Sprite2D" parent="." unique_id=1560726888]
+position = Vector2(349, 7)
+texture = ExtResource("2_wdjjo")
+
+[node name="3" type="Sprite2D" parent="." unique_id=1857248661]
+position = Vector2(100, 240)
+texture = ExtResource("3_ppft7")
+
+[node name="4" type="Sprite2D" parent="." unique_id=1846728180]
+position = Vector2(187, -186)
+texture = ExtResource("4_jmwom")
+
+[node name="Big" type="Sprite2D" parent="." unique_id=696256901]
+position = Vector2(-249, 8)
+texture = ExtResource("5_c720a")

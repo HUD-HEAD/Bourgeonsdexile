@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://38344vnrt72b"]
+
+[ext_resource type="Texture2D" uid="uid://2i1ccfjggta6" path="res://graphics/chapter2/comics/comic1/frame_kidaunt/backgroundinterior.png" id="1_bjtw0"]
+[ext_resource type="Texture2D" uid="uid://dfyvjyj8dy53s" path="res://graphics/chapter2/comics/comic1/frame_kidaunt/women.png" id="2_gjl14"]
+[ext_resource type="Texture2D" uid="uid://c4pohbk7aco5d" path="res://graphics/chapter2/comics/comic1/frame_kidaunt/holdinghands.png" id="3_amgpy"]
+
+[node name="Panel1" type="Node2D" unique_id=299868253]
+
+[node name="Backgroundinterior" type="Sprite2D" parent="." unique_id=965469775]
+texture = ExtResource("1_bjtw0")
+
+[node name="Women" type="Sprite2D" parent="." unique_id=198388976]
+position = Vector2(-8, 60)
+texture = ExtResource("2_gjl14")
+
+[node name="Holdinghands" type="Sprite2D" parent="." unique_id=139816433]
+position = Vector2(343, 69)
+texture = ExtResource("3_amgpy")

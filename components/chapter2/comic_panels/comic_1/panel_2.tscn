@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://nrfkhc1421if"]
+
+[ext_resource type="Texture2D" uid="uid://biuirm0skka0m" path="res://graphics/chapter2/comics/comic1/frameframe/frame.png" id="1_yy3ku"]
+
+[node name="Panel1" type="Node2D" unique_id=299868253]
+
+[node name="Frame" type="Sprite2D" parent="." unique_id=1355148037]
+texture = ExtResource("1_yy3ku")

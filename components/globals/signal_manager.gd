@@ -17,3 +17,8 @@ signal next_panel
 signal show_next_button
 
 @warning_ignore_restore("unused_signal")
+
+
+func _ready():
+	#Trigger transition automatically
+	show_next_button.connect(next_panel.emit)
