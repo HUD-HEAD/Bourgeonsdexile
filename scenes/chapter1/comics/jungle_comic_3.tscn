@@ -33,7 +33,7 @@ follow_viewport_enabled = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 40532.0
+offset_right = 46429.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -56,8 +56,6 @@ panels = [NodePath("../JungleComic3FrameLajas"), NodePath("../JungleComic3PhoneI
 [node name="JungleComic3FrameLajas" parent="." unique_id=2139961229 instance=ExtResource("4_xd2lk")]
 position = Vector2(2903.15, 534)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic3FrameLajas" unique_id=1533090669]
-
 [node name="JungleComic3PhoneInterface" parent="." unique_id=72668983 instance=ExtResource("5_nn42y")]
 position = Vector2(5072, 536)
 
@@ -68,49 +66,45 @@ position = Vector2(7272, 542)
 position = Vector2(9327, 540)
 
 [node name="JungleComic3FrameBackpack" parent="." unique_id=179486542 instance=ExtResource("7_7buws")]
-position = Vector2(11462, 537)
+position = Vector2(12246, 537)
 
 [node name="JungleComic3FramePhone" parent="." unique_id=1068445173 instance=ExtResource("8_7jm3w")]
-position = Vector2(13545, 540)
+position = Vector2(14329, 540)
 
 [node name="JungleComic3FrameCare" parent="." unique_id=1543154223 instance=ExtResource("16_txuxr")]
-position = Vector2(15892, 524.0005)
+position = Vector2(16676, 524.0005)
 
 [node name="PanelUltrasound" parent="." unique_id=2129296444 instance=ExtResource("22_w6r1n")]
-position = Vector2(18197, 534)
+position = Vector2(18981, 534)
 
 [node name="JungleComic3FrameFood" parent="." unique_id=989738392 instance=ExtResource("7_mqqsv")]
-position = Vector2(20673, 540)
+position = Vector2(21457, 540)
 
 [node name="Comic3Panel8" parent="." unique_id=357404315 instance=ExtResource("15_w6r1n")]
-position = Vector2(23000, 540)
+position = Vector2(23784, 540)
 
 [node name="JungleComic3FrameKidLajas" parent="." unique_id=1647902357 instance=ExtResource("8_jrtjm")]
-position = Vector2(25154, 541)
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic3FrameKidLajas" unique_id=486383962]
+position = Vector2(25938, 541)
 
 [node name="JungleComic3FrameAyuda" parent="." unique_id=326118305 instance=ExtResource("9_ouit8")]
-position = Vector2(27487, 540)
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="JungleComic3FrameAyuda" unique_id=1172786784]
+position = Vector2(28271, 540)
 
 [node name="Comic3PanelHelpdesk" parent="." unique_id=1630972808 instance=ExtResource("16_w6r1n")]
-position = Vector2(29575, 534)
+position = Vector2(30359, 534)
 
 [node name="JungleComic3FrameFolders" parent="." unique_id=1516495874 instance=ExtResource("6_lc348")]
-position = Vector2(31733, 550)
+position = Vector2(32517, 550)
 
 [node name="PanelWorker" parent="." unique_id=2091360115 instance=ExtResource("17_w6r1n")]
-position = Vector2(33800, 540)
+position = Vector2(34584, 540)
 
 [node name="PanelAngry" parent="." unique_id=775061280 instance=ExtResource("18_w6r1n")]
-position = Vector2(35700, 540)
+position = Vector2(36484, 540)
 
 [node name="PanelBelly" parent="." unique_id=547145415 instance=ExtResource("19_nn42y")]
-position = Vector2(37759, 540)
+position = Vector2(38543, 540)
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1791395188]
-position = Vector2(40448, 540)
+position = Vector2(41232, 540)
 script = ExtResource("12_txuxr")
 next_scene = ExtResource("13_dx01d")

@@ -49,16 +49,16 @@ position = Vector2(3024, 534)
 position = Vector2(5350, 534)
 
 [node name="Comic4PanelTicket" parent="." unique_id=929245075 instance=ExtResource("5_xs8jl")]
-position = Vector2(7363, 534)
+position = Vector2(7736, 534)
 
 [node name="Comic4PanelPhone" parent="." unique_id=916748018 instance=ExtResource("12_xs8jl")]
-position = Vector2(9164, 540)
+position = Vector2(9958, 540)
 
 [node name="Comic4PanelMochil" parent="." unique_id=873382784 instance=ExtResource("6_12per")]
-position = Vector2(11258, 534)
+position = Vector2(12052, 534)
 
 [node name="Comic4Panel6" parent="." unique_id=1529630051 instance=ExtResource("9_t5lhr")]
-position = Vector2(13407, 540)
+position = Vector2(14201, 540)
 
 [node name="PanelTopview" parent="." unique_id=184560352 instance=ExtResource("10_8767r")]
-position = Vector2(15765, 535)
+position = Vector2(16559, 535)

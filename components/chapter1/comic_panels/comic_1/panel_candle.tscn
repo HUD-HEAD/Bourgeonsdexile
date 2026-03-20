@@ -334,6 +334,7 @@ shape = SubResource("RectangleShape2D_eyl0t")
 position = Vector2(15, -1)
 collision_layer = 4
 collision_mask = 4
+input_pickable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Candle/Match/Lighter" unique_id=681782524]
 position = Vector2(160.5, -44)

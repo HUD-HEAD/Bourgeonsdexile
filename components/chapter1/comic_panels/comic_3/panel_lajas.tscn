@@ -83,3 +83,5 @@ position = Vector2(-566, 0)
 
 [node name="Receptacle2" parent="DragDropPuzzle" unique_id=875631436 instance=ExtResource("9_5fo7e")]
 position = Vector2(485, 0)
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=65572614]

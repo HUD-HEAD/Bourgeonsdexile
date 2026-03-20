@@ -8,6 +8,10 @@ extends Area2D
 		receptacle = _receptacle
 		update_configuration_warnings()
 
+
+func _ready() -> void:
+	input_pickable = false
+
 func is_correctly_placed() -> bool:
 	#TASK assess design, should it support drag and drop without receptacle? Or create overload?
 	if receptacle == null:

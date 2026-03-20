@@ -2,6 +2,35 @@
 
 [ext_resource type="Texture2D" uid="uid://gevy0733xl07" path="res://graphics/chapter1/comics/comic2/frame11/frame11.png" id="1_6g6ab"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_unyn1"]
+[ext_resource type="AudioStream" uid="uid://cmtdjf2ccy6y0" path="res://audio/chapter1/ambient/panel_section_2/panel_2.14_woman_breathing - copia.wav" id="3_m1dd0"]
+[ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/click_enable.gd" id="3_xkunk"]
+
+[sub_resource type="Animation" id="Animation_xkunk"]
+resource_name = "breathe_transition"
+length = 4.3
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_m1dd0")
+}],
+"times": PackedFloat32Array(0.33333334)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m1dd0"]
+_data = {
+&"breathe_transition": SubResource("Animation_xkunk")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m1dd0"]
+size = Vector2(1558, 926)
 
 [node name="Panel13" type="Node2D" unique_id=625001368]
 
@@ -10,5 +39,23 @@ texture = ExtResource("1_6g6ab")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1898139479]
 
-[node name="Transition" type="Node" parent="." unique_id=1671555409]
+[node name="Transition" type="Node" parent="." unique_id=1671555409 node_paths=PackedStringArray("anim_player")]
 script = ExtResource("2_unyn1")
+anim_player = NodePath("../AnimationPlayer")
+timer_wait = 1.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=218408282]
+libraries/ = SubResource("AnimationLibrary_m1dd0")
+autoplay = &"breathe_transition"
+
+[node name="Clickable" type="Area2D" parent="." unique_id=805522846 node_paths=PackedStringArray("node_to_enable")]
+script = ExtResource("3_xkunk")
+node_to_enable = NodePath("../AnimationPlayer")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1222111217]
+position = Vector2(-7, -47)
+shape = SubResource("RectangleShape2D_m1dd0")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=536318758]
+bus = &"Sfx"
