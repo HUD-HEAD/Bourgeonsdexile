@@ -48,7 +48,7 @@ stretch_mode = 1
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1746052083 node_paths=PackedStringArray("panels")]
 script = ExtResource("12_su3g7")
-panels = [NodePath("../Panel1"), NodePath("../Panel2"), NodePath("../WalletPanel"), NodePath("../Panel4"), NodePath("../PanelPhone"), NodePath("../Panel5"), NodePath("../Panel6"), NodePath("../Panel7"), NodePath("../Panel9"), NodePath("../PanelPanKeanuWomen"), NodePath("../Panel11"), NodePath("../Panel12"), NodePath("../Panel13"), NodePath("../Panel14"), NodePath("../SceneEnder")]
+panels = [NodePath("../Panel1"), NodePath("../Panel2"), NodePath("../WalletPanel"), NodePath("../PanelPhone"), NodePath("../Panel4"), NodePath("../Panel5"), NodePath("../Panel6"), NodePath("../Panel7"), NodePath("../Panel9"), NodePath("../PanelPanKeanuWomen"), NodePath("../Panel11"), NodePath("../Panel12"), NodePath("../Panel13"), NodePath("../Panel14"), NodePath("../SceneEnder")]
 
 [node name="UI" parent="." unique_id=39001016 instance=ExtResource("17_1sxs8")]
 
@@ -63,11 +63,11 @@ position = Vector2(6989, 592)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="WalletPanel" unique_id=1264381907]
 
-[node name="Panel4" parent="." unique_id=1050670671 instance=ExtResource("7_o76i3")]
-position = Vector2(8712, 553)
-
 [node name="PanelPhone" parent="." unique_id=2042325380 instance=ExtResource("8_o76i3")]
-position = Vector2(10622, 540)
+position = Vector2(8967, 540)
+
+[node name="Panel4" parent="." unique_id=1050670671 instance=ExtResource("7_o76i3")]
+position = Vector2(11205, 553)
 
 [node name="Panel5" parent="." unique_id=322320134 instance=ExtResource("12_mtmad")]
 position = Vector2(13221, 553)
