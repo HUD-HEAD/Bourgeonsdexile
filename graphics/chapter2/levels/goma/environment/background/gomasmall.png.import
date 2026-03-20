@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3apdyihwq1f8"
-path="res://.godot/imported/empty1.png-c08619611fffb10e150c8ad3ab43217e.ctex"
+uid="uid://jkl012es8f7l"
+path="res://.godot/imported/gomasmall.png-8bca5a8bcc6c7df73684e08a7325f986.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter2/levels/desert/puzzles/1/empty1.png"
-dest_files=["res://.godot/imported/empty1.png-c08619611fffb10e150c8ad3ab43217e.ctex"]
+source_file="res://graphics/chapter2/levels/goma/environment/background/gomasmall.png"
+dest_files=["res://.godot/imported/gomasmall.png-8bca5a8bcc6c7df73684e08a7325f986.ctex"]
 
 [params]
 

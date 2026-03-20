@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vqmnxsnv4b4x"
-path="res://.godot/imported/circle3_1.png-c962ebf575bbcbe6dd0e549f971a3ae4.ctex"
+uid="uid://d0rqmnaqdjkhh"
+path="res://.godot/imported/full1.png-89a8f068655439d2191ebbe3b23ee20c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter2/levels/desert/puzzles/1/circle3_1.png"
-dest_files=["res://.godot/imported/circle3_1.png-c962ebf575bbcbe6dd0e549f971a3ae4.ctex"]
+source_file="res://graphics/chapter2/levels/goma/puzzles/1/full1.png"
+dest_files=["res://.godot/imported/full1.png-89a8f068655439d2191ebbe3b23ee20c.ctex"]
 
 [params]
 
