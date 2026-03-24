@@ -1,8 +1,14 @@
 [gd_scene format=3 uid="uid://bvxqa00feogmd"]
 
-[ext_resource type="Texture2D" uid="uid://b1ufvk831xfjh" path="res://graphics/chapter2/comics/comic1/framephone/phone.png" id="1_4fpro"]
+[ext_resource type="Texture2D" uid="uid://2i1ccfjggta6" path="res://graphics/chapter2/comics/comic1/frame_kidaunt/backgroundinterior.png" id="1_ie77g"]
+[ext_resource type="Texture2D" uid="uid://q3w03po7xtj1" path="res://graphics/chapter2/comics/comic1/framephone/phone1.png" id="2_qy0fl"]
 
 [node name="Panel1" type="Node2D" unique_id=299868253]
 
-[node name="Phone" type="Sprite2D" parent="." unique_id=362114618]
-texture = ExtResource("1_4fpro")
+[node name="Backgroundinterior" type="Sprite2D" parent="." unique_id=939264282]
+position = Vector2(37, -11)
+texture = ExtResource("1_ie77g")
+
+[node name="Phone1" type="Sprite2D" parent="." unique_id=379751112]
+position = Vector2(103, 98)
+texture = ExtResource("2_qy0fl")
