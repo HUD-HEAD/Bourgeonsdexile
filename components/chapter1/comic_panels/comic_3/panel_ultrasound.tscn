@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cw1ikj5js4q4r"]
+
+[ext_resource type="Texture2D" uid="uid://dn7d1yfths6xs" path="res://graphics/chapter1/comics/comic3/frameultrasound.png" id="1_jqq0g"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_rfbcw"]
+
+[node name="PanelUltrasound" type="Node2D" unique_id=2129296444]
+
+[node name="Frameultrasound" type="Sprite2D" parent="." unique_id=1694948877]
+texture = ExtResource("1_jqq0g")
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=865654501]
+script = ExtResource("2_rfbcw")
+timer_wait = 1.0
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=741185108]

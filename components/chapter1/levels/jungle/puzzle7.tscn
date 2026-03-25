@@ -75,10 +75,12 @@ scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_i88af")
 
 [node name="Receptacle3" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="5" unique_id=600273107 instance=ExtResource("6_fso1c")]
-position = Vector2(60, -27)
+position = Vector2(61, 27)
 
 [node name="CompletePuzzle" parent="." index="2" unique_id=1933061263]
 texture = ExtResource("8_fh3gs")
+
+[node name="Camera2D" type="Camera2D" parent="." index="3" unique_id=542926089]
 
 [editable path="BuildingBlocks/PuzzlePiece"]
 [editable path="BuildingBlocks/PuzzlePiece2"]

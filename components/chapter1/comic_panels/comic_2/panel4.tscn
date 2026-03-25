@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dgtdec6plyyvf" path="res://graphics/chapter1/comics/comic2/frame4/keanu_saying_no2.png" id="3_mrifc"]
 [ext_resource type="Texture2D" uid="uid://s0kowkp2sk5k" path="res://graphics/chapter1/comics/comic2/frame4/hand_money.png" id="3_nn1u6"]
 [ext_resource type="Script" uid="uid://001fo68fi8nn" path="res://components/utils/puzzles/draggable_restricted.gd" id="4_mrifc"]
+[ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/area_entered_enable.gd" id="6_mrifc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lgclf"]
 animations = [{
@@ -19,6 +20,9 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mrifc"]
+radius = 231.14497
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6xkyb"]
 radius = 170.00294
@@ -72,6 +76,14 @@ timer_wait = 2.0
 clip_children = 2
 sprite_frames = SubResource("SpriteFrames_lgclf")
 
+[node name="TriggerArea" type="Area2D" parent="KeanuSayingNo" unique_id=1904174033 node_paths=PackedStringArray("node_to_enable")]
+script = ExtResource("6_mrifc")
+node_to_enable = NodePath("../../AnimationPlayer")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KeanuSayingNo/TriggerArea" unique_id=450011250]
+position = Vector2(22, -129)
+shape = SubResource("CircleShape2D_mrifc")
+
 [node name="DraggableRestricted" type="Area2D" parent="KeanuSayingNo" unique_id=1064461294]
 position = Vector2(-336, 449)
 script = ExtResource("4_mrifc")
@@ -88,3 +100,4 @@ shape = SubResource("CircleShape2D_6xkyb")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=38084592]
 libraries/ = SubResource("AnimationLibrary_64bem")
+autoplay = &"transition"
