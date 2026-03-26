@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dlfijrweysiiw"]
+
+[ext_resource type="Script" uid="uid://chrql2wwvrdt1" path="res://components/utils/puzzles/drag_drop_puzzle.gd" id="1_nrmhh"]
+[ext_resource type="Material" uid="uid://muqqkyjl54xq" path="res://components/utils/puzzles/mask_out/mat_mask_out.tres" id="7_o6sqr"]
+[ext_resource type="PackedScene" uid="uid://b15l0pq6dea3h" path="res://components/utils/puzzles/puzzle_piece_template.tscn" id="9_xasnt"]
+[ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="10_bo17s"]
+
+[node name="PuzzleMasking" type="Node2D" unique_id=1941159865 node_paths=PackedStringArray("complete_image", "outline_image")]
+script = ExtResource("1_nrmhh")
+complete_image = NodePath("CompletePuzzle")
+outline_image = NodePath("OutlinePuzzle")
+metadata/_custom_type_script = "uid://chrql2wwvrdt1"
+
+[node name="OutlinePuzzle" type="Sprite2D" parent="." unique_id=705975536]
+editor_description = "Outline hint of puzzle. Should be at the top of hierarchy."
+
+[node name="BuildingBlocks" type="CanvasGroup" parent="." unique_id=245013489]
+editor_description = "Helper ode to hold children. Duplicate as many PuzzlePiece and Receptacles as needed for complete puzzle."
+
+[node name="PuzzlePiece" parent="BuildingBlocks" unique_id=729525704 instance=ExtResource("9_xasnt")]
+
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="2" unique_id=1105802255]
+shape = null
+
+[node name="PuzzlePieceHollow" parent="BuildingBlocks" unique_id=430304911 instance=ExtResource("9_xasnt")]
+
+[node name="PuzzleMaskout" type="Sprite2D" parent="BuildingBlocks/PuzzlePieceHollow/Draggable/PuzzlePieceSprite" parent_id_path=PackedInt32Array(430304911, 1266676352) index="0" unique_id=1455175165]
+material = ExtResource("7_o6sqr")
+
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePieceHollow/Draggable" parent_id_path=PackedInt32Array(430304911, 2116105691) index="2" unique_id=1105802255]
+shape = null
+
+[node name="Receptacle" parent="BuildingBlocks" unique_id=600273107 instance=ExtResource("10_bo17s")]
+
+[node name="CompletePuzzle" type="Sprite2D" parent="." unique_id=1665313748]
+editor_description = "Image to show when puzzle is complete. Should be at the bottom of hierarchy."
+visible = false
+
+[editable path="BuildingBlocks/PuzzlePiece"]
+[editable path="BuildingBlocks/PuzzlePieceHollow"]
