@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b7f0ua4xayqxf"]
+
+[ext_resource type="Texture2D" uid="uid://xuy6cdsntvyl" path="res://graphics/chapter2/comics/comic2/framerain/framerain.png" id="1_87dp8"]
+
+[node name="Panel4" type="Node2D" unique_id=547383153]
+
+[node name="Framerain" type="Sprite2D" parent="." unique_id=1229464294]
+position = Vector2(4, -12)
+texture = ExtResource("1_87dp8")

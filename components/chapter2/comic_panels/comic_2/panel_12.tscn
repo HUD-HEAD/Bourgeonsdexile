@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cse4dme0xetc3"]
+
+[ext_resource type="Texture2D" uid="uid://6moldxsq3q74" path="res://graphics/chapter2/comics/comic2/framebusarriving/mockup.png" id="1_sj4lw"]
+
+[node name="Panel1" type="Node2D" unique_id=547383153]
+
+[node name="Mockup" type="Sprite2D" parent="." unique_id=1603247808]
+position = Vector2(2, 3)
+texture = ExtResource("1_sj4lw")

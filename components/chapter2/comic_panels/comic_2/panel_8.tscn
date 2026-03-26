@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://t6aiy6ygkqlj"]
+
+[ext_resource type="Texture2D" uid="uid://drjos7jwemnkf" path="res://graphics/chapter2/comics/comic2/framinsidetent/frameinsidetent.png" id="1_7totp"]
+
+[node name="Panel1" type="Node2D" unique_id=547383153]
+
+[node name="Frameinsidetent" type="Sprite2D" parent="." unique_id=1557093435]
+position = Vector2(3, -3)
+texture = ExtResource("1_7totp")

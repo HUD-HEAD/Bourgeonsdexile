@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c4wqbvxsrfu6w"]
+
+[ext_resource type="Texture2D" uid="uid://mpmu7uudmrts" path="res://graphics/chapter2/comics/comic2/framescrolling/framephoneplaceholder.png" id="1_evhsb"]
+
+[node name="Panel1" type="Node2D" unique_id=547383153]
+
+[node name="Framephoneplaceholder" type="Sprite2D" parent="." unique_id=187877074]
+position = Vector2(0, 1)
+texture = ExtResource("1_evhsb")

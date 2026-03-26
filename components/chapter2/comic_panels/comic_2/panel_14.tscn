@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://duvxs2qfj8pfu"]
+
+[ext_resource type="Texture2D" uid="uid://bvpltrwv48itn" path="res://graphics/chapter2/comics/comic2/framequeuewc/queue1.png" id="1_bjf02"]
+
+[node name="Panel1" type="Node2D" unique_id=547383153]
+
+[node name="Queue1" type="Sprite2D" parent="." unique_id=1362635565]
+position = Vector2(0, -1)
+texture = ExtResource("1_bjf02")
