@@ -41,7 +41,7 @@ func _on_piece_dropped():
 		var tween : Tween = _snap_to_receptacle()
 		tween.tween_callback(_validate_placement)
 
-##Move PuzzlePiece to front.
+##Move PuzzlePiece to front (on top of siblings).
 func _on_piece_clicked():
 	move_to_front()
 
