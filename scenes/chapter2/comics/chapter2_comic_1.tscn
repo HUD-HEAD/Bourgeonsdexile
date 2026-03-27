@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://c6knungwprlgs" path="res://components/chapter2/comic_panels/comic_1/panel_12.tscn" id="17_jd0lm"]
 [ext_resource type="PackedScene" uid="uid://by0uwcf5syiic" path="res://components/chapter2/comic_panels/comic_1/panel_13.tscn" id="18_040dt"]
 [ext_resource type="PackedScene" uid="uid://38344vnrt72b" path="res://components/chapter2/comic_panels/comic_1/panel_14.tscn" id="19_erqdw"]
+[ext_resource type="PackedScene" uid="uid://cl7jmbkryr1h7" path="res://components/chapter2/comic_panels/comic_1/panel_16.tscn" id="20_4a5vy"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="20_kue4r"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="21_e3e0c"]
 [ext_resource type="AudioStream" uid="uid://curu5rxi6emup" path="res://audio/chapter1/soundtrack/STARTING_THEME.wav" id="22_cnpa1"]
@@ -102,7 +103,7 @@ position = Vector2(14406, 539)
 position = Vector2(16386, 531)
 
 [node name="Panel6" parent="." unique_id=774722281 instance=ExtResource("14_tjkkq")]
-position = Vector2(17836, 566)
+position = Vector2(17997, 565)
 
 [node name="Panel7" parent="." unique_id=3961592 instance=ExtResource("15_tg4ti")]
 position = Vector2(22663, 530)
@@ -111,10 +112,13 @@ position = Vector2(22663, 530)
 position = Vector2(20749, 550)
 
 [node name="Panel9" parent="." unique_id=668551988 instance=ExtResource("17_jd0lm")]
-position = Vector2(24681, 517)
+position = Vector2(26716, 531)
 
 [node name="Panel10" parent="." unique_id=1665425851 instance=ExtResource("18_040dt")]
-position = Vector2(28943, 536)
+position = Vector2(31407, 532)
 
 [node name="Panel11" parent="." unique_id=1942828207 instance=ExtResource("19_erqdw")]
-position = Vector2(26750, 536)
+position = Vector2(24687, 518)
+
+[node name="Panel12" parent="." unique_id=712009177 instance=ExtResource("20_4a5vy")]
+position = Vector2(28780, 524)
