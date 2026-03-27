@@ -22,7 +22,7 @@ signal show_next_button
 func _ready():
 	#Trigger transition automatically
 	show_next_button.connect(next_panel.emit)
-	next_panel.connect(_on_next_panel)
+	#next_panel.connect(_on_next_panel)
 
 func _on_next_panel():
 	print_debug("next panel")

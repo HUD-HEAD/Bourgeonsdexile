@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://db18mct0e4e7l"]
+
+[ext_resource type="Texture2D" uid="uid://db1kuln8of6od" path="res://graphics/chapter2/comics/comic3/framehandsbar/1.png" id="1_gv5hn"]
+
+[node name="Panel2" type="Node2D" unique_id=1615938535]
+
+[node name="1" type="Sprite2D" parent="." unique_id=1781353594]
+position = Vector2(-1, 6)
+texture = ExtResource("1_gv5hn")

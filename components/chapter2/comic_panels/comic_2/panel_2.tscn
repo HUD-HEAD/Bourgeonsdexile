@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://xcbpbffacfqp"]
+
+[ext_resource type="Texture2D" uid="uid://hiwhkbg5owk1" path="res://graphics/chapter2/comics/comic2/framequeue/bg.png" id="1_40y3a"]
+[ext_resource type="Texture2D" uid="uid://b5anrreq18i6t" path="res://graphics/chapter2/comics/comic2/framequeue/queue.png" id="2_flt0j"]
+[ext_resource type="Texture2D" uid="uid://ca3hpqk38fpsj" path="res://graphics/chapter2/comics/comic2/framequeue/amani.png" id="3_onw7a"]
+[ext_resource type="Texture2D" uid="uid://cgjevfspepbmt" path="res://graphics/chapter2/comics/comic2/framequeue/kid.png" id="4_qmg78"]
+
+[node name="Panel2" type="Node2D" unique_id=547383153]
+
+[node name="Bg" type="Sprite2D" parent="." unique_id=428804493]
+texture = ExtResource("1_40y3a")
+
+[node name="Queue" type="Sprite2D" parent="." unique_id=1467216919]
+position = Vector2(-144, 105)
+texture = ExtResource("2_flt0j")
+
+[node name="Amani" type="Sprite2D" parent="." unique_id=1919095669]
+position = Vector2(-506, 148)
+texture = ExtResource("3_onw7a")
+
+[node name="Kid" type="Sprite2D" parent="." unique_id=1554054924]
+position = Vector2(-430, 191)
+texture = ExtResource("4_qmg78")

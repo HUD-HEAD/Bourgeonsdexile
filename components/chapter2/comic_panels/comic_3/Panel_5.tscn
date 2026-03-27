@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dxvnkp4f3rnwd"]
+
+[ext_resource type="Texture2D" uid="uid://bwj3jsro1xssk" path="res://graphics/chapter2/comics/comic3/framerubbinglegs/bg.png" id="1_r0bhn"]
+[ext_resource type="Texture2D" uid="uid://hilivak2uwr4" path="res://graphics/chapter2/comics/comic3/framerubbinglegs/hand.png" id="2_1wrmg"]
+
+[node name="Panel1" type="Node2D" unique_id=958587886]
+
+[node name="Bg" type="Sprite2D" parent="." unique_id=998700072]
+position = Vector2(-2, -2)
+texture = ExtResource("1_r0bhn")
+
+[node name="Hand" type="Sprite2D" parent="." unique_id=385235510]
+position = Vector2(-512, -337)
+texture = ExtResource("2_1wrmg")

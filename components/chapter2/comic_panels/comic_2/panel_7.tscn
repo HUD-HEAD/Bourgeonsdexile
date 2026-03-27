@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://b78hoghov0bc0"]
+
+[ext_resource type="Texture2D" uid="uid://dcslykyaik3pc" path="res://graphics/chapter2/comics/comic2/frameobjects/kiitenge wrapped.png" id="1_2331d"]
+[ext_resource type="Texture2D" uid="uid://bff0ajxr03cit" path="res://graphics/chapter2/comics/comic2/frameobjects/box.png" id="2_rnxw4"]
+[ext_resource type="Texture2D" uid="uid://d0pkxyx8guw51" path="res://graphics/chapter2/comics/comic2/frameobjects/bottle.png" id="3_uktpe"]
+[ext_resource type="Texture2D" uid="uid://d1twxxgkwlsob" path="res://graphics/chapter2/comics/comic2/frameobjects/brush.png" id="4_kj2th"]
+[ext_resource type="Texture2D" uid="uid://bmxr6b3cq6qqp" path="res://graphics/chapter2/comics/comic2/frameobjects/pasta.png" id="5_saobf"]
+[ext_resource type="Texture2D" uid="uid://ccvs8fkqjf45s" path="res://graphics/chapter2/comics/comic2/frameobjects/pills.png" id="6_eibhh"]
+[ext_resource type="Texture2D" uid="uid://cxworl31f6sui" path="res://graphics/chapter2/comics/comic2/frameobjects/soap.png" id="7_t0ots"]
+
+[node name="Panel1" type="Node2D" unique_id=547383153]
+
+[node name="KiitengeWrapped" type="Sprite2D" parent="." unique_id=1641107014]
+position = Vector2(-414, 2)
+texture = ExtResource("1_2331d")
+
+[node name="Box" type="Sprite2D" parent="." unique_id=1630939634]
+position = Vector2(430, -266)
+texture = ExtResource("2_rnxw4")
+
+[node name="Bottle" type="Sprite2D" parent="." unique_id=1891058632]
+position = Vector2(171, 180)
+texture = ExtResource("3_uktpe")
+
+[node name="Brush" type="Sprite2D" parent="." unique_id=554274327]
+position = Vector2(897, -41)
+rotation = 0.5806003
+texture = ExtResource("4_kj2th")
+
+[node name="Pasta" type="Sprite2D" parent="." unique_id=792630312]
+position = Vector2(210.99994, -419.00003)
+rotation = 0.68295705
+texture = ExtResource("5_saobf")
+
+[node name="Pills" type="Sprite2D" parent="." unique_id=1416693168]
+position = Vector2(681, -67)
+texture = ExtResource("6_eibhh")
+
+[node name="Soap" type="Sprite2D" parent="." unique_id=770075607]
+position = Vector2(432, 173)
+texture = ExtResource("7_t0ots")
