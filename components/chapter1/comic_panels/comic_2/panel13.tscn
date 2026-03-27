@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cgsvxrtoxhfja"]
 
 [ext_resource type="Texture2D" uid="uid://gevy0733xl07" path="res://graphics/chapter1/comics/comic2/frame11/frame11.png" id="1_6g6ab"]
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_unyn1"]
 [ext_resource type="AudioStream" uid="uid://cmtdjf2ccy6y0" path="res://audio/chapter1/ambient/panel_section_2/panel_2.14_woman_breathing - copia.wav" id="3_m1dd0"]
 [ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/click_enable.gd" id="3_xkunk"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_m1dd0"]
 
 [sub_resource type="Animation" id="Animation_xkunk"]
 resource_name = "breathe_transition"
@@ -39,11 +39,6 @@ texture = ExtResource("1_6g6ab")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1898139479]
 
-[node name="Transition" type="Node" parent="." unique_id=1671555409 node_paths=PackedStringArray("anim_player")]
-script = ExtResource("2_unyn1")
-anim_player = NodePath("../AnimationPlayer")
-timer_wait = 1.0
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=218408282]
 libraries/ = SubResource("AnimationLibrary_m1dd0")
 autoplay = &"breathe_transition"
@@ -59,3 +54,8 @@ shape = SubResource("RectangleShape2D_m1dd0")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=536318758]
 bus = &"Sfx"
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=1930619816 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_m1dd0")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"

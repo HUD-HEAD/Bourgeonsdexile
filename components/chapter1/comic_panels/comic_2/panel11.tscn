@@ -120,14 +120,9 @@ _data = {
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=866049917]
 
-[node name="Transition" type="Node" parent="." unique_id=1495977932]
-script = ExtResource("1_b7mxx")
-
 [node name="Back" type="Sprite2D" parent="." unique_id=1098473463]
 visible = false
 texture = ExtResource("2_bgmgr")
-
-[node name="VisibleOnScreenEnabler2D2" type="VisibleOnScreenEnabler2D" parent="." unique_id=1939418866]
 
 [node name="ShadyHand" type="Area2D" parent="." unique_id=221277162 node_paths=PackedStringArray("node_to_enable")]
 position = Vector2(541, -52)

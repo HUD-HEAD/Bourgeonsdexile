@@ -30,6 +30,8 @@ func _next_panel():
 	assert(idx + 1< panels.size(), "idx inside panels number")
 	idx += 1
 	
+	print_debug("next panel ", idx)
+	
 	_pan_to(panels[idx])
 
 

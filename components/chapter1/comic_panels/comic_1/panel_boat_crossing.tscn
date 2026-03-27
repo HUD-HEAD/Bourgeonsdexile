@@ -15,10 +15,10 @@ enable_node_path = NodePath("")
 
 [node name="ScrollingBackground" parent="." unique_id=231777281 instance=ExtResource("1_d8as8")]
 
-[node name="Background" parent="ScrollingBackground/ClipMask/PanNode" parent_id_path=PackedInt32Array(231777281, 379019586) index="0" unique_id=524227348]
+[node name="Background" parent="ScrollingBackground/PanNode" parent_id_path=PackedInt32Array(231777281, 379019586) index="0" unique_id=524227348]
 texture = ExtResource("1_5fq6s")
 
-[node name="Frame6Boat" type="Sprite2D" parent="ScrollingBackground/ClipMask" parent_id_path=PackedInt32Array(231777281, 231777281) index="1" unique_id=219422816]
+[node name="Frame6Boat" type="Sprite2D" parent="ScrollingBackground" unique_id=219422816]
 position = Vector2(0, 240)
 texture = ExtResource("2_6enyl")
 script = ExtResource("3_j3dv7")
