@@ -122,15 +122,15 @@ rect = Rect2(-10, -10, 1420, 79)
 position = Vector2(26707, 540)
 
 [node name="JungleComic1Frame6" parent="Panels" unique_id=67005951 instance=ExtResource("40_jpuy7")]
-position = Vector2(29794, 540)
+position = Vector2(28594, 540)
 
 [node name="JungleComic1Frame7" parent="Panels" unique_id=183188217 instance=ExtResource("19_p78bu")]
-position = Vector2(32028, 540)
+position = Vector2(30828, 540)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComic1Frame7" unique_id=806881675]
 
 [node name="JungleComic1Frame9" parent="Panels" unique_id=1870862331 instance=ExtResource("13_54bx8")]
-position = Vector2(34448, 540)
+position = Vector2(33248, 540)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComic1Frame9" unique_id=1759255997]
 
