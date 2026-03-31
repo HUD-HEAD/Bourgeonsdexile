@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b1ybct1a4a20o"]
+
+[ext_resource type="Texture2D" uid="uid://bj6eeosevnufd" path="res://graphics/chapter2/comics/comic4/framedoctorcalling/1.png" id="1_kdjn7"]
+
+[node name="Panel1" type="Node2D" unique_id=690781203]
+
+[node name="1" type="Sprite2D" parent="." unique_id=708665583]
+position = Vector2(2, -4)
+texture = ExtResource("1_kdjn7")
