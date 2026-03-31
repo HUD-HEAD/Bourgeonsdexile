@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c8dpjin32hu5i"]
+
+[ext_resource type="Texture2D" uid="uid://dx68b05t8pnc8" path="res://graphics/chapter2/comics/comic4/frameblackout/blackout.png" id="1_q1sof"]
+
+[node name="Panel7" type="Node2D" unique_id=396620923]
+
+[node name="Blackout" type="Sprite2D" parent="." unique_id=1504816131]
+position = Vector2(2, 1)
+texture = ExtResource("1_q1sof")

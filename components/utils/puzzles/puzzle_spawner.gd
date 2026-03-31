@@ -63,8 +63,12 @@ func _spawn_puzzle():
 ## Activate given puzzle piece. #NOTICE does NOT check if idx is valid
 func _spawn_piece(piece_idx : int):
 	var piece : PuzzlePiece = puzzle.puzzle_pieces[piece_idx]
-	var target_pos = _compute_spawn_position(piece_idx)
-	piece.spawn_piece(target_pos)
+	
+	if GameManager.puzzle_automatic_positioning :
+		var target_pos = _compute_spawn_position(piece_idx)
+		piece.spawn_piece(target_pos)
+	else :
+		piece.spawn_piece(piece.global_position)
 
 func _compute_spawn_position(piece_idx : int):
 	var prev_piece_idx = piece_idx-piece_spawners.size()

@@ -30,6 +30,7 @@ CustomCursor="*res://components/globals/custom_cursor.gd"
 InputManager="*res://components/globals/input_manager.gd"
 SceneManager="*res://components/globals/scene_manager.gd"
 AudioManager="*uid://ciqufic027swg"
+GameManager="*uid://d2wginhwv3f4"
 
 [display]
 

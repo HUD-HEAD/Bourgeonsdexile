@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://2q3jntyih2e7"]
+
+[ext_resource type="Texture2D" uid="uid://bu2hdroobqqke" path="res://graphics/chapter2/comics/comic4/framelastpush/amani.png" id="1_nwql2"]
+[ext_resource type="Texture2D" uid="uid://dqr74qqcukrpi" path="res://graphics/chapter2/comics/comic4/framelastpush/full.png" id="2_df830"]
+
+[node name="Panel1" type="Node2D" unique_id=690781203]
+
+[node name="Amani" type="Sprite2D" parent="." unique_id=112088452]
+position = Vector2(2, 2)
+texture = ExtResource("1_nwql2")
+
+[node name="Full" type="Sprite2D" parent="." unique_id=1332004319]
+position = Vector2(1003, 22)
+texture = ExtResource("2_df830")
