@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://h67bkwvbgnvx"]
 
+[ext_resource type="Script" uid="uid://bwhw2o2u7v43i" path="res://components/utils/comics/vertical_sine_anim.gd" id="2_5atxa"]
 [ext_resource type="Texture2D" uid="uid://bbgi5vlsm1bhe" path="res://graphics/chapter1/comics/comic4/framebus1/backgroundbus.png" id="2_bgadb"]
 [ext_resource type="Texture2D" uid="uid://c5jmdmivdd4xy" path="res://graphics/chapter1/comics/comic4/framebus1/1.png" id="3_pgxus"]
 [ext_resource type="Texture2D" uid="uid://dag5h48hohxj1" path="res://graphics/chapter1/comics/comic4/framebus1/2.png" id="4_5atxa"]
@@ -15,7 +16,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("1:visible")
+tracks/0/path = NodePath("Frame6Comic4/Clickable/1:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -27,7 +28,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("2:visible")
+tracks/1/path = NodePath("Frame6Comic4/2:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -42,7 +43,7 @@ resource_name = "look_window"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("1:visible")
+tracks/0/path = NodePath("Frame6Comic4/Clickable/1:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -54,7 +55,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("2:visible")
+tracks/1/path = NodePath("Frame6Comic4/2:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -76,23 +77,26 @@ _data = {
 
 [node name="Frame6Comic4" type="Sprite2D" parent="." unique_id=717591427]
 texture = ExtResource("2_bgadb")
+script = ExtResource("2_5atxa")
+amplitude = 30.0
+speed = 4.0
 
-[node name="1" type="Sprite2D" parent="." unique_id=413570612]
+[node name="2" type="Sprite2D" parent="Frame6Comic4" unique_id=20395724]
+visible = false
+position = Vector2(-137, 38)
+texture = ExtResource("4_5atxa")
+
+[node name="Clickable" type="Area2D" parent="Frame6Comic4" unique_id=1311678241 node_paths=PackedStringArray("node_to_enable")]
 position = Vector2(-113, 46)
-texture = ExtResource("3_pgxus")
-
-[node name="Clickable" type="Area2D" parent="1" unique_id=1311678241 node_paths=PackedStringArray("node_to_enable")]
 script = ExtResource("4_pgxus")
 node_to_enable = NodePath("../../AnimationPlayer")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="1/Clickable" unique_id=1483473707]
-shape = SubResource("CapsuleShape2D_pgxus")
+[node name="1" type="Sprite2D" parent="Frame6Comic4/Clickable" unique_id=413570612]
+texture = ExtResource("3_pgxus")
 
-[node name="2" type="Sprite2D" parent="." unique_id=20395724]
-visible = false
-position = Vector2(-137, 38)
-texture = ExtResource("4_5atxa")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame6Comic4/Clickable" unique_id=1483473707]
+shape = SubResource("CapsuleShape2D_pgxus")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1765573639]
 libraries/ = SubResource("AnimationLibrary_brhga")
@@ -100,5 +104,5 @@ autoplay = &"look_window"
 
 [node name="TransitionerCounter" type="Node" parent="." unique_id=259781553 node_paths=PackedStringArray("clickables")]
 script = ExtResource("5_pgxus")
-clickables = [NodePath("../1/Clickable")]
+clickables = [NodePath("../Frame6Comic4/Clickable")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
