@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://chrql2wwvrdt1" path="res://components/utils/puzzles/drag_drop_puzzle.gd" id="1_6s0d0"]
 [ext_resource type="PackedScene" uid="uid://b15l0pq6dea3h" path="res://components/utils/puzzles/puzzle_piece_template.tscn" id="2_wx184"]
 [ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="3_2pncr"]
+[ext_resource type="AudioStream" uid="uid://3ffx61j4su3a" path="res://audio/chapter1/sfx/resolve_puzzle.wav" id="4_wx184"]
+[ext_resource type="AudioStream" uid="uid://bj0aafjx3b0wc" path="res://audio/chapter1/sfx/puzzle_sound_1_intercalate_with_2.wav" id="5_2pncr"]
 
 [node name="DragDropPuzzle" type="Node2D" unique_id=1889271473 node_paths=PackedStringArray("complete_image", "outline_image")]
 editor_description = "To create new drag and drop puzzles, in FileSystem -> Right click --> New inherited scene, then modify and save new scene."
@@ -26,5 +28,16 @@ shape = null
 [node name="CompletePuzzle" type="Sprite2D" parent="." unique_id=1933061263]
 editor_description = "Image to show when puzzle is complete. Should be at the bottom of hierarchy."
 visible = false
+
+[node name="ResolvePlayer" type="AudioStreamPlayer" parent="." unique_id=186287413]
+unique_name_in_owner = true
+stream = ExtResource("4_wx184")
+bus = &"Sfx"
+
+[node name="CorrectPiecePlayer" type="AudioStreamPlayer" parent="." unique_id=448903763]
+unique_name_in_owner = true
+stream = ExtResource("5_2pncr")
+max_polyphony = 2
+bus = &"Sfx"
 
 [editable path="BuildingBlocks/PuzzlePiece"]
