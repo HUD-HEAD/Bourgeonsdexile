@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://5wnr5d6ytn4y" path="res://graphics/chapter1/comics/comic2/wallet/coin6.png" id="8_wuyp4"]
 [ext_resource type="Texture2D" uid="uid://ntpdjkq2pg6c" path="res://graphics/chapter1/comics/comic2/wallet/coin2.png" id="10_0fb2c"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="11_t4wyu"]
+[ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/PlayOnClick.tscn" id="12_k8j1w"]
+[ext_resource type="AudioStream" uid="uid://deyjq3o2mi78n" path="res://audio/chapter1/ambient/panel_section_2/panel_2.3_coin_interactive.wav" id="13_nrtdw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iaepd"]
 radius = 83.15047
@@ -120,4 +122,8 @@ shape = SubResource("CircleShape2D_0fb2c")
 
 [node name="PanelTransitionTrigger" type="Node" parent="." unique_id=178613974 node_paths=PackedStringArray("clickables")]
 script = ExtResource("11_t4wyu")
+clickables = [NodePath("../Coin1"), NodePath("../Coin2"), NodePath("../Coin3"), NodePath("../Coin4"), NodePath("../Coin5"), NodePath("../Coin6")]
+
+[node name="PlayOnClick" parent="." unique_id=190012534 node_paths=PackedStringArray("clickables") instance=ExtResource("12_k8j1w")]
+stream = ExtResource("13_nrtdw")
 clickables = [NodePath("../Coin1"), NodePath("../Coin2"), NodePath("../Coin3"), NodePath("../Coin4"), NodePath("../Coin5"), NodePath("../Coin6")]

@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/chapter1/main_characters/jungle_woman.tscn" id="4_qtrgl"]
 [ext_resource type="SpriteFrames" uid="uid://dqrsyjauj12el" path="res://components/chapter1/main_characters/companion_2_sprite_frames.tres" id="5_3mhfa"]
 [ext_resource type="SpriteFrames" uid="uid://dg15c2titrtgq" path="res://components/chapter1/main_characters/companion_3_sprite_frames.tres" id="6_f60m6"]
+[ext_resource type="AudioStream" uid="uid://dl0wnootjb8ct" path="res://audio/chapter1/ambient/panel_section_2/panel_2.12_steps.wav" id="7_ce0p0"]
 [ext_resource type="PackedScene" uid="uid://bomhqj3lxkka3" path="res://components/utils/comics/scrolling_background.tscn" id="9_ww6qy"]
 
 [node name="Panel12" type="Node2D" unique_id=425216191]
@@ -54,6 +55,10 @@ frame_progress = 0.0
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1010673716]
 rect = Rect2(-904, -429, 1793, 885)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=112323387]
+stream = ExtResource("7_ce0p0")
+autoplay = true
 
 [editable path="ScrollingBackground"]
 [editable path="ScrollingBackground/JungleWoman"]

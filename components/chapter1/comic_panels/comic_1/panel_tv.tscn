@@ -18,7 +18,7 @@
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="16_wjbi5"]
 [ext_resource type="AudioStream" uid="uid://doqn4u61njfc" path="res://audio/chapter1/ambient/panel_7_TV_NOTICE.wav" id="17_1hmxl"]
 [ext_resource type="AudioStream" uid="uid://b6hvqeom3hopf" path="res://audio/sfx_old/tv-shutdown-2-386173.mp3" id="17_u62ak"]
-[ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/sfx_player.tscn" id="18_h38fu"]
+[ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/PlayOnClick.tscn" id="18_h38fu"]
 [ext_resource type="AudioStream" uid="uid://dg30elulot006" path="res://audio/chapter1/ambient/panel_7_switch_on_off_INTERACTIVE.wav" id="19_dwrql"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x2xsn"]

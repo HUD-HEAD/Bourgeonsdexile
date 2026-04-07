@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="3_jt4ib"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="5_dheej"]
 [ext_resource type="Texture2D" uid="uid://sapjtumatwp0" path="res://graphics/chapter1/comics/comic2/frame7/frame7_hand1.png" id="5_rjer4"]
+[ext_resource type="AudioStream" uid="uid://dy40n6mckp8l6" path="res://audio/chapter1/ambient/panel_section_2/PANEL_2.8_oh_no_woman.wav" id="9_e736u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dheej"]
 size = Vector2(1092, 669)
@@ -84,7 +85,6 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id="Animation_jt4ib"]
 resource_name = "interrupt_shake"
-length = 0.5
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -154,10 +154,24 @@ tracks/5/path = NodePath("Back:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.03333333),
+"times": PackedFloat32Array(0, 0.0333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AudioStreamPlayer")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.0333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dheej"]
@@ -225,3 +239,7 @@ autoplay = &"interrupt_shake"
 script = ExtResource("5_dheej")
 anim_player = NodePath("../AnimationPlayer")
 metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1328628015]
+stream = ExtResource("9_e736u")
+bus = &"Sfx"

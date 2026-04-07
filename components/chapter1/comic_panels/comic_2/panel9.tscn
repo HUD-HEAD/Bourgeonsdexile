@@ -5,7 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://ckdp34xc2wgll" path="res://graphics/chapter1/comics/comic2/frame8/frame8_bubble1.png" id="4_aouuj"]
 [ext_resource type="Texture2D" uid="uid://beojgu8nwb8xd" path="res://graphics/chapter1/comics/comic2/frame8/frame8_bubble2.png" id="5_uwv25"]
 [ext_resource type="Texture2D" uid="uid://camfbxnwup67b" path="res://graphics/chapter1/comics/comic2/frame8/frame8_bubble3.png" id="6_kviin"]
+[ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/PlayOnClick.tscn" id="7_rr022"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="7_uwv25"]
+[ext_resource type="AudioStream" uid="uid://b3sweh313g3ey" path="res://audio/chapter1/ambient/panel_section_2/panel_2.9_woman_expression_1.wav" id="8_vpvnw"]
+[ext_resource type="AudioStream" uid="uid://fj1l1ahl0vn6" path="res://audio/chapter1/ambient/panel_section_2/panel_2.9_woman_expression_2.wav" id="9_e57oi"]
+[ext_resource type="AudioStream" uid="uid://bwgbtvugwaae3" path="res://audio/chapter1/ambient/panel_section_2/panel_2.9_woman_expression_3.wav" id="10_noyv8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pov2x"]
 radius = 57.0
@@ -67,3 +71,15 @@ texture = ExtResource("6_kviin")
 script = ExtResource("7_uwv25")
 clickables = [NodePath("../Activator2/Clickable3")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="PlayOnClick" parent="." unique_id=190012534 node_paths=PackedStringArray("clickables") instance=ExtResource("7_rr022")]
+stream = ExtResource("8_vpvnw")
+clickables = [NodePath("../Clickable")]
+
+[node name="PlayOnClick2" parent="." unique_id=2077069744 node_paths=PackedStringArray("clickables") instance=ExtResource("7_rr022")]
+stream = ExtResource("9_e57oi")
+clickables = [NodePath("../Activator1/Clickable2")]
+
+[node name="PlayOnClick3" parent="." unique_id=1436646497 node_paths=PackedStringArray("clickables") instance=ExtResource("7_rr022")]
+stream = ExtResource("10_noyv8")
+clickables = [NodePath("../Activator2/Clickable3")]

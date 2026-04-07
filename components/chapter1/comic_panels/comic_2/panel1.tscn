@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://b1gx2xct17enk" path="res://graphics/chapter1/comics/comic2/frame1/keanu.png" id="5_utbsd"]
 [ext_resource type="Texture2D" uid="uid://jose5lawwu18" path="res://graphics/chapter1/comics/comic2/frame1/rope.png" id="6_53mc4"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="6_e8aoj"]
+[ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/PlayOnClick.tscn" id="7_yhwe0"]
+[ext_resource type="AudioStream" uid="uid://cdcojhmcfyos5" path="res://audio/chapter1/ambient/panel_section_2/panel_2.1_bubble_sound_interaction_people_man_appears.wav" id="8_utbsd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e8aoj"]
 size = Vector2(508, 376)
@@ -42,3 +44,7 @@ texture = ExtResource("5_utbsd")
 script = ExtResource("6_e8aoj")
 clickables = [NodePath("../Clickable")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="PlayOnClick" parent="." unique_id=1408259736 node_paths=PackedStringArray("clickables") instance=ExtResource("7_yhwe0")]
+stream = ExtResource("8_utbsd")
+clickables = [NodePath("../Clickable")]

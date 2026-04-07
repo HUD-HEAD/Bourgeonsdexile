@@ -18,7 +18,7 @@
 [ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/click_enable.gd" id="17_6pmpa"]
 [ext_resource type="Texture2D" uid="uid://drsa4m18nn3dn" path="res://graphics/chapter1/comics/comic1/panel_sink/framesink.png" id="18_6pmpa"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="18_uosyy"]
-[ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/sfx_player.tscn" id="19_uosyy"]
+[ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/PlayOnClick.tscn" id="19_uosyy"]
 [ext_resource type="AudioStream" uid="uid://b3pu703nptyk7" path="res://audio/chapter1/ambient/panel_4_water_droops_pot.wav" id="20_c2xss"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6pmpa"]
