@@ -23,6 +23,10 @@ boot_splash/stretch_mode=0
 boot_splash/image="uid://c333exnf8xct4"
 config/icon="uid://b7siukyc2fyv2"
 
+[audio]
+
+buses/default_bus_layout="uid://dq1fj4vcykkij"
+
 [autoload]
 
 SignalManager="*res://components/globals/signal_manager.gd"
