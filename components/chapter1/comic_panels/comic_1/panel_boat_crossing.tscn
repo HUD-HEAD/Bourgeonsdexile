@@ -4,14 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://bomhqj3lxkka3" path="res://components/utils/comics/scrolling_background.tscn" id="1_d8as8"]
 [ext_resource type="Texture2D" uid="uid://dgnbx8g2en04" path="res://graphics/chapter1/comics/comic1/panel_boat_crossing/frame6_boat.png" id="2_6enyl"]
 [ext_resource type="Script" uid="uid://bwhw2o2u7v43i" path="res://components/utils/comics/vertical_sine_anim.gd" id="3_j3dv7"]
-[ext_resource type="AudioStream" uid="uid://faine180cya3" path="res://audio/sfx_old/boat-gently-bumping-dock-40994.mp3" id="5_4ndws"]
+[ext_resource type="AudioStream" uid="uid://cr26dm0ehhw5p" path="res://audio/chapter1/ambient/panel_14_boat.wav" id="5_d8as8"]
 
 [node name="JungleComic1Frame6" type="Node2D" unique_id=618598756]
 metadata/_edit_group_ = true
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1185435014]
 rect = Rect2(-728, -460, 1539, 965)
-enable_node_path = NodePath("")
 
 [node name="ScrollingBackground" parent="." unique_id=231777281 instance=ExtResource("1_d8as8")]
 
@@ -26,7 +25,8 @@ amplitude = 30.0
 speed = 2.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=1904448744]
-stream = ExtResource("5_4ndws")
+stream = ExtResource("5_d8as8")
 autoplay = true
+bus = &"Sfx"
 
 [editable path="ScrollingBackground"]

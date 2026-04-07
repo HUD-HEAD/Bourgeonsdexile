@@ -22,6 +22,9 @@
 [ext_resource type="AudioStream" uid="uid://d1jjetsntvge2" path="res://audio/chapter1/soundtrack/MIGRATION-THEME.wav" id="22_ixmb8"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="24_7ejrb"]
 [ext_resource type="AudioStream" uid="uid://dt8b3qx12b5jb" path="res://audio/chapter1/ambient/PANEL_9_10_CRICKETS_NIGHT.wav" id="24_ujwga"]
+[ext_resource type="AudioStream" uid="uid://bsrfqlei4ae4h" path="res://audio/chapter1/ambient/panel_12_13_bus_sound_loop.wav" id="26_2ovga"]
+[ext_resource type="AudioStream" uid="uid://cono3427ytinl" path="res://audio/chapter1/ambient/panel_15_16_ocean.wav" id="28_nv3qa"]
+[ext_resource type="AudioStream" uid="uid://dhjvrpl3ib3r" path="res://audio/chapter1/ambient/panel_17_23_market_colombia_loop.wav" id="29_gxt7v"]
 [ext_resource type="PackedScene" uid="uid://b3xbb0f00akh4" path="res://components/chapter1/comic_panels/comic_1/panel_wake_up.tscn" id="32_ynlpr"]
 [ext_resource type="PackedScene" uid="uid://bq0ewephc3xv5" path="res://components/chapter1/comic_panels/comic_1/panel_drawer.tscn" id="35_jpuy7"]
 [ext_resource type="PackedScene" uid="uid://cyqwmaex0ilgv" path="res://components/chapter1/comic_panels/comic_1/panel_boat_crossing.tscn" id="40_jpuy7"]
@@ -90,7 +93,7 @@ position = Vector2(18199, 540)
 [node name="VisibleOnScreenEnabler2D2" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComic1Frame2" unique_id=1385282076]
 position = Vector2(323, 0)
 
-[node name="CricketsAudioFadeInOut" type="VisibleOnScreenNotifier2D" parent="Panels" unique_id=1192675192 node_paths=PackedStringArray("player")]
+[node name="CricketsAudioZone" type="VisibleOnScreenNotifier2D" parent="Panels" unique_id=1192675192 node_paths=PackedStringArray("player")]
 position = Vector2(17490, 545)
 rect = Rect2(-10, -521, 4352, 1017)
 script = ExtResource("11_2ovga")
@@ -124,6 +127,13 @@ position = Vector2(24689, 540)
 position = Vector2(-707, 0)
 rect = Rect2(-10, -10, 1420, 79)
 
+[node name="BusAudioZone" type="VisibleOnScreenNotifier2D" parent="Panels" unique_id=2085444155 node_paths=PackedStringArray("player")]
+position = Vector2(23868, 44)
+rect = Rect2(0, 0, 3737, 1017)
+script = ExtResource("11_2ovga")
+player = NodePath("../../Audio/Bus")
+metadata/_custom_type_script = "uid://n4vlynaxxck4"
+
 [node name="JungleComic1FramePhoneBus" parent="Panels" unique_id=119112911 instance=ExtResource("14_fwjes")]
 position = Vector2(26707, 540)
 
@@ -135,10 +145,24 @@ position = Vector2(30828, 540)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComic1Frame7" unique_id=806881675]
 
+[node name="OceanAudioZone" type="VisibleOnScreenNotifier2D" parent="Panels" unique_id=61040392 node_paths=PackedStringArray("player")]
+position = Vector2(29584, 545)
+rect = Rect2(189, -521, 2094, 1017)
+script = ExtResource("11_2ovga")
+player = NodePath("../../Audio/Ocean")
+metadata/_custom_type_script = "uid://n4vlynaxxck4"
+
 [node name="JungleComic1Frame9" parent="Panels" unique_id=1870862331 instance=ExtResource("13_54bx8")]
 position = Vector2(33248, 540)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComic1Frame9" unique_id=1759255997]
+
+[node name="MarketAudioZone" type="VisibleOnScreenNotifier2D" parent="Panels" unique_id=1076157198 node_paths=PackedStringArray("player")]
+position = Vector2(32006, 545)
+rect = Rect2(189, -521, 2094, 1017)
+script = ExtResource("11_2ovga")
+player = NodePath("../../Audio/Market")
+metadata/_custom_type_script = "uid://n4vlynaxxck4"
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=849983846]
 position = Vector2(34433, 596)
@@ -164,3 +188,16 @@ bus = &"Music"
 
 [node name="Crickets" type="AudioStreamPlayer" parent="Audio" unique_id=1840641282]
 stream = ExtResource("24_ujwga")
+bus = &"Sfx"
+
+[node name="Bus" type="AudioStreamPlayer" parent="Audio" unique_id=1247008594]
+stream = ExtResource("26_2ovga")
+bus = &"Sfx"
+
+[node name="Ocean" type="AudioStreamPlayer" parent="Audio" unique_id=1211798786]
+stream = ExtResource("28_nv3qa")
+bus = &"Sfx"
+
+[node name="Market" type="AudioStreamPlayer" parent="Audio" unique_id=987654775]
+stream = ExtResource("29_gxt7v")
+bus = &"Sfx"
