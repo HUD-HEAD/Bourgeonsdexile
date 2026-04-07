@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cxiojd4qvippy"]
+
+[ext_resource type="Texture2D" uid="uid://bv6ujnrx7ef8w" path="res://graphics/chapter2/comics/comic3/framestopping/blurry.png" id="1_gs21j"]
+
+[node name="Panel1" type="Node2D" unique_id=958587886]
+
+[node name="Blurry" type="Sprite2D" parent="." unique_id=1116259999]
+position = Vector2(1, -3)
+texture = ExtResource("1_gs21j")

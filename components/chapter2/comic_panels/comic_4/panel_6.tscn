@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://72txvs2l48m6"]
+
+[ext_resource type="Texture2D" uid="uid://d02yokoaq5sm0" path="res://graphics/chapter2/comics/comic4/framebedhospital/bg.png" id="1_o4as0"]
+[ext_resource type="Texture2D" uid="uid://da6ubahpuayg1" path="res://graphics/chapter2/comics/comic4/framebedhospital/bubble1.png" id="2_bmja3"]
+[ext_resource type="Texture2D" uid="uid://be54n3gpqcniy" path="res://graphics/chapter2/comics/comic4/framebedhospital/bubble2.png" id="3_5nd17"]
+
+[node name="Panel1" type="Node2D" unique_id=690781203]
+
+[node name="Bg" type="Sprite2D" parent="." unique_id=1794062839]
+position = Vector2(-8, 0)
+texture = ExtResource("1_o4as0")
+
+[node name="Bubble1" type="Sprite2D" parent="." unique_id=1369549818]
+position = Vector2(518, -367)
+texture = ExtResource("2_bmja3")
+
+[node name="Bubble2" type="Sprite2D" parent="." unique_id=1229642321]
+position = Vector2(-48, -393)
+texture = ExtResource("3_5nd17")

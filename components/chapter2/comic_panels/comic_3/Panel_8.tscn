@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ylem8i3xfrj3"]
+
+[ext_resource type="Texture2D" uid="uid://dey5i0x4parop" path="res://graphics/chapter2/comics/comic3/frameflashbacks/6.png" id="1_b2p2p"]
+
+[node name="Panel1" type="Node2D" unique_id=958587886]
+
+[node name="6" type="Sprite2D" parent="." unique_id=293069458]
+position = Vector2(1, -2)
+texture = ExtResource("1_b2p2p")

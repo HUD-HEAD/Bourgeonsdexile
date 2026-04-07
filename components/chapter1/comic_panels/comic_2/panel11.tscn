@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cmhiwqvc7vulh" path="res://graphics/chapter1/comics/comic2/frame6and9/alltogether.png" id="2_bgmgr"]
 [ext_resource type="Texture2D" uid="uid://ctj71vxsnh2xs" path="res://graphics/chapter1/comics/comic2/frame6and9/2.png" id="3_cplt7"]
 [ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/area_entered_enable.gd" id="3_ohj2j"]
+[ext_resource type="AudioStream" uid="uid://dkgd5wvhfomsb" path="res://audio/chapter1/ambient/panel_section_2/panel_2.11_clap hands.wav" id="6_5bebk"]
 [ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="6_hrpj4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tfiam"]
@@ -104,11 +105,26 @@ tracks/3/path = NodePath("Back:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.03333333),
+"times": PackedFloat32Array(0, 0.0333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
 }
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6_5bebk")
+}],
+"times": PackedFloat32Array(0.0333)
+}
+tracks/4/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uji30"]
 _data = {
@@ -120,14 +136,9 @@ _data = {
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=866049917]
 
-[node name="Transition" type="Node" parent="." unique_id=1495977932]
-script = ExtResource("1_b7mxx")
-
 [node name="Back" type="Sprite2D" parent="." unique_id=1098473463]
 visible = false
 texture = ExtResource("2_bgmgr")
-
-[node name="VisibleOnScreenEnabler2D2" type="VisibleOnScreenEnabler2D" parent="." unique_id=1939418866]
 
 [node name="ShadyHand" type="Area2D" parent="." unique_id=221277162 node_paths=PackedStringArray("node_to_enable")]
 position = Vector2(541, -52)
@@ -174,3 +185,6 @@ autoplay = &"shake"
 script = ExtResource("1_b7mxx")
 anim_player = NodePath("../AnimationPlayer")
 metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=554375495]
+bus = &"Sfx"

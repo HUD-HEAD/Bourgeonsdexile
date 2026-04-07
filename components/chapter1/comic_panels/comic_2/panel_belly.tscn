@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/click_enable.gd" id="3_raeum"]
 [ext_resource type="Texture2D" uid="uid://bj0eiomruy7n" path="res://graphics/chapter1/comics/comic2/anim_belly/belly_0004.png" id="4_5y0mf"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_ceywx"]
-[ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/sfx_player.tscn" id="5_psjyq"]
+[ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/PlayOnClick.tscn" id="5_psjyq"]
 [ext_resource type="Texture2D" uid="uid://bsjuluy044a7i" path="res://graphics/chapter1/comics/comic2/anim_belly/belly_0005.png" id="5_stnc7"]
 [ext_resource type="Texture2D" uid="uid://bfqrhtqy3nwho" path="res://graphics/chapter1/comics/comic2/anim_belly/belly_0006.png" id="6_a4sbr"]
 [ext_resource type="AudioStream" uid="uid://k0lb38wa1pj0" path="res://audio/sfx_old/hearbeat.mp3" id="6_ts6dw"]

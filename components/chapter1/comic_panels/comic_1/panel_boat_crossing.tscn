@@ -1,48 +1,32 @@
 [gd_scene format=3 uid="uid://cyqwmaex0ilgv"]
 
 [ext_resource type="Texture2D" uid="uid://cmpfr15ltt737" path="res://graphics/chapter1/comics/comic1/panel_boat_crossing/frame6_background.png" id="1_5fq6s"]
-[ext_resource type="Script" uid="uid://d4h6d2vif0lpf" path="res://components/utils/follow_camera.gd" id="2_0d71m"]
+[ext_resource type="PackedScene" uid="uid://bomhqj3lxkka3" path="res://components/utils/comics/scrolling_background.tscn" id="1_d8as8"]
 [ext_resource type="Texture2D" uid="uid://dgnbx8g2en04" path="res://graphics/chapter1/comics/comic1/panel_boat_crossing/frame6_boat.png" id="2_6enyl"]
 [ext_resource type="Script" uid="uid://bwhw2o2u7v43i" path="res://components/utils/comics/vertical_sine_anim.gd" id="3_j3dv7"]
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="4_6enyl"]
-[ext_resource type="AudioStream" uid="uid://faine180cya3" path="res://audio/sfx_old/boat-gently-bumping-dock-40994.mp3" id="5_4ndws"]
-[ext_resource type="Script" uid="uid://bgpah31hretcf" path="res://components/utils/pan_node.gd" id="6_mj0yy"]
+[ext_resource type="AudioStream" uid="uid://cr26dm0ehhw5p" path="res://audio/chapter1/ambient/panel_14_boat.wav" id="5_d8as8"]
 
 [node name="JungleComic1Frame6" type="Node2D" unique_id=618598756]
 metadata/_edit_group_ = true
 
-[node name="PanNode" type="Node2D" parent="." unique_id=379019586]
-script = ExtResource("6_mj0yy")
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1185435014]
+rect = Rect2(-728, -460, 1539, 965)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="PanNode" unique_id=1185435014]
-rect = Rect2(-523, -460, 3635, 965)
+[node name="ScrollingBackground" parent="." unique_id=231777281 instance=ExtResource("1_d8as8")]
 
-[node name="Frame6Background" type="Sprite2D" parent="PanNode" unique_id=524227348]
-clip_children = 2
-position = Vector2(1306, 0)
+[node name="Background" parent="ScrollingBackground/PanNode" parent_id_path=PackedInt32Array(231777281, 379019586) index="0" unique_id=524227348]
 texture = ExtResource("1_5fq6s")
 
-[node name="FollowCamera" type="Node2D" parent="PanNode/Frame6Background" unique_id=1278360254]
-position = Vector2(-1306, 0)
-script = ExtResource("2_0d71m")
-
-[node name="Frame6Boat" type="Sprite2D" parent="PanNode/Frame6Background/FollowCamera" unique_id=219422816]
+[node name="Frame6Boat" type="Sprite2D" parent="ScrollingBackground" unique_id=219422816]
 position = Vector2(0, 240)
 texture = ExtResource("2_6enyl")
 script = ExtResource("3_j3dv7")
 amplitude = 30.0
 speed = 2.0
 
-[node name="AutomaticPanner" type="Node2D" parent="PanNode/Frame6Background" unique_id=1343872761]
-position = Vector2(2527, 0)
-script = ExtResource("4_6enyl")
-timer_wait = 0.5
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="PanNode/Frame6Background/AutomaticPanner" unique_id=574415259]
-rect = Rect2(-112, -137, 252, 315)
-
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=1904448744]
-stream = ExtResource("5_4ndws")
+stream = ExtResource("5_d8as8")
 autoplay = true
+bus = &"Sfx"
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1050424647]
+[editable path="ScrollingBackground"]

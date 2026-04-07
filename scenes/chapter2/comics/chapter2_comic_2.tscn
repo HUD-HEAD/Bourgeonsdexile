@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://uy4d64oh4m1q"]
+
+[ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_5ylu8"]
+[ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="3_ukg44"]
+[ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="4_0qtw2"]
+[ext_resource type="PackedScene" uid="uid://5glmawcny33t" path="res://components/chapter2/comic_panels/comic_2/panel_1.tscn" id="8_2ahw6"]
+[ext_resource type="PackedScene" uid="uid://xcbpbffacfqp" path="res://components/chapter2/comic_panels/comic_2/panel_2.tscn" id="9_5ylu8"]
+[ext_resource type="PackedScene" uid="uid://baln7eblfbivi" path="res://components/chapter2/comic_panels/comic_2/panel_3.tscn" id="10_cg1sh"]
+[ext_resource type="PackedScene" uid="uid://b7f0ua4xayqxf" path="res://components/chapter2/comic_panels/comic_2/panel_4.tscn" id="11_ukg44"]
+[ext_resource type="PackedScene" uid="uid://crb67gas4jtht" path="res://components/chapter2/comic_panels/comic_2/panel_5.tscn" id="12_0qtw2"]
+[ext_resource type="PackedScene" uid="uid://b4wrk2bohakti" path="res://components/chapter2/comic_panels/comic_2/panel_6.tscn" id="13_24i2u"]
+[ext_resource type="PackedScene" uid="uid://b78hoghov0bc0" path="res://components/chapter2/comic_panels/comic_2/panel_7.tscn" id="14_r73yv"]
+[ext_resource type="PackedScene" uid="uid://t6aiy6ygkqlj" path="res://components/chapter2/comic_panels/comic_2/panel_8.tscn" id="15_rhiyq"]
+[ext_resource type="PackedScene" uid="uid://o1y7170fepis" path="res://components/chapter2/comic_panels/comic_2/panel_9.tscn" id="16_xit2h"]
+[ext_resource type="PackedScene" uid="uid://c4wqbvxsrfu6w" path="res://components/chapter2/comic_panels/comic_2/panel_10.tscn" id="17_r0851"]
+[ext_resource type="PackedScene" uid="uid://d2qo4f5ma1kpv" path="res://components/chapter2/comic_panels/comic_2/panel_11.tscn" id="18_pnlo7"]
+[ext_resource type="PackedScene" uid="uid://cse4dme0xetc3" path="res://components/chapter2/comic_panels/comic_2/panel_12.tscn" id="19_hkqs5"]
+[ext_resource type="PackedScene" uid="uid://duvxs2qfj8pfu" path="res://components/chapter2/comic_panels/comic_2/panel_14.tscn" id="20_ukg44"]
+[ext_resource type="PackedScene" uid="uid://dyu4nfimcgrb" path="res://components/chapter2/comic_panels/comic_2/panel_13.tscn" id="21_0qtw2"]
+[ext_resource type="PackedScene" uid="uid://c1eosuo0ptj87" path="res://components/chapter2/comic_panels/comic_2/panel_15.tscn" id="22_24i2u"]
+
+[node name="ChapterIIComic1" type="Node2D" unique_id=150562309]
+metadata/_edit_vertical_guides_ = [3098.0, 5247.0, 7539.0, 9944.0, 12375.0, 14408.0, 16384.0, 18203.0, 20749.0, 22655.0, 24690.0, 26712.0, 29795.0, 32039.0, 34449.0]
+
+[node name="PaperBackground" type="CanvasLayer" parent="." unique_id=1029947148]
+layer = -1
+follow_viewport_enabled = true
+
+[node name="TextureRect" type="TextureRect" parent="PaperBackground" unique_id=1111791010]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 37962.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_5ylu8")
+stretch_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=485993154]
+position = Vector2(960, 540)
+limit_left = 0
+limit_smoothed = true
+position_smoothing_enabled = true
+editor_draw_limits = true
+
+[node name="Panels" type="Node2D" parent="." unique_id=606931740]
+
+[node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
+script = ExtResource("3_ukg44")
+panels = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+
+[node name="UI" parent="." unique_id=1829896958 instance=ExtResource("4_0qtw2")]
+
+[node name="Audio" type="Node" parent="." unique_id=619569792]
+
+[node name="Panel1" parent="." unique_id=547383153 instance=ExtResource("8_2ahw6")]
+position = Vector2(3098, 599)
+
+[node name="Panel2" parent="." unique_id=746233287 instance=ExtResource("9_5ylu8")]
+position = Vector2(5237, 543)
+
+[node name="Panel3" parent="." unique_id=1664795312 instance=ExtResource("10_cg1sh")]
+position = Vector2(7538, 549)
+
+[node name="Panel4" parent="." unique_id=2093707207 instance=ExtResource("11_ukg44")]
+position = Vector2(9940, 543)
+scale = Vector2(0.41130155, 0.41130155)
+
+[node name="Panel5" parent="." unique_id=1942311821 instance=ExtResource("12_0qtw2")]
+position = Vector2(12380, 546)
+
+[node name="Panel6" parent="." unique_id=2126137453 instance=ExtResource("13_24i2u")]
+position = Vector2(14415, 541)
+
+[node name="Panel7" parent="." unique_id=749507645 instance=ExtResource("14_r73yv")]
+position = Vector2(16710, 637)
+
+[node name="Panel8" parent="." unique_id=835623524 instance=ExtResource("15_rhiyq")]
+position = Vector2(19706, 543)
+
+[node name="Panel9" parent="." unique_id=1920874665 instance=ExtResource("16_xit2h")]
+position = Vector2(22306, 548)
+
+[node name="Panel10" parent="." unique_id=310300498 instance=ExtResource("17_r0851")]
+position = Vector2(24690, 558)
+
+[node name="Panel11" parent="." unique_id=1763002268 instance=ExtResource("18_pnlo7")]
+position = Vector2(26896, 539)
+
+[node name="Panel12" parent="." unique_id=1292771478 instance=ExtResource("19_hkqs5")]
+position = Vector2(29822, 541)
+
+[node name="Panel13" parent="." unique_id=352655981 instance=ExtResource("20_ukg44")]
+position = Vector2(34444, 550)
+
+[node name="Panel14" parent="." unique_id=2106480820 instance=ExtResource("21_0qtw2")]
+position = Vector2(32088, 525)
+
+[node name="Panel15" parent="." unique_id=1787195812 instance=ExtResource("22_24i2u")]
+position = Vector2(37158, 544)

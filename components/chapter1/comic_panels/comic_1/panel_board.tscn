@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://d2iytm2c6djdq" path="res://graphics/chapter1/comics/comic1/panel_board/anim_onion/4.png" id="8_rg20k"]
 [ext_resource type="Texture2D" uid="uid://dcrq7m0e3f03v" path="res://graphics/chapter1/comics/comic1/panel_board/anim_onion/5.png" id="9_qplq4"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="10_gj2vg"]
-[ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/sfx_player.tscn" id="11_6of6h"]
+[ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/PlayOnClick.tscn" id="11_6of6h"]
 [ext_resource type="AudioStream" uid="uid://8fplt02l4a0b" path="res://audio/chapter1/ambient/panel_5_onion_knife_on_wood.wav" id="12_3ib38"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_poopq"]

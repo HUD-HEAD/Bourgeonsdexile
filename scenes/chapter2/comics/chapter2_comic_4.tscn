@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://wjb62t2thskf"]
+
+[ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_nrvn0"]
+[ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="2_cxg14"]
+[ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="3_48xq6"]
+[ext_resource type="PackedScene" uid="uid://t5vptpn877fw" path="res://components/chapter2/comic_panels/comic_4/panel_1.tscn" id="8_pwk57"]
+[ext_resource type="PackedScene" uid="uid://cka75w6c1or7q" path="res://components/chapter2/comic_panels/comic_4/panel_2.tscn" id="9_hb21k"]
+[ext_resource type="PackedScene" uid="uid://b1ybct1a4a20o" path="res://components/chapter2/comic_panels/comic_4/panel_3.tscn" id="10_rlfy7"]
+[ext_resource type="PackedScene" uid="uid://tdurdvnqfpne" path="res://components/chapter2/comic_panels/comic_4/panel_4.tscn" id="11_tu2ht"]
+[ext_resource type="PackedScene" uid="uid://72txvs2l48m6" path="res://components/chapter2/comic_panels/comic_4/panel_6.tscn" id="12_l8dec"]
+[ext_resource type="PackedScene" uid="uid://2q3jntyih2e7" path="res://components/chapter2/comic_panels/comic_4/panel_5.tscn" id="13_8mv4y"]
+[ext_resource type="Texture2D" uid="uid://dx68b05t8pnc8" path="res://graphics/chapter2/comics/comic4/frameblackout/blackout.png" id="14_vuetd"]
+
+[node name="ChapterIIComic1" type="Node2D" unique_id=150562309]
+metadata/_edit_vertical_guides_ = [3098.0, 5247.0, 7539.0, 9944.0, 12375.0, 14408.0, 16384.0, 18203.0, 20749.0, 22655.0, 24690.0, 26712.0, 29795.0, 32039.0, 34449.0]
+
+[node name="PaperBackground" type="CanvasLayer" parent="." unique_id=1029947148]
+layer = -1
+follow_viewport_enabled = true
+
+[node name="TextureRect" type="TextureRect" parent="PaperBackground" unique_id=1111791010]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 37962.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_nrvn0")
+stretch_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=485993154]
+position = Vector2(960, 540)
+limit_left = 0
+limit_smoothed = true
+position_smoothing_enabled = true
+editor_draw_limits = true
+
+[node name="Panels" type="Node2D" parent="." unique_id=606931740]
+
+[node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
+script = ExtResource("2_cxg14")
+panels = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+
+[node name="UI" parent="." unique_id=1829896958 instance=ExtResource("3_48xq6")]
+
+[node name="Audio" type="Node" parent="." unique_id=619569792]
+
+[node name="Panel1" parent="." unique_id=690781203 instance=ExtResource("8_pwk57")]
+position = Vector2(3098, 542)
+
+[node name="Panel2" parent="." unique_id=780449822 instance=ExtResource("9_hb21k")]
+position = Vector2(5294, 566)
+
+[node name="Panel3" parent="." unique_id=1018297285 instance=ExtResource("10_rlfy7")]
+position = Vector2(9940, 544)
+
+[node name="Panel4" parent="." unique_id=405070053 instance=ExtResource("11_tu2ht")]
+position = Vector2(7106, 585)
+
+[node name="Panel5" parent="." unique_id=621299691 instance=ExtResource("12_l8dec")]
+position = Vector2(12383, 541)
+
+[node name="Panel6" parent="." unique_id=280197590 instance=ExtResource("13_8mv4y")]
+position = Vector2(14474, 545)
+
+[node name="Blackout" type="Sprite2D" parent="." unique_id=784801958]
+position = Vector2(17329, 540)
+texture = ExtResource("14_vuetd")

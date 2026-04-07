@@ -8,7 +8,7 @@ extends Node
 @export_category("Panning speed")
 @export var constant_speed_pan : bool = true
 ## Camera panning speed in [px/s] if constant_speed_pan is true
-@export var px_per_sec : float = 1000
+@export var px_per_sec : float = 500
 ## Time to pan to next panel in [s] if constant_speed_pan is false
 @export var panning_time : float = 2.0
 
@@ -29,6 +29,8 @@ func _ready() -> void:
 func _next_panel():
 	assert(idx + 1< panels.size(), "idx inside panels number")
 	idx += 1
+	
+	print_debug("next panel ", idx)
 	
 	_pan_to(panels[idx])
 

@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://buy5yt5e73v7w"]
+
+[ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_wogoy"]
+[ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="2_krelq"]
+[ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="3_l70rv"]
+[ext_resource type="PackedScene" uid="uid://cnlkly26dml5v" path="res://components/chapter2/comic_panels/comic_3/Panel_1.tscn" id="8_d51fe"]
+[ext_resource type="PackedScene" uid="uid://db18mct0e4e7l" path="res://components/chapter2/comic_panels/comic_3/Panel_2.tscn" id="9_ekcg3"]
+[ext_resource type="PackedScene" uid="uid://beyuhljsjvkd7" path="res://components/chapter2/comic_panels/comic_3/Panel_3.tscn" id="10_qbakg"]
+[ext_resource type="PackedScene" uid="uid://dnsgd7d1ydmqv" path="res://components/chapter2/comic_panels/comic_3/Panel_4.tscn" id="11_m64im"]
+[ext_resource type="PackedScene" uid="uid://dxvnkp4f3rnwd" path="res://components/chapter2/comic_panels/comic_3/Panel_5.tscn" id="12_wogoy"]
+[ext_resource type="PackedScene" uid="uid://dohgjrclcdvw" path="res://components/chapter2/comic_panels/comic_3/Panel_6.tscn" id="13_krelq"]
+[ext_resource type="PackedScene" uid="uid://bc6apl835bnhx" path="res://components/chapter2/comic_panels/comic_3/Panel_7.tscn" id="14_l70rv"]
+[ext_resource type="PackedScene" uid="uid://ylem8i3xfrj3" path="res://components/chapter2/comic_panels/comic_3/Panel_8.tscn" id="15_y5lp5"]
+[ext_resource type="PackedScene" uid="uid://2lq4nfh3rv8i" path="res://components/chapter2/comic_panels/comic_3/Panel_9.tscn" id="16_xk1a2"]
+[ext_resource type="PackedScene" uid="uid://bb5jifkt8pla5" path="res://components/chapter2/comic_panels/comic_3/Panel_10.tscn" id="17_nue46"]
+[ext_resource type="PackedScene" uid="uid://cxiojd4qvippy" path="res://components/chapter2/comic_panels/comic_3/Panel_11.tscn" id="18_fbqtp"]
+
+[node name="ChapterIIComic1" type="Node2D" unique_id=150562309]
+metadata/_edit_vertical_guides_ = [3098.0, 5247.0, 7539.0, 9944.0, 12375.0, 14408.0, 16384.0, 18203.0, 20749.0, 22655.0, 24690.0, 26712.0, 29795.0, 32039.0, 34449.0]
+
+[node name="PaperBackground" type="CanvasLayer" parent="." unique_id=1029947148]
+layer = -1
+follow_viewport_enabled = true
+
+[node name="TextureRect" type="TextureRect" parent="PaperBackground" unique_id=1111791010]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 37962.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_wogoy")
+stretch_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=485993154]
+position = Vector2(960, 540)
+limit_left = 0
+limit_smoothed = true
+position_smoothing_enabled = true
+editor_draw_limits = true
+
+[node name="Panels" type="Node2D" parent="." unique_id=606931740]
+
+[node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
+script = ExtResource("2_krelq")
+panels = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+
+[node name="UI" parent="." unique_id=1829896958 instance=ExtResource("3_l70rv")]
+
+[node name="Audio" type="Node" parent="." unique_id=619569792]
+
+[node name="Panel1" parent="." unique_id=958587886 instance=ExtResource("8_d51fe")]
+position = Vector2(3107, 543)
+
+[node name="Panel2" parent="." unique_id=1615938535 instance=ExtResource("9_ekcg3")]
+position = Vector2(6307, 656)
+
+[node name="Panel3" parent="." unique_id=1660672859 instance=ExtResource("10_qbakg")]
+position = Vector2(9034, 576)
+
+[node name="Panel4" parent="." unique_id=1829978567 instance=ExtResource("11_m64im")]
+position = Vector2(11387, 650)
+
+[node name="Panel5" parent="." unique_id=1052720729 instance=ExtResource("12_wogoy")]
+position = Vector2(13454, 549)
+
+[node name="Panel6" parent="." unique_id=951881893 instance=ExtResource("13_krelq")]
+position = Vector2(15621, 562)
+
+[node name="Panel7" parent="." unique_id=1794938953 instance=ExtResource("14_l70rv")]
+position = Vector2(17370, 555)
+
+[node name="Panel8" parent="." unique_id=1434954673 instance=ExtResource("15_y5lp5")]
+position = Vector2(19637, 541)
+
+[node name="Panel9" parent="." unique_id=2034629479 instance=ExtResource("16_xk1a2")]
+position = Vector2(21793, 537)
+
+[node name="Panel10" parent="." unique_id=1285561042 instance=ExtResource("17_nue46")]
+position = Vector2(24704, 555)
+
+[node name="Panel11" parent="." unique_id=2025531418 instance=ExtResource("18_fbqtp")]
+position = Vector2(27683, 541)

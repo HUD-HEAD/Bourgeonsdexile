@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://drug8gvkmdcnm" path="res://graphics/chapter1/comics/comic1/panel_phone/panel_busphone/gallerypictures/grandma.png" id="7_3s8k2"]
 [ext_resource type="Texture2D" uid="uid://b07nsg5i0380y" path="res://graphics/chapter1/comics/comic1/panel_phone/panel_busphone/gallerypictures/them.png" id="8_5xm4u"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="10_s0myt"]
-[ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/sfx_player.tscn" id="11_e223k"]
+[ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/PlayOnClick.tscn" id="11_e223k"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_auuql"]
 animations = [{
