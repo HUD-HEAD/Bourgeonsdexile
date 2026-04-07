@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dbwmkpn5luvtl" path="res://graphics/chapter1/comics/comic3/frame_food/plate2/plate2_1.png" id="13_4npjt"]
 [ext_resource type="Texture2D" uid="uid://drnnvwjl23yyn" path="res://graphics/chapter1/comics/comic3/frame_food/pramefood_noplates.png" id="13_ear0j"]
 [ext_resource type="Texture2D" uid="uid://dsvgbf4747ryv" path="res://graphics/chapter1/comics/comic3/frame_food/plate2/plate2_3.png" id="15_n4mpm"]
+[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/click_hide.gd" id="17_4r3bi"]
 [ext_resource type="Texture2D" uid="uid://dftpkro0gmmv8" path="res://graphics/chapter1/comics/comic3/frame_food/plate2/plate2_5.png" id="17_hlfp0"]
 [ext_resource type="Texture2D" uid="uid://b7lfvoqgxd3nn" path="res://graphics/chapter1/comics/comic3/frame_food/plate2/plate2_6.png" id="18_c8x4o"]
 
@@ -88,6 +89,10 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_4npjt"]
 radius = 232.60696
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4r3bi"]
+radius = 57.0
+height = 572.0
+
 [node name="JungleComic3FrameFood" type="Node2D" unique_id=1997303602]
 
 [node name="TransitionCounter" type="Node" parent="." unique_id=1882981836 node_paths=PackedStringArray("clickables")]
@@ -138,6 +143,14 @@ clickable = NodePath("..")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Meal2" unique_id=278957011]
 shape = SubResource("CircleShape2D_4npjt")
 
-[node name="Fork" type="Sprite2D" parent="." unique_id=904854337]
-position = Vector2(-534, 45)
+[node name="Fork" type="Area2D" parent="." unique_id=1002549513]
+position = Vector2(-539, 30)
+script = ExtResource("17_4r3bi")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="Fork" type="Sprite2D" parent="Fork" unique_id=904854337]
+position = Vector2(5, 15)
 texture = ExtResource("10_v0h4g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fork" unique_id=9577214]
+shape = SubResource("CapsuleShape2D_4r3bi")

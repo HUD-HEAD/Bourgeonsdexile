@@ -23,10 +23,6 @@ boot_splash/stretch_mode=0
 boot_splash/image="uid://c333exnf8xct4"
 config/icon="uid://b7siukyc2fyv2"
 
-[audio]
-
-buses/default_bus_layout="uid://dq1fj4vcykkij"
-
 [autoload]
 
 SignalManager="*res://components/globals/signal_manager.gd"
@@ -34,12 +30,12 @@ CustomCursor="*res://components/globals/custom_cursor.gd"
 InputManager="*res://components/globals/input_manager.gd"
 SceneManager="*res://components/globals/scene_manager.gd"
 AudioManager="*uid://ciqufic027swg"
-GameManager="*uid://d2wginhwv3f4"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=4
 window/stretch/mode="canvas_items"
 
 [dotnet]

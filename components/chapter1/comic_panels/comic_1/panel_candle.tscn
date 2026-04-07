@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://co2e2kevlwnm6" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_candle/candle_fire_6.png" id="9_fg1k7"]
 [ext_resource type="Texture2D" uid="uid://dgsxgxgyja75o" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_candle/candle_fire_7.png" id="10_klx3m"]
 [ext_resource type="Texture2D" uid="uid://baarv01h87s5" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_candle/candle_fire_8.png" id="11_vtse2"]
-[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="13_ldxfp"]
+[ext_resource type="Script" uid="uid://001fo68fi8nn" path="res://components/utils/puzzles/draggable_restricted.gd" id="13_donto"]
 [ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/area_entered_enable.gd" id="13_roaln"]
 [ext_resource type="Texture2D" uid="uid://dc8qleoweds5o" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_match/match_fire1.png" id="15_imvdv"]
 [ext_resource type="Texture2D" uid="uid://bn300mf32lart" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_match/match_fire2.png" id="16_pw80g"]
@@ -314,7 +314,10 @@ shape = SubResource("RectangleShape2D_ldxfp")
 
 [node name="Match" type="Area2D" parent="Candle" unique_id=2025347504]
 position = Vector2(-487, -90)
-script = ExtResource("13_ldxfp")
+script = ExtResource("13_donto")
+right = 610.0
+up = -200.0
+down = 400.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Candle/Match" unique_id=1863757623]
 position = Vector2(-131.00002, 58.999992)
