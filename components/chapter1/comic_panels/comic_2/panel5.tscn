@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://r035h288eoyl" path="res://graphics/chapter1/comics/comic2/frame5/frame5_bubble3.png" id="5_bh0bb"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="6_cvs8s"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="6_tghyq"]
+[ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/PlayOnClick.tscn" id="7_1odvo"]
+[ext_resource type="AudioStream" uid="uid://bs4ri2cg2ia61" path="res://audio/chapter1/ambient/panel_section_2/panel_2.6_simulated_conversation _copy.wav" id="8_y6ydv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvs8s"]
 radius = 181.0
@@ -44,3 +46,7 @@ script = ExtResource("6_tghyq")
 clickables = [NodePath("../Clickable")]
 obstacles_to_clear = 3
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="PlayOnClick" parent="." unique_id=190012534 node_paths=PackedStringArray("clickables") instance=ExtResource("7_1odvo")]
+stream = ExtResource("8_y6ydv")
+clickables = [NodePath("../Clickable")]

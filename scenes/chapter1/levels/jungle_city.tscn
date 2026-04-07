@@ -116,7 +116,7 @@
 [ext_resource type="Texture2D" uid="uid://bjlix6a0jhi5m" path="res://graphics/chapter1/levels/city/npcs/NPC_scratch/NPC_scratch_0014.png" id="105_ivhbv"]
 [ext_resource type="Texture2D" uid="uid://lkq8fm0m2xcs" path="res://graphics/chapter1/levels/city/npcs/NPC_scratch/NPC_scratch_0015.png" id="106_tb7nj"]
 [ext_resource type="Texture2D" uid="uid://b2ofbjbcdyevx" path="res://graphics/chapter1/levels/city/npcs/NPC_scratch/NPC_scratch_0016.png" id="107_als8u"]
-[ext_resource type="AudioStream" uid="uid://d1jjetsntvge2" path="res://audio/chapter1/soundtrack/MIGRATION-THEME.wav" id="117_xf4f8"]
+[ext_resource type="AudioStream" uid="uid://dfwytuv0vl8f6" path="res://audio/chapter1/soundtrack/walking_mercado_theme.wav" id="117_xf4f8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_48jwk"]
 animations = [{

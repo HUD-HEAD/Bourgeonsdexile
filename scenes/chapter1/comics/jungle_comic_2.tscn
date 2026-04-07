@@ -19,6 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://43c07utlirv7" path="res://components/chapter1/comic_panels/comic_2/panel11.tscn" id="18_tmikl"]
 [ext_resource type="PackedScene" uid="uid://cjq4fleiu5245" path="res://scenes/chapter1/levels/jungle.tscn" id="20_o76i3"]
 [ext_resource type="PackedScene" uid="uid://cnyqkkr7kcq7i" path="res://components/chapter1/comic_panels/comic_2/panel12.tscn" id="20_ox075"]
+[ext_resource type="Script" uid="uid://n4vlynaxxck4" path="res://components/utils/audio/audio_zone_fade.gd" id="20_wj0rq"]
+[ext_resource type="AudioStream" uid="uid://bdojvuf1xgohw" path="res://audio/chapter1/ambient/panel_section_2/panel_2.1_to_2.12_ocean_sound.wav" id="21_wj0rq"]
 
 [node name="JungleComic2" type="Node2D" unique_id=1529693680]
 
@@ -100,3 +102,17 @@ position = Vector2(34138, 553.5)
 position = Vector2(37220, 625)
 script = ExtResource("14_fekbj")
 next_scene = ExtResource("20_o76i3")
+
+[node name="OceanAudioZoneFade" type="VisibleOnScreenNotifier2D" parent="." unique_id=2014524791 node_paths=PackedStringArray("player")]
+position = Vector2(2033, -33)
+rect = Rect2(0, 0, 26394, 1159)
+show_rect = false
+script = ExtResource("20_wj0rq")
+player = NodePath("../Audio/Ocean")
+metadata/_custom_type_script = "uid://n4vlynaxxck4"
+
+[node name="Audio" type="Node" parent="." unique_id=172911831]
+
+[node name="Ocean" type="AudioStreamPlayer" parent="Audio" unique_id=330211203]
+stream = ExtResource("21_wj0rq")
+bus = &"Sfx"

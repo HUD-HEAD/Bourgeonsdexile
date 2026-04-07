@@ -3,10 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_wogoy"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="2_krelq"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="3_l70rv"]
-[ext_resource type="AudioStream" uid="uid://curu5rxi6emup" path="res://audio/chapter1/soundtrack/STARTING_THEME.wav" id="4_y5lp5"]
-[ext_resource type="AudioStream" uid="uid://d1jjetsntvge2" path="res://audio/chapter1/soundtrack/MIGRATION-THEME.wav" id="5_xk1a2"]
-[ext_resource type="Script" uid="uid://cs5lt11waw0wm" path="res://scenes/chapter1/comics/audio_transition.gd" id="6_nue46"]
-[ext_resource type="AudioStream" uid="uid://dt8b3qx12b5jb" path="res://audio/chapter1/ambient/PANEL_9_10_CRICKETS_NIGHT.wav" id="7_fbqtp"]
 [ext_resource type="PackedScene" uid="uid://cnlkly26dml5v" path="res://components/chapter2/comic_panels/comic_3/Panel_1.tscn" id="8_d51fe"]
 [ext_resource type="PackedScene" uid="uid://db18mct0e4e7l" path="res://components/chapter2/comic_panels/comic_3/Panel_2.tscn" id="9_ekcg3"]
 [ext_resource type="PackedScene" uid="uid://beyuhljsjvkd7" path="res://components/chapter2/comic_panels/comic_3/Panel_3.tscn" id="10_qbakg"]
@@ -53,34 +49,6 @@ panels = [null, null, null, null, null, null, null, null, null, null, null, null
 [node name="UI" parent="." unique_id=1829896958 instance=ExtResource("3_l70rv")]
 
 [node name="Audio" type="Node" parent="." unique_id=619569792]
-
-[node name="ThemeStart" type="AudioStreamPlayer" parent="Audio" unique_id=314277606]
-stream = ExtResource("4_y5lp5")
-autoplay = true
-bus = &"Music"
-
-[node name="ThemeMigration" type="AudioStreamPlayer" parent="Audio" unique_id=642829476]
-stream = ExtResource("5_xk1a2")
-bus = &"Music"
-
-[node name="CrossFadeStartMigration" type="Node" parent="Audio" unique_id=1997574062 node_paths=PackedStringArray("fade_out_player", "fade_in_player")]
-script = ExtResource("6_nue46")
-fade_out_player = NodePath("../ThemeStart")
-fade_in_player = NodePath("../ThemeMigration")
-metadata/_custom_type_script = "uid://cs5lt11waw0wm"
-
-[node name="Crickets" type="AudioStreamPlayer" parent="Audio" unique_id=1840641282]
-stream = ExtResource("7_fbqtp")
-
-[node name="FadeInCrickets" type="Node" parent="Audio" unique_id=570663985 node_paths=PackedStringArray("fade_in_player")]
-script = ExtResource("6_nue46")
-fade_in_player = NodePath("../Crickets")
-metadata/_custom_type_script = "uid://cs5lt11waw0wm"
-
-[node name="FadeOutCrickets" type="Node" parent="Audio" unique_id=933992618 node_paths=PackedStringArray("fade_out_player")]
-script = ExtResource("6_nue46")
-fade_out_player = NodePath("../Crickets")
-metadata/_custom_type_script = "uid://cs5lt11waw0wm"
 
 [node name="Panel1" parent="." unique_id=958587886 instance=ExtResource("8_d51fe")]
 position = Vector2(3107, 543)

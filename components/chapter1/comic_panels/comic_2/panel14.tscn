@@ -94,8 +94,8 @@
 [ext_resource type="Texture2D" uid="uid://bkmtnhq7fokrd" path="res://graphics/chapter1/comics/comic2/anim_belly/belly_0090.png" id="93_ph8o6"]
 [ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/click_enable.gd" id="94_ibni5"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="95_fsc76"]
-[ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/sfx_player.tscn" id="96_uqd7o"]
-[ext_resource type="AudioStream" uid="uid://k0lb38wa1pj0" path="res://audio/sfx_old/hearbeat.mp3" id="97_05o0s"]
+[ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/PlayOnClick.tscn" id="96_uqd7o"]
+[ext_resource type="AudioStream" uid="uid://defk636bejrmt" path="res://audio/chapter1/ambient/panel_section_2/panel_2.15_heart_sound.wav" id="96_x3fel"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8mjma"]
 animations = [{
@@ -496,5 +496,5 @@ script = ExtResource("95_fsc76")
 clickables = [NodePath("../Area2D")]
 
 [node name="SfxPlayer" parent="PregnancyPanel" unique_id=679183344 node_paths=PackedStringArray("clickables") instance=ExtResource("96_uqd7o")]
-stream = ExtResource("97_05o0s")
+stream = ExtResource("96_x3fel")
 clickables = [NodePath("../Area2D")]
