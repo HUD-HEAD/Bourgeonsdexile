@@ -30,12 +30,12 @@ CustomCursor="*res://components/globals/custom_cursor.gd"
 InputManager="*res://components/globals/input_manager.gd"
 SceneManager="*res://components/globals/scene_manager.gd"
 AudioManager="*uid://ciqufic027swg"
+GameManager="*uid://d2wginhwv3f4"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=4
 window/stretch/mode="canvas_items"
 
 [dotnet]
