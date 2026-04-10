@@ -1,0 +1,123 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://s1fn7cbpginw"]
+
+[ext_resource type="Texture2D" uid="uid://bvokpuccgvkm5" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_green_woman_idle_5fps/green_woman_idle_0001.png" id="1_houoc"]
+[ext_resource type="Texture2D" uid="uid://bgdbbflsvtlyo" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_green_woman_idle_5fps/green_woman_idle_0002.png" id="2_pbxbo"]
+[ext_resource type="Texture2D" uid="uid://bttr4cdxuwueg" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_green_woman_idle_5fps/green_woman_idle_0003.png" id="3_r1t71"]
+[ext_resource type="Texture2D" uid="uid://dc7iufagx780h" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_green_woman_idle_5fps/green_woman_idle_0004.png" id="4_qjxtn"]
+[ext_resource type="Texture2D" uid="uid://b35yq1a6p7rir" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_green_woman_idle_5fps/green_woman_idle_0005.png" id="5_nmt4e"]
+[ext_resource type="Texture2D" uid="uid://bpij5bgk6iql7" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_green_woman_idle_5fps/green_woman_idle_0006.png" id="6_j2uqt"]
+[ext_resource type="Texture2D" uid="uid://dc7cukhskbyih" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_green_woman_idle_5fps/green_woman_idle_0007.png" id="7_owm8v"]
+[ext_resource type="Texture2D" uid="uid://cqigidxsm2lds" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_greenwoman_15fps/greenwoman_0001.png" id="8_my64o"]
+[ext_resource type="Texture2D" uid="uid://cocrpf26ityun" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_greenwoman_15fps/greenwoman_0002.png" id="9_xulkn"]
+[ext_resource type="Texture2D" uid="uid://yxix5xe373u7" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_greenwoman_15fps/greenwoman_0003.png" id="10_lr66p"]
+[ext_resource type="Texture2D" uid="uid://bp0ymp04pjftp" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_greenwoman_15fps/greenwoman_0004.png" id="11_ipmov"]
+[ext_resource type="Texture2D" uid="uid://dnwx44bm4v753" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_greenwoman_15fps/greenwoman_0005.png" id="12_1nfi2"]
+[ext_resource type="Texture2D" uid="uid://cgl2heyqjkhkb" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_greenwoman_15fps/greenwoman_0006.png" id="13_6lp28"]
+[ext_resource type="Texture2D" uid="uid://d1enlboslbwi" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_greenwoman_15fps/greenwoman_0007.png" id="14_knfxr"]
+[ext_resource type="Texture2D" uid="uid://cyc5h4lwwn1ak" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_greenwoman_15fps/greenwoman_0008.png" id="15_wao4f"]
+[ext_resource type="Texture2D" uid="uid://dtvhb54ugjrpv" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_greenwoman_15fps/greenwoman_0009.png" id="16_mtf6u"]
+[ext_resource type="Texture2D" uid="uid://086mvpfng1rp" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_greenwoman_15fps/greenwoman_0010.png" id="17_6juxt"]
+[ext_resource type="Texture2D" uid="uid://xelpy3x841w5" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_greenwoman_15fps/greenwoman_0011.png" id="18_14cjc"]
+[ext_resource type="Texture2D" uid="uid://g5w24whitb72" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_greenwoman_15fps/greenwoman_0012.png" id="19_fnshu"]
+[ext_resource type="Texture2D" uid="uid://bp8mxh1k8yb37" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_greenwoman_15fps/greenwoman_0013.png" id="20_ttsuq"]
+[ext_resource type="Texture2D" uid="uid://criyo0favyfyh" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_greenwoman_15fps/greenwoman_0014.png" id="21_ir5mt"]
+[ext_resource type="Texture2D" uid="uid://bcvsh58e4nufm" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_greenwoman_15fps/greenwoman_0015.png" id="22_efn0k"]
+[ext_resource type="Texture2D" uid="uid://oa1lsphh48gc" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_greenwoman_15fps/greenwoman_0016.png" id="23_8rjym"]
+[ext_resource type="Texture2D" uid="uid://d0u6ivpynr6si" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_greenwoman_15fps/greenwoman_0017.png" id="24_cuwh1"]
+[ext_resource type="Texture2D" uid="uid://c3txtf17b5h6i" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_greenwoman_15fps/greenwoman_0018.png" id="25_m4n3f"]
+[ext_resource type="Texture2D" uid="uid://bn461nonw1rwy" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_greenwoman_15fps/greenwoman_0019.png" id="26_wdnb4"]
+[ext_resource type="Texture2D" uid="uid://dw53gr1mfpurg" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_greenwoman_15fps/greenwoman_0020.png" id="27_bpam2"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_houoc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pbxbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_r1t71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qjxtn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nmt4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_j2uqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_owm8v")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_my64o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xulkn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lr66p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ipmov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1nfi2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_6lp28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_knfxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_wao4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_mtf6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_6juxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_14cjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_fnshu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ttsuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ir5mt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_efn0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_8rjym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_cuwh1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_m4n3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_wdnb4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_bpam2")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 15.0
+}]

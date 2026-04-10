@@ -11,6 +11,8 @@ func _ready() -> void:
 	
 	if path_follow != null:
 		walk_along_path = true
+	else:
+		offset_from_model = self.global_position.x - model.global_position.x
 
 func _process(delta: float) -> void:
 	anim_sprite.animation = model.anim_sprite.animation
