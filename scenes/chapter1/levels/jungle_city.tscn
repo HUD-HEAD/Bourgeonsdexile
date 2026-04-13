@@ -1021,7 +1021,7 @@ script = ExtResource("16_0tvtc")
 shape = SubResource("RectangleShape2D_vdiy3")
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Puzzle1/Npc1" unique_id=1263751325]
-position = Vector2(-1, -215)
+position = Vector2(-1, -132)
 
 [node name="Obstacle" parent="Puzzle1" unique_id=1503668481 instance=ExtResource("13_8tq2l")]
 collision_mask = 2
@@ -1053,7 +1053,7 @@ script = ExtResource("16_0tvtc")
 shape = SubResource("RectangleShape2D_vdiy3")
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Puzzle2/Npc2" unique_id=134893488]
-position = Vector2(-1, -215)
+position = Vector2(-3, -122)
 
 [node name="Obstacle" parent="Puzzle2" unique_id=1985664101 instance=ExtResource("13_8tq2l")]
 collision_mask = 2
@@ -1084,7 +1084,7 @@ script = ExtResource("16_0tvtc")
 shape = SubResource("CapsuleShape2D_6i01r")
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Puzzle3/Npc2" unique_id=1466778928]
-position = Vector2(-1, -215)
+position = Vector2(2, -127)
 
 [node name="Obstacle" parent="Puzzle3" unique_id=337709888 instance=ExtResource("13_8tq2l")]
 collision_mask = 2
@@ -1119,7 +1119,7 @@ position = Vector2(2, -3.5)
 shape = SubResource("RectangleShape2D_6i01r")
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Puzzle4/Npc1" unique_id=790382731]
-position = Vector2(-1, -215)
+position = Vector2(-2, -145)
 
 [node name="DragDropPuzzle2" parent="Puzzle4" unique_id=1019054959 instance=ExtResource("100_lvrd1")]
 position = Vector2(161, 542)
@@ -1147,7 +1147,7 @@ position = Vector2(809, 956)
 position = Vector2(-186, 0)
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="YSorting/JungleWoman" unique_id=1504323811]
-position = Vector2(0, -382)
+position = Vector2(20, -256)
 
 [node name="Camera2D" type="Camera2D" parent="YSorting/JungleWoman" unique_id=128381685]
 position = Vector2(0, -416)
