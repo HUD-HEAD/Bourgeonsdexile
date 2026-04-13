@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mpmu7uudmrts"
-path="res://.godot/imported/framephoneplaceholder.png-82d91486052b61753f4930c043efde4b.ctex"
+uid="uid://d30j0n4s4s2gu"
+path="res://.godot/imported/clock2.png-c8a8fdd8fedda15df33841a85f392036.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter2/comics/comic2/framescrolling/framephoneplaceholder.png"
-dest_files=["res://.godot/imported/framephoneplaceholder.png-82d91486052b61753f4930c043efde4b.ctex"]
+source_file="res://graphics/chapter2/comics/comic2/framequeue/clock/clock2.png"
+dest_files=["res://.godot/imported/clock2.png-c8a8fdd8fedda15df33841a85f392036.ctex"]
 
 [params]
 

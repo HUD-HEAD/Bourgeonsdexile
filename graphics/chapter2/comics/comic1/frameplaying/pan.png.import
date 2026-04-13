@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drjos7jwemnkf"
-path="res://.godot/imported/frameinsidetent.png-9fda40e4380edf4d9a486e997900477b.ctex"
+uid="uid://dha7r0ei1eb75"
+path="res://.godot/imported/pan.png-36a4ea0f3b41e4d53b4a375578a0a4e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter2/comics/comic2/framinsidetent/frameinsidetent.png"
-dest_files=["res://.godot/imported/frameinsidetent.png-9fda40e4380edf4d9a486e997900477b.ctex"]
+source_file="res://graphics/chapter2/comics/comic1/frameplaying/pan.png"
+dest_files=["res://.godot/imported/pan.png-36a4ea0f3b41e4d53b4a375578a0a4e0.ctex"]
 
 [params]
 
