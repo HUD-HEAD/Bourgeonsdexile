@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbj7ieg8igsep"
-path="res://.godot/imported/hand_shadow.png-68dafff762dd8555537c2b258b3582f3.ctex"
+uid="uid://dimluk7aq41r5"
+path="res://.godot/imported/emptyarrow.png-d7519b994849efdd287ef32dcbe975bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/ui/cursor/cursor_shadow/hand_shadow.png"
-dest_files=["res://.godot/imported/hand_shadow.png-68dafff762dd8555537c2b258b3582f3.ctex"]
+source_file="res://graphics/ui/cursor/emptyarrow.png"
+dest_files=["res://.godot/imported/emptyarrow.png-d7519b994849efdd287ef32dcbe975bb.ctex"]
 
 [params]
 

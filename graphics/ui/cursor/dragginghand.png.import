@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyrdk8l0bikca"
-path="res://.godot/imported/hand_line.png-d9cfdff7fc68c8a91097e0b5f08fc395.ctex"
+uid="uid://cs0wxphp7odeo"
+path="res://.godot/imported/dragginghand.png-1e33307eae575efb92c366a277e88dd6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/ui/cursor/cursor_line/hand_line.png"
-dest_files=["res://.godot/imported/hand_line.png-d9cfdff7fc68c8a91097e0b5f08fc395.ctex"]
+source_file="res://graphics/ui/cursor/dragginghand.png"
+dest_files=["res://.godot/imported/dragginghand.png-1e33307eae575efb92c366a277e88dd6.ctex"]
 
 [params]
 
