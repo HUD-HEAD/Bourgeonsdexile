@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://h67bkwvbgnvx" path="res://components/chapter1/comic_panels/comic_4/panel_bus.tscn" id="9_t5lhr"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="9_yggp2"]
 [ext_resource type="PackedScene" uid="uid://bjp2jprdkpbul" path="res://components/chapter1/comic_panels/comic_4/panel_topview.tscn" id="10_8767r"]
-[ext_resource type="Texture2D" uid="uid://bjubmhl7oianm" path="res://graphics/chapter1/comics/comic4/framemusic/musicpause.png" id="11_ot2ku"]
+[ext_resource type="PackedScene" uid="uid://kqn8hqak4g04" path="res://components/chapter1/comic_panels/comic_4/panel_phone_music.tscn" id="11_ot2ku"]
 [ext_resource type="PackedScene" uid="uid://crqtn2a43hhe8" path="res://components/chapter1/comic_panels/comic_4/panel_phone.tscn" id="12_xs8jl"]
 
 [node name="JungleComic4" type="Node2D" unique_id=1574922119]
@@ -17,7 +17,7 @@ metadata/_edit_vertical_guides_ = [5131.0]
 
 [node name="PanelPanner" type="Node" parent="." unique_id=665689758 node_paths=PackedStringArray("panels")]
 script = ExtResource("9_yggp2")
-panels = [NodePath("../PanelMissingPosters"), NodePath("../JungleComic4FrameFolders"), NodePath("../Comic4PanelTicket"), NodePath("../Comic4PanelPhone"), NodePath("../Comic4PanelMochil"), NodePath("../Comic4Panel6"), NodePath("../PanelTopview")]
+panels = [NodePath("../PanelMissingPosters"), NodePath("../JungleComic4FrameFolders"), NodePath("../Comic4PanelTicket"), NodePath("../Comic4PanelPhone"), NodePath("../Comic4PanelMochil"), NodePath("../Comic4Panel6"), NodePath("../PanelPhoneMusic"), NodePath("../PanelTopview")]
 
 [node name="PaperBackground" type="CanvasLayer" parent="." unique_id=1769624388]
 layer = -1
@@ -61,9 +61,8 @@ position = Vector2(12052, 534)
 [node name="Comic4Panel6" parent="." unique_id=1529630051 instance=ExtResource("9_t5lhr")]
 position = Vector2(14201, 540)
 
+[node name="PanelPhoneMusic" parent="." unique_id=1591460420 instance=ExtResource("11_ot2ku")]
+position = Vector2(16224, 540)
+
 [node name="PanelTopview" parent="." unique_id=184560352 instance=ExtResource("10_8767r")]
 position = Vector2(18322, 535)
-
-[node name="Musicpause" type="Sprite2D" parent="." unique_id=1137226757]
-position = Vector2(16224, 557)
-texture = ExtResource("11_ot2ku")
