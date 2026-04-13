@@ -17,6 +17,12 @@
 [ext_resource type="Texture2D" uid="uid://cdj6ix023j1g7" path="res://graphics/chapter1/levels/lajas_blancas/environment/outsidehouse2.png" id="18_lvato"]
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="20_lvato"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/obstacle.tscn" id="21_h15xc"]
+[ext_resource type="Script" uid="uid://bchnidsm7kci0" path="res://components/chapter1/main_characters/companion.gd" id="25_67up0"]
+[ext_resource type="SpriteFrames" uid="uid://s1fn7cbpginw" path="res://components/chapter1/levels/lajas_blancas/queue/green_woman.tres" id="26_lvato"]
+[ext_resource type="Texture2D" uid="uid://bqmwvwxnvy503" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow1.png" id="27_h15xc"]
+[ext_resource type="Texture2D" uid="uid://dnon84uyke6c4" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow2.png" id="28_lj5p7"]
+[ext_resource type="Texture2D" uid="uid://dkm7pj8kxf23p" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow3.png" id="29_kde1w"]
+[ext_resource type="SpriteFrames" uid="uid://882iqrb47j8n" path="res://components/chapter1/levels/lajas_blancas/queue/teen.tres" id="30_h15xc"]
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="32_h15xc"]
 [ext_resource type="PackedScene" uid="uid://cx455fd0kkpbt" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB3.tscn" id="43_nx082"]
 [ext_resource type="PackedScene" uid="uid://b0rp3ag1qca1u" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB1.tscn" id="45_i6383"]
@@ -31,6 +37,23 @@ size = Vector2(871, 413)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h15xc"]
 size = Vector2(921, 384)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vodvp"]
+animations = [{
+"frames": [{
+"duration": 10.0,
+"texture": ExtResource("27_h15xc")
+}, {
+"duration": 10.0,
+"texture": ExtResource("28_lj5p7")
+}, {
+"duration": 10.0,
+"texture": ExtResource("29_kde1w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
 
 [node name="LajasBlancas" type="Node2D" unique_id=1909938204]
 
@@ -58,9 +81,9 @@ position = Vector2(3010, 787)
 texture = ExtResource("6_a464j")
 
 [node name="InteriorReveal" type="Node2D" parent="." unique_id=1293985592]
+visible = false
 
 [node name="PaperBackground" type="TextureRect" parent="InteriorReveal" unique_id=2012671307]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -73,7 +96,6 @@ texture = ExtResource("32_h15xc")
 stretch_mode = 1
 
 [node name="Int1" type="Sprite2D" parent="InteriorReveal" unique_id=916796917]
-visible = false
 position = Vector2(1649, 454)
 texture = ExtResource("7_dau4e")
 centered = false
@@ -83,7 +105,7 @@ position = Vector2(402, 178)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("7_3f63v")
-nodes_to_reveal = [NodePath("../../PaperBackground"), NodePath("..")]
+nodes_to_reveal = [NodePath("../../PaperBackground"), NodePath(".."), NodePath("../../../PaperBackgroundPostTent")]
 nodes_to_hide = [NodePath("../../../Outsidehouse1")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteriorReveal/Int1/AreaReveal" unique_id=1752693632]
@@ -92,7 +114,6 @@ shape = SubResource("RectangleShape2D_lvato")
 debug_color = Color(0.8252278, 0.2592846, 0.75617933, 0.41960785)
 
 [node name="Int2" type="Sprite2D" parent="InteriorReveal" unique_id=1034865706]
-visible = false
 position = Vector2(4405, 493)
 texture = ExtResource("8_of5dn")
 centered = false
@@ -110,12 +131,67 @@ position = Vector2(-23.5, -47)
 shape = SubResource("RectangleShape2D_h15xc")
 debug_color = Color(0.8252278, 0.2592846, 0.75617933, 0.41960785)
 
+[node name="QueuingPeople" type="Node2D" parent="." unique_id=841982495]
+
+[node name="QueuePerson" parent="QueuingPeople" unique_id=606944070 node_paths=PackedStringArray("model") instance=ExtResource("18_ih44s")]
+position = Vector2(689, 844)
+model = NodePath("../../Spawn/Nina")
+
+[node name="QueuePerson2" type="Node2D" parent="QueuingPeople" unique_id=700974070 node_paths=PackedStringArray("model", "anim_sprite")]
+position = Vector2(821, 844)
+script = ExtResource("25_67up0")
+model = NodePath("../../Spawn/Nina")
+anim_sprite = NodePath("Woman")
+
+[node name="Woman" type="AnimatedSprite2D" parent="QueuingPeople/QueuePerson2" unique_id=689873547]
+sprite_frames = ExtResource("26_lvato")
+animation = &"walking"
+offset = Vector2(0, -100)
+
+[node name="Shadow" type="AnimatedSprite2D" parent="QueuingPeople/QueuePerson2/Woman" unique_id=1632501669]
+show_behind_parent = true
+sprite_frames = SubResource("SpriteFrames_vodvp")
+autoplay = "default"
+frame_progress = 0.9875541
+
+[node name="QueuePerson3" type="Node2D" parent="QueuingPeople" unique_id=1934056135 node_paths=PackedStringArray("model", "anim_sprite")]
+position = Vector2(821, 844)
+script = ExtResource("25_67up0")
+model = NodePath("../../Spawn/Nina")
+anim_sprite = NodePath("Woman")
+
+[node name="Woman" type="AnimatedSprite2D" parent="QueuingPeople/QueuePerson3" unique_id=2028592394]
+position = Vector2(149, 6)
+sprite_frames = ExtResource("30_h15xc")
+animation = &"walking"
+offset = Vector2(0, -100)
+
+[node name="Shadow" type="AnimatedSprite2D" parent="QueuingPeople/QueuePerson3/Woman" unique_id=1264319055]
+show_behind_parent = true
+sprite_frames = SubResource("SpriteFrames_vodvp")
+autoplay = "default"
+frame_progress = 0.9875541
+
+[node name="PaperBackgroundPostTent" type="TextureRect" parent="." unique_id=1110596856]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2540.0
+offset_right = 4460.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("32_h15xc")
+stretch_mode = 1
+
 [node name="Outsidehouse1" type="Sprite2D" parent="." unique_id=1804838306]
-position = Vector2(2103, 654)
+position = Vector2(2092, 649)
 texture = ExtResource("17_67up0")
 
 [node name="Outsidehouse2" type="Sprite2D" parent="." unique_id=1443193580]
-position = Vector2(4892, 693)
+position = Vector2(4892, 688)
 texture = ExtResource("18_lvato")
 
 [node name="Queue1" type="Node2D" parent="." unique_id=141455150]
@@ -182,21 +258,18 @@ position = Vector2(3, -1)
 collision_mask = 2
 
 [node name="Puzzle7" parent="Queue1" unique_id=1293805936 instance=ExtResource("15_h6dcd")]
-position = Vector2(-799, -805)
+position = Vector2(335, -805)
 
 [node name="PuzzleSpawner" parent="Queue1/Puzzle7" index="0" unique_id=1455650157 node_paths=PackedStringArray("puzzle", "piece_spawners")]
 puzzle = NodePath("../DragDropPuzzle2")
 piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../Npc/MarkerBubbleSpawn")]
 
 [node name="Npc" parent="Queue1/Puzzle7" index="1" unique_id=2093839101]
-position = Vector2(1259, 787)
+position = Vector2(204, 787)
 texture = null
 
-[node name="Obstacle" parent="Queue1/Puzzle7" index="2" unique_id=310843140]
-position = Vector2(1117, 0)
-
 [node name="DragDropPuzzle2" parent="Queue1/Puzzle7" unique_id=1767003607 instance=ExtResource("45_i6383")]
-position = Vector2(1143, 487)
+position = Vector2(94, 487)
 
 [node name="HideOnComplete" type="Node" parent="Queue1/Puzzle7/DragDropPuzzle2" unique_id=793575586]
 script = ExtResource("11_lvato")
@@ -264,12 +337,6 @@ obstacle = NodePath("../Obstacle")
 position = Vector2(3, -1)
 collision_mask = 2
 
-[node name="QueuingPeople" type="Node2D" parent="." unique_id=841982495]
-
-[node name="QueuePerson" parent="QueuingPeople" unique_id=606944070 node_paths=PackedStringArray("model") instance=ExtResource("18_ih44s")]
-position = Vector2(689, 844)
-model = NodePath("../../Spawn/Nina")
-
 [node name="Spawn" type="Marker2D" parent="." unique_id=1152816118]
 position = Vector2(460, 867)
 
@@ -293,6 +360,6 @@ position = Vector2(0, -382)
 position = Vector2(0, -327)
 offset = Vector2(500, 0)
 
-[editable path="Queue1/Puzzle7"]
 [editable path="QueuingPeople/QueuePerson"]
+[editable path="Queue1/Puzzle7"]
 [editable path="Spawn/Nina"]
