@@ -11,11 +11,3 @@ func _ready() -> void:
 	
 	if path_follow != null:
 		walk_along_path = true
-
-func _process(delta: float) -> void:
-	anim_sprite.animation = model.anim_sprite.animation
-	if model.walking :
-		if walk_along_path:
-			path_follow.progress = model.path_follow.progress + offset_from_model
-		else:
-			global_position.x = model.global_position.x + offset_from_model

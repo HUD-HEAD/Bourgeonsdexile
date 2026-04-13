@@ -3,9 +3,9 @@ extends Node
 
 
 # Load the custom images for the mouse cursor.
-const T_ARROW : Texture2D = preload("res://graphics/ui/cursor/cursor_line/arrow_line.png")
-const T_POINTING_HAND : Texture2D = preload("res://graphics/ui/cursor/cursor_line/hand_line.png")
-const T_DRAG : Texture2D = preload("res://graphics/ui/cursor/cursor_line/hold_line.png")
+const T_ARROW : Texture2D = preload("res://graphics/ui/cursor/fullarrow.png")
+const T_POINTING_HAND : Texture2D = preload("res://graphics/ui/cursor/pointinghand.png")
+const T_DRAG : Texture2D = preload("res://graphics/ui/cursor/dragginghand.png")
 
 
 func _ready():

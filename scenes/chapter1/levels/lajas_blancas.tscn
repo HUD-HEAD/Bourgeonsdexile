@@ -12,25 +12,18 @@
 [ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/chapter1/main_characters/jungle_woman.tscn" id="15_004no"]
 [ext_resource type="PackedScene" uid="uid://skt0xd3mmvd" path="res://components/utils/puzzles/puzzle_spawner_template.tscn" id="15_h6dcd"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="16_sbmfg"]
-[ext_resource type="Texture2D" uid="uid://dp8crmuh1gouf" path="res://graphics/chapter1/levels/lajas_blancas/npcs/queue1/2.png" id="28_y1a81"]
-[ext_resource type="Texture2D" uid="uid://bw76e3q2pa5st" path="res://graphics/chapter1/levels/lajas_blancas/npcs/queue1/3.png" id="29_h6dcd"]
-[ext_resource type="Texture2D" uid="uid://dmdneisslgnmg" path="res://graphics/chapter1/levels/lajas_blancas/npcs/queue1/4.png" id="30_004no"]
-[ext_resource type="Script" uid="uid://crd3mglfc10su" path="res://components/chapter1/levels/lajas_blancas/advance_queue.gd" id="30_67up0"]
-[ext_resource type="Texture2D" uid="uid://co8wbousnpcik" path="res://graphics/chapter1/levels/lajas_blancas/npcs/queue1/5.png" id="31_sbmfg"]
+[ext_resource type="Texture2D" uid="uid://cy84fw3okhgw2" path="res://graphics/chapter1/levels/lajas_blancas/environment/ooutsidehouse1.png" id="17_67up0"]
+[ext_resource type="PackedScene" uid="uid://dnyi8dybxjxpg" path="res://components/chapter1/levels/lajas_blancas/queue/queue_person.tscn" id="18_ih44s"]
+[ext_resource type="Texture2D" uid="uid://cdj6ix023j1g7" path="res://graphics/chapter1/levels/lajas_blancas/environment/outsidehouse2.png" id="18_lvato"]
+[ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="20_lvato"]
+[ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/obstacle.tscn" id="21_h15xc"]
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="32_h15xc"]
 [ext_resource type="PackedScene" uid="uid://cx455fd0kkpbt" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB3.tscn" id="43_nx082"]
 [ext_resource type="PackedScene" uid="uid://b0rp3ag1qca1u" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB1.tscn" id="45_i6383"]
-[ext_resource type="PackedScene" uid="uid://dpbnilttq2thf" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB2.tscn" id="46_qi2ms"]
-[ext_resource type="PackedScene" uid="uid://bhqtwxr4stcnp" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB4.tscn" id="47_xg1hh"]
 [ext_resource type="PackedScene" uid="uid://dhktyk6ijdbuk" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB5.tscn" id="48_jenef"]
-[ext_resource type="PackedScene" uid="uid://bh1eiis125pe" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB6.tscn" id="49_tcsij"]
 [ext_resource type="PackedScene" uid="uid://ddnvdwl518yu7" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB7.tscn" id="50_6x8uj"]
 [ext_resource type="PackedScene" uid="uid://bmvhhuyvjwsll" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB8.tscn" id="51_x5p5e"]
-[ext_resource type="PackedScene" uid="uid://ciylsrd7212qd" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB9.tscn" id="52_uanvq"]
-[ext_resource type="PackedScene" uid="uid://i7mqsprajlbc" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB10.tscn" id="53_k2316"]
 [ext_resource type="PackedScene" uid="uid://b327i7m8yo6ne" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB11.tscn" id="54_d2lfv"]
-[ext_resource type="PackedScene" uid="uid://dukdhksfphdhb" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB12.tscn" id="55_d7whc"]
-[ext_resource type="PackedScene" uid="uid://0qs0gh3kedj3" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB13.tscn" id="56_572nb"]
 [ext_resource type="PackedScene" uid="uid://0sd3o1afbqf1" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB14.tscn" id="57_s3fhf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lvato"]
@@ -60,9 +53,14 @@ position = Vector2(0, 303)
 texture = ExtResource("6_h6g4n")
 centered = false
 
-[node name="BackgroundMask" type="TextureRect" parent="." unique_id=2012671307]
+[node name="NpcRedcross1" type="Sprite2D" parent="." unique_id=404862580]
+position = Vector2(3010, 787)
+texture = ExtResource("6_a464j")
+
+[node name="InteriorReveal" type="Node2D" parent="." unique_id=1293985592]
+
+[node name="PaperBackground" type="TextureRect" parent="InteriorReveal" unique_id=2012671307]
 visible = false
-z_index = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -74,264 +72,227 @@ mouse_filter = 2
 texture = ExtResource("32_h15xc")
 stretch_mode = 1
 
-[node name="Int1" type="Sprite2D" parent="." unique_id=916796917]
-z_index = 1
+[node name="Int1" type="Sprite2D" parent="InteriorReveal" unique_id=916796917]
+visible = false
 position = Vector2(1649, 454)
 texture = ExtResource("7_dau4e")
 centered = false
 
-[node name="AreaReveal" type="Area2D" parent="Int1" unique_id=1412227203 node_paths=PackedStringArray("node_to_reveal", "background_mask")]
+[node name="AreaReveal" type="Area2D" parent="InteriorReveal/Int1" unique_id=1412227203 node_paths=PackedStringArray("nodes_to_reveal", "nodes_to_hide")]
 position = Vector2(402, 178)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("7_3f63v")
-node_to_reveal = NodePath("..")
-background_mask = NodePath("../../BackgroundMask")
+nodes_to_reveal = [NodePath("../../PaperBackground"), NodePath("..")]
+nodes_to_hide = [NodePath("../../../Outsidehouse1")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Int1/AreaReveal" unique_id=1752693632]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteriorReveal/Int1/AreaReveal" unique_id=1752693632]
 position = Vector2(48.5, 41.5)
 shape = SubResource("RectangleShape2D_lvato")
 debug_color = Color(0.8252278, 0.2592846, 0.75617933, 0.41960785)
 
-[node name="Puzzle5" parent="Int1" unique_id=706341858 instance=ExtResource("15_h6dcd")]
-position = Vector2(-950, -455)
-
-[node name="PuzzleSpawner" parent="Int1/Puzzle5" index="0" unique_id=1455650157 node_paths=PackedStringArray("puzzle", "piece_spawners")]
-puzzle = NodePath("../DragDropPuzzle")
-piece_spawners = [NodePath("../../../YSorting/Spawn/JungleWoman2/MarkerBubbleSpawn"), NodePath("../Npc/MarkerBubbleSpawn")]
-
-[node name="Npc" parent="Int1/Puzzle5" index="1" unique_id=2093839101]
-position = Vector2(1172, 771)
-texture = ExtResource("31_sbmfg")
-
-[node name="Obstacle" parent="Int1/Puzzle5" index="2" unique_id=310843140]
-position = Vector2(1079, 0)
-
-[node name="DragDropPuzzle" parent="Int1/Puzzle5" unique_id=2092257195 instance=ExtResource("43_nx082")]
-position = Vector2(1090, 608)
-
-[node name="HideOnComplete" type="Node" parent="Int1/Puzzle5/DragDropPuzzle" unique_id=1613584730]
-script = ExtResource("11_lvato")
-
-[node name="Puzzle6" parent="Int1" unique_id=1529593029 instance=ExtResource("15_h6dcd")]
-position = Vector2(-834, -454)
-
-[node name="PuzzleSpawner" parent="Int1/Puzzle6" index="0" unique_id=1455650157 node_paths=PackedStringArray("puzzle", "piece_spawners")]
-puzzle = NodePath("../DragDropPuzzle8")
-piece_spawners = [NodePath("../../../YSorting/Spawn/JungleWoman2/MarkerBubbleSpawn"), NodePath("../Npc/MarkerBubbleSpawn")]
-
-[node name="Npc" parent="Int1/Puzzle6" index="1" unique_id=2093839101]
-position = Vector2(1259, 778.5)
-
-[node name="Obstacle" parent="Int1/Puzzle6" index="2" unique_id=310843140]
-position = Vector2(1068, 0)
-
-[node name="DragDropPuzzle8" parent="Int1/Puzzle6" unique_id=561042216 instance=ExtResource("51_x5p5e")]
-position = Vector2(1085, 601)
-
-[node name="HideOnComplete" type="Node" parent="Int1/Puzzle6/DragDropPuzzle8" unique_id=895555493]
-script = ExtResource("11_lvato")
-
-[node name="Puzzle7" parent="Int1" unique_id=1293805936 instance=ExtResource("15_h6dcd")]
-position = Vector2(-530, -454)
-
-[node name="PuzzleSpawner" parent="Int1/Puzzle7" index="0" unique_id=1455650157 node_paths=PackedStringArray("puzzle", "piece_spawners")]
-puzzle = NodePath("../DragDropPuzzle2")
-piece_spawners = [NodePath("../../../YSorting/Spawn/JungleWoman2/MarkerBubbleSpawn"), NodePath("../Npc/MarkerBubbleSpawn")]
-
-[node name="Npc" parent="Int1/Puzzle7" index="1" unique_id=2093839101]
-position = Vector2(1259, 787)
-texture = null
-
-[node name="Obstacle" parent="Int1/Puzzle7" index="2" unique_id=310843140]
-position = Vector2(1117, 0)
-
-[node name="DragDropPuzzle2" parent="Int1/Puzzle7" unique_id=1767003607 instance=ExtResource("45_i6383")]
-position = Vector2(1143, 487)
-
-[node name="HideOnComplete" type="Node" parent="Int1/Puzzle7/DragDropPuzzle2" unique_id=793575586]
-script = ExtResource("11_lvato")
-
-[node name="Int2" type="Sprite2D" parent="." unique_id=1034865706]
-z_index = 1
+[node name="Int2" type="Sprite2D" parent="InteriorReveal" unique_id=1034865706]
+visible = false
 position = Vector2(4405, 493)
 texture = ExtResource("8_of5dn")
 centered = false
 
-[node name="AreaReveal" type="Area2D" parent="Int2" unique_id=1768219270 node_paths=PackedStringArray("node_to_reveal", "background_mask")]
+[node name="AreaReveal" type="Area2D" parent="InteriorReveal/Int2" unique_id=1768219270 node_paths=PackedStringArray("nodes_to_reveal", "nodes_to_hide")]
 position = Vector2(510, 247)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("7_3f63v")
-node_to_reveal = NodePath("..")
-background_mask = NodePath("../../BackgroundMask")
+nodes_to_reveal = [NodePath(".."), NodePath("../../PaperBackground")]
+nodes_to_hide = [NodePath("../../../Outsidehouse2")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Int2/AreaReveal" unique_id=430801904]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteriorReveal/Int2/AreaReveal" unique_id=430801904]
 position = Vector2(-23.5, -47)
 shape = SubResource("RectangleShape2D_h15xc")
 debug_color = Color(0.8252278, 0.2592846, 0.75617933, 0.41960785)
 
-[node name="ToDo" type="Node2D" parent="." unique_id=643192834]
-visible = false
+[node name="Outsidehouse1" type="Sprite2D" parent="." unique_id=1804838306]
+position = Vector2(2103, 654)
+texture = ExtResource("17_67up0")
 
-[node name="DragDropPuzzle3" parent="ToDo" unique_id=318795057 instance=ExtResource("46_qi2ms")]
-position = Vector2(5146, 495)
-
-[node name="DragDropPuzzle4" parent="ToDo" unique_id=636390167 instance=ExtResource("47_xg1hh")]
-position = Vector2(3798, 652)
-
-[node name="DragDropPuzzle6" parent="ToDo" unique_id=1049316134 instance=ExtResource("49_tcsij")]
-position = Vector2(3250, 641)
-
-[node name="DragDropPuzzle9" parent="ToDo" unique_id=1187840958 instance=ExtResource("52_uanvq")]
-position = Vector2(3994, 550)
-
-[node name="DragDropPuzzle10" parent="ToDo" unique_id=1114937318 instance=ExtResource("53_k2316")]
-position = Vector2(4427, 562)
-
-[node name="DragDropPuzzle12" parent="ToDo" unique_id=623698523 instance=ExtResource("55_d7whc")]
-position = Vector2(4262, 633)
-
-[node name="DragDropPuzzle13" parent="ToDo" unique_id=439373313 instance=ExtResource("56_572nb")]
-position = Vector2(3461, 646)
+[node name="Outsidehouse2" type="Sprite2D" parent="." unique_id=1443193580]
+position = Vector2(4892, 693)
+texture = ExtResource("18_lvato")
 
 [node name="Queue1" type="Node2D" parent="." unique_id=141455150]
 position = Vector2(1918, 805)
 
-[node name="Puzzle4" parent="Queue1" unique_id=1754884165 instance=ExtResource("15_h6dcd")]
-position = Vector2(-1634, -805)
-
-[node name="PuzzleSpawner" parent="Queue1/Puzzle4" index="0" unique_id=1455650157 node_paths=PackedStringArray("puzzle", "piece_spawners")]
-puzzle = NodePath("../DragDropPuzzle11")
-piece_spawners = [NodePath("../../../YSorting/Spawn/JungleWoman2/MarkerBubbleSpawn"), NodePath("../Npc/MarkerBubbleSpawn")]
-
-[node name="Npc" parent="Queue1/Puzzle4" index="1" unique_id=2093839101]
-texture = ExtResource("30_004no")
-
-[node name="CollisionShape2D" parent="Queue1/Puzzle4/Npc/Clickable" parent_id_path=PackedInt32Array(1754884165, 1975113136) index="0" unique_id=918266892]
-position = Vector2(20, 0)
-
-[node name="Obstacle" parent="Queue1/Puzzle4" index="2" unique_id=310843140]
-position = Vector2(1149, 0)
+[node name="Puzzle4" type="Node2D" parent="Queue1" unique_id=607153623]
+position = Vector2(-749, -796)
 
 [node name="DragDropPuzzle11" parent="Queue1/Puzzle4" unique_id=839630799 instance=ExtResource("54_d2lfv")]
-position = Vector2(1259, 503)
+position = Vector2(135, 375)
 
 [node name="HideOnComplete" type="Node" parent="Queue1/Puzzle4/DragDropPuzzle11" unique_id=602513452]
+script = ExtResource("11_lvato")
+
+[node name="PuzzleSpawner" type="Node" parent="Queue1/Puzzle4" unique_id=208217617 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+script = ExtResource("20_lvato")
+puzzle = NodePath("../DragDropPuzzle11")
+piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../../../QueuingPeople/QueuePerson/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../../../QueuingPeople/QueuePerson/Clickable")
+obstacle = NodePath("../Obstacle")
+
+[node name="Obstacle" parent="Queue1/Puzzle4" unique_id=1881775127 instance=ExtResource("21_h15xc")]
+position = Vector2(3, -1)
+collision_mask = 2
+
+[node name="Puzzle5" type="Node2D" parent="Queue1" unique_id=641492680]
+position = Vector2(-162, -796)
+
+[node name="DragDropPuzzle" parent="Queue1/Puzzle5" unique_id=2092257195 instance=ExtResource("43_nx082")]
+position = Vector2(69, 598)
+
+[node name="HideOnComplete" type="Node" parent="Queue1/Puzzle5/DragDropPuzzle" unique_id=1613584730]
+script = ExtResource("11_lvato")
+
+[node name="PuzzleSpawner" type="Node" parent="Queue1/Puzzle5" unique_id=1755366299 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+script = ExtResource("20_lvato")
+puzzle = NodePath("../DragDropPuzzle")
+piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../../../QueuingPeople/QueuePerson/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../../../QueuingPeople/QueuePerson/Clickable")
+obstacle = NodePath("../Obstacle")
+
+[node name="Obstacle" parent="Queue1/Puzzle5" unique_id=61190362 instance=ExtResource("21_h15xc")]
+position = Vector2(5, 0)
+collision_mask = 2
+
+[node name="Puzzle6" type="Node2D" parent="Queue1" unique_id=458118214]
+position = Vector2(51, -796)
+
+[node name="DragDropPuzzle8" parent="Queue1/Puzzle6" unique_id=561042216 instance=ExtResource("51_x5p5e")]
+position = Vector2(-3, 594)
+
+[node name="HideOnComplete" type="Node" parent="Queue1/Puzzle6/DragDropPuzzle8" unique_id=895555493]
+script = ExtResource("11_lvato")
+
+[node name="PuzzleSpawner" type="Node" parent="Queue1/Puzzle6" unique_id=1595058988 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+script = ExtResource("20_lvato")
+puzzle = NodePath("../DragDropPuzzle8")
+piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../../../QueuingPeople/QueuePerson/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../../../QueuingPeople/QueuePerson/Clickable")
+obstacle = NodePath("../Obstacle")
+
+[node name="Obstacle" parent="Queue1/Puzzle6" unique_id=1051511325 instance=ExtResource("21_h15xc")]
+position = Vector2(3, -1)
+collision_mask = 2
+
+[node name="Puzzle7" parent="Queue1" unique_id=1293805936 instance=ExtResource("15_h6dcd")]
+position = Vector2(-799, -805)
+
+[node name="PuzzleSpawner" parent="Queue1/Puzzle7" index="0" unique_id=1455650157 node_paths=PackedStringArray("puzzle", "piece_spawners")]
+puzzle = NodePath("../DragDropPuzzle2")
+piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../Npc/MarkerBubbleSpawn")]
+
+[node name="Npc" parent="Queue1/Puzzle7" index="1" unique_id=2093839101]
+position = Vector2(1259, 787)
+texture = null
+
+[node name="Obstacle" parent="Queue1/Puzzle7" index="2" unique_id=310843140]
+position = Vector2(1117, 0)
+
+[node name="DragDropPuzzle2" parent="Queue1/Puzzle7" unique_id=1767003607 instance=ExtResource("45_i6383")]
+position = Vector2(1143, 487)
+
+[node name="HideOnComplete" type="Node" parent="Queue1/Puzzle7/DragDropPuzzle2" unique_id=793575586]
 script = ExtResource("11_lvato")
 
 [node name="Queue2" type="Node2D" parent="." unique_id=907432007]
 position = Vector2(1918, 805)
 
-[node name="Puzzle1" parent="Queue2" unique_id=807036398 instance=ExtResource("15_h6dcd")]
-position = Vector2(658, -805)
-
-[node name="PuzzleSpawner" parent="Queue2/Puzzle1" index="0" unique_id=1455650157 node_paths=PackedStringArray("puzzle", "piece_spawners")]
-puzzle = NodePath("../DragDropPuzzle7")
-piece_spawners = [NodePath("../../../YSorting/Spawn/JungleWoman2/MarkerBubbleSpawn"), NodePath("../Npc/MarkerBubbleSpawn")]
+[node name="Puzzle1" type="Node2D" parent="Queue2" unique_id=1915635827]
+position = Vector2(1659, -796)
 
 [node name="DragDropPuzzle7" parent="Queue2/Puzzle1" unique_id=189400561 instance=ExtResource("50_6x8uj")]
-position = Vector2(1217, 587)
+position = Vector2(216, 578)
 
 [node name="HideOnComplete" type="Node" parent="Queue2/Puzzle1/DragDropPuzzle7" unique_id=1045230970]
 script = ExtResource("11_lvato")
 
-[node name="Puzzle2" parent="Queue2" unique_id=48509835 instance=ExtResource("15_h6dcd")]
-position = Vector2(903, -805)
+[node name="PuzzleSpawner" type="Node" parent="Queue2/Puzzle1" unique_id=1415408882 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+script = ExtResource("20_lvato")
+puzzle = NodePath("../DragDropPuzzle7")
+piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../../../QueuingPeople/QueuePerson/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../../../QueuingPeople/QueuePerson/Clickable")
+obstacle = NodePath("../Obstacle")
 
-[node name="PuzzleSpawner" parent="Queue2/Puzzle2" index="0" unique_id=1455650157 node_paths=PackedStringArray("puzzle", "piece_spawners")]
-puzzle = NodePath("../DragDropPuzzle14")
-piece_spawners = [NodePath("../../../YSorting/Spawn/JungleWoman2/MarkerBubbleSpawn"), NodePath("../Npc/MarkerBubbleSpawn")]
+[node name="Obstacle" parent="Queue2/Puzzle1" unique_id=754715582 instance=ExtResource("21_h15xc")]
+position = Vector2(3, -1)
+collision_mask = 2
 
-[node name="Npc" parent="Queue2/Puzzle2" index="1" unique_id=2093839101]
-texture = ExtResource("28_y1a81")
-
-[node name="Obstacle" parent="Queue2/Puzzle2" index="2" unique_id=310843140]
-position = Vector2(1149, 0)
+[node name="Puzzle2" type="Node2D" parent="Queue2" unique_id=1795747212]
+position = Vector2(2050, -796)
 
 [node name="DragDropPuzzle14" parent="Queue2/Puzzle2" unique_id=559797596 instance=ExtResource("57_s3fhf")]
-position = Vector2(1232, 416)
+position = Vector2(85, 407)
 
 [node name="HideOnComplete" type="Node" parent="Queue2/Puzzle2/DragDropPuzzle14" unique_id=1258875576]
 script = ExtResource("11_lvato")
 
-[node name="Puzzle3" parent="Queue2" unique_id=2017570052 instance=ExtResource("15_h6dcd")]
-position = Vector2(1152, -805)
+[node name="PuzzleSpawner" type="Node" parent="Queue2/Puzzle2" unique_id=215774215 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+script = ExtResource("20_lvato")
+puzzle = NodePath("../DragDropPuzzle14")
+piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../../../QueuingPeople/QueuePerson/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../../../QueuingPeople/QueuePerson/Clickable")
+obstacle = NodePath("../Obstacle")
 
-[node name="PuzzleSpawner" parent="Queue2/Puzzle3" index="0" unique_id=1455650157 node_paths=PackedStringArray("puzzle", "piece_spawners")]
-puzzle = NodePath("../DragDropPuzzle5")
-piece_spawners = [NodePath("../../../YSorting/Spawn/JungleWoman2/MarkerBubbleSpawn"), NodePath("../Npc/MarkerBubbleSpawn")]
+[node name="Obstacle" parent="Queue2/Puzzle2" unique_id=222064032 instance=ExtResource("21_h15xc")]
+position = Vector2(3, -1)
+collision_mask = 2
 
-[node name="Npc" parent="Queue2/Puzzle3" index="1" unique_id=2093839101]
-texture = ExtResource("29_h6dcd")
-
-[node name="Obstacle" parent="Queue2/Puzzle3" index="2" unique_id=310843140]
-position = Vector2(1149, 0)
+[node name="Puzzle3" type="Node2D" parent="Queue2" unique_id=1648366358]
+position = Vector2(2297, -796)
 
 [node name="DragDropPuzzle5" parent="Queue2/Puzzle3" unique_id=192951279 instance=ExtResource("48_jenef")]
-position = Vector2(1199, 591)
+position = Vector2(54, 582)
 
 [node name="HideOnComplete" type="Node" parent="Queue2/Puzzle3/DragDropPuzzle5" unique_id=1929496938]
 script = ExtResource("11_lvato")
 
-[node name="YSorting" type="Node2D" parent="." unique_id=1533864146]
-y_sort_enabled = true
-position = Vector2(-728, 0)
+[node name="PuzzleSpawner" type="Node" parent="Queue2/Puzzle3" unique_id=2001654392 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+script = ExtResource("20_lvato")
+puzzle = NodePath("../DragDropPuzzle5")
+piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../../../QueuingPeople/QueuePerson/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../../../QueuingPeople/QueuePerson/Clickable")
+obstacle = NodePath("../Obstacle")
 
-[node name="Npcs" type="Node2D" parent="YSorting" unique_id=1222065461]
-y_sort_enabled = true
-position = Vector2(58, 384)
+[node name="Obstacle" parent="Queue2/Puzzle3" unique_id=185623456 instance=ExtResource("21_h15xc")]
+position = Vector2(3, -1)
+collision_mask = 2
 
-[node name="Spawn" type="Marker2D" parent="YSorting" unique_id=1152816118]
-position = Vector2(1188, 867)
+[node name="QueuingPeople" type="Node2D" parent="." unique_id=841982495]
 
-[node name="JungleWoman2" parent="YSorting/Spawn" unique_id=700974070 instance=ExtResource("15_004no")]
+[node name="QueuePerson" parent="QueuingPeople" unique_id=606944070 node_paths=PackedStringArray("model") instance=ExtResource("18_ih44s")]
+position = Vector2(689, 844)
+model = NodePath("../../Spawn/Nina")
+
+[node name="Spawn" type="Marker2D" parent="." unique_id=1152816118]
+position = Vector2(460, 867)
+
+[node name="Nina" parent="Spawn" unique_id=1291466544 instance=ExtResource("15_004no")]
 z_index = 1
 y_sort_enabled = true
 
-[node name="Woman" parent="YSorting/Spawn/JungleWoman2" index="0" unique_id=689873547]
+[node name="Woman" parent="Spawn/Nina" index="0" unique_id=689873547]
 scale = Vector2(0.8, 0.8)
 
-[node name="Area2D" parent="YSorting/Spawn/JungleWoman2" index="1" unique_id=960188442]
+[node name="Area2D" parent="Spawn/Nina" index="1" unique_id=960188442]
 scale = Vector2(0.8, 0.8)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="YSorting/Spawn/JungleWoman2" unique_id=850392926]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Spawn/Nina" unique_id=850392926]
 position = Vector2(-186, 0)
 
-[node name="MarkerBubbleSpawn" type="Marker2D" parent="YSorting/Spawn/JungleWoman2" unique_id=1783575510]
+[node name="MarkerBubbleSpawn" type="Marker2D" parent="Spawn/Nina" unique_id=1783575510]
 position = Vector2(0, -382)
 
-[node name="Camera2D" type="Camera2D" parent="YSorting/Spawn/JungleWoman2" unique_id=1900272272]
+[node name="Camera2D" type="Camera2D" parent="Spawn/Nina" unique_id=1900272272]
 position = Vector2(0, -327)
 offset = Vector2(500, 0)
 
-[node name="NpcRedcross1" type="Sprite2D" parent="YSorting" unique_id=404862580]
-position = Vector2(3738, 787)
-texture = ExtResource("6_a464j")
-
-[node name="AdvanceQueue" type="Node" parent="." unique_id=1527114385 node_paths=PackedStringArray("queue_spots")]
-script = ExtResource("30_67up0")
-queue_spots = [NodePath("../Queue1/Puzzle4/Npc"), NodePath("../Int1/Puzzle5/Npc"), NodePath("../Int1/Puzzle6/Npc")]
-
-[node name="VisibleOnScreenEnabler2D2" type="VisibleOnScreenEnabler2D" parent="AdvanceQueue" unique_id=623709463]
-rect = Rect2(1421, 126, 1190, 941)
-metadata/_edit_lock_ = true
-
-[node name="AdvanceQueue2" type="Node" parent="." unique_id=1112621384 node_paths=PackedStringArray("queue_spots")]
-script = ExtResource("30_67up0")
-queue_spots = [NodePath("../Queue2/Puzzle1/Npc"), NodePath("../Queue2/Puzzle2/Npc"), NodePath("../Queue2/Puzzle3/Npc")]
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="AdvanceQueue2" unique_id=933704728]
-position = Vector2(5822, 650)
-rect = Rect2(-1433, -562, 1702, 797)
-
-[node name="Background" type="CanvasLayer" parent="." unique_id=451260150]
-
-[editable path="Int1/Puzzle5"]
-[editable path="Int1/Puzzle6"]
-[editable path="Int1/Puzzle7"]
-[editable path="Queue1/Puzzle4"]
-[editable path="Queue2/Puzzle1"]
-[editable path="Queue2/Puzzle2"]
-[editable path="Queue2/Puzzle3"]
-[editable path="YSorting/Spawn/JungleWoman2"]
+[editable path="Queue1/Puzzle7"]
+[editable path="QueuingPeople/QueuePerson"]
+[editable path="Spawn/Nina"]
