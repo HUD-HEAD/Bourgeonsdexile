@@ -105,7 +105,7 @@ position = Vector2(402, 178)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("7_3f63v")
-nodes_to_reveal = [NodePath("../../PaperBackground"), NodePath(".."), NodePath("../../../PaperBackgroundPostTent")]
+nodes_to_reveal = [NodePath("../../PaperBackground"), NodePath(".."), NodePath("../../../PaperBackgroundPostTent"), NodePath("../..")]
 nodes_to_hide = [NodePath("../../../Outsidehouse1")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteriorReveal/Int1/AreaReveal" unique_id=1752693632]
@@ -123,7 +123,7 @@ position = Vector2(510, 247)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("7_3f63v")
-nodes_to_reveal = [NodePath(".."), NodePath("../../PaperBackground")]
+nodes_to_reveal = [NodePath(".."), NodePath("../../PaperBackground"), NodePath("../..")]
 nodes_to_hide = [NodePath("../../../Outsidehouse2")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteriorReveal/Int2/AreaReveal" unique_id=430801904]
