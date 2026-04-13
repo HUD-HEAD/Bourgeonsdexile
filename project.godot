@@ -14,7 +14,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="Gravida"
+config/name="Amnios"
 config/version="0.2.0"
 run/main_scene="uid://ctau0miqtmbj2"
 config/features=PackedStringArray("4.6", "GL Compatibility")
