@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="9_yggp2"]
 [ext_resource type="PackedScene" uid="uid://bjp2jprdkpbul" path="res://components/chapter1/comic_panels/comic_4/panel_topview.tscn" id="10_8767r"]
 [ext_resource type="PackedScene" uid="uid://kqn8hqak4g04" path="res://components/chapter1/comic_panels/comic_4/panel_phone_music.tscn" id="11_ot2ku"]
-[ext_resource type="PackedScene" uid="uid://dexx74rhechxm" path="res://components/chapter1/comic_panels/comic_3/panel_belly.tscn" id="11_p7egh"]
+[ext_resource type="PackedScene" uid="uid://dexx74rhechxm" path="res://components/chapter1/comic_panels/comic_4/panel_belly.tscn" id="11_p7egh"]
 [ext_resource type="PackedScene" uid="uid://crqtn2a43hhe8" path="res://components/chapter1/comic_panels/comic_4/panel_phone.tscn" id="12_xs8jl"]
 
 [node name="JungleComic4" type="Node2D" unique_id=1574922119]
@@ -18,7 +18,7 @@ metadata/_edit_vertical_guides_ = [5131.0]
 
 [node name="PanelPanner" type="Node" parent="." unique_id=665689758 node_paths=PackedStringArray("panels")]
 script = ExtResource("9_yggp2")
-panels = [NodePath("../PanelMissingPosters"), NodePath("../JungleComic4FrameFolders"), NodePath("../Comic4PanelTicket"), NodePath("../Comic4PanelPhone"), NodePath("../Comic4PanelMochil"), NodePath("../Comic4Panel6"), NodePath("../PanelPhoneMusic"), NodePath("../PanelTopview")]
+panels = [NodePath("../PanelMissingPosters"), NodePath("../JungleComic4FrameFolders"), NodePath("../Comic4PanelTicket"), NodePath("../Comic4PanelPhone"), NodePath("../Comic4PanelMochil"), NodePath("../Comic4Panel6"), NodePath("../PanelPhoneMusic"), NodePath("../PanelBelly"), NodePath("../PanelTopview")]
 
 [node name="PaperBackground" type="CanvasLayer" parent="." unique_id=1769624388]
 layer = -1

@@ -20,7 +20,6 @@
 [ext_resource type="PackedScene" uid="uid://chdy4smhkeha0" path="res://components/chapter1/comic_panels/comic_3/panel_helpdesk.tscn" id="16_w6r1n"]
 [ext_resource type="PackedScene" uid="uid://b6wnjm88x58xc" path="res://components/chapter1/comic_panels/comic_3/panel_worker.tscn" id="17_w6r1n"]
 [ext_resource type="PackedScene" uid="uid://fiip66fsada" path="res://components/chapter1/comic_panels/comic_3/panel_angry.tscn" id="18_w6r1n"]
-[ext_resource type="PackedScene" uid="uid://dexx74rhechxm" path="res://components/chapter1/comic_panels/comic_3/panel_belly.tscn" id="19_nn42y"]
 [ext_resource type="PackedScene" uid="uid://cw1ikj5js4q4r" path="res://components/chapter1/comic_panels/comic_3/panel_ultrasound.tscn" id="22_w6r1n"]
 
 [node name="JungleComic3" type="Node2D" unique_id=1627757836]
@@ -49,7 +48,7 @@ editor_draw_limits = true
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1862196438 node_paths=PackedStringArray("panels")]
 script = ExtResource("15_sw7mp")
-panels = [NodePath("../JungleComic3FrameLajas"), NodePath("../JungleComic3PhoneInterface"), NodePath("../JungleComic3FrameHug"), NodePath("../Comic3PanelArrival"), NodePath("../JungleComic3FrameBackpack"), NodePath("../JungleComic3FramePhone"), NodePath("../JungleComic3FrameCare"), NodePath("../PanelUltrasound"), NodePath("../JungleComic3FrameFood"), NodePath("../Comic3Panel8"), NodePath("../JungleComic3FrameKidLajas"), NodePath("../JungleComic3FrameAyuda"), NodePath("../Comic3PanelHelpdesk"), NodePath("../JungleComic3FrameFolders"), NodePath("../PanelWorker"), NodePath("../PanelAngry"), NodePath("../PanelBelly"), NodePath("../SceneEnder")]
+panels = [NodePath("../JungleComic3FrameLajas"), NodePath("../JungleComic3PhoneInterface"), NodePath("../JungleComic3FrameHug"), NodePath("../Comic3PanelArrival"), NodePath("../JungleComic3FrameBackpack"), NodePath("../JungleComic3FramePhone"), NodePath("../JungleComic3FrameCare"), NodePath("../PanelUltrasound"), NodePath("../JungleComic3FrameFood"), NodePath("../Comic3Panel8"), NodePath("../JungleComic3FrameKidLajas"), NodePath("../JungleComic3FrameAyuda"), NodePath("../Comic3PanelHelpdesk"), NodePath("../JungleComic3FrameFolders"), NodePath("../PanelWorker"), NodePath("../PanelAngry"), NodePath("../SceneEnder")]
 
 [node name="UI" parent="." unique_id=1396622433 instance=ExtResource("16_scavv")]
 
@@ -101,10 +100,7 @@ position = Vector2(34584, 540)
 [node name="PanelAngry" parent="." unique_id=775061280 instance=ExtResource("18_w6r1n")]
 position = Vector2(36484, 540)
 
-[node name="PanelBelly" parent="." unique_id=547145415 instance=ExtResource("19_nn42y")]
-position = Vector2(38543, 540)
-
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1791395188]
-position = Vector2(41232, 540)
+position = Vector2(39760, 540)
 script = ExtResource("12_txuxr")
 next_scene = ExtResource("13_dx01d")
