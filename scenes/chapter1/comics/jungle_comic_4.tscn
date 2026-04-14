@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="9_yggp2"]
 [ext_resource type="PackedScene" uid="uid://bjp2jprdkpbul" path="res://components/chapter1/comic_panels/comic_4/panel_topview.tscn" id="10_8767r"]
 [ext_resource type="PackedScene" uid="uid://kqn8hqak4g04" path="res://components/chapter1/comic_panels/comic_4/panel_phone_music.tscn" id="11_ot2ku"]
+[ext_resource type="PackedScene" uid="uid://dexx74rhechxm" path="res://components/chapter1/comic_panels/comic_3/panel_belly.tscn" id="11_p7egh"]
 [ext_resource type="PackedScene" uid="uid://crqtn2a43hhe8" path="res://components/chapter1/comic_panels/comic_4/panel_phone.tscn" id="12_xs8jl"]
 
 [node name="JungleComic4" type="Node2D" unique_id=1574922119]
@@ -64,5 +65,8 @@ position = Vector2(14201, 540)
 [node name="PanelPhoneMusic" parent="." unique_id=1591460420 instance=ExtResource("11_ot2ku")]
 position = Vector2(16224, 540)
 
+[node name="PanelBelly" parent="." unique_id=547145415 instance=ExtResource("11_p7egh")]
+position = Vector2(17625, 532)
+
 [node name="PanelTopview" parent="." unique_id=184560352 instance=ExtResource("10_8767r")]
-position = Vector2(18322, 535)
+position = Vector2(19459, 535)

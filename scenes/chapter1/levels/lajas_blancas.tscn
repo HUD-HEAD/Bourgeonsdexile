@@ -269,6 +269,7 @@ position = Vector2(204, 787)
 texture = null
 
 [node name="DragDropPuzzle2" parent="Queue1/Puzzle7" unique_id=1767003607 instance=ExtResource("45_i6383")]
+modulate = Color(0.38109094, 0.6756369, 0.7122601, 1)
 position = Vector2(94, 487)
 
 [node name="HideOnComplete" type="Node" parent="Queue1/Puzzle7/DragDropPuzzle2" unique_id=793575586]
