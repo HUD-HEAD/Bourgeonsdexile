@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://v2juo5s051v4"]
 
 [ext_resource type="Texture2D" uid="uid://bxx4qyf00p3vr" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0001.png" id="2_1r7xj"]
+[ext_resource type="Texture2D" uid="uid://bqurry18cp3xt" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_tap_closed_0001.png" id="2_c2xss"]
 [ext_resource type="Texture2D" uid="uid://fo36fgp5osi" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0002.png" id="3_wint5"]
 [ext_resource type="Texture2D" uid="uid://d1jbf8id4l7ni" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0003.png" id="4_3sa61"]
 [ext_resource type="Texture2D" uid="uid://cwp3r3yljqlr7" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0004.png" id="5_2ar4c"]
@@ -16,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://b7iw0bqc5ow2k" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0014.png" id="15_n67o8"]
 [ext_resource type="Texture2D" uid="uid://benp122sygmpc" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0015.png" id="16_bmf81"]
 [ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/click_enable.gd" id="17_6pmpa"]
-[ext_resource type="Texture2D" uid="uid://drsa4m18nn3dn" path="res://graphics/chapter1/comics/comic1/panel_sink/framesink.png" id="18_6pmpa"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="18_uosyy"]
 [ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/PlayOnClick.tscn" id="19_uosyy"]
 [ext_resource type="AudioStream" uid="uid://b3pu703nptyk7" path="res://audio/chapter1/ambient/panel_4_water_droops_pot.wav" id="20_c2xss"]
@@ -179,9 +179,7 @@ position = Vector2(231.5, 92.5)
 shape = SubResource("RectangleShape2D_6pmpa")
 
 [node name="Framesink" type="Sprite2D" parent="." unique_id=1957673214]
-position = Vector2(-15, 17)
-scale = Vector2(0.96, 0.96)
-texture = ExtResource("18_6pmpa")
+texture = ExtResource("2_c2xss")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1259930244]
 visible = false
