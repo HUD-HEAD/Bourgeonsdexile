@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dnyi8dybxjxpg"]
+
+[ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/chapter1/main_characters/jungle_woman.tscn" id="1_lfrhx"]
+[ext_resource type="SpriteFrames" uid="uid://cchqk7wd7eo6c" path="res://components/chapter1/levels/lajas_blancas/queue/blue_woman.tres" id="2_shsib"]
+[ext_resource type="Script" uid="uid://bchnidsm7kci0" path="res://components/chapter1/main_characters/companion.gd" id="2_trrhf"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="3_rhku2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_trrhf"]
+radius = 48.0
+height = 212.0
+
+[node name="QueuePerson" unique_id=700974070 instance=ExtResource("1_lfrhx")]
+script = ExtResource("2_trrhf")
+offset_from_model = 0.0
+
+[node name="Woman" parent="." index="0" unique_id=689873547]
+sprite_frames = ExtResource("2_shsib")
+frame_progress = 0.19968937
+
+[node name="Area2D" parent="." index="1" unique_id=960188442]
+collision_layer = 0
+collision_mask = 0
+
+[node name="Clickable" type="Area2D" parent="." index="2" unique_id=39147721]
+position = Vector2(0, -107)
+script = ExtResource("3_rhku2")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" index="0" unique_id=1737462062]
+shape = SubResource("CapsuleShape2D_trrhf")
+
+[node name="MarkerBubbleSpawn" type="Marker2D" parent="." index="3" unique_id=708828399]
+position = Vector2(1, -247)

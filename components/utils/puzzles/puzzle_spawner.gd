@@ -72,15 +72,18 @@ func _spawn_piece(piece_idx : int):
 
 func _compute_spawn_position(piece_idx : int):
 	var prev_piece_idx = piece_idx-piece_spawners.size()
+	var current_piece = puzzle.puzzle_pieces[piece_idx]
+	var y_offset = current_piece.get_dimensions().y/2
+	
 	#No previous piece spawned here
 	if prev_piece_idx < 0 :
-		return  piece_spawners[piece_idx%piece_spawners.size()].global_position
+		return  piece_spawners[piece_idx%piece_spawners.size()].global_position + y_offset*Vector2.UP
+	
 	
 	var prev_piece = puzzle.puzzle_pieces[prev_piece_idx]
-	var current_piece = puzzle.puzzle_pieces[piece_idx]
 	
 	#Offset vertically from previous piece
-	var y_offset = prev_piece.get_dimensions().y/2 + current_piece.get_dimensions().y/2
+	y_offset += prev_piece.get_dimensions().y/2
 	
 	return prev_piece.draggable.global_position + y_offset*Vector2.UP
 

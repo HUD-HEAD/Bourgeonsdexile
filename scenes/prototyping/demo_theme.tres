@@ -1,0 +1,58 @@
+[gd_resource type="Theme" format=3 uid="uid://dl4iwg67qcvng"]
+
+[ext_resource type="Texture2D" uid="uid://b4ietau1augkw" path="res://graphics/ui/buttons/pause/play.png" id="1_3bcbv"]
+[ext_resource type="Texture2D" uid="uid://dimluk7aq41r5" path="res://graphics/ui/cursor/emptyarrow.png" id="2_eb0cx"]
+[ext_resource type="Texture2D" uid="uid://nhtaleop2o5n" path="res://graphics/menus/main_menu/egg1.png" id="3_o6ei6"]
+[ext_resource type="Texture2D" uid="uid://du6ilkm4sh11x" path="res://graphics/utils/maskclaire.png" id="5_u643u"]
+[ext_resource type="Texture2D" uid="uid://3c735mx4gcwx" path="res://graphics/ui/bars/bar.png" id="6_re6cm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iyf35"]
+texture = ExtResource("5_u643u")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jtojq"]
+load_path = "res://.godot/imported/maskclaire.png-d75d7654cdb56f66dd1a6411df8fd3a5.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3bcbv"]
+content_margin_top = 106.0
+content_margin_right = 396.0
+texture = SubResource("CompressedTexture2D_jtojq")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eb0cx"]
+content_margin_top = 106.0
+content_margin_right = 396.0
+texture = SubResource("CompressedTexture2D_jtojq")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dfqxd"]
+content_margin_top = 106.0
+content_margin_right = 396.0
+texture = ExtResource("6_re6cm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r8pvo"]
+texture = ExtResource("5_u643u")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3bcbv"]
+load_path = "res://.godot/imported/maskclaire.png-d75d7654cdb56f66dd1a6411df8fd3a5.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o6ei6"]
+texture = SubResource("CompressedTexture2D_3bcbv")
+modulate_color = Color(0.6873898, 0.4933256, 0.6313729, 1)
+
+[resource]
+Button/colors/font_color = Color(0.7704188, 1.4439226e-07, 0.38585064, 1)
+Button/styles/focus = SubResource("StyleBoxTexture_iyf35")
+Button/styles/hover = SubResource("StyleBoxTexture_iyf35")
+CheckBox/icons/checked = ExtResource("1_3bcbv")
+CheckBox/icons/unchecked = ExtResource("2_eb0cx")
+HSlider/icons/grabber = ExtResource("3_o6ei6")
+HSlider/icons/grabber_highlight = ExtResource("3_o6ei6")
+HSlider/styles/grabber_area = SubResource("StyleBoxTexture_3bcbv")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxTexture_eb0cx")
+HSlider/styles/slider = SubResource("StyleBoxTexture_dfqxd")
+OptionButton/styles/focus = SubResource("StyleBoxTexture_r8pvo")
+OptionButton/styles/normal = SubResource("StyleBoxTexture_iyf35")
+OptionButton/styles/pressed = SubResource("StyleBoxTexture_iyf35")
+PopupMenu/styles/hover = SubResource("StyleBoxTexture_o6ei6")
