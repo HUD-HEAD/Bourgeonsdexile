@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do2l335ug0lwk"
-path="res://.godot/imported/nephew_idle_0006.png-230989f8dc9c3d49ed766fc0aac185c7.ctex"
+uid="uid://d32463qn78sdp"
+path="res://.godot/imported/man_walk_0005.png-58c9881f6bc5253b8062ab9377e04da9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter2/main_characters/companions/nephew/nephew_idle_5fps/nephew_idle_0006.png"
-dest_files=["res://.godot/imported/nephew_idle_0006.png-230989f8dc9c3d49ed766fc0aac185c7.ctex"]
+source_file="res://graphics/chapter2/levels/goma/npcs/man_walk_5fps/man_walk_0005.png"
+dest_files=["res://.godot/imported/man_walk_0005.png-58c9881f6bc5253b8062ab9377e04da9.ctex"]
 
 [params]
 

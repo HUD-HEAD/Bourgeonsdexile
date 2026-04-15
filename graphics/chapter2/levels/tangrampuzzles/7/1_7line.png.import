@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do2l335ug0lwk"
-path="res://.godot/imported/nephew_idle_0006.png-230989f8dc9c3d49ed766fc0aac185c7.ctex"
+uid="uid://cdykxkw1h4rl0"
+path="res://.godot/imported/1_7line.png-69edf0a38cbb9d9933a79543904c15a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter2/main_characters/companions/nephew/nephew_idle_5fps/nephew_idle_0006.png"
-dest_files=["res://.godot/imported/nephew_idle_0006.png-230989f8dc9c3d49ed766fc0aac185c7.ctex"]
+source_file="res://graphics/chapter2/levels/tangrampuzzles/7/1_7line.png"
+dest_files=["res://.godot/imported/1_7line.png-69edf0a38cbb9d9933a79543904c15a8.ctex"]
 
 [params]
 

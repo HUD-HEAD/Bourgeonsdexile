@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do2l335ug0lwk"
-path="res://.godot/imported/nephew_idle_0006.png-230989f8dc9c3d49ed766fc0aac185c7.ctex"
+uid="uid://b68mi2dhutfc0"
+path="res://.godot/imported/amani_idle2_0011.png-84aada3d71cc085b3a10d89d677ec825.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter2/main_characters/companions/nephew/nephew_idle_5fps/nephew_idle_0006.png"
-dest_files=["res://.godot/imported/nephew_idle_0006.png-230989f8dc9c3d49ed766fc0aac185c7.ctex"]
+source_file="res://graphics/chapter2/main_characters/main_character/amani_idle2_15fps/amani_idle2_0011.png"
+dest_files=["res://.godot/imported/amani_idle2_0011.png-84aada3d71cc085b3a10d89d677ec825.ctex"]
 
 [params]
 
