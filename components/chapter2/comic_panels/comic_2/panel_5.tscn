@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://crb67gas4jtht"]
 
-[ext_resource type="Texture2D" uid="uid://chmf44st1mlro" path="res://graphics/chapter2/comics/comic2/framefrog/mockup.png" id="1_ejocl"]
+[ext_resource type="Texture2D" uid="uid://6moldxsq3q74" path="res://graphics/chapter2/comics/comic2/framebusarriving/mockup.png" id="1_ejocl"]
 
 [node name="Panel5" type="Node2D" unique_id=547383153]
 
