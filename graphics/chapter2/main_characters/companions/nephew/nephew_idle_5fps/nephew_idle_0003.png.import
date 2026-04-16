@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bp1x476xouxeo"
-path="res://.godot/imported/nephew_idle_0003.png-78d1a8e7ce63a7d45f9606446ea4105e.ctex"
+path="res://.godot/imported/nephew_idle_0003.png-73b6dc55550d8d34b1f7865c4f0b2445.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter2/main_characters/nephew/nephew_idle_5fps/nephew_idle_0003.png"
-dest_files=["res://.godot/imported/nephew_idle_0003.png-78d1a8e7ce63a7d45f9606446ea4105e.ctex"]
+source_file="res://graphics/chapter2/main_characters/companions/nephew/nephew_idle_5fps/nephew_idle_0003.png"
+dest_files=["res://.godot/imported/nephew_idle_0003.png-73b6dc55550d8d34b1f7865c4f0b2445.ctex"]
 
 [params]
 
