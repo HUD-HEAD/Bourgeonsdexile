@@ -12,13 +12,15 @@
 [ext_resource type="PackedScene" uid="uid://kqn8hqak4g04" path="res://components/chapter1/comic_panels/comic_4/panel_phone_music.tscn" id="11_ot2ku"]
 [ext_resource type="PackedScene" uid="uid://dexx74rhechxm" path="res://components/chapter1/comic_panels/comic_4/panel_belly.tscn" id="11_p7egh"]
 [ext_resource type="PackedScene" uid="uid://crqtn2a43hhe8" path="res://components/chapter1/comic_panels/comic_4/panel_phone.tscn" id="12_xs8jl"]
+[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="13_fr0kj"]
+[ext_resource type="PackedScene" uid="uid://ctau0miqtmbj2" path="res://scenes/menus/main_menu.tscn" id="14_q8hgl"]
 
 [node name="JungleComic4" type="Node2D" unique_id=1574922119]
 metadata/_edit_vertical_guides_ = [5131.0]
 
 [node name="PanelPanner" type="Node" parent="." unique_id=665689758 node_paths=PackedStringArray("panels")]
 script = ExtResource("9_yggp2")
-panels = [NodePath("../PanelMissingPosters"), NodePath("../JungleComic4FrameFolders"), NodePath("../Comic4PanelTicket"), NodePath("../Comic4PanelPhone"), NodePath("../Comic4PanelMochil"), NodePath("../Comic4Panel6"), NodePath("../PanelPhoneMusic"), NodePath("../PanelBelly"), NodePath("../PanelTopview")]
+panels = [NodePath("../PanelMissingPosters"), NodePath("../JungleComic4FrameFolders"), NodePath("../Comic4PanelTicket"), NodePath("../Comic4PanelPhone"), NodePath("../Comic4PanelMochil"), NodePath("../Comic4Panel6"), NodePath("../PanelPhoneMusic"), NodePath("../PanelBelly"), NodePath("../PanelTopview"), NodePath("../SceneEnder")]
 
 [node name="PaperBackground" type="CanvasLayer" parent="." unique_id=1769624388]
 layer = -1
@@ -28,7 +30,7 @@ follow_viewport_enabled = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 18542.0
+offset_right = 22194.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -66,7 +68,12 @@ position = Vector2(14201, 540)
 position = Vector2(16224, 540)
 
 [node name="PanelBelly" parent="." unique_id=547145415 instance=ExtResource("11_p7egh")]
-position = Vector2(17625, 532)
+position = Vector2(18119, 532)
 
 [node name="PanelTopview" parent="." unique_id=184560352 instance=ExtResource("10_8767r")]
-position = Vector2(19459, 535)
+position = Vector2(20030, 535)
+
+[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=117318107]
+position = Vector2(22429, 540)
+script = ExtResource("13_fr0kj")
+next_scene = ExtResource("14_q8hgl")
