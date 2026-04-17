@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c4wqbvxsrfu6w"]
 
-[ext_resource type="Texture2D" uid="uid://mpmu7uudmrts" path="res://graphics/chapter2/comics/comic2/framescrolling/framephoneplaceholder.png" id="1_evhsb"]
+[ext_resource type="Texture2D" uid="uid://ytyvxxp466yp" path="res://graphics/chapter2/comics/comic2/framescrolling/phonenight.png" id="1_evhsb"]
 
 [node name="Panel1" type="Node2D" unique_id=547383153]
 
