@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cnlkly26dml5v"]
 
-[ext_resource type="Texture2D" uid="uid://c23kttp2q0rvd" path="res://graphics/chapter2/comics/comic3/framebusbackgroundpassing/mockup.png" id="1_wecyc"]
+[ext_resource type="Texture2D" uid="uid://b3d4a6r16mdmc" path="res://graphics/chapter2/comics/comic3/bussectioncloseup/buscloseup.png" id="1_wecyc"]
 
 [node name="Panel1" type="Node2D" unique_id=958587886]
 
-[node name="Mockup" type="Sprite2D" parent="." unique_id=396328431]
-position = Vector2(-2, 0)
+[node name="Buscloseup" type="Sprite2D" parent="." unique_id=1373293583]
+position = Vector2(0, -1)
 texture = ExtResource("1_wecyc")
