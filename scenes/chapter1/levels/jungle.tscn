@@ -545,7 +545,7 @@ limit_right = 10000041
 limit_bottom = 1080
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Path2D/PathFollow2D/Nina" unique_id=686947029]
-position = Vector2(88.14722, -384)
+position = Vector2(48.147217, -249.4505)
 
 [node name="PathFollowCompanion1" type="PathFollow2D" parent="Path2D" unique_id=1631182314]
 z_index = 1
@@ -565,7 +565,7 @@ sprite_frames = ExtResource("16_17nyf")
 frame_progress = 0.0
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Path2D/PathFollowCompanion1/Companion1" unique_id=1125285841]
-position = Vector2(0, -384)
+position = Vector2(-25.351257, -257.48834)
 
 [node name="Clickable" type="Area2D" parent="Path2D/PathFollowCompanion1" unique_id=1984324414]
 position = Vector2(0, -87.48834)
@@ -593,7 +593,7 @@ sprite_frames = ExtResource("17_k7em6")
 frame_progress = 0.0
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Path2D/PathFollowCompanion2/Companion2" unique_id=1619587080]
-position = Vector2(-34.69696, -384)
+position = Vector2(-75.69696, -253.19049)
 
 [node name="PathFollowCompanion3" type="PathFollow2D" parent="Path2D" unique_id=1552837252]
 z_index = 1
@@ -614,7 +614,7 @@ animation = &"idle"
 frame_progress = 0.0
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Path2D/PathFollowCompanion3/Companion3" unique_id=579923902]
-position = Vector2(0, -384)
+position = Vector2(0, -244.76324)
 
 [node name="ReflectionNina" parent="Path2D" unique_id=732020292 instance=ExtResource("19_c5nq0")]
 position = Vector2(459.85278, 816.4505)

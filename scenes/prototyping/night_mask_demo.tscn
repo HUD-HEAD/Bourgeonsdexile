@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://rbo3fm2h2obe" path="res://graphics/chapter1/levels/jungle/environment/nightjungle/night_altogether.png" id="1_8eifr"]
 [ext_resource type="Texture2D" uid="uid://cl2mukxfsqjfa" path="res://graphics/chapter1/levels/jungle/environment/illuminatedjungle/illuminated_alltogether.png" id="2_6edyn"]
-[ext_resource type="Texture2D" uid="uid://bwjaobumq4x0n" path="res://graphics/ui/cursor/cursor_line/arrow_line.png" id="3_hbmnn"]
+[ext_resource type="Texture2D" uid="uid://nhtaleop2o5n" path="res://graphics/menus/main_menu/egg1.png" id="3_g20v8"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xujmw"]
 size = Vector2(500, 500)
@@ -43,7 +43,7 @@ centered = false
 [node name="PointLight2D" type="PointLight2D" parent="LightMaskMaterialLight" unique_id=1801305845]
 position = Vector2(981, 676)
 energy = 0.0
-texture = ExtResource("3_hbmnn")
+texture = ExtResource("3_g20v8")
 
 [node name="IlluminatedAlltogether" type="Sprite2D" parent="LightMaskMaterialLight" unique_id=840212638]
 material = SubResource("CanvasItemMaterial_21kcc")

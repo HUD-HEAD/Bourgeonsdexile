@@ -1,0 +1,159 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://882iqrb47j8n"]
+
+[ext_resource type="Texture2D" uid="uid://dygbnof8xsydl" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_idle_15fps/teen_idle_0001.png" id="1_wt0uk"]
+[ext_resource type="Texture2D" uid="uid://cs5le52ymiwcj" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_idle_15fps/teen_idle_0002.png" id="2_rry0f"]
+[ext_resource type="Texture2D" uid="uid://dckitrlx20ihu" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_idle_15fps/teen_idle_0003.png" id="3_c2g8j"]
+[ext_resource type="Texture2D" uid="uid://dshpsvwdi7yss" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_idle_15fps/teen_idle_0004.png" id="4_pk08w"]
+[ext_resource type="Texture2D" uid="uid://n0kw7w31t0l8" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_idle_15fps/teen_idle_0005.png" id="5_jrocn"]
+[ext_resource type="Texture2D" uid="uid://cycfdsdvqlhsu" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_idle_15fps/teen_idle_0006.png" id="6_ouwjj"]
+[ext_resource type="Texture2D" uid="uid://cu0fhdj6eesl0" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_idle_15fps/teen_idle_0007.png" id="7_cq0ak"]
+[ext_resource type="Texture2D" uid="uid://c030xj17ni5ap" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_idle_15fps/teen_idle_0008.png" id="8_d7svc"]
+[ext_resource type="Texture2D" uid="uid://3kt6kvmgsga5" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_idle_15fps/teen_idle_0009.png" id="9_fienb"]
+[ext_resource type="Texture2D" uid="uid://brku0dib34bbd" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_idle_15fps/teen_idle_0010.png" id="10_oiclw"]
+[ext_resource type="Texture2D" uid="uid://wf2ggl6cf7ql" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_idle_15fps/teen_idle_0011.png" id="11_c2m3i"]
+[ext_resource type="Texture2D" uid="uid://3s54jjtao67t" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_idle_15fps/teen_idle_0012.png" id="12_6k6r2"]
+[ext_resource type="Texture2D" uid="uid://bdtsdwpm0wfjl" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_idle_15fps/teen_idle_0013.png" id="13_3rx0u"]
+[ext_resource type="Texture2D" uid="uid://cxakkvd8p7s36" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_idle_15fps/teen_idle_0014.png" id="14_br8n2"]
+[ext_resource type="Texture2D" uid="uid://c8gqbkusptrtu" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_idle_15fps/teen_idle_0015.png" id="15_6us8v"]
+[ext_resource type="Texture2D" uid="uid://cpfpwfsgvnfmx" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_idle_15fps/teen_idle_0016.png" id="16_e1sug"]
+[ext_resource type="Texture2D" uid="uid://vrwp0o35d0ci" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_idle_15fps/teen_idle_0017.png" id="17_bs73u"]
+[ext_resource type="Texture2D" uid="uid://c8pn6rp0403gq" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_idle_15fps/teen_idle_0018.png" id="18_6hc8c"]
+[ext_resource type="Texture2D" uid="uid://dbef4hqy1qqic" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_idle_15fps/teen_idle_0019.png" id="19_opxdr"]
+[ext_resource type="Texture2D" uid="uid://dbaw20oelahw6" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_idle_15fps/teen_idle_0020.png" id="20_3x005"]
+[ext_resource type="Texture2D" uid="uid://cgjb321he4oaw" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_walk_15fps/teen_walk_0001.png" id="21_62oga"]
+[ext_resource type="Texture2D" uid="uid://dhh62smnfrtgf" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_walk_15fps/teen_walk_0002.png" id="22_jdei7"]
+[ext_resource type="Texture2D" uid="uid://0nir7pfmsygh" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_walk_15fps/teen_walk_0003.png" id="23_ub6rc"]
+[ext_resource type="Texture2D" uid="uid://dtc35jql0xwm3" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_walk_15fps/teen_walk_0004.png" id="24_wa833"]
+[ext_resource type="Texture2D" uid="uid://bw05kcyvr6hy2" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_walk_15fps/teen_walk_0005.png" id="25_y0oyf"]
+[ext_resource type="Texture2D" uid="uid://svjnmkdj8hcn" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_walk_15fps/teen_walk_0006.png" id="26_tbpy7"]
+[ext_resource type="Texture2D" uid="uid://dq3iv41itcb15" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_walk_15fps/teen_walk_0007.png" id="27_hu23y"]
+[ext_resource type="Texture2D" uid="uid://bsbubb52pyndk" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_walk_15fps/teen_walk_0008.png" id="28_n563f"]
+[ext_resource type="Texture2D" uid="uid://bsf4opfhgymy1" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_walk_15fps/teen_walk_0009.png" id="29_sciub"]
+[ext_resource type="Texture2D" uid="uid://dg7glfokqc0j8" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_walk_15fps/teen_walk_0010.png" id="30_5uh7r"]
+[ext_resource type="Texture2D" uid="uid://qlaconk13my3" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_walk_15fps/teen_walk_0011.png" id="31_ou2py"]
+[ext_resource type="Texture2D" uid="uid://40ghj6raiuge" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_walk_15fps/teen_walk_0012.png" id="32_nh3j6"]
+[ext_resource type="Texture2D" uid="uid://cd7o3pl4vf55d" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_walk_15fps/teen_walk_0013.png" id="33_ron1t"]
+[ext_resource type="Texture2D" uid="uid://cfk2u2v51egyg" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_walk_15fps/teen_walk_0014.png" id="34_ui8s8"]
+[ext_resource type="Texture2D" uid="uid://bo78xj7jqllde" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_walk_15fps/teen_walk_0015.png" id="35_23dq8"]
+[ext_resource type="Texture2D" uid="uid://b0yjrawxqo5ar" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_teen_walk_15fps/teen_walk_0016.png" id="36_o1teb"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wt0uk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rry0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_c2g8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pk08w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jrocn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ouwjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cq0ak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_d7svc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_fienb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_oiclw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_c2m3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6k6r2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_3rx0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_br8n2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6us8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_e1sug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_bs73u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_6hc8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_opxdr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_3x005")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_62oga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_jdei7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ub6rc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_wa833")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_y0oyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_tbpy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_hu23y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_n563f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_sciub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_5uh7r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_ou2py")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_nh3j6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ron1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_ui8s8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_23dq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_o1teb")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 15.0
+}]

@@ -12,6 +12,11 @@
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="10_gj2vg"]
 [ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/PlayOnClick.tscn" id="11_6of6h"]
 [ext_resource type="AudioStream" uid="uid://8fplt02l4a0b" path="res://audio/chapter1/ambient/panel_5_onion_knife_on_wood.wav" id="12_3ib38"]
+[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/click_hide.gd" id="13_64nu2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_64nu2"]
+radius = 91.32178
+height = 965.75244
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_poopq"]
 radius = 244.03279
@@ -56,9 +61,18 @@ metadata/_custom_type_script = "uid://c44tybeisilbv"
 [node name="Board" type="Sprite2D" parent="." unique_id=200788425]
 texture = ExtResource("2_kvwue")
 
-[node name="Knife" type="Sprite2D" parent="." unique_id=598072117]
-position = Vector2(721, 13)
+[node name="Knife" type="Area2D" parent="." unique_id=906235165]
+position = Vector2(688, 23)
+script = ExtResource("13_64nu2")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="Knife" type="Sprite2D" parent="Knife" unique_id=598072117]
+position = Vector2(23, 2)
 texture = ExtResource("3_stnbv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Knife" unique_id=3441897]
+rotation = -0.743328
+shape = SubResource("CapsuleShape2D_64nu2")
 
 [node name="Clickable" type="Area2D" parent="." unique_id=526937004]
 script = ExtResource("4_ial8g")

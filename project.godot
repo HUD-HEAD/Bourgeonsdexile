@@ -14,7 +14,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="Gravida"
+config/name="Amnios"
 config/version="0.2.0"
 run/main_scene="uid://ctau0miqtmbj2"
 config/features=PackedStringArray("4.6", "GL Compatibility")
@@ -22,10 +22,6 @@ run/max_fps=200
 boot_splash/stretch_mode=0
 boot_splash/image="uid://c333exnf8xct4"
 config/icon="uid://b7siukyc2fyv2"
-
-[audio]
-
-buses/default_bus_layout="uid://dq1fj4vcykkij"
 
 [autoload]
 

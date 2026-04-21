@@ -1,0 +1,95 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cchqk7wd7eo6c"]
+
+[ext_resource type="Texture2D" uid="uid://brmtlt7mhxx35" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_woman_blue_idle_6fps/woman_blue_idle_0001.png" id="1_qvc6l"]
+[ext_resource type="Texture2D" uid="uid://btmvp0obk002" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_woman_blue_idle_6fps/woman_blue_idle_0002.png" id="2_ibn7c"]
+[ext_resource type="Texture2D" uid="uid://c6nbs5rff3myn" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_woman_blue_idle_6fps/woman_blue_idle_0003.png" id="3_bqnox"]
+[ext_resource type="Texture2D" uid="uid://iqc0qyvd5ht0" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_woman_blue_idle_6fps/woman_blue_idle_0004.png" id="4_228xr"]
+[ext_resource type="Texture2D" uid="uid://biw6rbjpy0bky" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_woman_blue_idle_6fps/woman_blue_idle_0005.png" id="5_esge7"]
+[ext_resource type="Texture2D" uid="uid://b0wl2nbucqvov" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_woman_blue_idle_6fps/woman_blue_idle_0006.png" id="6_3ws8o"]
+[ext_resource type="Texture2D" uid="uid://bv2t5rnp88vxf" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_woman_blue_idle_6fps/woman_blue_idle_0007.png" id="7_aisf3"]
+[ext_resource type="Texture2D" uid="uid://cq60f0uvs2716" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_woman_blue_idle_6fps/woman_blue_idle_0008.png" id="8_ia1m3"]
+[ext_resource type="Texture2D" uid="uid://cf8bhnlp4hj0f" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_woman_blue_idle_6fps/woman_blue_idle_0009.png" id="9_1hq06"]
+[ext_resource type="Texture2D" uid="uid://chi04cjpq7ya3" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_woman_blue_idle_6fps/woman_blue_idle_0010.png" id="10_cp2vb"]
+[ext_resource type="Texture2D" uid="uid://drgdecq3ooi73" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_woman_blue_idle_6fps/woman_blue_idle_0011.png" id="11_b6rmm"]
+[ext_resource type="Texture2D" uid="uid://4rec4su2n36d" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_woman_blue_idle_6fps/woman_blue_idle_0012.png" id="12_5ri0d"]
+[ext_resource type="Texture2D" uid="uid://cwmpfxwndryxr" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_woman_blue_walk_5fps/woman_blue_walk_0001.png" id="13_t0nor"]
+[ext_resource type="Texture2D" uid="uid://c3ijinf7eoiks" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_woman_blue_walk_5fps/woman_blue_walk_0002.png" id="14_hhpnr"]
+[ext_resource type="Texture2D" uid="uid://kepm62n86oju" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_woman_blue_walk_5fps/woman_blue_walk_0003.png" id="15_wooe6"]
+[ext_resource type="Texture2D" uid="uid://c0iu3f0ps2s5u" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_woman_blue_walk_5fps/woman_blue_walk_0004.png" id="16_wtcty"]
+[ext_resource type="Texture2D" uid="uid://uy26653prx8o" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_woman_blue_walk_5fps/woman_blue_walk_0005.png" id="17_5if64"]
+[ext_resource type="Texture2D" uid="uid://dav3l5cam1ujy" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_woman_blue_walk_5fps/woman_blue_walk_0006.png" id="18_s8n41"]
+[ext_resource type="Texture2D" uid="uid://5ssha6q0chi7" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_woman_blue_walk_5fps/woman_blue_walk_0007.png" id="19_vwvya"]
+[ext_resource type="Texture2D" uid="uid://bjxhfjw8vdg86" path="res://graphics/chapter1/levels/lajas_blancas/npcs/anim_woman_blue_walk_5fps/woman_blue_walk_0008.png" id="20_cmmya"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qvc6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ibn7c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bqnox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_228xr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_esge7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3ws8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_aisf3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ia1m3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1hq06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_cp2vb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_b6rmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5ri0d")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_t0nor")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_hhpnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_wooe6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_wtcty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5if64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_s8n41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_vwvya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_cmmya")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
