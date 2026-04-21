@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://bnx4mb6hu5b76" path="res://graphics/chapter1/levels/city/environment/houses3.png" id="8_ralbv"]
 [ext_resource type="Texture2D" uid="uid://dvdxyi0m5k60r" path="res://graphics/chapter1/levels/city/environment/houses4.png" id="9_hi7ti"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="11_jpgwf"]
-[ext_resource type="PackedScene" uid="uid://djv5fkem5af34" path="res://scenes/chapter1/comics/jungle_comic_2.tscn" id="12_jpgwf"]
 [ext_resource type="Texture2D" uid="uid://boybh6n1tbi0p" path="res://graphics/chapter1/levels/city/npcs/NPC_apron/NPC_apron_0001.png" id="12_q6d34"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/obstacle.tscn" id="13_8tq2l"]
 [ext_resource type="PackedScene" uid="uid://cyq5jl4y7etbe" path="res://components/chapter1/levels/city/puzzle1.tscn" id="13_vf82b"]
@@ -1001,7 +1000,7 @@ texture = ExtResource("9_hi7ti")
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="Background" unique_id=1352526241]
 position = Vector2(5862, 645)
 script = ExtResource("11_jpgwf")
-next_scene = ExtResource("12_jpgwf")
+next_scene = "uid://djv5fkem5af34"
 
 [node name="Puzzle1" type="Node2D" parent="." unique_id=2111937984]
 position = Vector2(3329, 0)

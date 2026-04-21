@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://bd7g0rb56ib48" path="res://components/chapter1/comic_panels/comic_1/panel_candle.tscn" id="13_p78bu"]
 [ext_resource type="Script" uid="uid://brcf7uo40xrq2" path="res://components/utils/audio/audio_crossfade.gd" id="13_qy574"]
 [ext_resource type="PackedScene" uid="uid://c4cui6mh277i5" path="res://components/chapter1/comic_panels/comic_1/panel_phone_bus.tscn" id="14_fwjes"]
-[ext_resource type="PackedScene" uid="uid://s3spdg0qqc77" path="res://scenes/chapter1/levels/jungle_city.tscn" id="16_7ejrb"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="17_13xj0"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="17_54bx8"]
 [ext_resource type="PackedScene" uid="uid://bi4kbbnyg1r6g" path="res://components/chapter1/comic_panels/comic_1/panel_boat_closeup.tscn" id="19_p78bu"]
@@ -167,7 +166,7 @@ metadata/_custom_type_script = "uid://n4vlynaxxck4"
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=849983846]
 position = Vector2(34433, 596)
 script = ExtResource("17_54bx8")
-next_scene = ExtResource("16_7ejrb")
+next_scene = "uid://s3spdg0qqc77"
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("17_13xj0")

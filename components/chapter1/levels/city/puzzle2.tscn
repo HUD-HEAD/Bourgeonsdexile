@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="8_hiiw3"]
 [ext_resource type="Script" uid="uid://dt4apmm1b4e51" path="res://components/utils/puzzles/puzzle_piece.gd" id="9_hiiw3"]
 [ext_resource type="Texture2D" uid="uid://b2v6h2xx2y05c" path="res://graphics/chapter1/levels/city/puzzles/puzzle2/full_arrow.png" id="9_uaovy"]
+[ext_resource type="AudioStream" uid="uid://3ffx61j4su3a" path="res://audio/chapter1/sfx/resolve_puzzle.wav" id="10_fhsnk"]
+[ext_resource type="AudioStream" uid="uid://bj0aafjx3b0wc" path="res://audio/chapter1/sfx/puzzle_sound_1_intercalate_with_2.wav" id="11_cmt0b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s2m73"]
 size = Vector2(127, 111)
@@ -73,3 +75,14 @@ receptacle = NodePath("../../../Receptacle2")
 
 [node name="Fullsquare" type="Sprite2D" parent="." unique_id=691156988]
 texture = ExtResource("9_uaovy")
+
+[node name="ResolvePlayer" type="AudioStreamPlayer" parent="." unique_id=1655351530]
+unique_name_in_owner = true
+stream = ExtResource("10_fhsnk")
+bus = &"Sfx"
+
+[node name="CorrectPiecePlayer" type="AudioStreamPlayer" parent="." unique_id=891085944]
+unique_name_in_owner = true
+stream = ExtResource("11_cmt0b")
+max_polyphony = 2
+bus = &"Sfx"

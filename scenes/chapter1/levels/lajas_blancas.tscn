@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://d2f3ss3fi8c52"]
 
-[ext_resource type="PackedScene" uid="uid://c0cewrgpnckyx" path="res://scenes/chapter1/comics/jungle_comic_4.tscn" id="2_lm7lj"]
 [ext_resource type="Texture2D" uid="uid://bfrxjto4uo2sa" path="res://graphics/chapter1/levels/lajas_blancas/environment/sky.png" id="4_lm7lj"]
 [ext_resource type="Texture2D" uid="uid://b4celum0shjhc" path="res://graphics/chapter1/levels/lajas_blancas/environment/floor.png" id="5_3f63v"]
 [ext_resource type="Texture2D" uid="uid://bm1w5c4d7gypv" path="res://graphics/chapter1/levels/lajas_blancas/npcs/npc_redcross1.png" id="6_a464j"]
@@ -60,7 +59,7 @@ animations = [{
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1017138655]
 position = Vector2(6092, 697)
 script = ExtResource("16_sbmfg")
-next_scene = ExtResource("2_lm7lj")
+next_scene = "uid://c0cewrgpnckyx"
 
 [node name="Sky" type="Sprite2D" parent="." unique_id=1988398945]
 texture = ExtResource("4_lm7lj")
