@@ -16,7 +16,7 @@ animations = [{
 "texture": ExtResource("2_h0el3")
 }],
 "loop": false,
-"name": &"skirt",
+"name": &"default",
 "speed": 5.0
 }]
 
@@ -31,7 +31,6 @@ rect = Rect2(-10, -10, 1420, 79)
 
 [node name="frameadjustingskirt" type="AnimatedSprite2D" parent="." unique_id=1989329779 node_paths=PackedStringArray("clickable")]
 sprite_frames = SubResource("SpriteFrames_h0el3")
-animation = &"skirt"
 script = ExtResource("1_fbfjw")
 clickable = NodePath("Clickable")
 
@@ -45,5 +44,5 @@ shape = SubResource("CircleShape2D_moath")
 
 [node name="TransitionerCounter" type="Node" parent="." unique_id=565303799 node_paths=PackedStringArray("clickables")]
 script = ExtResource("3_3j87b")
-clickables = [NodePath("")]
+clickables = [NodePath("../frameadjustingskirt/Clickable")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"

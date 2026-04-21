@@ -5,25 +5,74 @@
 [ext_resource type="Texture2D" uid="uid://0ct7s8c2dorl" path="res://graphics/chapter2/comics/comic1/framegame/3.png" id="3_ppft7"]
 [ext_resource type="Texture2D" uid="uid://cx4cn3iss8s6g" path="res://graphics/chapter2/comics/comic1/framegame/4.png" id="4_jmwom"]
 [ext_resource type="Texture2D" uid="uid://c2t7ipb6yqf6t" path="res://graphics/chapter2/comics/comic1/framegame/big.png" id="5_c720a"]
+[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="6_wdjjo"]
+[ext_resource type="Script" uid="uid://di17bexlx7tdc" path="res://components/utils/place_on_top_on_click.gd" id="7_ppft7"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="8_jmwom"]
 
 [node name="Panel1" type="Node2D" unique_id=299868253]
 
-[node name="1" type="Sprite2D" parent="." unique_id=1684712064]
+[node name="Draggable" type="Area2D" parent="." unique_id=1349813379]
 position = Vector2(140, -70)
+script = ExtResource("6_wdjjo")
+metadata/_custom_type_script = "uid://cxam1cepgkl3s"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Draggable" unique_id=1215153914]
+position = Vector2(0.64180857, 2.61094)
+polygon = PackedVector2Array(-125.64181, -119.61094, -38.641808, -166.61095, 124.35819, -73.61094, 126.35819, 116.38906, 41.358192, 168.38905, -125.64181, 71.38906)
+
+[node name="1" type="Sprite2D" parent="Draggable" unique_id=1684712064]
 texture = ExtResource("1_eyguj")
 
-[node name="2" type="Sprite2D" parent="." unique_id=1560726888]
+[node name="Draggable2" type="Area2D" parent="." unique_id=1380205616]
 position = Vector2(349, 7)
+script = ExtResource("6_wdjjo")
+metadata/_custom_type_script = "uid://cxam1cepgkl3s"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Draggable2" unique_id=325757996]
+position = Vector2(-0.5625057, -4.342917)
+polygon = PackedVector2Array(-163.4375, -94.65708, 0.5625057, -191.65709, 160.5625, -95.65708, 165.5625, 93.34292, 0.5625057, 191.34291, -163.4375, 93.34292)
+
+[node name="2" type="Sprite2D" parent="Draggable2" unique_id=1560726888]
 texture = ExtResource("2_wdjjo")
 
-[node name="3" type="Sprite2D" parent="." unique_id=1857248661]
+[node name="Draggable3" type="Area2D" parent="." unique_id=90839732]
 position = Vector2(100, 240)
+script = ExtResource("6_wdjjo")
+metadata/_custom_type_script = "uid://cxam1cepgkl3s"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Draggable3" unique_id=1601974906]
+polygon = PackedVector2Array(-128, -44, 43, -141, 127, -94, 124, 45, -42, 141, -126, 92)
+
+[node name="3" type="Sprite2D" parent="Draggable3" unique_id=1857248661]
 texture = ExtResource("3_ppft7")
 
-[node name="4" type="Sprite2D" parent="." unique_id=1846728180]
+[node name="Draggable4" type="Area2D" parent="." unique_id=1802218940]
 position = Vector2(187, -186)
+script = ExtResource("6_wdjjo")
+metadata/_custom_type_script = "uid://cxam1cepgkl3s"
+
+[node name="4" type="Sprite2D" parent="Draggable4" unique_id=1846728180]
 texture = ExtResource("4_jmwom")
 
-[node name="Big" type="Sprite2D" parent="." unique_id=696256901]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Draggable4" unique_id=488121088]
+polygon = PackedVector2Array(-2, -98, -77, -51, -80, 49, -1, 97, 81, 49, 81, -46)
+
+[node name="Draggable5" type="Area2D" parent="." unique_id=460063274]
 position = Vector2(-249, 8)
+script = ExtResource("6_wdjjo")
+metadata/_custom_type_script = "uid://cxam1cepgkl3s"
+
+[node name="Big" type="Sprite2D" parent="Draggable5" unique_id=696256901]
 texture = ExtResource("5_c720a")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Draggable5" unique_id=1110491033]
+polygon = PackedVector2Array(-246, 41, -245, 231, -87, 330, 240, 145, 242, -47, 154, -95, 159, -278, 76, -334, -90, -233, -85, -50)
+
+[node name="PlaceOnTop" type="Node" parent="." unique_id=1141498036 node_paths=PackedStringArray("nodes_affected")]
+script = ExtResource("7_ppft7")
+nodes_affected = [NodePath("../Draggable"), NodePath("../Draggable2"), NodePath("../Draggable3"), NodePath("../Draggable4"), NodePath("../Draggable5")]
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=770304869 node_paths=PackedStringArray("clickables")]
+script = ExtResource("8_jmwom")
+clickables = [NodePath("../Draggable"), NodePath("../Draggable2"), NodePath("../Draggable3"), NodePath("../Draggable4"), NodePath("../Draggable5")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"

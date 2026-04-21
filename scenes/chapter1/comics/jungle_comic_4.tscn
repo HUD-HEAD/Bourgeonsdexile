@@ -28,7 +28,7 @@ follow_viewport_enabled = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 18542.0
+offset_right = 22194.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -66,7 +66,7 @@ position = Vector2(14201, 540)
 position = Vector2(16224, 540)
 
 [node name="PanelBelly" parent="." unique_id=547145415 instance=ExtResource("11_p7egh")]
-position = Vector2(17625, 532)
+position = Vector2(18119, 532)
 
 [node name="PanelTopview" parent="." unique_id=184560352 instance=ExtResource("10_8767r")]
-position = Vector2(19459, 535)
+position = Vector2(20030, 535)
