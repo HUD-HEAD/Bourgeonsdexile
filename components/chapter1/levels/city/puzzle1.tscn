@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://bp2p0a8c67kt1" path="res://graphics/chapter1/levels/city/puzzles/puzzle1/simple/bubble4puzle1.png" id="8_w86f4"]
 [ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="11_tx8fh"]
 [ext_resource type="Texture2D" uid="uid://bkf0fh8o6pxty" path="res://graphics/chapter1/levels/city/puzzles/puzzle1/full_map.png" id="11_uuntd"]
+[ext_resource type="AudioStream" uid="uid://3ffx61j4su3a" path="res://audio/chapter1/sfx/resolve_puzzle.wav" id="12_kckjo"]
+[ext_resource type="AudioStream" uid="uid://bj0aafjx3b0wc" path="res://audio/chapter1/sfx/puzzle_sound_1_intercalate_with_2.wav" id="13_de8qv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mvwgm"]
 size = Vector2(84, 217)
@@ -127,3 +129,14 @@ position = Vector2(54, 90)
 
 [node name="Fullsquare" type="Sprite2D" parent="." unique_id=1863100166]
 texture = ExtResource("11_uuntd")
+
+[node name="ResolvePlayer" type="AudioStreamPlayer" parent="." unique_id=1009237337]
+unique_name_in_owner = true
+stream = ExtResource("12_kckjo")
+bus = &"Sfx"
+
+[node name="CorrectPiecePlayer" type="AudioStreamPlayer" parent="." unique_id=23275478]
+unique_name_in_owner = true
+stream = ExtResource("13_de8qv")
+max_polyphony = 2
+bus = &"Sfx"
