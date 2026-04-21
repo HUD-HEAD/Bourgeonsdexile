@@ -29,6 +29,7 @@ func _deferred_goto_scene(path):
 	# Load the new scene.
 	var s : Resource
 	if path is String :
+		path = ResourceUID.ensure_path(path)
 		s = ResourceLoader.load(path)
 	elif path is PackedScene :
 		s = path

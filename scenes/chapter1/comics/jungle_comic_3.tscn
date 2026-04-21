@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://cu1lmj34y2sxm" path="res://components/chapter1/comic_panels/comic_3/panel_kid_lajas.tscn" id="8_jrtjm"]
 [ext_resource type="PackedScene" uid="uid://cvhdi4oiatmqi" path="res://components/chapter1/comic_panels/comic_3/panel_helppoint.tscn" id="9_ouit8"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="12_txuxr"]
-[ext_resource type="PackedScene" uid="uid://d2f3ss3fi8c52" path="res://scenes/chapter1/levels/lajas_blancas.tscn" id="13_dx01d"]
 [ext_resource type="PackedScene" uid="uid://ho5wjpeqrptp" path="res://components/chapter1/comic_panels/comic_3/panel_arrival.tscn" id="13_w6r1n"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="15_sw7mp"]
 [ext_resource type="PackedScene" uid="uid://clojdgf3punl6" path="res://components/chapter1/comic_panels/comic_3/panel_phone_canteen.tscn" id="15_w6r1n"]
@@ -103,4 +102,4 @@ position = Vector2(36484, 540)
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1791395188]
 position = Vector2(39760, 540)
 script = ExtResource("12_txuxr")
-next_scene = ExtResource("13_dx01d")
+next_scene = "uid://d2f3ss3fi8c52"

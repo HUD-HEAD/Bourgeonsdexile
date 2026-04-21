@@ -17,7 +17,6 @@
 [ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/chapter1/main_characters/jungle_woman.tscn" id="15_td1vu"]
 [ext_resource type="SpriteFrames" uid="uid://bmcc5l21n4h6s" path="res://components/chapter1/main_characters/companion_1_sprite_frames.tres" id="16_17nyf"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="16_aewef"]
-[ext_resource type="PackedScene" uid="uid://deifii0sv125i" path="res://scenes/chapter1/comics/jungle_comic_3.tscn" id="17_aqo8c"]
 [ext_resource type="SpriteFrames" uid="uid://dqrsyjauj12el" path="res://components/chapter1/main_characters/companion_2_sprite_frames.tres" id="17_k7em6"]
 [ext_resource type="PackedScene" uid="uid://d246c0iqqddvh" path="res://components/chapter1/levels/jungle/rain.tscn" id="18_nqhdg"]
 [ext_resource type="Script" uid="uid://gchp60e2jp5r" path="res://components/utils/set_camera_bounds.gd" id="19_31ufg"]
@@ -662,7 +661,7 @@ frame_progress = 0.0
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=267643735]
 position = Vector2(34810, 179)
 script = ExtResource("16_aewef")
-next_scene = ExtResource("17_aqo8c")
+next_scene = "uid://deifii0sv125i"
 
 [node name="Rain" parent="." unique_id=498998463 instance=ExtResource("18_nqhdg")]
 position = Vector2(8252, -53)

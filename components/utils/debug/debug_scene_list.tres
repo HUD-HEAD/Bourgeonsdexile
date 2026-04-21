@@ -1,19 +1,9 @@
 [gd_resource type="Resource" format=3 uid="uid://dxn857ctgrgmu"]
 
-[ext_resource type="PackedScene" uid="uid://ctau0miqtmbj2" path="res://scenes/menus/main_menu.tscn" id="1_ydeoq"]
-[ext_resource type="PackedScene" uid="uid://cpvf5agmemtpm" path="res://scenes/prototyping/videoplayer_demo.tscn" id="2_6w7w6"]
-[ext_resource type="PackedScene" uid="uid://du7xk8lrsn7at" path="res://scenes/chapter1/comics/jungle_comic_1.tscn" id="3_ui6h3"]
-[ext_resource type="PackedScene" uid="uid://s3spdg0qqc77" path="res://scenes/chapter1/levels/jungle_city.tscn" id="4_unh1a"]
-[ext_resource type="PackedScene" uid="uid://djv5fkem5af34" path="res://scenes/chapter1/comics/jungle_comic_2.tscn" id="5_1gy63"]
-[ext_resource type="PackedScene" uid="uid://cjq4fleiu5245" path="res://scenes/chapter1/levels/jungle.tscn" id="6_ui6h3"]
-[ext_resource type="PackedScene" uid="uid://deifii0sv125i" path="res://scenes/chapter1/comics/jungle_comic_3.tscn" id="7_kkjho"]
-[ext_resource type="PackedScene" uid="uid://d2f3ss3fi8c52" path="res://scenes/chapter1/levels/lajas_blancas.tscn" id="8_ui6h3"]
-[ext_resource type="PackedScene" uid="uid://c0cewrgpnckyx" path="res://scenes/chapter1/comics/jungle_comic_4.tscn" id="9_unh1a"]
-
 [sub_resource type="GDScript" id="GDScript_xitg3"]
-script/source = "@export var ordered_scene_list : Array[PackedScene]
+script/source = "@export_file(\"*.tscn\") var ordered_scene_list : Array[String]
 "
 
 [resource]
 script = SubResource("GDScript_xitg3")
-ordered_scene_list = Array[PackedScene]([ExtResource("1_ydeoq"), ExtResource("2_6w7w6"), ExtResource("3_ui6h3"), ExtResource("4_unh1a"), ExtResource("5_1gy63"), ExtResource("6_ui6h3"), ExtResource("7_kkjho"), ExtResource("8_ui6h3"), ExtResource("9_unh1a")])
+ordered_scene_list = Array[String](["uid://ctau0miqtmbj2", "uid://cpvf5agmemtpm", "uid://du7xk8lrsn7at", "uid://s3spdg0qqc77", "uid://djv5fkem5af34", "uid://cjq4fleiu5245", "uid://deifii0sv125i", "uid://d2f3ss3fi8c52", "uid://c0cewrgpnckyx"])
