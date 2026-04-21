@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dxvnkp4f3rnwd" path="res://components/chapter2/comic_panels/comic_3/Panel_5.tscn" id="12_wogoy"]
 [ext_resource type="PackedScene" uid="uid://dohgjrclcdvw" path="res://components/chapter2/comic_panels/comic_3/Panel_6.tscn" id="13_krelq"]
 [ext_resource type="PackedScene" uid="uid://bc6apl835bnhx" path="res://components/chapter2/comic_panels/comic_3/Panel_7.tscn" id="14_l70rv"]
+[ext_resource type="PackedScene" uid="uid://clom5eodmhl4h" path="res://components/chapter2/comic_panels/comic_3/Panel_12.tscn" id="15_8hjah"]
 [ext_resource type="PackedScene" uid="uid://ylem8i3xfrj3" path="res://components/chapter2/comic_panels/comic_3/Panel_8.tscn" id="15_y5lp5"]
 [ext_resource type="PackedScene" uid="uid://2lq4nfh3rv8i" path="res://components/chapter2/comic_panels/comic_3/Panel_9.tscn" id="16_xk1a2"]
 [ext_resource type="PackedScene" uid="uid://bb5jifkt8pla5" path="res://components/chapter2/comic_panels/comic_3/Panel_10.tscn" id="17_nue46"]
@@ -81,4 +82,7 @@ position = Vector2(21793, 537)
 position = Vector2(24704, 555)
 
 [node name="Panel11" parent="." unique_id=2025531418 instance=ExtResource("18_fbqtp")]
-position = Vector2(27683, 541)
+position = Vector2(26729, 510)
+
+[node name="Panel12" parent="." unique_id=1065014941 instance=ExtResource("15_8hjah")]
+position = Vector2(29083, 540)

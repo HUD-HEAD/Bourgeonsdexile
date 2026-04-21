@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xe68o8lfqkkf"
-path="res://.godot/imported/busscroll.png-1fb4fa37b49f7ab3651d8c89a0cd6321.ctex"
+uid="uid://ia2oeqhw2g7g"
+path="res://.godot/imported/wheel1.png-c969afc89688dddac12b62524134a4c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter2/comics/comic3/bussectioncloseup/busscroll.png"
-dest_files=["res://.godot/imported/busscroll.png-1fb4fa37b49f7ab3651d8c89a0cd6321.ctex"]
+source_file="res://graphics/chapter2/levels/goma/wheel1.png"
+dest_files=["res://.godot/imported/wheel1.png-c969afc89688dddac12b62524134a4c6.ctex"]
 
 [params]
 

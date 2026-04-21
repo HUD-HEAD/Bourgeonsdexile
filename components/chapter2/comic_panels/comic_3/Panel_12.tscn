@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://clom5eodmhl4h"]
+
+[ext_resource type="Texture2D" uid="uid://qmukd60trff6" path="res://graphics/chapter2/comics/comic3/blur/unblur.png" id="1_cvn85"]
+
+[node name="Panel1" type="Node2D" unique_id=958587886]
+
+[node name="Unblur" type="Sprite2D" parent="." unique_id=1219340425]
+position = Vector2(0, -1)
+texture = ExtResource("1_cvn85")

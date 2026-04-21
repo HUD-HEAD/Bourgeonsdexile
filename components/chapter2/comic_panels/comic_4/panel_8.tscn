@@ -1,3 +1,14 @@
 [gd_scene format=3 uid="uid://dj2re0mny6s56"]
 
+[ext_resource type="Texture2D" uid="uid://cds3i3gb5elh1" path="res://graphics/chapter2/comics/comic4/framecontractions/cage.png" id="1_vq423"]
+[ext_resource type="Texture2D" uid="uid://xahx4t6vnyta" path="res://graphics/chapter2/comics/comic4/framecontractions/d.png" id="2_vux10"]
+
 [node name="Panel8" type="Node2D" unique_id=2046092439]
+
+[node name="Cage" type="Sprite2D" parent="." unique_id=1992124479]
+position = Vector2(782, 31)
+texture = ExtResource("1_vq423")
+
+[node name="D" type="Sprite2D" parent="." unique_id=152637806]
+position = Vector2(-2, 3)
+texture = ExtResource("2_vux10")

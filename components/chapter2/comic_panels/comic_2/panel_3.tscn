@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://baln7eblfbivi"]
 
-[ext_resource type="Texture2D" uid="uid://c5c6fi6k6mins" path="res://graphics/chapter2/comics/comic2/framesky/mockup2.png" id="1_xmlk0"]
+[ext_resource type="Texture2D" uid="uid://ci5rjm67rurvn" path="res://graphics/chapter2/comics/comic2/framesky/bg.png" id="1_xmlk0"]
 
 [node name="Panel3" type="Node2D" unique_id=547383153]
 
-[node name="Mockup2" type="Sprite2D" parent="." unique_id=1074263709]
-position = Vector2(0, -4)
+[node name="Bg" type="Sprite2D" parent="." unique_id=825403214]
+position = Vector2(-7, -9)
 texture = ExtResource("1_xmlk0")
