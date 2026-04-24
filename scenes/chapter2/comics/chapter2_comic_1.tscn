@@ -16,7 +16,6 @@
 [ext_resource type="PackedScene" uid="uid://c6knungwprlgs" path="res://components/chapter2/comic_panels/comic_1/panel_12.tscn" id="17_jd0lm"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="17_k5ynj"]
 [ext_resource type="PackedScene" uid="uid://by0uwcf5syiic" path="res://components/chapter2/comic_panels/comic_1/panel_13.tscn" id="18_040dt"]
-[ext_resource type="PackedScene" uid="uid://38344vnrt72b" path="res://components/chapter2/comic_panels/comic_1/panel_14.tscn" id="19_erqdw"]
 [ext_resource type="PackedScene" uid="uid://cl7jmbkryr1h7" path="res://components/chapter2/comic_panels/comic_1/panel_16.tscn" id="20_4a5vy"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="20_kue4r"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="21_e3e0c"]
@@ -81,24 +80,21 @@ position = Vector2(21271, 550)
 [node name="Panel7" parent="Panels" unique_id=3961592 instance=ExtResource("15_tg4ti")]
 position = Vector2(23185, 530)
 
-[node name="Panel11" parent="Panels" unique_id=1942828207 instance=ExtResource("19_erqdw")]
-position = Vector2(25209, 518)
-
 [node name="Panel9" parent="Panels" unique_id=668551988 instance=ExtResource("17_jd0lm")]
-position = Vector2(27238, 531)
+position = Vector2(25369, 531)
 
 [node name="Panel12" parent="Panels" unique_id=712009177 instance=ExtResource("20_4a5vy")]
-position = Vector2(29302, 524)
+position = Vector2(27433, 524)
 
 [node name="Panel10" parent="Panels" unique_id=1665425851 instance=ExtResource("18_040dt")]
-position = Vector2(31929, 532)
+position = Vector2(30060, 532)
 
 [node name="PanelScrolling" parent="Panels" unique_id=1391206584 instance=ExtResource("17_4a5vy")]
-position = Vector2(34502, 540)
+position = Vector2(32633, 540)
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("20_kue4r")
-panels = [NodePath("../Panels/PanelVideo"), NodePath("../Panels/Panel0"), NodePath("../Panels/PanelOpenWindow"), NodePath("../Panels/Panel1"), NodePath("../Panels/Panel2"), NodePath("../Panels/Panel3"), NodePath("../Panels/Panel4"), NodePath("../Panels/Panel5"), NodePath("../Panels/Panel6"), NodePath("../Panels/Panel8"), NodePath("../Panels/Panel7"), NodePath("../Panels/Panel11"), NodePath("../Panels/Panel9"), NodePath("../Panels/Panel12"), NodePath("../Panels/Panel10"), NodePath("../Panels/PanelScrolling"), NodePath("../SceneEnder")]
+panels = [NodePath("../Panels/PanelVideo"), NodePath("../Panels/Panel0"), NodePath("../Panels/PanelOpenWindow"), NodePath("../Panels/Panel1"), NodePath("../Panels/Panel2"), NodePath("../Panels/Panel3"), NodePath("../Panels/Panel4"), NodePath("../Panels/Panel5"), NodePath("../Panels/Panel6"), NodePath("../Panels/Panel8"), NodePath("../Panels/Panel7"), NodePath("../Panels/Panel9"), NodePath("../Panels/Panel12"), NodePath("../Panels/Panel10"), NodePath("../Panels/PanelScrolling"), NodePath("../SceneEnder")]
 
 [node name="UI" parent="." unique_id=1829896958 instance=ExtResource("21_e3e0c")]
 
