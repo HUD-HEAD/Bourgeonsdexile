@@ -45,11 +45,10 @@ _data = {
 
 [node name="Bg" type="Sprite2D" parent="." unique_id=795134189]
 clip_children = 2
-position = Vector2(79, -109)
 texture = ExtResource("1_4rdac")
 
 [node name="Bus" type="Sprite2D" parent="Bg" unique_id=824524631]
-position = Vector2(-1980, 116)
+position = Vector2(-1980, 130)
 texture = ExtResource("2_7wvfg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1520303695]
@@ -59,3 +58,6 @@ libraries/ = SubResource("AnimationLibrary_7wvfg")
 script = ExtResource("3_7wvfg")
 anim_player = NodePath("../AnimationPlayer")
 metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=333128753]
+rect = Rect2(-786, -10, 1597, 178)

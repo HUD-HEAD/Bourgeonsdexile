@@ -16,7 +16,7 @@ radius = 436.05618
 [node name="Panel1" type="Node2D" unique_id=547383153]
 
 [node name="Clickable" type="Area2D" parent="." unique_id=173027415 node_paths=PackedStringArray("nodes_to_show")]
-position = Vector2(-414, 0)
+position = Vector2(-458, 21.706055)
 script = ExtResource("1_rnxw4")
 nodes_to_show = [NodePath("../Box"), NodePath("../Bottle"), NodePath("../Brush"), NodePath("../Pasta"), NodePath("../Pills"), NodePath("../Soap")]
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
@@ -28,29 +28,29 @@ texture = ExtResource("1_2331d")
 shape = SubResource("CircleShape2D_rnxw4")
 
 [node name="Box" type="Sprite2D" parent="." unique_id=1630939634]
-position = Vector2(430, -266)
+position = Vector2(401, -191)
 texture = ExtResource("2_rnxw4")
 
 [node name="Bottle" type="Sprite2D" parent="." unique_id=1891058632]
-position = Vector2(171, 180)
+position = Vector2(127, 201.70605)
 texture = ExtResource("3_uktpe")
 
 [node name="Brush" type="Sprite2D" parent="." unique_id=554274327]
-position = Vector2(897, -41)
+position = Vector2(649, 65.99997)
 rotation = 0.5806003
 texture = ExtResource("4_kj2th")
 
 [node name="Pasta" type="Sprite2D" parent="." unique_id=792630312]
-position = Vector2(210.99994, -419.00003)
+position = Vector2(258.00003, -328.99997)
 rotation = 0.68295705
 texture = ExtResource("5_saobf")
 
 [node name="Pills" type="Sprite2D" parent="." unique_id=1416693168]
-position = Vector2(681, -67)
+position = Vector2(637, -45.293945)
 texture = ExtResource("6_eibhh")
 
 [node name="Soap" type="Sprite2D" parent="." unique_id=770075607]
-position = Vector2(432, 173)
+position = Vector2(388, 194.70605)
 texture = ExtResource("7_t0ots")
 
 [node name="TransitionerCounter" type="Node" parent="." unique_id=2083659056 node_paths=PackedStringArray("clickables")]

@@ -12,3 +12,5 @@ texture = ExtResource("1_7totp")
 [node name="TransitionerPassive" type="Node" parent="." unique_id=1965410217]
 script = ExtResource("2_aplr7")
 metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=158106128]

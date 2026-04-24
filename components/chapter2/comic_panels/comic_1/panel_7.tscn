@@ -29,8 +29,6 @@ radius = 395.03165
 
 [node name="frameadjustinghead" type="AnimatedSprite2D" parent="." unique_id=1071881877 node_paths=PackedStringArray("clickable")]
 sprite_frames = SubResource("SpriteFrames_cmlx7")
-frame = 1
-frame_progress = 1.0
 script = ExtResource("3_7ynmp")
 clickable = NodePath("../Clickable")
 
