@@ -1,8 +1,32 @@
 [gd_scene format=3 uid="uid://5glmawcny33t"]
 
 [ext_resource type="Texture2D" uid="uid://4dgrea75hukn" path="res://graphics/chapter2/comics/comic2/framebodaboda/framebodaboda1.png" id="1_rcvu5"]
+[ext_resource type="Texture2D" uid="uid://24vjq7st4lnl" path="res://graphics/chapter2/comics/comic2/framebodaboda/framebodaboda2.png" id="2_xu0rb"]
+[ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="3_6m734"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_6m734"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eiw3d"]
+radius = 149.0
+height = 604.0
 
 [node name="Panel1" type="Node2D" unique_id=547383153]
 
 [node name="Framebodaboda1" type="Sprite2D" parent="." unique_id=188990023]
 texture = ExtResource("1_rcvu5")
+
+[node name="Framebodaboda2" type="Sprite2D" parent="." unique_id=1858344704]
+texture = ExtResource("2_xu0rb")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=2044436483 node_paths=PackedStringArray("nodes_to_show")]
+position = Vector2(-35, -31)
+script = ExtResource("3_6m734")
+nodes_to_show = [NodePath("../Framebodaboda2")]
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=296767713]
+shape = SubResource("CapsuleShape2D_eiw3d")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=1649113133 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_6m734")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"

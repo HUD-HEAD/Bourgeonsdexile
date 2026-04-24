@@ -2,13 +2,60 @@
 
 [ext_resource type="Texture2D" uid="uid://cfcu2fjchmlbr" path="res://graphics/chapter2/comics/comic2/framebusarriving/bg.png" id="1_4rdac"]
 [ext_resource type="Texture2D" uid="uid://bu6ajmingmkqc" path="res://graphics/chapter2/comics/comic2/framebussection/outside.png" id="2_7wvfg"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="3_7wvfg"]
+
+[sub_resource type="Animation" id="Animation_7wvfg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bg/Bus:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [-1980.0]
+}
+
+[sub_resource type="Animation" id="Animation_4rdac"]
+resource_name = "default"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bg/Bus:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1980.0, -120.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7wvfg"]
+_data = {
+&"RESET": SubResource("Animation_7wvfg"),
+&"default": SubResource("Animation_4rdac")
+}
 
 [node name="Panel1" type="Node2D" unique_id=547383153]
 
 [node name="Bg" type="Sprite2D" parent="." unique_id=795134189]
+clip_children = 2
 position = Vector2(79, -109)
 texture = ExtResource("1_4rdac")
 
-[node name="Outside" type="Sprite2D" parent="." unique_id=824524631]
-position = Vector2(-1141, 7)
+[node name="Bus" type="Sprite2D" parent="Bg" unique_id=824524631]
+position = Vector2(-1980, 116)
 texture = ExtResource("2_7wvfg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1520303695]
+libraries/ = SubResource("AnimationLibrary_7wvfg")
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=664165986 node_paths=PackedStringArray("anim_player")]
+script = ExtResource("3_7wvfg")
+anim_player = NodePath("../AnimationPlayer")
+metadata/_custom_type_script = "uid://u4636s8oa5d0"

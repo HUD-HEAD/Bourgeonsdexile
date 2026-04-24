@@ -1,9 +1,44 @@
 [gd_scene format=3 uid="uid://dyu4nfimcgrb"]
 
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="1_8hb5f"]
 [ext_resource type="Texture2D" uid="uid://cqliswr4xjwfe" path="res://graphics/chapter2/comics/comic2/framepee/2.png" id="1_pfp4o"]
+[ext_resource type="Texture2D" uid="uid://bbqbtap7w6iby" path="res://graphics/chapter2/comics/comic2/framepee/1.png" id="2_pebdq"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="4_pebdq"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_w8d2e"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pebdq"]
+radius = 224.0
+height = 1094.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fqebl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pebdq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_pfp4o")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Panel1" type="Node2D" unique_id=547383153]
 
-[node name="2" type="Sprite2D" parent="." unique_id=568459109]
-position = Vector2(-3, -11)
-texture = ExtResource("1_pfp4o")
+[node name="Clickable" type="Area2D" parent="." unique_id=759481847]
+script = ExtResource("1_8hb5f")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=2144809962]
+shape = SubResource("CapsuleShape2D_pebdq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=103811089 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_fqebl")
+script = ExtResource("4_pebdq")
+clickable = NodePath("../Clickable")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=1570599688 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_w8d2e")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"
