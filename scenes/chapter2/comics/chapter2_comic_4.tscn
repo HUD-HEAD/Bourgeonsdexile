@@ -29,6 +29,7 @@ grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("1_nrvn0")
 stretch_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=485993154]
 position = Vector2(960, 540)
@@ -38,36 +39,37 @@ position_smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="Panels" type="Node2D" parent="." unique_id=606931740]
+position = Vector2(0, 540)
+
+[node name="Panel1" parent="Panels" unique_id=690781203 instance=ExtResource("8_pwk57")]
+position = Vector2(3098, 0)
+
+[node name="Panel2" parent="Panels" unique_id=780449822 instance=ExtResource("9_hb21k")]
+position = Vector2(5294, 0)
+
+[node name="Panel3" parent="Panels" unique_id=1018297285 instance=ExtResource("10_rlfy7")]
+position = Vector2(7524, 0)
+
+[node name="Panel5" parent="Panels" unique_id=621299691 instance=ExtResource("12_l8dec")]
+position = Vector2(9937, 0)
+scale = Vector2(0.38665813, 0.38665813)
+
+[node name="Panel6" parent="Panels" unique_id=280197590 instance=ExtResource("13_8mv4y")]
+position = Vector2(12362, 0)
+
+[node name="Panel4" parent="Panels" unique_id=405070053 instance=ExtResource("11_tu2ht")]
+position = Vector2(14405, 0)
+
+[node name="Panel8" parent="Panels" unique_id=2046092439 instance=ExtResource("10_jxjoi")]
+position = Vector2(16377, 0)
+
+[node name="Panel7" parent="Panels" unique_id=396620923 instance=ExtResource("11_h2s7f")]
+position = Vector2(19162, 0)
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("2_cxg14")
-panels = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+panels = [NodePath("../Panels/Panel1"), NodePath("../Panels/Panel2"), NodePath("../Panels/Panel3"), NodePath("../Panels/Panel5"), NodePath("../Panels/Panel6"), NodePath("../Panels/Panel4"), NodePath("../Panels/Panel8"), NodePath("../Panels/Panel7")]
 
 [node name="UI" parent="." unique_id=1829896958 instance=ExtResource("3_48xq6")]
 
 [node name="Audio" type="Node" parent="." unique_id=619569792]
-
-[node name="Panel1" parent="." unique_id=690781203 instance=ExtResource("8_pwk57")]
-position = Vector2(3098, 542)
-
-[node name="Panel2" parent="." unique_id=780449822 instance=ExtResource("9_hb21k")]
-position = Vector2(5294, 566)
-
-[node name="Panel3" parent="." unique_id=1018297285 instance=ExtResource("10_rlfy7")]
-position = Vector2(7524, 538)
-
-[node name="Panel4" parent="." unique_id=405070053 instance=ExtResource("11_tu2ht")]
-position = Vector2(14405, 504)
-
-[node name="Panel5" parent="." unique_id=621299691 instance=ExtResource("12_l8dec")]
-position = Vector2(9937, 547.00006)
-scale = Vector2(0.38665813, 0.38665813)
-
-[node name="Panel6" parent="." unique_id=280197590 instance=ExtResource("13_8mv4y")]
-position = Vector2(12362, 525)
-
-[node name="Panel8" parent="." unique_id=2046092439 instance=ExtResource("10_jxjoi")]
-position = Vector2(16377, 486)
-
-[node name="Panel7" parent="." unique_id=396620923 instance=ExtResource("11_h2s7f")]
-position = Vector2(19162, 549)
