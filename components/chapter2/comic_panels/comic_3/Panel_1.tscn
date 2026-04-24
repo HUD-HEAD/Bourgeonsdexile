@@ -1,9 +1,20 @@
 [gd_scene format=3 uid="uid://cnlkly26dml5v"]
 
 [ext_resource type="Texture2D" uid="uid://b3d4a6r16mdmc" path="res://graphics/chapter2/comics/comic3/bussectioncloseup/buscloseup.png" id="1_wecyc"]
+[ext_resource type="Script" uid="uid://bwhw2o2u7v43i" path="res://components/utils/comics/vertical_sine_anim.gd" id="2_vgwn1"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="3_hw3ab"]
 
 [node name="Panel1" type="Node2D" unique_id=958587886]
 
 [node name="Buscloseup" type="Sprite2D" parent="." unique_id=1373293583]
 position = Vector2(0, -1)
 texture = ExtResource("1_wecyc")
+script = ExtResource("2_vgwn1")
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=959634978]
+script = ExtResource("3_hw3ab")
+timer_wait = 5.0
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=322900420]
+rect = Rect2(-930, -10, 1873, 72)
