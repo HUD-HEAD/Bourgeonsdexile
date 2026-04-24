@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dlh2oirpix5d8"]
+
+[ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="1_ga38g"]
+[ext_resource type="Texture2D" uid="uid://c0svmnpyxirkn" path="res://graphics/chapter2/comics/comic1/frameopeningwindows/windowsclosed.png" id="2_cwbrp"]
+[ext_resource type="Texture2D" uid="uid://t051o0cm7vfu" path="res://graphics/chapter2/comics/comic1/frameopeningwindows/windowopen.png" id="3_r5n64"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_cwbrp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qabg4"]
+size = Vector2(479, 361)
+
+[node name="PanelOpenWindow" type="Node2D" unique_id=1036474130]
+
+[node name="Clickable" type="Area2D" parent="." unique_id=187351706 node_paths=PackedStringArray("nodes_to_show")]
+position = Vector2(-380, -254)
+script = ExtResource("1_ga38g")
+nodes_to_show = [NodePath("../Windowopen")]
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1904301717]
+shape = SubResource("RectangleShape2D_qabg4")
+
+[node name="Windowsclosed" type="Sprite2D" parent="." unique_id=1841291591]
+texture = ExtResource("2_cwbrp")
+
+[node name="Windowopen" type="Sprite2D" parent="." unique_id=1132607756]
+texture = ExtResource("3_r5n64")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=748746194 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_cwbrp")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"

@@ -1,8 +1,49 @@
 [gd_scene format=3 uid="uid://ce8o5ip5g0vpt"]
 
-[ext_resource type="Texture2D" uid="uid://dsb4p40tl6unc" path="res://graphics/chapter2/comics/comic1/frameadjusting/frameadjustinghead.png" id="1_dqnie"]
+[ext_resource type="Texture2D" uid="uid://ddfwsrx3tsuyy" path="res://graphics/chapter2/comics/comic1/frameadjusting/head1.png" id="1_hmp4h"]
+[ext_resource type="Texture2D" uid="uid://bmitp1uycmyra" path="res://graphics/chapter2/comics/comic1/frameadjusting/head2.png" id="2_wh2rv"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="3_7ynmp"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_l815q"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="5_r2haq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cmlx7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hmp4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_wh2rv")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qc1yf"]
+radius = 395.03165
 
 [node name="Panel1" type="Node2D" unique_id=299868253]
 
-[node name="Frameadjustinghead" type="Sprite2D" parent="." unique_id=1989711782]
-texture = ExtResource("1_dqnie")
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1216763021]
+
+[node name="frameadjustinghead" type="AnimatedSprite2D" parent="." unique_id=1071881877 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_cmlx7")
+frame = 1
+frame_progress = 1.0
+script = ExtResource("3_7ynmp")
+clickable = NodePath("../Clickable")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=1691296472 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_l815q")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="Clickable" type="Area2D" parent="." unique_id=1506326586]
+position = Vector2(-84, -121)
+script = ExtResource("5_r2haq")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=400792681]
+position = Vector2(-7, -62)
+shape = SubResource("CircleShape2D_qc1yf")
