@@ -13,17 +13,17 @@ size = Vector2(479, 361)
 [node name="Clickable" type="Area2D" parent="." unique_id=187351706 node_paths=PackedStringArray("nodes_to_show")]
 position = Vector2(-380, -254)
 script = ExtResource("1_ga38g")
-nodes_to_show = [NodePath("../Windowopen")]
+nodes_to_show = [NodePath("../Windowsclosed")]
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1904301717]
 shape = SubResource("RectangleShape2D_qabg4")
 
-[node name="Windowsclosed" type="Sprite2D" parent="." unique_id=1841291591]
-texture = ExtResource("2_cwbrp")
-
 [node name="Windowopen" type="Sprite2D" parent="." unique_id=1132607756]
 texture = ExtResource("3_r5n64")
+
+[node name="Windowsclosed" type="Sprite2D" parent="." unique_id=1841291591]
+texture = ExtResource("2_cwbrp")
 
 [node name="TransitionerCounter" type="Node" parent="." unique_id=748746194 node_paths=PackedStringArray("clickables")]
 script = ExtResource("4_cwbrp")
