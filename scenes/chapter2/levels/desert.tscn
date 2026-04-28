@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://calxcc2jttv3p"]
+
+[ext_resource type="Texture2D" uid="uid://cqgge3pmf4v66" path="res://graphics/chapter2/levels/desert/tiledbackground_1.jpg" id="1_p8hlq"]
+[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="3_aqeuv"]
+[ext_resource type="PackedScene" uid="uid://bn2kp6x746ehp" path="res://components/chapter2/characters/boda_boda.tscn" id="3_p8hlq"]
+
+[node name="Desert" type="Node2D" unique_id=987125979]
+
+[node name="Background" type="CanvasLayer" parent="." unique_id=856416823]
+layer = -1
+follow_viewport_enabled = true
+
+[node name="DesertTiled" type="TextureRect" parent="Background" unique_id=1494207838]
+anchors_preset = -1
+anchor_right = 10.931771
+anchor_bottom = 1.0
+mouse_filter = 2
+texture = ExtResource("1_p8hlq")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="Background" unique_id=1352526241]
+position = Vector2(9872, 645)
+script = ExtResource("3_aqeuv")
+next_scene = "uid://buy5yt5e73v7w"
+
+[node name="Theme" type="AudioStreamPlayer" parent="." unique_id=67967600]
+autoplay = true
+bus = &"Music"
+
+[node name="BodaBoda" parent="." unique_id=925815680 instance=ExtResource("3_p8hlq")]
+position = Vector2(543, 687)
+move_speed = 800.0
+
+[node name="MarkerBubbleSpawn" type="Marker2D" parent="BodaBoda" unique_id=218413136]
+position = Vector2(82, -228)
+
+[node name="Camera2D" type="Camera2D" parent="BodaBoda" unique_id=1924418931]
+position = Vector2(418, -147)
+limit_top = 0
+limit_bottom = 1080

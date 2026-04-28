@@ -103,3 +103,4 @@ panels = [NodePath("../Panels/PanelVideo"), NodePath("../Panels/Panel0"), NodePa
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=531672478]
 position = Vector2(36807, 596)
 script = ExtResource("17_k5ynj")
+next_scene = "uid://dtuayk8ovnbj"

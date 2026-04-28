@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cilqgb10bxsi7"]
+
+[ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/chapter1/main_characters/jungle_woman.tscn" id="1_2xgnd"]
+[ext_resource type="SpriteFrames" uid="uid://cteyh286rov0u" path="res://components/chapter2/characters/amani_sprite_frames.tres" id="2_27aee"]
+
+[node name="Amani" unique_id=700974070 instance=ExtResource("1_2xgnd")]
+
+[node name="Woman" parent="." index="0" unique_id=689873547]
+sprite_frames = ExtResource("2_27aee")
+animation = &"idle"
+frame_progress = 0.0
