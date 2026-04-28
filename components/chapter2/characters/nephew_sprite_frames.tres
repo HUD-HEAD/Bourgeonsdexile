@@ -1,0 +1,71 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://8wnk5pl0cnpd"]
+
+[ext_resource type="Texture2D" uid="uid://rwtj10psvg8q" path="res://graphics/chapter2/main_characters/companions/nephew/nephew_idle_5fps/nephew_idle_0001.png" id="1_nhnap"]
+[ext_resource type="Texture2D" uid="uid://cv35qvajfarx" path="res://graphics/chapter2/main_characters/companions/nephew/nephew_idle_5fps/nephew_idle_0002.png" id="2_sghd3"]
+[ext_resource type="Texture2D" uid="uid://bp1x476xouxeo" path="res://graphics/chapter2/main_characters/companions/nephew/nephew_idle_5fps/nephew_idle_0003.png" id="3_t07pu"]
+[ext_resource type="Texture2D" uid="uid://xdqpx70j7da6" path="res://graphics/chapter2/main_characters/companions/nephew/nephew_idle_5fps/nephew_idle_0004.png" id="4_did4g"]
+[ext_resource type="Texture2D" uid="uid://bhpwjx1vsjpb0" path="res://graphics/chapter2/main_characters/companions/nephew/nephew_idle_5fps/nephew_idle_0005.png" id="5_gugt2"]
+[ext_resource type="Texture2D" uid="uid://do2l335ug0lwk" path="res://graphics/chapter2/main_characters/companions/nephew/nephew_idle_5fps/nephew_idle_0006.png" id="6_bjhdq"]
+[ext_resource type="Texture2D" uid="uid://is3muvoh1wuu" path="res://graphics/chapter2/main_characters/companions/nephew/nephew_walk_6fps/nephew_walk_0001.png" id="7_rr2v1"]
+[ext_resource type="Texture2D" uid="uid://ck3psex6uwhuh" path="res://graphics/chapter2/main_characters/companions/nephew/nephew_walk_6fps/nephew_walk_0002.png" id="8_8r2iy"]
+[ext_resource type="Texture2D" uid="uid://bgun8cjctdb2b" path="res://graphics/chapter2/main_characters/companions/nephew/nephew_walk_6fps/nephew_walk_0003.png" id="9_85xnj"]
+[ext_resource type="Texture2D" uid="uid://mbyabrbwdr56" path="res://graphics/chapter2/main_characters/companions/nephew/nephew_walk_6fps/nephew_walk_0004.png" id="10_7bo7k"]
+[ext_resource type="Texture2D" uid="uid://dpb2s7wyv34ta" path="res://graphics/chapter2/main_characters/companions/nephew/nephew_walk_6fps/nephew_walk_0005.png" id="11_u23hx"]
+[ext_resource type="Texture2D" uid="uid://bp02vj31fs4pp" path="res://graphics/chapter2/main_characters/companions/nephew/nephew_walk_6fps/nephew_walk_0006.png" id="12_w1uu0"]
+[ext_resource type="Texture2D" uid="uid://dudtd6i53m736" path="res://graphics/chapter2/main_characters/companions/nephew/nephew_walk_6fps/nephew_walk_0007.png" id="13_vdm0b"]
+[ext_resource type="Texture2D" uid="uid://ddxrglqlbv0r2" path="res://graphics/chapter2/main_characters/companions/nephew/nephew_walk_6fps/nephew_walk_0008.png" id="14_ra2eh"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nhnap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sghd3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_t07pu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_did4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gugt2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bjhdq")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_rr2v1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8r2iy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_85xnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7bo7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_u23hx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_w1uu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vdm0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ra2eh")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 6.0
+}]

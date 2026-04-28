@@ -5,7 +5,7 @@
 
 [node name="Amani" unique_id=700974070 instance=ExtResource("1_2xgnd")]
 
-[node name="Woman" parent="." index="0" unique_id=689873547]
+[node name="AnimSprite" parent="." index="0" unique_id=689873547]
 sprite_frames = ExtResource("2_27aee")
 animation = &"idle"
 frame_progress = 0.0

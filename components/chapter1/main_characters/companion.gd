@@ -1,8 +1,5 @@
 extends Woman
-#TODO refactor/cleanup 
-
 @export var model : Woman
-@export var offset_from_model : float = 0
 
 func _ready() -> void:
 	model.char_area.area_entered.connect(_stop_walking.unbind(1))
