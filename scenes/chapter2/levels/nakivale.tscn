@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://b2aetpff4f5gp"]
 
 [ext_resource type="Texture2D" uid="uid://baleqw00ux2b0" path="res://graphics/chapter2/levels/nakivale/nakivalelong.png" id="1_tq4ip"]
+[ext_resource type="Texture2D" uid="uid://d2afy2jcb01jl" path="res://graphics/chapter2/levels/nakivale/interior2.png" id="3_apgf3"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="3_yuvbc"]
 [ext_resource type="PackedScene" uid="uid://cilqgb10bxsi7" path="res://components/chapter2/characters/amani.tscn" id="4_5uaoj"]
+[ext_resource type="Texture2D" uid="uid://25f8380n34hi" path="res://graphics/chapter2/levels/nakivale/interior1.png" id="4_fklnn"]
 [ext_resource type="PackedScene" uid="uid://bx1qek36fgkbh" path="res://components/chapter2/characters/companion.tscn" id="4_nonyt"]
 [ext_resource type="SpriteFrames" uid="uid://8wnk5pl0cnpd" path="res://components/chapter2/characters/nephew_sprite_frames.tres" id="5_yuvbc"]
 
@@ -20,6 +22,14 @@ centered = false
 position = Vector2(3920, 645)
 script = ExtResource("3_yuvbc")
 next_scene = "uid://wjb62t2thskf"
+
+[node name="Interior2" type="Sprite2D" parent="Background" unique_id=2091143510]
+position = Vector2(3158, 533)
+texture = ExtResource("3_apgf3")
+
+[node name="Interior1" type="Sprite2D" parent="Background" unique_id=1135751952]
+position = Vector2(4186, 437)
+texture = ExtResource("4_fklnn")
 
 [node name="Theme" type="AudioStreamPlayer" parent="." unique_id=67967600]
 autoplay = true
