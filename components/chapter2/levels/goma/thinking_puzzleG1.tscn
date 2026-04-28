@@ -15,7 +15,7 @@ radius = 206.08736
 radius = 86.00581
 
 [node name="Puzzle1" unique_id=1941159865 node_paths=PackedStringArray("puzzle_pieces") instance=ExtResource("1_si76r")]
-puzzle_pieces = [NodePath("BuildingBlocks/FullPieces/PuzzlePiece"), NodePath("BuildingBlocks/HollowPieces/PuzzlePieceHollow"), NodePath(""), NodePath("")]
+puzzle_pieces = [NodePath("BuildingBlocks/FullPieces/PuzzlePiece"), NodePath("BuildingBlocks/HollowPieces/PuzzlePieceHollow")]
 
 [node name="OutlinePuzzle" parent="." index="0" unique_id=705975536]
 texture = ExtResource("2_26swe")
@@ -40,7 +40,7 @@ texture = ExtResource("4_3igt8")
 texture = ExtResource("5_0cwaw")
 
 [node name="PlacementChecker" parent="BuildingBlocks/HollowPieces/PuzzlePieceHollow/Draggable" parent_id_path=PackedInt32Array(1809332932, 2116105691) index="1" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
-receptacle = NodePath("")
+receptacle = NodePath("../../../../Receptacle4")
 
 [node name="DraggableZone" parent="BuildingBlocks/HollowPieces/PuzzlePieceHollow/Draggable" parent_id_path=PackedInt32Array(1809332932, 2116105691) index="2" unique_id=1105802255]
 shape = SubResource("CircleShape2D_r6lpf")
