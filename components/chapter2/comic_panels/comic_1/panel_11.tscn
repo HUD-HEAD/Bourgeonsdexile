@@ -1,8 +1,44 @@
 [gd_scene format=3 uid="uid://mj2dhiwddodh"]
 
 [ext_resource type="Texture2D" uid="uid://bhtlb22txa7gu" path="res://graphics/chapter2/comics/comic1/framehug/framehug1.png" id="1_20e53"]
+[ext_resource type="Texture2D" uid="uid://bynjkx128aub5" path="res://graphics/chapter2/comics/comic1/framehug/framehug2.png" id="2_auoc0"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="3_gem1r"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="4_mu0bb"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_b58go"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gem1r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_20e53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_auoc0")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mu0bb"]
+size = Vector2(1085, 737)
 
 [node name="Panel1" type="Node2D" unique_id=299868253]
 
-[node name="Framehug1" type="Sprite2D" parent="." unique_id=1880946035]
-texture = ExtResource("1_20e53")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=131622721 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_gem1r")
+script = ExtResource("3_gem1r")
+clickable = NodePath("../Clickable")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=790909592]
+script = ExtResource("4_mu0bb")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1318015510]
+position = Vector2(0, -159)
+shape = SubResource("RectangleShape2D_mu0bb")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=2076661746 node_paths=PackedStringArray("clickables")]
+script = ExtResource("5_b58go")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"

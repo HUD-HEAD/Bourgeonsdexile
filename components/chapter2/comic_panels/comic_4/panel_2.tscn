@@ -1,9 +1,44 @@
 [gd_scene format=3 uid="uid://cka75w6c1or7q"]
 
-[ext_resource type="Texture2D" uid="uid://cfwcm1ristiy6" path="res://graphics/chapter2/comics/comic4/framevideocall/1.png" id="1_0tpkm"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="1_0tpkm"]
+[ext_resource type="Texture2D" uid="uid://cfwcm1ristiy6" path="res://graphics/chapter2/comics/comic4/framevideocall/1.png" id="2_slwhw"]
+[ext_resource type="Texture2D" uid="uid://baib1xeyomnlv" path="res://graphics/chapter2/comics/comic4/framevideocall/2.png" id="3_g7c6u"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="4_g7c6u"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_w41ca"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n1fxr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_slwhw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_g7c6u")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7c6u"]
+size = Vector2(304, 452)
 
 [node name="Panel1" type="Node2D" unique_id=690781203]
 
-[node name="1" type="Sprite2D" parent="." unique_id=960773021]
-position = Vector2(3, -2)
-texture = ExtResource("1_0tpkm")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1598567788 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_n1fxr")
+script = ExtResource("4_g7c6u")
+clickable = NodePath("../Clickable")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=1814105886 node_paths=PackedStringArray("clickables")]
+script = ExtResource("5_w41ca")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="Clickable" type="Area2D" parent="." unique_id=2133862937]
+position = Vector2(-14, -169)
+script = ExtResource("1_0tpkm")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1735865603]
+shape = SubResource("RectangleShape2D_g7c6u")

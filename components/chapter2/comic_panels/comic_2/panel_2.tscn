@@ -1,23 +1,74 @@
 [gd_scene format=3 uid="uid://xcbpbffacfqp"]
 
-[ext_resource type="Texture2D" uid="uid://hiwhkbg5owk1" path="res://graphics/chapter2/comics/comic2/framequeue/bg.png" id="1_40y3a"]
-[ext_resource type="Texture2D" uid="uid://b5anrreq18i6t" path="res://graphics/chapter2/comics/comic2/framequeue/queue.png" id="2_flt0j"]
-[ext_resource type="Texture2D" uid="uid://ca3hpqk38fpsj" path="res://graphics/chapter2/comics/comic2/framequeue/amani.png" id="3_onw7a"]
-[ext_resource type="Texture2D" uid="uid://cgjevfspepbmt" path="res://graphics/chapter2/comics/comic2/framequeue/kid.png" id="4_qmg78"]
+[ext_resource type="Texture2D" uid="uid://dfxwbfh0jeool" path="res://graphics/chapter2/comics/comic2/framequeue/1.png" id="1_40y3a"]
+[ext_resource type="Texture2D" uid="uid://c1hp0qew5scko" path="res://graphics/chapter2/comics/comic2/framequeue/2.png" id="2_flt0j"]
+[ext_resource type="Texture2D" uid="uid://5kwaxmq5p5qk" path="res://graphics/chapter2/comics/comic2/framequeue/3.png" id="3_onw7a"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="4_qmg78"]
+[ext_resource type="Texture2D" uid="uid://dtd8peqwxbiyn" path="res://graphics/chapter2/comics/comic2/framequeue/clock/clock1.png" id="5_qmg78"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="5_qy2mm"]
+[ext_resource type="Texture2D" uid="uid://d30j0n4s4s2gu" path="res://graphics/chapter2/comics/comic2/framequeue/clock/clock2.png" id="6_qy2mm"]
+[ext_resource type="Texture2D" uid="uid://dj5cv8w22ipq2" path="res://graphics/chapter2/comics/comic2/framequeue/clock/clock 3.png" id="7_tberq"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="9_tberq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qy2mm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_40y3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_flt0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_onw7a")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tberq"]
+radius = 133.06013
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h52si"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_qmg78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qy2mm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tberq")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Panel2" type="Node2D" unique_id=547383153]
 
-[node name="Bg" type="Sprite2D" parent="." unique_id=428804493]
-texture = ExtResource("1_40y3a")
+[node name="Queue" type="AnimatedSprite2D" parent="." unique_id=755159994 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_qy2mm")
+script = ExtResource("4_qmg78")
+clickable = NodePath("../Clickable")
 
-[node name="Queue" type="Sprite2D" parent="." unique_id=1467216919]
-position = Vector2(-144, 105)
-texture = ExtResource("2_flt0j")
+[node name="Clickable" type="Area2D" parent="." unique_id=354590339]
+position = Vector2(607, -265)
+script = ExtResource("5_qy2mm")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
-[node name="Amani" type="Sprite2D" parent="." unique_id=1919095669]
-position = Vector2(-506, 148)
-texture = ExtResource("3_onw7a")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1618273957]
+shape = SubResource("CircleShape2D_tberq")
 
-[node name="Kid" type="Sprite2D" parent="." unique_id=1554054924]
-position = Vector2(-430, 191)
-texture = ExtResource("4_qmg78")
+[node name="Clock" type="AnimatedSprite2D" parent="Clickable" unique_id=30639554 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_h52si")
+script = ExtResource("4_qmg78")
+clickable = NodePath("..")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=837906409 node_paths=PackedStringArray("clickables")]
+script = ExtResource("9_tberq")
+clickables = [NodePath("../Clickable")]
+obstacles_to_clear = 2
+metadata/_custom_type_script = "uid://c44tybeisilbv"

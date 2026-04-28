@@ -1,9 +1,16 @@
 [gd_scene format=3 uid="uid://t6aiy6ygkqlj"]
 
 [ext_resource type="Texture2D" uid="uid://cjytd6mt0wdx7" path="res://graphics/chapter2/comics/comic2/frameinsidetent/tent.png" id="1_7totp"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_aplr7"]
 
 [node name="Panel1" type="Node2D" unique_id=547383153]
 
 [node name="Frameinsidetent" type="Sprite2D" parent="." unique_id=1557093435]
 position = Vector2(3, -3)
 texture = ExtResource("1_7totp")
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=1965410217]
+script = ExtResource("2_aplr7")
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=158106128]

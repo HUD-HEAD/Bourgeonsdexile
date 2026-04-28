@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://dixccnltqcohj"]
+
+[ext_resource type="Texture2D" uid="uid://b7bbp47vmqfr0" path="res://graphics/chapter2/comics/comic1/framevideo/1.png" id="1_8plep"]
+[ext_resource type="Texture2D" uid="uid://yvn0ikgdpiwb" path="res://graphics/chapter2/comics/comic1/framevideo/2.png" id="2_jv0yy"]
+[ext_resource type="Texture2D" uid="uid://c5kjdwq0pwgtg" path="res://graphics/chapter2/comics/comic1/framevideo/3.png" id="3_fngc3"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="4_fngc3"]
+
+[sub_resource type="Animation" id="Animation_mrx2r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("2:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_w0eym"]
+resource_name = "default"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("2:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6arca"]
+_data = {
+&"RESET": SubResource("Animation_mrx2r"),
+&"default": SubResource("Animation_w0eym")
+}
+
+[node name="PanelVideo" type="Node2D" unique_id=966386091]
+
+[node name="3" type="Sprite2D" parent="." unique_id=1036695707]
+texture = ExtResource("3_fngc3")
+
+[node name="2" type="Sprite2D" parent="." unique_id=852642825]
+texture = ExtResource("2_jv0yy")
+
+[node name="1" type="Sprite2D" parent="." unique_id=122757126]
+texture = ExtResource("1_8plep")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1174163106]
+libraries/ = SubResource("AnimationLibrary_6arca")
+autoplay = &"default"
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=65792188 node_paths=PackedStringArray("anim_player")]
+script = ExtResource("4_fngc3")
+anim_player = NodePath("../AnimationPlayer")
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
