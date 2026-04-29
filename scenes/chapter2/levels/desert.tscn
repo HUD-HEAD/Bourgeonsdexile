@@ -16,7 +16,7 @@ follow_viewport_enabled = true
 
 [node name="DesertTiled" type="TextureRect" parent="Background" unique_id=1494207838]
 anchors_preset = -1
-anchor_right = 10.931771
+anchor_right = 120.36979
 anchor_bottom = 1.0
 mouse_filter = 2
 texture = ExtResource("1_p8hlq")
