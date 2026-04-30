@@ -3,21 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/chapter1/main_characters/jungle_woman.tscn" id="1_2xgnd"]
 [ext_resource type="SpriteFrames" uid="uid://cteyh286rov0u" path="res://components/chapter2/characters/amani_sprite_frames.tres" id="2_27aee"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_27aee"]
-radius = 48.0
-height = 212.0
-
 [node name="Amani" unique_id=700974070 instance=ExtResource("1_2xgnd")]
 
 [node name="AnimSprite" parent="." index="0" unique_id=689873547]
 sprite_frames = ExtResource("2_27aee")
 frame_progress = 0.0
-
-[node name="SpawnTrigger" type="Area2D" parent="." index="2" unique_id=1630975305]
-position = Vector2(5, -142)
-collision_layer = 2
-collision_mask = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SpawnTrigger" index="0" unique_id=887857558]
-position = Vector2(0, 37)
-shape = SubResource("CapsuleShape2D_27aee")
