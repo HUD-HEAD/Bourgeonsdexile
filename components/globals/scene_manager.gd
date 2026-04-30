@@ -1,8 +1,5 @@
 extends Node
 
-const START_SCENE : PackedScene = preload("res://scenes/prototyping/videoplayer_demo.tscn")
-
-
 var current_scene : Node = null
 var paused : bool = false
 
@@ -26,16 +23,20 @@ func goto_scene(path):
 
 ## Load scene deferred execution
 func _deferred_goto_scene(path):
-	# It is now safe to remove the current scene.
-	current_scene.free()
-
 	# Load the new scene.
 	var s : Resource
 	if path is String :
+		path = ResourceUID.ensure_path(path)
 		s = ResourceLoader.load(path)
 	elif path is PackedScene :
 		s = path
 	
+	if !is_instance_valid(s):
+		push_error("Invalid scene")
+		return
+		
+	# It is now safe to remove the current scene.
+	current_scene.free()
 	current_scene = s.instantiate()
 	get_tree().root.add_child(current_scene)
 

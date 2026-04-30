@@ -27,6 +27,10 @@ func _ready() -> void:
 
 ## Every time a puzzle piece is correctly placed, check if puzzle is completed
 func _on_correct_piece():
+	#TODO cleanup
+	var player = %CorrectPiecePlayer
+	if is_instance_valid(player):
+		player.play()
 	if _check_complete():
 		_complete_puzzle()
 
@@ -45,6 +49,11 @@ func _complete_puzzle():
 	SignalManager.obstacle_cleared.emit()
 	SignalManager.show_next_button.emit()
 	puzzle_complete.emit()
+	
+	#TODO cleanup
+	var player = %ResolvePlayer
+	if is_instance_valid(player):
+		player.play()
 
 
 ## Check if all puzzle pieces in puzzle are in the correct place

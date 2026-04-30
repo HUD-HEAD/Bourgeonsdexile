@@ -1,9 +1,35 @@
 [gd_scene format=3 uid="uid://c4wqbvxsrfu6w"]
 
-[ext_resource type="Texture2D" uid="uid://mpmu7uudmrts" path="res://graphics/chapter2/comics/comic2/framescrolling/framephoneplaceholder.png" id="1_evhsb"]
+[ext_resource type="Texture2D" uid="uid://ytyvxxp466yp" path="res://graphics/chapter2/comics/comic2/framescrolling/phonenight.png" id="1_evhsb"]
+[ext_resource type="Texture2D" uid="uid://dhhvv7mlbmata" path="res://graphics/chapter2/comics/comic2/framescrolling/bigpicture.png" id="2_yoquk"]
+[ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="3_yoquk"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_fkt8v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yoquk"]
+size = Vector2(313, 459)
 
 [node name="Panel1" type="Node2D" unique_id=547383153]
 
 [node name="Framephoneplaceholder" type="Sprite2D" parent="." unique_id=187877074]
 position = Vector2(0, 1)
 texture = ExtResource("1_evhsb")
+
+[node name="Bigpicture" type="Sprite2D" parent="." unique_id=737618384]
+visible = false
+position = Vector2(-56, -79)
+texture = ExtResource("2_yoquk")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=275403992 node_paths=PackedStringArray("nodes_to_show")]
+position = Vector2(-58, -151)
+script = ExtResource("3_yoquk")
+nodes_to_show = [NodePath("../Bigpicture")]
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=523992064]
+shape = SubResource("RectangleShape2D_yoquk")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=1070002976 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_fkt8v")
+clickables = [NodePath("../Clickable")]
+transition_delay = 3.0
+metadata/_custom_type_script = "uid://c44tybeisilbv"

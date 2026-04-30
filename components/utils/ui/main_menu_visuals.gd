@@ -10,6 +10,10 @@ func _ready() -> void:
 	for i in chapter_buttons.size():
 		chapter_buttons[i].mouse_entered.connect(_transition_to.bind(i))
 		_update_button_visuals()
+	
+	for i in chapter_pictures.size():
+		chapter_pictures[i].modulate.a = 0
+	chapter_pictures[idx].modulate.a = 1
 
 func _transition_to(chapter : int):
 	if chapter >= chapter_pictures.size():

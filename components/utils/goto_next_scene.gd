@@ -1,5 +1,5 @@
 extends VisibleOnScreenNotifier2D
-@export var next_scene : PackedScene
+@export_file("*.tscn") var next_scene : String
 
 func _ready() -> void:
 	screen_entered.connect(_on_screen_entered)

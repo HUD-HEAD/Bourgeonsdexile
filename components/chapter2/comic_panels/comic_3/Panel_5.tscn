@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://dxvnkp4f3rnwd"]
 
 [ext_resource type="Texture2D" uid="uid://bwj3jsro1xssk" path="res://graphics/chapter2/comics/comic3/framerubbinglegs/bg.png" id="1_r0bhn"]
-[ext_resource type="Texture2D" uid="uid://hilivak2uwr4" path="res://graphics/chapter2/comics/comic3/framerubbinglegs/hand.png" id="2_1wrmg"]
+[ext_resource type="Texture2D" uid="uid://cot02xeijncj2" path="res://graphics/chapter2/comics/comic3/framerubbinglegs/ARM.png" id="2_r0bhn"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="3_1wrmg"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_nhovv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1wrmg"]
+size = Vector2(1205, 936)
 
 [node name="Panel1" type="Node2D" unique_id=958587886]
 
@@ -9,6 +14,21 @@
 position = Vector2(-2, -2)
 texture = ExtResource("1_r0bhn")
 
-[node name="Hand" type="Sprite2D" parent="." unique_id=385235510]
-position = Vector2(-512, -337)
-texture = ExtResource("2_1wrmg")
+[node name="Arm" type="Sprite2D" parent="." unique_id=1920361999]
+position = Vector2(-599, -414)
+rotation = 0.21991149
+texture = ExtResource("2_r0bhn")
+offset = Vector2(188, 302)
+
+[node name="Clickable" type="Area2D" parent="." unique_id=474892193]
+script = ExtResource("3_1wrmg")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=2064400428]
+position = Vector2(-139.5, 2)
+shape = SubResource("RectangleShape2D_1wrmg")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=1465540908 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_nhovv")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"

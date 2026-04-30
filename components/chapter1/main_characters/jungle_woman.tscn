@@ -27,18 +27,18 @@ animations = [{
 radius = 48.0
 height = 212.0
 
-[node name="JungleWoman" type="Node2D" unique_id=700974070 node_paths=PackedStringArray("char_area", "anim_sprite")]
+[node name="Character" type="Node2D" unique_id=700974070 node_paths=PackedStringArray("char_area", "anim_sprite")]
 script = ExtResource("12_c626s")
 char_area = NodePath("Area2D")
-anim_sprite = NodePath("Woman")
+anim_sprite = NodePath("AnimSprite")
 
-[node name="Woman" type="AnimatedSprite2D" parent="." unique_id=689873547]
+[node name="AnimSprite" type="AnimatedSprite2D" parent="." unique_id=689873547]
 sprite_frames = ExtResource("2_k1wq5")
 animation = &"walking"
 frame_progress = 0.3051428
 offset = Vector2(0, -100)
 
-[node name="Shadow" type="AnimatedSprite2D" parent="Woman" unique_id=1632501669]
+[node name="Shadow" type="AnimatedSprite2D" parent="AnimSprite" unique_id=1632501669]
 show_behind_parent = true
 sprite_frames = SubResource("SpriteFrames_vodvp")
 autoplay = "default"

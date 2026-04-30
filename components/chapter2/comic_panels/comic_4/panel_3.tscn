@@ -1,9 +1,44 @@
 [gd_scene format=3 uid="uid://b1ybct1a4a20o"]
 
 [ext_resource type="Texture2D" uid="uid://bj6eeosevnufd" path="res://graphics/chapter2/comics/comic4/framedoctorcalling/1.png" id="1_kdjn7"]
+[ext_resource type="Texture2D" uid="uid://c55w77qqpvou1" path="res://graphics/chapter2/comics/comic4/framedoctorcalling/2.png" id="2_6bohn"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="3_al3bp"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="3_xybbn"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_gfe7y"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xybbn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kdjn7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6bohn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_al3bp"]
+radius = 270.47366
 
 [node name="Panel1" type="Node2D" unique_id=690781203]
 
-[node name="1" type="Sprite2D" parent="." unique_id=708665583]
-position = Vector2(2, -4)
-texture = ExtResource("1_kdjn7")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1340364744 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_xybbn")
+script = ExtResource("3_al3bp")
+clickable = NodePath("../Clickable")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=1092491265]
+position = Vector2(-324, 0)
+script = ExtResource("3_xybbn")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1294138325]
+shape = SubResource("CircleShape2D_al3bp")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=231748066 node_paths=PackedStringArray("clickables")]
+script = ExtResource("5_gfe7y")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"
