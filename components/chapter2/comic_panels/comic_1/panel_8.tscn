@@ -1,7 +1,20 @@
 [gd_scene format=3 uid="uid://bvxqa00feogmd"]
 
 [ext_resource type="Texture2D" uid="uid://2i1ccfjggta6" path="res://graphics/chapter2/comics/comic1/frame_kidaunt/backgroundinterior.png" id="1_ie77g"]
-[ext_resource type="Texture2D" uid="uid://q3w03po7xtj1" path="res://graphics/chapter2/comics/comic1/framephone/phone1.png" id="2_qy0fl"]
+[ext_resource type="Texture2D" uid="uid://d06m80oxdyh7h" path="res://graphics/chapter2/comics/comic1/framephone/mask.png" id="2_fxsl8"]
+[ext_resource type="Script" uid="uid://daanj2uv1dts1" path="res://components/chapter1/comic_panels/comic_3/phone_zoom.gd" id="3_4a5ep"]
+[ext_resource type="Script" uid="uid://001fo68fi8nn" path="res://components/utils/puzzles/draggable_restricted.gd" id="4_xdup1"]
+[ext_resource type="Texture2D" uid="uid://bbl8ivpwlwsnw" path="res://graphics/chapter2/comics/comic1/framephone/mmap.png" id="5_nqo85"]
+[ext_resource type="Texture2D" uid="uid://b3b2r7gsh6jwp" path="res://graphics/chapter2/comics/comic1/framephone/hand.png" id="6_3ui50"]
+[ext_resource type="Texture2D" uid="uid://cbywnch7guolu" path="res://graphics/chapter1/comics/comic3/panel_phonelajas/buttons.png" id="7_b2db3"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="8_igrvd"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="9_b7342"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6u0t"]
+size = Vector2(1499, 969)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2xslf"]
+size = Vector2(80, 79)
 
 [node name="Panel1" type="Node2D" unique_id=299868253]
 
@@ -9,6 +22,60 @@
 position = Vector2(37, -11)
 texture = ExtResource("1_ie77g")
 
-[node name="Phone1" type="Sprite2D" parent="." unique_id=379751112]
-position = Vector2(103, 98)
-texture = ExtResource("2_qy0fl")
+[node name="Mask2" type="Sprite2D" parent="." unique_id=327027323]
+clip_children = 2
+position = Vector2(-54, -158)
+texture = ExtResource("2_fxsl8")
+
+[node name="Node2D" type="Node2D" parent="Mask2" unique_id=1434869949 node_paths=PackedStringArray("zoom_in", "zoom_out")]
+script = ExtResource("3_4a5ep")
+zoom_in = NodePath("../../Phone/Sprite2D/ZoomIn")
+zoom_out = NodePath("../../Phone/Sprite2D/ZoomOut")
+
+[node name="DraggableRestricted" type="Area2D" parent="Mask2/Node2D" unique_id=1836956175]
+script = ExtResource("4_xdup1")
+left = -200.0
+right = 348.0
+metadata/_custom_type_script = "uid://001fo68fi8nn"
+
+[node name="Map" type="Sprite2D" parent="Mask2/Node2D/DraggableRestricted" unique_id=1147078763]
+position = Vector2(-90, -3)
+texture = ExtResource("5_nqo85")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mask2/Node2D/DraggableRestricted" unique_id=2071631478]
+position = Vector2(-122.5, 22.5)
+shape = SubResource("RectangleShape2D_o6u0t")
+
+[node name="Phone" type="Sprite2D" parent="." unique_id=1757644868]
+texture = ExtResource("6_3ui50")
+
+[node name="Sprite2D" type="Sprite2D" parent="Phone" unique_id=1696326365]
+position = Vector2(40, -279)
+texture = ExtResource("7_b2db3")
+
+[node name="ZoomIn" type="Area2D" parent="Phone/Sprite2D" unique_id=1397227844]
+position = Vector2(0, -41)
+script = ExtResource("8_igrvd")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Phone/Sprite2D/ZoomIn" unique_id=477102340]
+position = Vector2(-1, -1.5)
+shape = SubResource("RectangleShape2D_2xslf")
+
+[node name="ZoomOut" type="Area2D" parent="Phone/Sprite2D" unique_id=1214562138]
+position = Vector2(0, 44)
+script = ExtResource("8_igrvd")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Phone/Sprite2D/ZoomOut" unique_id=496987568]
+position = Vector2(-1, -1.5)
+shape = SubResource("RectangleShape2D_2xslf")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=753612401]
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=1941022071 node_paths=PackedStringArray("clickables")]
+script = ExtResource("9_b7342")
+clickables = [NodePath("../Phone/Sprite2D/ZoomIn"), NodePath("../Phone/Sprite2D/ZoomOut")]
+obstacles_to_clear = 3
+transition_delay = 0.5
+metadata/_custom_type_script = "uid://c44tybeisilbv"

@@ -72,25 +72,25 @@ position = Vector2(14928, 539)
 position = Vector2(16908, 531)
 
 [node name="Panel6" parent="Panels" unique_id=774722281 instance=ExtResource("14_tjkkq")]
-position = Vector2(18519, 565)
+position = Vector2(19171, 565)
 
 [node name="Panel7" parent="Panels" unique_id=3961592 instance=ExtResource("15_tg4ti")]
-position = Vector2(20863, 530)
+position = Vector2(22189, 530)
 
 [node name="Panel9" parent="Panels" unique_id=668551988 instance=ExtResource("17_jd0lm")]
-position = Vector2(23047, 531)
+position = Vector2(24373, 531)
 
 [node name="Panel12" parent="Panels" unique_id=712009177 instance=ExtResource("20_4a5vy")]
-position = Vector2(25111, 524)
+position = Vector2(26437, 524)
 
 [node name="Panel8" parent="Panels" unique_id=257799841 instance=ExtResource("16_1j3oo")]
-position = Vector2(27350, 550)
+position = Vector2(28676, 550)
 
 [node name="Panel10" parent="Panels" unique_id=1665425851 instance=ExtResource("18_040dt")]
-position = Vector2(30060, 532)
+position = Vector2(31386, 532)
 
 [node name="PanelScrolling" parent="Panels" unique_id=1391206584 instance=ExtResource("17_4a5vy")]
-position = Vector2(32633, 540)
+position = Vector2(33959, 540)
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("20_kue4r")
@@ -101,6 +101,6 @@ panels = [NodePath("../Panels/PanelVideo"), NodePath("../Panels/Panel0"), NodePa
 [node name="Audio" type="Node" parent="." unique_id=619569792]
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=531672478]
-position = Vector2(36807, 596)
+position = Vector2(38133, 596)
 script = ExtResource("17_k5ynj")
 next_scene = "uid://dtuayk8ovnbj"
