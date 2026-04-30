@@ -83,9 +83,17 @@ func _compute_spawn_position(piece_idx : int):
 	var prev_piece = puzzle.puzzle_pieces[prev_piece_idx]
 	
 	#Offset vertically from previous piece
-	y_offset += prev_piece.get_dimensions().y/2
+	y_offset += prev_piece.global_transform.get_scale().y * prev_piece.get_dimensions().y/2
 	
-	return prev_piece.draggable.global_position + y_offset*Vector2.UP
+
+	var target_pos : Vector2 =  prev_piece.draggable.global_position + y_offset*Vector2.UP
+	
+	#TODO #HACK cleanup
+	if target_pos.y < 0 :
+		target_pos.y = puzzle.puzzle_pieces[0].global_position.y + y_offset
+		target_pos.x += 300
+	
+	return target_pos
 
 
 func _on_puzzle_complete():

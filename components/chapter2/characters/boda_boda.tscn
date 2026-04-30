@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bn2kp6x746ehp"]
 
-[ext_resource type="Texture2D" uid="uid://ws53w60e6ket" path="res://graphics/chapter2/levels/goma/bodabodatogether.png" id="1_mfkw7"]
 [ext_resource type="Script" uid="uid://cag8j8gn5a5kn" path="res://components/chapter2/characters/vehicle.gd" id="1_sriwm"]
 [ext_resource type="Texture2D" uid="uid://ia2oeqhw2g7g" path="res://graphics/chapter2/levels/goma/wheel1.png" id="2_n652q"]
 [ext_resource type="Script" uid="uid://bwhw2o2u7v43i" path="res://components/utils/comics/vertical_sine_anim.gd" id="2_nls43"]
+[ext_resource type="Texture2D" uid="uid://dtp24cvyv06sn" path="res://graphics/chapter2/levels/goma/bodabodatogether2.png" id="2_sriwm"]
 [ext_resource type="Texture2D" uid="uid://bt4al565mnwhh" path="res://graphics/chapter2/levels/goma/wheel2.png" id="3_nls43"]
 [ext_resource type="Script" uid="uid://cvlenn1q1qyrk" path="res://components/chapter2/characters/rotator.gd" id="4_nls43"]
 
@@ -15,7 +15,7 @@ script = ExtResource("1_sriwm")
 char_area = NodePath("Area2D")
 
 [node name="Bodabodatogether" type="Sprite2D" parent="." unique_id=1160138196]
-texture = ExtResource("1_mfkw7")
+texture = ExtResource("2_sriwm")
 script = ExtResource("2_nls43")
 amplitude = 20.0
 speed = 5.0
