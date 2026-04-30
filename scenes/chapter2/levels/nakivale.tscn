@@ -39,7 +39,7 @@ position = Vector2(4768, 535)
 texture = ExtResource("3_apgf3")
 
 [node name="Interior1" type="Sprite2D" parent="Background" unique_id=1135751952]
-position = Vector2(3154, 516)
+position = Vector2(3156, 449)
 texture = ExtResource("4_fklnn")
 
 [node name="Theme" type="AudioStreamPlayer" parent="." unique_id=67967600]
@@ -104,7 +104,7 @@ obstacle = NodePath("../Obstacle")
 collision_mask = 2
 
 [node name="DragDropPuzzle2" parent="Puzzles/Puzzle2" unique_id=773094152 instance=ExtResource("9_hmuug")]
-position = Vector2(423.00024, 379)
+position = Vector2(423.00024, 452.00003)
 scale = Vector2(0.9, 0.9)
 
 [node name="Puzzle3" type="Node2D" parent="Puzzles" unique_id=129801294]

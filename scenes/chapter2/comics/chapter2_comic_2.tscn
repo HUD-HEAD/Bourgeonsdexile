@@ -59,7 +59,6 @@ position = Vector2(7538, 0)
 
 [node name="Panel4" parent="Panels" unique_id=2093707207 instance=ExtResource("11_ukg44")]
 position = Vector2(9940, 0)
-scale = Vector2(0.41130155, 0.41130155)
 
 [node name="Panel5" parent="Panels" unique_id=1942311821 instance=ExtResource("12_0qtw2")]
 position = Vector2(12380, 0)
