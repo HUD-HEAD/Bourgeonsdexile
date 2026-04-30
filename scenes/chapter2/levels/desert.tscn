@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="5_6tu1w"]
 [ext_resource type="Texture2D" uid="uid://cjxff0ry6nu6s" path="res://graphics/chapter2/comics/comic2/framebussection/section.png" id="5_aqeuv"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="5_ogvpn"]
+[ext_resource type="Texture2D" uid="uid://b2ipjbn25qct0" path="res://graphics/chapter2/levels/desert/separatedbus/wheel1.png" id="5_swud2"]
+[ext_resource type="Texture2D" uid="uid://cq4oebmiej7bw" path="res://graphics/chapter2/levels/desert/separatedbus/wheel2.png" id="6_0x0y1"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/obstacle.tscn" id="6_ogvpn"]
 [ext_resource type="PackedScene" uid="uid://c34f2ydqf515m" path="res://components/chapter2/levels/goma-nakivale/drag_drop_puzzle_GN1.tscn" id="7_swud2"]
 [ext_resource type="PackedScene" uid="uid://d16x3llaruwan" path="res://components/chapter2/levels/goma-nakivale/drag_drop_puzzle_GN2.tscn" id="9_f7a6g"]
@@ -53,10 +55,14 @@ move_speed = 800.0
 texture = ExtResource("5_aqeuv")
 
 [node name="Wheel1" parent="Bus/Bodabodatogether" index="0" unique_id=1790416269]
-visible = false
+show_behind_parent = false
+position = Vector2(-442, 130)
+texture = ExtResource("5_swud2")
 
 [node name="Wheel2" parent="Bus/Bodabodatogether" index="1" unique_id=431842153]
-visible = false
+show_behind_parent = false
+position = Vector2(441, 125)
+texture = ExtResource("6_0x0y1")
 
 [node name="CollisionShape2D" parent="Bus/Area2D" parent_id_path=PackedInt32Array(925815680, 1622822538) index="0" unique_id=450716263]
 position = Vector2(-42, 119.5)
