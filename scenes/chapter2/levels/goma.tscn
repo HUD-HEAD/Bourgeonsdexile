@@ -7,9 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://cvt5yrsmeh3lp" path="res://graphics/chapter2/levels/goma/environment/background/gomatiled.png" id="7_a0m3u"]
 [ext_resource type="SpriteFrames" uid="uid://8wnk5pl0cnpd" path="res://components/chapter2/characters/nephew_sprite_frames.tres" id="7_mp6eu"]
 [ext_resource type="PackedScene" uid="uid://b327i7m8yo6ne" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB11.tscn" id="8_no1ee"]
+[ext_resource type="Texture2D" uid="uid://u3821gox51mn" path="res://graphics/chapter2/levels/goma/bodabodaman2.png" id="8_ub4v2"]
 [ext_resource type="Script" uid="uid://cwo7l3tuyc7g6" path="res://components/utils/puzzles/puzzle_hide_on_complete.gd" id="9_fcmyo"]
 [ext_resource type="Script" uid="uid://bjexrnveh5vkf" path="res://components/chapter2/characters/switch_char.gd" id="11_7o0y3"]
-[ext_resource type="Texture2D" uid="uid://otcno426rt0q" path="res://graphics/chapter2/levels/goma/bodabodaman.png" id="13_1fm80"]
 [ext_resource type="PackedScene" uid="uid://cur7dav6ltkqc" path="res://components/chapter2/levels/goma/drag_drop_puzzle_G1.tscn" id="15_ub4v2"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="15_xf2b4"]
 [ext_resource type="PackedScene" uid="uid://d052wlbnjxb0i" path="res://components/chapter2/levels/goma/drag_drop_puzzle_G2.tscn" id="16_hfpvf"]
@@ -77,7 +77,7 @@ script = ExtResource("46_fm2bo")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="Bodabodaman" type="Sprite2D" parent="CharWalking/Clickable" unique_id=2080153153]
-texture = ExtResource("13_1fm80")
+texture = ExtResource("8_ub4v2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharWalking/Clickable" unique_id=1510371182]
 position = Vector2(7, 22)
