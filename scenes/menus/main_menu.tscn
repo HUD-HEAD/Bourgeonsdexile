@@ -20,10 +20,8 @@
 [ext_resource type="Script" uid="uid://prkw3tfkwh13" path="res://components/utils/ui/button_fade.gd" id="14_maniu"]
 [ext_resource type="Script" uid="uid://wu785gvqolcw" path="res://components/utils/ui/play_chapter.gd" id="15_8hoqd"]
 [ext_resource type="Script" uid="uid://b20dyolly8na2" path="res://components/utils/ui/main_menu_visuals.gd" id="15_w3h5g"]
-[ext_resource type="PackedScene" uid="uid://cpvf5agmemtpm" path="res://scenes/prototyping/videoplayer_demo.tscn" id="16_awvna"]
 [ext_resource type="AudioStream" uid="uid://5oal57qd8k25" path="res://audio/chapter1/sfx/click_selection.wav" id="17_a3hrp"]
 [ext_resource type="AudioStream" uid="uid://uea041hlh4dy" path="res://audio/menus/soundtrack/music_main_menu.wav" id="18_25m6f"]
-[ext_resource type="PackedScene" uid="uid://diaoe5umvfijd" path="res://scenes/chapter2/comics/chapter2_comic_1.tscn" id="18_jygr6"]
 
 [node name="MainMenu" type="CanvasLayer" unique_id=1477541867 node_paths=PackedStringArray("settings", "credits", "quit")]
 script = ExtResource("1_0ettg")
@@ -134,9 +132,9 @@ offset_bottom = 689.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("8_7ty7c")
 script = ExtResource("15_8hoqd")
-chapter_scene = ExtResource("16_awvna")
+chapter_scene = "uid://cpvf5agmemtpm"
 
-[node name="PlayChapter2" type="TextureButton" parent="Fullscreen" unique_id=801460134]
+[node name="PlayAmani" type="TextureButton" parent="Fullscreen" unique_id=801460134]
 layout_mode = 0
 offset_left = 383.0
 offset_top = 329.0
@@ -145,9 +143,9 @@ offset_bottom = 520.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("9_6xkr4")
 script = ExtResource("15_8hoqd")
-chapter_scene = ExtResource("18_jygr6")
+chapter_scene = "uid://5tmqeplllvij"
 
-[node name="PlayChapter3" type="TextureButton" parent="Fullscreen" unique_id=479857537]
+[node name="PlayZlata" type="TextureButton" parent="Fullscreen" unique_id=479857537]
 layout_mode = 0
 offset_left = 379.0
 offset_top = 750.0
@@ -180,7 +178,7 @@ script = ExtResource("14_maniu")
 [node name="VisualsHandler" type="Node" parent="." unique_id=891412753 node_paths=PackedStringArray("chapter_pictures", "chapter_buttons")]
 script = ExtResource("15_w3h5g")
 chapter_pictures = [NodePath("../Center/BackgroundNina"), NodePath("../Center/BackgroundAmani"), NodePath("../Center/BackgroundZlata")]
-chapter_buttons = [NodePath("../Fullscreen/PlayNina"), NodePath("../Fullscreen/PlayChapter2"), NodePath("../Fullscreen/PlayChapter3")]
+chapter_buttons = [NodePath("../Fullscreen/PlayNina"), NodePath("../Fullscreen/PlayAmani"), NodePath("../Fullscreen/PlayZlata")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2013448306]
 stream = ExtResource("18_25m6f")

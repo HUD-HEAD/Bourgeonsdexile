@@ -3,7 +3,6 @@
 [ext_resource type="VideoStream" uid="uid://cftg3paoqrqg1" path="res://video/video_jungle_intro_loop.ogv" id="1_dircd"]
 [ext_resource type="Script" uid="uid://blr2m1o588s1t" path="res://components/utils/click_video_transition.gd" id="2_pdnfg"]
 [ext_resource type="VideoStream" uid="uid://dpus4x2wv20qg" path="res://video/video_jungle_intro_zoom.ogv" id="2_wkdf3"]
-[ext_resource type="PackedScene" uid="uid://du7xk8lrsn7at" path="res://scenes/chapter1/comics/jungle_comic_1.tscn" id="3_0fttw"]
 [ext_resource type="Texture2D" uid="uid://cknvvem5edivn" path="res://graphics/ui/buttons/StartButton/1.png" id="4_dircd"]
 [ext_resource type="Texture2D" uid="uid://bpowdmcoe7yi1" path="res://graphics/ui/buttons/StartButton/2.png" id="5_wkdf3"]
 [ext_resource type="Texture2D" uid="uid://bw4qdyyiy3pvt" path="res://graphics/ui/buttons/StartButton/3.png" id="6_dhlyv"]
@@ -92,7 +91,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_dircd"]
 radius = 41.04875
 
-[node name="VideoplayerDemo" type="Control" unique_id=1489886936]
+[node name="Videoplayer" type="Control" unique_id=1489886936]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -150,7 +149,7 @@ mouse_filter = 1
 
 [node name="Start" type="Area2D" parent="Control" unique_id=1313297138 node_paths=PackedStringArray("video_loop", "video_transition")]
 script = ExtResource("2_pdnfg")
-target_scene = ExtResource("3_0fttw")
+target_scene = "uid://du7xk8lrsn7at"
 video_loop = NodePath("../../VideoStream_Loop")
 video_transition = NodePath("../../VideoStreamP_Transition")
 audio_transition = ExtResource("25_x8avl")
