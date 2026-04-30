@@ -1,8 +1,143 @@
 [gd_scene format=3 uid="uid://c6knungwprlgs"]
 
 [ext_resource type="Texture2D" uid="uid://dra5gfvf60eti" path="res://graphics/chapter2/comics/comic1/framehands/tgether.png" id="1_pmt6i"]
+[ext_resource type="Texture2D" uid="uid://fyb4s2qheoqv" path="res://graphics/chapter2/comics/comic1/framehands/hand2.png" id="2_y7234"]
+[ext_resource type="Texture2D" uid="uid://c8i3jpv4ms4xn" path="res://graphics/chapter2/comics/comic1/framehands/hand1.png" id="3_6w7me"]
+[ext_resource type="Script" uid="uid://001fo68fi8nn" path="res://components/utils/puzzles/draggable_restricted.gd" id="4_tu3wo"]
+[ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/area_entered_enable.gd" id="5_me28v"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="7_r2vlp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y7234"]
+radius = 229.55827
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_8wo4r"]
+a = Vector2(0, -540)
+b = Vector2(0, 540)
+
+[sub_resource type="Animation" id="Animation_y7234"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/Hand1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/DraggableRestricted/Hand2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Tgether:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_ml2hl"]
+resource_name = "default"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/Hand1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/DraggableRestricted/Hand2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Tgether:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y7234"]
+_data = {
+&"RESET": SubResource("Animation_y7234"),
+&"default": SubResource("Animation_ml2hl")
+}
 
 [node name="Panel1" type="Node2D" unique_id=299868253]
 
 [node name="Tgether" type="Sprite2D" parent="." unique_id=66807286]
 texture = ExtResource("1_pmt6i")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1949426084]
+
+[node name="DraggableRestricted" type="Area2D" parent="Node2D" unique_id=12593609]
+position = Vector2(-130, 0)
+script = ExtResource("4_tu3wo")
+left = -500.0
+metadata/_custom_type_script = "uid://001fo68fi8nn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/DraggableRestricted" unique_id=538033665]
+shape = SubResource("CircleShape2D_y7234")
+
+[node name="Hand2" type="Sprite2D" parent="Node2D/DraggableRestricted" unique_id=788965937]
+visible = false
+position = Vector2(-155, -10)
+texture = ExtResource("2_y7234")
+
+[node name="Area2D" type="Area2D" parent="Node2D" unique_id=443704188 node_paths=PackedStringArray("node_to_enable")]
+position = Vector2(-485, 0)
+script = ExtResource("5_me28v")
+node_to_enable = NodePath("../../AnimationPlayer")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D" unique_id=149267464]
+shape = SubResource("SegmentShape2D_8wo4r")
+
+[node name="Hand1" type="Sprite2D" parent="Node2D" unique_id=34444941]
+visible = false
+position = Vector2(189, -39)
+texture = ExtResource("3_6w7me")
+
+[node name="TransitionerPassive" type="Node" parent="Node2D" unique_id=150016412 node_paths=PackedStringArray("anim_player")]
+script = ExtResource("7_r2vlp")
+anim_player = NodePath("../../AnimationPlayer")
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1350606008]
+libraries/ = SubResource("AnimationLibrary_y7234")
+autoplay = &"default"
