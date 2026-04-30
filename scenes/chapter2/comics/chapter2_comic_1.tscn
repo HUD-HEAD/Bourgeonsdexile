@@ -57,10 +57,10 @@ position = Vector2(3383, 538)
 position = Vector2(5669, 540)
 
 [node name="Panel1" parent="Panels" unique_id=9427924 instance=ExtResource("9_erqdw")]
-position = Vector2(8056, 527)
+position = Vector2(10360, 527)
 
 [node name="Panel2" parent="Panels" unique_id=169044954 instance=ExtResource("10_4a5vy")]
-position = Vector2(10467, 498)
+position = Vector2(8092, 498)
 
 [node name="Panel3" parent="Panels" unique_id=1046666900 instance=ExtResource("11_a6kkx")]
 position = Vector2(12893, 550)
@@ -94,7 +94,7 @@ position = Vector2(32633, 540)
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("20_kue4r")
-panels = [NodePath("../Panels/PanelVideo"), NodePath("../Panels/Panel0"), NodePath("../Panels/PanelOpenWindow"), NodePath("../Panels/Panel1"), NodePath("../Panels/Panel2"), NodePath("../Panels/Panel3"), NodePath("../Panels/Panel4"), NodePath("../Panels/Panel5"), NodePath("../Panels/Panel6"), NodePath("../Panels/Panel7"), NodePath("../Panels/Panel9"), NodePath("../Panels/Panel12"), NodePath("../Panels/Panel8"), NodePath("../Panels/Panel10"), NodePath("../Panels/PanelScrolling"), NodePath("../SceneEnder")]
+panels = [NodePath("../Panels/PanelVideo"), NodePath("../Panels/Panel0"), NodePath("../Panels/PanelOpenWindow"), NodePath("../Panels/Panel2"), NodePath("../Panels/Panel1"), NodePath("../Panels/Panel3"), NodePath("../Panels/Panel4"), NodePath("../Panels/Panel5"), NodePath("../Panels/Panel6"), NodePath("../Panels/Panel7"), NodePath("../Panels/Panel9"), NodePath("../Panels/Panel12"), NodePath("../Panels/Panel8"), NodePath("../Panels/Panel10"), NodePath("../Panels/PanelScrolling"), NodePath("../SceneEnder")]
 
 [node name="UI" parent="." unique_id=1829896958 instance=ExtResource("21_e3e0c")]
 
