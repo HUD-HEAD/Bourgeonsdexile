@@ -10,7 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://vj707oi6xv2n" path="res://components/chapter2/levels/nakivale/drag_drop_puzzle_N1.tscn" id="8_qdplb"]
 [ext_resource type="PackedScene" uid="uid://ww5a6ce8rx7r" path="res://components/chapter2/levels/nakivale/drag_drop_puzzle_N2.tscn" id="9_hmuug"]
 [ext_resource type="PackedScene" uid="uid://d2ao2g35i3aio" path="res://components/chapter2/levels/nakivale/thinking_puzzleN1.tscn" id="10_hsmfu"]
+[ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="11_hsmfu"]
 [ext_resource type="PackedScene" uid="uid://dfkjvt5ilyk38" path="res://components/chapter2/levels/nakivale/thinking_puzzleN2.tscn" id="11_isbuh"]
+[ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/obstacle.tscn" id="12_isbuh"]
 
 [node name="Nakivale" type="Node2D" unique_id=987125979]
 
@@ -28,11 +30,11 @@ script = ExtResource("3_yuvbc")
 next_scene = "uid://wjb62t2thskf"
 
 [node name="Interior2" type="Sprite2D" parent="Background" unique_id=2091143510]
-position = Vector2(3158, 533)
+position = Vector2(4768, 535)
 texture = ExtResource("3_apgf3")
 
 [node name="Interior1" type="Sprite2D" parent="Background" unique_id=1135751952]
-position = Vector2(4186, 437)
+position = Vector2(3154, 516)
 texture = ExtResource("4_fklnn")
 
 [node name="Theme" type="AudioStreamPlayer" parent="." unique_id=67967600]
@@ -58,19 +60,64 @@ sprite_frames = ExtResource("5_yuvbc")
 
 [node name="Puzzles" type="Node" parent="." unique_id=780707885]
 
-[node name="DragDropPuzzle" parent="Puzzles" unique_id=1767003607 instance=ExtResource("8_qdplb")]
-position = Vector2(1170, 426)
+[node name="Puzzle1" type="Node2D" parent="Puzzles" unique_id=842201109]
+position = Vector2(1014, 0)
 
-[node name="DragDropPuzzle2" parent="Puzzles" unique_id=773094152 instance=ExtResource("9_hmuug")]
-position = Vector2(3164.0002, 379)
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle1" unique_id=261562117 node_paths=PackedStringArray("puzzle", "obstacle")]
+script = ExtResource("11_hsmfu")
+puzzle = NodePath("../DragDropPuzzle")
+obstacle = NodePath("../Obstacle")
+
+[node name="Obstacle" parent="Puzzles/Puzzle1" unique_id=310843140 instance=ExtResource("12_isbuh")]
+collision_mask = 2
+
+[node name="DragDropPuzzle" parent="Puzzles/Puzzle1" unique_id=1767003607 instance=ExtResource("8_qdplb")]
+position = Vector2(156, 426)
+
+[node name="Puzzle2" type="Node2D" parent="Puzzles" unique_id=2004378291]
+visible = false
+position = Vector2(2741, 0)
+
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle2" unique_id=1077710549 node_paths=PackedStringArray("puzzle", "obstacle")]
+script = ExtResource("11_hsmfu")
+puzzle = NodePath("../DragDropPuzzle2")
+obstacle = NodePath("../Obstacle")
+
+[node name="Obstacle" parent="Puzzles/Puzzle2" unique_id=212597287 instance=ExtResource("12_isbuh")]
+collision_mask = 2
+
+[node name="DragDropPuzzle2" parent="Puzzles/Puzzle2" unique_id=773094152 instance=ExtResource("9_hmuug")]
+position = Vector2(423.00024, 379)
 scale = Vector2(0.9, 0.9)
 
-[node name="Puzzle1" parent="Puzzles" unique_id=1941159865 instance=ExtResource("10_hsmfu")]
-position = Vector2(3165.0002, 489.00003)
+[node name="Puzzle3" type="Node2D" parent="Puzzles" unique_id=129801294]
+position = Vector2(4068, 0)
+
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle3" unique_id=323740516 node_paths=PackedStringArray("puzzle", "obstacle")]
+script = ExtResource("11_hsmfu")
+puzzle = NodePath("../Puzzle1")
+obstacle = NodePath("../Obstacle")
+
+[node name="Obstacle" parent="Puzzles/Puzzle3" unique_id=656531198 instance=ExtResource("12_isbuh")]
+collision_mask = 2
+
+[node name="Puzzle1" parent="Puzzles/Puzzle3" unique_id=1941159865 instance=ExtResource("10_hsmfu")]
+position = Vector2(197, 489.00003)
 scale = Vector2(0.6, 0.6)
 
-[node name="Puzzle2" parent="Puzzles" unique_id=71446804 instance=ExtResource("11_isbuh")]
-position = Vector2(4892, 482)
+[node name="Puzzle4" type="Node2D" parent="Puzzles" unique_id=1867814965]
+position = Vector2(4662, 0)
+
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle4" unique_id=904513653 node_paths=PackedStringArray("puzzle", "obstacle")]
+script = ExtResource("11_hsmfu")
+puzzle = NodePath("../Puzzle2")
+obstacle = NodePath("../Obstacle")
+
+[node name="Obstacle" parent="Puzzles/Puzzle4" unique_id=1928987050 instance=ExtResource("12_isbuh")]
+collision_mask = 2
+
+[node name="Puzzle2" parent="Puzzles/Puzzle4" unique_id=71446804 instance=ExtResource("11_isbuh")]
+position = Vector2(230, 482)
 scale = Vector2(0.7, 0.7)
 
 [editable path="Companion"]
