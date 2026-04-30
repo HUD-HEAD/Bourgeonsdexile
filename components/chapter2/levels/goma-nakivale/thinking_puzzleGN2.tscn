@@ -48,6 +48,7 @@ scale = Vector2(0.96, 0.96)
 shape = SubResource("CircleShape2D_ijig0")
 
 [node name="PuzzlePiece2" parent="BuildingBlocks/FullPieces" parent_id_path=PackedInt32Array(1120986992) index="1" unique_id=729525704 instance=ExtResource("4_74bi5")]
+z_index = 1
 position = Vector2(-1, 177)
 scale = Vector2(0.27999997, 0.27999997)
 
