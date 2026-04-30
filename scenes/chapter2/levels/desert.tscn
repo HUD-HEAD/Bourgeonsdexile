@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://tx1s43xa61vj" path="res://graphics/chapter2/levels/goma/environment/background/gomatiledbig.png" id="1_swud2"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="3_aqeuv"]
 [ext_resource type="PackedScene" uid="uid://bn2kp6x746ehp" path="res://components/chapter2/characters/boda_boda.tscn" id="3_p8hlq"]
+[ext_resource type="Texture2D" uid="uid://clala6idvmos3" path="res://graphics/chapter2/levels/desert/separatedbus/businside.png" id="4_swud2"]
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="5_6tu1w"]
-[ext_resource type="Texture2D" uid="uid://cjxff0ry6nu6s" path="res://graphics/chapter2/comics/comic2/framebussection/section.png" id="5_aqeuv"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="5_ogvpn"]
 [ext_resource type="Texture2D" uid="uid://b2ipjbn25qct0" path="res://graphics/chapter2/levels/desert/separatedbus/wheel1.png" id="5_swud2"]
 [ext_resource type="Texture2D" uid="uid://cq4oebmiej7bw" path="res://graphics/chapter2/levels/desert/separatedbus/wheel2.png" id="6_0x0y1"]
@@ -18,10 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://mxqg63w5uspm" path="res://components/chapter2/levels/goma-nakivale/thinking_puzzleGN3.tscn" id="14_25xat"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uu4gm"]
-size = Vector2(1760, 439)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_swud2"]
-size = Vector2(1754, 438)
+size = Vector2(1545, 367)
 
 [node name="Desert" type="Node2D" unique_id=987125979]
 
@@ -54,20 +51,20 @@ position = Vector2(1912, 883)
 move_speed = 800.0
 
 [node name="Bodabodatogether" parent="Bus" index="0" unique_id=1160138196]
-texture = ExtResource("5_aqeuv")
+texture = ExtResource("4_swud2")
 
 [node name="Wheel1" parent="Bus/Bodabodatogether" index="0" unique_id=1790416269]
 show_behind_parent = false
-position = Vector2(-442, 130)
+position = Vector2(-379, 150)
 texture = ExtResource("5_swud2")
 
 [node name="Wheel2" parent="Bus/Bodabodatogether" index="1" unique_id=431842153]
 show_behind_parent = false
-position = Vector2(441, 125)
+position = Vector2(383, 148)
 texture = ExtResource("6_0x0y1")
 
 [node name="CollisionShape2D" parent="Bus/Area2D" parent_id_path=PackedInt32Array(925815680, 1622822538) index="0" unique_id=450716263]
-position = Vector2(-42, 119.5)
+position = Vector2(-49.5, 143.5)
 shape = SubResource("RectangleShape2D_uu4gm")
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Bus" unique_id=218413136]
@@ -90,8 +87,8 @@ script = ExtResource("5_ogvpn")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bus/SpawnTrigger" unique_id=1398344228]
-position = Vector2(-37, -23)
-shape = SubResource("RectangleShape2D_swud2")
+position = Vector2(-46, 4)
+shape = SubResource("RectangleShape2D_uu4gm")
 
 [node name="Puzzles" type="Node2D" parent="." unique_id=161984896]
 z_index = -1
