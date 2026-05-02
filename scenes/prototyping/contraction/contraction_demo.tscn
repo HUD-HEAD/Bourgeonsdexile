@@ -7,7 +7,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_06o1w"]
 shader = ExtResource("2_u7jnf")
 shader_parameter/blur_radius = 0.2
-shader_parameter/blur_amount = 3.8740001840150002
+shader_parameter/blur_amount = 3.874000184015
 shader_parameter/blur_inner = 0.6570000312075
 shader_parameter/blur_outer = 0.5410000256975
 

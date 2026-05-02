@@ -26,21 +26,21 @@ position = Vector2(-471, 290)
 [node name="JungleWoman2" parent="Frame10" unique_id=1920884752 instance=ExtResource("3_drfgo")]
 position = Vector2(-571, 290)
 
-[node name="Woman" parent="Frame10/JungleWoman2" index="0" unique_id=689873547]
+[node name="AnimSprite" parent="Frame10/JungleWoman2" index="0" unique_id=689873547]
 sprite_frames = ExtResource("4_g4aey")
 frame_progress = 0.0
 
 [node name="JungleWoman3" parent="Frame10" unique_id=303804663 instance=ExtResource("3_drfgo")]
 position = Vector2(-669, 290)
 
-[node name="Woman" parent="Frame10/JungleWoman3" index="0" unique_id=689873547]
+[node name="AnimSprite" parent="Frame10/JungleWoman3" index="0" unique_id=689873547]
 sprite_frames = ExtResource("5_280ok")
 frame_progress = 0.0
 
 [node name="JungleWoman4" parent="Frame10" unique_id=1123189796 instance=ExtResource("3_drfgo")]
 position = Vector2(-780, 290)
 
-[node name="Woman" parent="Frame10/JungleWoman4" index="0" unique_id=689873547]
+[node name="AnimSprite" parent="Frame10/JungleWoman4" index="0" unique_id=689873547]
 sprite_frames = ExtResource("6_cjftv")
 frame_progress = 0.0
 
