@@ -4,12 +4,22 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tex5i"]
 shader = ExtResource("1_5dbot")
+shader_parameter/circleRadius = 0.30000000447036
+shader_parameter/lineWidth = 0.0830000039425
+shader_parameter/waves = 5.0
+shader_parameter/amplitude = 0.67999998480064
+shader_parameter/speed = 5.90000008791708
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_5dbot"]
 size = Vector2(1920, 1080)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5dbot"]
 shader = ExtResource("1_5dbot")
+shader_parameter/circleRadius = 0.0
+shader_parameter/lineWidth = 5.0
+shader_parameter/waves = 5.0
+shader_parameter/amplitude = 0.1
+shader_parameter/speed = 0.0
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_tex5i"]
 size = Vector2(500, 500)
@@ -21,13 +31,17 @@ material = SubResource("ShaderMaterial_tex5i")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -1105.0
+offset_top = 56.0
+offset_right = -1105.0
+offset_bottom = 56.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("PlaceholderTexture2D_5dbot")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=541955837]
 material = SubResource("ShaderMaterial_5dbot")
-position = Vector2(17, -341)
+position = Vector2(-1200, -927)
 texture = SubResource("PlaceholderTexture2D_tex5i")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=197044323]
