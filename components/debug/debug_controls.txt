@@ -1,0 +1,9 @@
++ or - to speed up/down
+
+In comics :
+- 0..9 to go to panel
+
+Press C to open/hide dev console
+Available commands (type then enter) :
+- reload() // reloads current scene
+- goto(<chapter>,<scene>) // go to a specific scene, example : goto(1,5)
