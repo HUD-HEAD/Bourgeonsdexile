@@ -121,7 +121,7 @@ position = Vector2(-155, -10)
 texture = ExtResource("2_y7234")
 
 [node name="Area2D" type="Area2D" parent="Node2D" unique_id=443704188 node_paths=PackedStringArray("node_to_enable")]
-position = Vector2(-485, 0)
+position = Vector2(-387, 0)
 script = ExtResource("5_me28v")
 node_to_enable = NodePath("../../AnimationPlayer")
 
