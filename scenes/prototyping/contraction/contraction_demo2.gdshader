@@ -63,13 +63,13 @@ void fragment() {
 	float ang = atan(delta.y, delta.x)*0.01;
 	
 	float rand_offset = random(vec2(ang));
-	float distCheck2 = circleRadius + waviness * sin(localRadialVal * TWOPI * 2.0 + TIME*speed*0.5*ang);
-	float distCheck3 = circleRadius + waviness * sin(localRadialVal * TWOPI * 2.0 - TIME*speed*0.5*ang);
+	//float distCheck2 = circleRadius + waviness * sin(localRadialVal * TWOPI * 2.0 + TIME*speed + TIME*ang);
+	//float distCheck3 = circleRadius + waviness * sin(localRadialVal * TWOPI * 2.0 + TIME*speed - TIME*ang*0.5);
 
     
-	float distCheck = distCheck1 + distCheck2 + distCheck3;
+	float distCheck = distCheck1;// + distCheck2 + distCheck3;
 	//Divide by number of distchecks
-	distCheck /= 3.0;
+	//distCheck /= 3.0;
 	
     float waveVal = 0.;
     if (distFromCenter > distCheck) {
