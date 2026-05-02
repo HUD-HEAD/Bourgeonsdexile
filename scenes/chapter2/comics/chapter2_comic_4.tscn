@@ -3,11 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_nrvn0"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="2_cxg14"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="3_48xq6"]
+[ext_resource type="PackedScene" uid="uid://b56ss21jw1ocf" path="res://components/chapter2/comic_panels/comic_4/panel_dilate_check_yes.tscn" id="8_h2s7f"]
 [ext_resource type="PackedScene" uid="uid://t5vptpn877fw" path="res://components/chapter2/comic_panels/comic_4/panel_1.tscn" id="8_pwk57"]
 [ext_resource type="PackedScene" uid="uid://cka75w6c1or7q" path="res://components/chapter2/comic_panels/comic_4/panel_2.tscn" id="9_hb21k"]
 [ext_resource type="PackedScene" uid="uid://dj2re0mny6s56" path="res://components/chapter2/comic_panels/comic_4/panel_8.tscn" id="10_jxjoi"]
 [ext_resource type="PackedScene" uid="uid://b1ybct1a4a20o" path="res://components/chapter2/comic_panels/comic_4/panel_3.tscn" id="10_rlfy7"]
-[ext_resource type="PackedScene" uid="uid://c8dpjin32hu5i" path="res://components/chapter2/comic_panels/comic_4/panel_7.tscn" id="11_h2s7f"]
 [ext_resource type="PackedScene" uid="uid://tdurdvnqfpne" path="res://components/chapter2/comic_panels/comic_4/panel_4.tscn" id="11_tu2ht"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="12_jxjoi"]
 [ext_resource type="PackedScene" uid="uid://72txvs2l48m6" path="res://components/chapter2/comic_panels/comic_4/panel_6.tscn" id="12_l8dec"]
@@ -55,27 +55,30 @@ position = Vector2(7524, 0)
 position = Vector2(9937, 0)
 scale = Vector2(0.38665813, 0.38665813)
 
-[node name="Panel6" parent="Panels" unique_id=280197590 instance=ExtResource("13_8mv4y")]
+[node name="PanelContractionLoop" parent="Panels" unique_id=280197590 instance=ExtResource("13_8mv4y")]
 position = Vector2(12362, 0)
 
-[node name="Panel4" parent="Panels" unique_id=405070053 instance=ExtResource("11_tu2ht")]
+[node name="PanelDilateCheckNo" parent="Panels" unique_id=405070053 instance=ExtResource("11_tu2ht")]
 position = Vector2(14405, 0)
 
-[node name="Panel8" parent="Panels" unique_id=2046092439 instance=ExtResource("10_jxjoi")]
-position = Vector2(16377, 0)
+[node name="PanelContractionLoop2" parent="Panels" unique_id=1977320620 instance=ExtResource("13_8mv4y")]
+position = Vector2(16232, 0)
 
-[node name="Panel7" parent="Panels" unique_id=396620923 instance=ExtResource("11_h2s7f")]
-position = Vector2(19162, 0)
+[node name="PanelDilateCheckYes" parent="Panels" unique_id=222378827 instance=ExtResource("8_h2s7f")]
+position = Vector2(18247, 0)
+
+[node name="PanelPush" parent="Panels" unique_id=2046092439 instance=ExtResource("10_jxjoi")]
+position = Vector2(20485, 0)
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("2_cxg14")
-panels = [NodePath("../Panels/Panel1"), NodePath("../Panels/Panel2"), NodePath("../Panels/Panel3"), NodePath("../Panels/Panel5"), NodePath("../Panels/Panel6"), NodePath("../Panels/Panel4"), NodePath("../Panels/Panel8"), NodePath("../Panels/Panel7"), NodePath("../SceneEnder")]
+panels = [NodePath("../Panels/Panel1"), NodePath("../Panels/Panel2"), NodePath("../Panels/Panel3"), NodePath("../Panels/Panel5"), NodePath("../Panels/PanelContractionLoop"), NodePath("../Panels/PanelDilateCheckNo"), NodePath("../Panels/PanelContractionLoop2"), NodePath("../Panels/PanelDilateCheckYes"), NodePath("../Panels/PanelPush"), NodePath("../SceneEnder")]
 
 [node name="UI" parent="." unique_id=1829896958 instance=ExtResource("3_48xq6")]
 
 [node name="Audio" type="Node" parent="." unique_id=619569792]
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1805948442]
-position = Vector2(22744, 596)
+position = Vector2(25421, 540)
 script = ExtResource("12_jxjoi")
 next_scene = "uid://ctau0miqtmbj2"

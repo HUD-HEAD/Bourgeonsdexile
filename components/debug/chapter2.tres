@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Chapter" format=3 uid="uid://2bba3oxyf451"]
+
+[ext_resource type="Script" uid="uid://ccemeindm6uht" path="res://components/debug/chapter.gd" id="1_ghc6m"]
+
+[resource]
+script = ExtResource("1_ghc6m")
+ordered_scene_list = Array[String](["uid://5tmqeplllvij", "uid://diaoe5umvfijd", "uid://dtuayk8ovnbj", "uid://uy4d64oh4m1q", "uid://calxcc2jttv3p", "uid://buy5yt5e73v7w", "uid://b2aetpff4f5gp", "uid://wjb62t2thskf"])
+metadata/_custom_type_script = "uid://ccemeindm6uht"

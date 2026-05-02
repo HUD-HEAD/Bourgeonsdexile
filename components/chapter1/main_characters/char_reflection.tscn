@@ -21,14 +21,10 @@ position = Vector2(0, 200)
 script = ExtResource("2_2q0qh")
 path_follow = NodePath("../..")
 
-[node name="Woman" parent="ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
+[node name="AnimSprite" parent="ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 self_modulate = Color(1, 1, 1, 0.47058824)
 material = SubResource("CanvasItemMaterial_lh7rp")
 flip_v = true
-
-[node name="Shadow" parent="ReflectionContainer/JungleWomanReflection/Woman" index="0" unique_id=1632501669]
-visible = false
-use_parent_material = true
 
 [node name="Area2D" parent="ReflectionContainer/JungleWomanReflection" index="1" unique_id=960188442]
 visible = false
