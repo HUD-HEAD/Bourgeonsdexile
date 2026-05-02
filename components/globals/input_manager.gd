@@ -22,7 +22,11 @@ func hide_mouse():
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event.is_action_pressed("exit"):
-		get_tree().quit()
+		if OS.has_feature("debug"):
+			if debug_console.visible:
+				debug_console.toggle()
+			else:
+				SceneManager.goto_scene(ProjectSettings.get_setting("application/run/main_scene"))
 	
 	if OS.has_feature("debug"):
 		_debug_inputs(event)
@@ -36,9 +40,9 @@ func _debug_inputs(event : InputEvent) -> void :
 	elif event.is_action_pressed("debug_speed_down"):
 		Engine.time_scale /= 2
 		print_debug("Speed down x", Engine.time_scale)
-	elif Input.is_action_just_pressed_by_event("debug_next", event):
+	elif event.is_action_pressed("debug_next"):
 		SignalManager.obstacle_cleared.emit()
 		SignalManager.next_panel.emit()
-	elif Input.is_action_just_pressed_by_event("debug_toggle_console", event):
+	elif event.is_action_pressed("debug_toggle_console"):
 		debug_console.toggle()
 	
