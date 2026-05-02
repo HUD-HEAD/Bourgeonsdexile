@@ -6,9 +6,12 @@ shader_type canvas_item;
 
 uniform float circleRadius : hint_range(0.0, 1.0, 0.1) = 0.5f;
 uniform float lineWidth : hint_range(0.0, 0.1, 0.001) = 0.01f;
-uniform float waves : hint_range(0.0, 50, 1) = 5.0f;
+uniform float waves : hint_range(0.0, 10, 1) = 5.0f;
 uniform float amplitude : hint_range(0.0, 1.0, 0.01) = 0.1f;
 uniform float speed : hint_range(0.0, 100.0, 0.1) = 0.4f;
+
+uniform float offset_intensity : hint_range(0.0, 3.0, 0.1) = 1.0f;
+
 
 float random (vec2 uv) {
     return fract(sin(dot(uv.xy,
@@ -36,6 +39,7 @@ float getRadialVal(vec2 center, vec2 p) {
 }
 
 void fragment() {
+	float time = TIME;
 	float waviness = amplitude * circleRadius;
 	
 	//Make circle display at constant size on screen
@@ -55,21 +59,31 @@ void fragment() {
     
     float localRadialVal = mod(radialVal, 1. / waves) * waves;
     
-    float distCheck1 = circleRadius + waviness * sin(localRadialVal * TWOPI + TIME*speed);
-    
+	float x = localRadialVal*TWOPI;
+	//float deformation = cos(x+TIME)*(sin(x+TIME*1.8)*0.1 + 0.1);
+	
+    float distCheck1 = circleRadius + waviness * sin(x + time*speed);
+    //distCheck1 = abs(cos(localRadialVal*12.)*sin(localRadialVal*3.))*.8+.1;
+    //distCheck1 = abs(cos(localRadialVal*TWOPI)*sin(localRadialVal*TWOPI + 0.2))*.1+.1;
 	
 	//Make wave more random
 	vec2 delta = center.xy - FRAGCOORD.xy;
 	float ang = atan(delta.y, delta.x)*0.01;
 	
-	float rand_offset = random(vec2(ang));
-	//float distCheck2 = circleRadius + waviness * sin(localRadialVal * TWOPI * 2.0 + TIME*speed + TIME*ang);
-	//float distCheck3 = circleRadius + waviness * sin(localRadialVal * TWOPI * 2.0 + TIME*speed - TIME*ang*0.5);
+	//float rand_offset = random(vec2(ang));
+	
+	
+	//TODO FIX / rework
+	//can't use base TIME value in offsetting, as offset will start at 0 on play and grow over time
+	time = sin(TIME) + 100.0;
+	
+	float distCheck2 = circleRadius +  offset_intensity * waviness * sin(x* 2.0 + time*speed*ang/TWOPI + time*ang*10.0);
+	float distCheck3 = circleRadius + offset_intensity * waviness * sin(x* 2.0 + time*speed - time*ang*0.5);
 
     
-	float distCheck = distCheck1;// + distCheck2 + distCheck3;
+	float distCheck = distCheck1 + distCheck2 + distCheck3;
 	//Divide by number of distchecks
-	//distCheck /= 3.0;
+	distCheck /= 3.0;
 	
     float waveVal = 0.;
     if (distFromCenter > distCheck) {
