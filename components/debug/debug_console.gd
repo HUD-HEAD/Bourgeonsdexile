@@ -43,3 +43,4 @@ func toggle():
 		hide()
 	else :
 		show()
+		text_input.grab_focus()
