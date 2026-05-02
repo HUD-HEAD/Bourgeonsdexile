@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c8yjpks4wqdqe"]
+
+[ext_resource type="Shader" uid="uid://cbk3sn8e1flb4" path="res://scenes/prototyping/contraction/contraction_demo2.gdshader" id="1_5dbot"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tex5i"]
+shader = ExtResource("1_5dbot")
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_5dbot"]
+size = Vector2(1920, 1080)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5dbot"]
+shader = ExtResource("1_5dbot")
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_tex5i"]
+size = Vector2(500, 500)
+
+[node name="Node2D" type="CanvasLayer" unique_id=1349071876]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=826130005]
+material = SubResource("ShaderMaterial_tex5i")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("PlaceholderTexture2D_5dbot")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=541955837]
+material = SubResource("ShaderMaterial_5dbot")
+position = Vector2(17, -341)
+texture = SubResource("PlaceholderTexture2D_tex5i")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=197044323]
