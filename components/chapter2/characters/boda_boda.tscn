@@ -36,6 +36,7 @@ script = ExtResource("4_nls43")
 position = Vector2(5, -142)
 collision_layer = 2
 collision_mask = 4
+input_pickable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=450716263]
 position = Vector2(-33, 161.5)
