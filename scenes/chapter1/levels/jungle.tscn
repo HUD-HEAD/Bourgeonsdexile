@@ -618,6 +618,9 @@ position = Vector2(459.85278, 816.4505)
 [node name="JungleWomanReflection" parent="Path2D/ReflectionNina/ReflectionContainer" parent_id_path=PackedInt32Array(732020292, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
 
+[node name="Shadow" parent="Path2D/ReflectionNina/ReflectionContainer/JungleWomanReflection/AnimSprite" parent_id_path=PackedInt32Array(732020292, 700974070, 689873547) index="0" unique_id=1632501669]
+visible = false
+
 [node name="ReflectionCompanion1" parent="Path2D" unique_id=1639842222 instance=ExtResource("19_c5nq0")]
 position = Vector2(359.35126, 814.48834)
 progress = 359.48
@@ -628,6 +631,9 @@ model = NodePath("../../../PathFollow2D/Nina")
 [node name="AnimSprite" parent="Path2D/ReflectionCompanion1/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 sprite_frames = ExtResource("16_17nyf")
 frame_progress = 0.0
+
+[node name="Shadow" parent="Path2D/ReflectionCompanion1/ReflectionContainer/JungleWomanReflection/AnimSprite" index="0" unique_id=1632501669]
+visible = false
 
 [node name="ReflectionCompanion2" parent="Path2D" unique_id=1162299954 instance=ExtResource("19_c5nq0")]
 position = Vector2(256.69696, 812.1905)
@@ -640,6 +646,9 @@ model = NodePath("../../../PathFollow2D/Nina")
 sprite_frames = ExtResource("17_k7em6")
 frame_progress = 0.0
 
+[node name="Shadow" parent="Path2D/ReflectionCompanion2/ReflectionContainer/JungleWomanReflection/AnimSprite" index="0" unique_id=1632501669]
+visible = false
+
 [node name="ReflectionCompanion3" parent="Path2D" unique_id=2137896206 instance=ExtResource("19_c5nq0")]
 position = Vector2(160.57846, 809.76324)
 progress = 160.65
@@ -650,6 +659,9 @@ model = NodePath("../../../PathFollow2D/Nina")
 [node name="AnimSprite" parent="Path2D/ReflectionCompanion3/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 sprite_frames = ExtResource("19_jh4yo")
 frame_progress = 0.0
+
+[node name="Shadow" parent="Path2D/ReflectionCompanion3/ReflectionContainer/JungleWomanReflection/AnimSprite" index="0" unique_id=1632501669]
+visible = false
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=267643735]
 position = Vector2(34810, 179)
