@@ -42,52 +42,7 @@ metadata/_edit_use_anchors_ = true
 autoplay = true
 bus = &"Music"
 
-[node name="Bus" parent="." unique_id=925815680 instance=ExtResource("3_p8hlq")]
-position = Vector2(1168, 883)
-move_speed = 800.0
-
-[node name="Bodabodatogether" parent="Bus" index="0" unique_id=1160138196]
-texture = ExtResource("4_swud2")
-
-[node name="Wheel1" parent="Bus/Bodabodatogether" index="0" unique_id=1790416269]
-show_behind_parent = false
-position = Vector2(-379, 150)
-texture = ExtResource("5_swud2")
-
-[node name="Wheel2" parent="Bus/Bodabodatogether" index="1" unique_id=431842153]
-show_behind_parent = false
-position = Vector2(383, 148)
-texture = ExtResource("6_0x0y1")
-
-[node name="CollisionShape2D" parent="Bus/Area2D" parent_id_path=PackedInt32Array(925815680, 1622822538) index="0" unique_id=450716263]
-position = Vector2(-49.5, 143.5)
-shape = SubResource("RectangleShape2D_uu4gm")
-
-[node name="MarkerBubbleSpawn" type="Marker2D" parent="Bus" unique_id=218413136]
-position = Vector2(-422, -360)
-
-[node name="MarkerBubbleSpawn2" type="Marker2D" parent="Bus" unique_id=1631645598]
-position = Vector2(-48, -365)
-
-[node name="MarkerBubbleSpawn3" type="Marker2D" parent="Bus" unique_id=1982216047]
-position = Vector2(370, -365)
-
-[node name="Camera2D" type="Camera2D" parent="Bus" unique_id=1924418931]
-position = Vector2(775, -147)
-zoom = Vector2(0.5, 0.5)
-limit_top = 0
-limit_bottom = 1080
-
-[node name="SpawnTrigger" type="Area2D" parent="Bus" unique_id=1730924960]
-script = ExtResource("5_ogvpn")
-metadata/_custom_type_script = "uid://ba2byqse4kn1f"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bus/SpawnTrigger" unique_id=1398344228]
-position = Vector2(-46, 4)
-shape = SubResource("RectangleShape2D_uu4gm")
-
 [node name="Puzzles" type="Node2D" parent="." unique_id=161984896]
-z_index = -1
 
 [node name="Puzzle1" type="Node2D" parent="Puzzles" unique_id=1075265617]
 position = Vector2(15991, 0)
@@ -202,6 +157,53 @@ collision_mask = 2
 
 [node name="DragDropPuzzle4" parent="Puzzles/PuzzleWindowBus" unique_id=2122580379 instance=ExtResource("11_tn746")]
 position = Vector2(1096, 415)
+
+[node name="Bus" parent="." unique_id=925815680 instance=ExtResource("3_p8hlq")]
+position = Vector2(1168, 883)
+move_speed = 800.0
+
+[node name="Bodabodatogether" parent="Bus" index="0" unique_id=1160138196]
+texture = ExtResource("4_swud2")
+
+[node name="Wheel1" parent="Bus/Bodabodatogether" index="0" unique_id=1790416269]
+show_behind_parent = false
+position = Vector2(-379, 150)
+texture = ExtResource("5_swud2")
+
+[node name="Wheel2" parent="Bus/Bodabodatogether" index="1" unique_id=431842153]
+show_behind_parent = false
+position = Vector2(383, 148)
+texture = ExtResource("6_0x0y1")
+
+[node name="Area2D" parent="Bus" index="1" unique_id=1622822538]
+input_pickable = false
+
+[node name="CollisionShape2D" parent="Bus/Area2D" index="0" unique_id=450716263]
+position = Vector2(-49.5, 143.5)
+shape = SubResource("RectangleShape2D_uu4gm")
+
+[node name="MarkerBubbleSpawn" type="Marker2D" parent="Bus" unique_id=218413136]
+position = Vector2(-422, -360)
+
+[node name="MarkerBubbleSpawn2" type="Marker2D" parent="Bus" unique_id=1631645598]
+position = Vector2(-48, -365)
+
+[node name="MarkerBubbleSpawn3" type="Marker2D" parent="Bus" unique_id=1982216047]
+position = Vector2(370, -365)
+
+[node name="Camera2D" type="Camera2D" parent="Bus" unique_id=1924418931]
+position = Vector2(775, -147)
+zoom = Vector2(0.5, 0.5)
+limit_top = 0
+limit_bottom = 1080
+
+[node name="SpawnTrigger" type="Area2D" parent="Bus" unique_id=1730924960]
+script = ExtResource("5_ogvpn")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bus/SpawnTrigger" unique_id=1398344228]
+position = Vector2(-46, 4)
+shape = SubResource("RectangleShape2D_uu4gm")
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1352526241]
 position = Vector2(116757, 645)
