@@ -4,13 +4,31 @@ shader_type canvas_item;
 
 #define TWOPI 6.28318530718f
 
+group_uniforms Wave;
 uniform float circleRadius : hint_range(0.0, 1.0, 0.1) = 0.5f;
 uniform float lineWidth : hint_range(0.0, 0.1, 0.001) = 0.01f;
 uniform float waves : hint_range(0.0, 10, 1) = 5.0f;
 uniform float amplitude : hint_range(0.0, 1.0, 0.01) = 0.1f;
 uniform float speed : hint_range(0.0, 100.0, 0.1) = 0.4f;
-
 uniform float offset_intensity : hint_range(0.0, 3.0, 0.1) = 1.0f;
+group_uniforms;
+
+//Blur parameters
+uniform sampler2D screen_texture: hint_screen_texture, repeat_disable, filter_linear_mipmap;
+uniform float blur_amount : hint_range(0, 5) = 5.0; // Strength of the blur effect
+
+uniform float modulate : hint_range(0.0, 1.0, 0.1) = 1.0;
+
+vec4 blur(vec2 screen_uv){
+    // Color with blur effect from the screen
+    vec4 blurColor = textureLod(screen_texture, screen_uv, blur_amount);
+
+    // Mix colors of the blur effect with white for an additional effect
+    //blurColor.rgb = mix(blurColor.rgb, vec3(1.0), 0.1);
+
+    // Set the final color to the modified color of the blur effect
+	return blurColor;
+}
 
 
 float random (vec2 uv) {
@@ -39,6 +57,10 @@ float getRadialVal(vec2 center, vec2 p) {
 }
 
 void fragment() {
+	if (modulate == 0.0){
+		discard;
+	}
+	
 	float time = TIME;
 	float waviness = amplitude * circleRadius;
 	
@@ -86,16 +108,23 @@ void fragment() {
 	distCheck /= 3.0;
 	
     float waveVal = 0.;
+	
+	vec4 new_color = vec4(1.0);
     if (distFromCenter > distCheck) {
-        float outerEdge = distCheck + lineWidth * .5;
-        waveVal = smoothstep(outerEdge + AA, outerEdge - AA, distFromCenter);
-    } else {
+		float outerEdge = distCheck + lineWidth * .5;
+		if (distFromCenter > outerEdge){
+			new_color = blur(SCREEN_UV);
+		}else{
+			new_color = vec4(1.0);
+		}
+    }else {
         float innerEdge = distCheck - lineWidth * .5;
         waveVal = smoothstep(innerEdge - AA, innerEdge + AA, distFromCenter);
+		new_color = vec4(waveVal);
 		//waveVal = 0.5;
     }
-    
-    COLOR = vec4(waveVal);
+    COLOR = new_color;
+	COLOR.a *= modulate;
 }
 
 
