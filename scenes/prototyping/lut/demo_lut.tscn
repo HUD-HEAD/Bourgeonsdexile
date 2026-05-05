@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cq08e1wby5k1r"]
+
+[ext_resource type="Texture2D" uid="uid://cqgge3pmf4v66" path="res://graphics/chapter2/levels/desert/tiledbackground_1.jpg" id="1_k3cai"]
+[ext_resource type="PackedScene" uid="uid://cilqgb10bxsi7" path="res://components/chapter2/characters/amani.tscn" id="2_5hlr5"]
+[ext_resource type="Material" uid="uid://b2dgoyfbpjmhn" path="res://scenes/prototyping/lut/mat_demo_lut.tres" id="4_k3cai"]
+
+[sub_resource type="Gradient" id="Gradient_yrfo1"]
+offsets = PackedFloat32Array(0, 0.63988096)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_k3cai"]
+gradient = SubResource("Gradient_yrfo1")
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_l3yuq"]
+size = Vector2(1920, 1080)
+
+[node name="DemoLut" type="Node2D" unique_id=1114159223]
+
+[node name="Tiledbackground1" type="Sprite2D" parent="." unique_id=1850157002]
+position = Vector2(826, 10)
+texture = ExtResource("1_k3cai")
+
+[node name="Amani" parent="." unique_id=700974070 instance=ExtResource("2_5hlr5")]
+position = Vector2(-211, 358)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=774193631]
+material = ExtResource("4_k3cai")
+position = Vector2(-152, -260)
+scale = Vector2(10.453125, 6.28125)
+texture = SubResource("GradientTexture2D_k3cai")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1015144585]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=339384141]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1559866327]
+modulate = Color(0.30243057, 0.3467741, 0.5690863, 1)
+material = ExtResource("4_k3cai")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("PlaceholderTexture2D_l3yuq")
