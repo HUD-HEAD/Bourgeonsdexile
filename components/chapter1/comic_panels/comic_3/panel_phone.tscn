@@ -98,7 +98,7 @@ _data = {
 [node name="Receptacle_Charger" parent="." unique_id=1265243040 instance=ExtResource("14_6ruk1")]
 position = Vector2(-337, 232)
 
-[node name="CollisionShape2D" parent="Receptacle_Charger" index="0"]
+[node name="CollisionShape2D" parent="Receptacle_Charger" index="0" unique_id=1374156200]
 shape = SubResource("CircleShape2D_06jsj")
 
 [node name="Charger" type="Sprite2D" parent="Receptacle_Charger" unique_id=1521154429]

@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://b2aetpff4f5gp"]
 
 [ext_resource type="Texture2D" uid="uid://baleqw00ux2b0" path="res://graphics/chapter2/levels/nakivale/nakivalelong.png" id="1_tq4ip"]
-[ext_resource type="Texture2D" uid="uid://d2afy2jcb01jl" path="res://graphics/chapter2/levels/nakivale/interior2.png" id="3_apgf3"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="3_yuvbc"]
 [ext_resource type="PackedScene" uid="uid://cilqgb10bxsi7" path="res://components/chapter2/characters/amani.tscn" id="4_5uaoj"]
 [ext_resource type="Texture2D" uid="uid://25f8380n34hi" path="res://graphics/chapter2/levels/nakivale/interior1.png" id="4_fklnn"]
@@ -34,11 +33,8 @@ position = Vector2(6171, 645)
 script = ExtResource("3_yuvbc")
 next_scene = "uid://wjb62t2thskf"
 
-[node name="Interior2" type="Sprite2D" parent="Background" unique_id=2091143510]
-position = Vector2(4768, 535)
-texture = ExtResource("3_apgf3")
-
 [node name="Interior1" type="Sprite2D" parent="Background" unique_id=1135751952]
+visible = false
 position = Vector2(3156, 449)
 texture = ExtResource("4_fklnn")
 
@@ -46,33 +42,7 @@ texture = ExtResource("4_fklnn")
 autoplay = true
 bus = &"Music"
 
-[node name="Amani" parent="." unique_id=700974070 instance=ExtResource("4_5uaoj")]
-position = Vector2(463, 840)
-
-[node name="MarkerBubbleSpawn" type="Marker2D" parent="Amani" unique_id=1504323811]
-position = Vector2(20, -220)
-
-[node name="Camera2D" type="Camera2D" parent="Amani" unique_id=128381685]
-position = Vector2(0, -300)
-offset = Vector2(500, 0)
-
-[node name="SpawnTrigger" type="Area2D" parent="Amani" unique_id=718918311]
-position = Vector2(5, -142)
-script = ExtResource("6_isbuh")
-metadata/_custom_type_script = "uid://ba2byqse4kn1f"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Amani/SpawnTrigger" unique_id=967471748]
-position = Vector2(0, 37)
-shape = SubResource("CapsuleShape2D_hsmfu")
-
-[node name="Companion" parent="." unique_id=1753872610 node_paths=PackedStringArray("model") instance=ExtResource("4_nonyt")]
-position = Vector2(571, 839)
-model = NodePath("../Amani")
-
-[node name="AnimSprite" parent="Companion" index="0" unique_id=689873547]
-sprite_frames = ExtResource("5_yuvbc")
-
-[node name="Puzzles" type="Node" parent="." unique_id=780707885]
+[node name="Puzzles" type="Node2D" parent="." unique_id=2096714344]
 
 [node name="Puzzle1" type="Node2D" parent="Puzzles" unique_id=842201109]
 position = Vector2(1014, 0)
@@ -140,5 +110,32 @@ collision_mask = 2
 [node name="Puzzle2" parent="Puzzles/Puzzle4" unique_id=71446804 instance=ExtResource("11_isbuh")]
 position = Vector2(230, 482)
 scale = Vector2(0.7, 0.7)
+
+[node name="Amani" parent="." unique_id=700974070 instance=ExtResource("4_5uaoj")]
+position = Vector2(463, 840)
+
+[node name="MarkerBubbleSpawn" type="Marker2D" parent="Amani" unique_id=1504323811]
+position = Vector2(20, -220)
+
+[node name="Camera2D" type="Camera2D" parent="Amani" unique_id=128381685]
+position = Vector2(0, -300)
+offset = Vector2(500, 0)
+
+[node name="SpawnTrigger" type="Area2D" parent="Amani" unique_id=718918311]
+position = Vector2(5, -142)
+script = ExtResource("6_isbuh")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Amani/SpawnTrigger" unique_id=967471748]
+position = Vector2(0, 37)
+shape = SubResource("CapsuleShape2D_hsmfu")
+
+[node name="Companion" parent="." unique_id=1753872610 node_paths=PackedStringArray("model") instance=ExtResource("4_nonyt")]
+position = Vector2(571, 839)
+model = NodePath("../Amani")
+offset_from_model = 0.0
+
+[node name="AnimSprite" parent="Companion" index="0" unique_id=689873547]
+sprite_frames = ExtResource("5_yuvbc")
 
 [editable path="Companion"]

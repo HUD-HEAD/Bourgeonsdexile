@@ -1,14 +1,31 @@
 [gd_scene format=3 uid="uid://tdurdvnqfpne"]
 
 [ext_resource type="Texture2D" uid="uid://cis0mplmn8yrc" path="res://graphics/chapter2/comics/comic4/framecontractions/b/b1.png" id="2_n4755"]
-[ext_resource type="Texture2D" uid="uid://becweidv565rd" path="res://graphics/chapter2/comics/comic4/framecontractions/full.png" id="2_qfxh5"]
+[ext_resource type="Texture2D" uid="uid://r5pqyslbqatj" path="res://graphics/chapter2/comics/comic4/framecontractions/b/b2.png" id="2_qfxh5"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="4_1qtt0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qfxh5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_n4755")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qfxh5")
+}],
+"loop": false,
+"name": &"default",
+"speed": 1.0
+}]
 
 [node name="Panel1" type="Node2D" unique_id=690781203]
 
-[node name="Full" type="Sprite2D" parent="." unique_id=1267115854]
-position = Vector2(900, 54)
-texture = ExtResource("2_qfxh5")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2051076983]
+sprite_frames = SubResource("SpriteFrames_qfxh5")
+autoplay = "default"
 
-[node name="B1" type="Sprite2D" parent="." unique_id=1549658890]
-position = Vector2(0, 1)
-texture = ExtResource("2_n4755")
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=40289621]
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=998977972]
+script = ExtResource("4_1qtt0")
+metadata/_custom_type_script = "uid://u4636s8oa5d0"

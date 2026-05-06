@@ -8,6 +8,8 @@
 [ext_resource type="Script" uid="uid://chrql2wwvrdt1" path="res://components/utils/puzzles/drag_drop_puzzle.gd" id="5_d3eci"]
 [ext_resource type="Script" uid="uid://dt4apmm1b4e51" path="res://components/utils/puzzles/puzzle_piece.gd" id="6_ixasm"]
 [ext_resource type="Script" uid="uid://dbrvsujabjlm" path="res://components/utils/puzzles/placement_checker.gd" id="9_us73b"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="10_nreuq"]
+[ext_resource type="Script" uid="uid://ca6gae53x0cd0" path="res://components/utils/puzzles/puzzle_piece_placed_enable.gd" id="11_d3eci"]
 [ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="11_n2vci"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ncs71"]
@@ -16,6 +18,43 @@ size = Vector2(582, 992)
 [sub_resource type="CircleShape2D" id="CircleShape2D_fvj74"]
 radius = 103.01942
 
+[sub_resource type="Animation" id="Animation_nreuq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Shapes:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_biqvb"]
+resource_name = "default"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Shapes:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.23333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nreuq"]
+_data = {
+&"RESET": SubResource("Animation_nreuq"),
+&"default": SubResource("Animation_biqvb")
+}
+
 [node name="Panel1" type="Node2D" unique_id=299868253]
 
 [node name="FramedoorBackground" type="Sprite2D" parent="." unique_id=1291906729]
@@ -23,6 +62,7 @@ position = Vector2(2, 1)
 texture = ExtResource("1_gftme")
 
 [node name="Shapes" type="Sprite2D" parent="." unique_id=1350532772]
+visible = false
 position = Vector2(45, 185)
 texture = ExtResource("4_epowo")
 
@@ -32,15 +72,15 @@ puzzle_pieces = [NodePath("PuzzlePiece"), NodePath("PuzzlePiece2")]
 metadata/_custom_type_script = "uid://chrql2wwvrdt1"
 
 [node name="PuzzlePiece" type="Node2D" parent="DragDropPuzzle" unique_id=973283075 node_paths=PackedStringArray("draggable", "placement_checker")]
+position = Vector2(-129, 33)
 script = ExtResource("6_ixasm")
 draggable = NodePath("DraggableRestricted")
 placement_checker = NodePath("DraggableRestricted/PlacementChecker")
 metadata/_custom_type_script = "uid://dt4apmm1b4e51"
 
 [node name="DraggableRestricted" type="Area2D" parent="DragDropPuzzle/PuzzlePiece" unique_id=2063489970]
-position = Vector2(-292, 0)
 script = ExtResource("5_8kpxd")
-left = -300.0
+left = -200.0
 metadata/_custom_type_script = "uid://001fo68fi8nn"
 
 [node name="Door1" type="Sprite2D" parent="DragDropPuzzle/PuzzlePiece/DraggableRestricted" unique_id=1067951576]
@@ -59,15 +99,15 @@ metadata/_custom_type_script = "uid://dbrvsujabjlm"
 shape = SubResource("CircleShape2D_fvj74")
 
 [node name="PuzzlePiece2" type="Node2D" parent="DragDropPuzzle" unique_id=1121876487 node_paths=PackedStringArray("draggable", "placement_checker")]
+position = Vector2(238, 45)
 script = ExtResource("6_ixasm")
 draggable = NodePath("DraggableRestricted2")
 placement_checker = NodePath("DraggableRestricted2/PlacementChecker")
 metadata/_custom_type_script = "uid://dt4apmm1b4e51"
 
 [node name="DraggableRestricted2" type="Area2D" parent="DragDropPuzzle/PuzzlePiece2" unique_id=61547531]
-position = Vector2(194, 0)
 script = ExtResource("5_8kpxd")
-right = 300.0
+right = 200.0
 metadata/_custom_type_script = "uid://001fo68fi8nn"
 
 [node name="Door2" type="Sprite2D" parent="DragDropPuzzle/PuzzlePiece2/DraggableRestricted2" unique_id=137918097]
@@ -87,11 +127,30 @@ metadata/_custom_type_script = "uid://dbrvsujabjlm"
 shape = SubResource("CircleShape2D_fvj74")
 
 [node name="Receptacle" parent="DragDropPuzzle" unique_id=600273107 instance=ExtResource("11_n2vci")]
-position = Vector2(-566, 0)
+position = Vector2(-322, 33)
 
 [node name="Receptacle2" parent="DragDropPuzzle" unique_id=2061397295 instance=ExtResource("11_n2vci")]
-position = Vector2(485, 0)
+position = Vector2(435, 45)
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1427539047]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1540842953]
+[node name="EnableBuffer" type="Node" parent="." unique_id=2083865349]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EnableBuffer" unique_id=454320755]
+libraries/ = SubResource("AnimationLibrary_nreuq")
+autoplay = &"default"
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=1207403317 node_paths=PackedStringArray("anim_player")]
+script = ExtResource("10_nreuq")
+anim_player = NodePath("../EnableBuffer/AnimationPlayer")
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="Enabler1" type="Node" parent="." unique_id=2051643095 node_paths=PackedStringArray("puzzle_piece", "node_to_enable")]
+script = ExtResource("11_d3eci")
+puzzle_piece = NodePath("../DragDropPuzzle/PuzzlePiece")
+node_to_enable = NodePath("../EnableBuffer")
+
+[node name="Enabler2" type="Node" parent="." unique_id=336666288 node_paths=PackedStringArray("puzzle_piece", "node_to_enable")]
+script = ExtResource("11_d3eci")
+puzzle_piece = NodePath("../DragDropPuzzle/PuzzlePiece2")
+node_to_enable = NodePath("../EnableBuffer/AnimationPlayer")
