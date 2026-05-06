@@ -4,6 +4,8 @@
 [ext_resource type="Material" uid="uid://ct7nfyek8i1le" path="res://scenes/prototyping/contraction/mat_contraction.tres" id="1_gatpt"]
 [ext_resource type="Script" uid="uid://c5w88vtgql7rs" path="res://scenes/prototyping/contraction/contraction_controller.gd" id="2_2wh7f"]
 [ext_resource type="Script" uid="uid://bf2oac284v575" path="res://scenes/prototyping/contraction/shader_param.gd" id="4_p5e6y"]
+[ext_resource type="Texture2D" uid="uid://cqgge3pmf4v66" path="res://graphics/chapter2/levels/desert/tiledbackground_1.jpg" id="5_lkgd8"]
+[ext_resource type="PackedScene" uid="uid://cilqgb10bxsi7" path="res://components/chapter2/characters/amani.tscn" id="6_cd22o"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5dbot"]
 shader = ExtResource("1_5dbot")
@@ -13,6 +15,8 @@ shader_parameter/waves = 5.0
 shader_parameter/amplitude = 0.1
 shader_parameter/speed = 0.0
 shader_parameter/offset_intensity = 1.0
+shader_parameter/blur_amount = 1.0
+shader_parameter/modulate = 0.0
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_tex5i"]
 size = Vector2(500, 500)
@@ -45,6 +49,13 @@ size = Vector2(1920, 1080)
 
 [node name="Node2D" type="Node2D" unique_id=1991231185]
 
+[node name="Tiledbackground1" type="Sprite2D" parent="." unique_id=2048845969]
+position = Vector2(826, 10)
+texture = ExtResource("5_lkgd8")
+
+[node name="Amani" parent="." unique_id=700974070 instance=ExtResource("6_cd22o")]
+position = Vector2(-211, 358)
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=541955837]
 visible = false
 material = SubResource("ShaderMaterial_5dbot")
@@ -61,6 +72,7 @@ shader_params = Array[ExtResource("4_p5e6y")]([SubResource("Resource_8524a"), Su
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1494737173]
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=826130005]
+modulate = Color(0.30243057, 0.3467741, 0.5690863, 1)
 material = ExtResource("1_gatpt")
 anchors_preset = 15
 anchor_right = 1.0
