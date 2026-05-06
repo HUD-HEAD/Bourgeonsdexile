@@ -46,6 +46,5 @@ shape = SubResource("RectangleShape2D_shqb5")
 [node name="TransitionerCounter" type="Node" parent="." unique_id=571377417 node_paths=PackedStringArray("clickables")]
 script = ExtResource("5_lexxo")
 clickables = [NodePath("../Clickable")]
-obstacles_to_clear = 3
-transition_delay = 2.0
+obstacles_to_clear = 4
 metadata/_custom_type_script = "uid://c44tybeisilbv"

@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="4_nuprl"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_ds1i7"]
 [ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/PlayOnClick.tscn" id="5_qgpnv"]
-[ext_resource type="AudioStream" uid="uid://cjpkaik1h7gfp" path="res://audio/chapter1/ambient/panel_section_2/panel_2.2_simulated_conversation.wav" id="6_x601e"]
+[ext_resource type="AudioStream" uid="uid://cjpkaik1h7gfp" path="res://audio/chapter1/ambient/panel_section_2/panel_2.2_2.6_simulated_conversation.wav" id="6_x601e"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ds1i7"]
 radius = 113.0

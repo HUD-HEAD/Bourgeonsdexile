@@ -90,7 +90,7 @@ func _compute_spawn_position(piece_idx : int):
 	
 	#TODO #HACK cleanup
 	if target_pos.y < 0 :
-		target_pos.y = puzzle.puzzle_pieces[0].global_position.y
+		target_pos.y = puzzle.puzzle_pieces[0].global_position.y + y_offset
 		target_pos.x += 300
 	
 	return target_pos

@@ -556,10 +556,10 @@ loop = false
 [node name="Companion1" parent="Path2D/PathFollowCompanion1" unique_id=700974070 node_paths=PackedStringArray("model", "path_follow") instance=ExtResource("15_td1vu")]
 script = ExtResource("20_t8bry")
 model = NodePath("../../PathFollow2D/Nina")
-offset_from_model = 0.0
+offset_from_model = -100.0
 path_follow = NodePath("..")
 
-[node name="AnimSprite" parent="Path2D/PathFollowCompanion1/Companion1" index="0" unique_id=689873547]
+[node name="Woman" parent="Path2D/PathFollowCompanion1/Companion1" index="0" unique_id=689873547]
 sprite_frames = ExtResource("16_17nyf")
 frame_progress = 0.0
 
@@ -584,10 +584,10 @@ loop = false
 [node name="Companion2" parent="Path2D/PathFollowCompanion2" unique_id=292361228 node_paths=PackedStringArray("model", "path_follow") instance=ExtResource("15_td1vu")]
 script = ExtResource("20_t8bry")
 model = NodePath("../../PathFollow2D/Nina")
-offset_from_model = 0.0
+offset_from_model = -200.0
 path_follow = NodePath("..")
 
-[node name="AnimSprite" parent="Path2D/PathFollowCompanion2/Companion2" index="0" unique_id=689873547]
+[node name="Woman" parent="Path2D/PathFollowCompanion2/Companion2" index="0" unique_id=689873547]
 sprite_frames = ExtResource("17_k7em6")
 frame_progress = 0.0
 
@@ -604,10 +604,10 @@ loop = false
 [node name="Companion3" parent="Path2D/PathFollowCompanion3" unique_id=1541481373 node_paths=PackedStringArray("model", "path_follow") instance=ExtResource("15_td1vu")]
 script = ExtResource("20_t8bry")
 model = NodePath("../../PathFollow2D/Nina")
-offset_from_model = 0.0
+offset_from_model = -300.0
 path_follow = NodePath("..")
 
-[node name="AnimSprite" parent="Path2D/PathFollowCompanion3/Companion3" index="0" unique_id=689873547]
+[node name="Woman" parent="Path2D/PathFollowCompanion3/Companion3" index="0" unique_id=689873547]
 sprite_frames = ExtResource("19_jh4yo")
 animation = &"idle"
 frame_progress = 0.0
@@ -622,23 +622,17 @@ position = Vector2(459.85278, 816.4505)
 model = NodePath("../../../PathFollow2D/Nina")
 offset_from_model = 0.0
 
-[node name="Shadow" parent="Path2D/ReflectionNina/ReflectionContainer/JungleWomanReflection/AnimSprite" parent_id_path=PackedInt32Array(732020292, 700974070, 689873547) index="0" unique_id=1632501669]
-visible = false
-
 [node name="ReflectionCompanion1" parent="Path2D" unique_id=1639842222 instance=ExtResource("19_c5nq0")]
 position = Vector2(359.35126, 814.48834)
 progress = 359.48
 
 [node name="JungleWomanReflection" parent="Path2D/ReflectionCompanion1/ReflectionContainer" parent_id_path=PackedInt32Array(1639842222, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
-offset_from_model = 0.0
+offset_from_model = -100.0
 
-[node name="AnimSprite" parent="Path2D/ReflectionCompanion1/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
+[node name="Woman" parent="Path2D/ReflectionCompanion1/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 sprite_frames = ExtResource("16_17nyf")
 frame_progress = 0.0
-
-[node name="Shadow" parent="Path2D/ReflectionCompanion1/ReflectionContainer/JungleWomanReflection/AnimSprite" index="0" unique_id=1632501669]
-visible = false
 
 [node name="ReflectionCompanion2" parent="Path2D" unique_id=1162299954 instance=ExtResource("19_c5nq0")]
 position = Vector2(256.69696, 812.1905)
@@ -646,14 +640,11 @@ progress = 256.8
 
 [node name="JungleWomanReflection" parent="Path2D/ReflectionCompanion2/ReflectionContainer" parent_id_path=PackedInt32Array(1162299954, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
-offset_from_model = 0.0
+offset_from_model = -200.0
 
-[node name="AnimSprite" parent="Path2D/ReflectionCompanion2/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
+[node name="Woman" parent="Path2D/ReflectionCompanion2/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 sprite_frames = ExtResource("17_k7em6")
 frame_progress = 0.0
-
-[node name="Shadow" parent="Path2D/ReflectionCompanion2/ReflectionContainer/JungleWomanReflection/AnimSprite" index="0" unique_id=1632501669]
-visible = false
 
 [node name="ReflectionCompanion3" parent="Path2D" unique_id=2137896206 instance=ExtResource("19_c5nq0")]
 position = Vector2(160.57846, 809.76324)
@@ -661,14 +652,11 @@ progress = 160.65
 
 [node name="JungleWomanReflection" parent="Path2D/ReflectionCompanion3/ReflectionContainer" parent_id_path=PackedInt32Array(2137896206, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
-offset_from_model = 0.0
+offset_from_model = -300.0
 
-[node name="AnimSprite" parent="Path2D/ReflectionCompanion3/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
+[node name="Woman" parent="Path2D/ReflectionCompanion3/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 sprite_frames = ExtResource("19_jh4yo")
 frame_progress = 0.0
-
-[node name="Shadow" parent="Path2D/ReflectionCompanion3/ReflectionContainer/JungleWomanReflection/AnimSprite" index="0" unique_id=1632501669]
-visible = false
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=267643735]
 position = Vector2(34810, 179)

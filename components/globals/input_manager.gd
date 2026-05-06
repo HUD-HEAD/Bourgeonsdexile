@@ -3,16 +3,10 @@ extends Node
 ##How sensitive is mouse movement
 var mouse_sensitivity = 1.0
 
-var debug_console : DebugConsole
-
 func _ready() -> void:
 	##Clicks on e.g. Area2Ds (Clickables) will only trigger on topmost item
 	get_viewport().physics_object_picking_first_only = true
 	get_viewport().physics_object_picking_sort = true
-	
-	if OS.has_feature("debug"):
-		debug_console = load("res://components/debug/debug_console.tscn").instantiate()
-		add_child(debug_console)
 
 func show_mouse():
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -22,16 +16,14 @@ func hide_mouse():
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event.is_action_pressed("exit"):
-		if OS.has_feature("debug"):
-			if debug_console.visible:
-				debug_console.toggle()
-			else:
-				SceneManager.goto_scene(ProjectSettings.get_setting("application/run/main_scene"))
+		get_tree().quit()
 	
 	if OS.has_feature("debug"):
 		_debug_inputs(event)
 	
 #TESTING
+var resource : Resource = ResourceLoader.load("res://components/utils/debug/debug_scene_list.tres")
+
 ## Only enabled in debug builds
 func _debug_inputs(event : InputEvent) -> void :
 	if event.is_action_pressed("debug_speed_up"):
@@ -40,9 +32,17 @@ func _debug_inputs(event : InputEvent) -> void :
 	elif event.is_action_pressed("debug_speed_down"):
 		Engine.time_scale /= 2
 		print_debug("Speed down x", Engine.time_scale)
-	elif event.is_action_pressed("debug_next"):
+		
+	elif Input.is_action_pressed("debug_enable_scene_switch"):
+		if event is InputEventKey and event.pressed:
+			#Number pressed (0..9)
+			if event.keycode >= 48 && event.keycode <= 57:
+				var idx = event.keycode - 48
+				print_debug("Debug loading scene ", idx)
+				if idx < resource.ordered_scene_list.size():
+					SceneManager.goto_scene(resource.ordered_scene_list[idx])
+					
+	elif Input.is_action_just_pressed_by_event("debug_next", event):
 		SignalManager.obstacle_cleared.emit()
 		SignalManager.next_panel.emit()
-	elif event.is_action_pressed("debug_toggle_console"):
-		debug_console.toggle()
 	

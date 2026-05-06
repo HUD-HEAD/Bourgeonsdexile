@@ -49,7 +49,7 @@ func _pan_to(panel : Node2D):
 
 #TESTING
 ## DEBUG BUILDS : Detect input 0-9 and jump to corresponding panel [UNSTABLE]
-func _unhandled_key_input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 	if !OS.is_debug_build():
 		return
 	if Input.is_action_pressed("debug_enable_scene_switch"):

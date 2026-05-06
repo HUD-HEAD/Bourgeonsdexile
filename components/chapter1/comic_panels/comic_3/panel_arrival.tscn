@@ -20,14 +20,14 @@ position = Vector2(-120, 0)
 position = Vector2(-397, 290)
 script = null
 
-[node name="AnimSprite" parent="ScrollingBackground/JungleWoman" index="0" unique_id=689873547]
+[node name="Woman" parent="ScrollingBackground/JungleWoman" index="0" unique_id=689873547]
 autoplay = "walking"
 
 [node name="JungleWoman2" parent="ScrollingBackground" unique_id=582263270 instance=ExtResource("3_jfo1i")]
 position = Vector2(-497, 290)
 script = null
 
-[node name="AnimSprite" parent="ScrollingBackground/JungleWoman2" index="0" unique_id=689873547]
+[node name="Woman" parent="ScrollingBackground/JungleWoman2" index="0" unique_id=689873547]
 sprite_frames = ExtResource("4_rofvx")
 autoplay = "walking"
 frame_progress = 0.0
@@ -36,7 +36,7 @@ frame_progress = 0.0
 position = Vector2(-595, 290)
 script = null
 
-[node name="AnimSprite" parent="ScrollingBackground/JungleWoman3" index="0" unique_id=689873547]
+[node name="Woman" parent="ScrollingBackground/JungleWoman3" index="0" unique_id=689873547]
 sprite_frames = ExtResource("5_7itc7")
 autoplay = "walking"
 frame_progress = 0.0

@@ -22,10 +22,6 @@ func _buttons_connect():
 func _on_settings_pressed():
 	pass
 
-func _unhandled_key_input(event: InputEvent) -> void:
-	if event.is_action_pressed("exit"):
-		_on_quit_pressed()
-
 ## Quit game
 func _on_quit_pressed():
 	SceneManager.quit_game()

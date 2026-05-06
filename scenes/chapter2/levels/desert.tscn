@@ -28,138 +28,26 @@ follow_viewport_enabled = true
 
 [node name="DesertTiled" type="TextureRect" parent="Background" unique_id=1494207838]
 anchors_preset = -1
-anchor_right = 69.095314
-offset_left = 2.0
-offset_top = -1515.0
-offset_right = 7682.0
-offset_bottom = 1629.0
+anchor_right = 171.13333
+offset_top = -1476.0
+offset_right = 7680.0
+offset_bottom = 1668.0
 mouse_filter = 2
 texture = ExtResource("1_swud2")
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="Background" unique_id=1352526241]
+position = Vector2(300169, 645)
+script = ExtResource("3_aqeuv")
+next_scene = "uid://buy5yt5e73v7w"
+
 [node name="Theme" type="AudioStreamPlayer" parent="." unique_id=67967600]
 autoplay = true
 bus = &"Music"
 
-[node name="Puzzles" type="Node2D" parent="." unique_id=161984896]
-
-[node name="Puzzle1" type="Node2D" parent="Puzzles" unique_id=1075265617]
-position = Vector2(15991, 0)
-
-[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle1" unique_id=555557525 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
-script = ExtResource("5_6tu1w")
-puzzle = NodePath("../DragDropPuzzle")
-piece_spawners = [NodePath("../../../Bus/MarkerBubbleSpawn"), NodePath("../../../Bus/MarkerBubbleSpawn2"), NodePath("../../../Bus/MarkerBubbleSpawn3")]
-spawn_trigger = NodePath("../../../Bus/SpawnTrigger")
-obstacle = NodePath("../Obstacle")
-
-[node name="Obstacle" parent="Puzzles/Puzzle1" unique_id=310843140 instance=ExtResource("6_ogvpn")]
-position = Vector2(-239, 0)
-collision_mask = 2
-
-[node name="DragDropPuzzle" parent="Puzzles/Puzzle1" unique_id=1767003607 instance=ExtResource("7_swud2")]
-position = Vector2(602, 415)
-
-[node name="Puzzle2" type="Node2D" parent="Puzzles" unique_id=2103807743]
-position = Vector2(31012, 0)
-
-[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle2" unique_id=1078506465 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
-script = ExtResource("5_6tu1w")
-puzzle = NodePath("../Puzzle2")
-piece_spawners = [NodePath("../../../Bus/MarkerBubbleSpawn"), NodePath("../../../Bus/MarkerBubbleSpawn2"), NodePath("../../../Bus/MarkerBubbleSpawn3")]
-spawn_trigger = NodePath("../../../Bus/SpawnTrigger")
-obstacle = NodePath("../Obstacle")
-
-[node name="Obstacle" parent="Puzzles/Puzzle2" unique_id=1913969595 instance=ExtResource("6_ogvpn")]
-collision_mask = 2
-
-[node name="Puzzle2" parent="Puzzles/Puzzle2" unique_id=422744521 instance=ExtResource("13_ul5of")]
-position = Vector2(865, 415)
-
-[node name="PuzzleHole" type="Node2D" parent="Puzzles" unique_id=1907762738]
-position = Vector2(42650, 0)
-
-[node name="PuzzleSpawner" type="Node" parent="Puzzles/PuzzleHole" unique_id=1754513984 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
-script = ExtResource("5_6tu1w")
-puzzle = NodePath("../DragDropPuzzle2")
-piece_spawners = [NodePath("../../../Bus/MarkerBubbleSpawn"), NodePath("../../../Bus/MarkerBubbleSpawn2"), NodePath("../../../Bus/MarkerBubbleSpawn3")]
-spawn_trigger = NodePath("../../../Bus/SpawnTrigger")
-obstacle = NodePath("../Obstacle")
-
-[node name="Obstacle" parent="Puzzles/PuzzleHole" unique_id=1151734988 instance=ExtResource("6_ogvpn")]
-position = Vector2(-239, 0)
-collision_mask = 2
-
-[node name="DragDropPuzzle2" parent="Puzzles/PuzzleHole" unique_id=1761994222 instance=ExtResource("9_f7a6g")]
-position = Vector2(602, 1212)
-
-[node name="Puzzle4" type="Node2D" parent="Puzzles" unique_id=1412279860]
-position = Vector2(52002, 0)
-
-[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle4" unique_id=101828173 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
-script = ExtResource("5_6tu1w")
-puzzle = NodePath("../Puzzle3")
-piece_spawners = [NodePath("../../../Bus/MarkerBubbleSpawn"), NodePath("../../../Bus/MarkerBubbleSpawn2"), NodePath("../../../Bus/MarkerBubbleSpawn3")]
-spawn_trigger = NodePath("../../../Bus/SpawnTrigger")
-obstacle = NodePath("../Obstacle")
-
-[node name="Obstacle" parent="Puzzles/Puzzle4" unique_id=1954108570 instance=ExtResource("6_ogvpn")]
-collision_mask = 2
-
-[node name="Puzzle3" parent="Puzzles/Puzzle4" unique_id=2043914400 instance=ExtResource("14_25xat")]
-position = Vector2(1005, 597)
-
-[node name="Puzzle5" type="Node2D" parent="Puzzles" unique_id=25722394]
-position = Vector2(63463, 0)
-
-[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle5" unique_id=878190072 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
-script = ExtResource("5_6tu1w")
-puzzle = NodePath("../DragDropPuzzle3")
-piece_spawners = [NodePath("../../../Bus/MarkerBubbleSpawn"), NodePath("../../../Bus/MarkerBubbleSpawn2"), NodePath("../../../Bus/MarkerBubbleSpawn3")]
-spawn_trigger = NodePath("../../../Bus/SpawnTrigger")
-obstacle = NodePath("../Obstacle")
-
-[node name="Obstacle" parent="Puzzles/Puzzle5" unique_id=42663583 instance=ExtResource("6_ogvpn")]
-collision_mask = 2
-
-[node name="DragDropPuzzle3" parent="Puzzles/Puzzle5" unique_id=1044110495 instance=ExtResource("10_232wy")]
-position = Vector2(1036, 415)
-
-[node name="Puzzle6" type="Node2D" parent="Puzzles" unique_id=338859269]
-position = Vector2(74664, 0)
-
-[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle6" unique_id=133516818 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
-script = ExtResource("5_6tu1w")
-puzzle = NodePath("../Puzzle1")
-piece_spawners = [NodePath("../../../Bus/MarkerBubbleSpawn"), NodePath("../../../Bus/MarkerBubbleSpawn2"), NodePath("../../../Bus/MarkerBubbleSpawn3")]
-spawn_trigger = NodePath("../../../Bus/SpawnTrigger")
-obstacle = NodePath("../Obstacle")
-
-[node name="Obstacle" parent="Puzzles/Puzzle6" unique_id=2058141431 instance=ExtResource("6_ogvpn")]
-collision_mask = 2
-
-[node name="Puzzle1" parent="Puzzles/Puzzle6" unique_id=1941159865 instance=ExtResource("12_otqxj")]
-position = Vector2(928, 415)
-
-[node name="PuzzleWindowBus" type="Node2D" parent="Puzzles" unique_id=328264452]
-position = Vector2(90547, 0)
-
-[node name="PuzzleSpawner" type="Node" parent="Puzzles/PuzzleWindowBus" unique_id=727123597 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
-script = ExtResource("5_6tu1w")
-puzzle = NodePath("../DragDropPuzzle4")
-piece_spawners = [NodePath("../../../Bus/MarkerBubbleSpawn"), NodePath("../../../Bus/MarkerBubbleSpawn2"), NodePath("../../../Bus/MarkerBubbleSpawn3")]
-spawn_trigger = NodePath("../../../Bus/SpawnTrigger")
-obstacle = NodePath("../Obstacle")
-
-[node name="Obstacle" parent="Puzzles/PuzzleWindowBus" unique_id=1129667608 instance=ExtResource("6_ogvpn")]
-collision_mask = 2
-
-[node name="DragDropPuzzle4" parent="Puzzles/PuzzleWindowBus" unique_id=2122580379 instance=ExtResource("11_tn746")]
-position = Vector2(1096, 415)
-
 [node name="Bus" parent="." unique_id=925815680 instance=ExtResource("3_p8hlq")]
-position = Vector2(1168, 883)
+position = Vector2(1912, 883)
 move_speed = 800.0
 
 [node name="Bodabodatogether" parent="Bus" index="0" unique_id=1160138196]
@@ -175,10 +63,7 @@ show_behind_parent = false
 position = Vector2(383, 148)
 texture = ExtResource("6_0x0y1")
 
-[node name="Area2D" parent="Bus" index="1" unique_id=1622822538]
-input_pickable = false
-
-[node name="CollisionShape2D" parent="Bus/Area2D" index="0" unique_id=450716263]
+[node name="CollisionShape2D" parent="Bus/Area2D" parent_id_path=PackedInt32Array(925815680, 1622822538) index="0" unique_id=450716263]
 position = Vector2(-49.5, 143.5)
 shape = SubResource("RectangleShape2D_uu4gm")
 
@@ -192,7 +77,7 @@ position = Vector2(-48, -365)
 position = Vector2(370, -365)
 
 [node name="Camera2D" type="Camera2D" parent="Bus" unique_id=1924418931]
-position = Vector2(775, -147)
+position = Vector2(2, -147)
 zoom = Vector2(0.5, 0.5)
 limit_top = 0
 limit_bottom = 1080
@@ -205,9 +90,121 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 position = Vector2(-46, 4)
 shape = SubResource("RectangleShape2D_uu4gm")
 
-[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1352526241]
-position = Vector2(116757, 645)
-script = ExtResource("3_aqeuv")
-next_scene = "uid://buy5yt5e73v7w"
+[node name="Puzzles" type="Node2D" parent="." unique_id=161984896]
+z_index = -1
+
+[node name="Puzzle1" type="Node2D" parent="Puzzles" unique_id=1075265617]
+position = Vector2(36270, 0)
+
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle1" unique_id=555557525 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+script = ExtResource("5_6tu1w")
+puzzle = NodePath("../DragDropPuzzle")
+piece_spawners = [NodePath("../../../Bus/MarkerBubbleSpawn"), NodePath("../../../Bus/MarkerBubbleSpawn2"), NodePath("../../../Bus/MarkerBubbleSpawn3")]
+spawn_trigger = NodePath("../../../Bus/SpawnTrigger")
+obstacle = NodePath("../Obstacle")
+
+[node name="Obstacle" parent="Puzzles/Puzzle1" unique_id=310843140 instance=ExtResource("6_ogvpn")]
+position = Vector2(-239, 0)
+collision_mask = 2
+
+[node name="DragDropPuzzle" parent="Puzzles/Puzzle1" unique_id=1767003607 instance=ExtResource("7_swud2")]
+position = Vector2(602, 415)
+
+[node name="Puzzle2" type="Node2D" parent="Puzzles" unique_id=1907762738]
+position = Vector2(87680, 0)
+
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle2" unique_id=1754513984 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+script = ExtResource("5_6tu1w")
+puzzle = NodePath("../DragDropPuzzle2")
+piece_spawners = [NodePath("../../../Bus/MarkerBubbleSpawn"), NodePath("../../../Bus/MarkerBubbleSpawn2"), NodePath("../../../Bus/MarkerBubbleSpawn3")]
+spawn_trigger = NodePath("../../../Bus/SpawnTrigger")
+obstacle = NodePath("../Obstacle")
+
+[node name="Obstacle" parent="Puzzles/Puzzle2" unique_id=1151734988 instance=ExtResource("6_ogvpn")]
+position = Vector2(-239, 0)
+collision_mask = 2
+
+[node name="DragDropPuzzle2" parent="Puzzles/Puzzle2" unique_id=1761994222 instance=ExtResource("9_f7a6g")]
+position = Vector2(602, 415)
+
+[node name="Puzzle3" type="Node2D" parent="Puzzles" unique_id=25722394]
+position = Vector2(132160, 0)
+
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle3" unique_id=878190072 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+script = ExtResource("5_6tu1w")
+puzzle = NodePath("../DragDropPuzzle3")
+piece_spawners = [NodePath("../../../Bus/MarkerBubbleSpawn"), NodePath("../../../Bus/MarkerBubbleSpawn2"), NodePath("../../../Bus/MarkerBubbleSpawn3")]
+spawn_trigger = NodePath("../../../Bus/SpawnTrigger")
+obstacle = NodePath("../Obstacle")
+
+[node name="Obstacle" parent="Puzzles/Puzzle3" unique_id=42663583 instance=ExtResource("6_ogvpn")]
+collision_mask = 2
+
+[node name="DragDropPuzzle3" parent="Puzzles/Puzzle3" unique_id=1044110495 instance=ExtResource("10_232wy")]
+position = Vector2(1036, 415)
+
+[node name="Puzzle4" type="Node2D" parent="Puzzles" unique_id=328264452]
+position = Vector2(137236, 0)
+
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle4" unique_id=727123597 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+script = ExtResource("5_6tu1w")
+puzzle = NodePath("../DragDropPuzzle4")
+piece_spawners = [NodePath("../../../Bus/MarkerBubbleSpawn"), NodePath("../../../Bus/MarkerBubbleSpawn2"), NodePath("../../../Bus/MarkerBubbleSpawn3")]
+spawn_trigger = NodePath("../../../Bus/SpawnTrigger")
+obstacle = NodePath("../Obstacle")
+
+[node name="Obstacle" parent="Puzzles/Puzzle4" unique_id=1129667608 instance=ExtResource("6_ogvpn")]
+collision_mask = 2
+
+[node name="DragDropPuzzle4" parent="Puzzles/Puzzle4" unique_id=2122580379 instance=ExtResource("11_tn746")]
+position = Vector2(1096, 415)
+
+[node name="Puzzle5" type="Node2D" parent="Puzzles" unique_id=338859269]
+position = Vector2(164470, 0)
+
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle5" unique_id=133516818 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+script = ExtResource("5_6tu1w")
+puzzle = NodePath("../Puzzle1")
+piece_spawners = [NodePath("../../../Bus/MarkerBubbleSpawn"), NodePath("../../../Bus/MarkerBubbleSpawn2"), NodePath("../../../Bus/MarkerBubbleSpawn3")]
+spawn_trigger = NodePath("../../../Bus/SpawnTrigger")
+obstacle = NodePath("../Obstacle")
+
+[node name="Obstacle" parent="Puzzles/Puzzle5" unique_id=2058141431 instance=ExtResource("6_ogvpn")]
+collision_mask = 2
+
+[node name="Puzzle1" parent="Puzzles/Puzzle5" unique_id=1941159865 instance=ExtResource("12_otqxj")]
+position = Vector2(928, 415)
+
+[node name="Puzzle6" type="Node2D" parent="Puzzles" unique_id=2103807743]
+position = Vector2(249250, 0)
+
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle6" unique_id=1078506465 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+script = ExtResource("5_6tu1w")
+puzzle = NodePath("../Puzzle2")
+piece_spawners = [NodePath("../../../Bus/MarkerBubbleSpawn"), NodePath("../../../Bus/MarkerBubbleSpawn2"), NodePath("../../../Bus/MarkerBubbleSpawn3")]
+spawn_trigger = NodePath("../../../Bus/SpawnTrigger")
+obstacle = NodePath("../Obstacle")
+
+[node name="Obstacle" parent="Puzzles/Puzzle6" unique_id=1913969595 instance=ExtResource("6_ogvpn")]
+collision_mask = 2
+
+[node name="Puzzle2" parent="Puzzles/Puzzle6" unique_id=422744521 instance=ExtResource("13_ul5of")]
+position = Vector2(865, 415)
+
+[node name="Puzzle7" type="Node2D" parent="Puzzles" unique_id=1412279860]
+position = Vector2(292140, 0)
+
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle7" unique_id=101828173 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+script = ExtResource("5_6tu1w")
+puzzle = NodePath("../Puzzle3")
+piece_spawners = [NodePath("../../../Bus/MarkerBubbleSpawn"), NodePath("../../../Bus/MarkerBubbleSpawn2"), NodePath("../../../Bus/MarkerBubbleSpawn3")]
+spawn_trigger = NodePath("../../../Bus/SpawnTrigger")
+obstacle = NodePath("../Obstacle")
+
+[node name="Obstacle" parent="Puzzles/Puzzle7" unique_id=1954108570 instance=ExtResource("6_ogvpn")]
+collision_mask = 2
+
+[node name="Puzzle3" parent="Puzzles/Puzzle7" unique_id=2043914400 instance=ExtResource("14_25xat")]
+position = Vector2(1005, 597)
 
 [editable path="Bus"]

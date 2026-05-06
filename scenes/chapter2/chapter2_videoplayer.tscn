@@ -15,7 +15,6 @@ stream = ExtResource("3_4vcik")
 
 [node name="Start" parent="Control" parent_id_path=PackedInt32Array(1489793461) index="0" unique_id=1313297138]
 target_scene = "uid://diaoe5umvfijd"
-audio_transition = null
 
 [node name="Frame11" parent="TextureRect" parent_id_path=PackedInt32Array(1934943305) index="0" unique_id=1039724458]
 texture = ExtResource("2_rgcbm")

@@ -344,7 +344,7 @@ position = Vector2(460, 867)
 z_index = 1
 y_sort_enabled = true
 
-[node name="AnimSprite" parent="Spawn/Nina" index="0" unique_id=689873547]
+[node name="Woman" parent="Spawn/Nina" index="0" unique_id=689873547]
 scale = Vector2(0.8, 0.8)
 
 [node name="Area2D" parent="Spawn/Nina" index="1" unique_id=960188442]
