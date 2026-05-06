@@ -68,7 +68,7 @@ shape = SubResource("RectangleShape2D_q5b70")
 position = Vector2(-166, -7)
 
 [node name="PuzzlePiece3" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="4" unique_id=668270485 instance=ExtResource("4_ldqgo")]
-position = Vector2(-14, -42)
+position = Vector2(95, -38)
 
 [node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(668270485, 2116105691) index="0" unique_id=1266676352]
 texture = ExtResource("7_i6nym")
@@ -82,10 +82,10 @@ rotation = -0.04837197
 shape = SubResource("RectangleShape2D_r0ai7")
 
 [node name="Receptacle3" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="5" unique_id=107165536 instance=ExtResource("6_by31v")]
-position = Vector2(-13, -43)
+position = Vector2(96, -39)
 
 [node name="PuzzlePiece4" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="6" unique_id=1602884939 instance=ExtResource("4_ldqgo")]
-position = Vector2(-17, 39)
+position = Vector2(31, 36)
 
 [node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(1602884939, 2116105691) index="0" unique_id=1266676352]
 texture = ExtResource("8_tpo5w")
@@ -99,10 +99,10 @@ rotation = -0.04837197
 shape = SubResource("RectangleShape2D_llriv")
 
 [node name="Receptacle4" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="7" unique_id=586153071 instance=ExtResource("6_by31v")]
-position = Vector2(-17, 39)
+position = Vector2(31, 36)
 
 [node name="PuzzlePiece5" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="8" unique_id=349335265 instance=ExtResource("4_ldqgo")]
-position = Vector2(112, 33)
+position = Vector2(219, 30)
 
 [node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece5/Draggable" parent_id_path=PackedInt32Array(349335265, 2116105691) index="0" unique_id=1266676352]
 texture = ExtResource("9_psak6")
@@ -116,7 +116,7 @@ rotation = -0.04837197
 shape = SubResource("RectangleShape2D_4502y")
 
 [node name="Receptacle5" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="9" unique_id=2039807859 instance=ExtResource("6_by31v")]
-position = Vector2(112, 33)
+position = Vector2(219, 30)
 
 [node name="CompletePuzzle" parent="." index="2" unique_id=1933061263]
 texture = ExtResource("12_6fyv4")
