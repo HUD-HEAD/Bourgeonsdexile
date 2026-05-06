@@ -53,6 +53,7 @@ texture = ExtResource("2_7wvfg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1520303695]
 libraries/ = SubResource("AnimationLibrary_7wvfg")
+autoplay = &"default"
 
 [node name="TransitionerPassive" type="Node" parent="." unique_id=664165986 node_paths=PackedStringArray("anim_player")]
 script = ExtResource("3_7wvfg")

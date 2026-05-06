@@ -1,19 +1,69 @@
 [gd_scene format=3 uid="uid://2q3jntyih2e7"]
 
 [ext_resource type="Texture2D" uid="uid://bhjshmldoyvl4" path="res://graphics/chapter2/comics/comic4/framecontractions/a/1.png" id="2_bdcry"]
-[ext_resource type="Texture2D" uid="uid://dqr74qqcukrpi" path="res://graphics/chapter2/comics/comic4/framelastpush/full.png" id="2_df830"]
-[ext_resource type="Texture2D" uid="uid://cds3i3gb5elh1" path="res://graphics/chapter2/comics/comic4/framecontractions/cage.png" id="3_0d466"]
+[ext_resource type="Texture2D" uid="uid://dbts6ehi3jx4j" path="res://graphics/chapter2/comics/comic4/framecontractions/a/2.png" id="3_0d466"]
+[ext_resource type="Texture2D" uid="uid://qp6ypo88bgti" path="res://graphics/chapter2/comics/comic4/framecontractions/a/3.png" id="4_sqrfm"]
+[ext_resource type="Texture2D" uid="uid://bfmnhingsamnc" path="res://graphics/chapter2/comics/comic4/framecontractions/a/4.png" id="5_4sw8q"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="5_ldi3y"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="6_ry0rc"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="7_c42hg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ldi3y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bdcry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0d466")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sqrfm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4sw8q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4sw8q"]
+size = Vector2(1233, 853)
 
 [node name="Panel1" type="Node2D" unique_id=690781203]
 
-[node name="Full" type="Sprite2D" parent="." unique_id=1332004319]
-position = Vector2(1003, 22)
-texture = ExtResource("2_df830")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=78092850 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_ldi3y")
+script = ExtResource("5_ldi3y")
+clickable = NodePath("../Clickable")
 
-[node name="1" type="Sprite2D" parent="." unique_id=1536699368]
-position = Vector2(-97, 31)
+[node name="1" type="Sprite2D" parent="AnimatedSprite2D" unique_id=1753769274]
+position = Vector2(12395, 1174)
 texture = ExtResource("2_bdcry")
 
-[node name="Cage" type="Sprite2D" parent="." unique_id=542576806]
-position = Vector2(1003, 22)
+[node name="2" type="Sprite2D" parent="AnimatedSprite2D" unique_id=1871751032]
+position = Vector2(12218, 2099)
 texture = ExtResource("3_0d466")
+
+[node name="3" type="Sprite2D" parent="AnimatedSprite2D" unique_id=1297361278]
+position = Vector2(12164, 2922)
+texture = ExtResource("4_sqrfm")
+
+[node name="4" type="Sprite2D" parent="AnimatedSprite2D" unique_id=2128415404]
+position = Vector2(12008, 3869)
+texture = ExtResource("5_4sw8q")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=829802017 node_paths=PackedStringArray("clickables")]
+script = ExtResource("7_c42hg")
+clickables = [NodePath("../Clickable")]
+obstacles_to_clear = 4
+metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="Clickable" type="Area2D" parent="." unique_id=1000197226]
+script = ExtResource("6_ry0rc")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1929783327]
+position = Vector2(164.5, -1.5)
+shape = SubResource("RectangleShape2D_4sw8q")

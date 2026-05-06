@@ -8,5 +8,5 @@ func _ready() -> void:
 ##Go to next frame. If reached end of animation, disable clickable
 func _action_on_clicked():
 	frame += 1
-	if frame >= sprite_frames.get_frame_count("default") - 1:
+	if !sprite_frames.get_animation_loop("default") && frame >= sprite_frames.get_frame_count("default") - 1:
 		clickable.disable()
