@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://chrql2wwvrdt1" path="res://components/utils/puzzles/drag_drop_puzzle.gd" id="1_nrmhh"]
 [ext_resource type="PackedScene" uid="uid://b7gtx3ymyamky" path="res://components/utils/puzzles/mask_out/puzzle_piece_hollow.tscn" id="3_uye0a"]
+[ext_resource type="AudioStream" uid="uid://3ffx61j4su3a" path="res://audio/chapter1/sfx/resolve_puzzle.wav" id="5_5yh8q"]
+[ext_resource type="AudioStream" uid="uid://bj0aafjx3b0wc" path="res://audio/chapter1/sfx/puzzle_sound_1_intercalate_with_2.wav" id="6_uv6sq"]
 [ext_resource type="PackedScene" uid="uid://b15l0pq6dea3h" path="res://components/utils/puzzles/puzzle_piece_template.tscn" id="9_xasnt"]
 [ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="10_bo17s"]
 
@@ -37,6 +39,17 @@ Needed so full pieces always appear behind (masked out), even when dragged"
 [node name="CompletePuzzle" type="Sprite2D" parent="." unique_id=1665313748]
 editor_description = "Image to show when puzzle is complete. Should be at the bottom of hierarchy."
 visible = false
+
+[node name="ResolvePlayer" type="AudioStreamPlayer" parent="." unique_id=213913764]
+unique_name_in_owner = true
+stream = ExtResource("5_5yh8q")
+bus = &"Sfx"
+
+[node name="CorrectPiecePlayer" type="AudioStreamPlayer" parent="." unique_id=1277274536]
+unique_name_in_owner = true
+stream = ExtResource("6_uv6sq")
+max_polyphony = 2
+bus = &"Sfx"
 
 [editable path="BuildingBlocks/FullPieces/PuzzlePiece"]
 [editable path="BuildingBlocks/HollowPieces/PuzzlePieceHollow"]

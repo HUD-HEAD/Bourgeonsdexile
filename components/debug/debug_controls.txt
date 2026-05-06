@@ -1,0 +1,10 @@
+- Press + or - to speed up/down
+- Press N to bypass comic/obstacle/puzzle
+
+In comics :
+- 0..9 to go to panel
+
+Press C to open/hide dev console (press ESC to get out of input)
+Available commands (type then enter) :
+- reload() // reloads current scene
+- goto(<chapter>,<scene>) // go to a specific scene, example : goto(1,5)

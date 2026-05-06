@@ -1,6 +1,6 @@
 extends Clickable
 
-@export var target_scene : PackedScene
+@export_file("*.tscn") var target_scene : String
 @export var video_loop : VideoStreamPlayer
 @export var video_transition : VideoStreamPlayer
 

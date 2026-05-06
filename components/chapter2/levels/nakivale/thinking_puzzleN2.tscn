@@ -106,7 +106,7 @@ receptacle = NodePath("../../../../Receptacle4")
 shape = SubResource("CircleShape2D_npch4")
 
 [node name="Receptacle" parent="BuildingBlocks" parent_id_path=PackedInt32Array(245013489) index="2" unique_id=600273107]
-position = Vector2(0, 55)
+position = Vector2(0, -193)
 
 [node name="Receptacle5" parent="BuildingBlocks" parent_id_path=PackedInt32Array(245013489) index="3" unique_id=956440487 instance=ExtResource("11_jry32")]
 position = Vector2(0, 55)

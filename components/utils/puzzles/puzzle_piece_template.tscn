@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dt4apmm1b4e51" path="res://components/utils/puzzles/puzzle_piece.gd" id="1_jm8a2"]
 [ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="2_fv06a"]
 [ext_resource type="PackedScene" uid="uid://xyq2m2kx86ku" path="res://components/utils/puzzles/placement_checker.tscn" id="3_f1kk3"]
+[ext_resource type="Script" uid="uid://dbi6reje46na3" path="res://components/utils/puzzles/swap_sprite_on_click.gd" id="3_fv06a"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_jm8a2"]
 
@@ -19,6 +20,11 @@ script = ExtResource("2_fv06a")
 metadata/_custom_type_script = "uid://cxam1cepgkl3s"
 
 [node name="PuzzlePieceSprite" type="Sprite2D" parent="Draggable" unique_id=1266676352]
+
+[node name="PuzzlePieceSpriteOnClick" type="Sprite2D" parent="Draggable" unique_id=991932022 node_paths=PackedStringArray("clickable", "old_sprite")]
+script = ExtResource("3_fv06a")
+clickable = NodePath("..")
+old_sprite = NodePath("../PuzzlePieceSprite")
 
 [node name="PlacementChecker" parent="Draggable" unique_id=1710133272 instance=ExtResource("3_f1kk3")]
 

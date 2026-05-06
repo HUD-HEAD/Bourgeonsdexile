@@ -6,10 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://cilqgb10bxsi7" path="res://components/chapter2/characters/amani.tscn" id="6_fssrv"]
 [ext_resource type="Texture2D" uid="uid://cvt5yrsmeh3lp" path="res://graphics/chapter2/levels/goma/environment/background/gomatiled.png" id="7_a0m3u"]
 [ext_resource type="SpriteFrames" uid="uid://8wnk5pl0cnpd" path="res://components/chapter2/characters/nephew_sprite_frames.tres" id="7_mp6eu"]
-[ext_resource type="PackedScene" uid="uid://b327i7m8yo6ne" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB11.tscn" id="8_no1ee"]
-[ext_resource type="Script" uid="uid://cwo7l3tuyc7g6" path="res://components/utils/puzzles/puzzle_hide_on_complete.gd" id="9_fcmyo"]
+[ext_resource type="Texture2D" uid="uid://ia2oeqhw2g7g" path="res://graphics/chapter2/levels/goma/wheel1.png" id="8_hfpvf"]
+[ext_resource type="Texture2D" uid="uid://u3821gox51mn" path="res://graphics/chapter2/levels/goma/bodabodaman2.png" id="8_ub4v2"]
+[ext_resource type="Texture2D" uid="uid://bt4al565mnwhh" path="res://graphics/chapter2/levels/goma/wheel2.png" id="9_plsra"]
 [ext_resource type="Script" uid="uid://bjexrnveh5vkf" path="res://components/chapter2/characters/switch_char.gd" id="11_7o0y3"]
-[ext_resource type="Texture2D" uid="uid://otcno426rt0q" path="res://graphics/chapter2/levels/goma/bodabodaman.png" id="13_1fm80"]
 [ext_resource type="PackedScene" uid="uid://cur7dav6ltkqc" path="res://components/chapter2/levels/goma/drag_drop_puzzle_G1.tscn" id="15_ub4v2"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="15_xf2b4"]
 [ext_resource type="PackedScene" uid="uid://d052wlbnjxb0i" path="res://components/chapter2/levels/goma/drag_drop_puzzle_G2.tscn" id="16_hfpvf"]
@@ -22,6 +22,13 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1fm80"]
 size = Vector2(630, 566)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6b20s"]
+size = Vector2(580, 500.00006)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6b20s"]
+radius = 48.0
+height = 212.0
 
 [node name="Goma" type="Node2D" unique_id=987125979]
 
@@ -42,14 +49,138 @@ metadata/_edit_use_anchors_ = true
 texture = ExtResource("2_bing5")
 centered = false
 
-[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="Background" unique_id=1352526241]
-position = Vector2(11870, 645)
-script = ExtResource("15_xf2b4")
-next_scene = "uid://uy4d64oh4m1q"
-
 [node name="Theme" type="AudioStreamPlayer" parent="." unique_id=67967600]
 autoplay = true
 bus = &"Music"
+
+[node name="Puzzles" type="Node2D" parent="." unique_id=993684919]
+
+[node name="Puzzle1" type="Node2D" parent="Puzzles" unique_id=308709950]
+position = Vector2(1829, 0)
+
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle1" unique_id=1935316923 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+script = ExtResource("49_4l7c7")
+puzzle = NodePath("../DragDropPuzzle2")
+piece_spawners = [NodePath("../../../CharWalking/Amani/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../../../CharWalking/Amani/SpawnTrigger")
+obstacle = NodePath("../Obstacle")
+
+[node name="Obstacle" parent="Puzzles/Puzzle1" unique_id=310843140 instance=ExtResource("47_e2evj")]
+collision_mask = 2
+
+[node name="DragDropPuzzle2" parent="Puzzles/Puzzle1" unique_id=880985725 instance=ExtResource("16_hfpvf")]
+position = Vector2(291.00024, 678.00006)
+rotation = -0.05541721
+scale = Vector2(0.70000005, 0.70000005)
+
+[node name="Puzzle2" type="Node2D" parent="Puzzles" unique_id=2038391258]
+position = Vector2(2655, 0)
+
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle2" unique_id=1196394470 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+script = ExtResource("49_4l7c7")
+puzzle = NodePath("../Puzzle1")
+piece_spawners = [NodePath("../../../CharWalking/Amani/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../../../CharWalking/Amani/SpawnTrigger")
+obstacle = NodePath("../Obstacle")
+
+[node name="Obstacle" parent="Puzzles/Puzzle2" unique_id=712144152 instance=ExtResource("47_e2evj")]
+collision_mask = 2
+
+[node name="Puzzle1" parent="Puzzles/Puzzle2" unique_id=1941159865 instance=ExtResource("18_1sk7d")]
+position = Vector2(244, 581)
+scale = Vector2(0.5, 0.5)
+
+[node name="Puzzle3" type="Node2D" parent="Puzzles" unique_id=925842393]
+position = Vector2(4212, 0)
+
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle3" unique_id=551550097 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+script = ExtResource("49_4l7c7")
+puzzle = NodePath("../DragDropPuzzle")
+piece_spawners = [NodePath("../../../CharWalking/Amani/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../../../CharWalking/Amani/SpawnTrigger")
+obstacle = NodePath("../Obstacle")
+
+[node name="Obstacle" parent="Puzzles/Puzzle3" unique_id=574541075 instance=ExtResource("47_e2evj")]
+collision_mask = 2
+
+[node name="DragDropPuzzle" parent="Puzzles/Puzzle3" unique_id=1767003607 instance=ExtResource("15_ub4v2")]
+position = Vector2(376, 402)
+
+[node name="Puzzle4" type="Node2D" parent="Puzzles" unique_id=2061981925]
+position = Vector2(5612, 0)
+
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle4" unique_id=2119628063 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+script = ExtResource("49_4l7c7")
+puzzle = NodePath("../DragDropPuzzle3")
+piece_spawners = [NodePath("../../../CharWalking/Amani/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../../../CharWalking/Amani/SpawnTrigger")
+obstacle = NodePath("../Obstacle")
+
+[node name="Obstacle" parent="Puzzles/Puzzle4" unique_id=986332597 instance=ExtResource("47_e2evj")]
+collision_mask = 2
+
+[node name="DragDropPuzzle3" parent="Puzzles/Puzzle4" unique_id=1181862671 instance=ExtResource("17_plsra")]
+position = Vector2(419, 361.99997)
+scale = Vector2(0.7, 0.7)
+
+[node name="Puzzle5" type="Node2D" parent="Puzzles" unique_id=542702958]
+position = Vector2(14377, 0)
+
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle5" unique_id=125438481 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+script = ExtResource("49_4l7c7")
+puzzle = NodePath("../Puzzle2")
+piece_spawners = [NodePath("../../../BodaBodaMove/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../../../BodaBodaMove/SpawnTrigger")
+obstacle = NodePath("../Obstacle")
+
+[node name="Obstacle" parent="Puzzles/Puzzle5" unique_id=1611380976 instance=ExtResource("47_e2evj")]
+collision_mask = 2
+
+[node name="Puzzle2" parent="Puzzles/Puzzle5" unique_id=1189328132 instance=ExtResource("19_egc25")]
+position = Vector2(578, 728)
+scale = Vector2(0.9, 0.9)
+
+[node name="BodaBodaStopped" type="Area2D" parent="." unique_id=749611477]
+position = Vector2(5785, 689)
+scale = Vector2(0.4, 0.4)
+script = ExtResource("46_fm2bo")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="Bodabodaman" type="Sprite2D" parent="BodaBodaStopped" unique_id=2080153153]
+texture = ExtResource("8_ub4v2")
+
+[node name="Wheel1" type="Sprite2D" parent="BodaBodaStopped/Bodabodaman" unique_id=2082465619]
+show_behind_parent = true
+position = Vector2(-147.5, 162.50006)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("8_hfpvf")
+
+[node name="Wheel2" type="Sprite2D" parent="BodaBodaStopped/Bodabodaman" unique_id=1894226021]
+show_behind_parent = true
+position = Vector2(215, 172.50003)
+texture = ExtResource("9_plsra")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BodaBodaStopped" unique_id=1510371182]
+position = Vector2(7, 22)
+shape = SubResource("RectangleShape2D_1fm80")
+
+[node name="BodaBodaMove" parent="." unique_id=925815680 instance=ExtResource("5_qc0ah")]
+position = Vector2(5792, 687)
+scale = Vector2(0.4, 0.4)
+move_speed = 800.0
+
+[node name="MarkerBubbleSpawn" type="Marker2D" parent="BodaBodaMove" unique_id=1504323811]
+position = Vector2(82, -228)
+
+[node name="SpawnTrigger" type="Area2D" parent="BodaBodaMove" unique_id=971192727]
+position = Vector2(5, -142)
+script = ExtResource("46_fm2bo")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BodaBodaMove/SpawnTrigger" unique_id=565142312]
+position = Vector2(-10, 159.5)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_6b20s")
 
 [node name="CharWalking" type="Node2D" parent="." unique_id=304248373]
 
@@ -63,81 +194,33 @@ position = Vector2(20, -220)
 position = Vector2(0, -300)
 offset = Vector2(500, 0)
 
+[node name="SpawnTrigger" type="Area2D" parent="CharWalking/Amani" unique_id=1016316691]
+position = Vector2(5, -142)
+script = ExtResource("46_fm2bo")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharWalking/Amani/SpawnTrigger" unique_id=888895842]
+position = Vector2(0, 37)
+shape = SubResource("CapsuleShape2D_6b20s")
+
 [node name="Companion" parent="CharWalking" unique_id=426633640 node_paths=PackedStringArray("model") instance=ExtResource("6_bing5")]
 position = Vector2(571, 839)
 model = NodePath("../Amani")
+offset_from_model = 0.0
 
 [node name="AnimSprite" parent="CharWalking/Companion" index="0" unique_id=689873547]
 sprite_frames = ExtResource("7_mp6eu")
 
-[node name="Clickable" type="Area2D" parent="CharWalking" unique_id=749611477]
-position = Vector2(6285, 689)
-scale = Vector2(0.4, 0.4)
-script = ExtResource("46_fm2bo")
-metadata/_custom_type_script = "uid://ba2byqse4kn1f"
-
-[node name="Bodabodaman" type="Sprite2D" parent="CharWalking/Clickable" unique_id=2080153153]
-texture = ExtResource("13_1fm80")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharWalking/Clickable" unique_id=1510371182]
-position = Vector2(7, 22)
-shape = SubResource("RectangleShape2D_1fm80")
-
-[node name="PuzzlePlaceholder" type="Node2D" parent="." unique_id=731877829]
-position = Vector2(5899, -3)
-
-[node name="DragDropPuzzle11" parent="PuzzlePlaceholder" unique_id=839630799 instance=ExtResource("8_no1ee")]
-position = Vector2(135, 375)
-
-[node name="HideOnComplete" type="Node" parent="PuzzlePlaceholder/DragDropPuzzle11" unique_id=2117936303]
-script = ExtResource("9_fcmyo")
-
-[node name="PuzzleSpawner" type="Node" parent="PuzzlePlaceholder" unique_id=1518624816 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
-script = ExtResource("49_4l7c7")
-puzzle = NodePath("../DragDropPuzzle11")
-piece_spawners = [NodePath("../../CharWalking/Amani/MarkerBubbleSpawn")]
-spawn_trigger = NodePath("../../CharWalking/Clickable")
-obstacle = NodePath("../Obstacle")
-
-[node name="Obstacle" parent="PuzzlePlaceholder" unique_id=310843140 instance=ExtResource("47_e2evj")]
-position = Vector2(-108, -1)
-collision_mask = 2
-
-[node name="BodaBoda" parent="." unique_id=925815680 instance=ExtResource("5_qc0ah")]
-position = Vector2(6292, 687)
-scale = Vector2(0.4, 0.4)
-move_speed = 800.0
-
-[node name="MarkerBubbleSpawn" type="Marker2D" parent="BodaBoda" unique_id=1504323811]
-position = Vector2(82, -228)
-
 [node name="CharSwitcher" type="Node" parent="." unique_id=1111871830 node_paths=PackedStringArray("puzzle_trigger", "char_to_disable", "char_to_enable", "camera_to_reparent")]
 script = ExtResource("11_7o0y3")
-puzzle_trigger = NodePath("../PuzzlePlaceholder/DragDropPuzzle11")
+puzzle_trigger = NodePath("../Puzzles/Puzzle4/DragDropPuzzle3")
 char_to_disable = NodePath("../CharWalking")
-char_to_enable = NodePath("../BodaBoda")
+char_to_enable = NodePath("../BodaBodaMove")
 camera_to_reparent = NodePath("../CharWalking/Amani/Camera2D")
 
-[node name="Puzzles" type="Node" parent="." unique_id=1149224813]
-
-[node name="DragDropPuzzle" parent="Puzzles" unique_id=1767003607 instance=ExtResource("15_ub4v2")]
-position = Vector2(4588, 402)
-
-[node name="DragDropPuzzle2" parent="Puzzles" unique_id=880985725 instance=ExtResource("16_hfpvf")]
-position = Vector2(2120.0002, 678.00006)
-rotation = -0.05541721
-scale = Vector2(0.70000005, 0.70000005)
-
-[node name="DragDropPuzzle3" parent="Puzzles" unique_id=1181862671 instance=ExtResource("17_plsra")]
-position = Vector2(6031, 361.99997)
-scale = Vector2(0.7, 0.7)
-
-[node name="Puzzle1" parent="Puzzles" unique_id=1941159865 instance=ExtResource("18_1sk7d")]
-position = Vector2(2899, 581)
-scale = Vector2(0.5, 0.5)
-
-[node name="Puzzle2" parent="Puzzles" unique_id=1189328132 instance=ExtResource("19_egc25")]
-position = Vector2(7928, 728)
-scale = Vector2(0.9, 0.9)
+[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1352526241]
+position = Vector2(19842, 645)
+script = ExtResource("15_xf2b4")
+next_scene = "uid://uy4d64oh4m1q"
 
 [editable path="CharWalking/Companion"]
