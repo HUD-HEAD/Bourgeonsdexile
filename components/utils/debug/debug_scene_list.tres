@@ -1,9 +1,0 @@
-[gd_resource type="Resource" format=3 uid="uid://dxn857ctgrgmu"]
-
-[sub_resource type="GDScript" id="GDScript_xitg3"]
-script/source = "@export_file(\"*.tscn\") var ordered_scene_list : Array[String]
-"
-
-[resource]
-script = SubResource("GDScript_xitg3")
-ordered_scene_list = Array[String](["uid://ctau0miqtmbj2", "uid://cpvf5agmemtpm", "uid://du7xk8lrsn7at", "uid://s3spdg0qqc77", "uid://djv5fkem5af34", "uid://cjq4fleiu5245", "uid://deifii0sv125i", "uid://d2f3ss3fi8c52", "uid://c0cewrgpnckyx"])
