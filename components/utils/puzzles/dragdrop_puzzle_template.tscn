@@ -17,10 +17,11 @@ editor_description = "Outline hint of puzzle. Should be at the top of hierarchy.
 
 [node name="BuildingBlocks" type="Node2D" parent="." unique_id=1654234455]
 editor_description = "Helper ode to hold children. Duplicate as many PuzzlePiece and Receptacles as needed for complete puzzle."
+z_index = 1
 
 [node name="PuzzlePiece" parent="BuildingBlocks" unique_id=1667760579 instance=ExtResource("2_wx184")]
 
-[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="2" unique_id=1105802255]
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="3" unique_id=1105802255]
 shape = null
 
 [node name="Receptacle" parent="BuildingBlocks" unique_id=1559191435 instance=ExtResource("3_2pncr")]
