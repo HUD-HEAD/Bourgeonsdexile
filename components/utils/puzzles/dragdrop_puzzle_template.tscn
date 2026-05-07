@@ -20,7 +20,7 @@ editor_description = "Helper ode to hold children. Duplicate as many PuzzlePiece
 
 [node name="PuzzlePiece" parent="BuildingBlocks" unique_id=1667760579 instance=ExtResource("2_wx184")]
 
-[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="2" unique_id=1105802255]
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="3" unique_id=1105802255]
 shape = null
 
 [node name="Receptacle" parent="BuildingBlocks" unique_id=1559191435 instance=ExtResource("3_2pncr")]
