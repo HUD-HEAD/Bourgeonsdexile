@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://uvnjax3rlypo"]
+
+[ext_resource type="Texture2D" uid="uid://idltyximbp8x" path="res://graphics/chapter3/comics/comic1/frameflush/flush1.png" id="1_xj76b"]
+
+[node name="PanelDoctors" type="Node2D" unique_id=162787811]
+
+[node name="Flush1" type="Sprite2D" parent="." unique_id=1843566018]
+position = Vector2(2, 4)
+texture = ExtResource("1_xj76b")
