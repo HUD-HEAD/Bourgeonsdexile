@@ -2,12 +2,19 @@
 
 [ext_resource type="Texture2D" uid="uid://bhq3t776vxuua" path="res://graphics/menus/settings/bg.png" id="1_hayap"]
 [ext_resource type="Script" uid="uid://doyit1ix46wxc" path="res://components/settings_menu.gd" id="1_s2d1y"]
+[ext_resource type="Texture2D" uid="uid://dvng8klu0ad87" path="res://graphics/menus/settings/3731553(1).png" id="3_eoonq"]
 [ext_resource type="Texture2D" uid="uid://c1iqfkuqt2r1y" path="res://graphics/menus/main_menu/exit.png" id="3_ojvp1"]
 [ext_resource type="Texture2D" uid="uid://cvtb8wmlqt5b6" path="res://graphics/ui/cursor/fullarrow.png" id="4_jjfif"]
+[ext_resource type="Texture2D" uid="uid://cjsyt0okg52g" path="res://graphics/menus/settings/2618245(1).png" id="4_mcc4n"]
 [ext_resource type="Texture2D" uid="uid://dc4i41usoc6sh" path="res://graphics/menus/settings/Speaker_Icon.png" id="5_kffdn"]
 [ext_resource type="Texture2D" uid="uid://busnuhpu0h7gn" path="res://graphics/menus/settings/music-note-icon-33(1).png" id="6_qnuys"]
+[ext_resource type="Texture2D" uid="uid://csend6v51l6a2" path="res://graphics/menus/settings/8373465(1).png" id="9_muhwa"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g67jo"]
+texture = ExtResource("3_eoonq")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eoonq"]
+texture = ExtResource("4_mcc4n")
 
 [node name="SettingsMenu" type="CanvasLayer" unique_id=1434209501]
 script = ExtResource("1_s2d1y")
@@ -51,25 +58,27 @@ offset_bottom = 586.0
 
 [node name="CreditsButton" type="Button" parent="TextureRect" unique_id=203228299]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -145.0
-offset_top = 292.0
-offset_right = 145.0
-offset_bottom = 347.0
+anchor_bottom = 1.0
+offset_left = -47.99994
+offset_top = -229.0
+offset_right = 242.0
+offset_bottom = -174.0
 grow_horizontal = 2
-grow_vertical = 2
-text = "CREDITS"
+grow_vertical = 0
+scale = Vector2(0.30348566, 1.5538473)
+theme_override_styles/normal = SubResource("StyleBoxTexture_g67jo")
 
 [node name="ResetButton" type="Button" parent="TextureRect" unique_id=1603561297]
 layout_mode = 0
-offset_left = 1702.0
-offset_top = 49.0
-offset_right = 1867.0
-offset_bottom = 106.0
+offset_left = 1782.0
+offset_top = 42.0
+offset_right = 1947.0
+offset_bottom = 99.0
+scale = Vector2(0.5487999, 1.4488319)
 theme_override_styles/normal = SubResource("StyleBoxTexture_eoonq")
 
 [node name="CloseButton" type="Button" parent="TextureRect" unique_id=1562362018]
@@ -215,11 +224,16 @@ scale = Vector2(0.038499657, 0.038499657)
 texture = ExtResource("5_kffdn")
 
 [node name="MusicNoteIcon33(1)" type="Sprite2D" parent="." unique_id=1662479999]
-position = Vector2(1163, 444.99997)
-scale = Vector2(0.08000489, 0.08000489)
+position = Vector2(1166.0001, 443)
+scale = Vector2(0.1161744, 0.1161744)
 texture = ExtResource("6_qnuys")
 
 [node name="MusicNoteIcon33(1)2" type="Sprite2D" parent="." unique_id=631371781]
 position = Vector2(713, 444.99997)
 scale = Vector2(0.08000489, 0.08011586)
 texture = ExtResource("6_qnuys")
+
+[node name="8373465(1)" type="Sprite2D" parent="." unique_id=717213176]
+position = Vector2(818.00006, 570)
+scale = Vector2(0.1611012, 0.1611012)
+texture = ExtResource("9_muhwa")

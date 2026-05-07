@@ -175,10 +175,7 @@ show_behind_parent = false
 position = Vector2(383, 148)
 texture = ExtResource("6_0x0y1")
 
-[node name="Area2D" parent="Bus" index="1" unique_id=1622822538]
-input_pickable = false
-
-[node name="CollisionShape2D" parent="Bus/Area2D" index="0" unique_id=450716263]
+[node name="CollisionShape2D" parent="Bus/Area2D" parent_id_path=PackedInt32Array(925815680, 1622822538) index="0" unique_id=450716263]
 position = Vector2(-49.5, 143.5)
 shape = SubResource("RectangleShape2D_uu4gm")
 
