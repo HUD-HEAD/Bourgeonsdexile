@@ -16,8 +16,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if drag_rotate.dragging :
 		var added_radius = drag_rotate.target_rotation * growth_factor
-		#circle.radius = lerpf(circle.radius, circle.radius + added_radius, 1.0)
-		circle.radius += added_radius
+		circle.radius = clampf(circle.radius + added_radius, min_radius, max_radius)
 		
 		handle.position.y = circle.radius
 		
