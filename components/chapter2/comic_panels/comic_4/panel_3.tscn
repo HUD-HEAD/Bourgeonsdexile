@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bj6eeosevnufd" path="res://graphics/chapter2/comics/comic4/framedoctorcalling/1.png" id="1_kdjn7"]
 [ext_resource type="Texture2D" uid="uid://c55w77qqpvou1" path="res://graphics/chapter2/comics/comic4/framedoctorcalling/2.png" id="2_6bohn"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="3_al3bp"]
-[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="3_xybbn"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="3_xybbn"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_gfe7y"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xybbn"]

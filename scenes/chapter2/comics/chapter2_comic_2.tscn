@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://c4wqbvxsrfu6w" path="res://components/chapter2/comic_panels/comic_2/panel_10.tscn" id="17_r0851"]
 [ext_resource type="PackedScene" uid="uid://d2qo4f5ma1kpv" path="res://components/chapter2/comic_panels/comic_2/panel_11.tscn" id="18_pnlo7"]
 [ext_resource type="PackedScene" uid="uid://bvpayxtg8pgtw" path="res://components/chapter2/comic_panels/comic_2/panel_16.tscn" id="19_2ahw6"]
-[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="19_5ylu8"]
+[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="19_5ylu8"]
 [ext_resource type="PackedScene" uid="uid://cse4dme0xetc3" path="res://components/chapter2/comic_panels/comic_2/panel_12.tscn" id="19_hkqs5"]
 [ext_resource type="PackedScene" uid="uid://duvxs2qfj8pfu" path="res://components/chapter2/comic_panels/comic_2/panel_14.tscn" id="20_ukg44"]
 [ext_resource type="PackedScene" uid="uid://dyu4nfimcgrb" path="res://components/chapter2/comic_panels/comic_2/panel_13.tscn" id="21_0qtw2"]

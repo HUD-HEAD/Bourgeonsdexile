@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://c7of5l5s248sl"]
+
+[ext_resource type="Script" uid="uid://byyj2i6spyg7m" path="res://components/utils/mechanics/circle.gd" id="1_ad4nm"]
+[ext_resource type="Script" uid="uid://bg724te3661tt" path="res://components/utils/mechanics/draggable_rotate.gd" id="2_1d8av"]
+[ext_resource type="Script" uid="uid://cs2pc6hyqcdl4" path="res://components/chapter2/contractions/contraction_circle/contraction_circle.gd" id="3_3vlrm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3vlrm"]
+
+[node name="ContractionCircle" type="Node2D" unique_id=1677856602 node_paths=PackedStringArray("circle", "handle", "drag_rotate")]
+script = ExtResource("3_3vlrm")
+circle = NodePath("WideCircle")
+handle = NodePath("DraggableRotate/CollisionShape2D")
+drag_rotate = NodePath("DraggableRotate")
+
+[node name="WideCircle" type="Node2D" parent="." unique_id=1957093585]
+script = ExtResource("1_ad4nm")
+filled = false
+width = 5.0
+
+[node name="DraggableRotate" type="Area2D" parent="." unique_id=379520210]
+script = ExtResource("2_1d8av")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DraggableRotate" unique_id=568618967]
+position = Vector2(0, 100)
+shape = SubResource("CircleShape2D_3vlrm")
+
+[node name="CircleToHold" type="Node2D" parent="DraggableRotate/CollisionShape2D" unique_id=1225491168]
+script = ExtResource("1_ad4nm")
+radius = 10.0

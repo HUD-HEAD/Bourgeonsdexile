@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bh71obal50vx8" path="res://graphics/chapter1/comics/comic4/framphonecomic4/5.png" id="6_olm8x"]
 [ext_resource type="Texture2D" uid="uid://cxq1cmpf2swo5" path="res://graphics/chapter1/comics/comic4/framphonecomic4/6.png" id="7_yo64q"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="8_mwl3t"]
-[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="9_n0wu7"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="9_n0wu7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jjqx6"]
 animations = [{

@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://ct7nfyek8i1le"]
 
-[ext_resource type="Shader" uid="uid://cbk3sn8e1flb4" path="res://scenes/prototyping/contraction/contraction_demo2.gdshader" id="1_glf38"]
+[ext_resource type="Shader" uid="uid://cbk3sn8e1flb4" path="res://components/chapter2/contractions/contraction_wobble/contraction_demo2.gdshader" id="1_glf38"]
 
 [resource]
 shader = ExtResource("1_glf38")

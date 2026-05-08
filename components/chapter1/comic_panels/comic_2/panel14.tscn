@@ -92,7 +92,7 @@
 [ext_resource type="Texture2D" uid="uid://3d4j8eqoo3cl" path="res://graphics/chapter1/comics/comic2/anim_belly/belly_0088.png" id="91_xesuh"]
 [ext_resource type="Texture2D" uid="uid://xko68ma5i7vf" path="res://graphics/chapter1/comics/comic2/anim_belly/belly_0089.png" id="92_ol4ry"]
 [ext_resource type="Texture2D" uid="uid://bkmtnhq7fokrd" path="res://graphics/chapter1/comics/comic2/anim_belly/belly_0090.png" id="93_ph8o6"]
-[ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/click_enable.gd" id="94_ibni5"]
+[ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/mechanics/click_enable.gd" id="94_ibni5"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="95_fsc76"]
 [ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/PlayOnClick.tscn" id="96_uqd7o"]
 [ext_resource type="AudioStream" uid="uid://defk636bejrmt" path="res://audio/chapter1/ambient/panel_section_2/panel_2.15_heart_sound.wav" id="96_x3fel"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://kqn8hqak4g04"]
 
 [ext_resource type="Texture2D" uid="uid://bjubmhl7oianm" path="res://graphics/chapter1/comics/comic4/framemusic/musicpause.png" id="1_0n14a"]
-[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/click_hide.gd" id="2_sj13u"]
+[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/mechanics/click_hide.gd" id="2_sj13u"]
 [ext_resource type="Texture2D" uid="uid://dv2lj0r5nf3q5" path="res://graphics/chapter1/comics/comic4/framemusic/musicplay.png" id="3_xl3h6"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_xl3h6"]
 [ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/PlayOnClick.tscn" id="5_17e6c"]

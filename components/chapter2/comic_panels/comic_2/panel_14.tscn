@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bvpltrwv48itn" path="res://graphics/chapter2/comics/comic2/framequeuewc/queue1.png" id="1_bjf02"]
 [ext_resource type="Texture2D" uid="uid://dij7rjqdg4gt8" path="res://graphics/chapter2/comics/comic2/framequeuewc/queue2.png" id="2_vt8ss"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="3_shqb5"]
-[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="4_jsic2"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="4_jsic2"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_lexxo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_or1kp"]

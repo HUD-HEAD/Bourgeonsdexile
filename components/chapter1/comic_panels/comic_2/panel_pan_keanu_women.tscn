@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b5r5lde3mml06"]
 
 [ext_resource type="Texture2D" uid="uid://b2x2nw4smvshs" path="res://graphics/chapter1/comics/comic2/frame8.5/pan8.5.png" id="1_n3o7d"]
-[ext_resource type="Script" uid="uid://bgpah31hretcf" path="res://components/utils/pan_node.gd" id="2_koblt"]
+[ext_resource type="Script" uid="uid://bgpah31hretcf" path="res://components/utils/mechanics/pan_node.gd" id="2_koblt"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="3_qnwsa"]
 
 [node name="PanelPanKeanuWomen" type="Node2D" unique_id=125241824]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c3d4qbohmxv4v"]
 
-[ext_resource type="Script" path="res://components/utils/scene_transition.gd" id="1_oafg1"]
+[ext_resource type="Script" uid="uid://df43wfssh8ivb" path="res://components/utils/mechanics/scene_transition.gd" id="1_oafg1"]
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_tbh28"]
 
 [node name="SceneTransition" type="Node2D" unique_id=120413543 node_paths=PackedStringArray("progress_bar")]

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dgtdec6plyyvf" path="res://graphics/chapter1/comics/comic2/frame4/keanu_saying_no2.png" id="3_mrifc"]
 [ext_resource type="Texture2D" uid="uid://s0kowkp2sk5k" path="res://graphics/chapter1/comics/comic2/frame4/hand_money.png" id="3_nn1u6"]
 [ext_resource type="Script" uid="uid://001fo68fi8nn" path="res://components/utils/puzzles/draggable_restricted.gd" id="4_mrifc"]
-[ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/area_entered_enable.gd" id="6_mrifc"]
+[ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/mechanics/area_entered_enable.gd" id="6_mrifc"]
 [ext_resource type="AudioStream" uid="uid://dmnso58c8x5t8" path="res://audio/chapter1/ambient/panel_section_2/panel_2.4_mmm_man_sound.wav" id="7_lgclf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lgclf"]

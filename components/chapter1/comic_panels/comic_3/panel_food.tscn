@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bp16hkt28o6tp"]
 
-[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="1_5aap7"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="1_5aap7"]
 [ext_resource type="Texture2D" uid="uid://4s5x4kbwruk7" path="res://graphics/chapter1/comics/comic3/frame_food/plate1/plate1_1.png" id="2_5aap7"]
 [ext_resource type="Texture2D" uid="uid://g8fw5sbl0wr3" path="res://graphics/chapter1/comics/comic3/frame_food/plate1/plate1_3.png" id="4_gbt7i"]
 [ext_resource type="Texture2D" uid="uid://dawm2wpn3s1tu" path="res://graphics/chapter1/comics/comic3/frame_food/plate1/plate1_5.png" id="6_gyjp6"]
@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dbwmkpn5luvtl" path="res://graphics/chapter1/comics/comic3/frame_food/plate2/plate2_1.png" id="13_4npjt"]
 [ext_resource type="Texture2D" uid="uid://drnnvwjl23yyn" path="res://graphics/chapter1/comics/comic3/frame_food/pramefood_noplates.png" id="13_ear0j"]
 [ext_resource type="Texture2D" uid="uid://dsvgbf4747ryv" path="res://graphics/chapter1/comics/comic3/frame_food/plate2/plate2_3.png" id="15_n4mpm"]
-[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/click_hide.gd" id="17_4r3bi"]
+[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/mechanics/click_hide.gd" id="17_4r3bi"]
 [ext_resource type="Texture2D" uid="uid://dftpkro0gmmv8" path="res://graphics/chapter1/comics/comic3/frame_food/plate2/plate2_5.png" id="17_hlfp0"]
 [ext_resource type="Texture2D" uid="uid://b7lfvoqgxd3nn" path="res://graphics/chapter1/comics/comic3/frame_food/plate2/plate2_6.png" id="18_c8x4o"]
 

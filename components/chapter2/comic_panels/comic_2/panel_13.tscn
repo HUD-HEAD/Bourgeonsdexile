@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dyu4nfimcgrb"]
 
-[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="1_8hb5f"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="1_8hb5f"]
 [ext_resource type="Texture2D" uid="uid://cqliswr4xjwfe" path="res://graphics/chapter2/comics/comic2/framepee/2.png" id="1_pfp4o"]
 [ext_resource type="Texture2D" uid="uid://bbqbtap7w6iby" path="res://graphics/chapter2/comics/comic2/framepee/1.png" id="2_pebdq"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="4_pebdq"]

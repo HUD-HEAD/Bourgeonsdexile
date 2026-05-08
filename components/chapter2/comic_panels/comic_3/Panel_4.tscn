@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dhbu7hcqlcfsx" path="res://graphics/chapter2/comics/comic3/framewaterbottle/2.png" id="2_wqtl2"]
 [ext_resource type="Texture2D" uid="uid://tei1lmos4qvw" path="res://graphics/chapter2/comics/comic3/framewaterbottle/3.png" id="3_a7tn4"]
 [ext_resource type="Texture2D" uid="uid://bow52bebaw302" path="res://graphics/chapter2/comics/comic3/framewaterbottle/4.png" id="4_fjj5u"]
-[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="5_a7tn4"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="5_a7tn4"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="5_fjj5u"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="7_m57by"]
 

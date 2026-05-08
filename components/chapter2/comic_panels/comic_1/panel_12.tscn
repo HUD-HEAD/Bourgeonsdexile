@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://fyb4s2qheoqv" path="res://graphics/chapter2/comics/comic1/framehands/hand2.png" id="2_y7234"]
 [ext_resource type="Texture2D" uid="uid://c8i3jpv4ms4xn" path="res://graphics/chapter2/comics/comic1/framehands/hand1.png" id="3_6w7me"]
 [ext_resource type="Script" uid="uid://001fo68fi8nn" path="res://components/utils/puzzles/draggable_restricted.gd" id="4_tu3wo"]
-[ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/area_entered_enable.gd" id="5_me28v"]
+[ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/mechanics/area_entered_enable.gd" id="5_me28v"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="7_r2vlp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y7234"]

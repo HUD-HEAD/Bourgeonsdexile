@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://byqcyeatrdsop" path="res://graphics/chapter1/comics/comic4/frameticket/ticket.png" id="2_4elbd"]
 [ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="3_u1nb2"]
 [ext_resource type="Texture2D" uid="uid://bmhc067bx3v7w" path="res://graphics/chapter1/comics/comic4/frameticket/hand2.png" id="4_8q1kj"]
-[ext_resource type="Script" uid="uid://k1aavhe2a3rv" path="res://components/utils/area_entered_transition.gd" id="5_u1nb2"]
+[ext_resource type="Script" uid="uid://k1aavhe2a3rv" path="res://components/utils/mechanics/area_entered_transition.gd" id="5_u1nb2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u1nb2"]
 size = Vector2(340.04868, 390.23834)
