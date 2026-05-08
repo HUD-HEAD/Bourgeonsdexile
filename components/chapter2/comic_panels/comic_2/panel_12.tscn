@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://cfcu2fjchmlbr" path="res://graphics/chapter2/comics/comic2/framebusarriving/bg.png" id="1_4rdac"]
 [ext_resource type="Texture2D" uid="uid://bu6ajmingmkqc" path="res://graphics/chapter2/comics/comic2/framebussection/outside.png" id="2_7wvfg"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="3_7wvfg"]
+[ext_resource type="Material" uid="uid://dan4raduiqle3" path="res://scenes/prototyping/lut/mat_lut_nightcamp.tres" id="4_m2n67"]
+[ext_resource type="Script" uid="uid://bxdi7w06ul2j0" path="res://components/utils/comics/pan_modulate.gd" id="6_0bv3e"]
 
 [sub_resource type="Animation" id="Animation_7wvfg"]
 length = 0.001
@@ -62,3 +64,10 @@ metadata/_custom_type_script = "uid://u4636s8oa5d0"
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=333128753]
 rect = Rect2(-786, -10, 1597, 178)
+
+[node name="OverlayNight" type="Sprite2D" parent="." unique_id=1459165765 node_paths=PackedStringArray("node_to_enable")]
+material = ExtResource("4_m2n67")
+texture = ExtResource("1_4rdac")
+script = ExtResource("6_0bv3e")
+sensitivity = 0.001
+node_to_enable = NodePath("../AnimationPlayer")

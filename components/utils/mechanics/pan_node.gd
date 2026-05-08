@@ -1,4 +1,4 @@
-extends Node2D
+class_name PanNode extends Node2D
 
 @export var sensitivity : float = 1.0
 
