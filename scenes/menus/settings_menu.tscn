@@ -1,0 +1,239 @@
+[gd_scene format=3 uid="uid://dg7aq6ltkjsiy"]
+
+[ext_resource type="Texture2D" uid="uid://bhq3t776vxuua" path="res://graphics/menus/settings/bg.png" id="1_hayap"]
+[ext_resource type="Script" uid="uid://doyit1ix46wxc" path="res://components/settings_menu.gd" id="1_s2d1y"]
+[ext_resource type="Texture2D" uid="uid://dvng8klu0ad87" path="res://graphics/menus/settings/3731553(1).png" id="3_eoonq"]
+[ext_resource type="Texture2D" uid="uid://c1iqfkuqt2r1y" path="res://graphics/menus/main_menu/exit.png" id="3_ojvp1"]
+[ext_resource type="Texture2D" uid="uid://cvtb8wmlqt5b6" path="res://graphics/ui/cursor/fullarrow.png" id="4_jjfif"]
+[ext_resource type="Texture2D" uid="uid://cjsyt0okg52g" path="res://graphics/menus/settings/2618245(1).png" id="4_mcc4n"]
+[ext_resource type="Texture2D" uid="uid://dc4i41usoc6sh" path="res://graphics/menus/settings/Speaker_Icon.png" id="5_kffdn"]
+[ext_resource type="Texture2D" uid="uid://busnuhpu0h7gn" path="res://graphics/menus/settings/music-note-icon-33(1).png" id="6_qnuys"]
+[ext_resource type="Texture2D" uid="uid://csend6v51l6a2" path="res://graphics/menus/settings/8373465(1).png" id="9_muhwa"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g67jo"]
+texture = ExtResource("3_eoonq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eoonq"]
+texture = ExtResource("4_mcc4n")
+
+[node name="SettingsMenu" type="CanvasLayer" unique_id=1434209501]
+script = ExtResource("1_s2d1y")
+metadata/_edit_vertical_guides_ = [427.0, 1148.0, 1185.0]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=883287778]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_hayap")
+
+[node name="MusicSlider" type="HSlider" parent="TextureRect" unique_id=1162297971]
+layout_mode = 0
+offset_left = 734.0
+offset_top = 300.0
+offset_right = 1133.0
+offset_bottom = 316.0
+
+[node name="SFXSlider" type="HSlider" parent="TextureRect" unique_id=178834463]
+layout_mode = 0
+offset_left = 734.0
+offset_top = 436.0
+offset_right = 1133.0
+offset_bottom = 452.0
+
+[node name="CursorSlide" type="HSlider" parent="TextureRect" unique_id=1622674374]
+layout_mode = 0
+offset_left = 735.0
+offset_top = 689.0
+offset_right = 1134.0
+offset_bottom = 705.0
+
+[node name="FullscreenCheck" type="CheckBox" parent="TextureRect" unique_id=2048386531]
+layout_mode = 0
+offset_left = 740.0
+offset_top = 562.0
+offset_right = 764.0
+offset_bottom = 586.0
+
+[node name="CreditsButton" type="Button" parent="TextureRect" unique_id=203228299]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -47.99994
+offset_top = -229.0
+offset_right = 242.0
+offset_bottom = -174.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.30348566, 1.5538473)
+theme_override_styles/normal = SubResource("StyleBoxTexture_g67jo")
+
+[node name="ResetButton" type="Button" parent="TextureRect" unique_id=1603561297]
+layout_mode = 0
+offset_left = 1782.0
+offset_top = 42.0
+offset_right = 1947.0
+offset_bottom = 99.0
+scale = Vector2(0.5487999, 1.4488319)
+theme_override_styles/normal = SubResource("StyleBoxTexture_eoonq")
+
+[node name="CloseButton" type="Button" parent="TextureRect" unique_id=1562362018]
+layout_mode = 0
+offset_left = 1794.0
+offset_top = 966.0
+offset_right = 1879.0
+offset_bottom = 1047.0
+icon = ExtResource("3_ojvp1")
+
+[node name="Music" type="Label" parent="TextureRect" unique_id=706834585]
+visible = false
+layout_mode = 0
+offset_left = 1174.0
+offset_top = 293.0
+offset_right = 1220.0
+offset_bottom = 316.0
+text = "Music"
+
+[node name="SFX" type="Label" parent="TextureRect" unique_id=1330026620]
+visible = false
+layout_mode = 0
+offset_left = 1174.0
+offset_top = 430.0
+offset_right = 1220.0
+offset_bottom = 453.0
+text = "SFX"
+
+[node name="MOUSE" type="Label" parent="TextureRect" unique_id=1267171755]
+visible = false
+layout_mode = 0
+offset_left = 1174.0
+offset_top = 680.0
+offset_right = 1231.0
+offset_bottom = 703.0
+text = "MOUSE"
+
+[node name="Fullscreen" type="Label" parent="TextureRect" unique_id=737170630]
+visible = false
+layout_mode = 0
+offset_left = 779.0
+offset_top = 559.0
+offset_right = 881.0
+offset_bottom = 582.0
+text = "FULL SCREEN"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TextureRect" unique_id=1658886980]
+visible = false
+layout_mode = 0
+offset_right = 426.0
+offset_bottom = 1748.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/ScrollContainer" unique_id=1987576778]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TextureRect/ScrollContainer/VBoxContainer" unique_id=675914694]
+layout_mode = 2
+text = "BOURGEONS D'EXIL
+
+Creative Director
+Aida Navarro Redon
+
+Illustrator
+Juana Miquel
+
+Animator & Designer
+Leonie Courbat
+
+Programmer
+Claire Delhomme
+
+Sound Designer
+Adina Garcia
+
+Testimonial Coordinator & Mental Health Counselor
+Swann Pichon
+
+Researcher & Consultant
+Nora Dukkali
+
+Gynaecological Advisor
+Caroline Bensky
+
+Midwife Advisor
+Caterina Montagnoli
+
+─────────────────────
+
+This project has been funded by HES-SO Innovation Grant
+and developed at HEAD–Genève with the invaluable collaboration of:
+
+Anthony Masure
+Research Director
+
+Christelle Granite-Nobles
+Secretary of the Research Direction
+
+HEdS
+
+─────────────────────
+
+This game is part of the FNS project
+The Future of Humanitarian Design
+Architecture Group coordinated by:
+
+Javier Fernandez Contreras
+
+─────────────────────
+
+Partners
+
+ICRC — VR Lab
+Melissa Kiehl, Project Manager
+
+Museum of the Red Cross and Red Crescent
+Pascal Husmith, Director
+
+─────────────────────
+
+With the collaboration of:
+
+HUG — Hôpitaux Universitaires de Genève
+ONG GEFAM"
+
+[node name="Fullarrow" type="Sprite2D" parent="." unique_id=805790660]
+position = Vector2(1166, 695)
+scale = Vector2(0.71875, 0.6481482)
+texture = ExtResource("4_jjfif")
+
+[node name="Fullarrow2" type="Sprite2D" parent="." unique_id=513947167]
+position = Vector2(713, 699)
+scale = Vector2(0.359375, 0.39814767)
+texture = ExtResource("4_jjfif")
+
+[node name="SpeakerIcon" type="Sprite2D" parent="." unique_id=1408104159]
+position = Vector2(1166, 308)
+scale = Vector2(0.07849965, 0.07849965)
+texture = ExtResource("5_kffdn")
+
+[node name="SpeakerIcon2" type="Sprite2D" parent="." unique_id=557342422]
+position = Vector2(716, 309)
+scale = Vector2(0.038499657, 0.038499657)
+texture = ExtResource("5_kffdn")
+
+[node name="MusicNoteIcon33(1)" type="Sprite2D" parent="." unique_id=1662479999]
+position = Vector2(1166.0001, 443)
+scale = Vector2(0.1161744, 0.1161744)
+texture = ExtResource("6_qnuys")
+
+[node name="MusicNoteIcon33(1)2" type="Sprite2D" parent="." unique_id=631371781]
+position = Vector2(713, 444.99997)
+scale = Vector2(0.08000489, 0.08011586)
+texture = ExtResource("6_qnuys")
+
+[node name="8373465(1)" type="Sprite2D" parent="." unique_id=717213176]
+position = Vector2(818.00006, 570)
+scale = Vector2(0.1611012, 0.1611012)
+texture = ExtResource("9_muhwa")

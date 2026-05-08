@@ -20,7 +20,7 @@ func _buttons_connect():
 
 ## Open settings
 func _on_settings_pressed():
-	pass
+	SceneManager.open_settings()
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event.is_action_pressed("exit"):

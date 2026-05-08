@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://coloiobyvwn8w"]
+
+[ext_resource type="Texture2D" uid="uid://brsnb1okkyhkh" path="res://graphics/chapter3/comics/comic1/framebabyonzlata/1.png" id="1_gd65n"]
+
+[node name="PanelDoctors" type="Node2D" unique_id=162787811]
+
+[node name="1" type="Sprite2D" parent="." unique_id=340620303]
+position = Vector2(1, -11)
+texture = ExtResource("1_gd65n")
