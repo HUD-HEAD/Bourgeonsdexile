@@ -1,4 +1,4 @@
-extends Node
+class_name ContractionController extends Node
 
 @export var shader_mat : ShaderMaterial
 @export var shader_params : Array[ShaderParam]

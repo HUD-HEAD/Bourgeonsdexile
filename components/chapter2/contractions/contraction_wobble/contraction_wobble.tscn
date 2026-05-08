@@ -39,6 +39,7 @@ contraction_overlay = NodePath("CanvasLayer/TextureRect")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1494737173]
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=826130005]
+modulate = Color(1, 1, 1, 0)
 material = ExtResource("5_3t5g8")
 anchors_preset = 15
 anchor_right = 1.0
