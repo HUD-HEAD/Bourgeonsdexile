@@ -58,11 +58,11 @@
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/obstacle.tscn" id="47_e2evj"]
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="49_4l7c7"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1fm80"]
-size = Vector2(630, 566)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6b20s"]
 size = Vector2(580, 500.00006)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1fm80"]
+size = Vector2(630, 566)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6b20s"]
 radius = 48.0
@@ -446,30 +446,6 @@ position = Vector2(22.856598, -594.2857)
 [node name="PuzzlePieceHollow3" parent="Puzzles/Puzzle5/Puzzle2/BuildingBlocks/HollowPieces" index="2" unique_id=1052747192]
 position = Vector2(-88.57145, -445.7143)
 
-[node name="BodaBodaStopped" type="Area2D" parent="." unique_id=749611477]
-position = Vector2(6238, 742)
-scale = Vector2(0.4, 0.4)
-script = ExtResource("46_fm2bo")
-metadata/_custom_type_script = "uid://ba2byqse4kn1f"
-
-[node name="Bodabodaman" type="Sprite2D" parent="BodaBodaStopped" unique_id=2080153153]
-texture = ExtResource("8_ub4v2")
-
-[node name="Wheel1" type="Sprite2D" parent="BodaBodaStopped/Bodabodaman" unique_id=2082465619]
-show_behind_parent = true
-position = Vector2(-147.5, 162.50006)
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("8_hfpvf")
-
-[node name="Wheel2" type="Sprite2D" parent="BodaBodaStopped/Bodabodaman" unique_id=1894226021]
-show_behind_parent = true
-position = Vector2(215, 172.50003)
-texture = ExtResource("9_plsra")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BodaBodaStopped" unique_id=1510371182]
-position = Vector2(7, 22)
-shape = SubResource("RectangleShape2D_1fm80")
-
 [node name="BodaBodaMove" parent="." unique_id=925815680 instance=ExtResource("5_qc0ah")]
 position = Vector2(6245, 740)
 scale = Vector2(0.4, 0.4)
@@ -488,7 +464,36 @@ position = Vector2(-10, 159.5)
 scale = Vector2(0.9999997, 0.9999997)
 shape = SubResource("RectangleShape2D_6b20s")
 
+[node name="Enemiesprite1" type="Sprite2D" parent="." unique_id=339836947]
+position = Vector2(4882, 730)
+scale = Vector2(0.52000976, 0.52000976)
+texture = ExtResource("30_gkaax")
+
 [node name="CharWalking" type="Node2D" parent="." unique_id=304248373]
+
+[node name="BodaBodaStopped" type="Area2D" parent="CharWalking" unique_id=749611477]
+position = Vector2(6238, 742)
+scale = Vector2(0.4, 0.4)
+script = ExtResource("46_fm2bo")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="Bodabodaman" type="Sprite2D" parent="CharWalking/BodaBodaStopped" unique_id=2080153153]
+texture = ExtResource("8_ub4v2")
+
+[node name="Wheel1" type="Sprite2D" parent="CharWalking/BodaBodaStopped/Bodabodaman" unique_id=2082465619]
+show_behind_parent = true
+position = Vector2(-147.5, 162.50006)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("8_hfpvf")
+
+[node name="Wheel2" type="Sprite2D" parent="CharWalking/BodaBodaStopped/Bodabodaman" unique_id=1894226021]
+show_behind_parent = true
+position = Vector2(215, 172.50003)
+texture = ExtResource("9_plsra")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharWalking/BodaBodaStopped" unique_id=1510371182]
+position = Vector2(7, 22)
+shape = SubResource("RectangleShape2D_1fm80")
 
 [node name="Amani" parent="CharWalking" unique_id=700974070 instance=ExtResource("6_fssrv")]
 position = Vector2(463, 840)
@@ -528,13 +533,6 @@ camera_to_reparent = NodePath("../CharWalking/Amani/Camera2D")
 position = Vector2(19842, 645)
 script = ExtResource("15_xf2b4")
 next_scene = "uid://uy4d64oh4m1q"
-
-[node name="NPC" type="CharacterBody2D" parent="." unique_id=1237021683]
-
-[node name="Enemiesprite1" type="Sprite2D" parent="NPC" unique_id=339836947]
-position = Vector2(4882, 730)
-scale = Vector2(0.52000976, 0.52000976)
-texture = ExtResource("30_gkaax")
 
 [editable path="Puzzles/Puzzle1/DragDropPuzzle2"]
 [editable path="Puzzles/Puzzle1/DragDropPuzzle2/BuildingBlocks/PuzzlePiece"]
