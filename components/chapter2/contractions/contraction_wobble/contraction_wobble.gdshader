@@ -17,8 +17,6 @@ group_uniforms;
 uniform sampler2D screen_texture: hint_screen_texture, repeat_disable, filter_linear_mipmap;
 uniform float blur_amount : hint_range(0, 5) = 5.0; // Strength of the blur effect
 
-uniform float modulate : hint_range(0.0, 1.0, 0.1) = 1.0;
-
 vec4 blur(vec2 screen_uv){
     // Color with blur effect from the screen
     vec4 blurColor = textureLod(screen_texture, screen_uv, blur_amount);
@@ -57,10 +55,6 @@ float getRadialVal(vec2 center, vec2 p) {
 }
 
 void fragment() {
-	if (modulate == 0.0){
-		discard;
-	}
-	
 	float time = TIME;
 	float waviness = amplitude * circleRadius;
 	
@@ -121,10 +115,10 @@ void fragment() {
         float innerEdge = distCheck - lineWidth * .5;
         waveVal = smoothstep(innerEdge - AA, innerEdge + AA, distFromCenter);
 		new_color = vec4(waveVal);
+		COLOR.a *= waveVal;
 		//waveVal = 0.5;
     }
-    COLOR = new_color;
-	COLOR.a *= modulate;
+    COLOR.rgb = new_color.rgb;
 }
 
 

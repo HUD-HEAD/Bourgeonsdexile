@@ -30,10 +30,11 @@ metadata/_custom_type_script = "uid://bf2oac284v575"
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_5dbot"]
 size = Vector2(1920, 1080)
 
-[node name="ContractionController" type="Node" unique_id=948422643]
+[node name="ContractionController" type="Node" unique_id=948422643 node_paths=PackedStringArray("contraction_overlay")]
 script = ExtResource("4_tdq0w")
 shader_mat = ExtResource("5_3t5g8")
 shader_params = Array[ExtResource("6_mu5no")]([SubResource("Resource_8524a"), SubResource("Resource_p5e6y"), SubResource("Resource_lkgd8")])
+contraction_overlay = NodePath("CanvasLayer/TextureRect")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1494737173]
 
