@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="3_8hdu0"]
 [ext_resource type="Texture2D" uid="uid://c2l5tg6thtkal" path="res://graphics/chapter1/comics/comic3/frame_phone/frame_phone/phone_3.png" id="4_06jsj"]
 [ext_resource type="Texture2D" uid="uid://c5ftkp01s18wt" path="res://graphics/chapter1/comics/comic3/frame_phone/frame_phone/phone_4.png" id="5_jmjt5"]
-[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/click_hide.gd" id="5_nkld0"]
+[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/mechanics/click_hide.gd" id="5_nkld0"]
 [ext_resource type="Texture2D" uid="uid://b4vpeja2ohtxp" path="res://graphics/chapter1/comics/comic3/frame_phone/frame_phone/phone_5.png" id="6_yolvj"]
 [ext_resource type="Texture2D" uid="uid://flalr2pmrrx1" path="res://graphics/chapter1/comics/comic3/frame_phone/frame_phone/phone_2.png" id="7_6ruk1"]
 [ext_resource type="Texture2D" uid="uid://bbogorcd4lirs" path="res://graphics/chapter1/comics/comic3/frame_phone/frame_phone/phone_6.png" id="7_nkld0"]

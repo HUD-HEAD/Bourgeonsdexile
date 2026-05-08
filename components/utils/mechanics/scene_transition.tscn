@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://c3d4qbohmxv4v"]
+
+[ext_resource type="Script" uid="uid://df43wfssh8ivb" path="res://components/utils/mechanics/scene_transition.gd" id="1_oafg1"]
+[ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_tbh28"]
+
+[node name="SceneTransition" type="Node2D" unique_id=120413543 node_paths=PackedStringArray("progress_bar")]
+script = ExtResource("1_oafg1")
+progress_bar = NodePath("ProgressBar")
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1440257307]
+repeat_size = Vector2(1920, 1080)
+autoscroll = Vector2(-250, 0)
+ignore_camera_scroll = true
+
+[node name="TextureRect" type="TextureRect" parent="Parallax2D" unique_id=1341267285]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 20080.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_tbh28")
+stretch_mode = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1378155917]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 642.0
+offset_top = 824.0
+offset_right = 1142.0
+offset_bottom = 874.0
+grow_horizontal = 2
+grow_vertical = 2

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bjcwlut10vdrf" path="res://graphics/chapter1/comics/comic1/panel_bus/frame5_background.png" id="1_1afk3"]
 [ext_resource type="Script" uid="uid://bwhw2o2u7v43i" path="res://components/utils/comics/vertical_sine_anim.gd" id="2_4dbym"]
 [ext_resource type="Texture2D" uid="uid://cxfu1fqpa2jm3" path="res://graphics/chapter1/comics/comic1/panel_bus/frame5_shadow/frame5_shadow2.png" id="2_wg8pt"]
-[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/click_hide.gd" id="4_6h86t"]
+[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/mechanics/click_hide.gd" id="4_6h86t"]
 [ext_resource type="Texture2D" uid="uid://b26r8bk41cnp5" path="res://graphics/chapter1/comics/comic1/panel_bus/frame5_woman/woman1.png" id="7_7jsop"]
 [ext_resource type="Texture2D" uid="uid://dpfsmoqw4d3qe" path="res://graphics/chapter1/comics/comic1/panel_bus/frame5_woman/womanback.png" id="8_7jgqu"]
 [ext_resource type="AudioStream" uid="uid://bxm32ub0fm2xg" path="res://audio/sfx_old/bus-idle-to-drive-off-65780.mp3" id="8_w1rhg"]

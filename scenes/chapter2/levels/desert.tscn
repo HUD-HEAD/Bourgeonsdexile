@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://calxcc2jttv3p"]
 
 [ext_resource type="Texture2D" uid="uid://tx1s43xa61vj" path="res://graphics/chapter2/levels/goma/environment/background/gomatiledbig.png" id="1_swud2"]
-[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="3_aqeuv"]
+[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="3_aqeuv"]
 [ext_resource type="PackedScene" uid="uid://bn2kp6x746ehp" path="res://components/chapter2/characters/boda_boda.tscn" id="3_p8hlq"]
 [ext_resource type="Texture2D" uid="uid://clala6idvmos3" path="res://graphics/chapter2/levels/desert/separatedbus/businside.png" id="4_swud2"]
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="5_6tu1w"]
-[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="5_ogvpn"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="5_ogvpn"]
 [ext_resource type="Texture2D" uid="uid://b2ipjbn25qct0" path="res://graphics/chapter2/levels/desert/separatedbus/wheel1.png" id="5_swud2"]
 [ext_resource type="Texture2D" uid="uid://cq4oebmiej7bw" path="res://graphics/chapter2/levels/desert/separatedbus/wheel2.png" id="6_0x0y1"]
-[ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/obstacle.tscn" id="6_ogvpn"]
+[ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/mechanics/obstacle.tscn" id="6_ogvpn"]
 [ext_resource type="PackedScene" uid="uid://c34f2ydqf515m" path="res://components/chapter2/levels/goma-nakivale/drag_drop_puzzle_GN1.tscn" id="7_swud2"]
 [ext_resource type="PackedScene" uid="uid://d16x3llaruwan" path="res://components/chapter2/levels/goma-nakivale/drag_drop_puzzle_GN2.tscn" id="9_f7a6g"]
 [ext_resource type="PackedScene" uid="uid://diopye668af11" path="res://components/chapter2/levels/goma-nakivale/drag_drop_puzzle_GN3.tscn" id="10_232wy"]
@@ -175,10 +175,7 @@ show_behind_parent = false
 position = Vector2(383, 148)
 texture = ExtResource("6_0x0y1")
 
-[node name="Area2D" parent="Bus" index="1" unique_id=1622822538]
-input_pickable = false
-
-[node name="CollisionShape2D" parent="Bus/Area2D" index="0" unique_id=450716263]
+[node name="CollisionShape2D" parent="Bus/Area2D" parent_id_path=PackedInt32Array(925815680, 1622822538) index="0" unique_id=450716263]
 position = Vector2(-49.5, 143.5)
 shape = SubResource("RectangleShape2D_uu4gm")
 

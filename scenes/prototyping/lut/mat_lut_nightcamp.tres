@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dan4raduiqle3"]
+
+[ext_resource type="Shader" uid="uid://dvf185t0qf85r" path="res://scenes/prototyping/lut/apply_lut.gdshader" id="1_xf68o"]
+[ext_resource type="CompressedTexture3D" uid="uid://xljfl2u0630j" path="res://scenes/prototyping/lut/environment_adjustments_3d_lut_nightcamp.png" id="2_xf68o"]
+
+[resource]
+shader = ExtResource("1_xf68o")
+shader_parameter/lut = ExtResource("2_xf68o")

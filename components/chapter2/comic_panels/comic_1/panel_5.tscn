@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cx4cn3iss8s6g" path="res://graphics/chapter2/comics/comic1/framegame/4.png" id="4_jmwom"]
 [ext_resource type="Texture2D" uid="uid://c2t7ipb6yqf6t" path="res://graphics/chapter2/comics/comic1/framegame/big.png" id="5_c720a"]
 [ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="6_wdjjo"]
-[ext_resource type="Script" uid="uid://di17bexlx7tdc" path="res://components/utils/place_on_top_on_click.gd" id="7_ppft7"]
+[ext_resource type="Script" uid="uid://di17bexlx7tdc" path="res://components/utils/mechanics/place_on_top_on_click.gd" id="7_ppft7"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="8_jmwom"]
 
 [node name="Panel1" type="Node2D" unique_id=299868253]

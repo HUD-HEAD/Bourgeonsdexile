@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://b2dgoyfbpjmhn"]
 
-[ext_resource type="Shader" uid="uid://dvf185t0qf85r" path="res://scenes/prototyping/lut/demo_lut.gdshader" id="1_l4tae"]
+[ext_resource type="Shader" uid="uid://dvf185t0qf85r" path="res://scenes/prototyping/lut/apply_lut.gdshader" id="1_l4tae"]
 [ext_resource type="CompressedTexture3D" uid="uid://cdbwmu4malfbj" path="res://scenes/prototyping/lut/demo_lut.png" id="2_j2sju"]
 
 [resource]

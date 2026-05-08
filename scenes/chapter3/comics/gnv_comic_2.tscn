@@ -1,0 +1,202 @@
+[gd_scene format=3 uid="uid://by2x0js73j5ew"]
+
+[ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_867kd"]
+[ext_resource type="PackedScene" uid="uid://dxje8kcv8ykkm" path="res://components/chapter1/comic_panels/comic_1/panel_house_exterior.tscn" id="2_2pjbl"]
+[ext_resource type="PackedScene" uid="uid://c4pmb31tnqo44" path="res://components/chapter1/comic_panels/comic_1/panel_door.tscn" id="3_c413x"]
+[ext_resource type="PackedScene" uid="uid://d2r6mc3y6126v" path="res://components/chapter1/comic_panels/comic_1/panel_ponytail.tscn" id="4_y3lmx"]
+[ext_resource type="PackedScene" uid="uid://v2juo5s051v4" path="res://components/chapter1/comic_panels/comic_1/panel_sink.tscn" id="5_0m6oe"]
+[ext_resource type="PackedScene" uid="uid://sxqkfw5v3ue" path="res://components/chapter1/comic_panels/comic_1/panel_board.tscn" id="6_xvafd"]
+[ext_resource type="PackedScene" uid="uid://bf82dcdcxwmvn" path="res://components/chapter1/comic_panels/comic_1/panel_soup.tscn" id="7_0i5p8"]
+[ext_resource type="PackedScene" uid="uid://c60nnmob4jcv3" path="res://components/chapter1/comic_panels/comic_1/panel_tv.tscn" id="8_chia4"]
+[ext_resource type="PackedScene" uid="uid://bd7g0rb56ib48" path="res://components/chapter1/comic_panels/comic_1/panel_candle.tscn" id="9_sbno0"]
+[ext_resource type="PackedScene" uid="uid://cbouhlj8xssdp" path="res://components/chapter1/comic_panels/comic_1/panel_argument.tscn" id="10_muvb7"]
+[ext_resource type="Script" uid="uid://n4vlynaxxck4" path="res://components/utils/audio/audio_zone_fade.gd" id="11_kuuke"]
+[ext_resource type="PackedScene" uid="uid://b3xbb0f00akh4" path="res://components/chapter1/comic_panels/comic_1/panel_wake_up.tscn" id="12_ql00r"]
+[ext_resource type="Script" uid="uid://brcf7uo40xrq2" path="res://components/utils/audio/audio_crossfade.gd" id="13_uq53y"]
+[ext_resource type="PackedScene" uid="uid://bq0ewephc3xv5" path="res://components/chapter1/comic_panels/comic_1/panel_drawer.tscn" id="14_fukkr"]
+[ext_resource type="PackedScene" uid="uid://cpqe48imup7qq" path="res://components/chapter1/comic_panels/comic_1/panel_bus.tscn" id="15_bp45q"]
+[ext_resource type="PackedScene" uid="uid://c4cui6mh277i5" path="res://components/chapter1/comic_panels/comic_1/panel_phone_bus.tscn" id="16_1ujt3"]
+[ext_resource type="PackedScene" uid="uid://cyqwmaex0ilgv" path="res://components/chapter1/comic_panels/comic_1/panel_boat_crossing.tscn" id="17_esm1e"]
+[ext_resource type="PackedScene" uid="uid://bi4kbbnyg1r6g" path="res://components/chapter1/comic_panels/comic_1/panel_boat_closeup.tscn" id="18_f01gd"]
+[ext_resource type="PackedScene" uid="uid://drxfjicmrdtlo" path="res://components/chapter1/comic_panels/comic_1/panel_arrival.tscn" id="19_wwxb0"]
+[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="20_8wlj1"]
+[ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="21_t5b7w"]
+[ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="22_u4ovr"]
+[ext_resource type="AudioStream" uid="uid://curu5rxi6emup" path="res://audio/chapter1/soundtrack/STARTING_THEME.wav" id="23_vrrkw"]
+[ext_resource type="AudioStream" uid="uid://d1jjetsntvge2" path="res://audio/chapter1/soundtrack/MIGRATION-THEME.wav" id="24_53pjb"]
+[ext_resource type="AudioStream" uid="uid://dt8b3qx12b5jb" path="res://audio/chapter1/ambient/PANEL_9_10_CRICKETS_NIGHT.wav" id="25_b6i8q"]
+[ext_resource type="AudioStream" uid="uid://bsrfqlei4ae4h" path="res://audio/chapter1/ambient/panel_12_13_bus_sound_loop.wav" id="26_su63p"]
+[ext_resource type="AudioStream" uid="uid://cono3427ytinl" path="res://audio/chapter1/ambient/panel_15_16_ocean.wav" id="27_6f7wt"]
+[ext_resource type="AudioStream" uid="uid://dhjvrpl3ib3r" path="res://audio/chapter1/ambient/panel_17_23_market_colombia_loop.wav" id="28_m5jno"]
+
+[node name="JungleComic1" type="Node2D" unique_id=150562309]
+
+[node name="PaperBackground" type="CanvasLayer" parent="." unique_id=1029947148]
+layer = -1
+follow_viewport_enabled = true
+
+[node name="TextureRect" type="TextureRect" parent="PaperBackground" unique_id=1111791010]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 37962.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_867kd")
+stretch_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=485993154]
+position = Vector2(960, 540)
+limit_left = 0
+limit_smoothed = true
+position_smoothing_enabled = true
+editor_draw_limits = true
+
+[node name="Panels" type="Node2D" parent="." unique_id=606931740]
+
+[node name="JungleComic1Frame1" parent="Panels" unique_id=2146162469 instance=ExtResource("2_2pjbl")]
+position = Vector2(960, 540)
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComic1Frame1" unique_id=1598927959]
+
+[node name="JungleComic1FrameEntry" parent="Panels" unique_id=1346650827 instance=ExtResource("3_c413x")]
+position = Vector2(3091, 540)
+
+[node name="JungleComic1FramePonytail" parent="Panels" unique_id=918717733 instance=ExtResource("4_y3lmx")]
+position = Vector2(5251, 540)
+
+[node name="JungleComic1FrameSink" parent="Panels" unique_id=1085994452 instance=ExtResource("5_0m6oe")]
+position = Vector2(7529, 540)
+
+[node name="JungleComic1FrameBoard" parent="Panels" unique_id=1056075513 instance=ExtResource("6_xvafd")]
+position = Vector2(9943, 540)
+
+[node name="JungleComic1FrameFoodReady" parent="Panels" unique_id=1686233868 instance=ExtResource("7_0i5p8")]
+position = Vector2(12372, 540)
+
+[node name="JuncleComic1TVAndSwitch" parent="Panels" unique_id=1376057279 instance=ExtResource("8_chia4")]
+position = Vector2(14414, 496)
+scale = Vector2(0.9, 0.9)
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panels/JuncleComic1TVAndSwitch" unique_id=448529434]
+
+[node name="JungleComicCandle" parent="Panels" unique_id=209932194 instance=ExtResource("9_sbno0")]
+position = Vector2(16385, 540)
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComicCandle" unique_id=2085245549]
+
+[node name="JungleComic1Frame2" parent="Panels" unique_id=1369925370 instance=ExtResource("10_muvb7")]
+position = Vector2(18199, 540)
+
+[node name="VisibleOnScreenEnabler2D2" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComic1Frame2" unique_id=1385282076]
+position = Vector2(323, 0)
+
+[node name="CricketsAudioZone" type="VisibleOnScreenNotifier2D" parent="Panels" unique_id=1192675192 node_paths=PackedStringArray("player")]
+position = Vector2(17490, 545)
+rect = Rect2(-10, -521, 4352, 1017)
+script = ExtResource("11_kuuke")
+player = NodePath("../../Audio/Crickets")
+metadata/_custom_type_script = "uid://n4vlynaxxck4"
+
+[node name="JungleComic1Frame3" parent="Panels" unique_id=1672422329 instance=ExtResource("12_ql00r")]
+position = Vector2(20741, 540)
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComic1Frame3" unique_id=752101071]
+position = Vector2(855, 0)
+
+[node name="AudioCrossfade" type="VisibleOnScreenNotifier2D" parent="Panels/JungleComic1Frame3" unique_id=2060812145 node_paths=PackedStringArray("fade_out_player", "fade_in_player")]
+position = Vector2(-1236, 62)
+script = ExtResource("13_uq53y")
+fade_out_player = NodePath("../../../Audio/ThemeStart")
+fade_in_player = NodePath("../../../Audio/ThemeMigration")
+metadata/_custom_type_script = "uid://brcf7uo40xrq2"
+
+[node name="JungleComic1Frame4" parent="Panels" unique_id=879625787 instance=ExtResource("14_fukkr")]
+position = Vector2(22652, 540)
+scale = Vector2(0.675, 0.675)
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComic1Frame4" unique_id=1628047132]
+position = Vector2(829.62964, 157.03703)
+
+[node name="JungleComic1Frame5" parent="Panels" unique_id=1056592833 instance=ExtResource("15_bp45q")]
+position = Vector2(24689, 540)
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComic1Frame5" unique_id=1344838745]
+position = Vector2(-707, 0)
+rect = Rect2(-10, -10, 1420, 79)
+
+[node name="BusAudioZone" type="VisibleOnScreenNotifier2D" parent="Panels" unique_id=2085444155 node_paths=PackedStringArray("player")]
+position = Vector2(23868, 44)
+rect = Rect2(0, 0, 3737, 1017)
+script = ExtResource("11_kuuke")
+player = NodePath("../../Audio/Bus")
+metadata/_custom_type_script = "uid://n4vlynaxxck4"
+
+[node name="JungleComic1FramePhoneBus" parent="Panels" unique_id=119112911 instance=ExtResource("16_1ujt3")]
+position = Vector2(26707, 540)
+
+[node name="JungleComic1Frame6" parent="Panels" unique_id=67005951 instance=ExtResource("17_esm1e")]
+position = Vector2(28594, 540)
+
+[node name="JungleComic1Frame7" parent="Panels" unique_id=183188217 instance=ExtResource("18_f01gd")]
+position = Vector2(30828, 540)
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComic1Frame7" unique_id=806881675]
+
+[node name="OceanAudioZone" type="VisibleOnScreenNotifier2D" parent="Panels" unique_id=61040392 node_paths=PackedStringArray("player")]
+position = Vector2(29584, 545)
+rect = Rect2(189, -521, 2094, 1017)
+script = ExtResource("11_kuuke")
+player = NodePath("../../Audio/Ocean")
+metadata/_custom_type_script = "uid://n4vlynaxxck4"
+
+[node name="JungleComic1Frame9" parent="Panels" unique_id=1870862331 instance=ExtResource("19_wwxb0")]
+position = Vector2(33248, 540)
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Panels/JungleComic1Frame9" unique_id=1759255997]
+
+[node name="MarketAudioZone" type="VisibleOnScreenNotifier2D" parent="Panels" unique_id=1076157198 node_paths=PackedStringArray("player")]
+position = Vector2(32006, 545)
+rect = Rect2(189, -521, 2094, 1017)
+script = ExtResource("11_kuuke")
+player = NodePath("../../Audio/Market")
+metadata/_custom_type_script = "uid://n4vlynaxxck4"
+
+[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=849983846]
+position = Vector2(34433, 596)
+script = ExtResource("20_8wlj1")
+next_scene = "uid://s3spdg0qqc77"
+
+[node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
+script = ExtResource("21_t5b7w")
+panels = [NodePath("../Panels/JungleComic1Frame1"), NodePath("../Panels/JungleComic1FrameEntry"), NodePath("../Panels/JungleComic1FramePonytail"), NodePath("../Panels/JungleComic1FrameSink"), NodePath("../Panels/JungleComic1FrameBoard"), NodePath("../Panels/JungleComic1FrameFoodReady"), NodePath("../Panels/JuncleComic1TVAndSwitch"), NodePath("../Panels/JungleComicCandle"), NodePath("../Panels/JungleComic1Frame2"), NodePath("../Panels/JungleComic1Frame3"), NodePath("../Panels/JungleComic1Frame4"), NodePath("../Panels/JungleComic1Frame5"), NodePath("../Panels/JungleComic1FramePhoneBus"), NodePath("../Panels/JungleComic1Frame6"), NodePath("../Panels/JungleComic1Frame7"), NodePath("../Panels/JungleComic1Frame9"), NodePath("../SceneEnder")]
+
+[node name="UI" parent="." unique_id=1829896958 instance=ExtResource("22_u4ovr")]
+
+[node name="Audio" type="Node" parent="." unique_id=619569792]
+
+[node name="ThemeStart" type="AudioStreamPlayer" parent="Audio" unique_id=314277606]
+stream = ExtResource("23_vrrkw")
+autoplay = true
+bus = &"Music"
+
+[node name="ThemeMigration" type="AudioStreamPlayer" parent="Audio" unique_id=642829476]
+stream = ExtResource("24_53pjb")
+bus = &"Music"
+
+[node name="Crickets" type="AudioStreamPlayer" parent="Audio" unique_id=1840641282]
+stream = ExtResource("25_b6i8q")
+bus = &"Sfx"
+
+[node name="Bus" type="AudioStreamPlayer" parent="Audio" unique_id=1247008594]
+stream = ExtResource("26_su63p")
+bus = &"Sfx"
+
+[node name="Ocean" type="AudioStreamPlayer" parent="Audio" unique_id=1211798786]
+stream = ExtResource("27_6f7wt")
+bus = &"Sfx"
+
+[node name="Market" type="AudioStreamPlayer" parent="Audio" unique_id=987654775]
+stream = ExtResource("28_m5jno")
+bus = &"Sfx"

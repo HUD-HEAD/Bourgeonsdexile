@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dqaagocylecdi"]
+
+[ext_resource type="Texture2D" uid="uid://cwrqxyxauub67" path="res://graphics/chapter3/comics/comic1/framedoctorsblur/blur.png" id="1_28uxu"]
+
+[node name="PanelDoctors" type="Node2D" unique_id=162787811]
+
+[node name="Blur" type="Sprite2D" parent="." unique_id=2079645599]
+position = Vector2(-2, -1)
+texture = ExtResource("1_28uxu")

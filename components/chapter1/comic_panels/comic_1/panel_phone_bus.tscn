@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="1_fqn0n"]
 [ext_resource type="Texture2D" uid="uid://ddxhof3j5h77x" path="res://graphics/chapter1/comics/comic1/panel_phone/panel_busphone/panel_phone.png" id="2_rn82r"]
-[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="4_5xm4u"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="4_5xm4u"]
 [ext_resource type="Texture2D" uid="uid://btpb4dnqc2oyu" path="res://graphics/chapter1/comics/comic1/panel_phone/panel_busphone/gallerypictures/bday.png" id="5_fqn0n"]
 [ext_resource type="Texture2D" uid="uid://dhv303hmsh8x2" path="res://graphics/chapter1/comics/comic1/panel_phone/panel_busphone/gallerypictures/dog.png" id="6_onvg6"]
 [ext_resource type="Texture2D" uid="uid://drug8gvkmdcnm" path="res://graphics/chapter1/comics/comic1/panel_phone/panel_busphone/gallerypictures/grandma.png" id="7_3s8k2"]

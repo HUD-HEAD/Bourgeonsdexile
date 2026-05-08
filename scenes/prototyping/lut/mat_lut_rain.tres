@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://mamd7s33ysol"]
+
+[ext_resource type="Shader" uid="uid://dvf185t0qf85r" path="res://scenes/prototyping/lut/apply_lut.gdshader" id="1_wuq24"]
+[ext_resource type="CompressedTexture3D" uid="uid://dapp3wydb36ym" path="res://scenes/prototyping/lut/environment_adjustments_3d_lut_rain.png" id="2_sjv3x"]
+
+[resource]
+shader = ExtResource("1_wuq24")
+shader_parameter/lut = ExtResource("2_sjv3x")

@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://bhrdnknggva23" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0013.png" id="14_nu4hx"]
 [ext_resource type="Texture2D" uid="uid://b7iw0bqc5ow2k" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0014.png" id="15_n67o8"]
 [ext_resource type="Texture2D" uid="uid://benp122sygmpc" path="res://graphics/chapter1/comics/comic1/panel_sink/anim_sink_15fps/sink_0015.png" id="16_bmf81"]
-[ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/click_enable.gd" id="17_6pmpa"]
+[ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/mechanics/click_enable.gd" id="17_6pmpa"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="18_uosyy"]
 [ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/PlayOnClick.tscn" id="19_uosyy"]
 [ext_resource type="AudioStream" uid="uid://b3pu703nptyk7" path="res://audio/chapter1/ambient/panel_4_water_droops_pot.wav" id="20_c2xss"]

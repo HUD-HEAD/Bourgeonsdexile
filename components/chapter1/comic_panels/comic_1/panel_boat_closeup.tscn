@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://reirp75upq53" path="res://graphics/chapter1/comics/comic1/panel_boat_closeup/anim_bird/bird3.png" id="5_50k1b"]
 [ext_resource type="Texture2D" uid="uid://dy5t5uinuhvmy" path="res://graphics/chapter1/comics/comic1/panel_boat_closeup/anim_bird/bird4.png" id="6_uvtw1"]
 [ext_resource type="Texture2D" uid="uid://c1hq1p81mbey" path="res://graphics/chapter1/comics/comic1/panel_boat_closeup/anim_bird/bird5.png" id="7_md3tw"]
-[ext_resource type="Script" uid="uid://bk17pejrvpwfq" path="res://components/utils/follow_mouse.gd" id="8_i6sxp"]
+[ext_resource type="Script" uid="uid://bk17pejrvpwfq" path="res://components/utils/mechanics/follow_mouse.gd" id="8_i6sxp"]
 [ext_resource type="Texture2D" uid="uid://bsnw46m5wbbuj" path="res://graphics/chapter1/comics/comic1/panel_boat_closeup/anim_bird/bird6.png" id="8_wk1cn"]
 [ext_resource type="Texture2D" uid="uid://bnafgdfr5e6fy" path="res://graphics/chapter1/comics/comic1/panel_boat_closeup/frame7_toplayer.png" id="9_j0nmg"]
 [ext_resource type="AudioStream" uid="uid://cdc78ovnsqmkd" path="res://audio/chapter1/ambient/panel_15_gaviota_interactive.wav" id="12_or4hj"]

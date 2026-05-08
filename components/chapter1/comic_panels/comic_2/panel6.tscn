@@ -54,7 +54,7 @@
 [ext_resource type="Texture2D" uid="uid://djccp2e7uobee" path="res://graphics/chapter1/comics/comic2/frame5.5/anim_blob_15fps/blob_0052.png" id="52_0jmr3"]
 [ext_resource type="Texture2D" uid="uid://dg60brqa2514m" path="res://graphics/chapter1/comics/comic2/frame5.5/her.png" id="53_ubvon"]
 [ext_resource type="Texture2D" uid="uid://bk1ulceenbfv3" path="res://graphics/chapter1/comics/comic2/frame5.5/hand.png" id="54_rq6hi"]
-[ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/click_enable.gd" id="54_tawsb"]
+[ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/mechanics/click_enable.gd" id="54_tawsb"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="55_xfsjq"]
 [ext_resource type="AudioStream" uid="uid://bnuekafjrgegg" path="res://audio/chapter1/ambient/panel_section_2/panel_2.7_woman_breathing.wav" id="57_002qc"]
 

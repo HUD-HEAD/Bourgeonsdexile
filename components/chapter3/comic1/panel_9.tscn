@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://nlcq8cmv4kde"]
+
+[ext_resource type="Texture2D" uid="uid://cq550awokpo8a" path="res://graphics/chapter3/comics/comic1/framemirror/mirror.png" id="1_22nh7"]
+
+[node name="PanelDoctors" type="Node2D" unique_id=162787811]
+
+[node name="Mirror" type="Sprite2D" parent="." unique_id=1143458406]
+position = Vector2(-3, 0)
+texture = ExtResource("1_22nh7")

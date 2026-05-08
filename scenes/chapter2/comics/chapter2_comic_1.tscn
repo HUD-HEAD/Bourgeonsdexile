@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://mj2dhiwddodh" path="res://components/chapter2/comic_panels/comic_1/panel_11.tscn" id="16_1j3oo"]
 [ext_resource type="PackedScene" uid="uid://dxh5iuy02vrda" path="res://components/chapter2/comic_panels/comic_1/panel_scrolling.tscn" id="17_4a5vy"]
 [ext_resource type="PackedScene" uid="uid://c6knungwprlgs" path="res://components/chapter2/comic_panels/comic_1/panel_12.tscn" id="17_jd0lm"]
-[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="17_k5ynj"]
+[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="17_k5ynj"]
 [ext_resource type="PackedScene" uid="uid://by0uwcf5syiic" path="res://components/chapter2/comic_panels/comic_1/panel_13.tscn" id="18_040dt"]
 [ext_resource type="PackedScene" uid="uid://cl7jmbkryr1h7" path="res://components/chapter2/comic_panels/comic_1/panel_16.tscn" id="20_4a5vy"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="20_kue4r"]

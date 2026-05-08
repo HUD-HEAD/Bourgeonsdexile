@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://c8yjpks4wqdqe"]
+
+[ext_resource type="Texture2D" uid="uid://cqgge3pmf4v66" path="res://graphics/chapter2/levels/desert/tiledbackground_1.jpg" id="1_4qsd8"]
+[ext_resource type="PackedScene" uid="uid://cilqgb10bxsi7" path="res://components/chapter2/characters/amani.tscn" id="2_o5iqe"]
+[ext_resource type="Shader" uid="uid://cbk3sn8e1flb4" path="res://components/chapter2/contractions/contraction_wobble/contraction_wobble.gdshader" id="3_4jkh2"]
+[ext_resource type="PackedScene" uid="uid://xrhjayy04y7b" path="res://components/chapter2/contractions/contraction_wobble/contraction_wobble.tscn" id="4_umd6m"]
+[ext_resource type="Script" uid="uid://b3txouvcobklf" path="res://components/chapter2/contractions/contraction_wobble/contraction_area.gd" id="5_fhd5j"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5dbot"]
+shader = ExtResource("3_4jkh2")
+shader_parameter/circleRadius = 0.0
+shader_parameter/lineWidth = 5.0
+shader_parameter/waves = 5.0
+shader_parameter/amplitude = 0.1
+shader_parameter/speed = 0.0
+shader_parameter/offset_intensity = 1.0
+shader_parameter/blur_amount = 1.0
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_tex5i"]
+size = Vector2(500, 500)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhd5j"]
+size = Vector2(500, 100)
+
+[node name="Node2D" type="Node2D" unique_id=1991231185]
+
+[node name="Tiledbackground1" type="Sprite2D" parent="." unique_id=2048845969]
+position = Vector2(826, 10)
+texture = ExtResource("1_4qsd8")
+
+[node name="Amani" parent="." unique_id=700974070 instance=ExtResource("2_o5iqe")]
+position = Vector2(-211, 358)
+
+[node name="Camera2D" type="Camera2D" parent="Amani" unique_id=197044323]
+position = Vector2(211, -358)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=541955837]
+visible = false
+material = SubResource("ShaderMaterial_5dbot")
+position = Vector2(-1200, -927)
+texture = SubResource("PlaceholderTexture2D_tex5i")
+
+[node name="ContractionController" parent="." unique_id=948422643 instance=ExtResource("4_umd6m")]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1421439701 node_paths=PackedStringArray("contraction_controller")]
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+script = ExtResource("5_fhd5j")
+contraction_controller = NodePath("../ContractionController")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=659717388]
+position = Vector2(534, 280)
+shape = SubResource("RectangleShape2D_fhd5j")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1798910611 node_paths=PackedStringArray("contraction_controller")]
+position = Vector2(1741, 0)
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+script = ExtResource("5_fhd5j")
+contraction_controller = NodePath("../ContractionController")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=901598619]
+position = Vector2(534, 280)
+shape = SubResource("RectangleShape2D_fhd5j")

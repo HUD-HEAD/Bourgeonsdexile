@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cr731pysnr5fv" path="res://graphics/chapter1/comics/comic4/panelbusjungle/background.png" id="1_34ewk"]
 [ext_resource type="Texture2D" uid="uid://b2jjt6q4ksgrl" path="res://graphics/chapter1/comics/comic4/panelbusjungle/bus.png" id="2_47tvq"]
-[ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/click_enable.gd" id="3_47tvq"]
+[ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/mechanics/click_enable.gd" id="3_47tvq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_47tvq"]
 size = Vector2(1701, 1004)
