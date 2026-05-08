@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://xrhjayy04y7b"]
+
+[ext_resource type="Script" uid="uid://c5w88vtgql7rs" path="res://components/chapter2/contractions/contraction_wobble/contraction_controller.gd" id="4_tdq0w"]
+[ext_resource type="Material" uid="uid://ct7nfyek8i1le" path="res://components/chapter2/contractions/contraction_wobble/mat_contraction.tres" id="5_3t5g8"]
+[ext_resource type="Script" uid="uid://bf2oac284v575" path="res://components/chapter2/contractions/contraction_wobble/contraction_shader_param.gd" id="6_mu5no"]
+
+[sub_resource type="Resource" id="Resource_8524a"]
+script = ExtResource("6_mu5no")
+name = "speed"
+min_val = 1.5
+max_val = 3.0
+curr_val = 3.0
+metadata/_custom_type_script = "uid://bf2oac284v575"
+
+[sub_resource type="Resource" id="Resource_p5e6y"]
+script = ExtResource("6_mu5no")
+name = "amplitude"
+min_val = 0.1
+max_val = 0.5
+curr_val = 0.5
+metadata/_custom_type_script = "uid://bf2oac284v575"
+
+[sub_resource type="Resource" id="Resource_lkgd8"]
+script = ExtResource("6_mu5no")
+name = "offset_intensity"
+max_val = 1.0
+curr_val = 1.0
+metadata/_custom_type_script = "uid://bf2oac284v575"
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_5dbot"]
+size = Vector2(1920, 1080)
+
+[node name="ContractionController" type="Node" unique_id=948422643]
+script = ExtResource("4_tdq0w")
+shader_mat = ExtResource("5_3t5g8")
+shader_params = Array[ExtResource("6_mu5no")]([SubResource("Resource_8524a"), SubResource("Resource_p5e6y"), SubResource("Resource_lkgd8")])
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1494737173]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=826130005]
+material = ExtResource("5_3t5g8")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("PlaceholderTexture2D_5dbot")
