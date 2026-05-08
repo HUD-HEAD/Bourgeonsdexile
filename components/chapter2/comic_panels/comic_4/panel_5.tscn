@@ -38,22 +38,6 @@ sprite_frames = SubResource("SpriteFrames_ldi3y")
 script = ExtResource("5_ldi3y")
 clickable = NodePath("../Clickable")
 
-[node name="1" type="Sprite2D" parent="AnimatedSprite2D" unique_id=1753769274]
-position = Vector2(12395, 1174)
-texture = ExtResource("2_bdcry")
-
-[node name="2" type="Sprite2D" parent="AnimatedSprite2D" unique_id=1871751032]
-position = Vector2(12218, 2099)
-texture = ExtResource("3_0d466")
-
-[node name="3" type="Sprite2D" parent="AnimatedSprite2D" unique_id=1297361278]
-position = Vector2(12164, 2922)
-texture = ExtResource("4_sqrfm")
-
-[node name="4" type="Sprite2D" parent="AnimatedSprite2D" unique_id=2128415404]
-position = Vector2(12008, 3869)
-texture = ExtResource("5_4sw8q")
-
 [node name="TransitionerCounter" type="Node" parent="." unique_id=829802017 node_paths=PackedStringArray("clickables")]
 script = ExtResource("7_c42hg")
 clickables = [NodePath("../Clickable")]
