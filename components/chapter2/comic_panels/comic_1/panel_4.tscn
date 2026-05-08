@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c0wro4keqrw1k"]
 
-[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="1_dov0l"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="1_dov0l"]
 [ext_resource type="Texture2D" uid="uid://btl0suexfe42h" path="res://graphics/chapter2/comics/comic1/frameplaying/kidsplaying.png" id="1_s2anf"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="3_4tme6"]
 

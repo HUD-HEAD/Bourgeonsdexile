@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://be8m0cbcq6bww"]
 
-[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/click_hide.gd" id="1_r4hvo"]
+[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/mechanics/click_hide.gd" id="1_r4hvo"]
 
 [node name="JungleItem" type="Area2D" unique_id=1746429335]
 script = ExtResource("1_r4hvo")

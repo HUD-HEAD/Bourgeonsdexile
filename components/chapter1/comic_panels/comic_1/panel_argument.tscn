@@ -32,7 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://c2qclx8s821r6" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction7.png" id="27_hijka"]
 [ext_resource type="Texture2D" uid="uid://cirkkungp4y15" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction8.png" id="28_oqqh3"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="29_f5xcq"]
-[ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/click_enable.gd" id="30_khho4"]
+[ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/mechanics/click_enable.gd" id="30_khho4"]
 [ext_resource type="AudioStream" uid="uid://bahokpj1lihaw" path="res://audio/chapter1/soundtrack/TENSE-MOMENT.wav" id="32_bosar"]
 [ext_resource type="AudioStream" uid="uid://bg2futiccmapt" path="res://audio/chapter1/ambient/PANEL_9_MAN_SCREAMING_INTERACTIVE.wav" id="33_xn0vl"]
 

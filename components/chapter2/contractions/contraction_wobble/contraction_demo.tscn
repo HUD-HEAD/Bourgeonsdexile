@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bl6tswct26gtv"]
 
 [ext_resource type="Texture2D" uid="uid://dyoeysci3hrhh" path="res://graphics/chapter1/comics/comic2/frame1/background.png" id="1_ojheq"]
-[ext_resource type="Shader" uid="uid://bqfct0bjskp7d" path="res://scenes/prototyping/contraction/contraction_demo.gdshader" id="2_u7jnf"]
-[ext_resource type="Script" uid="uid://bcgbtq2g7fehu" path="res://scenes/prototyping/contraction/contraction.gd" id="3_06o1w"]
+[ext_resource type="Shader" uid="uid://bqfct0bjskp7d" path="res://components/chapter2/contractions/contraction_wobble/contraction_demo.gdshader" id="2_u7jnf"]
+[ext_resource type="Script" uid="uid://bcgbtq2g7fehu" path="res://components/chapter2/contractions/contraction_wobble/contraction_wobble.gd" id="3_06o1w"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_06o1w"]
 shader = ExtResource("2_u7jnf")

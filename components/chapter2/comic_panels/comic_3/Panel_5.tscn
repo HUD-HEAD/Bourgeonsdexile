@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bwj3jsro1xssk" path="res://graphics/chapter2/comics/comic3/framerubbinglegs/bg.png" id="1_r0bhn"]
 [ext_resource type="Texture2D" uid="uid://cot02xeijncj2" path="res://graphics/chapter2/comics/comic3/framerubbinglegs/ARM.png" id="2_r0bhn"]
-[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="3_1wrmg"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="3_1wrmg"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_nhovv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1wrmg"]

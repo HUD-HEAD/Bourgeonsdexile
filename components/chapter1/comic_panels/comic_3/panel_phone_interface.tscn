@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://001fo68fi8nn" path="res://components/utils/puzzles/draggable_restricted.gd" id="4_18wv5"]
 [ext_resource type="Script" uid="uid://daanj2uv1dts1" path="res://components/chapter1/comic_panels/comic_3/phone_zoom.gd" id="5_47wdq"]
 [ext_resource type="Texture2D" uid="uid://cbywnch7guolu" path="res://graphics/chapter1/comics/comic3/panel_phonelajas/buttons.png" id="6_l50va"]
-[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="7_47wdq"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="7_47wdq"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="8_l50va"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18wv5"]

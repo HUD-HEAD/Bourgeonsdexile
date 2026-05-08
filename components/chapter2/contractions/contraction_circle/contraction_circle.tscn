@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c7of5l5s248sl"]
 
-[ext_resource type="Script" uid="uid://byyj2i6spyg7m" path="res://components/utils/circle.gd" id="1_ad4nm"]
-[ext_resource type="Script" uid="uid://bg724te3661tt" path="res://scenes/prototyping/contraction/draggable_rotate.gd" id="2_1d8av"]
-[ext_resource type="Script" uid="uid://cs2pc6hyqcdl4" path="res://scenes/prototyping/contraction/contraction_circle.gd" id="3_3vlrm"]
+[ext_resource type="Script" uid="uid://byyj2i6spyg7m" path="res://components/utils/mechanics/circle.gd" id="1_ad4nm"]
+[ext_resource type="Script" uid="uid://bg724te3661tt" path="res://components/utils/mechanics/draggable_rotate.gd" id="2_1d8av"]
+[ext_resource type="Script" uid="uid://cs2pc6hyqcdl4" path="res://components/chapter2/contractions/contraction_circle/contraction_circle.gd" id="3_3vlrm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3vlrm"]
 
@@ -19,7 +19,6 @@ width = 5.0
 
 [node name="DraggableRotate" type="Area2D" parent="." unique_id=379520210]
 script = ExtResource("2_1d8av")
-metadata/_custom_type_script = "uid://bg724te3661tt"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DraggableRotate" unique_id=568618967]
 position = Vector2(0, 100)

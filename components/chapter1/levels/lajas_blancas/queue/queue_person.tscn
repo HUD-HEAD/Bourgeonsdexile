@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/chapter1/main_characters/jungle_woman.tscn" id="1_lfrhx"]
 [ext_resource type="SpriteFrames" uid="uid://cchqk7wd7eo6c" path="res://components/chapter1/levels/lajas_blancas/queue/blue_woman.tres" id="2_shsib"]
 [ext_resource type="Script" uid="uid://bchnidsm7kci0" path="res://components/chapter1/main_characters/companion.gd" id="2_trrhf"]
-[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="3_rhku2"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="3_rhku2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_trrhf"]
 radius = 48.0

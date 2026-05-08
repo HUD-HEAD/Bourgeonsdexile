@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://cyqwmaex0ilgv" path="res://components/chapter1/comic_panels/comic_1/panel_boat_crossing.tscn" id="17_80lay"]
 [ext_resource type="PackedScene" uid="uid://bi4kbbnyg1r6g" path="res://components/chapter1/comic_panels/comic_1/panel_boat_closeup.tscn" id="18_sqr4k"]
 [ext_resource type="PackedScene" uid="uid://drxfjicmrdtlo" path="res://components/chapter1/comic_panels/comic_1/panel_arrival.tscn" id="19_uean3"]
-[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="20_ql82s"]
+[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="20_ql82s"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="21_hqiua"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="22_2pr0c"]
 [ext_resource type="AudioStream" uid="uid://curu5rxi6emup" path="res://audio/chapter1/soundtrack/STARTING_THEME.wav" id="23_of4t3"]

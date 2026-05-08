@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://c8yjpks4wqdqe"]
 
-[ext_resource type="Shader" uid="uid://cbk3sn8e1flb4" path="res://scenes/prototyping/contraction/contraction_demo2.gdshader" id="1_5dbot"]
-[ext_resource type="Material" uid="uid://ct7nfyek8i1le" path="res://scenes/prototyping/contraction/mat_contraction.tres" id="1_gatpt"]
-[ext_resource type="Script" uid="uid://c5w88vtgql7rs" path="res://scenes/prototyping/contraction/contraction_controller.gd" id="2_2wh7f"]
-[ext_resource type="Script" uid="uid://bf2oac284v575" path="res://scenes/prototyping/contraction/shader_param.gd" id="4_p5e6y"]
+[ext_resource type="Shader" uid="uid://cbk3sn8e1flb4" path="res://components/chapter2/contractions/contraction_wobble/contraction_demo2.gdshader" id="1_5dbot"]
+[ext_resource type="Material" uid="uid://ct7nfyek8i1le" path="res://components/chapter2/contractions/contraction_wobble/mat_contraction.tres" id="1_gatpt"]
+[ext_resource type="Script" uid="uid://c5w88vtgql7rs" path="res://components/chapter2/contractions/contraction_wobble/contraction_controller.gd" id="2_2wh7f"]
+[ext_resource type="Script" uid="uid://bf2oac284v575" path="res://components/chapter2/contractions/contraction_wobble/contraction_shader_param.gd" id="4_p5e6y"]
 [ext_resource type="Texture2D" uid="uid://cqgge3pmf4v66" path="res://graphics/chapter2/levels/desert/tiledbackground_1.jpg" id="5_lkgd8"]
 [ext_resource type="PackedScene" uid="uid://cilqgb10bxsi7" path="res://components/chapter2/characters/amani.tscn" id="6_cd22o"]
 
