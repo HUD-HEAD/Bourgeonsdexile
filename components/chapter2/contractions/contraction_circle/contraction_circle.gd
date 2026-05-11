@@ -3,6 +3,8 @@ extends Node
 var min_radius : float
 @export var max_radius : float = 200
 @export var growth_factor : float = 3
+#HACK 
+@export var node_to_enable : Node
 
 @export_group("Nodes")
 @export var circle : Circle
@@ -11,6 +13,7 @@ var min_radius : float
 
 
 func _ready() -> void:
+	node_to_enable.process_mode = Node.PROCESS_MODE_DISABLED
 	min_radius = circle.radius
 
 func _process(delta: float) -> void:
@@ -25,3 +28,5 @@ func _process(delta: float) -> void:
 
 func disable():
 	process_mode = Node.PROCESS_MODE_DISABLED
+	node_to_enable.process_mode = Node.PROCESS_MODE_INHERIT
+	

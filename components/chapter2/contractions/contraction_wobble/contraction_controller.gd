@@ -8,17 +8,23 @@ class_name ContractionController extends Node
 func _ready() -> void:
 	for sp in shader_params:
 		shader_mat.set_shader_parameter(sp.name, sp.curr_val)
-
-func _process(delta: float) -> void:
-	if Input.is_action_pressed("select_element"):
-		soothe_contraction(delta*0.1)
 	
 #TODO need to fix in shader Speed adjustment looing like "rewind"
 func soothe_contraction(delta):
-		for sp in shader_params:
-			var new_val = move_toward(sp.curr_val, sp.min_val, delta)
-			shader_mat.set_shader_parameter(sp.name, new_val)
-			sp.curr_val = new_val
+	for sp in shader_params:
+		var new_val = move_toward(sp.curr_val, sp.min_val, delta)
+		shader_mat.set_shader_parameter(sp.name, new_val)
+		sp.curr_val = new_val
+
+
+func _check_soothed() -> bool:
+	var fully_soothed : bool = true
+	for sp in shader_params:
+		if sp.curr_val > sp.min_val:
+			fully_soothed = false
+			#print_debug(str(sp.name, " ",sp.curr_val, " " ,sp.min_val))
+			
+	return fully_soothed
 
 func trigger_contraction():
 	for sp in shader_params:
