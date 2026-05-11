@@ -6,6 +6,8 @@ extends Node2D
 
 @export var move_speed : float = 75
 
+@export var visuals : Node2D
+
 var walking : bool
 
 #TODO cleanup. Should we set a path on all scenes? 
@@ -29,7 +31,10 @@ func _on_area_entered(area : Area2D):
 	
 func _start_walking():
 	walking = true
+	visuals.process_mode = Node.PROCESS_MODE_INHERIT
 
 func _stop_walking():
 	walking = false
+	#HACK stop wheels + vert sine
+	visuals.process_mode = Node.PROCESS_MODE_DISABLED
 	

@@ -1,16 +1,12 @@
 [gd_scene format=3 uid="uid://calxcc2jttv3p"]
 
 [ext_resource type="Texture2D" uid="uid://tx1s43xa61vj" path="res://graphics/chapter2/levels/goma/environment/background/gomatiledbig.png" id="1_swud2"]
-[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="3_aqeuv"]
-[ext_resource type="PackedScene" uid="uid://bn2kp6x746ehp" path="res://components/chapter2/characters/boda_boda.tscn" id="3_p8hlq"]
-[ext_resource type="Texture2D" uid="uid://clala6idvmos3" path="res://graphics/chapter2/levels/desert/separatedbus/businside.png" id="4_swud2"]
+[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="3_aqeuv"]
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="5_6tu1w"]
 [ext_resource type="Texture2D" uid="uid://o84b45ex1xtm" path="res://graphics/chapter2/levels/tangrampuzzles/4/1_4line.png" id="5_kaq42"]
-[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="5_ogvpn"]
-[ext_resource type="Texture2D" uid="uid://b2ipjbn25qct0" path="res://graphics/chapter2/levels/desert/separatedbus/wheel1.png" id="5_swud2"]
-[ext_resource type="Texture2D" uid="uid://cq4oebmiej7bw" path="res://graphics/chapter2/levels/desert/separatedbus/wheel2.png" id="6_0x0y1"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="5_ogvpn"]
 [ext_resource type="Texture2D" uid="uid://blrpjfcod1aam" path="res://graphics/chapter2/levels/tangrampuzzles/4/1_4.png" id="6_i4ccv"]
-[ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/obstacle.tscn" id="6_ogvpn"]
+[ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/mechanics/obstacle.tscn" id="6_ogvpn"]
 [ext_resource type="Texture2D" uid="uid://bok0cn6mibgr2" path="res://graphics/chapter2/levels/tangrampuzzles/4/2_4line.png" id="7_asllw"]
 [ext_resource type="PackedScene" uid="uid://c34f2ydqf515m" path="res://components/chapter2/levels/goma-nakivale/drag_drop_puzzle_GN1.tscn" id="7_swud2"]
 [ext_resource type="Texture2D" uid="uid://64lp6gu1y2bs" path="res://graphics/chapter2/levels/tangrampuzzles/4/2_4.png" id="8_fij1a"]
@@ -30,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://b4trssi06gxl5" path="res://graphics/chapter2/levels/tangrampuzzles/4/6_4.png" id="16_duasu"]
 [ext_resource type="Texture2D" uid="uid://c6fiev0u20eia" path="res://graphics/chapter2/levels/tangrampuzzles/4/7_4line.png" id="17_sfols"]
 [ext_resource type="Texture2D" uid="uid://cls7tcwvvxjim" path="res://graphics/chapter2/levels/tangrampuzzles/4/7_4.png" id="18_r65cl"]
+[ext_resource type="PackedScene" uid="uid://dkfqmwb4acl5k" path="res://components/chapter2/characters/bus.tscn" id="25_iym2s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uu4gm"]
 size = Vector2(1545, 367)
@@ -327,26 +324,8 @@ collision_mask = 2
 [node name="DragDropPuzzle4" parent="Puzzles/PuzzleWindowBus" unique_id=2122580379 instance=ExtResource("11_tn746")]
 position = Vector2(1096, 415)
 
-[node name="Bus" parent="." unique_id=925815680 instance=ExtResource("3_p8hlq")]
+[node name="Bus" parent="." unique_id=1136971117 instance=ExtResource("25_iym2s")]
 position = Vector2(1168, 883)
-move_speed = 800.0
-
-[node name="Bodabodatogether" parent="Bus" index="0" unique_id=1160138196]
-texture = ExtResource("4_swud2")
-
-[node name="Wheel1" parent="Bus/Bodabodatogether" index="0" unique_id=1790416269]
-show_behind_parent = false
-position = Vector2(-379, 150)
-texture = ExtResource("5_swud2")
-
-[node name="Wheel2" parent="Bus/Bodabodatogether" index="1" unique_id=431842153]
-show_behind_parent = false
-position = Vector2(383, 148)
-texture = ExtResource("6_0x0y1")
-
-[node name="CollisionShape2D" parent="Bus/Area2D" parent_id_path=PackedInt32Array(925815680, 1622822538) index="0" unique_id=450716263]
-position = Vector2(-49.5, 143.5)
-shape = SubResource("RectangleShape2D_uu4gm")
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Bus" unique_id=218413136]
 position = Vector2(-422, -360)
@@ -397,4 +376,3 @@ next_scene = "uid://buy5yt5e73v7w"
 [editable path="Puzzles/Puzzle4/Puzzle3/BuildingBlocks/HollowPieces/PuzzlePieceHollow"]
 [editable path="Puzzles/Puzzle4/Puzzle3/BuildingBlocks/HollowPieces/PuzzlePieceHollow2"]
 [editable path="Puzzles/Puzzle4/Puzzle3/BuildingBlocks/HollowPieces/PuzzlePieceHollow3"]
-[editable path="Bus"]
