@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://tdurdvnqfpne"]
 
 [ext_resource type="Texture2D" uid="uid://bqj367a2ghpnp" path="res://graphics/chapter2/comics/comic4/framecontractions/3.png" id="2_n4755"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="3_qfxh5"]
 [ext_resource type="Script" uid="uid://b53lydy2nagvh" path="res://components/chapter2/contractions/contraction_wobble/contraction_trigger.gd" id="4_5ewns"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1qtt0"]
+size = Vector2(1920, 1080)
 
 [node name="Panel1" type="Node2D" unique_id=690781203]
 
@@ -12,3 +16,10 @@ script = ExtResource("4_5ewns")
 texture = ExtResource("2_n4755")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1853797877]
+
+[node name="Clickable" type="Area2D" parent="." unique_id=371612507]
+script = ExtResource("3_qfxh5")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=200319098]
+shape = SubResource("RectangleShape2D_1qtt0")
