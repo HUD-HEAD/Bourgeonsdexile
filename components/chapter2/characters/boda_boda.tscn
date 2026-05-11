@@ -10,9 +10,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sriwm"]
 size = Vector2(544, 495)
 
-[node name="BodaBoda" type="Node2D" unique_id=925815680 node_paths=PackedStringArray("char_area")]
+[node name="BodaBoda" type="Node2D" unique_id=925815680 node_paths=PackedStringArray("char_area", "visuals")]
 script = ExtResource("1_sriwm")
 char_area = NodePath("Area2D")
+visuals = NodePath("Bodabodatogether")
 
 [node name="Bodabodatogether" type="Sprite2D" parent="." unique_id=1160138196]
 texture = ExtResource("2_sriwm")

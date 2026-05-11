@@ -11,28 +11,29 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uu4gm"]
 size = Vector2(1545, 367)
 
-[node name="Bus" type="Node2D" unique_id=1136971117 node_paths=PackedStringArray("char_area")]
+[node name="Bus" type="Node2D" unique_id=1136971117 node_paths=PackedStringArray("char_area", "visuals")]
 script = ExtResource("1_e61wx")
 char_area = NodePath("Area2D")
 move_speed = 800.0
+visuals = NodePath("Bus")
 
-[node name="Bodabodatogether" type="Sprite2D" parent="." unique_id=1589932159]
+[node name="Bus" type="Sprite2D" parent="." unique_id=1589932159]
 texture = ExtResource("2_m07mj")
 script = ExtResource("3_proip")
 amplitude = 20.0
 speed = 5.0
 
-[node name="Wheel1" type="Sprite2D" parent="Bodabodatogether" unique_id=1321947491]
+[node name="Wheel1" type="Sprite2D" parent="Bus" unique_id=1321947491]
 position = Vector2(-379, 150)
 texture = ExtResource("4_voyh7")
 script = ExtResource("5_cn30k")
 
-[node name="Wheel2" type="Sprite2D" parent="Bodabodatogether" unique_id=1030157116]
+[node name="Wheel2" type="Sprite2D" parent="Bus" unique_id=1030157116]
 position = Vector2(383, 148)
 texture = ExtResource("6_ilylu")
 script = ExtResource("5_cn30k")
 
-[node name="Shadow" type="Sprite2D" parent="Bodabodatogether" unique_id=1298887155]
+[node name="Shadow" type="Sprite2D" parent="Bus" unique_id=1298887155]
 show_behind_parent = true
 position = Vector2(-46, 215)
 texture = ExtResource("7_p4fqx")
