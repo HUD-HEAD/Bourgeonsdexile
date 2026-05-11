@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="1_o12fu"]
 [ext_resource type="Texture2D" uid="uid://cab2chrg01h1" path="res://graphics/chapter1/comics/comic1/panel_board/board.png" id="2_kvwue"]
 [ext_resource type="Texture2D" uid="uid://bo41q8vxqxlk7" path="res://graphics/chapter1/comics/comic1/panel_board/knife.png" id="3_stnbv"]
-[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="4_ial8g"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="4_ial8g"]
 [ext_resource type="Texture2D" uid="uid://dftekw6egqr3r" path="res://graphics/chapter1/comics/comic1/panel_board/anim_onion/1.png" id="5_gsn35"]
 [ext_resource type="Texture2D" uid="uid://cp52w2vw1gxr3" path="res://graphics/chapter1/comics/comic1/panel_board/anim_onion/2.png" id="6_y11nq"]
 [ext_resource type="Texture2D" uid="uid://b674rltaxp0wj" path="res://graphics/chapter1/comics/comic1/panel_board/anim_onion/3.png" id="7_bpiwf"]
@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="10_gj2vg"]
 [ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/PlayOnClick.tscn" id="11_6of6h"]
 [ext_resource type="AudioStream" uid="uid://8fplt02l4a0b" path="res://audio/chapter1/ambient/panel_5_onion_knife_on_wood.wav" id="12_3ib38"]
-[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/click_hide.gd" id="13_64nu2"]
+[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/mechanics/click_hide.gd" id="13_64nu2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_64nu2"]
 radius = 91.32178

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b0mptnsmv1rm" path="res://graphics/chapter2/comics/comic3/frameating/1.png" id="1_wqn8m"]
 [ext_resource type="Texture2D" uid="uid://bjo0o0gmq4mmf" path="res://graphics/chapter2/comics/comic3/frameating/2.png" id="2_tqhho"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="3_ce5nu"]
-[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="3_evk7g"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="3_evk7g"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="6_kg3dy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ce5nu"]

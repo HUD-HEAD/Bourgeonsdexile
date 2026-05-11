@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://5kwaxmq5p5qk" path="res://graphics/chapter2/comics/comic2/framequeue/3.png" id="3_onw7a"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="4_qmg78"]
 [ext_resource type="Texture2D" uid="uid://dtd8peqwxbiyn" path="res://graphics/chapter2/comics/comic2/framequeue/clock/clock1.png" id="5_qmg78"]
-[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="5_qy2mm"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="5_qy2mm"]
 [ext_resource type="Texture2D" uid="uid://d30j0n4s4s2gu" path="res://graphics/chapter2/comics/comic2/framequeue/clock/clock2.png" id="6_qy2mm"]
 [ext_resource type="Texture2D" uid="uid://dj5cv8w22ipq2" path="res://graphics/chapter2/comics/comic2/framequeue/clock/clock 3.png" id="7_tberq"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="9_tberq"]

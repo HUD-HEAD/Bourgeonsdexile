@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b3xbb0f00akh4"]
 
 [ext_resource type="Texture2D" uid="uid://h4fc2xg0f5me" path="res://graphics/chapter1/comics/comic1/panel_wake_up/frame3_background1.png" id="1_2vtsb"]
-[ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/click_enable.gd" id="1_872db"]
+[ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/mechanics/click_enable.gd" id="1_872db"]
 [ext_resource type="Texture2D" uid="uid://bylno0cgs0cky" path="res://graphics/chapter1/comics/comic1/panel_wake_up/frame3_background2.png" id="2_pmfxp"]
 [ext_resource type="Texture2D" uid="uid://56y3m7d8acwa" path="res://graphics/chapter1/comics/comic1/panel_wake_up/frame3_background3.png" id="3_wiokp"]
 [ext_resource type="AudioStream" uid="uid://bhs58s20ognbo" path="res://audio/chapter1/ambient/PANEL_10_WOMAN_BREATHING_INTERACTIVE.wav" id="4_51w12"]

@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://ct7nfyek8i1le"]
+
+[ext_resource type="Shader" uid="uid://cbk3sn8e1flb4" path="res://components/chapter2/contractions/contraction_wobble/contraction_wobble.gdshader" id="1_glf38"]
+
+[resource]
+shader = ExtResource("1_glf38")
+shader_parameter/circleRadius = 0.30000000447036
+shader_parameter/lineWidth = 0.0150000007125
+shader_parameter/waves = 5.0
+shader_parameter/amplitude = 0.25999999418848
+shader_parameter/speed = 8.20000012218984
+shader_parameter/offset_intensity = 1.0
+shader_parameter/blur_amount = 5.0
+shader_parameter/modulate = 1.0

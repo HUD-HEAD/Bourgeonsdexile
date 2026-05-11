@@ -2,14 +2,17 @@
 
 [ext_resource type="Texture2D" uid="uid://cqgge3pmf4v66" path="res://graphics/chapter2/levels/desert/tiledbackground_1.jpg" id="1_k3cai"]
 [ext_resource type="PackedScene" uid="uid://cilqgb10bxsi7" path="res://components/chapter2/characters/amani.tscn" id="2_5hlr5"]
+[ext_resource type="Material" uid="uid://mamd7s33ysol" path="res://scenes/prototyping/lut/mat_lut_rain.tres" id="4_5hlr5"]
 [ext_resource type="Material" uid="uid://b2dgoyfbpjmhn" path="res://scenes/prototyping/lut/mat_demo_lut.tres" id="4_k3cai"]
+[ext_resource type="Material" uid="uid://dan4raduiqle3" path="res://scenes/prototyping/lut/mat_lut_nightcamp.tres" id="5_kpwsw"]
+[ext_resource type="Material" uid="uid://bqi8ljbqr4pmw" path="res://scenes/prototyping/lut/mat_lut_nightdesert.tres" id="6_wiqhg"]
 
-[sub_resource type="Gradient" id="Gradient_yrfo1"]
+[sub_resource type="Gradient" id="Gradient_kpwsw"]
 offsets = PackedFloat32Array(0, 0.63988096)
 colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_k3cai"]
-gradient = SubResource("Gradient_yrfo1")
+gradient = SubResource("Gradient_kpwsw")
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_l3yuq"]
 size = Vector2(1920, 1080)
@@ -25,7 +28,25 @@ position = Vector2(-211, 358)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=774193631]
 material = ExtResource("4_k3cai")
-position = Vector2(-152, -260)
+position = Vector2(-150, -220.99997)
+scale = Vector2(10.453125, 6.28125)
+texture = SubResource("GradientTexture2D_k3cai")
+
+[node name="OverlayRain" type="Sprite2D" parent="." unique_id=2065120278]
+material = ExtResource("4_5hlr5")
+position = Vector2(-1082, 146)
+scale = Vector2(10.453125, 6.28125)
+texture = SubResource("GradientTexture2D_k3cai")
+
+[node name="OverlayNightCamp" type="Sprite2D" parent="." unique_id=514112638]
+material = ExtResource("5_kpwsw")
+position = Vector2(26, 287)
+scale = Vector2(10.453125, 6.28125)
+texture = SubResource("GradientTexture2D_k3cai")
+
+[node name="OverlayNightDesert" type="Sprite2D" parent="." unique_id=1955347381]
+material = ExtResource("6_wiqhg")
+position = Vector2(750, 284.99997)
 scale = Vector2(10.453125, 6.28125)
 texture = SubResource("GradientTexture2D_k3cai")
 

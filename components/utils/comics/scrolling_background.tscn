@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bomhqj3lxkka3"]
 
 [ext_resource type="Texture2D" uid="uid://du6ilkm4sh11x" path="res://graphics/utils/maskclaire.png" id="1_2nipq"]
-[ext_resource type="Script" uid="uid://bgpah31hretcf" path="res://components/utils/pan_node.gd" id="2_niifh"]
+[ext_resource type="Script" uid="uid://bgpah31hretcf" path="res://components/utils/mechanics/pan_node.gd" id="2_niifh"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="3_3wy8m"]
 
 [node name="ScrollingBackground" type="Sprite2D" unique_id=231777281]

@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cv2n5accwy8jy" path="res://components/chapter3/comic1/panel_10.tscn" id="14_1uikj"]
 [ext_resource type="PackedScene" uid="uid://de2gbwl2xf52m" path="res://components/chapter3/comic1/panel_11.tscn" id="15_be7uh"]
 [ext_resource type="PackedScene" uid="uid://o2lunwmjplwk" path="res://components/chapter3/comic1/panel_12.tscn" id="16_xbw0h"]
-[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="20_u5654"]
+[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="20_u5654"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="21_rh3md"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="22_tc6fe"]
 

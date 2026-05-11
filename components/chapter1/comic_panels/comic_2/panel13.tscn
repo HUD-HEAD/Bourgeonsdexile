@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://gevy0733xl07" path="res://graphics/chapter1/comics/comic2/frame11/frame11.png" id="1_6g6ab"]
 [ext_resource type="AudioStream" uid="uid://cmtdjf2ccy6y0" path="res://audio/chapter1/ambient/panel_section_2/panel_2.14_woman_breathing - copia.wav" id="3_m1dd0"]
-[ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/click_enable.gd" id="3_xkunk"]
+[ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/mechanics/click_enable.gd" id="3_xkunk"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_m1dd0"]
 
 [sub_resource type="Animation" id="Animation_xkunk"]

@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bbl8ivpwlwsnw" path="res://graphics/chapter2/comics/comic1/framephone/mmap.png" id="5_nqo85"]
 [ext_resource type="Texture2D" uid="uid://b3b2r7gsh6jwp" path="res://graphics/chapter2/comics/comic1/framephone/hand.png" id="6_3ui50"]
 [ext_resource type="Texture2D" uid="uid://cbywnch7guolu" path="res://graphics/chapter1/comics/comic3/panel_phonelajas/buttons.png" id="7_b2db3"]
-[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/clickable.gd" id="8_igrvd"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="8_igrvd"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="9_b7342"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o6u0t"]

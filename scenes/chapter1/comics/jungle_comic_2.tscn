@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ckqe0ckfq2chw" path="res://components/chapter1/comic_panels/comic_2/panel5.tscn" id="12_mtmad"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="12_su3g7"]
 [ext_resource type="PackedScene" uid="uid://b5r5lde3mml06" path="res://components/chapter1/comic_panels/comic_2/panel_pan_keanu_women.tscn" id="13_2nmvc"]
-[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="14_fekbj"]
+[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="14_fekbj"]
 [ext_resource type="PackedScene" uid="uid://b5asjt0f4mcsd" path="res://components/chapter1/comic_panels/comic_2/panel7.tscn" id="14_tvvi7"]
 [ext_resource type="PackedScene" uid="uid://bj7e73nkbbtwn" path="res://components/chapter1/comic_panels/comic_2/panel9.tscn" id="15_mtmad"]
 [ext_resource type="PackedScene" uid="uid://cgsvxrtoxhfja" path="res://components/chapter1/comic_panels/comic_2/panel13.tscn" id="15_xso2w"]

@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bhvy7yex87kvc" path="res://components/chapter1/comic_panels/comic_3/panel_phone.tscn" id="8_7jm3w"]
 [ext_resource type="PackedScene" uid="uid://cu1lmj34y2sxm" path="res://components/chapter1/comic_panels/comic_3/panel_kid_lajas.tscn" id="8_jrtjm"]
 [ext_resource type="PackedScene" uid="uid://cvhdi4oiatmqi" path="res://components/chapter1/comic_panels/comic_3/panel_helppoint.tscn" id="9_ouit8"]
-[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="12_txuxr"]
+[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="12_txuxr"]
 [ext_resource type="PackedScene" uid="uid://ho5wjpeqrptp" path="res://components/chapter1/comic_panels/comic_3/panel_arrival.tscn" id="13_w6r1n"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="15_sw7mp"]
 [ext_resource type="PackedScene" uid="uid://clojdgf3punl6" path="res://components/chapter1/comic_panels/comic_3/panel_phone_canteen.tscn" id="15_w6r1n"]

@@ -15,7 +15,7 @@
 [ext_resource type="Script" uid="uid://brcf7uo40xrq2" path="res://components/utils/audio/audio_crossfade.gd" id="13_qy574"]
 [ext_resource type="PackedScene" uid="uid://c4cui6mh277i5" path="res://components/chapter1/comic_panels/comic_1/panel_phone_bus.tscn" id="14_fwjes"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="17_13xj0"]
-[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/goto_next_scene.gd" id="17_54bx8"]
+[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="17_54bx8"]
 [ext_resource type="PackedScene" uid="uid://bi4kbbnyg1r6g" path="res://components/chapter1/comic_panels/comic_1/panel_boat_closeup.tscn" id="19_p78bu"]
 [ext_resource type="AudioStream" uid="uid://curu5rxi6emup" path="res://audio/chapter1/soundtrack/STARTING_THEME.wav" id="21_imely"]
 [ext_resource type="AudioStream" uid="uid://d1jjetsntvge2" path="res://audio/chapter1/soundtrack/MIGRATION-THEME.wav" id="22_ixmb8"]

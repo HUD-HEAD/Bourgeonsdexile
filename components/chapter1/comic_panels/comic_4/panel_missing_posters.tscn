@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="6_s4ind"]
 [ext_resource type="Texture2D" uid="uid://dr4ou01aytlde" path="res://graphics/chapter1/comics/comic4/panelmissingboard/NPCAnim/2.png" id="7_cqg6m"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="9_lmdhm"]
-[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/click_hide.gd" id="10_lw7vi"]
+[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/mechanics/click_hide.gd" id="10_lw7vi"]
 [ext_resource type="Texture2D" uid="uid://rvmvahhqtp8p" path="res://graphics/chapter1/comics/comic4/panelmissingboard/posters/big/1.png" id="11_2qr7t"]
 [ext_resource type="Texture2D" uid="uid://b23seiv0ice54" path="res://graphics/chapter1/comics/comic4/panelmissingboard/posters/big/2.png" id="12_ifv13"]
 [ext_resource type="Texture2D" uid="uid://ddfvgk0wp34tl" path="res://graphics/chapter1/comics/comic4/panelmissingboard/posters/big/3.png" id="13_16pkg"]

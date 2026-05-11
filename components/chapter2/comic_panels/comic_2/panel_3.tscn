@@ -2,15 +2,23 @@
 
 [ext_resource type="Texture2D" uid="uid://ci5rjm67rurvn" path="res://graphics/chapter2/comics/comic2/framesky/bg.png" id="1_xmlk0"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_3bo45"]
+[ext_resource type="Material" uid="uid://mamd7s33ysol" path="res://scenes/prototyping/lut/mat_lut_rain.tres" id="2_i2khw"]
+[ext_resource type="Script" uid="uid://bxdi7w06ul2j0" path="res://components/utils/comics/pan_modulate.gd" id="4_nm27t"]
 
 [node name="Panel3" type="Node2D" unique_id=547383153]
 
 [node name="Bg" type="Sprite2D" parent="." unique_id=825403214]
-position = Vector2(-7, -9)
 texture = ExtResource("1_xmlk0")
 
-[node name="TransitionerPassive" type="Node" parent="." unique_id=472262883]
-script = ExtResource("2_3bo45")
-metadata/_custom_type_script = "uid://u4636s8oa5d0"
+[node name="OverlayRain" type="Sprite2D" parent="." unique_id=420456436 node_paths=PackedStringArray("node_to_enable")]
+material = ExtResource("2_i2khw")
+texture = ExtResource("1_xmlk0")
+script = ExtResource("4_nm27t")
+sensitivity = 0.001
+node_to_enable = NodePath("../TransitionerPassive")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1616104888]
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=29688003]
+script = ExtResource("2_3bo45")
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
