@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://spvy4o0ls76g" path="res://graphics/chapter2/levels/tangrampuzzles/9/7_9line.png" id="22_podrv"]
 [ext_resource type="Texture2D" uid="uid://bjybi0w3vkw2i" path="res://graphics/chapter2/levels/tangrampuzzles/9/8_9line.png" id="23_gmrap"]
 [ext_resource type="Texture2D" uid="uid://x8reasjp31sa" path="res://graphics/chapter2/levels/tangrampuzzles/9/7_9.png" id="23_tl3ag"]
+[ext_resource type="Texture2D" uid="uid://dlbwa0uh0s86d" path="res://graphics/ui/buttons/pause/menu_pause2.png" id="24_872m0"]
 [ext_resource type="Texture2D" uid="uid://mviow6sdh7w4" path="res://graphics/chapter2/levels/tangrampuzzles/9/8_9.png" id="24_jcuem"]
 [ext_resource type="Texture2D" uid="uid://hfnifxbq2xl" path="res://graphics/chapter2/levels/tangrampuzzles/9/9_9line.png" id="25_odemf"]
 [ext_resource type="Texture2D" uid="uid://c2ut7yxg0x7dp" path="res://graphics/chapter2/levels/tangrampuzzles/9/9_9.png" id="26_e65kt"]
@@ -183,6 +184,10 @@ texture = ExtResource("22_podrv")
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzles/Puzzle2/DragDropPuzzle2/BuildingBlocks/PuzzlePiece7/Draggable" parent_id_path=PackedInt32Array(773094152, 1939349516, 2116105691) index="1" unique_id=991932022]
 position = Vector2(27.777779, 1.1111112)
 texture = ExtResource("23_tl3ag")
+
+[node name="MenuPause2" type="Sprite2D" parent="Puzzles/Puzzle2/DragDropPuzzle2/BuildingBlocks/PuzzlePiece7/Draggable" parent_id_path=PackedInt32Array(773094152, 1939349516, 2116105691) index="4" unique_id=791479619]
+position = Vector2(21.111061, -854.44446)
+texture = ExtResource("24_872m0")
 
 [node name="PuzzlePiece8" parent="Puzzles/Puzzle2/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(773094152, 1654234455) index="14" unique_id=1519600768]
 position = Vector2(595.55536, -136.66672)
