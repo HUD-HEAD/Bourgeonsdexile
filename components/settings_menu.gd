@@ -20,6 +20,7 @@ class_name SettingsController extends CanvasLayer
 
 const CURSOR_MIN = 0.5
 const CURSOR_MAX = 2.0
+const CURSOR_STEP = 0.05
 
 static  var has_been_initialized = false
 static var player_preferences: PlayerPreferences
@@ -45,7 +46,7 @@ func _set_initial_values():
 	# Configurar rango del cursor slider
 	cursor_slider.min_value = CURSOR_MIN
 	cursor_slider.max_value = CURSOR_MAX
-	cursor_slider.step = 0.1
+	cursor_slider.step = CURSOR_STEP
 
 static func _initialize():
 	if !has_been_initialized:
@@ -154,8 +155,7 @@ static func _apply_sfx_volume(value: float) -> void:
 	AudioServer.set_bus_volume_linear(AudioServer.get_bus_index("Sfx"), value)
 
 static func _apply_cursor_size(value: float) -> void:
-	# Conectar con tu CustomManager si maneja el cursor
-	pass
+	CustomCursor.update_cursor_scale(value)
 
 static func _apply_fullscreen(value: bool) -> void:
 	if value:
