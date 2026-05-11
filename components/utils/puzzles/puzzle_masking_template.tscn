@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="10_bo17s"]
 
 [node name="PuzzleMasking" type="Node2D" unique_id=1941159865 node_paths=PackedStringArray("complete_image", "outline_image")]
+z_index = 1
 script = ExtResource("1_nrmhh")
 complete_image = NodePath("CompletePuzzle")
 outline_image = NodePath("OutlinePuzzle")
@@ -25,7 +26,7 @@ Needed so they always appear masked out (behind Hollow pieces), even when dragge
 
 [node name="PuzzlePiece" parent="BuildingBlocks/FullPieces" unique_id=729525704 instance=ExtResource("9_xasnt")]
 
-[node name="DraggableZone" parent="BuildingBlocks/FullPieces/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="2" unique_id=1105802255]
+[node name="DraggableZone" parent="BuildingBlocks/FullPieces/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="3" unique_id=1105802255]
 shape = null
 
 [node name="HollowPieces" type="Node2D" parent="BuildingBlocks" unique_id=1500445843]
