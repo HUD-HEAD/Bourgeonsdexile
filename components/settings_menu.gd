@@ -1,4 +1,4 @@
-extends CanvasLayer
+class_name SettingsController extends CanvasLayer
 
 @onready var music_slider = $TextureRect/MusicSlider
 @onready var sfx_slider = $TextureRect/SFXSlider
@@ -21,41 +21,66 @@ extends CanvasLayer
 const CURSOR_MIN = 0.5
 const CURSOR_MAX = 2.0
 
+static  var has_been_initialized = false
+static var player_preferences: PlayerPreferences
+
 func _ready() -> void:
+	_initialize()
+	_set_initial_values()
+
+func _set_initial_values():
 	# Cargar valores guardados
-	music_slider.value = GameManager.music_volume
-	sfx_slider.value = GameManager.sfx_volume
-	cursor_slider.value = GameManager.cursor_size
-	fullscreen_check.button_pressed = GameManager.is_fullscreen
-	
-	# Aplicar valores actuales
-	_apply_music_volume(GameManager.music_volume)
-	_apply_sfx_volume(GameManager.sfx_volume)
-	_apply_cursor_size(GameManager.cursor_size)
-	_apply_fullscreen(GameManager.is_fullscreen)
+	music_slider.value = player_preferences.music_volume
+	sfx_slider.value = player_preferences.sfx_volume
+	cursor_slider.value = player_preferences.cursor_size
+	fullscreen_check.button_pressed = player_preferences.is_fullscreen
 	
 	# Configurar rango del cursor slider
 	cursor_slider.min_value = CURSOR_MIN
 	cursor_slider.max_value = CURSOR_MAX
 	cursor_slider.step = 0.1
+	
+	#Asign delegates for sliders & toggle
+	music_slider.connect("value_changed", _on_music_slider_value_changed)
+	sfx_slider.connect("value_changed", _on_sfx_slider_value_changed)
+	cursor_slider.connect("value_changed", _on_cursor_slide_value_changed)
+	fullscreen_check.connect("toggled", _on_fullscreen_check_toggled)
+
+static func _initialize():
+	if !has_been_initialized:
+		has_been_initialized = true
+		#Load Player Preferences
+		player_preferences = PlayerPreferences.load_player_preferences()
+	
+		# Apply save values
+		_apply_music_volume(player_preferences.music_volume)
+		_apply_sfx_volume(player_preferences.sfx_volume)
+		_apply_cursor_size(player_preferences.cursor_size)
+		_apply_fullscreen(player_preferences.is_fullscreen)
+	
+
 
 # ── Sliders ──────────────────────────────────────────
 func _on_music_slider_value_changed(value: float) -> void:
-	GameManager.music_volume = value
+	player_preferences.music_volume = value
 	_apply_music_volume(value)
+	_save_player_preferences()
 
 func _on_sfx_slider_value_changed(value: float) -> void:
-	GameManager.sfx_volume = value
+	player_preferences.sfx_volume = value
 	_apply_sfx_volume(value)
+	_save_player_preferences()
 
 func _on_cursor_slide_value_changed(value: float) -> void:
-	GameManager.cursor_size = value
+	player_preferences.cursor_size = value
 	_apply_cursor_size(value)
+	_save_player_preferences()
 
 # ── Fullscreen ────────────────────────────────────────
 func _on_fullscreen_check_toggled(pressed: bool) -> void:
-	GameManager.is_fullscreen = pressed
+	player_preferences.is_fullscreen = pressed
 	_apply_fullscreen(pressed)
+	_save_player_preferences()
 
 # ── Idiomas ───────────────────────────────────────────
 func _on_button_es_pressed() -> void:
@@ -114,18 +139,22 @@ func _on_close_button_pressed() -> void:
 	queue_free()
 
 # ── Aplicar valores ───────────────────────────────────
-func _apply_music_volume(value: float) -> void:
+static func _apply_music_volume(value: float) -> void:
 	AudioServer.set_bus_volume_linear(AudioServer.get_bus_index("Master"), value)
 
-func _apply_sfx_volume(value: float) -> void:
+static func _apply_sfx_volume(value: float) -> void:
 	AudioServer.set_bus_volume_linear(AudioServer.get_bus_index("Sfx"), value)
 
-func _apply_cursor_size(value: float) -> void:
+static func _apply_cursor_size(value: float) -> void:
 	# Conectar con tu CustomManager si maneja el cursor
 	pass
 
-func _apply_fullscreen(value: bool) -> void:
+static func _apply_fullscreen(value: bool) -> void:
 	if value:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+
+ # ── Save Player Preferences ───────────────────────────────────
+func _save_player_preferences() -> void:
+	player_preferences.save()

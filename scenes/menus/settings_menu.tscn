@@ -34,6 +34,8 @@ offset_left = 734.0
 offset_top = 300.0
 offset_right = 1133.0
 offset_bottom = 316.0
+max_value = 1.0
+step = 0.01
 
 [node name="SFXSlider" type="HSlider" parent="TextureRect" unique_id=178834463]
 layout_mode = 0
@@ -41,6 +43,8 @@ offset_left = 734.0
 offset_top = 436.0
 offset_right = 1133.0
 offset_bottom = 452.0
+max_value = 1.0
+step = 0.01
 
 [node name="CursorSlide" type="HSlider" parent="TextureRect" unique_id=1622674374]
 layout_mode = 0
@@ -48,6 +52,10 @@ offset_left = 735.0
 offset_top = 689.0
 offset_right = 1134.0
 offset_bottom = 705.0
+min_value = 0.5
+max_value = 2.0
+step = 0.1
+value = 0.5
 
 [node name="FullscreenCheck" type="CheckBox" parent="TextureRect" unique_id=2048386531]
 layout_mode = 0
