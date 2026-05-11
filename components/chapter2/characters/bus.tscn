@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dkfqmwb4acl5k"]
+
+[ext_resource type="Script" uid="uid://cag8j8gn5a5kn" path="res://components/chapter2/characters/vehicle.gd" id="1_e61wx"]
+[ext_resource type="Texture2D" uid="uid://clala6idvmos3" path="res://graphics/chapter2/levels/desert/separatedbus/businside.png" id="2_m07mj"]
+[ext_resource type="Script" uid="uid://bwhw2o2u7v43i" path="res://components/utils/comics/vertical_sine_anim.gd" id="3_proip"]
+[ext_resource type="Texture2D" uid="uid://b2ipjbn25qct0" path="res://graphics/chapter2/levels/desert/separatedbus/wheel1.png" id="4_voyh7"]
+[ext_resource type="Script" uid="uid://cvlenn1q1qyrk" path="res://components/chapter2/characters/rotator.gd" id="5_cn30k"]
+[ext_resource type="Texture2D" uid="uid://cq4oebmiej7bw" path="res://graphics/chapter2/levels/desert/separatedbus/wheel2.png" id="6_ilylu"]
+[ext_resource type="Texture2D" uid="uid://b6rk6np2twi31" path="res://graphics/chapter2/levels/desert/separatedbus/shadow.png" id="7_p4fqx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uu4gm"]
+size = Vector2(1545, 367)
+
+[node name="Bus" type="Node2D" unique_id=1136971117 node_paths=PackedStringArray("char_area")]
+script = ExtResource("1_e61wx")
+char_area = NodePath("Area2D")
+move_speed = 800.0
+
+[node name="Bodabodatogether" type="Sprite2D" parent="." unique_id=1589932159]
+texture = ExtResource("2_m07mj")
+script = ExtResource("3_proip")
+amplitude = 20.0
+speed = 5.0
+
+[node name="Wheel1" type="Sprite2D" parent="Bodabodatogether" unique_id=1321947491]
+position = Vector2(-379, 150)
+texture = ExtResource("4_voyh7")
+script = ExtResource("5_cn30k")
+
+[node name="Wheel2" type="Sprite2D" parent="Bodabodatogether" unique_id=1030157116]
+position = Vector2(383, 148)
+texture = ExtResource("6_ilylu")
+script = ExtResource("5_cn30k")
+
+[node name="Shadow" type="Sprite2D" parent="Bodabodatogether" unique_id=1298887155]
+show_behind_parent = true
+position = Vector2(-46, 215)
+texture = ExtResource("7_p4fqx")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=60382203]
+position = Vector2(5, -142)
+collision_layer = 2
+collision_mask = 4
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1904925766]
+position = Vector2(-49.5, 143.5)
+shape = SubResource("RectangleShape2D_uu4gm")
