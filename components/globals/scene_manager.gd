@@ -3,6 +3,9 @@ extends Node
 var current_scene : Node = null
 var paused : bool = false
 
+# reference to settings scene
+var settings_instance
+
 func _ready():
 	#InputManager.cancel_pressed.connect(_on_cancel_pressed)
 	
@@ -74,5 +77,9 @@ func _on_cancel_pressed():
 ## Show settings
 func open_settings():
 	var settings_scene = ResourceLoader.load("res://scenes/menus/settings_menu.tscn")
-	var settings_instance = settings_scene.instantiate()
+	settings_instance = settings_scene.instantiate()
 	get_tree().root.add_child(settings_instance)
+
+## Close settings
+func close_settings():
+	settings_instance.queue_free()

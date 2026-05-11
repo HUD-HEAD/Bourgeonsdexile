@@ -29,12 +29,13 @@ func _ready() -> void:
 	_initialize()
 	_set_initial_values()
 	
-	#Asign delegates for sliders & toggle
+	#Asign delegates for sliders, buttons & toggle
 	music_slider.connect("value_changed", _on_music_slider_value_changed)
 	sfx_slider.connect("value_changed", _on_sfx_slider_value_changed)
 	cursor_slider.connect("value_changed", _on_cursor_slide_value_changed)
 	fullscreen_check.connect("toggled", _on_fullscreen_check_toggled)
 	reset_button.connect("pressed", _reset_player_preferences)
+	close_button.connect("pressed", _on_close_button_pressed)
 
 func _set_initial_values():
 	# Cargar valores guardados
@@ -145,7 +146,8 @@ func _on_reset_button_pressed() -> void:
 
 # ── Cerrar ────────────────────────────────────────────
 func _on_close_button_pressed() -> void:
-	queue_free()
+	#queue_free()
+	SceneManager.close_settings()
 
 # ── Aplicar valores ───────────────────────────────────
 static func _apply_music_volume(value: float) -> void:
