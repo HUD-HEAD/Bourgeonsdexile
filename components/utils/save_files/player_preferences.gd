@@ -15,3 +15,7 @@ static func load_player_preferences() -> PlayerPreferences:
 		pref = PlayerPreferences.new()
 	
 	return pref  
+static func reset_player_preferences() -> PlayerPreferences:
+	var pref: PlayerPreferences = PlayerPreferences.new()
+	pref.save()
+	return pref

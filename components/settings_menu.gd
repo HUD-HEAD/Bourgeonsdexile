@@ -27,6 +27,13 @@ static var player_preferences: PlayerPreferences
 func _ready() -> void:
 	_initialize()
 	_set_initial_values()
+	
+	#Asign delegates for sliders & toggle
+	music_slider.connect("value_changed", _on_music_slider_value_changed)
+	sfx_slider.connect("value_changed", _on_sfx_slider_value_changed)
+	cursor_slider.connect("value_changed", _on_cursor_slide_value_changed)
+	fullscreen_check.connect("toggled", _on_fullscreen_check_toggled)
+	reset_button.connect("pressed", _reset_player_preferences)
 
 func _set_initial_values():
 	# Cargar valores guardados
@@ -39,12 +46,6 @@ func _set_initial_values():
 	cursor_slider.min_value = CURSOR_MIN
 	cursor_slider.max_value = CURSOR_MAX
 	cursor_slider.step = 0.1
-	
-	#Asign delegates for sliders & toggle
-	music_slider.connect("value_changed", _on_music_slider_value_changed)
-	sfx_slider.connect("value_changed", _on_sfx_slider_value_changed)
-	cursor_slider.connect("value_changed", _on_cursor_slide_value_changed)
-	fullscreen_check.connect("toggled", _on_fullscreen_check_toggled)
 
 static func _initialize():
 	if !has_been_initialized:
@@ -53,12 +54,14 @@ static func _initialize():
 		player_preferences = PlayerPreferences.load_player_preferences()
 	
 		# Apply save values
-		_apply_music_volume(player_preferences.music_volume)
-		_apply_sfx_volume(player_preferences.sfx_volume)
-		_apply_cursor_size(player_preferences.cursor_size)
-		_apply_fullscreen(player_preferences.is_fullscreen)
+		_apply_settings()
 	
 
+static func _apply_settings():
+	_apply_music_volume(player_preferences.music_volume)
+	_apply_sfx_volume(player_preferences.sfx_volume)
+	_apply_cursor_size(player_preferences.cursor_size)
+	_apply_fullscreen(player_preferences.is_fullscreen)
 
 # ── Sliders ──────────────────────────────────────────
 func _on_music_slider_value_changed(value: float) -> void:
@@ -81,6 +84,11 @@ func _on_fullscreen_check_toggled(pressed: bool) -> void:
 	player_preferences.is_fullscreen = pressed
 	_apply_fullscreen(pressed)
 	_save_player_preferences()
+# ── Reset Player Preferences ────────────────────────────────────────
+func _reset_player_preferences():
+	player_preferences = PlayerPreferences.reset_player_preferences()
+	_apply_settings()
+	_set_initial_values()
 
 # ── Idiomas ───────────────────────────────────────────
 func _on_button_es_pressed() -> void:
