@@ -25,7 +25,7 @@ func _on_settings_pressed():
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event.is_action_pressed("exit"):
 		if SceneManager.settings_instance:
-			SceneManager.close_settings()
+			SceneManager.settings_instance._on_close_button_pressed()
 		else:
 			_on_quit_pressed()
 

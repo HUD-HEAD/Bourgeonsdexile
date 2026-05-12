@@ -7,16 +7,17 @@ class_name SettingsController extends CanvasLayer
 @onready var close_button = $TextureRect/CloseButton
 @onready var credits_button = $TextureRect/CreditsButton
 @onready var reset_button = $TextureRect/ResetButton
+@onready var credits_container = $TextureRect/CreditsContainer
 
 # Botones de idioma
-@onready var btn_es = $TextureRect/HBoxContainer/Button_ES
-@onready var btn_en = $TextureRect/HBoxContainer/Button_EN
-@onready var btn_fr = $TextureRect/HBoxContainer/Button_FR
-@onready var btn_it = $TextureRect/HBoxContainer/Button_IT
-@onready var btn_zh = $TextureRect/HBoxContainer/Button_ZH
-@onready var btn_ar = $TextureRect/HBoxContainer/Button_AR
-@onready var btn_jp = $TextureRect/HBoxContainer/Button_JP
-@onready var btn_fa = $TextureRect/HBoxContainer/Button_FA
+#@onready var btn_es = $TextureRect/HBoxContainer/Button_ES
+#@onready var btn_en = $TextureRect/HBoxContainer/Button_EN
+#@onready var btn_fr = $TextureRect/HBoxContainer/Button_FR
+#@onready var btn_it = $TextureRect/HBoxContainer/Button_IT
+#@onready var btn_zh = $TextureRect/HBoxContainer/Button_ZH
+#@onready var btn_ar = $TextureRect/HBoxContainer/Button_AR
+#@onready var btn_jp = $TextureRect/HBoxContainer/Button_JP
+#@onready var btn_fa = $TextureRect/HBoxContainer/Button_FA
 
 const CURSOR_MIN = 0.5
 const CURSOR_MAX = 2.0
@@ -36,6 +37,7 @@ func _ready() -> void:
 	fullscreen_check.connect("toggled", _on_fullscreen_check_toggled)
 	reset_button.connect("pressed", _reset_player_preferences)
 	close_button.connect("pressed", _on_close_button_pressed)
+	credits_button.connect("pressed", _on_credits_button_pressed)
 
 func _set_initial_values():
 	# Cargar valores guardados
@@ -119,10 +121,8 @@ func _on_button_fa_pressed() -> void:
 
 # ── Créditos ──────────────────────────────────────────
 func _on_credits_button_pressed() -> void:
-	$Credits.visible = true  # si lo tienes como hijo directo
-	var credits_scene = ResourceLoader.load("res://scenes/menus/credits.tscn")
-	var credits_instance = credits_scene.instantiate()
-	get_tree().root.add_child(credits_instance)
+	if 	credits_container:
+		credits_container.visible = true
 
 # ── Reset ─────────────────────────────────────────────
 func _on_reset_button_pressed() -> void:
@@ -146,12 +146,15 @@ func _on_reset_button_pressed() -> void:
 
 # ── Cerrar ────────────────────────────────────────────
 func _on_close_button_pressed() -> void:
-	#queue_free()
-	SceneManager.close_settings()
+	if credits_container.visible:
+		credits_container.visible = false
+	else :	
+		SceneManager.close_settings()
+
 
 # ── Aplicar valores ───────────────────────────────────
 static func _apply_music_volume(value: float) -> void:
-	AudioServer.set_bus_volume_linear(AudioServer.get_bus_index("Master"), value)
+	AudioServer.set_bus_volume_linear(AudioServer.get_bus_index("Music"), value)
 
 static func _apply_sfx_volume(value: float) -> void:
 	AudioServer.set_bus_volume_linear(AudioServer.get_bus_index("Sfx"), value)

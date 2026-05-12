@@ -4,7 +4,7 @@ var current_scene : Node = null
 var paused : bool = false
 
 # reference to settings scene
-var settings_instance
+var settings_instance: SettingsController
 
 func _ready():
 	#InputManager.cancel_pressed.connect(_on_cancel_pressed)
