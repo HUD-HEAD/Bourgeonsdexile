@@ -1,28 +1,16 @@
 [gd_scene format=3 uid="uid://c0wro4keqrw1k"]
 
-[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="1_dov0l"]
-[ext_resource type="Texture2D" uid="uid://btl0suexfe42h" path="res://graphics/chapter2/comics/comic1/frameplaying/kidsplaying.png" id="1_s2anf"]
-[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="3_4tme6"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3cciq"]
-size = Vector2(1052, 636)
+[ext_resource type="Texture2D" uid="uid://c16p4j4v2gt60" path="res://graphics/chapter2/comics/comic1/frameplaying/kidsplayinglegs.png" id="3_3cciq"]
+[ext_resource type="PackedScene" uid="uid://bomhqj3lxkka3" path="res://components/utils/comics/scrolling_background.tscn" id="3_xgdjl"]
 
 [node name="Panel1" type="Node2D" unique_id=299868253]
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=145189071]
 
-[node name="Clickable" type="Area2D" parent="." unique_id=2100947821]
-script = ExtResource("1_dov0l")
-metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+[node name="ScrollingBackground" parent="." unique_id=231777281 instance=ExtResource("3_xgdjl")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=552451930]
-position = Vector2(151, 104)
-shape = SubResource("RectangleShape2D_3cciq")
+[node name="Background" parent="ScrollingBackground/PanNode" parent_id_path=PackedInt32Array(231777281, 379019586) index="0" unique_id=524227348]
+position = Vector2(783, 0)
+texture = ExtResource("3_3cciq")
 
-[node name="Kidsplaying" type="Sprite2D" parent="Clickable" unique_id=1175364951]
-texture = ExtResource("1_s2anf")
-
-[node name="TransitionerCounter" type="Node" parent="." unique_id=2143078105 node_paths=PackedStringArray("clickables")]
-script = ExtResource("3_4tme6")
-clickables = [NodePath("../Clickable")]
-metadata/_custom_type_script = "uid://c44tybeisilbv"
+[editable path="ScrollingBackground"]

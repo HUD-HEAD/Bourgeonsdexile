@@ -70,4 +70,5 @@ material = ExtResource("4_m2n67")
 texture = ExtResource("1_4rdac")
 script = ExtResource("6_0bv3e")
 sensitivity = 0.001
+invert = true
 node_to_enable = NodePath("../AnimationPlayer")

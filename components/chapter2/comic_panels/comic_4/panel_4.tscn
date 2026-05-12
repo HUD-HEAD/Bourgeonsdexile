@@ -1,31 +1,25 @@
 [gd_scene format=3 uid="uid://tdurdvnqfpne"]
 
-[ext_resource type="Texture2D" uid="uid://cis0mplmn8yrc" path="res://graphics/chapter2/comics/comic4/framecontractions/b/b1.png" id="2_n4755"]
-[ext_resource type="Texture2D" uid="uid://r5pqyslbqatj" path="res://graphics/chapter2/comics/comic4/framecontractions/b/b2.png" id="2_qfxh5"]
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="4_1qtt0"]
+[ext_resource type="Texture2D" uid="uid://bqj367a2ghpnp" path="res://graphics/chapter2/comics/comic4/framecontractions/3.png" id="2_n4755"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="3_qfxh5"]
+[ext_resource type="Script" uid="uid://b53lydy2nagvh" path="res://components/chapter2/contractions/contraction_wobble/contraction_trigger.gd" id="4_5ewns"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_qfxh5"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_n4755")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_qfxh5")
-}],
-"loop": false,
-"name": &"default",
-"speed": 1.0
-}]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1qtt0"]
+size = Vector2(1920, 1080)
 
 [node name="Panel1" type="Node2D" unique_id=690781203]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2051076983]
-sprite_frames = SubResource("SpriteFrames_qfxh5")
-autoplay = "default"
+[node name="ContractionTrigger" type="VisibleOnScreenNotifier2D" parent="." unique_id=1876947053]
+script = ExtResource("4_5ewns")
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=40289621]
+[node name="3" type="Sprite2D" parent="." unique_id=1488750130]
+texture = ExtResource("2_n4755")
 
-[node name="TransitionerPassive" type="Node" parent="." unique_id=998977972]
-script = ExtResource("4_1qtt0")
-metadata/_custom_type_script = "uid://u4636s8oa5d0"
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1853797877]
+
+[node name="Clickable" type="Area2D" parent="." unique_id=371612507]
+script = ExtResource("3_qfxh5")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=200319098]
+shape = SubResource("RectangleShape2D_1qtt0")
