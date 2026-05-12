@@ -23,7 +23,7 @@ speed = 5.0
 
 [node name="Wheel1" type="Sprite2D" parent="Bodabodatogether" unique_id=1790416269]
 show_behind_parent = true
-position = Vector2(-193, 140)
+position = Vector2(-174, 170)
 texture = ExtResource("2_n652q")
 script = ExtResource("4_nls43")
 

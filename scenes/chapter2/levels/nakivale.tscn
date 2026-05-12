@@ -296,11 +296,9 @@ offset_from_model = 0.0
 [node name="AnimSprite" parent="Companion" index="0" unique_id=689873547]
 sprite_frames = ExtResource("5_yuvbc")
 
-[node name="NPC" type="CharacterBody2D" parent="." unique_id=1512292417]
+[node name="NPC" type="Sprite2D" parent="." unique_id=650013129]
 position = Vector2(1295, 620)
 scale = Vector2(1.3596919, 1.3596919)
-
-[node name="Sprite2D" type="Sprite2D" parent="NPC" unique_id=650013129]
 texture = ExtResource("15_yj0d7")
 
 [editable path="Puzzles/Puzzle1/DragDropPuzzle"]

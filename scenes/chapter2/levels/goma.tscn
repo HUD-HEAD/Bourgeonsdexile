@@ -10,7 +10,6 @@
 [ext_resource type="SpriteFrames" uid="uid://8wnk5pl0cnpd" path="res://components/chapter2/characters/nephew_sprite_frames.tres" id="7_mp6eu"]
 [ext_resource type="Texture2D" uid="uid://dc3angby73c88" path="res://graphics/chapter2/levels/tangrampuzzles/1/2_1line.png" id="8_bejlw"]
 [ext_resource type="Texture2D" uid="uid://ia2oeqhw2g7g" path="res://graphics/chapter2/levels/goma/wheel1.png" id="8_hfpvf"]
-[ext_resource type="Texture2D" uid="uid://u3821gox51mn" path="res://graphics/chapter2/levels/goma/bodabodaman2.png" id="8_ub4v2"]
 [ext_resource type="Texture2D" uid="uid://bmhoojrjyafbr" path="res://graphics/chapter2/levels/tangrampuzzles/1/2_1.png" id="9_6se2c"]
 [ext_resource type="Texture2D" uid="uid://bt4al565mnwhh" path="res://graphics/chapter2/levels/goma/wheel2.png" id="9_plsra"]
 [ext_resource type="Texture2D" uid="uid://c4vvnpgt05haw" path="res://graphics/chapter2/levels/tangrampuzzles/1/3_1line.png" id="10_f3f72"]
@@ -57,6 +56,7 @@
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="46_fm2bo"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/mechanics/obstacle.tscn" id="47_e2evj"]
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="49_4l7c7"]
+[ext_resource type="Texture2D" uid="uid://y0yycenucf2e" path="res://graphics/chapter2/levels/goma/bodabodamanfeetground.png" id="50_ua771"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6b20s"]
 size = Vector2(580, 500.00006)
@@ -472,23 +472,25 @@ texture = ExtResource("30_gkaax")
 [node name="CharWalking" type="Node2D" parent="." unique_id=304248373]
 
 [node name="BodaBodaStopped" type="Area2D" parent="CharWalking" unique_id=749611477]
-position = Vector2(6238, 742)
+position = Vector2(6236, 740)
 scale = Vector2(0.4, 0.4)
 script = ExtResource("46_fm2bo")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="Bodabodaman" type="Sprite2D" parent="CharWalking/BodaBodaStopped" unique_id=2080153153]
-texture = ExtResource("8_ub4v2")
+position = Vector2(0, 37.5)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("50_ua771")
 
 [node name="Wheel1" type="Sprite2D" parent="CharWalking/BodaBodaStopped/Bodabodaman" unique_id=2082465619]
 show_behind_parent = true
-position = Vector2(-147.5, 162.50006)
+position = Vector2(-147.5, 124.99988)
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("8_hfpvf")
 
 [node name="Wheel2" type="Sprite2D" parent="CharWalking/BodaBodaStopped/Bodabodaman" unique_id=1894226021]
 show_behind_parent = true
-position = Vector2(215, 172.50003)
+position = Vector2(222.5, 134.99988)
 texture = ExtResource("9_plsra")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharWalking/BodaBodaStopped" unique_id=1510371182]
