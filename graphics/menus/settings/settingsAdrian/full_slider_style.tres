@@ -1,0 +1,9 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://8luy175njv0w"]
+
+[ext_resource type="Texture2D" uid="uid://dj0up4p1434xy" path="res://graphics/menus/settings/full.png" id="1_hx1iu"]
+
+[resource]
+texture = ExtResource("1_hx1iu")
+expand_margin_top = 15.0
+expand_margin_bottom = 15.0
+axis_stretch_horizontal = 1
