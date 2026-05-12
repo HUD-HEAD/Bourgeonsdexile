@@ -100,11 +100,14 @@ _data = {
 }
 
 [node name="Panel1" type="Node2D" unique_id=299868253]
+position = Vector2(147, 20)
 
 [node name="Tgether" type="Sprite2D" parent="." unique_id=66807286]
+position = Vector2(227, 0)
 texture = ExtResource("1_pmt6i")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1949426084]
+position = Vector2(227, 0)
 
 [node name="DraggableRestricted" type="Area2D" parent="Node2D" unique_id=12593609]
 position = Vector2(-130, 0)
@@ -130,7 +133,7 @@ shape = SubResource("SegmentShape2D_8wo4r")
 
 [node name="Hand1" type="Sprite2D" parent="Node2D" unique_id=34444941]
 visible = false
-position = Vector2(189, -39)
+position = Vector2(213, -60)
 texture = ExtResource("3_6w7me")
 
 [node name="TransitionerPassive" type="Node" parent="Node2D" unique_id=150016412 node_paths=PackedStringArray("anim_player")]
@@ -141,3 +144,5 @@ metadata/_custom_type_script = "uid://u4636s8oa5d0"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1350606008]
 libraries/ = SubResource("AnimationLibrary_y7234")
 autoplay = &"default"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1562486641]
