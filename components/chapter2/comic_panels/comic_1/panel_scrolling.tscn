@@ -2,6 +2,28 @@
 
 [ext_resource type="PackedScene" uid="uid://bomhqj3lxkka3" path="res://components/utils/comics/scrolling_background.tscn" id="1_yo06y"]
 [ext_resource type="Texture2D" uid="uid://plrun2uek2mj" path="res://graphics/chapter2/comics/comic1/framelateralscroll/framelateralscroll.png" id="2_l5hv5"]
+[ext_resource type="SpriteFrames" uid="uid://cteyh286rov0u" path="res://components/chapter2/characters/amani_sprite_frames.tres" id="4_rbhmf"]
+[ext_resource type="Texture2D" uid="uid://bqmwvwxnvy503" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow1.png" id="5_wdx3e"]
+[ext_resource type="Texture2D" uid="uid://dnon84uyke6c4" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow2.png" id="6_auyp5"]
+[ext_resource type="SpriteFrames" uid="uid://8wnk5pl0cnpd" path="res://components/chapter2/characters/nephew_sprite_frames.tres" id="7_bjdqe"]
+[ext_resource type="Texture2D" uid="uid://dkm7pj8kxf23p" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow3.png" id="7_p0wi7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vodvp"]
+animations = [{
+"frames": [{
+"duration": 10.0,
+"texture": ExtResource("5_wdx3e")
+}, {
+"duration": 10.0,
+"texture": ExtResource("6_auyp5")
+}, {
+"duration": 10.0,
+"texture": ExtResource("7_p0wi7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
 
 [node name="PanelScrolling" type="Node2D" unique_id=1391206584]
 
@@ -16,5 +38,37 @@ texture = ExtResource("2_l5hv5")
 
 [node name="AutomaticPanner" parent="ScrollingBackground/PanNode/Background" index="0" unique_id=1343872761]
 position = Vector2(1301, 0)
+
+[node name="Amani" type="Node2D" parent="ScrollingBackground" unique_id=700974070]
+position = Vector2(-169, 197)
+
+[node name="AnimSprite" type="AnimatedSprite2D" parent="ScrollingBackground/Amani" unique_id=689873547]
+sprite_frames = ExtResource("4_rbhmf")
+animation = &"walking"
+autoplay = "walking"
+offset = Vector2(0, -100)
+
+[node name="Shadow" type="AnimatedSprite2D" parent="ScrollingBackground/Amani/AnimSprite" unique_id=1632501669]
+show_behind_parent = true
+sprite_frames = SubResource("SpriteFrames_vodvp")
+autoplay = "default"
+frame_progress = 0.9875541
+
+[node name="Nephew" type="Node2D" parent="ScrollingBackground" unique_id=578018911]
+position = Vector2(-43, 197)
+
+[node name="AnimSprite" type="AnimatedSprite2D" parent="ScrollingBackground/Nephew" unique_id=375564066]
+sprite_frames = ExtResource("7_bjdqe")
+animation = &"walking"
+autoplay = "walking"
+offset = Vector2(0, -100)
+
+[node name="Shadow" type="AnimatedSprite2D" parent="ScrollingBackground/Nephew/AnimSprite" unique_id=261706752]
+show_behind_parent = true
+sprite_frames = SubResource("SpriteFrames_vodvp")
+autoplay = "default"
+frame_progress = 0.9875541
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2034754209]
 
 [editable path="ScrollingBackground"]
