@@ -1,8 +1,11 @@
 extends Node
 
 
+## Used for sounds that need to persist through scene transitions
 var audio_ambient : AudioStreamPlayer
 var audio_sfx : AudioStreamPlayer
+
+## Assign Stream for consistent click sound throughout game
 var audio_sfx_click : AudioStreamPlayer
 
 
