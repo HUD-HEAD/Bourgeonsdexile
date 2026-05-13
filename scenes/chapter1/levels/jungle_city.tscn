@@ -1028,6 +1028,21 @@ collision_mask = 2
 [node name="CityPuzzle1" parent="Puzzle1" unique_id=1664370194 instance=ExtResource("13_vf82b")]
 position = Vector2(161, 465)
 
+[node name="PuzzlePiece" parent="Puzzle1/CityPuzzle1" index="1" unique_id=1946677134]
+position = Vector2(-142, -11)
+
+[node name="Draggable2" parent="Puzzle1/CityPuzzle1/PuzzlePiece2" parent_id_path=PackedInt32Array(1664370194, 1020331673) index="0" unique_id=1127443213]
+position = Vector2(-228, 200)
+
+[node name="PuzzlePiece3" parent="Puzzle1/CityPuzzle1" index="3" unique_id=352785790]
+position = Vector2(154, 107)
+
+[node name="PuzzlePiece4" parent="Puzzle1/CityPuzzle1" index="4" unique_id=1564268117]
+position = Vector2(61, 113)
+
+[node name="Fullsquare" parent="Puzzle1/CityPuzzle1" index="9" unique_id=1863100166]
+visible = false
+
 [node name="PuzzleSpawner" type="Node" parent="Puzzle1/CityPuzzle1" unique_id=1970663373 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("17_4dc1s")
 puzzle = NodePath("..")
@@ -1059,6 +1074,25 @@ collision_mask = 2
 
 [node name="CityPuzzle2" parent="Puzzle2" unique_id=22391943 instance=ExtResource("19_4dc1s")]
 position = Vector2(196, 529)
+
+[node name="Emptysquare" parent="Puzzle2/CityPuzzle2" index="0" unique_id=378736329]
+position = Vector2(-56.5, 12.5)
+
+[node name="Receptacle" parent="Puzzle2/CityPuzzle2" index="1" unique_id=1753590750]
+position = Vector2(-128.5, 16.5)
+
+[node name="Receptacle2" parent="Puzzle2/CityPuzzle2" index="2" unique_id=800679547]
+position = Vector2(11.5, 20.5)
+
+[node name="PuzzlePiece" parent="Puzzle2/CityPuzzle2" index="3" unique_id=107123918]
+position = Vector2(-259, 39)
+
+[node name="PuzzlePiece2" parent="Puzzle2/CityPuzzle2" index="4" unique_id=475507319]
+position = Vector2(163, 117)
+
+[node name="Fullsquare" parent="Puzzle2/CityPuzzle2" index="5" unique_id=691156988]
+visible = false
+position = Vector2(-54, 19)
 
 [node name="PuzzleSpawner" type="Node" parent="Puzzle2/CityPuzzle2" unique_id=1363570419 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("17_4dc1s")
@@ -1092,6 +1126,18 @@ collision_mask = 2
 position = Vector2(232, 586)
 rotation = -0.015458716
 scale = Vector2(0.7, 0.7)
+
+[node name="PuzzlePiece" parent="Puzzle3/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(235220143, 1654234455) index="0" unique_id=1667760579]
+position = Vector2(-404.59784, 109.47302)
+
+[node name="PuzzlePiece2" parent="Puzzle3/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(235220143, 1654234455) index="2" unique_id=1932002971]
+position = Vector2(-410.0765, -90.63556)
+
+[node name="PuzzlePiece3" parent="Puzzle3/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(235220143, 1654234455) index="4" unique_id=1700809214]
+position = Vector2(372.7464, 10.048851)
+
+[node name="CompletePuzzle" parent="Puzzle3/DragDropPuzzle" index="2" unique_id=1933061263]
+visible = false
 
 [node name="PuzzleSpawner" type="Node" parent="Puzzle3/DragDropPuzzle" unique_id=638176887 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("17_4dc1s")
@@ -1190,3 +1236,10 @@ offset = Vector2(3, -77)
 stream = ExtResource("117_xf4f8")
 autoplay = true
 bus = &"Music"
+
+[editable path="Puzzle1/CityPuzzle1"]
+[editable path="Puzzle2/CityPuzzle2"]
+[editable path="Puzzle3/DragDropPuzzle"]
+[editable path="Puzzle3/DragDropPuzzle/BuildingBlocks/PuzzlePiece"]
+[editable path="Puzzle3/DragDropPuzzle/BuildingBlocks/PuzzlePiece2"]
+[editable path="Puzzle3/DragDropPuzzle/BuildingBlocks/PuzzlePiece3"]

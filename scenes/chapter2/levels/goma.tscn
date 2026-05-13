@@ -37,7 +37,6 @@
 [ext_resource type="Texture2D" uid="uid://c1gejve2sb0ko" path="res://graphics/chapter2/levels/tangrampuzzles/2/5_2line.png" id="26_2dy2v"]
 [ext_resource type="Texture2D" uid="uid://b2qp5hf3jlcd2" path="res://graphics/chapter2/levels/tangrampuzzles/2/5_2.png" id="27_yt5k8"]
 [ext_resource type="Texture2D" uid="uid://bfsm4yrsdyead" path="res://graphics/chapter2/levels/tangrampuzzles/3/2_3line.png" id="29_bg8wc"]
-[ext_resource type="Texture2D" uid="uid://4n7my7ycpy30" path="res://graphics/chapter1/main_characters/enemies/enemiesprite1.png" id="30_gkaax"]
 [ext_resource type="Texture2D" uid="uid://be1nqh3wo7x51" path="res://graphics/chapter2/levels/tangrampuzzles/3/2_3.png" id="30_ua771"]
 [ext_resource type="Texture2D" uid="uid://gmlg1k5yac04" path="res://graphics/chapter2/levels/tangrampuzzles/3/1_3line.png" id="31_1dkcx"]
 [ext_resource type="Texture2D" uid="uid://dhurbql3iuc1u" path="res://graphics/chapter2/levels/tangrampuzzles/3/1_3.png" id="32_pl5p6"]
@@ -57,6 +56,38 @@
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/mechanics/obstacle.tscn" id="47_e2evj"]
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="49_4l7c7"]
 [ext_resource type="Texture2D" uid="uid://y0yycenucf2e" path="res://graphics/chapter2/levels/goma/bodabodamanfeetground.png" id="50_ua771"]
+[ext_resource type="Texture2D" uid="uid://2d4s4mtmvwpn" path="res://graphics/chapter2/levels/goma/npcs/couple_wave_hand_5fps/couple_wave_hand_0001.png" id="57_y6q1w"]
+[ext_resource type="Texture2D" uid="uid://dqcpjndgcjte8" path="res://graphics/chapter2/levels/goma/npcs/couple_wave_hand_5fps/couple_wave_hand_0002.png" id="58_8oqhf"]
+[ext_resource type="Texture2D" uid="uid://b7kc7u7lxacks" path="res://graphics/chapter2/levels/goma/npcs/couple_wave_hand_5fps/couple_wave_hand_0003.png" id="59_3d65b"]
+[ext_resource type="Texture2D" uid="uid://bkwhwr5hvk0xe" path="res://graphics/chapter2/levels/goma/npcs/couple_wave_hand_5fps/couple_wave_hand_0004.png" id="60_6oc3f"]
+[ext_resource type="Texture2D" uid="uid://bnofl6njv0ih2" path="res://graphics/chapter2/levels/goma/npcs/couple_wave_hand_5fps/couple_wave_hand_0005.png" id="61_idrs3"]
+[ext_resource type="Texture2D" uid="uid://omkhv1qdcg3d" path="res://graphics/chapter2/levels/goma/npcs/couple_wave_hand_5fps/couple_wave_hand_0006.png" id="62_7kpd7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3ogmi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("57_y6q1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_8oqhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_3d65b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_6oc3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_idrs3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_7kpd7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6b20s"]
 size = Vector2(580, 500.00006)
@@ -86,6 +117,12 @@ metadata/_edit_use_anchors_ = true
 [node name="Gomasmalldark" type="Sprite2D" parent="Background" unique_id=744396735]
 texture = ExtResource("2_bing5")
 centered = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1384241759]
+position = Vector2(4845, 680)
+sprite_frames = SubResource("SpriteFrames_3ogmi")
+autoplay = "default"
+frame_progress = 0.91606015
 
 [node name="Theme" type="AudioStreamPlayer" parent="." unique_id=67967600]
 autoplay = true
@@ -463,11 +500,6 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 position = Vector2(-10, 159.5)
 scale = Vector2(0.9999997, 0.9999997)
 shape = SubResource("RectangleShape2D_6b20s")
-
-[node name="Enemiesprite1" type="Sprite2D" parent="." unique_id=339836947]
-position = Vector2(4882, 730)
-scale = Vector2(0.52000976, 0.52000976)
-texture = ExtResource("30_gkaax")
 
 [node name="CharWalking" type="Node2D" parent="." unique_id=304248373]
 
