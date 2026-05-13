@@ -2,16 +2,26 @@
 
 [ext_resource type="Texture2D" uid="uid://bhq3t776vxuua" path="res://graphics/menus/settings/bg.png" id="1_hayap"]
 [ext_resource type="Script" uid="uid://doyit1ix46wxc" path="res://components/settings_menu.gd" id="1_s2d1y"]
-[ext_resource type="Texture2D" uid="uid://dvng8klu0ad87" path="res://graphics/menus/settings/3731553(1).png" id="3_eoonq"]
 [ext_resource type="Texture2D" uid="uid://c1iqfkuqt2r1y" path="res://graphics/menus/main_menu/exit.png" id="3_ojvp1"]
+[ext_resource type="StyleBox" uid="uid://b8d1c5nvbdr08" path="res://graphics/menus/settings/settingsAdrian/empty_slider_style.tres" id="3_rrg86"]
 [ext_resource type="Texture2D" uid="uid://cvtb8wmlqt5b6" path="res://graphics/ui/cursor/fullarrow.png" id="4_jjfif"]
+[ext_resource type="StyleBox" uid="uid://8luy175njv0w" path="res://graphics/menus/settings/settingsAdrian/full_slider_style.tres" id="4_l0eij"]
 [ext_resource type="Texture2D" uid="uid://cjsyt0okg52g" path="res://graphics/menus/settings/2618245(1).png" id="4_mcc4n"]
-[ext_resource type="Texture2D" uid="uid://dc4i41usoc6sh" path="res://graphics/menus/settings/Speaker_Icon.png" id="5_kffdn"]
-[ext_resource type="Texture2D" uid="uid://busnuhpu0h7gn" path="res://graphics/menus/settings/music-note-icon-33(1).png" id="6_qnuys"]
-[ext_resource type="Texture2D" uid="uid://csend6v51l6a2" path="res://graphics/menus/settings/8373465(1).png" id="9_muhwa"]
+[ext_resource type="Texture2D" uid="uid://vpvcxlfd4ll5" path="res://graphics/menus/settings/grabber.png" id="5_l0eij"]
+[ext_resource type="Texture2D" uid="uid://d2o1ssufwywd" path="res://graphics/menus/settings/check2.png" id="6_udegp"]
+[ext_resource type="Texture2D" uid="uid://bagr77qyf6l06" path="res://graphics/menus/settings/settingsAdrian/musichigh.png" id="7_muhwa"]
+[ext_resource type="Texture2D" uid="uid://cvfe1avop0x4g" path="res://graphics/menus/settings/uncheck2.png" id="7_pt7eq"]
+[ext_resource type="Texture2D" uid="uid://bqp04hlkxnwvq" path="res://graphics/menus/settings/settingsAdrian/musiclow.png" id="8_g67jo"]
+[ext_resource type="Texture2D" uid="uid://ci8ipy46s6fv3" path="res://graphics/menus/settings/settingsAdrian/soundlow.png" id="8_mcc4n"]
+[ext_resource type="Texture2D" uid="uid://cqifo1rr2aeem" path="res://graphics/menus/settings/settingsAdrian/team.png" id="8_udegp"]
+[ext_resource type="Texture2D" uid="uid://i0sh27jfa8i0" path="res://graphics/menus/settings/settingsAdrian/soundhigh.png" id="9_rrg86"]
+[ext_resource type="Texture2D" uid="uid://p4yqxm1eixov" path="res://graphics/menus/settings/settingsAdrian/fullscreen.png" id="16_udegp"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g67jo"]
-texture = ExtResource("3_eoonq")
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rrg86"]
+load_path = "res://.godot/imported/grabber.png-475198f4760f482d83ffe3adf0ba9ddb.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l0eij"]
+load_path = "res://.godot/imported/grabber.png-475198f4760f482d83ffe3adf0ba9ddb.ctex"
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eoonq"]
 texture = ExtResource("4_mcc4n")
@@ -30,31 +40,66 @@ texture = ExtResource("1_hayap")
 
 [node name="MusicSlider" type="HSlider" parent="TextureRect" unique_id=1162297971]
 layout_mode = 0
-offset_left = 734.0
-offset_top = 300.0
-offset_right = 1133.0
-offset_bottom = 316.0
+offset_left = 760.0
+offset_top = 278.0
+offset_right = 1510.0
+offset_bottom = 408.0
+scale = Vector2(0.5, 0.5)
+theme_override_constants/center_grabber = 1
+theme_override_icons/grabber = SubResource("CompressedTexture2D_rrg86")
+theme_override_icons/grabber_highlight = SubResource("CompressedTexture2D_l0eij")
+theme_override_styles/slider = ExtResource("3_rrg86")
+theme_override_styles/grabber_area = ExtResource("4_l0eij")
+theme_override_styles/grabber_area_highlight = ExtResource("4_l0eij")
+max_value = 1.0
+step = 0.01
 
 [node name="SFXSlider" type="HSlider" parent="TextureRect" unique_id=178834463]
 layout_mode = 0
-offset_left = 734.0
-offset_top = 436.0
-offset_right = 1133.0
-offset_bottom = 452.0
+offset_left = 760.0
+offset_top = 415.0
+offset_right = 1510.0
+offset_bottom = 545.0
+scale = Vector2(0.5, 0.5)
+theme_override_constants/center_grabber = 1
+theme_override_icons/grabber = ExtResource("5_l0eij")
+theme_override_icons/grabber_highlight = ExtResource("5_l0eij")
+theme_override_styles/slider = ExtResource("3_rrg86")
+theme_override_styles/grabber_area = ExtResource("4_l0eij")
+theme_override_styles/grabber_area_highlight = ExtResource("4_l0eij")
+max_value = 1.0
+step = 0.01
 
 [node name="CursorSlide" type="HSlider" parent="TextureRect" unique_id=1622674374]
 layout_mode = 0
-offset_left = 735.0
-offset_top = 689.0
-offset_right = 1134.0
-offset_bottom = 705.0
+offset_left = 760.0
+offset_top = 668.0
+offset_right = 1510.0
+offset_bottom = 798.0
+scale = Vector2(0.5, 0.5)
+theme_override_constants/center_grabber = 1
+theme_override_icons/grabber = ExtResource("5_l0eij")
+theme_override_icons/grabber_highlight = ExtResource("5_l0eij")
+theme_override_styles/slider = ExtResource("3_rrg86")
+theme_override_styles/grabber_area = ExtResource("4_l0eij")
+theme_override_styles/grabber_area_highlight = ExtResource("4_l0eij")
+min_value = 0.5
+max_value = 2.0
+step = 0.1
+value = 0.5
 
 [node name="FullscreenCheck" type="CheckBox" parent="TextureRect" unique_id=2048386531]
 layout_mode = 0
-offset_left = 740.0
-offset_top = 562.0
-offset_right = 764.0
-offset_bottom = 586.0
+offset_left = 700.0
+offset_top = 550.0
+offset_right = 843.0
+offset_bottom = 687.0
+scale = Vector2(0.3, 0.3)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0.78431374)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0.9019608)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_icons/checked = ExtResource("6_udegp")
+theme_override_icons/unchecked = ExtResource("7_pt7eq")
 
 [node name="CreditsButton" type="Button" parent="TextureRect" unique_id=203228299]
 layout_mode = 1
@@ -63,14 +108,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -47.99994
-offset_top = -229.0
-offset_right = 242.0
+offset_left = -48.0
+offset_top = -307.0
+offset_right = 181.0
 offset_bottom = -174.0
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(0.30348566, 1.5538473)
-theme_override_styles/normal = SubResource("StyleBoxTexture_g67jo")
+icon = ExtResource("8_udegp")
 
 [node name="ResetButton" type="Button" parent="TextureRect" unique_id=1603561297]
 layout_mode = 0
@@ -125,17 +169,17 @@ offset_right = 881.0
 offset_bottom = 582.0
 text = "FULL SCREEN"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="TextureRect" unique_id=1658886980]
+[node name="CreditsContainer" type="ScrollContainer" parent="TextureRect" unique_id=1658886980]
 visible = false
 layout_mode = 0
 offset_top = -1.0
 offset_right = 426.0
 offset_bottom = 1747.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/ScrollContainer" unique_id=1987576778]
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/CreditsContainer" unique_id=1987576778]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="TextureRect/ScrollContainer/VBoxContainer" unique_id=675914694]
+[node name="Label" type="Label" parent="TextureRect/CreditsContainer/VBoxContainer" unique_id=675914694]
 layout_mode = 2
 text = "BOURGEONS D'EXIL
 
@@ -215,26 +259,26 @@ scale = Vector2(0.359375, 0.39814767)
 texture = ExtResource("4_jjfif")
 
 [node name="SpeakerIcon" type="Sprite2D" parent="." unique_id=1408104159]
-position = Vector2(1166, 308)
-scale = Vector2(0.07849965, 0.07849965)
-texture = ExtResource("5_kffdn")
+position = Vector2(1182, 307)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_muhwa")
 
 [node name="SpeakerIcon2" type="Sprite2D" parent="." unique_id=557342422]
-position = Vector2(716, 309)
-scale = Vector2(0.038499657, 0.038499657)
-texture = ExtResource("5_kffdn")
+position = Vector2(710, 307)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_g67jo")
 
 [node name="MusicNoteIcon33(1)" type="Sprite2D" parent="." unique_id=1662479999]
-position = Vector2(1166.0001, 443)
-scale = Vector2(0.1161744, 0.1161744)
-texture = ExtResource("6_qnuys")
+position = Vector2(1183, 444)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_rrg86")
 
 [node name="MusicNoteIcon33(1)2" type="Sprite2D" parent="." unique_id=631371781]
 position = Vector2(713, 444.99997)
-scale = Vector2(0.08000489, 0.08011586)
-texture = ExtResource("6_qnuys")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_mcc4n")
 
-[node name="8373465(1)" type="Sprite2D" parent="." unique_id=717213176]
+[node name="FullScreenIcon" type="Sprite2D" parent="." unique_id=717213176]
 position = Vector2(818.00006, 570)
-scale = Vector2(0.1611012, 0.1611012)
-texture = ExtResource("9_muhwa")
+scale = Vector2(0.64, 0.64)
+texture = ExtResource("16_udegp")

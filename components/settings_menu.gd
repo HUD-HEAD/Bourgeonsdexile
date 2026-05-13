@@ -1,4 +1,4 @@
-extends CanvasLayer
+class_name SettingsController extends CanvasLayer
 
 @onready var music_slider = $TextureRect/MusicSlider
 @onready var sfx_slider = $TextureRect/SFXSlider
@@ -7,55 +7,92 @@ extends CanvasLayer
 @onready var close_button = $TextureRect/CloseButton
 @onready var credits_button = $TextureRect/CreditsButton
 @onready var reset_button = $TextureRect/ResetButton
+@onready var credits_container = $TextureRect/CreditsContainer
 
 # Botones de idioma
-@onready var btn_es = $TextureRect/HBoxContainer/Button_ES
-@onready var btn_en = $TextureRect/HBoxContainer/Button_EN
-@onready var btn_fr = $TextureRect/HBoxContainer/Button_FR
-@onready var btn_it = $TextureRect/HBoxContainer/Button_IT
-@onready var btn_zh = $TextureRect/HBoxContainer/Button_ZH
-@onready var btn_ar = $TextureRect/HBoxContainer/Button_AR
-@onready var btn_jp = $TextureRect/HBoxContainer/Button_JP
-@onready var btn_fa = $TextureRect/HBoxContainer/Button_FA
+#@onready var btn_es = $TextureRect/HBoxContainer/Button_ES
+#@onready var btn_en = $TextureRect/HBoxContainer/Button_EN
+#@onready var btn_fr = $TextureRect/HBoxContainer/Button_FR
+#@onready var btn_it = $TextureRect/HBoxContainer/Button_IT
+#@onready var btn_zh = $TextureRect/HBoxContainer/Button_ZH
+#@onready var btn_ar = $TextureRect/HBoxContainer/Button_AR
+#@onready var btn_jp = $TextureRect/HBoxContainer/Button_JP
+#@onready var btn_fa = $TextureRect/HBoxContainer/Button_FA
 
 const CURSOR_MIN = 0.5
 const CURSOR_MAX = 2.0
+const CURSOR_STEP = 0.05
+
+static  var has_been_initialized = false
+static var player_preferences: PlayerPreferences
 
 func _ready() -> void:
-	# Cargar valores guardados
-	music_slider.value = GameManager.music_volume
-	sfx_slider.value = GameManager.sfx_volume
-	cursor_slider.value = GameManager.cursor_size
-	fullscreen_check.button_pressed = GameManager.is_fullscreen
+	_initialize()
+	_set_initial_values()
 	
-	# Aplicar valores actuales
-	_apply_music_volume(GameManager.music_volume)
-	_apply_sfx_volume(GameManager.sfx_volume)
-	_apply_cursor_size(GameManager.cursor_size)
-	_apply_fullscreen(GameManager.is_fullscreen)
+	#Asign delegates for sliders, buttons & toggle
+	music_slider.connect("value_changed", _on_music_slider_value_changed)
+	sfx_slider.connect("value_changed", _on_sfx_slider_value_changed)
+	cursor_slider.connect("value_changed", _on_cursor_slide_value_changed)
+	fullscreen_check.connect("toggled", _on_fullscreen_check_toggled)
+	reset_button.connect("pressed", _reset_player_preferences)
+	close_button.connect("pressed", _on_close_button_pressed)
+	credits_button.connect("pressed", _on_credits_button_pressed)
+
+func _set_initial_values():
+	# Cargar valores guardados
+	music_slider.value = player_preferences.music_volume
+	sfx_slider.value = player_preferences.sfx_volume
+	cursor_slider.value = player_preferences.cursor_size
+	fullscreen_check.button_pressed = player_preferences.is_fullscreen
 	
 	# Configurar rango del cursor slider
 	cursor_slider.min_value = CURSOR_MIN
 	cursor_slider.max_value = CURSOR_MAX
-	cursor_slider.step = 0.1
+	cursor_slider.step = CURSOR_STEP
+
+static func _initialize():
+	if !has_been_initialized:
+		has_been_initialized = true
+		#Load Player Preferences
+		player_preferences = PlayerPreferences.load_player_preferences()
+	
+		# Apply save values
+		_apply_settings()
+	
+
+static func _apply_settings():
+	_apply_music_volume(player_preferences.music_volume)
+	_apply_sfx_volume(player_preferences.sfx_volume)
+	_apply_cursor_size(player_preferences.cursor_size)
+	_apply_fullscreen(player_preferences.is_fullscreen)
 
 # ── Sliders ──────────────────────────────────────────
 func _on_music_slider_value_changed(value: float) -> void:
-	GameManager.music_volume = value
+	player_preferences.music_volume = value
 	_apply_music_volume(value)
+	_save_player_preferences()
 
 func _on_sfx_slider_value_changed(value: float) -> void:
-	GameManager.sfx_volume = value
+	player_preferences.sfx_volume = value
 	_apply_sfx_volume(value)
+	_save_player_preferences()
 
 func _on_cursor_slide_value_changed(value: float) -> void:
-	GameManager.cursor_size = value
+	player_preferences.cursor_size = value
 	_apply_cursor_size(value)
+	_save_player_preferences()
 
 # ── Fullscreen ────────────────────────────────────────
 func _on_fullscreen_check_toggled(pressed: bool) -> void:
-	GameManager.is_fullscreen = pressed
+	player_preferences.is_fullscreen = pressed
 	_apply_fullscreen(pressed)
+	_save_player_preferences()
+# ── Reset Player Preferences ────────────────────────────────────────
+func _reset_player_preferences():
+	player_preferences = PlayerPreferences.reset_player_preferences()
+	_apply_settings()
+	_set_initial_values()
 
 # ── Idiomas ───────────────────────────────────────────
 func _on_button_es_pressed() -> void:
@@ -84,10 +121,8 @@ func _on_button_fa_pressed() -> void:
 
 # ── Créditos ──────────────────────────────────────────
 func _on_credits_button_pressed() -> void:
-	$Credits.visible = true  # si lo tienes como hijo directo
-	var credits_scene = ResourceLoader.load("res://scenes/menus/credits.tscn")
-	var credits_instance = credits_scene.instantiate()
-	get_tree().root.add_child(credits_instance)
+	if 	credits_container:
+		credits_container.visible = true
 
 # ── Reset ─────────────────────────────────────────────
 func _on_reset_button_pressed() -> void:
@@ -111,21 +146,28 @@ func _on_reset_button_pressed() -> void:
 
 # ── Cerrar ────────────────────────────────────────────
 func _on_close_button_pressed() -> void:
-	queue_free()
+	if credits_container.visible:
+		credits_container.visible = false
+	else :	
+		SceneManager.close_settings()
+
 
 # ── Aplicar valores ───────────────────────────────────
-func _apply_music_volume(value: float) -> void:
-	AudioServer.set_bus_volume_linear(AudioServer.get_bus_index("Master"), value)
+static func _apply_music_volume(value: float) -> void:
+	AudioServer.set_bus_volume_linear(AudioServer.get_bus_index("Music"), value)
 
-func _apply_sfx_volume(value: float) -> void:
+static func _apply_sfx_volume(value: float) -> void:
 	AudioServer.set_bus_volume_linear(AudioServer.get_bus_index("Sfx"), value)
 
-func _apply_cursor_size(value: float) -> void:
-	# Conectar con tu CustomManager si maneja el cursor
-	pass
+static func _apply_cursor_size(value: float) -> void:
+	CustomCursor.update_cursor_scale(value)
 
-func _apply_fullscreen(value: bool) -> void:
+static func _apply_fullscreen(value: bool) -> void:
 	if value:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+
+ # ── Save Player Preferences ───────────────────────────────────
+func _save_player_preferences() -> void:
+	player_preferences.save()

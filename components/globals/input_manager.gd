@@ -25,7 +25,9 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		if OS.has_feature("debug"):
 			if debug_console.visible:
 				debug_console.toggle()
-			else:
+			
+			#Only go to menu when the user is in a Chapter, To avoid reloading the menu scene while in the settings screen/Credits - Adrian
+			elif !get_tree().root.get_node("MainMenu"):
 				SceneManager.goto_scene(ProjectSettings.get_setting("application/run/main_scene"))
 	
 	if OS.has_feature("debug"):

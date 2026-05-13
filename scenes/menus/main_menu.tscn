@@ -183,3 +183,4 @@ chapter_buttons = [NodePath("../Fullscreen/PlayNina"), NodePath("../Fullscreen/P
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2013448306]
 stream = ExtResource("18_25m6f")
 autoplay = true
+bus = &"Music"
