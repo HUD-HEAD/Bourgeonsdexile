@@ -48,6 +48,7 @@ texture = ExtResource("1_vq423")
 
 [node name="ContractionCircle" parent="." unique_id=1677856602 node_paths=PackedStringArray("node_to_enable") instance=ExtResource("2_vux10")]
 position = Vector2(60, -13.5)
+scale = Vector2(2, 2)
 node_to_enable = NodePath("../AnimationPlayer")
 
 [node name="Blackout" type="Node2D" parent="." unique_id=1642997845]
