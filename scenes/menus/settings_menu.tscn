@@ -6,15 +6,16 @@
 [ext_resource type="StyleBox" uid="uid://b8d1c5nvbdr08" path="res://graphics/menus/settings/settingsAdrian/empty_slider_style.tres" id="3_rrg86"]
 [ext_resource type="Texture2D" uid="uid://cvtb8wmlqt5b6" path="res://graphics/ui/cursor/fullarrow.png" id="4_jjfif"]
 [ext_resource type="StyleBox" uid="uid://8luy175njv0w" path="res://graphics/menus/settings/settingsAdrian/full_slider_style.tres" id="4_l0eij"]
-[ext_resource type="Texture2D" uid="uid://cjsyt0okg52g" path="res://graphics/menus/settings/2618245(1).png" id="4_mcc4n"]
 [ext_resource type="Texture2D" uid="uid://vpvcxlfd4ll5" path="res://graphics/menus/settings/grabber.png" id="5_l0eij"]
 [ext_resource type="Texture2D" uid="uid://d2o1ssufwywd" path="res://graphics/menus/settings/check2.png" id="6_udegp"]
 [ext_resource type="Texture2D" uid="uid://bagr77qyf6l06" path="res://graphics/menus/settings/settingsAdrian/musichigh.png" id="7_muhwa"]
 [ext_resource type="Texture2D" uid="uid://cvfe1avop0x4g" path="res://graphics/menus/settings/uncheck2.png" id="7_pt7eq"]
 [ext_resource type="Texture2D" uid="uid://bqp04hlkxnwvq" path="res://graphics/menus/settings/settingsAdrian/musiclow.png" id="8_g67jo"]
 [ext_resource type="Texture2D" uid="uid://ci8ipy46s6fv3" path="res://graphics/menus/settings/settingsAdrian/soundlow.png" id="8_mcc4n"]
+[ext_resource type="Texture2D" uid="uid://bpdlk00x2744i" path="res://graphics/menus/settings/textureopacity30.png" id="8_pt7eq"]
 [ext_resource type="Texture2D" uid="uid://cqifo1rr2aeem" path="res://graphics/menus/settings/settingsAdrian/team.png" id="8_udegp"]
 [ext_resource type="Texture2D" uid="uid://i0sh27jfa8i0" path="res://graphics/menus/settings/settingsAdrian/soundhigh.png" id="9_rrg86"]
+[ext_resource type="Texture2D" uid="uid://cic5r0nd0kjvy" path="res://graphics/menus/settings/settingsAdrian/reset.png" id="9_udegp"]
 [ext_resource type="Texture2D" uid="uid://p4yqxm1eixov" path="res://graphics/menus/settings/settingsAdrian/fullscreen.png" id="16_udegp"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rrg86"]
@@ -23,8 +24,38 @@ load_path = "res://.godot/imported/grabber.png-475198f4760f482d83ffe3adf0ba9ddb.
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l0eij"]
 load_path = "res://.godot/imported/grabber.png-475198f4760f482d83ffe3adf0ba9ddb.ctex"
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_udegp"]
+texture = ExtResource("8_udegp")
+modulate_color = Color(1, 1, 1, 0.78431374)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pt7eq"]
+texture = ExtResource("8_udegp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fd2q8"]
+texture = ExtResource("8_udegp")
+modulate_color = Color(1, 1, 1, 0.8627451)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eoonq"]
-texture = ExtResource("4_mcc4n")
+texture = ExtResource("9_udegp")
+modulate_color = Color(1, 1, 1, 0.78431374)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rxdtf"]
+texture = ExtResource("9_udegp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s4m6w"]
+texture = ExtResource("9_udegp")
+modulate_color = Color(1, 1, 1, 0.8627451)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_08gdp"]
+texture = ExtResource("3_ojvp1")
+modulate_color = Color(1, 1, 1, 0.78431374)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5fu2g"]
+texture = ExtResource("3_ojvp1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hiabw"]
+texture = ExtResource("3_ojvp1")
+modulate_color = Color(1, 1, 1, 0.8627451)
 
 [node name="SettingsMenu" type="CanvasLayer" unique_id=1434209501]
 script = ExtResource("1_s2d1y")
@@ -37,6 +68,22 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_hayap")
+
+[node name="MasterSlider" type="HSlider" parent="TextureRect" unique_id=1760760787]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 150.0
+offset_right = 1510.0
+offset_bottom = 280.0
+scale = Vector2(0.5, 0.5)
+theme_override_constants/center_grabber = 1
+theme_override_icons/grabber = SubResource("CompressedTexture2D_rrg86")
+theme_override_icons/grabber_highlight = SubResource("CompressedTexture2D_l0eij")
+theme_override_styles/slider = ExtResource("3_rrg86")
+theme_override_styles/grabber_area = ExtResource("4_l0eij")
+theme_override_styles/grabber_area_highlight = ExtResource("4_l0eij")
+max_value = 1.0
+step = 0.01
 
 [node name="MusicSlider" type="HSlider" parent="TextureRect" unique_id=1162297971]
 layout_mode = 0
@@ -71,11 +118,18 @@ max_value = 1.0
 step = 0.01
 
 [node name="CursorSlide" type="HSlider" parent="TextureRect" unique_id=1622674374]
-layout_mode = 0
-offset_left = 760.0
-offset_top = 668.0
-offset_right = 1510.0
-offset_bottom = 798.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -187.0
+offset_top = -305.0
+offset_right = 563.0
+offset_bottom = -175.0
+grow_horizontal = 2
+grow_vertical = 0
 scale = Vector2(0.5, 0.5)
 theme_override_constants/center_grabber = 1
 theme_override_icons/grabber = ExtResource("5_l0eij")
@@ -101,6 +155,41 @@ theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
 theme_override_icons/checked = ExtResource("6_udegp")
 theme_override_icons/unchecked = ExtResource("7_pt7eq")
 
+[node name="VsyncCheck" type="CheckBox" parent="TextureRect" unique_id=353539390]
+layout_mode = 0
+offset_left = 1000.0
+offset_top = 550.0
+offset_right = 1143.0
+offset_bottom = 687.0
+scale = Vector2(0.3, 0.3)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0.78431374)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0.9019608)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_icons/checked = ExtResource("6_udegp")
+theme_override_icons/unchecked = ExtResource("7_pt7eq")
+
+[node name="MenuButton" type="MenuButton" parent="TextureRect" unique_id=1785020199]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -162.0
+offset_top = -446.0
+offset_right = 323.0
+offset_bottom = -166.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.5, 0.3)
+theme_override_icons/icon = ExtResource("8_pt7eq")
+item_count = 2
+popup/item_0/text = "1920 x 1080"
+popup/item_0/checked = true
+popup/item_0/id = 0
+popup/item_1/text = "1280 x 720"
+popup/item_1/id = 1
+
 [node name="CreditsButton" type="Button" parent="TextureRect" unique_id=203228299]
 layout_mode = 1
 anchors_preset = 7
@@ -108,13 +197,15 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -48.0
-offset_top = -307.0
-offset_right = 181.0
-offset_bottom = -174.0
+offset_left = -114.5
+offset_top = -230.0
+offset_right = 114.5
+offset_bottom = -97.0
 grow_horizontal = 2
 grow_vertical = 0
-icon = ExtResource("8_udegp")
+theme_override_styles/normal = SubResource("StyleBoxTexture_udegp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pt7eq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fd2q8")
 
 [node name="ResetButton" type="Button" parent="TextureRect" unique_id=1603561297]
 layout_mode = 0
@@ -124,6 +215,8 @@ offset_right = 1947.0
 offset_bottom = 99.0
 scale = Vector2(0.5487999, 1.4488319)
 theme_override_styles/normal = SubResource("StyleBoxTexture_eoonq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rxdtf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_s4m6w")
 
 [node name="CloseButton" type="Button" parent="TextureRect" unique_id=1562362018]
 layout_mode = 0
@@ -131,7 +224,9 @@ offset_left = 1794.0
 offset_top = 966.0
 offset_right = 1879.0
 offset_bottom = 1047.0
-icon = ExtResource("3_ojvp1")
+theme_override_styles/normal = SubResource("StyleBoxTexture_08gdp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5fu2g")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hiabw")
 
 [node name="Music" type="Label" parent="TextureRect" unique_id=706834585]
 visible = false
@@ -249,31 +344,51 @@ HUG — Hôpitaux Universitaires de Genève
 ONG GEFAM"
 
 [node name="Fullarrow" type="Sprite2D" parent="." unique_id=805790660]
-position = Vector2(1166, 695)
+position = Vector2(1180, 810)
 scale = Vector2(0.71875, 0.6481482)
 texture = ExtResource("4_jjfif")
 
 [node name="Fullarrow2" type="Sprite2D" parent="." unique_id=513947167]
-position = Vector2(713, 699)
+position = Vector2(713, 810)
 scale = Vector2(0.359375, 0.39814767)
 texture = ExtResource("4_jjfif")
 
-[node name="SpeakerIcon" type="Sprite2D" parent="." unique_id=1408104159]
+[node name="MasterIconBig" type="Sprite2D" parent="." unique_id=1671223530]
+position = Vector2(1182, 175)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_muhwa")
+
+[node name="SubMasterIconBig" type="Sprite2D" parent="MasterIconBig" unique_id=701271754]
+position = Vector2(120, 0)
+scale = Vector2(0.8333333, 0.8333333)
+texture = ExtResource("9_rrg86")
+
+[node name="MasterIconSmall" type="Sprite2D" parent="." unique_id=1528895144]
+position = Vector2(660, 175)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_g67jo")
+
+[node name="SubMasterIconSmall" type="Sprite2D" parent="MasterIconSmall" unique_id=1180856746]
+position = Vector2(50, 0)
+scale = Vector2(0.62499994, 0.62499994)
+texture = ExtResource("8_mcc4n")
+
+[node name="MusicIconBig" type="Sprite2D" parent="." unique_id=1408104159]
 position = Vector2(1182, 307)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("7_muhwa")
 
-[node name="SpeakerIcon2" type="Sprite2D" parent="." unique_id=557342422]
+[node name="MusicIconSmall" type="Sprite2D" parent="." unique_id=557342422]
 position = Vector2(710, 307)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("8_g67jo")
 
-[node name="MusicNoteIcon33(1)" type="Sprite2D" parent="." unique_id=1662479999]
+[node name="SoundIconBig" type="Sprite2D" parent="." unique_id=1662479999]
 position = Vector2(1183, 444)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_rrg86")
 
-[node name="MusicNoteIcon33(1)2" type="Sprite2D" parent="." unique_id=631371781]
+[node name="SoundIconSmall" type="Sprite2D" parent="." unique_id=631371781]
 position = Vector2(713, 444.99997)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_mcc4n")
