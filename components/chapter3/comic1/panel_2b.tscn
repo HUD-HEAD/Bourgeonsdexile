@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dpbamesghexa0"]
+
+[ext_resource type="Texture2D" uid="uid://b4s582k1ikq2f" path="res://graphics/chapter3/comics/comic1/skintoskin/skintoskin.png" id="1_mq0t6"]
+
+[node name="PanelDoctors" type="Node2D" unique_id=162787811]
+
+[node name="Skintoskin" type="Sprite2D" parent="." unique_id=1751882717]
+position = Vector2(1, 1)
+texture = ExtResource("1_mq0t6")

@@ -4,6 +4,6 @@
 
 [node name="PanelDoctors" type="Node2D" unique_id=162787811]
 
-[node name="1" type="Sprite2D" parent="." unique_id=227382412]
-position = Vector2(1, 0)
+[node name="1" type="Sprite2D" parent="." unique_id=798600185]
+position = Vector2(0, -5)
 texture = ExtResource("1_8rixe")

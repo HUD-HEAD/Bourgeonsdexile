@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ciedovdbed85e"]
+
+[ext_resource type="Texture2D" uid="uid://sbxyhht7jrs1" path="res://graphics/chapter3/comics/comic3/coffee/coffee.png" id="1_bjs7r"]
+
+[node name="C33Panel1" type="Node2D" unique_id=1800611031]
+
+[node name="Coffee" type="Sprite2D" parent="." unique_id=718105387]
+position = Vector2(-3, -5)
+texture = ExtResource("1_bjs7r")

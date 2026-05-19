@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://v70tkjsqc01b"]
+
+[ext_resource type="Texture2D" uid="uid://dl6rauu7067ti" path="res://graphics/chapter3/comics/comic3/neigbours.png" id="1_rck6j"]
+
+[node name="C33Panel1" type="Node2D" unique_id=1800611031]
+
+[node name="Neigbours" type="Sprite2D" parent="." unique_id=1355262423]
+position = Vector2(-1, -2)
+texture = ExtResource("1_rck6j")
