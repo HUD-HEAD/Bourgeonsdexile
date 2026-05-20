@@ -24,7 +24,10 @@ func _on_settings_pressed():
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event.is_action_pressed("exit"):
-		_on_quit_pressed()
+		if SceneManager.settings_instance:
+			SceneManager.settings_instance._on_close_button_pressed()
+		else:
+			_on_quit_pressed()
 
 ## Quit game
 func _on_quit_pressed():

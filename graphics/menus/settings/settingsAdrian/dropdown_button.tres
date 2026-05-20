@@ -1,0 +1,24 @@
+[gd_resource type="Theme" format=3 uid="uid://cxlpi08yjpy6h"]
+
+[ext_resource type="Texture2D" uid="uid://djnowmdhye88v" path="res://graphics/menus/settings/texture.png" id="1_jt0rs"]
+[ext_resource type="Texture2D" uid="uid://bpdlk00x2744i" path="res://graphics/menus/settings/textureopacity30.png" id="2_eavl3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bxngk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iiys0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jt0rs"]
+texture = ExtResource("1_jt0rs")
+modulate_color = Color(1, 1, 1, 0.7058824)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eavl3"]
+texture = ExtResource("1_jt0rs")
+modulate_color = Color(1, 1, 1, 0.47058824)
+
+[resource]
+PopupMenu/icons/checked = ExtResource("1_jt0rs")
+PopupMenu/icons/checked_disabled = ExtResource("2_eavl3")
+PopupMenu/styles/embedded_border = SubResource("StyleBoxEmpty_bxngk")
+PopupMenu/styles/embedded_unfocused_border = SubResource("StyleBoxEmpty_iiys0")
+PopupMenu/styles/hover = SubResource("StyleBoxTexture_jt0rs")
+PopupMenu/styles/panel = SubResource("StyleBoxTexture_eavl3")
