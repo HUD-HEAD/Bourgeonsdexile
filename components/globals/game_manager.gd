@@ -13,4 +13,4 @@ var puzzle_automatic_positioning : bool = false
 var language : String = "EN"
 
 func _ready() -> void:
-	SettingsController._initialize()
+	SettingsController._initialize(get_viewport())

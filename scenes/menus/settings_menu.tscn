@@ -10,12 +10,19 @@
 [ext_resource type="Texture2D" uid="uid://d2o1ssufwywd" path="res://graphics/menus/settings/check2.png" id="6_udegp"]
 [ext_resource type="Texture2D" uid="uid://bagr77qyf6l06" path="res://graphics/menus/settings/settingsAdrian/musichigh.png" id="7_muhwa"]
 [ext_resource type="Texture2D" uid="uid://cvfe1avop0x4g" path="res://graphics/menus/settings/uncheck2.png" id="7_pt7eq"]
+[ext_resource type="Theme" uid="uid://cxlpi08yjpy6h" path="res://graphics/menus/settings/settingsAdrian/dropdown_button.tres" id="8_08gdp"]
 [ext_resource type="Texture2D" uid="uid://bqp04hlkxnwvq" path="res://graphics/menus/settings/settingsAdrian/musiclow.png" id="8_g67jo"]
 [ext_resource type="Texture2D" uid="uid://ci8ipy46s6fv3" path="res://graphics/menus/settings/settingsAdrian/soundlow.png" id="8_mcc4n"]
 [ext_resource type="Texture2D" uid="uid://bpdlk00x2744i" path="res://graphics/menus/settings/textureopacity30.png" id="8_pt7eq"]
 [ext_resource type="Texture2D" uid="uid://cqifo1rr2aeem" path="res://graphics/menus/settings/settingsAdrian/team.png" id="8_udegp"]
 [ext_resource type="Texture2D" uid="uid://i0sh27jfa8i0" path="res://graphics/menus/settings/settingsAdrian/soundhigh.png" id="9_rrg86"]
+[ext_resource type="Texture2D" uid="uid://hbtptk4hox7f" path="res://graphics/menus/settings/settingsAdrian/resolution_360_placeholder.png" id="9_s4m6w"]
 [ext_resource type="Texture2D" uid="uid://cic5r0nd0kjvy" path="res://graphics/menus/settings/settingsAdrian/reset.png" id="9_udegp"]
+[ext_resource type="Texture2D" uid="uid://b4xvf12c5aot" path="res://graphics/menus/settings/settingsAdrian/resolution_720_placeholder.png" id="10_08gdp"]
+[ext_resource type="Script" uid="uid://bbiqxr254bujx" path="res://components/utils/ui/auto_scale_component.gd" id="10_afkw7"]
+[ext_resource type="Texture2D" uid="uid://ckluw8so7grxg" path="res://graphics/menus/settings/settingsAdrian/resolution_1080_placeholder.png" id="11_5fu2g"]
+[ext_resource type="Texture2D" uid="uid://2jbth5uy0lr6" path="res://graphics/menus/settings/settingsAdrian/resolution_2k_placeholder.png" id="13_hiabw"]
+[ext_resource type="Texture2D" uid="uid://q7icre1b84gh" path="res://graphics/menus/settings/settingsAdrian/resolution_4k_placeholder.png" id="14_afkw7"]
 [ext_resource type="Texture2D" uid="uid://p4yqxm1eixov" path="res://graphics/menus/settings/settingsAdrian/fullscreen.png" id="16_udegp"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rrg86"]
@@ -23,6 +30,15 @@ load_path = "res://.godot/imported/grabber.png-475198f4760f482d83ffe3adf0ba9ddb.
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l0eij"]
 load_path = "res://.godot/imported/grabber.png-475198f4760f482d83ffe3adf0ba9ddb.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_afkw7"]
+texture = ExtResource("8_pt7eq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_10nm4"]
+texture = ExtResource("8_pt7eq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fs1xy"]
+texture = ExtResource("8_pt7eq")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_udegp"]
 texture = ExtResource("8_udegp")
@@ -59,7 +75,8 @@ modulate_color = Color(1, 1, 1, 0.8627451)
 
 [node name="SettingsMenu" type="CanvasLayer" unique_id=1434209501]
 script = ExtResource("1_s2d1y")
-metadata/_edit_vertical_guides_ = [427.0, 1148.0, 1185.0]
+resolution_textures = Array[Texture2D]([ExtResource("9_s4m6w"), ExtResource("10_08gdp"), ExtResource("11_5fu2g"), ExtResource("13_hiabw"), ExtResource("14_afkw7")])
+metadata/_edit_vertical_guides_ = [427.0, 1168.0, 1185.0, 716.0]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=883287778]
 anchors_preset = 15
@@ -71,11 +88,12 @@ texture = ExtResource("1_hayap")
 
 [node name="MasterSlider" type="HSlider" parent="TextureRect" unique_id=1760760787]
 layout_mode = 0
-offset_left = 760.0
-offset_top = 150.0
-offset_right = 1510.0
-offset_bottom = 280.0
+offset_left = 594.0
+offset_top = 113.5
+offset_right = 1344.0
+offset_bottom = 243.5
 scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(350, 65)
 theme_override_constants/center_grabber = 1
 theme_override_icons/grabber = SubResource("CompressedTexture2D_rrg86")
 theme_override_icons/grabber_highlight = SubResource("CompressedTexture2D_l0eij")
@@ -84,14 +102,17 @@ theme_override_styles/grabber_area = ExtResource("4_l0eij")
 theme_override_styles/grabber_area_highlight = ExtResource("4_l0eij")
 max_value = 1.0
 step = 0.01
+script = ExtResource("10_afkw7")
+scale_multiplier = 1.05
 
 [node name="MusicSlider" type="HSlider" parent="TextureRect" unique_id=1162297971]
 layout_mode = 0
-offset_left = 760.0
-offset_top = 278.0
-offset_right = 1510.0
-offset_bottom = 408.0
+offset_left = 594.0
+offset_top = 241.5
+offset_right = 1344.0
+offset_bottom = 371.5
 scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(350, 65)
 theme_override_constants/center_grabber = 1
 theme_override_icons/grabber = SubResource("CompressedTexture2D_rrg86")
 theme_override_icons/grabber_highlight = SubResource("CompressedTexture2D_l0eij")
@@ -100,14 +121,17 @@ theme_override_styles/grabber_area = ExtResource("4_l0eij")
 theme_override_styles/grabber_area_highlight = ExtResource("4_l0eij")
 max_value = 1.0
 step = 0.01
+script = ExtResource("10_afkw7")
+scale_multiplier = 1.05
 
 [node name="SFXSlider" type="HSlider" parent="TextureRect" unique_id=178834463]
 layout_mode = 0
-offset_left = 760.0
-offset_top = 415.0
-offset_right = 1510.0
-offset_bottom = 545.0
+offset_left = 594.0
+offset_top = 378.5
+offset_right = 1344.0
+offset_bottom = 508.5
 scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(350, 65)
 theme_override_constants/center_grabber = 1
 theme_override_icons/grabber = ExtResource("5_l0eij")
 theme_override_icons/grabber_highlight = ExtResource("5_l0eij")
@@ -116,6 +140,8 @@ theme_override_styles/grabber_area = ExtResource("4_l0eij")
 theme_override_styles/grabber_area_highlight = ExtResource("4_l0eij")
 max_value = 1.0
 step = 0.01
+script = ExtResource("10_afkw7")
+scale_multiplier = 1.05
 
 [node name="CursorSlide" type="HSlider" parent="TextureRect" unique_id=1622674374]
 layout_mode = 1
@@ -124,13 +150,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -187.0
-offset_top = -305.0
-offset_right = 563.0
-offset_bottom = -175.0
+offset_left = -366.0
+offset_top = -341.5
+offset_right = 384.0
+offset_bottom = -211.5
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(350, 65)
 theme_override_constants/center_grabber = 1
 theme_override_icons/grabber = ExtResource("5_l0eij")
 theme_override_icons/grabber_highlight = ExtResource("5_l0eij")
@@ -141,6 +168,8 @@ min_value = 0.5
 max_value = 2.0
 step = 0.1
 value = 0.5
+script = ExtResource("10_afkw7")
+scale_multiplier = 1.05
 
 [node name="FullscreenCheck" type="CheckBox" parent="TextureRect" unique_id=2048386531]
 layout_mode = 0
@@ -154,6 +183,7 @@ theme_override_colors/icon_focus_color = Color(1, 1, 1, 0.9019608)
 theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
 theme_override_icons/checked = ExtResource("6_udegp")
 theme_override_icons/unchecked = ExtResource("7_pt7eq")
+script = ExtResource("10_afkw7")
 
 [node name="VsyncCheck" type="CheckBox" parent="TextureRect" unique_id=353539390]
 layout_mode = 0
@@ -167,6 +197,7 @@ theme_override_colors/icon_focus_color = Color(1, 1, 1, 0.9019608)
 theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
 theme_override_icons/checked = ExtResource("6_udegp")
 theme_override_icons/unchecked = ExtResource("7_pt7eq")
+script = ExtResource("10_afkw7")
 
 [node name="MenuButton" type="MenuButton" parent="TextureRect" unique_id=1785020199]
 layout_mode = 1
@@ -182,13 +213,28 @@ offset_bottom = -166.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.5, 0.3)
+theme = ExtResource("8_08gdp")
 theme_override_icons/icon = ExtResource("8_pt7eq")
-item_count = 2
-popup/item_0/text = "1920 x 1080"
+theme_override_styles/normal = SubResource("StyleBoxTexture_afkw7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_10nm4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fs1xy")
+item_count = 5
+popup/item_0/icon = ExtResource("9_s4m6w")
 popup/item_0/checked = true
-popup/item_0/id = 0
-popup/item_1/text = "1280 x 720"
-popup/item_1/id = 1
+popup/item_0/id = 360
+popup/item_1/icon = ExtResource("10_08gdp")
+popup/item_1/id = 720
+popup/item_2/icon = ExtResource("11_5fu2g")
+popup/item_2/id = 1080
+popup/item_3/icon = ExtResource("13_hiabw")
+popup/item_3/id = 2
+popup/item_4/icon = ExtResource("14_afkw7")
+popup/item_4/id = 4
+script = ExtResource("10_afkw7")
+
+[node name="ResolutionIcon" type="Sprite2D" parent="TextureRect/MenuButton" unique_id=1375190024]
+position = Vector2(322.00006, 153.33331)
+texture = ExtResource("11_5fu2g")
 
 [node name="CreditsButton" type="Button" parent="TextureRect" unique_id=203228299]
 layout_mode = 1
@@ -217,6 +263,7 @@ scale = Vector2(0.5487999, 1.4488319)
 theme_override_styles/normal = SubResource("StyleBoxTexture_eoonq")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_rxdtf")
 theme_override_styles/hover = SubResource("StyleBoxTexture_s4m6w")
+script = ExtResource("10_afkw7")
 
 [node name="CloseButton" type="Button" parent="TextureRect" unique_id=1562362018]
 layout_mode = 0
@@ -227,6 +274,7 @@ offset_bottom = 1047.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_08gdp")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_5fu2g")
 theme_override_styles/hover = SubResource("StyleBoxTexture_hiabw")
+script = ExtResource("10_afkw7")
 
 [node name="Music" type="Label" parent="TextureRect" unique_id=706834585]
 visible = false
@@ -344,7 +392,7 @@ HUG — Hôpitaux Universitaires de Genève
 ONG GEFAM"
 
 [node name="Fullarrow" type="Sprite2D" parent="." unique_id=805790660]
-position = Vector2(1180, 810)
+position = Vector2(1225, 810)
 scale = Vector2(0.71875, 0.6481482)
 texture = ExtResource("4_jjfif")
 
@@ -354,7 +402,7 @@ scale = Vector2(0.359375, 0.39814767)
 texture = ExtResource("4_jjfif")
 
 [node name="MasterIconBig" type="Sprite2D" parent="." unique_id=1671223530]
-position = Vector2(1182, 175)
+position = Vector2(1225, 174)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("7_muhwa")
 
@@ -374,23 +422,22 @@ scale = Vector2(0.62499994, 0.62499994)
 texture = ExtResource("8_mcc4n")
 
 [node name="MusicIconBig" type="Sprite2D" parent="." unique_id=1408104159]
-position = Vector2(1182, 307)
+position = Vector2(1225, 307)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("7_muhwa")
 
 [node name="MusicIconSmall" type="Sprite2D" parent="." unique_id=557342422]
-position = Vector2(710, 307)
+position = Vector2(695, 309)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("8_g67jo")
 
 [node name="SoundIconBig" type="Sprite2D" parent="." unique_id=1662479999]
-position = Vector2(1183, 444)
+position = Vector2(1225, 445)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_rrg86")
 
 [node name="SoundIconSmall" type="Sprite2D" parent="." unique_id=631371781]
-position = Vector2(713, 444.99997)
-scale = Vector2(0.5, 0.5)
+position = Vector2(695, 445)
 texture = ExtResource("8_mcc4n")
 
 [node name="FullScreenIcon" type="Sprite2D" parent="." unique_id=717213176]

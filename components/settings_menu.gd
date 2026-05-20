@@ -10,16 +10,31 @@ class_name SettingsController extends CanvasLayer
 @onready var credits_button = $TextureRect/CreditsButton
 @onready var reset_button = $TextureRect/ResetButton
 @onready var credits_container = $TextureRect/CreditsContainer
+@onready var resolution_container = $TextureRect/MenuButton
+@onready var resolution_popup: PopupMenu = resolution_container.get_popup()
+
+@onready var resolution_icon: Sprite2D = $TextureRect/MenuButton/ResolutionIcon
+
+@export var resolution_textures: Array[Texture2D]
 
 const CURSOR_MIN = 0.5
 const CURSOR_MAX = 2.0
 const CURSOR_STEP = 0.05
 
+const resolutions_modes = {
+	"360": {"size": Vector2i(640, 360), "scale": 0.334},
+	"720": {"size": Vector2i(1280, 720), "scale": 0.667},
+	"1080": {"size": Vector2i(1920, 1080), "scale": 1},
+	"2": {"size": Vector2i(2560, 1440), "scale": 1.334},
+	"4": {"size": Vector2i(3840, 2160), "scale": 2},
+}
+
 static  var has_been_initialized = false
 static var player_preferences: PlayerPreferences
+static var main_viewport: Viewport
 
 func _ready() -> void:
-	_initialize()
+	_initialize(get_viewport())
 	_set_initial_values()
 	
 	#Asign delegates for sliders, buttons & toggle
@@ -32,6 +47,7 @@ func _ready() -> void:
 	reset_button.connect("pressed", _on_reset_player_preferences)
 	close_button.connect("pressed", _on_close_button_pressed)
 	credits_button.connect("pressed", _on_credits_button_pressed)
+	resolution_popup.id_pressed.connect(_on_popup_menu_value_change)
 
 func _set_initial_values():
 	# Cargar valores guardados
@@ -41,18 +57,22 @@ func _set_initial_values():
 	cursor_slider.value = player_preferences.cursor_size
 	fullscreen_check.button_pressed = player_preferences.is_fullscreen
 	vsync_check.button_pressed = player_preferences.is_vsync
+	resolution_icon.set_texture(resolution_textures[_get_resolution_texture_index(player_preferences.resolution)])
 	
 	# Configurar rango del cursor slider
 	cursor_slider.min_value = CURSOR_MIN
 	cursor_slider.max_value = CURSOR_MAX
 	cursor_slider.step = CURSOR_STEP
 
-static func _initialize():
+static func _initialize(viewport_aux: Viewport):
 	if !has_been_initialized:
 		has_been_initialized = true
 		#Load Player Preferences
 		player_preferences = PlayerPreferences.load_player_preferences()
 	
+		#Load ViewPort for setting resolution
+		main_viewport = viewport_aux
+		
 		# Apply save values
 		_apply_settings()
 	
@@ -64,6 +84,7 @@ static func _apply_settings():
 	_apply_cursor_size(player_preferences.cursor_size)
 	_apply_fullscreen(player_preferences.is_fullscreen)
 	_apply_vsync(player_preferences.is_vsync)
+	#_apply_resolution_value(player_preferences.resolution)
 
 # ── Sliders ──────────────────────────────────────────
 func _on_master_slider_value_changed(value: float) -> void:
@@ -96,6 +117,41 @@ func _on_vsync_check_toggled(pressed: bool) -> void:
 	player_preferences.is_vsync = pressed
 	_apply_vsync(player_preferences.is_vsync)
 	_save_player_preferences()
+
+# ── Resolution Dropdown ────────────────────────────────────────
+func _on_popup_menu_value_change(id: int) -> void:
+	player_preferences.resolution = id
+	var resolution_sprite_index = _get_resolution_texture_index(id)
+	resolution_icon.set_texture(resolution_textures[resolution_sprite_index])
+	match id:
+		360:
+			_apply_resolution_value("360")
+		720:
+			_apply_resolution_value("720")
+		1080:
+			_apply_resolution_value("1080")
+		2:
+			_apply_resolution_value("2")
+		4:
+			_apply_resolution_value("4")
+	_save_player_preferences()
+
+func _get_resolution_texture_index(id: int) -> int:
+	match id:
+		360:
+			return 0
+		720:
+			return 1
+		1080:
+			return 2
+		2:
+			return 3
+		4:
+			return 4
+	
+	return 2
+
+
 # ── Reset Player Preferences ────────────────────────────────────────
 func _on_reset_player_preferences():
 	player_preferences = PlayerPreferences.reset_player_preferences()
@@ -178,6 +234,18 @@ static func _apply_vsync(value: bool) -> void:
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
 	else:
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+
+static func _apply_resolution_value(key: String) -> void:
+	var root_node = Engine.get_main_loop().root
+	print(root_node)
+	var resolution = resolutions_modes[key]
+	var scale_res: float = resolution["scale"]
+	main_viewport.content_scale_factor = scale_res
+	main_viewport.content_scale_size = resolution["size"]
+	#root_node.scale = Vector2(scale, scale)
+	
+	if !player_preferences.is_fullscreen:
+		DisplayServer.window_set_size(resolutions_modes[key]["size"])
 
  # ── Save Player Preferences ───────────────────────────────────
 func _save_player_preferences() -> void:

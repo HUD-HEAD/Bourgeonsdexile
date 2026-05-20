@@ -6,6 +6,7 @@ class_name PlayerPreferences extends Resource
 @export_range(0.5, 2, 0.1) var cursor_size : float = 1.0
 @export var is_fullscreen : bool = true
 @export var is_vsync : bool = true
+@export var resolution : int = 1080
 
 func save() -> void:
 	ResourceSaver.save(self, "user://player_prefs.tres")
