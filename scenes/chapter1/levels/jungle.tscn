@@ -173,6 +173,7 @@
 [ext_resource type="Texture2D" uid="uid://7di6dp22qr3" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/6/6_6.png" id="164_sa0y6"]
 [ext_resource type="Texture2D" uid="uid://d0eisf3ukjgah" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/6/7_6line.png" id="165_ec7mn"]
 [ext_resource type="Texture2D" uid="uid://37wmratk0v0k" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/6/7_6.png" id="166_d5olm"]
+[ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="174_qtras"]
 
 [sub_resource type="Gradient" id="Gradient_t8bry"]
 offsets = PackedFloat32Array(0, 0.14906304, 0.5562181, 1)
@@ -1428,6 +1429,10 @@ grow_vertical = 2
 mouse_filter = 2
 texture = SubResource("GradientTexture1D_rw1nd")
 stretch_mode = 1
+
+[node name="CheckpointController" type="Node" parent="." unique_id=274687109]
+script = ExtResource("174_qtras")
+comic = 5
 
 [editable path="Path2D/PathFollowCompanion1/Companion1"]
 [editable path="Path2D/PathFollowCompanion2/Companion2"]

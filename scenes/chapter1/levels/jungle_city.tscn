@@ -236,6 +236,7 @@
 [ext_resource type="Texture2D" uid="uid://botlwlbdqi70l" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0118.png" id="226_sr367"]
 [ext_resource type="Texture2D" uid="uid://cjd0cved1hco8" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0119.png" id="227_wjkiy"]
 [ext_resource type="Texture2D" uid="uid://bg5s78yi6ix11" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0120.png" id="228_1rf41"]
+[ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="237_5h7fb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_48jwk"]
 animations = [{
@@ -1190,3 +1191,7 @@ offset = Vector2(3, -77)
 stream = ExtResource("117_xf4f8")
 autoplay = true
 bus = &"Music"
+
+[node name="CheckpointController" type="Node" parent="." unique_id=1125817438]
+script = ExtResource("237_5h7fb")
+comic = 4

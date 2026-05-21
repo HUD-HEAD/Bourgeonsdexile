@@ -11,10 +11,13 @@ class_name CheckpointConfiguration extends Resource
 func get_scene_path(type: comic_types) -> String:
 	return scene_configuration[type]
 
+@export_group("Debug")
 @export var debug_checkpoint: comic_types
 
+@export_group("Configuration")
+@export var lock_chapters: bool = true
 @export var scene_configuration: Dictionary = {
-	comic_types.chapter_1_comic_1:"res://scenes/chapter1/comics/jungle_comic_1.tscn",
+	comic_types.chapter_1_comic_1:"res://scenes/chapter1/chapter1_videoplayer.tscn",
 	comic_types.chapter_1_comic_2:"res://scenes/chapter1/comics/jungle_comic_2.tscn",
 	comic_types.chapter_1_comic_3:"res://scenes/chapter1/comics/jungle_comic_3.tscn",
 	comic_types.chapter_1_comic_4:"res://scenes/chapter1/comics/jungle_comic_4.tscn",

@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://dkm7pj8kxf23p" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow3.png" id="29_kde1w"]
 [ext_resource type="SpriteFrames" uid="uid://882iqrb47j8n" path="res://components/chapter1/levels/lajas_blancas/queue/teen.tres" id="30_h15xc"]
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="32_h15xc"]
+[ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="34_kde1w"]
 [ext_resource type="PackedScene" uid="uid://cx455fd0kkpbt" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB3.tscn" id="43_nx082"]
 [ext_resource type="PackedScene" uid="uid://b0rp3ag1qca1u" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB1.tscn" id="45_i6383"]
 [ext_resource type="PackedScene" uid="uid://dhktyk6ijdbuk" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB5.tscn" id="48_jenef"]
@@ -454,6 +455,10 @@ position = Vector2(0, -237)
 [node name="Camera2D" type="Camera2D" parent="Spawn/Nina" unique_id=1900272272]
 position = Vector2(0, -327)
 offset = Vector2(500, 0)
+
+[node name="CheckpointController" type="Node" parent="." unique_id=1005402094]
+script = ExtResource("34_kde1w")
+comic = 6
 
 [editable path="QueuingPeople/QueuePerson"]
 [editable path="Queue1/Puzzle4/DragDropPuzzle11"]
