@@ -47,4 +47,6 @@ func _debug_inputs(event : InputEvent) -> void :
 		SignalManager.next_panel.emit()
 	elif event.is_action_pressed("debug_toggle_console"):
 		debug_console.toggle()
+	elif event.is_action_pressed("debug_load_checkpoint"):
+		SaveManager.debug_load_checkpoint()
 	
