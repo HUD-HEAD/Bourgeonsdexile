@@ -9,7 +9,8 @@ class_name SettingsController extends CanvasLayer
 @onready var close_button = $TextureRect/CloseButton
 @onready var credits_button = $TextureRect/CreditsButton
 @onready var reset_button = $TextureRect/ResetButton
-@onready var credits_container = $TextureRect/CreditsContainer
+@onready var reset_progress_button = $TextureRect/ResetProgressButton
+@onready var credits_container = $CreditsContainer
 @onready var resolution_container = $TextureRect/MenuButton
 @onready var resolution_popup: PopupMenu = resolution_container.get_popup()
 
@@ -45,6 +46,7 @@ func _ready() -> void:
 	fullscreen_check.connect("toggled", _on_fullscreen_check_toggled)
 	vsync_check.connect("toggled", _on_vsync_check_toggled)
 	reset_button.connect("pressed", _on_reset_player_preferences)
+	reset_progress_button.connect("pressed", _on_reset_player_progress)
 	close_button.connect("pressed", _on_close_button_pressed)
 	credits_button.connect("pressed", _on_credits_button_pressed)
 	resolution_popup.id_pressed.connect(_on_popup_menu_value_change)
@@ -157,6 +159,9 @@ func _on_reset_player_preferences():
 	player_preferences = PlayerPreferences.reset_player_preferences()
 	_apply_settings()
 	_set_initial_values()
+
+func _on_reset_player_progress():
+	SaveManager.reset_save_file()
 
 # ── Idiomas ───────────────────────────────────────────
 #func _on_button_es_pressed() -> void:

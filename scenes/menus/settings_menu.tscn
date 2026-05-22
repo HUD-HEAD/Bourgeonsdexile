@@ -24,6 +24,8 @@
 [ext_resource type="Texture2D" uid="uid://2jbth5uy0lr6" path="res://graphics/menus/settings/settingsAdrian/resolution_2k_placeholder.png" id="13_hiabw"]
 [ext_resource type="Texture2D" uid="uid://q7icre1b84gh" path="res://graphics/menus/settings/settingsAdrian/resolution_4k_placeholder.png" id="14_afkw7"]
 [ext_resource type="Texture2D" uid="uid://p4yqxm1eixov" path="res://graphics/menus/settings/settingsAdrian/fullscreen.png" id="16_udegp"]
+[ext_resource type="Texture2D" uid="uid://dvng8klu0ad87" path="res://graphics/menus/settings/3731553(1).png" id="18_10nm4"]
+[ext_resource type="Texture2D" uid="uid://djnowmdhye88v" path="res://graphics/menus/settings/texture.png" id="20_fs1xy"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rrg86"]
 load_path = "res://.godot/imported/grabber.png-475198f4760f482d83ffe3adf0ba9ddb.ctex"
@@ -60,6 +62,17 @@ texture = ExtResource("9_udegp")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s4m6w"]
 texture = ExtResource("9_udegp")
+modulate_color = Color(1, 1, 1, 0.8627451)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2ibmv"]
+texture = ExtResource("18_10nm4")
+modulate_color = Color(1, 1, 1, 0.78431374)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_asps2"]
+texture = ExtResource("18_10nm4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ffd5i"]
+texture = ExtResource("18_10nm4")
 modulate_color = Color(1, 1, 1, 0.8627451)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_08gdp"]
@@ -265,6 +278,18 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_rxdtf")
 theme_override_styles/hover = SubResource("StyleBoxTexture_s4m6w")
 script = ExtResource("10_afkw7")
 
+[node name="ResetProgressButton" type="Button" parent="TextureRect" unique_id=955250440]
+layout_mode = 0
+offset_left = 1782.0
+offset_top = 140.0
+offset_right = 1947.0
+offset_bottom = 197.0
+scale = Vector2(0.5487999, 1.4488319)
+theme_override_styles/normal = SubResource("StyleBoxTexture_2ibmv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_asps2")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ffd5i")
+script = ExtResource("10_afkw7")
+
 [node name="CloseButton" type="Button" parent="TextureRect" unique_id=1562362018]
 layout_mode = 0
 offset_left = 1794.0
@@ -311,85 +336,6 @@ offset_top = 559.0
 offset_right = 881.0
 offset_bottom = 582.0
 text = "FULL SCREEN"
-
-[node name="CreditsContainer" type="ScrollContainer" parent="TextureRect" unique_id=1658886980]
-visible = false
-layout_mode = 0
-offset_top = -1.0
-offset_right = 426.0
-offset_bottom = 1747.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/CreditsContainer" unique_id=1987576778]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="TextureRect/CreditsContainer/VBoxContainer" unique_id=675914694]
-layout_mode = 2
-text = "BOURGEONS D'EXIL
-
-Creative Director
-Aida Navarro Redon
-
-Illustrator
-Juana Miquel
-
-Animator & Designer
-Leonie Courbat
-
-Programmer
-Claire Delhomme
-
-Sound Designer
-Adina Garcia
-
-Testimonial Coordinator & Mental Health Counselor
-Swann Pichon
-
-Researcher & Consultant
-Nora Dukkali
-
-Gynaecological Advisor
-Caroline Bensky
-
-Midwife Advisor
-Caterina Montagnoli
-
-─────────────────────
-
-This project has been funded by HES-SO Innovation Grant
-and developed at HEAD–Genève with the invaluable collaboration of:
-
-Anthony Masure
-Research Director
-
-Christelle Granite-Nobles
-Secretary of the Research Direction
-
-HEdS
-
-─────────────────────
-
-This game is part of the FNS project
-The Future of Humanitarian Design
-Architecture Group coordinated by:
-
-Javier Fernandez Contreras
-
-─────────────────────
-
-Partners
-
-ICRC — VR Lab
-Melissa Kiehl, Project Manager
-
-Museum of the Red Cross and Red Crescent
-Pascal Husmith, Director
-
-─────────────────────
-
-With the collaboration of:
-
-HUG — Hôpitaux Universitaires de Genève
-ONG GEFAM"
 
 [node name="Fullarrow" type="Sprite2D" parent="." unique_id=805790660]
 position = Vector2(1225, 810)
@@ -444,3 +390,120 @@ texture = ExtResource("8_mcc4n")
 position = Vector2(818.00006, 570)
 scale = Vector2(0.64, 0.64)
 texture = ExtResource("16_udegp")
+
+[node name="CreditsContainer" type="NinePatchRect" parent="." unique_id=322498125]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackGround" type="NinePatchRect" parent="CreditsContainer" unique_id=46832164]
+modulate = Color(0.19607843, 0.19607843, 0.19607843, 0.78431374)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 459.0
+offset_top = 32.0
+offset_right = -461.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_fs1xy")
+region_rect = Rect2(0, 8.890053, 475.51028, 265.80997)
+patch_margin_top = 38
+patch_margin_bottom = 98
+axis_stretch_vertical = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CreditsContainer" unique_id=1987576778]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 73.545
+offset_right = 660.0
+offset_bottom = 73.545
+
+[node name="Credits" type="ScrollContainer" parent="CreditsContainer" unique_id=1658886980]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 73.545
+offset_right = 300.0
+offset_bottom = 1821.545
+grow_horizontal = 2
+scroll_hint_mode = 2
+tile_scroll_hint = true
+
+[node name="Label" type="Label" parent="CreditsContainer/Credits" unique_id=675914694]
+layout_mode = 2
+text = "BOURGEONS D'EXIL
+
+Creative Director
+Aida Navarro Redon
+
+Illustrator
+Juana Miquel
+
+Animator & Designer
+Leonie Courbat
+
+Programmer
+Claire Delhomme
+Adrián Herrera Cosgaya
+
+Sound Designer
+Adina Garcia
+
+Testimonial Coordinator & Mental Health Counselor
+Swann Pichon
+
+Researcher & Consultant
+Nora Dukkali
+
+Gynaecological Advisor
+Caroline Bensky
+
+Midwife Advisor
+Caterina Montagnoli
+
+─────────────────────
+
+This project has been funded by HES-SO Innovation Grant
+and developed at HEAD–Genève with the invaluable collaboration of:
+
+Anthony Masure
+Research Director
+
+Christelle Granite-Nobles
+Secretary of the Research Direction
+
+HEdS
+
+─────────────────────
+
+This game is part of the FNS project
+The Future of Humanitarian Design
+Architecture Group coordinated by:
+
+Javier Fernandez Contreras
+
+─────────────────────
+
+Partners
+
+ICRC — VR Lab
+Melissa Kiehl, Project Manager
+
+Museum of the Red Cross and Red Crescent
+Pascal Husmith, Director
+
+─────────────────────
+
+With the collaboration of:
+
+HUG — Hôpitaux Universitaires de Genève
+ONG GEFAM"
+horizontal_alignment = 1
