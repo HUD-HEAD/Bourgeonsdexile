@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dexx74rhechxm" path="res://components/chapter1/comic_panels/comic_4/panel_belly.tscn" id="11_p7egh"]
 [ext_resource type="PackedScene" uid="uid://crqtn2a43hhe8" path="res://components/chapter1/comic_panels/comic_4/panel_phone.tscn" id="12_xs8jl"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="13_ec356"]
+[ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="14_fr0kj"]
 
 [node name="JungleComic4" type="Node2D" unique_id=1574922119]
 metadata/_edit_vertical_guides_ = [5131.0]
@@ -76,3 +77,7 @@ position = Vector2(20030, 535)
 position = Vector2(23531, 540)
 script = ExtResource("13_ec356")
 next_scene = "uid://ctau0miqtmbj2"
+
+[node name="CheckpointController" type="Node" parent="." unique_id=1709840026]
+script = ExtResource("14_fr0kj")
+comic = 3

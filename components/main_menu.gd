@@ -1,4 +1,4 @@
-extends CanvasLayer
+class_name MainMenu extends CanvasLayer
 
 @export_group("Buttons")
 @export var settings : BaseButton
@@ -7,16 +7,24 @@ extends CanvasLayer
 
 @export var audio_click_chapter : AudioStream
 
+@export var chapters_buttons: Array[PlayChapterButton]
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_buttons_connect()
 	
 	AudioManager.audio_sfx.stream = audio_click_chapter
+	
+	#disable if a chapter has not been unlock
+	update_chapter_buttons()
 
 func _buttons_connect():
 	settings.pressed.connect(_on_settings_pressed)
 	credits.pressed.connect(_on_credits_pressed)
 	quit.pressed.connect(_on_quit_pressed)
+
+func update_chapter_buttons():
+	for item in chapters_buttons:
+		item.lock_button()
 
 ## Open settings
 func _on_settings_pressed():

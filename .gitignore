@@ -19,3 +19,5 @@ mono_crash.*.json
 
 # Mac
 *.DS_Store
+audio/chapter1/soundtrack/jungle_theme_1.wav.import
+audio/chapter1/soundtrack/jungle_theme_2_after_traumatic_moment.wav.import

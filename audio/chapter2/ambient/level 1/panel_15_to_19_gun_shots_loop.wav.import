@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bq55wfhfehtft"
+path="res://.godot/imported/panel_15_to_19_gun_shots_loop.wav-b83a9218bd6b38da0f1e41fb49ec4c16.sample"
+
+[deps]
+
+source_file="res://audio/chapter2/ambient/level 1/panel_15_to_19_gun_shots_loop.wav"
+dest_files=["res://.godot/imported/panel_15_to_19_gun_shots_loop.wav-b83a9218bd6b38da0f1e41fb49ec4c16.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

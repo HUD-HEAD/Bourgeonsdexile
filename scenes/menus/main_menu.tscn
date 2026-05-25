@@ -23,12 +23,13 @@
 [ext_resource type="AudioStream" uid="uid://5oal57qd8k25" path="res://audio/chapter1/sfx/click_selection.wav" id="17_a3hrp"]
 [ext_resource type="AudioStream" uid="uid://uea041hlh4dy" path="res://audio/menus/soundtrack/music_main_menu.wav" id="18_25m6f"]
 
-[node name="MainMenu" type="CanvasLayer" unique_id=1477541867 node_paths=PackedStringArray("settings", "credits", "quit")]
+[node name="MainMenu" type="CanvasLayer" unique_id=1477541867 node_paths=PackedStringArray("settings", "credits", "quit", "chapters_buttons")]
 script = ExtResource("1_0ettg")
 settings = NodePath("Fullscreen/Settings")
 credits = NodePath("Fullscreen/VBoxContainer/Credits")
 quit = NodePath("Fullscreen/Exit")
 audio_click_chapter = ExtResource("17_a3hrp")
+chapters_buttons = [NodePath("Fullscreen/PlayNina"), NodePath("Fullscreen/PlayAmani"), NodePath("Fullscreen/PlayZlata")]
 
 [node name="Center" type="Control" parent="." unique_id=82372461]
 layout_mode = 3
@@ -144,6 +145,7 @@ mouse_default_cursor_shape = 2
 texture_normal = ExtResource("9_6xkr4")
 script = ExtResource("15_8hoqd")
 chapter_scene = "uid://5tmqeplllvij"
+chapter_index = 1
 
 [node name="PlayZlata" type="TextureButton" parent="Fullscreen" unique_id=479857537]
 layout_mode = 0
@@ -154,6 +156,7 @@ offset_bottom = 941.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("10_b8wrl")
 script = ExtResource("15_8hoqd")
+chapter_index = 2
 
 [node name="Settings" type="TextureButton" parent="Fullscreen" unique_id=991265530]
 layout_mode = 0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d34uyjfic3rlo"
+path="res://.godot/imported/panel_1.14_doors_open_selection_image_x2.wav-3d07cb865edcb417a45ced1a6954c6f3.sample"
+
+[deps]
+
+source_file="res://audio/chapter2/ambient/comic 1/panel_1.14_doors_open_selection_image_x2.wav"
+dest_files=["res://.godot/imported/panel_1.14_doors_open_selection_image_x2.wav-3d07cb865edcb417a45ced1a6954c6f3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
