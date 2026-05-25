@@ -219,13 +219,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -162.0
-offset_top = -446.0
-offset_right = 323.0
-offset_bottom = -166.0
+offset_left = -240.0
+offset_top = -541.795
+offset_right = 245.0
+offset_bottom = -261.79498
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.5, 0.3)
+pivot_offset = Vector2(242.5, 140)
 theme = ExtResource("8_08gdp")
 theme_override_icons/icon = ExtResource("8_pt7eq")
 theme_override_styles/normal = SubResource("StyleBoxTexture_afkw7")
@@ -251,40 +252,48 @@ texture = ExtResource("11_5fu2g")
 
 [node name="CreditsButton" type="Button" parent="TextureRect" unique_id=203228299]
 layout_mode = 1
+offset_left = 65.0
+offset_top = 60.0
+offset_right = 179.50018
+offset_bottom = 126.5
+pivot_offset = Vector2(57, 33)
+theme_override_styles/normal = SubResource("StyleBoxTexture_udegp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pt7eq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fd2q8")
+script = ExtResource("10_afkw7")
+
+[node name="ResetButton" type="Button" parent="TextureRect" unique_id=1603561297]
+layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -114.5
-offset_top = -230.0
-offset_right = 114.5
-offset_bottom = -97.0
+offset_left = -83.0
+offset_top = -185.12
+offset_right = 81.99878
+offset_bottom = -128.12012
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxTexture_udegp")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_pt7eq")
-theme_override_styles/hover = SubResource("StyleBoxTexture_fd2q8")
-
-[node name="ResetButton" type="Button" parent="TextureRect" unique_id=1603561297]
-layout_mode = 0
-offset_left = 1782.0
-offset_top = 42.0
-offset_right = 1947.0
-offset_bottom = 99.0
 scale = Vector2(0.5487999, 1.4488319)
+pivot_offset = Vector2(82.5, 28.5)
 theme_override_styles/normal = SubResource("StyleBoxTexture_eoonq")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_rxdtf")
 theme_override_styles/hover = SubResource("StyleBoxTexture_s4m6w")
 script = ExtResource("10_afkw7")
 
 [node name="ResetProgressButton" type="Button" parent="TextureRect" unique_id=955250440]
-layout_mode = 0
-offset_left = 1782.0
-offset_top = 140.0
-offset_right = 1947.0
-offset_bottom = 197.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -170.0
+offset_top = 60.0
+offset_right = -5.0
+offset_bottom = 117.000145
+grow_horizontal = 0
 scale = Vector2(0.5487999, 1.4488319)
+pivot_offset = Vector2(82, 28)
 theme_override_styles/normal = SubResource("StyleBoxTexture_2ibmv")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_asps2")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ffd5i")
