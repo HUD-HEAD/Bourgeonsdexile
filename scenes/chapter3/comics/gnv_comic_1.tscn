@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_ulfeo"]
 [ext_resource type="PackedScene" uid="uid://dqaagocylecdi" path="res://components/chapter3/comic1/panel_1.tscn" id="2_1651i"]
+[ext_resource type="PackedScene" uid="uid://pvmnc7iirc1n" path="res://components/chapter3/comic1/panel_2a.tscn" id="3_xbw0h"]
+[ext_resource type="PackedScene" uid="uid://dpbamesghexa0" path="res://components/chapter3/comic1/panel_2b.tscn" id="4_ma0sg"]
 [ext_resource type="PackedScene" uid="uid://bg1urpmqlcklp" path="res://components/chapter3/comic1/panel_2.tscn" id="6_ltgbr"]
 [ext_resource type="PackedScene" uid="uid://coloiobyvwn8w" path="res://components/chapter3/comic1/panel_3.tscn" id="7_ra6tx"]
 [ext_resource type="PackedScene" uid="uid://42lqg10uny0b" path="res://components/chapter3/comic1/panel_4.tscn" id="8_hh7t8"]
@@ -35,7 +37,13 @@ texture = ExtResource("1_ulfeo")
 stretch_mode = 1
 
 [node name="PanelDoctors" parent="PaperBackground" unique_id=162787811 instance=ExtResource("2_1651i")]
-position = Vector2(5229, 539)
+position = Vector2(5054, 545)
+
+[node name="PanelDoctors2" parent="PaperBackground" unique_id=1769527342 instance=ExtResource("3_xbw0h")]
+position = Vector2(6857, 535)
+
+[node name="PanelDoctors3" parent="PaperBackground" unique_id=733880654 instance=ExtResource("4_ma0sg")]
+position = Vector2(10923, 544)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=485993154]
 position = Vector2(960, 540)
@@ -53,7 +61,7 @@ next_scene = "uid://s3spdg0qqc77"
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("21_rh3md")
-panels = [NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath("../SceneEnder")]
+panels = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("../SceneEnder")]
 
 [node name="UI" parent="." unique_id=1829896958 instance=ExtResource("22_tc6fe")]
 
@@ -63,31 +71,31 @@ panels = [NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), 
 position = Vector2(3096, 541)
 
 [node name="PanelDoctors2" parent="." unique_id=1619880758 instance=ExtResource("7_ra6tx")]
-position = Vector2(7126, 558)
+position = Vector2(14335, 560)
 
 [node name="PanelDoctors3" parent="." unique_id=301524498 instance=ExtResource("8_hh7t8")]
-position = Vector2(9324, 572)
+position = Vector2(16524, 581)
 
 [node name="PanelDoctors4" parent="." unique_id=1160904745 instance=ExtResource("9_eg8ad")]
-position = Vector2(11483, 559)
+position = Vector2(8865, 539)
 
 [node name="PanelDoctors5" parent="." unique_id=55042391 instance=ExtResource("10_lrvjo")]
-position = Vector2(13704, 514)
+position = Vector2(18647, 534)
 
 [node name="PanelDoctors6" parent="." unique_id=1389191379 instance=ExtResource("11_hh7t8")]
-position = Vector2(15886, 543)
+position = Vector2(20883, 530)
 
 [node name="PanelDoctors7" parent="." unique_id=1837064499 instance=ExtResource("12_eg8ad")]
-position = Vector2(18171, 550)
+position = Vector2(23067, 517)
 
 [node name="PanelDoctors8" parent="." unique_id=1860716632 instance=ExtResource("13_lrvjo")]
-position = Vector2(20524, 532)
+position = Vector2(25289, 511)
 
 [node name="PanelDoctors9" parent="." unique_id=1445255210 instance=ExtResource("14_1uikj")]
-position = Vector2(22841, 537)
+position = Vector2(27725, 528)
 
 [node name="PanelDoctors10" parent="." unique_id=411523805 instance=ExtResource("15_be7uh")]
-position = Vector2(24924, 562)
+position = Vector2(30124, 529)
 
 [node name="PanelDoctors11" parent="." unique_id=1284468193 instance=ExtResource("16_xbw0h")]
-position = Vector2(28695, 546)
+position = Vector2(32385, 549)
