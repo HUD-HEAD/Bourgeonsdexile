@@ -241,16 +241,19 @@ static func _apply_vsync(value: bool) -> void:
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
 
 static func _apply_resolution_value(key: String) -> void:
-	var root_node = Engine.get_main_loop().root
-	print(root_node)
-	var resolution = resolutions_modes[key]
-	var scale_res: float = resolution["scale"]
-	main_viewport.content_scale_factor = scale_res
-	main_viewport.content_scale_size = resolution["size"]
-	#root_node.scale = Vector2(scale, scale)
+	DisplayServer.window_set_size(resolutions_modes[key]["size"])
+	##Old implementation
 	
-	if !player_preferences.is_fullscreen:
-		DisplayServer.window_set_size(resolutions_modes[key]["size"])
+	#var root_node = Engine.get_main_loop().root
+	#print(root_node)
+	#var resolution = resolutions_modes[key]
+	#var scale_res: float = resolution["scale"]
+	#main_viewport.content_scale_factor = scale_res
+	#main_viewport.content_scale_size = resolution["size"]
+	##root_node.scale = Vector2(scale, scale)
+	#
+	#if !player_preferences.is_fullscreen:
+		#DisplayServer.window_set_size(resolutions_modes[key]["size"])
 
  # ── Save Player Preferences ───────────────────────────────────
 func _save_player_preferences() -> void:
