@@ -33,17 +33,14 @@
 [ext_resource type="Script" uid="uid://bhkx6r42i55jn" path="res://scenes/chapter1/levels/wait_stop_rain.gd" id="31_c3f0v"]
 [ext_resource type="PackedScene" uid="uid://b7280mshbm13l" path="res://components/chapter1/levels/jungle/puzzle6.tscn" id="31_ljtv2"]
 [ext_resource type="Texture2D" uid="uid://bow4ifhdb5bv5" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction1.png" id="32_2wqw0"]
-[ext_resource type="Texture2D" uid="uid://4n7my7ycpy30" path="res://graphics/chapter1/main_characters/enemies/enemiesprite1.png" id="32_808hi"]
 [ext_resource type="Texture2D" uid="uid://cbsslcnjdrrpv" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/1/4_1line.png" id="32_qf8se"]
 [ext_resource type="PackedScene" uid="uid://b88g225o2t0is" path="res://components/chapter1/levels/jungle/puzzle3.tscn" id="32_t8bry"]
 [ext_resource type="Texture2D" uid="uid://d2hmayoft57fn" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/1/4_1.png" id="33_6wsaw"]
-[ext_resource type="Texture2D" uid="uid://dituvwkbu4vw8" path="res://graphics/chapter1/main_characters/enemies/enemiesprite2.png" id="33_aa6lj"]
 [ext_resource type="PackedScene" uid="uid://bcepqdv01o1ry" path="res://components/chapter1/levels/jungle/puzzle4.tscn" id="33_h7yo2"]
 [ext_resource type="Texture2D" uid="uid://bg5y7pg1m38l2" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction2.png" id="33_jh4yo"]
 [ext_resource type="PackedScene" uid="uid://c8pymntn6ge5" path="res://components/chapter1/levels/jungle/puzzle5.tscn" id="33_tglbk"]
 [ext_resource type="Texture2D" uid="uid://dvchkdwlq3wo" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction3.png" id="34_c3f0v"]
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="35_ljtv2"]
-[ext_resource type="Texture2D" uid="uid://dxryv082uocw8" path="res://graphics/chapter1/levels/city/npcs/npc3.png" id="35_rw1nd"]
 [ext_resource type="Texture2D" uid="uid://bjbev463l8cuf" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction4.png" id="35_skl6x"]
 [ext_resource type="Texture2D" uid="uid://drqyc110ynywx" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/2/1_2line.png" id="35_ulyey"]
 [ext_resource type="Texture2D" uid="uid://dlasfaha3cejo" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction5.png" id="36_7a5p8"]
@@ -128,21 +125,31 @@
 [ext_resource type="Texture2D" uid="uid://cj84yv6y71sg7" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_10fps/enemy_idle_0031.png" id="78_4anvc"]
 [ext_resource type="Texture2D" uid="uid://chrowuba8qqoc" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_10fps/enemy_idle_0032.png" id="79_4fty7"]
 [ext_resource type="Texture2D" uid="uid://byrfojq4cgbfh" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_10fps/enemy_idle_0033.png" id="80_a6lic"]
+[ext_resource type="Texture2D" uid="uid://c3llkf3hm86pb" path="res://graphics/chapter1/levels/jungle/npcs/NPC_warning_10fps/npc_warning_0001.png" id="80_d5olm"]
+[ext_resource type="Texture2D" uid="uid://75sxo1fggfgd" path="res://graphics/chapter1/levels/jungle/npcs/NPC_warning_10fps/npc_warning_0002.png" id="81_4cr10"]
 [ext_resource type="Texture2D" uid="uid://djapk6jq6eicf" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_10fps/enemy_idle_0034.png" id="81_k4vjh"]
 [ext_resource type="Texture2D" uid="uid://bpxcvmtrus37o" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_10fps/enemy_idle_0035.png" id="82_1u6v0"]
 [ext_resource type="Texture2D" uid="uid://cosolmxc8o57v" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/1_5line.png" id="82_md07l"]
+[ext_resource type="Texture2D" uid="uid://bsuq4k821kfef" path="res://graphics/chapter1/levels/jungle/npcs/NPC_warning_10fps/npc_warning_0003.png" id="82_plhlf"]
 [ext_resource type="Texture2D" uid="uid://c1t36mmjp3ieq" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_10fps/enemy_idle_0036.png" id="83_5k73x"]
 [ext_resource type="Texture2D" uid="uid://b4xl8bacgqd3p" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/1_5.png" id="83_nm80h"]
+[ext_resource type="Texture2D" uid="uid://dv88sfynd3x7w" path="res://graphics/chapter1/levels/jungle/npcs/NPC_warning_10fps/npc_warning_0004.png" id="83_xtbpl"]
 [ext_resource type="Texture2D" uid="uid://8d3j38vge25a" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_10fps/enemy_idle_0037.png" id="84_avj4j"]
+[ext_resource type="Texture2D" uid="uid://cx3yg1nvtmuuq" path="res://graphics/chapter1/levels/jungle/npcs/NPC_warning_10fps/npc_warning_0005.png" id="84_nt033"]
 [ext_resource type="Texture2D" uid="uid://cgpghty6yxyed" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/5_5line.png" id="84_u2mqu"]
 [ext_resource type="Texture2D" uid="uid://dpfiqfp4kngsc" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/5_5.png" id="85_no6wu"]
 [ext_resource type="Texture2D" uid="uid://cloqityhxnanw" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_10fps/enemy_idle_0038.png" id="85_pkixr"]
+[ext_resource type="Texture2D" uid="uid://b5dl50m5udajm" path="res://graphics/chapter1/levels/jungle/npcs/NPC_warning_10fps/npc_warning_0006.png" id="85_yplh0"]
 [ext_resource type="Texture2D" uid="uid://bgw81auokc1hr" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_10fps/enemy_idle_0039.png" id="86_00rrj"]
+[ext_resource type="Texture2D" uid="uid://yktl43pydchm" path="res://graphics/chapter1/levels/jungle/npcs/NPC_warning_10fps/npc_warning_0007.png" id="86_b8fep"]
 [ext_resource type="Texture2D" uid="uid://dld4fniokwofg" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/4_5line.png" id="86_o75y3"]
 [ext_resource type="Texture2D" uid="uid://biamshe0ngfko" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_10fps/enemy_idle_0040.png" id="87_73n22"]
+[ext_resource type="Texture2D" uid="uid://rpu824uuboee" path="res://graphics/chapter1/levels/jungle/npcs/NPC_warning_10fps/npc_warning_0008.png" id="87_j6pee"]
 [ext_resource type="Texture2D" uid="uid://dkmxvjaufimko" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/4_5.png" id="87_vk8eo"]
+[ext_resource type="Texture2D" uid="uid://dde22ffv8wg4f" path="res://graphics/chapter1/levels/jungle/npcs/NPC_warning_10fps/npc_warning_0009.png" id="88_5rstg"]
 [ext_resource type="Texture2D" uid="uid://8ye7dw6neuq4" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/2_5line.png" id="88_hoqsx"]
 [ext_resource type="Texture2D" uid="uid://dcvcmicvmkkfx" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/2_5.png" id="89_4av7t"]
+[ext_resource type="Texture2D" uid="uid://cxpqeido5bxuv" path="res://graphics/chapter1/levels/jungle/npcs/NPC_warning_10fps/npc_warning_0010.png" id="89_mo2v3"]
 [ext_resource type="Texture2D" uid="uid://qoeai8u1lpos" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/3_5line.png" id="90_wtncc"]
 [ext_resource type="Texture2D" uid="uid://dk70rfg0280qe" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/3_5.png" id="91_b8ue1"]
 [ext_resource type="Texture2D" uid="uid://djymrx7nsi00x" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/6_5line.png" id="92_y0x5r"]
@@ -153,7 +160,13 @@
 [ext_resource type="Texture2D" uid="uid://c5f3esufjycph" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/8_5.png" id="97_b28kc"]
 [ext_resource type="Texture2D" uid="uid://bwy3gmjwmft1u" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/9_5line.png" id="98_aifp2"]
 [ext_resource type="Texture2D" uid="uid://dx8yvfy1bkd8t" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/9_5.png" id="99_k13op"]
+[ext_resource type="Texture2D" uid="uid://dyl4ys5nfggfy" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_rifle_5fps/enemy_idle_rifle_0001.png" id="149_idr4k"]
+[ext_resource type="Texture2D" uid="uid://bdtr8q76uv8ca" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_rifle_5fps/enemy_idle_rifle_0002.png" id="150_p6vwg"]
+[ext_resource type="Texture2D" uid="uid://br2w8t35mcngu" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_rifle_5fps/enemy_idle_rifle_0003.png" id="151_j5188"]
+[ext_resource type="Texture2D" uid="uid://cxrs6cuf8rcwf" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_rifle_5fps/enemy_idle_rifle_0004.png" id="152_2rqqh"]
 [ext_resource type="Texture2D" uid="uid://cy4c33bvkx18" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/6/1_6line.png" id="153_67a8o"]
+[ext_resource type="Texture2D" uid="uid://se0chm4n7dow" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_rifle_5fps/enemy_idle_rifle_0005.png" id="153_igan2"]
+[ext_resource type="Texture2D" uid="uid://csu3bp2ngkeot" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_rifle_5fps/enemy_idle_rifle_0006.png" id="154_hhg6g"]
 [ext_resource type="Texture2D" uid="uid://5jp5n6saiw8g" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/7/1_7line.png" id="154_o75y3"]
 [ext_resource type="Texture2D" uid="uid://bie0tpxf2aeof" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/6/1_6.png" id="154_qtras"]
 [ext_resource type="Texture2D" uid="uid://diqcais6dm5ry" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/6/3_6line.png" id="155_qq3xp"]
@@ -191,6 +204,46 @@ point_count = 7
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1yhnw"]
 radius = 146.38
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pekss"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("80_d5olm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_4cr10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_plhlf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_xtbpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_nt033")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_yplh0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_b8fep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_j6pee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_5rstg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_mo2v3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_swtbi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hi6ya"]
 animations = [{
@@ -492,8 +545,34 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ewv6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("149_idr4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_p6vwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_j5188")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_2rqqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_igan2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_hhg6g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_808hi"]
-size = Vector2(619.6719, 431.14734)
+size = Vector2(406.55664, 431.14734)
 
 [sub_resource type="Gradient" id="Gradient_h7yo2"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -1102,10 +1181,18 @@ texture = ExtResource("64_73n22")
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzles/Puzzle3/DragDropPuzzle5/BuildingBlocks/PuzzlePiece8/Draggable" parent_id_path=PackedInt32Array(496082450, 354999682, 2116105691) index="1" unique_id=991932022]
 texture = ExtResource("65_kqexy")
 
-[node name="PlaceholderNPC" type="Sprite2D" parent="Puzzles/Puzzle3" unique_id=577064758]
-position = Vector2(-1144, 584)
-scale = Vector2(1.525, 1.525)
-texture = ExtResource("35_rw1nd")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Puzzles/Puzzle3" unique_id=1250055475]
+position = Vector2(-1225, 562)
+scale = Vector2(1.31, 1.3100001)
+sprite_frames = SubResource("SpriteFrames_pekss")
+autoplay = "default"
+frame_progress = 0.49003345
+flip_h = true
+
+[node name="PlaceholderNPC" type="AnimatedSprite2D" parent="Puzzles/Puzzle3" unique_id=653973915]
+position = Vector2(-1105.0001, 600)
+scale = Vector2(1.3167192, 1.3558333)
+sprite_frames = SubResource("SpriteFrames_swtbi")
 
 [node name="MarkerNPC" type="Marker2D" parent="Puzzles/Puzzle3/PlaceholderNPC" unique_id=1153432582]
 position = Vector2(46.55712, -116.065575)
@@ -1237,26 +1324,25 @@ scale = Vector2(0.61, 0.61)
 script = ExtResource("21_kdrkc")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
-[node name="Enemiesprite1" type="Sprite2D" parent="Puzzles/Puzzle5/Enemies" unique_id=484849167]
-position = Vector2(204.91803, 0)
-texture = ExtResource("32_808hi")
-
-[node name="Enemiesprite2" type="Sprite2D" parent="Puzzles/Puzzle5/Enemies" unique_id=235485957]
-position = Vector2(-194, 0)
-texture = ExtResource("33_aa6lj")
-
 [node name="EnemyAnimated" type="AnimatedSprite2D" parent="Puzzles/Puzzle5/Enemies" unique_id=1673582706]
-position = Vector2(9.83606, -29.508198)
+position = Vector2(227.86885, -22.95082)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_kqexy")
 autoplay = "default"
-frame_progress = 0.17754737
+flip_h = true
+
+[node name="EnemyAnimated2" type="AnimatedSprite2D" parent="Puzzles/Puzzle5/Enemies" unique_id=1115231015]
+position = Vector2(-44.2623, -26.229507)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_8ewv6")
+autoplay = "default"
+frame_progress = 0.3512267
 
 [node name="MarkerEnemy" type="Marker2D" parent="Puzzles/Puzzle5/Enemies" unique_id=91322150]
 position = Vector2(36, -270)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzles/Puzzle5/Enemies" unique_id=1789449637]
-position = Vector2(8.197266, -15.573486)
+position = Vector2(91.80469, -15.573486)
 shape = SubResource("RectangleShape2D_808hi")
 
 [node name="Puzzle6" type="Node2D" parent="Puzzles" unique_id=2026587298]
