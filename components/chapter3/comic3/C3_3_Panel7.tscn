@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bjpisg46n2tpb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_uiukp"]
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[node name="C33Panel1" type="Node2D" unique_id=1800611031]
+
+[node name="Label" type="Label" parent="." unique_id=307442712]
+offset_left = -168.0
+offset_top = -30.0
+offset_right = 774.0
+offset_bottom = 402.0
+text = "MOVIL PHONE"
+label_settings = SubResource("LabelSettings_uiukp")

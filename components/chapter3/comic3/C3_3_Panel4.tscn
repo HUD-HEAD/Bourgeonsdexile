@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cpmykfqut1qex"]
+
+[ext_resource type="Texture2D" uid="uid://e1lico8g8tbt" path="res://graphics/chapter3/comics/comic3/calendar/8.png" id="1_bgj58"]
+[ext_resource type="Texture2D" uid="uid://b12bukfsokqbu" path="res://graphics/chapter3/comics/comic3/calendar/10.png" id="1_pb11t"]
+[ext_resource type="Texture2D" uid="uid://mb83pink5ebt" path="res://graphics/chapter3/comics/comic3/calendar/7.png" id="3_p5had"]
+
+[node name="C33Panel1" type="Node2D" unique_id=1800611031]
+
+[node name="10" type="Sprite2D" parent="." unique_id=17949223]
+position = Vector2(-3, 2)
+texture = ExtResource("1_pb11t")
+
+[node name="8" type="Sprite2D" parent="10" unique_id=1829745910]
+position = Vector2(-226, 290)
+texture = ExtResource("1_bgj58")
+
+[node name="7" type="Sprite2D" parent="10" unique_id=1591358777]
+position = Vector2(-545, 134)
+texture = ExtResource("3_p5had")

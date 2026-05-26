@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cudd3kgt36aqv"]
+
+[ext_resource type="Texture2D" uid="uid://ddaamgfg2qpfl" path="res://graphics/chapter3/comics/comic3/pierogi/pierogi.png" id="1_dj46o"]
+
+[node name="C33Panel1" type="Node2D" unique_id=1800611031]
+
+[node name="Pierogi" type="Sprite2D" parent="." unique_id=549834714]
+position = Vector2(-1, 0)
+texture = ExtResource("1_dj46o")
