@@ -6,3 +6,4 @@ class_name sfx_config extends Resource
 @export var max_volume: float = 1
 @export var min_pitch: float = 1
 @export var max_pitch: float = 1
+ 

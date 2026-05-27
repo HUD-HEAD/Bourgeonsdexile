@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="sfx_config" format=3 uid="uid://db7ghbhimi3hs"]
+
+[ext_resource type="Script" uid="uid://duuxorfspwlxi" path="res://components/utils/audio/sfx_configuration.gd" id="1_r1xkc"]
+[ext_resource type="AudioStream" uid="uid://btr3wddco0v4q" path="res://audio/chapter2/ambient/level 1/panel_15_car_sound.wav" id="2_fnt3w"]
+
+[resource]
+script = ExtResource("1_r1xkc")
+type = 2113
+stream = Array[AudioStream]([ExtResource("2_fnt3w")])
+metadata/_custom_type_script = "uid://duuxorfspwlxi"

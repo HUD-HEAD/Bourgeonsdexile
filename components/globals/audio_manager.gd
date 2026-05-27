@@ -136,7 +136,7 @@ func play_sfx(key: AudioConfiguration.sfx_type):
 	var volume: float
 	
 	if sfx.stream.size() > 1:
-		stream = sfx.stream[randi_range(0,sfx.stream.size())]
+		stream = sfx.stream[randi_range(0,sfx.stream.size() -1)]
 	elif sfx.stream.size() == 1:
 		stream = sfx.stream[0]
 	else:
@@ -188,9 +188,12 @@ func play_music(key: AudioConfiguration.music_type):
 	
 	current_music_player.pitch_scale = music_info.pitch
 	current_music_player.stream = music_info.stream
-	(current_music_player.stream as AudioStreamWAV).loop_mode = AudioStreamWAV.LOOP_FORWARD
+	#(current_music_player.stream as AudioStreamWAV).loop_mode = AudioStreamWAV.LOOP_FORWARD
 	
-	fade_in(current_music_player, 0, music_info.volume)
+	current_music_player.volume_linear = 1
+	current_music_player.play()
+	
+	#fade_in(current_music_player, 0, music_info.volume)
 	if has_to_fade_out:
 		if last_music_player == 0:
 			fade_out(music_1_player)
@@ -238,19 +241,21 @@ func _get_free_loop(key: AudioConfiguration.loop_type) -> AudioStreamPlayer:
 func _free_loop(key: AudioConfiguration.loop_type):
 	for item in loop_pool:
 		if item.is_playing && item.loop_type == key:
-			item.is_playing = false
-			item.player_reference.stop()
+			var lambda = func():
+				item.is_playing = false
+				item.player_reference.stop()
+			fade_out(item.player_reference, 0, lambda)
 			break
 #endregion
 
 #region Fade in/out, crossfade
-const TRANS_TIME = 5.0
+const TRANS_TIME = 0.5
 
 func cross_fade(fade_out_player : AudioStreamPlayer, fade_in_player : AudioStreamPlayer, min_volume = 0.0, max_volume = 1.0):
 	fade_out(fade_out_player, min_volume)
 	fade_in(fade_in_player, min_volume, max_volume)
 
-func fade_out(fade_out_player : AudioStreamPlayer, end_volume = 0.0):
+func fade_out(fade_out_player : AudioStreamPlayer, end_volume = 0.0, on_stop: Callable = Callable()):
 	if !is_instance_valid(fade_out_player):
 		return
 	
@@ -258,6 +263,8 @@ func fade_out(fade_out_player : AudioStreamPlayer, end_volume = 0.0):
 	tween.set_ease(Tween.EASE_IN)
 	tween.tween_property(fade_out_player, "volume_linear", end_volume, TRANS_TIME)
 	tween.tween_callback(fade_out_player.stop)
+	if on_stop.is_valid():
+		on_stop.call()
 
 func fade_in(fade_in_player : AudioStreamPlayer, start_volume = 0.0, end_volume = 1.0):
 	if !is_instance_valid(fade_in_player):

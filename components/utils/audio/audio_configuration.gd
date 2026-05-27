@@ -2,15 +2,36 @@ class_name AudioConfiguration extends Resource
 
 enum sfx_type{
 	click = 0,
-	puzzle = 1,	
+	puzzle_correct_piece = 1,
+	movile_selection = 2,
+	resolve_puzzle = 3,
+	gun_shots = 2100,
+	c2_1_1_gun_shot_selection = 2101
+	,c2_1_2_clean_cristal = 2102
+	,c2_1_3_gun_wind_window = 2103
+	,c2_1_4_plastic_blocks = 2104
+	,c2_1_5_childs_playing = 2105
+	,c2_1_6_textil = 2106
+	,c2_1_7_mmm_woman = 2107
+	,c2_1_10_child_move = 2108
+	,c2_1_11_hands = 2109
+	,c2_1_12_child_move2 = 2110
+	,c2_1_13_sad_moment = 2111
+	,c2_1_14_doors_open = 2112
+	,c2_1_15_car = 2113
+	,c2_1_19_car = 2114	
 }
 
 enum loop_type{
-	example = 0,
+	c2_1_wind_loop_0_to_16 = 2100,
+	c2_1_Thense_moment_panel_14 = 2101,
 }
 
 enum music_type{
-	example_music = 0,
+	c2_1_starting_theme = 2100,
+	c2_1_starting_theme_sad_moment_panel_10_to_15 = 2101,
+	c2_1_walking_theme_panel_15_to_20 = 2102,
+	c2_1_motocycle_panel_20_to_24 = 2103,
 }
 
 @export var sfx_configuration: Array[sfx_config]

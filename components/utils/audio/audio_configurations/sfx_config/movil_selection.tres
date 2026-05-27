@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="sfx_config" format=3 uid="uid://ca3s5ok3u2a17"]
+
+[ext_resource type="Script" uid="uid://duuxorfspwlxi" path="res://components/utils/audio/sfx_configuration.gd" id="1_rnwwl"]
+[ext_resource type="AudioStream" uid="uid://b22wnkh3gg0lb" path="res://audio/chapter1/ambient/panel_section_3/panel_3.2_movil_selection.wav" id="2_tecvp"]
+[ext_resource type="AudioStream" uid="uid://cuqqqnq7elao" path="res://audio/chapter1/sfx/CLICK_SELECTION_ARROW.wav" id="3_pvl46"]
+
+[resource]
+script = ExtResource("1_rnwwl")
+type = 2
+stream = Array[AudioStream]([ExtResource("2_tecvp"), ExtResource("3_pvl46")])
+min_volume = 0.9
+min_pitch = 0.9
+max_pitch = 1.1
+metadata/_custom_type_script = "uid://duuxorfspwlxi"

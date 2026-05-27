@@ -3,7 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_o35dc"]
 [ext_resource type="PackedScene" uid="uid://dixccnltqcohj" path="res://components/chapter2/comic_panels/comic_1/panel_video_transition.tscn" id="2_erqdw"]
 [ext_resource type="PackedScene" uid="uid://nrfkhc1421if" path="res://components/chapter2/comic_panels/comic_1/panel_2.tscn" id="2_k5ynj"]
+[ext_resource type="Script" uid="uid://bvmwxu2au5j5l" path="res://components/utils/audio/audio integration nodes/audio_sfx_zone.gd" id="3_4a5vy"]
+[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="4_a6kkx"]
 [ext_resource type="PackedScene" uid="uid://dlh2oirpix5d8" path="res://components/chapter2/comic_panels/comic_1/panel_open_window.tscn" id="4_erqdw"]
+[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="5_xuvnd"]
 [ext_resource type="PackedScene" uid="uid://c0wro4keqrw1k" path="res://components/chapter2/comic_panels/comic_1/panel_4.tscn" id="9_erqdw"]
 [ext_resource type="PackedScene" uid="uid://bof4aq2qkhfv7" path="res://components/chapter2/comic_panels/comic_1/panel_5.tscn" id="10_4a5vy"]
 [ext_resource type="PackedScene" uid="uid://186uwrt8f1pa" path="res://components/chapter2/comic_panels/comic_1/panel_6.tscn" id="11_a6kkx"]
@@ -50,14 +53,42 @@ editor_draw_limits = true
 [node name="PanelVideo" parent="Panels" unique_id=966386091 instance=ExtResource("2_erqdw")]
 position = Vector2(960, 540)
 
+[node name="AudioSfxZone" type="VisibleOnScreenNotifier2D" parent="Panels/PanelVideo" unique_id=1770891608]
+script = ExtResource("3_4a5vy")
+sfx = 2101
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
+
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="Panels/PanelVideo" unique_id=1170280034]
+position = Vector2(1000, 500)
+rect = Rect2(-12, -10, 22, 20)
+script = ExtResource("4_a6kkx")
+music_name = 2100
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="Panels/PanelVideo" unique_id=1009131654]
+rect = Rect2(-932, -525, 37466, 1040)
+script = ExtResource("5_xuvnd")
+loop_name = 2100
+metadata/_custom_type_script = "uid://brda7473wfj1v"
+
 [node name="Panel0" parent="Panels" unique_id=299868253 instance=ExtResource("2_k5ynj")]
 position = Vector2(3383, 538)
 
 [node name="PanelOpenWindow" parent="Panels" unique_id=1036474130 instance=ExtResource("4_erqdw")]
 position = Vector2(5669, 540)
 
+[node name="AudioSfxZone" type="VisibleOnScreenNotifier2D" parent="Panels/PanelOpenWindow" unique_id=2105856406]
+script = ExtResource("3_4a5vy")
+sfx = 2103
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
+
 [node name="Panel1" parent="Panels" unique_id=9427924 instance=ExtResource("9_erqdw")]
 position = Vector2(10360, 527)
+
+[node name="AudioSfxZone" type="VisibleOnScreenNotifier2D" parent="Panels/Panel1" unique_id=610477875]
+script = ExtResource("3_4a5vy")
+sfx = 2105
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
 
 [node name="Panel2" parent="Panels" unique_id=169044954 instance=ExtResource("10_4a5vy")]
 position = Vector2(8092, 498)

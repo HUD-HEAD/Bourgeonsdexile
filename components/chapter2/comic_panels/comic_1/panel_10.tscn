@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://1ome7mdt1xgc" path="res://graphics/chapter2/comics/comic1/frame_kidaunt/aunt.png" id="3_dq4hv"]
 [ext_resource type="Texture2D" uid="uid://c4pohbk7aco5d" path="res://graphics/chapter2/comics/comic1/frame_kidaunt/holdinghands.png" id="5_5ejb7"]
 [ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/mechanics/area_entered_enable.gd" id="5_8c8pm"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="6_85he8"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="8_dq4hv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cbk3w"]
@@ -147,3 +148,10 @@ autoplay = &"default"
 script = ExtResource("8_dq4hv")
 anim_player = NodePath("../AnimationPlayer")
 metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="TriggerSfxOnClick" type="Node" parent="." unique_id=1913231557 node_paths=PackedStringArray("clickables")]
+script = ExtResource("6_85he8")
+clickables = [NodePath("../DraggableRestricted")]
+sfx = 2108
+play_sfx_once = true
+metadata/_custom_type_script = "uid://b7avucygxykbp"

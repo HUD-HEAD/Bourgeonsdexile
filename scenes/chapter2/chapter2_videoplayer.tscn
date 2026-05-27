@@ -4,6 +4,8 @@
 [ext_resource type="VideoStream" uid="uid://do0led3t3kkdm" path="res://video/ch2_video_intro_loop.ogv" id="2_nff2x"]
 [ext_resource type="Texture2D" uid="uid://b7bbp47vmqfr0" path="res://graphics/chapter2/comics/comic1/framevideo/1.png" id="2_rgcbm"]
 [ext_resource type="VideoStream" uid="uid://bjsdsfjpio5ow" path="res://video/ch2_video_intro_zoom.ogv" id="3_4vcik"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="5_4vcik"]
+[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="6_j67ms"]
 
 [node name="Videoplayer" unique_id=1489886936 instance=ExtResource("1_7qv81")]
 
@@ -22,3 +24,19 @@ texture = ExtResource("2_rgcbm")
 
 [node name="AudioStreamPlayer" parent="." index="4" unique_id=1448924273]
 stream = null
+
+[node name="Audio_Container" type="Node" parent="." index="5" unique_id=1275824783]
+
+[node name="TriggerSfxOnClick" type="Node" parent="Audio_Container" index="0" unique_id=814820839 node_paths=PackedStringArray("clickables")]
+script = ExtResource("5_4vcik")
+clickables = [NodePath("../../Control/Start")]
+sfx = 2100
+play_sfx_once = true
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="Audio_Container" index="1" unique_id=1193988832]
+position = Vector2(1000, 500)
+rect = Rect2(-12, -10, 22, 20)
+script = ExtResource("6_j67ms")
+music_name = 2100
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
