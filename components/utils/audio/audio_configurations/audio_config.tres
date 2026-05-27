@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AudioConfiguration" format=3 uid="uid://bidphncidosa6"]
+
+[ext_resource type="Script" uid="uid://dojbh2mbjt6sh" path="res://components/utils/audio/loop_configuration.gd" id="1_0736c"]
+[ext_resource type="Script" uid="uid://duuxorfspwlxi" path="res://components/utils/audio/sfx_configuration.gd" id="1_imlmo"]
+[ext_resource type="Script" uid="uid://cqxrtlyvs0npt" path="res://components/utils/audio/audio_configuration.gd" id="1_lqs57"]
+[ext_resource type="Resource" uid="uid://ee5ptpjncsx1" path="res://components/utils/audio/audio_configurations/loop_config/ex_loop_1.tres" id="2_fscca"]
+[ext_resource type="Resource" uid="uid://cjr54ccgssbu2" path="res://components/utils/audio/audio_configurations/sfx_config/click.tres" id="3_lhat2"]
+[ext_resource type="Script" uid="uid://bgl0a3vgvcmsb" path="res://components/utils/audio/music_configuration.gd" id="3_qemoy"]
+[ext_resource type="Resource" uid="uid://kjsquroabufd" path="res://components/utils/audio/audio_configurations/sfx_config/puzzle.tres" id="4_f624f"]
+[ext_resource type="Resource" uid="uid://7t840w17utdw" path="res://components/utils/audio/audio_configurations/music_config/example_music_1.tres" id="4_gmc33"]
+
+[resource]
+script = ExtResource("1_lqs57")
+sfx_configuration = Array[ExtResource("1_imlmo")]([ExtResource("3_lhat2"), ExtResource("4_f624f")])
+loop_configuration = Array[ExtResource("1_0736c")]([ExtResource("2_fscca")])
+music_configuration = Array[ExtResource("3_qemoy")]([ExtResource("4_gmc33")])
+metadata/_custom_type_script = "uid://cqxrtlyvs0npt"
