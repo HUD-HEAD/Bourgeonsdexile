@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="sfx_config" format=3 uid="uid://kjsquroabufd"]
+
+[ext_resource type="Script" uid="uid://duuxorfspwlxi" path="res://components/utils/audio/sfx_configuration.gd" id="1_48nfk"]
+
+[resource]
+script = ExtResource("1_48nfk")
+type = 1
+metadata/_custom_type_script = "uid://duuxorfspwlxi"
