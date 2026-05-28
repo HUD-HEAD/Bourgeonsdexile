@@ -28,7 +28,7 @@ var loop_pool: Array[loop_pool_item]
 # ── Variables ────────────────────────────────────────
 var last_music_player: int = -1
 
-const LOOP_POOL_SIZE = 3
+const LOOP_POOL_SIZE = 6
 
 # ── Structure ────────────────────────────────────────
 class loop_pool_item:
@@ -206,6 +206,12 @@ func stop_music():
 #endregion
 
 #region Utils
+func reset_audio():
+	_stop_loops()
+	fade_out(music_1_player)
+	fade_out(music_2_player)
+	_stop_sfx()
+
 func _get_sfx(key: AudioConfiguration.sfx_type) -> sfx_config:
 	if sfx_dictionary[key]:
 		return sfx_dictionary[key]
@@ -247,6 +253,16 @@ func _free_loop(key: AudioConfiguration.loop_type):
 				item.player_reference.stop()
 			fade_out(item.player_reference, 0, lambda)
 			break
+
+func _stop_loops():
+	for item in loop_pool:
+		item.is_playing = false
+		item.player_reference.stop()
+
+func _stop_sfx():
+	polyphonic_player.stop()
+	polyphonic_player.start()
+
 #endregion
 
 #region Fade in/out, crossfade

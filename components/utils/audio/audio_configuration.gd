@@ -25,6 +25,11 @@ enum sfx_type{
 enum loop_type{
 	c2_1_wind_loop_0_to_16 = 2100,
 	c2_1_Thense_moment_panel_14 = 2101,
+	c2_1_gun_shots_loop_15_to_19 = 2102,
+	c2_1_steps_15_to_19 = 2103,
+	c2_1_voices_loop_15_to_19 = 2104,
+	c2_1_motocycle_running_sound_loop_20_and_23 = 2105,
+	c2_1_motocycle_not_running = 2106,
 }
 
 enum music_type{
