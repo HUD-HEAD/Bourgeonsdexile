@@ -161,10 +161,12 @@ func play_loop(key: AudioConfiguration.loop_type):
 	var loop: AudioStreamPlayer = _get_free_loop(key)
 	var loop_info: loop_config = _get_loop(key)
 	
-	loop.volume_linear = loop_info.volume
-	loop.pitch_scale = loop_info.pitch
-	loop.stream = loop_info.stream
-	(loop.stream as AudioStreamWAV).loop_mode = AudioStreamWAV.LOOP_FORWARD
+	if loop != null:
+		loop.volume_linear = loop_info.volume
+		loop.pitch_scale = loop_info.pitch
+		loop.stream = loop_info.stream
+	
+		loop.play()
 	
 func stop_loop(key: AudioConfiguration.loop_type):
 	_free_loop(key)
@@ -190,10 +192,7 @@ func play_music(key: AudioConfiguration.music_type):
 	current_music_player.stream = music_info.stream
 	#(current_music_player.stream as AudioStreamWAV).loop_mode = AudioStreamWAV.LOOP_FORWARD
 	
-	current_music_player.volume_linear = 1
-	current_music_player.play()
-	
-	#fade_in(current_music_player, 0, music_info.volume)
+	fade_in(current_music_player, 0, music_info.volume)
 	if has_to_fade_out:
 		if last_music_player == 0:
 			fade_out(music_1_player)
@@ -230,7 +229,9 @@ func _get_music(key: AudioConfiguration.music_type) -> music_config :
 
 func _get_free_loop(key: AudioConfiguration.loop_type) -> AudioStreamPlayer:
 	for item in loop_pool:
-		if !item.is_playing:
+		if item.loop_type == key && item.is_playing:
+			return null
+		elif !item.is_playing:
 			item.loop_type = key
 			item.is_playing = true
 			return item.player_reference

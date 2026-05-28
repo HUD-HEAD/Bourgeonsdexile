@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://dixccnltqcohj" path="res://components/chapter2/comic_panels/comic_1/panel_video_transition.tscn" id="2_erqdw"]
 [ext_resource type="PackedScene" uid="uid://nrfkhc1421if" path="res://components/chapter2/comic_panels/comic_1/panel_2.tscn" id="2_k5ynj"]
 [ext_resource type="Script" uid="uid://bvmwxu2au5j5l" path="res://components/utils/audio/audio integration nodes/audio_sfx_zone.gd" id="3_4a5vy"]
-[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="4_a6kkx"]
 [ext_resource type="PackedScene" uid="uid://dlh2oirpix5d8" path="res://components/chapter2/comic_panels/comic_1/panel_open_window.tscn" id="4_erqdw"]
 [ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="5_xuvnd"]
 [ext_resource type="PackedScene" uid="uid://c0wro4keqrw1k" path="res://components/chapter2/comic_panels/comic_1/panel_4.tscn" id="9_erqdw"]
@@ -58,19 +57,6 @@ script = ExtResource("3_4a5vy")
 sfx = 2101
 metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
 
-[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="Panels/PanelVideo" unique_id=1170280034]
-position = Vector2(1000, 500)
-rect = Rect2(-12, -10, 22, 20)
-script = ExtResource("4_a6kkx")
-music_name = 2100
-metadata/_custom_type_script = "uid://2aadlm17sdsf"
-
-[node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="Panels/PanelVideo" unique_id=1009131654]
-rect = Rect2(-932, -525, 37466, 1040)
-script = ExtResource("5_xuvnd")
-loop_name = 2100
-metadata/_custom_type_script = "uid://brda7473wfj1v"
-
 [node name="Panel0" parent="Panels" unique_id=299868253 instance=ExtResource("2_k5ynj")]
 position = Vector2(3383, 538)
 
@@ -119,6 +105,12 @@ position = Vector2(28676, 550)
 
 [node name="Panel10" parent="Panels" unique_id=1665425851 instance=ExtResource("18_040dt")]
 position = Vector2(31386, 532)
+
+[node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="Panels/Panel10" unique_id=844938736]
+rect = Rect2(-427, -435, 948, 893)
+script = ExtResource("5_xuvnd")
+loop_name = 2101
+metadata/_custom_type_script = "uid://brda7473wfj1v"
 
 [node name="PanelScrolling" parent="Panels" unique_id=1391206584 instance=ExtResource("17_4a5vy")]
 position = Vector2(33959, 540)
