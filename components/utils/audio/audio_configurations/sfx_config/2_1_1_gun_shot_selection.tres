@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="sfx_config" format=3 uid="uid://dj7h7yqbieyt7"]
+
+[ext_resource type="Script" uid="uid://duuxorfspwlxi" path="res://components/utils/audio/sfx_configuration.gd" id="1_0vfhq"]
+[ext_resource type="AudioStream" uid="uid://c0iouf7ypc5bb" path="res://audio/chapter2/ambient/comic 1/panel_1.1_gun_shot_selection_image.wav" id="2_5ua14"]
+
+[resource]
+script = ExtResource("1_0vfhq")
+type = 2101
+stream = Array[AudioStream]([ExtResource("2_5ua14")])
+metadata/_custom_type_script = "uid://duuxorfspwlxi"

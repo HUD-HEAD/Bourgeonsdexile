@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="sfx_config" format=3 uid="uid://dkcof646kaunb"]
+
+[ext_resource type="Script" uid="uid://duuxorfspwlxi" path="res://components/utils/audio/sfx_configuration.gd" id="1_6uces"]
+[ext_resource type="AudioStream" uid="uid://44u8xgk5mvid" path="res://audio/chapter2/ambient/comic 1/panel_1.13_sad_moment.wav" id="2_ynjc8"]
+
+[resource]
+script = ExtResource("1_6uces")
+type = 2111
+stream = Array[AudioStream]([ExtResource("2_ynjc8")])
+min_volume = 1.05
+max_volume = 1.05
+metadata/_custom_type_script = "uid://duuxorfspwlxi"

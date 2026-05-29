@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="6_wdjjo"]
 [ext_resource type="Script" uid="uid://di17bexlx7tdc" path="res://components/utils/mechanics/place_on_top_on_click.gd" id="7_ppft7"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="8_jmwom"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="9_c720a"]
 
 [node name="Panel1" type="Node2D" unique_id=299868253]
 
@@ -76,3 +77,9 @@ nodes_affected = [NodePath("../Draggable"), NodePath("../Draggable2"), NodePath(
 script = ExtResource("8_jmwom")
 clickables = [NodePath("../Draggable"), NodePath("../Draggable2"), NodePath("../Draggable3"), NodePath("../Draggable4"), NodePath("../Draggable5")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="TriggerSfxOnClick" type="Node" parent="." unique_id=298527711 node_paths=PackedStringArray("clickables")]
+script = ExtResource("9_c720a")
+clickables = [NodePath("../Draggable"), NodePath("../Draggable2"), NodePath("../Draggable3"), NodePath("../Draggable4"), NodePath("../Draggable5")]
+sfx = 2104
+metadata/_custom_type_script = "uid://b7avucygxykbp"

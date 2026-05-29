@@ -13,6 +13,10 @@ signal puzzle_complete
 @export var complete_image : Sprite2D
 @export var outline_image : Sprite2D
 
+@export_group("Sound")
+@export var correct_piece_sfx: AudioConfiguration.sfx_type = AudioConfiguration.sfx_type.puzzle_correct_piece
+@export var play_resolve_puzzle: bool = true 
+
 func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
@@ -27,10 +31,8 @@ func _ready() -> void:
 
 ## Every time a puzzle piece is correctly placed, check if puzzle is completed
 func _on_correct_piece():
-	#TODO cleanup
-	var player = %CorrectPiecePlayer
-	if is_instance_valid(player):
-		player.play()
+	AudioManager.play_sfx(correct_piece_sfx)
+	
 	if _check_complete():
 		_complete_puzzle()
 
@@ -50,10 +52,8 @@ func _complete_puzzle():
 	SignalManager.show_next_button.emit()
 	puzzle_complete.emit()
 	
-	#TODO cleanup
-	var player = %ResolvePlayer
-	if is_instance_valid(player):
-		player.play()
+	if play_resolve_puzzle:
+		AudioManager.play_sfx(AudioConfiguration.sfx_type.resolve_puzzle)
 
 
 ## Check if all puzzle pieces in puzzle are in the correct place

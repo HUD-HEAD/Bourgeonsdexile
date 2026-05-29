@@ -69,6 +69,8 @@ texture = ExtResource("4_epowo")
 [node name="DragDropPuzzle" type="Node2D" parent="." unique_id=766332861 node_paths=PackedStringArray("puzzle_pieces")]
 script = ExtResource("5_d3eci")
 puzzle_pieces = [NodePath("PuzzlePiece"), NodePath("PuzzlePiece2")]
+correct_piece_sfx = 2112
+play_resolve_puzzle = null
 metadata/_custom_type_script = "uid://chrql2wwvrdt1"
 
 [node name="PuzzlePiece" type="Node2D" parent="DragDropPuzzle" unique_id=973283075 node_paths=PackedStringArray("draggable", "placement_checker")]

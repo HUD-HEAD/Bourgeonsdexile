@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="music_config" format=3 uid="uid://dy6c0ys045bnl"]
+
+[ext_resource type="Script" uid="uid://bgl0a3vgvcmsb" path="res://components/utils/audio/music_configuration.gd" id="1_cwo5p"]
+[ext_resource type="AudioStream" uid="uid://cc7uophx73421" path="res://audio/chapter2/soundtrack/level_1_part2_motocycle_panel_20_to_24.wav" id="2_cwo5p"]
+
+[resource]
+script = ExtResource("1_cwo5p")
+type = 2103
+stream = ExtResource("2_cwo5p")
+metadata/_custom_type_script = "uid://bgl0a3vgvcmsb"

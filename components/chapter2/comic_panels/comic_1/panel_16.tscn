@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b3vbo3oscdx2k" path="res://graphics/chapter2/comics/comic1/frame_kidaunt/kidd.png" id="3_jolri"]
 [ext_resource type="Texture2D" uid="uid://1ome7mdt1xgc" path="res://graphics/chapter2/comics/comic1/frame_kidaunt/aunt.png" id="3_jriiw"]
 [ext_resource type="Script" uid="uid://001fo68fi8nn" path="res://components/utils/puzzles/draggable_restricted.gd" id="4_cfl0v"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="6_jriiw"]
 [ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/mechanics/area_entered_enable.gd" id="6_lt1s4"]
 [ext_resource type="Texture2D" uid="uid://c4pohbk7aco5d" path="res://graphics/chapter2/comics/comic1/frame_kidaunt/holdinghands.png" id="7_4at4c"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="8_5hhhw"]
@@ -41,6 +42,13 @@ texture = ExtResource("3_jolri")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DraggableRestricted" unique_id=1792164201]
 shape = SubResource("CapsuleShape2D_gl7vn")
+
+[node name="TriggerSfxOnClick" type="Node" parent="DraggableRestricted" unique_id=1979035788 node_paths=PackedStringArray("clickables")]
+script = ExtResource("6_jriiw")
+clickables = [NodePath("..")]
+sfx = 2110
+play_sfx_once = true
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1789605204 node_paths=PackedStringArray("node_to_enable")]
 position = Vector2(-482, 0)

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="sfx_config" format=3 uid="uid://ddua4ihgwn5k3"]
+
+[ext_resource type="Script" uid="uid://duuxorfspwlxi" path="res://components/utils/audio/sfx_configuration.gd" id="1_jtr57"]
+[ext_resource type="AudioStream" uid="uid://br7pm0ir4cykf" path="res://audio/chapter2/ambient/comic 1/panel_1.2_clean_cristal_sound_selection_image.wav" id="2_a53xs"]
+
+[resource]
+script = ExtResource("1_jtr57")
+type = 2102
+stream = Array[AudioStream]([ExtResource("2_a53xs")])
+metadata/_custom_type_script = "uid://duuxorfspwlxi"

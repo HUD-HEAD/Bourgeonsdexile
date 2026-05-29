@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="music_config" format=3 uid="uid://7t840w17utdw"]
-
-[ext_resource type="Script" uid="uid://bgl0a3vgvcmsb" path="res://components/utils/audio/music_configuration.gd" id="1_byjwd"]
-[ext_resource type="AudioStream" uid="uid://xaejsq8r5g4g" path="res://audio/chapter1/soundtrack/jungle_theme_1.wav" id="2_3xna3"]
-
-[resource]
-script = ExtResource("1_byjwd")
-stream = ExtResource("2_3xna3")
-metadata/_custom_type_script = "uid://bgl0a3vgvcmsb"
