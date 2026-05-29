@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c72wdkrer4pyq" path="res://graphics/chapter1/comics/comic3/frame3/long bckground.png" id="3_rofvx"]
 [ext_resource type="SpriteFrames" uid="uid://bmcc5l21n4h6s" path="res://components/chapter1/main_characters/companion_1_sprite_frames.tres" id="4_rofvx"]
 [ext_resource type="SpriteFrames" uid="uid://dqrsyjauj12el" path="res://components/chapter1/main_characters/companion_2_sprite_frames.tres" id="5_7itc7"]
+[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="6_jfo1i"]
 [ext_resource type="PackedScene" uid="uid://bomhqj3lxkka3" path="res://components/utils/comics/scrolling_background.tscn" id="8_7itc7"]
 
 [node name="Node2D" type="Node2D" unique_id=1013697846]
@@ -40,6 +41,12 @@ script = null
 sprite_frames = ExtResource("5_7itc7")
 autoplay = "walking"
 frame_progress = 0.0
+
+[node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="ScrollingBackground" unique_id=1587009466]
+rect = Rect2(-631, -232, 851, 494)
+script = ExtResource("6_jfo1i")
+loop_name = 1300
+metadata/_custom_type_script = "uid://brda7473wfj1v"
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1809564085]
 rect = Rect2(-760, -462, 1645, 898)

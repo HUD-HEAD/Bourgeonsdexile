@@ -3,7 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://vjebgpcuufta" path="res://graphics/chapter1/comics/comic3/frame11/FRAME11.png" id="1_1ivkq"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="3_bs6q8"]
 [ext_resource type="Texture2D" uid="uid://ce2jeafy8bs6f" path="res://graphics/chapter1/comics/comic3/frame13/frame13_bubble.png" id="3_rqo8u"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="3_w7uun"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_juyfp"]
+[ext_resource type="AudioStream" uid="uid://cfqx7imwxcfse" path="res://audio/chapter1/ambient/panel_section_3/panel_3.12__voice_woman.wav" id="4_navo1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rqo8u"]
 radius = 239.0
@@ -22,6 +24,14 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=270732829]
 shape = SubResource("CapsuleShape2D_rqo8u")
+
+[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=1587094197 node_paths=PackedStringArray("clickables")]
+script = ExtResource("3_w7uun")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("4_navo1")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="Frame13Bubble" type="Sprite2D" parent="." unique_id=978276681]
 position = Vector2(104, -227)
