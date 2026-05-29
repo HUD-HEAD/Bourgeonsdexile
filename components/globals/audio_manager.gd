@@ -27,13 +27,14 @@ var music_dictionary: Dictionary[AudioConfiguration.music_type, music_config] = 
 var loop_pool: Array[loop_pool_item]
 # ── Variables ────────────────────────────────────────
 var last_music_player: int = -1
+var last_walking_loop: AudioConfiguration.loop_type = AudioConfiguration.loop_type.none
 
 const LOOP_POOL_SIZE = 6
 
 # ── Structure ────────────────────────────────────────
 class loop_pool_item:
 	var is_playing: bool
-	var loop_type: AudioConfiguration.loop_type
+	var loop_type: AudioConfiguration.loop_type = AudioConfiguration.loop_type.none
 	var player_reference: AudioStreamPlayer
 	
 	func _init (player: AudioStreamPlayer):
@@ -154,8 +155,11 @@ func play_sfx(key: AudioConfiguration.sfx_type):
 	
 	polyphonic_player.play_stream(stream, 0, linear_to_db(volume), pitch, 0 as AudioServer.PlaybackType, "Sfx")
 
-func play_audio_stream(stream: AudioStream):
-	polyphonic_player.play_stream(stream, 0, 0, 1, 0 as AudioServer.PlaybackType, "Sfx")
+func play_audio_stream(stream: AudioStream, volume: float = 1, min_pitch: float = 1, max_pitch: float = 1):
+	var pitch: float = min_pitch
+	if min_pitch != max_pitch:
+		pitch = randf_range(min_pitch, max_pitch)
+	polyphonic_player.play_stream(stream, 0, linear_to_db(volume), pitch, 0 as AudioServer.PlaybackType, "Sfx")
 
 func play_loop(key: AudioConfiguration.loop_type):
 	var loop: AudioStreamPlayer = _get_free_loop(key)
@@ -168,8 +172,8 @@ func play_loop(key: AudioConfiguration.loop_type):
 	
 		loop.play()
 	
-func stop_loop(key: AudioConfiguration.loop_type):
-	_free_loop(key)
+func stop_loop(key: AudioConfiguration.loop_type, fade_in_enable: bool = true ):
+	_free_loop(key, fade_in_enable)
 
 func play_music(key: AudioConfiguration.music_type):
 	# Reminder: Set Loop_Mode to true
@@ -203,9 +207,23 @@ func stop_music():
 	fade_out(music_1_player)
 	fade_out(music_2_player)
 
+func play_walking_loop():
+	if last_walking_loop != -1:
+		play_loop(last_walking_loop)
+
+func stop_walking_loop():
+	stop_loop(last_walking_loop, false)
+
+
+
 #endregion
 
 #region Utils
+func update_last_walking_loop(key: AudioConfiguration.loop_type):
+	stop_walking_loop()
+	last_walking_loop = key
+	play_walking_loop()
+
 func reset_audio():
 	_stop_loops()
 	fade_out(music_1_player)
@@ -245,13 +263,17 @@ func _get_free_loop(key: AudioConfiguration.loop_type) -> AudioStreamPlayer:
 	assert("No free loops available in the pool.")
 	return null
 
-func _free_loop(key: AudioConfiguration.loop_type):
+func _free_loop(key: AudioConfiguration.loop_type, fade_in_enable: bool = true):
 	for item in loop_pool:
 		if item.is_playing && item.loop_type == key:
-			var lambda = func():
+			if fade_in_enable:
+				var lambda = func():
+					item.is_playing = false
+					item.player_reference.stop()
+				fade_out(item.player_reference, 0, lambda)
+			else:
 				item.is_playing = false
 				item.player_reference.stop()
-			fade_out(item.player_reference, 0, lambda)
 			break
 
 func _stop_loops():

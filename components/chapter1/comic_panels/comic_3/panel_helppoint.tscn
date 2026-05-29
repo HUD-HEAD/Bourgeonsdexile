@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="5_k7nq2"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="5_v5k8l"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="6_k7nq2"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="6_ox5a1"]
+[ext_resource type="AudioStream" uid="uid://do6edipsb12ia" path="res://audio/chapter1/ambient/panel_section_3/panel_3.11_selection_item.wav" id="7_iotud"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v5k8l"]
 size = Vector2(440, 304)
@@ -42,6 +44,14 @@ shape = SubResource("RectangleShape2D_v5k8l")
 sprite_frames = SubResource("SpriteFrames_j1n0v")
 script = ExtResource("5_v5k8l")
 clickable = NodePath("..")
+
+[node name="TriggerSfxOnClick" type="Node" parent="Ayuda/Clickable" unique_id=21422975 node_paths=PackedStringArray("clickables")]
+script = ExtResource("6_ox5a1")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("7_iotud")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="TransitionerCounter" type="Node" parent="." unique_id=895306961 node_paths=PackedStringArray("clickables")]
 script = ExtResource("6_k7nq2")

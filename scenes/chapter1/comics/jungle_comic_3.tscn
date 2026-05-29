@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://b6wnjm88x58xc" path="res://components/chapter1/comic_panels/comic_3/panel_worker.tscn" id="17_w6r1n"]
 [ext_resource type="PackedScene" uid="uid://fiip66fsada" path="res://components/chapter1/comic_panels/comic_3/panel_angry.tscn" id="18_w6r1n"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="21_nn42y"]
+[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="22_o3x7c"]
 [ext_resource type="PackedScene" uid="uid://cw1ikj5js4q4r" path="res://components/chapter1/comic_panels/comic_3/panel_ultrasound.tscn" id="22_w6r1n"]
 
 [node name="JungleComic3" type="Node2D" unique_id=1627757836]
@@ -108,3 +109,10 @@ next_scene = "uid://d2f3ss3fi8c52"
 [node name="CheckpointController" type="Node" parent="." unique_id=34233577]
 script = ExtResource("21_nn42y")
 comic = 2
+
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="." unique_id=1845705097]
+position = Vector2(877, 643)
+rect = Rect2(-10, -10, 181, 146)
+script = ExtResource("22_o3x7c")
+music_name = 1300
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
