@@ -83,3 +83,5 @@ script = ExtResource("9_c720a")
 clickables = [NodePath("../Draggable"), NodePath("../Draggable2"), NodePath("../Draggable3"), NodePath("../Draggable4"), NodePath("../Draggable5")]
 sfx = 2104
 metadata/_custom_type_script = "uid://b7avucygxykbp"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1833573269]
