@@ -30,3 +30,6 @@ func disable():
 	process_mode = Node.PROCESS_MODE_DISABLED
 	node_to_enable.process_mode = Node.PROCESS_MODE_INHERIT
 	
+## Progress in %
+func compute_progress() -> float :
+	return (circle.radius-min_radius)/(max_radius-min_radius)

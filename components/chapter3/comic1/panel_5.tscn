@@ -1,14 +1,29 @@
 [gd_scene format=3 uid="uid://6jw5lh0cjet8"]
 
 [ext_resource type="Texture2D" uid="uid://c7yow1mbw5uwc" path="res://graphics/chapter3/comics/comic1/frameplacenta/placenta.png" id="1_vnlgp"]
+[ext_resource type="Material" uid="uid://d1kfs2bsr3b58" path="res://components/chapter3/comic1/frameplacenta/mat_blur.tres" id="2_2ahkj"]
 [ext_resource type="PackedScene" uid="uid://c7of5l5s248sl" path="res://components/chapter2/contractions/contraction_circle/contraction_circle.tscn" id="2_la8ku"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="3_0v6bs"]
+[ext_resource type="Script" uid="uid://cdxymm0wa0dha" path="res://components/chapter3/comic1/contraction_unblur.gd" id="5_2ahkj"]
+
+[sub_resource type="Gradient" id="Gradient_ok1vr"]
+offsets = PackedFloat32Array(0, 0.1, 0.5, 0.9, 1)
+colors = PackedColorArray(1, 1, 1, 0, 0.06498194, 0.06498194, 0.06498194, 0.93501806, 0, 0, 0, 1, 0, 0, 0, 0.98039216, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_b1ewe"]
+gradient = SubResource("Gradient_ok1vr")
+width = 2420
+height = 1080
 
 [node name="PanelDoctors" type="Node2D" unique_id=162787811]
 
 [node name="Placenta" type="Sprite2D" parent="." unique_id=985526577]
 position = Vector2(5, -5)
 texture = ExtResource("1_vnlgp")
+
+[node name="Blur" type="Sprite2D" parent="." unique_id=963525626]
+material = ExtResource("2_2ahkj")
+texture = SubResource("GradientTexture2D_b1ewe")
 
 [node name="ContractionCircle" parent="." unique_id=1677856602 node_paths=PackedStringArray("node_to_enable") instance=ExtResource("2_la8ku")]
 node_to_enable = NodePath("../TransitionerPassive")
@@ -17,3 +32,8 @@ node_to_enable = NodePath("../TransitionerPassive")
 script = ExtResource("3_0v6bs")
 timer_wait = 1.0
 metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="ContractionUnblur" type="Node" parent="." unique_id=619687200 node_paths=PackedStringArray("contraction_circle")]
+script = ExtResource("5_2ahkj")
+shader_mat = ExtResource("2_2ahkj")
+contraction_circle = NodePath("../ContractionCircle")
