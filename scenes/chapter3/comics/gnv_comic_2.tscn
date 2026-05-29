@@ -1,19 +1,12 @@
 [gd_scene format=3 uid="uid://by2x0js73j5ew"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_867kd"]
-[ext_resource type="Script" uid="uid://n4vlynaxxck4" path="res://components/utils/audio/audio_zone_fade.gd" id="11_kuuke"]
 [ext_resource type="PackedScene" uid="uid://c3taxlnlcerfn" path="res://components/chapter3/comic2/C3_2_panel1.tscn" id="12_f4prm"]
 [ext_resource type="PackedScene" uid="uid://dcqf4qiy61c0h" path="res://components/chapter3/comic2/C3_2_panel2.tscn" id="13_pi4cn"]
 [ext_resource type="PackedScene" uid="uid://b4lixqemjmn7a" path="res://components/chapter3/comic2/C3_2_panel3.tscn" id="14_me2wc"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="20_8wlj1"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="21_t5b7w"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="22_u4ovr"]
-[ext_resource type="AudioStream" uid="uid://curu5rxi6emup" path="res://audio/chapter1/soundtrack/STARTING_THEME.wav" id="23_vrrkw"]
-[ext_resource type="AudioStream" uid="uid://d1jjetsntvge2" path="res://audio/chapter1/soundtrack/MIGRATION-THEME.wav" id="24_53pjb"]
-[ext_resource type="AudioStream" uid="uid://dt8b3qx12b5jb" path="res://audio/chapter1/ambient/PANEL_9_10_CRICKETS_NIGHT.wav" id="25_b6i8q"]
-[ext_resource type="AudioStream" uid="uid://bsrfqlei4ae4h" path="res://audio/chapter1/ambient/panel_12_13_bus_sound_loop.wav" id="26_su63p"]
-[ext_resource type="AudioStream" uid="uid://cono3427ytinl" path="res://audio/chapter1/ambient/panel_15_16_ocean.wav" id="27_6f7wt"]
-[ext_resource type="AudioStream" uid="uid://dhjvrpl3ib3r" path="res://audio/chapter1/ambient/panel_17_23_market_colombia_loop.wav" id="28_m5jno"]
 
 [node name="JungleComic1" type="Node2D" unique_id=150562309]
 
@@ -40,57 +33,25 @@ position_smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="Panels" type="Node2D" parent="." unique_id=606931740]
+position = Vector2(0, 540)
 
-[node name="MarketAudioZone" type="VisibleOnScreenNotifier2D" parent="Panels" unique_id=1076157198 node_paths=PackedStringArray("player")]
-position = Vector2(32006, 545)
-rect = Rect2(189, -521, 2094, 1017)
-script = ExtResource("11_kuuke")
-player = NodePath("../../Audio/Market")
-metadata/_custom_type_script = "uid://n4vlynaxxck4"
+[node name="C32Panel1" parent="Panels" unique_id=942978313 instance=ExtResource("12_f4prm")]
+position = Vector2(3020, 0)
+
+[node name="C32Panel2" parent="Panels" unique_id=1498799956 instance=ExtResource("13_pi4cn")]
+position = Vector2(5350, 0)
+
+[node name="C32Panel3" parent="Panels" unique_id=1513906772 instance=ExtResource("14_me2wc")]
+position = Vector2(7682, 0)
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=849983846]
 position = Vector2(34433, 596)
 script = ExtResource("20_8wlj1")
 next_scene = "uid://s3spdg0qqc77"
 
-[node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
+[node name="PanelPanner" type="Node" parent="." unique_id=1650562923]
 script = ExtResource("21_t5b7w")
-panels = [NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath(""), NodePath("../SceneEnder")]
 
 [node name="UI" parent="." unique_id=1829896958 instance=ExtResource("22_u4ovr")]
 
 [node name="Audio" type="Node" parent="." unique_id=619569792]
-
-[node name="ThemeStart" type="AudioStreamPlayer" parent="Audio" unique_id=314277606]
-stream = ExtResource("23_vrrkw")
-autoplay = true
-bus = &"Music"
-
-[node name="ThemeMigration" type="AudioStreamPlayer" parent="Audio" unique_id=642829476]
-stream = ExtResource("24_53pjb")
-bus = &"Music"
-
-[node name="Crickets" type="AudioStreamPlayer" parent="Audio" unique_id=1840641282]
-stream = ExtResource("25_b6i8q")
-bus = &"Sfx"
-
-[node name="Bus" type="AudioStreamPlayer" parent="Audio" unique_id=1247008594]
-stream = ExtResource("26_su63p")
-bus = &"Sfx"
-
-[node name="Ocean" type="AudioStreamPlayer" parent="Audio" unique_id=1211798786]
-stream = ExtResource("27_6f7wt")
-bus = &"Sfx"
-
-[node name="Market" type="AudioStreamPlayer" parent="Audio" unique_id=987654775]
-stream = ExtResource("28_m5jno")
-bus = &"Sfx"
-
-[node name="C32Panel1" parent="." unique_id=942978313 instance=ExtResource("12_f4prm")]
-position = Vector2(3020, 534)
-
-[node name="C32Panel2" parent="." unique_id=1498799956 instance=ExtResource("13_pi4cn")]
-position = Vector2(5350, 556)
-
-[node name="C32Panel3" parent="." unique_id=1513906772 instance=ExtResource("14_me2wc")]
-position = Vector2(7682, 538)
