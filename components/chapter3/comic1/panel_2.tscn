@@ -1,9 +1,43 @@
 [gd_scene format=3 uid="uid://bg1urpmqlcklp"]
 
 [ext_resource type="Texture2D" uid="uid://ddvu0j6gecsuf" path="res://graphics/chapter3/comics/comic1/framecloseup/1.png" id="1_jvd3j"]
+[ext_resource type="Texture2D" uid="uid://dkhjq0b7w8xa3" path="res://graphics/chapter3/comics/comic1/framecloseup/2.png" id="2_kp33m"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="3_8yya7"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="4_a5n4l"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_0gufp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2it3g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jvd3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_kp33m")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_brvls"]
+radius = 455.42508
 
 [node name="PanelDoctors" type="Node2D" unique_id=162787811]
 
-[node name="1" type="Sprite2D" parent="." unique_id=980193114]
-position = Vector2(-1, -1)
-texture = ExtResource("1_jvd3j")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1416196051 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_2it3g")
+script = ExtResource("3_8yya7")
+clickable = NodePath("../Clickable")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=129949598]
+script = ExtResource("4_a5n4l")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=70040777]
+shape = SubResource("CircleShape2D_brvls")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=1341546010 node_paths=PackedStringArray("clickables")]
+script = ExtResource("5_0gufp")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"

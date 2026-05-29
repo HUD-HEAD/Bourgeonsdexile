@@ -1,9 +1,19 @@
 [gd_scene format=3 uid="uid://6jw5lh0cjet8"]
 
 [ext_resource type="Texture2D" uid="uid://c7yow1mbw5uwc" path="res://graphics/chapter3/comics/comic1/frameplacenta/placenta.png" id="1_vnlgp"]
+[ext_resource type="PackedScene" uid="uid://c7of5l5s248sl" path="res://components/chapter2/contractions/contraction_circle/contraction_circle.tscn" id="2_la8ku"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="3_0v6bs"]
 
 [node name="PanelDoctors" type="Node2D" unique_id=162787811]
 
 [node name="Placenta" type="Sprite2D" parent="." unique_id=985526577]
 position = Vector2(5, -5)
 texture = ExtResource("1_vnlgp")
+
+[node name="ContractionCircle" parent="." unique_id=1677856602 node_paths=PackedStringArray("node_to_enable") instance=ExtResource("2_la8ku")]
+node_to_enable = NodePath("../TransitionerPassive")
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=100635095]
+script = ExtResource("3_0v6bs")
+timer_wait = 1.0
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
