@@ -138,12 +138,6 @@ shape = SubResource("RectangleShape2D_5wuk6")
 [node name="CompletePuzzle" parent="DragDropPuzzle" index="2" unique_id=1933061263]
 texture = ExtResource("8_dkuml")
 
-[node name="ResolvePlayer" parent="DragDropPuzzle" index="3" unique_id=186287413]
-stream = null
-
-[node name="CorrectPiecePlayer" parent="DragDropPuzzle" index="4" unique_id=448903763]
-stream = null
-
 [editable path="DragDropPuzzle"]
 [editable path="DragDropPuzzle/BuildingBlocks/PuzzlePiece"]
 [editable path="DragDropPuzzle/BuildingBlocks/PuzzlePiece2"]

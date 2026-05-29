@@ -554,7 +554,6 @@ shape = SubResource("CapsuleShape2D_6b20s")
 [node name="Companion" parent="CharWalking" unique_id=426633640 node_paths=PackedStringArray("model") instance=ExtResource("6_bing5")]
 position = Vector2(571, 839)
 model = NodePath("../Amani")
-offset_from_model = 0.0
 
 [node name="AnimSprite" parent="CharWalking/Companion" index="0" unique_id=689873547]
 sprite_frames = ExtResource("7_mp6eu")
