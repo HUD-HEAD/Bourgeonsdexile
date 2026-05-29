@@ -16,6 +16,7 @@ signal puzzle_complete
 @export_group("Sound")
 @export var correct_piece_sfx: AudioConfiguration.sfx_type = AudioConfiguration.sfx_type.puzzle_correct_piece
 @export var play_resolve_puzzle: bool = true 
+@export var resolve_puzzle_sfx: AudioConfiguration.sfx_type = AudioConfiguration.sfx_type.resolve_puzzle
 
 func _ready() -> void:
 	if Engine.is_editor_hint():
@@ -53,7 +54,7 @@ func _complete_puzzle():
 	puzzle_complete.emit()
 	
 	if play_resolve_puzzle:
-		AudioManager.play_sfx(AudioConfiguration.sfx_type.resolve_puzzle)
+		AudioManager.play_sfx(resolve_puzzle_sfx)
 
 
 ## Check if all puzzle pieces in puzzle are in the correct place

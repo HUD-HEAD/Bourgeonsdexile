@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cpicmlu85xmie" path="res://graphics/chapter1/comics/comic3/frame13/frame13_background.png" id="1_oqgrn"]
 [ext_resource type="Texture2D" uid="uid://ce2jeafy8bs6f" path="res://graphics/chapter1/comics/comic3/frame13/frame13_bubble.png" id="3_iy8q5"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="3_qmq6x"]
+[ext_resource type="AudioStream" uid="uid://bdpdf67mkqr5u" path="res://audio/chapter1/ambient/panel_section_3/panel_3.14_mm_woman.wav" id="4_fbv2f"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_nupu0"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="4_ppkfs"]
 
@@ -22,6 +24,14 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Comic3Panel13/Clickable" unique_id=1207076615]
 shape = SubResource("CapsuleShape2D_nupu0")
+
+[node name="TriggerSfxOnClick" type="Node" parent="Comic3Panel13/Clickable" unique_id=1891632500 node_paths=PackedStringArray("clickables")]
+script = ExtResource("3_qmq6x")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("4_fbv2f")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="Frame13Bubble" type="Sprite2D" parent="." unique_id=1105608301]
 position = Vector2(-259, -246)
