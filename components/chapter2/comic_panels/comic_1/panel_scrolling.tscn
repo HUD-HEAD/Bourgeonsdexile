@@ -78,7 +78,6 @@ position = Vector2(1278, -96)
 rect = Rect2(-10, -10, 262, 254)
 script = ExtResource("8_rbhmf")
 loop_name = 2100
-stop_loop = true
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="." unique_id=1764894012]

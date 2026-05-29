@@ -142,7 +142,6 @@ position = Vector2(1, 5)
 [node name="QueuePerson" parent="QueuingPeople" unique_id=606944070 node_paths=PackedStringArray("model") instance=ExtResource("18_ih44s")]
 position = Vector2(689, 844)
 model = NodePath("../../Spawn/Nina")
-offset_from_model = 0.0
 
 [node name="QueuePerson2" type="Node2D" parent="QueuingPeople" unique_id=700974070 node_paths=PackedStringArray("model", "anim_sprite")]
 position = Vector2(821, 844)
