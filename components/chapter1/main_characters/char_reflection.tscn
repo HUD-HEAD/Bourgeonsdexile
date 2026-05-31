@@ -19,6 +19,7 @@ material = SubResource("CanvasItemMaterial_8pokd")
 [node name="JungleWomanReflection" parent="ReflectionContainer" unique_id=700974070 node_paths=PackedStringArray("path_follow") instance=ExtResource("1_ypw13")]
 position = Vector2(0, 200)
 script = ExtResource("2_2q0qh")
+offset_from_model = 0.0
 path_follow = NodePath("../..")
 
 [node name="AnimSprite" parent="ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]

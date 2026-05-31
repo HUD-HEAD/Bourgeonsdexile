@@ -4,6 +4,8 @@
 [ext_resource type="VideoStream" uid="uid://do0led3t3kkdm" path="res://video/ch2_video_intro_loop.ogv" id="2_nff2x"]
 [ext_resource type="Texture2D" uid="uid://b7bbp47vmqfr0" path="res://graphics/chapter2/comics/comic1/framevideo/1.png" id="2_rgcbm"]
 [ext_resource type="VideoStream" uid="uid://bjsdsfjpio5ow" path="res://video/ch2_video_intro_zoom.ogv" id="3_4vcik"]
+[ext_resource type="Script" uid="uid://bvmwxu2au5j5l" path="res://components/utils/audio/audio integration nodes/audio_sfx_zone.gd" id="6_5g7em"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="6_j67ms"]
 
 [node name="Videoplayer" unique_id=1489886936 instance=ExtResource("1_7qv81")]
 
@@ -22,3 +24,18 @@ texture = ExtResource("2_rgcbm")
 
 [node name="AudioStreamPlayer" parent="." index="4" unique_id=1448924273]
 stream = null
+
+[node name="Audio_Container" type="Node" parent="." index="5" unique_id=1275824783]
+
+[node name="AudioSfxZone" type="VisibleOnScreenNotifier2D" parent="Audio_Container" index="0" unique_id=1740232060]
+position = Vector2(890, 630)
+rect = Rect2(-10, -36, 48, 46)
+script = ExtResource("6_5g7em")
+sfx = 2100
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
+
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="Audio_Container" index="1" unique_id=1039582966]
+position = Vector2(952, 624)
+script = ExtResource("6_j67ms")
+loop_name = 2100
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"

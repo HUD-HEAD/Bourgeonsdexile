@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="music_config" format=3 uid="uid://rrgc6kd7wte"]
+
+[ext_resource type="Script" uid="uid://bgl0a3vgvcmsb" path="res://components/utils/audio/music_configuration.gd" id="1_l7nmw"]
+[ext_resource type="AudioStream" uid="uid://cwccprja8duka" path="res://audio/chapter2/soundtrack/starting_theme_sad_moment_panel_10_to 15.wav" id="2_l7nmw"]
+
+[resource]
+script = ExtResource("1_l7nmw")
+type = 2101
+stream = ExtResource("2_l7nmw")
+metadata/_custom_type_script = "uid://bgl0a3vgvcmsb"

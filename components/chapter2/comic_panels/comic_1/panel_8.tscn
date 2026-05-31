@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bbl8ivpwlwsnw" path="res://graphics/chapter2/comics/comic1/framephone/mmap.png" id="5_nqo85"]
 [ext_resource type="Texture2D" uid="uid://b3b2r7gsh6jwp" path="res://graphics/chapter2/comics/comic1/framephone/hand.png" id="6_3ui50"]
 [ext_resource type="Texture2D" uid="uid://cbywnch7guolu" path="res://graphics/chapter1/comics/comic3/panel_phonelajas/buttons.png" id="7_b2db3"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="8_4a5ep"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="8_igrvd"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="9_b7342"]
 
@@ -52,6 +53,12 @@ texture = ExtResource("6_3ui50")
 [node name="Sprite2D" type="Sprite2D" parent="Phone" unique_id=1696326365]
 position = Vector2(40, -279)
 texture = ExtResource("7_b2db3")
+
+[node name="TriggerSfxOnClick" type="Node" parent="Phone/Sprite2D" unique_id=870921531 node_paths=PackedStringArray("clickables")]
+script = ExtResource("8_4a5ep")
+clickables = [NodePath("../ZoomIn"), NodePath("../ZoomOut")]
+sfx = 2
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="ZoomIn" type="Area2D" parent="Phone/Sprite2D" unique_id=1397227844]
 position = Vector2(0, -41)

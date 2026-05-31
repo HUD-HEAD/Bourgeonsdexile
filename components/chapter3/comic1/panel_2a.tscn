@@ -1,9 +1,115 @@
 [gd_scene format=3 uid="uid://pvmnc7iirc1n"]
 
 [ext_resource type="Texture2D" uid="uid://coofvgiac5fb3" path="res://graphics/chapter3/comics/comic1/cutting/1.png" id="1_ciefs"]
+[ext_resource type="Texture2D" uid="uid://dean07dndwjam" path="res://graphics/chapter3/comics/comic1/cutting/2.png" id="2_xnpv8"]
+[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="3_2h6xf"]
+[ext_resource type="Texture2D" uid="uid://ca3e1tygpqiwf" path="res://graphics/chapter3/comics/comic1/cutting/tijeras.png" id="3_h3y6k"]
+[ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/mechanics/area_entered_enable.gd" id="5_2h6xf"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="6_2h6xf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f4xom"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ciefs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_xnpv8")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xnpv8"]
+radius = 140.0
+height = 648.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_62apk"]
+radius = 115.21285
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xnpv8"]
+
+[sub_resource type="Animation" id="Animation_f4xom"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Baby:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ej67h"]
+resource_name = "default"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Baby:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0493),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4h06k"]
+_data = {
+&"RESET": SubResource("Animation_f4xom"),
+&"default": SubResource("Animation_ej67h")
+}
 
 [node name="PanelDoctors" type="Node2D" unique_id=162787811]
 
-[node name="1" type="Sprite2D" parent="." unique_id=1188377223]
-position = Vector2(2, 3)
-texture = ExtResource("1_ciefs")
+[node name="Baby" type="AnimatedSprite2D" parent="." unique_id=4485241]
+sprite_frames = SubResource("SpriteFrames_f4xom")
+
+[node name="Scissors" type="Area2D" parent="." unique_id=296403946]
+position = Vector2(426, 303.00003)
+rotation = -1.8831195
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("3_2h6xf")
+metadata/_custom_type_script = "uid://cxam1cepgkl3s"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scissors" unique_id=1160503200]
+shape = SubResource("CapsuleShape2D_xnpv8")
+
+[node name="Tijeras" type="Sprite2D" parent="Scissors" unique_id=122014052]
+texture = ExtResource("3_h3y6k")
+
+[node name="CuttingPart" type="Area2D" parent="Scissors" unique_id=1328999962]
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scissors/CuttingPart" unique_id=541460063]
+position = Vector2(22.774628, -200.71202)
+shape = SubResource("CircleShape2D_62apk")
+
+[node name="CutArea" type="Area2D" parent="." unique_id=40819733 node_paths=PackedStringArray("node_to_enable")]
+position = Vector2(-34, 133)
+collision_layer = 0
+input_pickable = false
+script = ExtResource("5_2h6xf")
+node_to_enable = NodePath("../AnimationPlayer")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CutArea" unique_id=73537497]
+shape = SubResource("CircleShape2D_xnpv8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=24571426]
+libraries/ = SubResource("AnimationLibrary_4h06k")
+autoplay = &"default"
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=1536373285 node_paths=PackedStringArray("anim_player")]
+script = ExtResource("6_2h6xf")
+anim_player = NodePath("../AnimationPlayer")
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="Node2D" type="Node2D" parent="." unique_id=342487400]
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1614054050]

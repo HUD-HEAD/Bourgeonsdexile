@@ -1,9 +1,44 @@
 [gd_scene format=3 uid="uid://dqaagocylecdi"]
 
 [ext_resource type="Texture2D" uid="uid://cwrqxyxauub67" path="res://graphics/chapter3/comics/comic1/framedoctorsblur/blur.png" id="1_28uxu"]
+[ext_resource type="Texture2D" uid="uid://2ut8tfbenncn" path="res://graphics/chapter3/comics/comic1/framedoctorsblur/unblur.png" id="2_o5amw"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="3_5gjjb"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="4_c8c6m"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_spt0h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_letxt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_28uxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_o5amw")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rs2d4"]
+size = Vector2(1473, 960)
 
 [node name="PanelDoctors" type="Node2D" unique_id=162787811]
 
-[node name="Blur" type="Sprite2D" parent="." unique_id=2079645599]
-position = Vector2(-2, -1)
-texture = ExtResource("1_28uxu")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=154285919 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_letxt")
+script = ExtResource("3_5gjjb")
+clickable = NodePath("../Clickable")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=1019655552]
+script = ExtResource("4_c8c6m")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1429885986]
+position = Vector2(13.5, -9)
+shape = SubResource("RectangleShape2D_rs2d4")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=1896844746 node_paths=PackedStringArray("clickables")]
+script = ExtResource("5_spt0h")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"

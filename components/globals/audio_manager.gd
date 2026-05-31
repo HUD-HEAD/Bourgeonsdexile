@@ -27,13 +27,14 @@ var music_dictionary: Dictionary[AudioConfiguration.music_type, music_config] = 
 var loop_pool: Array[loop_pool_item]
 # ── Variables ────────────────────────────────────────
 var last_music_player: int = -1
+var last_walking_loop: AudioConfiguration.loop_type = AudioConfiguration.loop_type.none
 
-const LOOP_POOL_SIZE = 3
+const LOOP_POOL_SIZE = 6
 
 # ── Structure ────────────────────────────────────────
 class loop_pool_item:
 	var is_playing: bool
-	var loop_type: AudioConfiguration.loop_type
+	var loop_type: AudioConfiguration.loop_type = AudioConfiguration.loop_type.none
 	var player_reference: AudioStreamPlayer
 	
 	func _init (player: AudioStreamPlayer):
@@ -136,7 +137,7 @@ func play_sfx(key: AudioConfiguration.sfx_type):
 	var volume: float
 	
 	if sfx.stream.size() > 1:
-		stream = sfx.stream[randi_range(0,sfx.stream.size())]
+		stream = sfx.stream[randi_range(0,sfx.stream.size() -1)]
 	elif sfx.stream.size() == 1:
 		stream = sfx.stream[0]
 	else:
@@ -154,20 +155,25 @@ func play_sfx(key: AudioConfiguration.sfx_type):
 	
 	polyphonic_player.play_stream(stream, 0, linear_to_db(volume), pitch, 0 as AudioServer.PlaybackType, "Sfx")
 
-func play_audio_stream(stream: AudioStream):
-	polyphonic_player.play_stream(stream, 0, 0, 1, 0 as AudioServer.PlaybackType, "Sfx")
+func play_audio_stream(stream: AudioStream, volume: float = 1, min_pitch: float = 1, max_pitch: float = 1):
+	var pitch: float = min_pitch
+	if min_pitch != max_pitch:
+		pitch = randf_range(min_pitch, max_pitch)
+	polyphonic_player.play_stream(stream, 0, linear_to_db(volume), pitch, 0 as AudioServer.PlaybackType, "Sfx")
 
 func play_loop(key: AudioConfiguration.loop_type):
 	var loop: AudioStreamPlayer = _get_free_loop(key)
 	var loop_info: loop_config = _get_loop(key)
 	
-	loop.volume_linear = loop_info.volume
-	loop.pitch_scale = loop_info.pitch
-	loop.stream = loop_info.stream
-	(loop.stream as AudioStreamWAV).loop_mode = AudioStreamWAV.LOOP_FORWARD
+	if loop != null:
+		loop.volume_linear = loop_info.volume
+		loop.pitch_scale = loop_info.pitch
+		loop.stream = loop_info.stream
 	
-func stop_loop(key: AudioConfiguration.loop_type):
-	_free_loop(key)
+		loop.play()
+	
+func stop_loop(key: AudioConfiguration.loop_type, fade_in_enable: bool = true ):
+	_free_loop(key, fade_in_enable)
 
 func play_music(key: AudioConfiguration.music_type):
 	# Reminder: Set Loop_Mode to true
@@ -188,7 +194,7 @@ func play_music(key: AudioConfiguration.music_type):
 	
 	current_music_player.pitch_scale = music_info.pitch
 	current_music_player.stream = music_info.stream
-	(current_music_player.stream as AudioStreamWAV).loop_mode = AudioStreamWAV.LOOP_FORWARD
+	#(current_music_player.stream as AudioStreamWAV).loop_mode = AudioStreamWAV.LOOP_FORWARD
 	
 	fade_in(current_music_player, 0, music_info.volume)
 	if has_to_fade_out:
@@ -201,9 +207,29 @@ func stop_music():
 	fade_out(music_1_player)
 	fade_out(music_2_player)
 
+func play_walking_loop():
+	if last_walking_loop != -1:
+		play_loop(last_walking_loop)
+
+func stop_walking_loop():
+	stop_loop(last_walking_loop, false)
+
+
+
 #endregion
 
 #region Utils
+func update_last_walking_loop(key: AudioConfiguration.loop_type):
+	stop_walking_loop()
+	last_walking_loop = key
+	play_walking_loop()
+
+func reset_audio():
+	_stop_loops()
+	fade_out(music_1_player)
+	fade_out(music_2_player)
+	_stop_sfx()
+
 func _get_sfx(key: AudioConfiguration.sfx_type) -> sfx_config:
 	if sfx_dictionary[key]:
 		return sfx_dictionary[key]
@@ -227,7 +253,9 @@ func _get_music(key: AudioConfiguration.music_type) -> music_config :
 
 func _get_free_loop(key: AudioConfiguration.loop_type) -> AudioStreamPlayer:
 	for item in loop_pool:
-		if !item.is_playing:
+		if item.loop_type == key && item.is_playing:
+			return null
+		elif !item.is_playing:
 			item.loop_type = key
 			item.is_playing = true
 			return item.player_reference
@@ -235,22 +263,38 @@ func _get_free_loop(key: AudioConfiguration.loop_type) -> AudioStreamPlayer:
 	assert("No free loops available in the pool.")
 	return null
 
-func _free_loop(key: AudioConfiguration.loop_type):
+func _free_loop(key: AudioConfiguration.loop_type, fade_in_enable: bool = true):
 	for item in loop_pool:
 		if item.is_playing && item.loop_type == key:
-			item.is_playing = false
-			item.player_reference.stop()
+			if fade_in_enable:
+				var lambda = func():
+					item.is_playing = false
+					item.player_reference.stop()
+				fade_out(item.player_reference, 0, lambda)
+			else:
+				item.is_playing = false
+				item.player_reference.stop()
 			break
+
+func _stop_loops():
+	for item in loop_pool:
+		item.is_playing = false
+		item.player_reference.stop()
+
+func _stop_sfx():
+	polyphonic_player.stop()
+	polyphonic_player.start()
+
 #endregion
 
 #region Fade in/out, crossfade
-const TRANS_TIME = 5.0
+const TRANS_TIME = 0.5
 
 func cross_fade(fade_out_player : AudioStreamPlayer, fade_in_player : AudioStreamPlayer, min_volume = 0.0, max_volume = 1.0):
 	fade_out(fade_out_player, min_volume)
 	fade_in(fade_in_player, min_volume, max_volume)
 
-func fade_out(fade_out_player : AudioStreamPlayer, end_volume = 0.0):
+func fade_out(fade_out_player : AudioStreamPlayer, end_volume = 0.0, on_stop: Callable = Callable()):
 	if !is_instance_valid(fade_out_player):
 		return
 	
@@ -258,6 +302,8 @@ func fade_out(fade_out_player : AudioStreamPlayer, end_volume = 0.0):
 	tween.set_ease(Tween.EASE_IN)
 	tween.tween_property(fade_out_player, "volume_linear", end_volume, TRANS_TIME)
 	tween.tween_callback(fade_out_player.stop)
+	if on_stop.is_valid():
+		on_stop.call()
 
 func fade_in(fade_in_player : AudioStreamPlayer, start_volume = 0.0, end_volume = 1.0):
 	if !is_instance_valid(fade_in_player):

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="loop_config" format=3 uid="uid://ckax75utljvro"]
+
+[ext_resource type="Script" uid="uid://dojbh2mbjt6sh" path="res://components/utils/audio/loop_configuration.gd" id="1_0tuqs"]
+[ext_resource type="AudioStream" uid="uid://dhi6bpv2sxrvq" path="res://audio/chapter2/ambient/level 1/level_1_part2_panel_21_22_motocycle_not_running.wav" id="2_0tuqs"]
+
+[resource]
+script = ExtResource("1_0tuqs")
+type = 2106
+stream = ExtResource("2_0tuqs")
+metadata/_custom_type_script = "uid://dojbh2mbjt6sh"

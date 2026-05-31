@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="sfx_config" format=3 uid="uid://kjsquroabufd"]
+
+[ext_resource type="Script" uid="uid://duuxorfspwlxi" path="res://components/utils/audio/sfx_configuration.gd" id="1_26o2u"]
+[ext_resource type="AudioStream" uid="uid://bj0aafjx3b0wc" path="res://audio/chapter1/sfx/puzzle_sound_1_intercalate_with_2.wav" id="2_mci5s"]
+
+[resource]
+script = ExtResource("1_26o2u")
+type = 1
+stream = Array[AudioStream]([ExtResource("2_mci5s")])
+min_pitch = 0.9
+metadata/_custom_type_script = "uid://duuxorfspwlxi"

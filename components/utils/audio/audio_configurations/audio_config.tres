@@ -3,15 +3,75 @@
 [ext_resource type="Script" uid="uid://dojbh2mbjt6sh" path="res://components/utils/audio/loop_configuration.gd" id="1_0736c"]
 [ext_resource type="Script" uid="uid://duuxorfspwlxi" path="res://components/utils/audio/sfx_configuration.gd" id="1_imlmo"]
 [ext_resource type="Script" uid="uid://cqxrtlyvs0npt" path="res://components/utils/audio/audio_configuration.gd" id="1_lqs57"]
-[ext_resource type="Resource" uid="uid://ee5ptpjncsx1" path="res://components/utils/audio/audio_configurations/loop_config/ex_loop_1.tres" id="2_fscca"]
+[ext_resource type="Resource" uid="uid://byww7ej72xbtp" path="res://components/utils/audio/audio_configurations/loop_config/c2_1_Thense_moment_panel_14.tres" id="2_l82md"]
+[ext_resource type="Resource" uid="uid://c43b41vh77jh1" path="res://components/utils/audio/audio_configurations/loop_config/c1_3_city_sound_loop.tres" id="2_po7nl"]
+[ext_resource type="Resource" uid="uid://daxn6bk0hnitv" path="res://components/utils/audio/audio_configurations/loop_config/c2_1_wind_loop_0_to_16.tres" id="3_8i027"]
+[ext_resource type="Resource" uid="uid://cx2hfvp5kgbew" path="res://components/utils/audio/audio_configurations/loop_config/c1_3_colombia_space_sound_loop.tres" id="3_c6civ"]
 [ext_resource type="Resource" uid="uid://cjr54ccgssbu2" path="res://components/utils/audio/audio_configurations/sfx_config/click.tres" id="3_lhat2"]
 [ext_resource type="Script" uid="uid://bgl0a3vgvcmsb" path="res://components/utils/audio/music_configuration.gd" id="3_qemoy"]
-[ext_resource type="Resource" uid="uid://kjsquroabufd" path="res://components/utils/audio/audio_configurations/sfx_config/puzzle.tres" id="4_f624f"]
-[ext_resource type="Resource" uid="uid://7t840w17utdw" path="res://components/utils/audio/audio_configurations/music_config/example_music_1.tres" id="4_gmc33"]
+[ext_resource type="Resource" uid="uid://llrappg1cj4v" path="res://components/utils/audio/audio_configurations/loop_config/c2_1_gun_shots_loop_15_to_19.tres" id="4_femi8"]
+[ext_resource type="Resource" uid="uid://bk6lx14peqayr" path="res://components/utils/audio/audio_configurations/loop_config/c1_3_steps_loop.tres" id="4_gb34v"]
+[ext_resource type="Resource" uid="uid://d47c6wryv64o" path="res://components/utils/audio/audio_configurations/loop_config/c2_1_voices_loop_15_to_19.tres" id="5_pwl8h"]
+[ext_resource type="Resource" uid="uid://bd82pvop4ciaw" path="res://components/utils/audio/audio_configurations/loop_config/c1_3_steps_inside_loop.tres" id="5_v3pri"]
+[ext_resource type="Resource" uid="uid://bmdp0jek4jnnq" path="res://components/utils/audio/audio_configurations/music_config/c2_1_starting_theme.tres" id="5_wobcp"]
+[ext_resource type="Resource" uid="uid://bjsuoxpg3ug7c" path="res://components/utils/audio/audio_configurations/loop_config/c2_1_steps_15_to_19.tres" id="6_a1sox"]
+[ext_resource type="Resource" uid="uid://rrgc6kd7wte" path="res://components/utils/audio/audio_configurations/music_config/c2_1_starting_theme_sad_moment_panel_10_to_15.tres" id="6_o7t6w"]
+[ext_resource type="Resource" uid="uid://c7lmkx4rfg6sk" path="res://components/utils/audio/audio_configurations/loop_config/c1_3_steps_outside_loop.tres" id="6_xvkp8"]
+[ext_resource type="Resource" uid="uid://dj3y2ed33fmt0" path="res://components/utils/audio/audio_configurations/music_config/c2_1_walking_theme_panel_15_to_20.tres" id="7_a4fxu"]
+[ext_resource type="Resource" uid="uid://ckax75utljvro" path="res://components/utils/audio/audio_configurations/loop_config/c2_1_motocycle_not_running.tres" id="7_gqdoy"]
+[ext_resource type="Resource" uid="uid://dy6c0ys045bnl" path="res://components/utils/audio/audio_configurations/music_config/c2_1_motocycle_panel_20_to_24.tres" id="8_femi8"]
+[ext_resource type="Resource" uid="uid://kjsquroabufd" path="res://components/utils/audio/audio_configurations/sfx_config/puzzle_correct_piece.tres" id="8_pkc7b"]
+[ext_resource type="Resource" uid="uid://bi3sw2okh1svf" path="res://components/utils/audio/audio_configurations/loop_config/c2_1_motocycle_running_sound_loop_20_and_23.tres" id="8_v1u3r"]
+[ext_resource type="Resource" uid="uid://c3brur37gwept" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_0 _gun_shots.tres" id="9_1aw0s"]
+[ext_resource type="Resource" uid="uid://ca3s5ok3u2a17" path="res://components/utils/audio/audio_configurations/sfx_config/movil_selection.tres" id="9_75gak"]
+[ext_resource type="Resource" uid="uid://8mntudsplsmc" path="res://components/utils/audio/audio_configurations/sfx_config/resolve_puzzle.tres" id="9_oije2"]
+[ext_resource type="Resource" uid="uid://dj7h7yqbieyt7" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_1_gun_shot_selection.tres" id="10_75gak"]
+[ext_resource type="Resource" uid="uid://ddua4ihgwn5k3" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_2_clean_cristal.tres" id="11_pkc7b"]
+[ext_resource type="Resource" uid="uid://cvyvieyi6yjxr" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_3_gun_wind_window.tres" id="12_oije2"]
+[ext_resource type="Resource" uid="uid://dro6fvr3sfoc" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_4_plastic_blocks.tres" id="13_behby"]
+[ext_resource type="Resource" uid="uid://cmm3g6e5wpmyj" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_5_childs_playing.tres" id="14_e2tky"]
+[ext_resource type="Resource" uid="uid://dx1n38hkurfs7" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_6_textil.tres" id="15_l82md"]
+[ext_resource type="AudioStream" uid="uid://d1jjetsntvge2" path="res://audio/chapter1/soundtrack/MIGRATION-THEME.wav" id="15_xnur5"]
+[ext_resource type="Resource" uid="uid://b8fcxi8n8wt7p" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_7_mmm_woman.tres" id="16_8i027"]
+[ext_resource type="Resource" uid="uid://cgl0u8c8v4c61" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_10_child_move.tres" id="17_wobcp"]
+[ext_resource type="Resource" uid="uid://fmn6ks5edqm1" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_11_hands.tres" id="18_o7t6w"]
+[ext_resource type="Resource" uid="uid://bjrs7vffdaxix" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_12_child_move2.tres" id="19_a4fxu"]
+[ext_resource type="Resource" uid="uid://dkcof646kaunb" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_13_sad_moment.tres" id="20_femi8"]
+[ext_resource type="Resource" uid="uid://d4molfhctssxm" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_14_doors_open.tres" id="21_pwl8h"]
+[ext_resource type="Resource" uid="uid://db7ghbhimi3hs" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_15_car.tres" id="22_a1sox"]
+[ext_resource type="Resource" uid="uid://blbe8fxfal57j" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_19_car.tres" id="23_gqdoy"]
+[ext_resource type="AudioStream" uid="uid://chp4yothn7faw" path="res://audio/chapter1/ambient/panel_section_3/panel_3.7_relief_sound.wav" id="40_v3pri"]
+[ext_resource type="AudioStream" uid="uid://dricj4xdns60n" path="res://audio/chapter1/ambient/panel_section_3/panel_3.8_eating_sound.wav" id="41_xvkp8"]
+[ext_resource type="AudioStream" uid="uid://qoly0ig3clh0" path="res://audio/chapter1/ambient/panel_section_3/panel_3.8_eating_sound_2.wav" id="42_xnur5"]
+[ext_resource type="AudioStream" uid="uid://bedpxltkhf5ii" path="res://audio/chapter1/ambient/panel_section_3/panel_3.13_paper_sound.wav" id="43_xvkp8"]
+
+[sub_resource type="Resource" id="Resource_ql2kw"]
+script = ExtResource("3_qemoy")
+type = 1300
+stream = ExtResource("15_xnur5")
+metadata/_custom_type_script = "uid://bgl0a3vgvcmsb"
+
+[sub_resource type="Resource" id="Resource_po7nl"]
+script = ExtResource("1_imlmo")
+type = 1300
+stream = Array[AudioStream]([ExtResource("40_v3pri")])
+metadata/_custom_type_script = "uid://duuxorfspwlxi"
+
+[sub_resource type="Resource" id="Resource_tadwd"]
+script = ExtResource("1_imlmo")
+type = 1301
+stream = Array[AudioStream]([ExtResource("41_xvkp8"), ExtResource("42_xnur5")])
+metadata/_custom_type_script = "uid://duuxorfspwlxi"
+
+[sub_resource type="Resource" id="Resource_xnur5"]
+script = ExtResource("1_imlmo")
+type = 1302
+stream = Array[AudioStream]([ExtResource("43_xvkp8")])
+metadata/_custom_type_script = "uid://duuxorfspwlxi"
 
 [resource]
 script = ExtResource("1_lqs57")
-sfx_configuration = Array[ExtResource("1_imlmo")]([ExtResource("3_lhat2"), ExtResource("4_f624f")])
-loop_configuration = Array[ExtResource("1_0736c")]([ExtResource("2_fscca")])
-music_configuration = Array[ExtResource("3_qemoy")]([ExtResource("4_gmc33")])
+sfx_configuration = Array[ExtResource("1_imlmo")]([ExtResource("3_lhat2"), ExtResource("8_pkc7b"), ExtResource("9_oije2"), ExtResource("9_75gak"), ExtResource("9_1aw0s"), ExtResource("10_75gak"), ExtResource("11_pkc7b"), ExtResource("12_oije2"), ExtResource("13_behby"), ExtResource("14_e2tky"), ExtResource("15_l82md"), ExtResource("16_8i027"), ExtResource("17_wobcp"), ExtResource("18_o7t6w"), ExtResource("19_a4fxu"), ExtResource("20_femi8"), ExtResource("21_pwl8h"), ExtResource("22_a1sox"), ExtResource("23_gqdoy"), SubResource("Resource_po7nl"), SubResource("Resource_tadwd"), SubResource("Resource_xnur5")])
+loop_configuration = Array[ExtResource("1_0736c")]([ExtResource("2_po7nl"), ExtResource("3_c6civ"), ExtResource("4_gb34v"), ExtResource("5_v3pri"), ExtResource("6_xvkp8"), ExtResource("3_8i027"), ExtResource("2_l82md"), ExtResource("4_femi8"), ExtResource("5_pwl8h"), ExtResource("6_a1sox"), ExtResource("7_gqdoy"), ExtResource("8_v1u3r")])
+music_configuration = Array[ExtResource("3_qemoy")]([SubResource("Resource_ql2kw"), ExtResource("5_wobcp"), ExtResource("6_o7t6w"), ExtResource("7_a4fxu"), ExtResource("8_femi8")])
 metadata/_custom_type_script = "uid://cqxrtlyvs0npt"

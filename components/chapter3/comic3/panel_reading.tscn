@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://d1k46kr3djyp"]
+
+[ext_resource type="Texture2D" uid="uid://de1t2jxq50xl" path="res://components/chapter3/comic3/framereading.png" id="1_wi5le"]
+
+[node name="PanelReading" type="Node2D" unique_id=652350790]
+
+[node name="Framereading" type="Sprite2D" parent="." unique_id=193292660]
+texture = ExtResource("1_wi5le")

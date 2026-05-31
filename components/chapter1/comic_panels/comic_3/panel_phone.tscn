@@ -16,7 +16,10 @@
 [ext_resource type="PackedScene" uid="uid://xyq2m2kx86ku" path="res://components/utils/puzzles/placement_checker.tscn" id="13_nkld0"]
 [ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="14_6ruk1"]
 [ext_resource type="Script" uid="uid://ca6gae53x0cd0" path="res://components/utils/puzzles/puzzle_piece_placed_enable.gd" id="15_jmjt5"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="16_noatj"]
+[ext_resource type="AudioStream" uid="uid://b0iq8m0e5lmqu" path="res://audio/chapter1/ambient/panel_section_3/panel_3.6_movil_selection.wav" id="17_ic7j4"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="17_nkld0"]
+[ext_resource type="AudioStream" uid="uid://cieig3tyx4mry" path="res://audio/chapter1/ambient/panel_section_3/panel_3.6_movil_charge_sound.wav" id="20_ic7j4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_06jsj"]
 radius = 31.06445
@@ -87,6 +90,20 @@ tracks/1/keys = {
 "method": &"disable"
 }]
 }
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TriggerSfxOnClick")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.16666667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_sfx"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yolvj"]
 _data = {
@@ -145,6 +162,15 @@ shape = SubResource("RectangleShape2D_dx01d")
 position = Vector2(-216, 354)
 receptacle = NodePath("../../../Receptacle_Charger")
 
+[node name="TriggerSfxOnClick" type="Node" parent="PuzzlePiece_Phone" unique_id=1927995676 node_paths=PackedStringArray("clickables")]
+script = ExtResource("16_noatj")
+clickables = [NodePath("../Draggable/Clickable")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("17_ic7j4")
+linear_volume = 0.95
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
 [node name="OnPuzzlePiecePlacedEnable" type="Node" parent="." unique_id=426104020 node_paths=PackedStringArray("puzzle_piece", "node_to_enable")]
 script = ExtResource("15_jmjt5")
 puzzle_piece = NodePath("../PuzzlePiece_Phone")
@@ -157,5 +183,12 @@ autoplay = &"phone_charging"
 [node name="Transition" type="Node" parent="." unique_id=2025088976 node_paths=PackedStringArray("anim_player")]
 script = ExtResource("17_nkld0")
 anim_player = NodePath("../AnimationPlayer")
+
+[node name="TriggerSfxOnClick" type="Node" parent="." unique_id=285125886]
+script = ExtResource("16_noatj")
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("20_ic7j4")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [editable path="Receptacle_Charger"]
