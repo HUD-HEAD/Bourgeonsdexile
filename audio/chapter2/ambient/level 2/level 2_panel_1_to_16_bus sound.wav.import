@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c4jwjp4bxi6w3"
+path="res://.godot/imported/level 2_panel_1_to_16_bus sound.wav-dcc1251b0c688a09461a32aa87f0e466.sample"
+
+[deps]
+
+source_file="res://audio/chapter2/ambient/level 2/level 2_panel_1_to_16_bus sound.wav"
+dest_files=["res://.godot/imported/level 2_panel_1_to_16_bus sound.wav-dcc1251b0c688a09461a32aa87f0e466.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

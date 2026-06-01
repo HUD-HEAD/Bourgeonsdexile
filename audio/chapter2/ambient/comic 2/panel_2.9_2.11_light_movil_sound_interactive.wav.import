@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cuiulsw01fp4"
+path="res://.godot/imported/panel_2.9_2.11_light_movil_sound_interactive.wav-e15cd28f0aec2305ab916638500d9748.sample"
+
+[deps]
+
+source_file="res://audio/chapter2/ambient/comic 2/panel_2.9_2.11_light_movil_sound_interactive.wav"
+dest_files=["res://.godot/imported/panel_2.9_2.11_light_movil_sound_interactive.wav-e15cd28f0aec2305ab916638500d9748.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

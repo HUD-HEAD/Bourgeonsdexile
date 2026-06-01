@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dsc8j0a15tdie"
+path="res://.godot/imported/wc_bus_tense_moment_ comic_2_panel_2.14_2.15.wav-58130f04f23ac68e9a0be95cd8e12ecc.sample"
+
+[deps]
+
+source_file="res://audio/chapter2/soundtrack/wc_bus_tense_moment_ comic_2_panel_2.14_2.15.wav"
+dest_files=["res://.godot/imported/wc_bus_tense_moment_ comic_2_panel_2.14_2.15.wav-58130f04f23ac68e9a0be95cd8e12ecc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
