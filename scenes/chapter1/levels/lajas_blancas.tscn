@@ -29,6 +29,7 @@
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="34_kde1w"]
 [ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="35_sgj77"]
 [ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="36_iscax"]
+[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="37_b4pqv"]
 [ext_resource type="PackedScene" uid="uid://cx455fd0kkpbt" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB3.tscn" id="43_nx082"]
 [ext_resource type="PackedScene" uid="uid://b0rp3ag1qca1u" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB1.tscn" id="45_i6383"]
 [ext_resource type="PackedScene" uid="uid://dhktyk6ijdbuk" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB5.tscn" id="48_jenef"]
@@ -209,6 +210,10 @@ position = Vector2(-749, -796)
 
 [node name="DragDropPuzzle11" parent="Queue1/Puzzle4" unique_id=839630799 instance=ExtResource("54_d2lfv")]
 position = Vector2(135, 375)
+play_correct_piece = null
+stream_volume = null
+min_pitch_stream = null
+max_pitch_stream = null
 
 [node name="OutlinePuzzle" parent="Queue1/Puzzle4/DragDropPuzzle11" index="0" unique_id=1513168459]
 position = Vector2(4.5, -32)
@@ -250,6 +255,10 @@ position = Vector2(-162, -796)
 
 [node name="DragDropPuzzle" parent="Queue1/Puzzle5" unique_id=2092257195 instance=ExtResource("43_nx082")]
 position = Vector2(69, 598)
+play_correct_piece = null
+stream_volume = null
+min_pitch_stream = null
+max_pitch_stream = null
 
 [node name="OutlinePuzzle" parent="Queue1/Puzzle5/DragDropPuzzle" index="0" unique_id=1513168459]
 position = Vector2(-4, -57.5)
@@ -289,6 +298,10 @@ position = Vector2(51, -796)
 
 [node name="DragDropPuzzle8" parent="Queue1/Puzzle6" unique_id=561042216 instance=ExtResource("51_x5p5e")]
 position = Vector2(-3, 594)
+play_correct_piece = null
+stream_volume = null
+min_pitch_stream = null
+max_pitch_stream = null
 
 [node name="OutlinePuzzle" parent="Queue1/Puzzle6/DragDropPuzzle8" index="0" unique_id=1513168459]
 position = Vector2(0.5, -60)
@@ -332,6 +345,10 @@ texture = null
 
 [node name="DragDropPuzzle2" parent="Queue1/Puzzle7" unique_id=1767003607 instance=ExtResource("45_i6383")]
 position = Vector2(94, 487)
+play_correct_piece = null
+stream_volume = null
+min_pitch_stream = null
+max_pitch_stream = null
 
 [node name="PuzzlePiece" parent="Queue1/Puzzle7/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="0" unique_id=1667760579]
 position = Vector2(-237, -32)
@@ -356,6 +373,10 @@ position = Vector2(1659, -796)
 
 [node name="DragDropPuzzle7" parent="Queue2/Puzzle1" unique_id=189400561 instance=ExtResource("50_6x8uj")]
 position = Vector2(204, 562)
+play_correct_piece = null
+stream_volume = null
+min_pitch_stream = null
+max_pitch_stream = null
 
 [node name="OutlinePuzzle" parent="Queue2/Puzzle1/DragDropPuzzle7" index="0" unique_id=1513168459]
 position = Vector2(-194, -27.5)
@@ -391,6 +412,10 @@ position = Vector2(2050, -796)
 
 [node name="DragDropPuzzle14" parent="Queue2/Puzzle2" unique_id=559797596 instance=ExtResource("57_s3fhf")]
 position = Vector2(177, 364)
+play_correct_piece = null
+stream_volume = null
+min_pitch_stream = null
+max_pitch_stream = null
 
 [node name="PuzzlePiece" parent="Queue2/Puzzle2/DragDropPuzzle14/BuildingBlocks" parent_id_path=PackedInt32Array(559797596, 1654234455) index="0" unique_id=1667760579]
 position = Vector2(-234, 223)
@@ -417,6 +442,10 @@ position = Vector2(2297, -796)
 
 [node name="DragDropPuzzle5" parent="Queue2/Puzzle3" unique_id=192951279 instance=ExtResource("48_jenef")]
 position = Vector2(96, 589)
+play_correct_piece = null
+stream_volume = null
+min_pitch_stream = null
+max_pitch_stream = null
 
 [node name="OutlinePuzzle" parent="Queue2/Puzzle3/DragDropPuzzle5" index="0" unique_id=1513168459]
 position = Vector2(4, -27)
@@ -524,6 +553,13 @@ script = ExtResource("36_iscax")
 loop_name = 1303
 loop_mode = 1
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=436130253]
+position = Vector2(94, 26)
+rect = Rect2(-10, -10, 134, 108)
+script = ExtResource("37_b4pqv")
+music_name = 1300
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
 
 [editable path="QueuingPeople/QueuePerson"]
 [editable path="Queue1/Puzzle4/DragDropPuzzle11"]

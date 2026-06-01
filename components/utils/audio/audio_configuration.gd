@@ -35,6 +35,8 @@ enum loop_type{
 	c1_3_steps_inside_loop = 1303,
 	c1_3_steps_outside_loop = 1304,
 	
+	c1_4_bus_sound = 1400,
+	
 	c2_1_wind_loop_0_to_16 = 2100,
 	c2_1_Thense_moment_panel_14 = 2101,
 	c2_1_gun_shots_loop_15_to_19 = 2102,
@@ -46,6 +48,7 @@ enum loop_type{
 
 enum music_type{
 	c1_3_migration_theme = 1300,
+	c1_4_final_theme = 1400,
 	c2_1_starting_theme = 2100,
 	c2_1_starting_theme_sad_moment_panel_10_to_15 = 2101,
 	c2_1_walking_theme_panel_15_to_20 = 2102,

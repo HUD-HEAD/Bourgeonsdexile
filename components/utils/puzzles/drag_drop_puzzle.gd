@@ -14,7 +14,13 @@ signal puzzle_complete
 @export var outline_image : Sprite2D
 
 @export_group("Sound")
+@export var play_correct_piece: bool = true 
 @export var correct_piece_sfx: AudioConfiguration.sfx_type = AudioConfiguration.sfx_type.puzzle_correct_piece
+@export var correct_piece_stream: AudioStream
+@export var stream_volume: float = 1
+@export var min_pitch_stream: float = 1
+@export var max_pitch_stream: float = 1
+
 @export var play_resolve_puzzle: bool = true 
 @export var resolve_puzzle_sfx: AudioConfiguration.sfx_type = AudioConfiguration.sfx_type.resolve_puzzle
 
@@ -32,7 +38,11 @@ func _ready() -> void:
 
 ## Every time a puzzle piece is correctly placed, check if puzzle is completed
 func _on_correct_piece():
-	AudioManager.play_sfx(correct_piece_sfx)
+	if play_correct_piece:
+		if correct_piece_stream != null:
+			AudioManager.play_audio_stream(correct_piece_stream, stream_volume, min_pitch_stream, max_pitch_stream)
+		else:
+			AudioManager.play_sfx(correct_piece_sfx)
 	
 	if _check_complete():
 		_complete_puzzle()

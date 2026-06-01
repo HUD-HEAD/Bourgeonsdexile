@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ds1b5xoce25kf"]
 
 [ext_resource type="Texture2D" uid="uid://byqcyeatrdsop" path="res://graphics/chapter1/comics/comic4/frameticket/ticket.png" id="2_4elbd"]
+[ext_resource type="AudioStream" uid="uid://twiyohdogi4a" path="res://audio/chapter1/ambient/panel_section_3/panel_3.25_ticket_bus.wav" id="2_u1nb2"]
 [ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="3_u1nb2"]
 [ext_resource type="Texture2D" uid="uid://bmhc067bx3v7w" path="res://graphics/chapter1/comics/comic4/frameticket/hand2.png" id="4_8q1kj"]
 [ext_resource type="Script" uid="uid://k1aavhe2a3rv" path="res://components/utils/mechanics/area_entered_transition.gd" id="5_u1nb2"]
@@ -19,6 +20,8 @@ height = 702.9258
 [node name="Area2D" type="Area2D" parent="." unique_id=89160719 node_paths=PackedStringArray("to_disable")]
 script = ExtResource("5_u1nb2")
 to_disable = NodePath("../Draggable")
+play_sfx = true
+stream = ExtResource("2_u1nb2")
 
 [node name="Ticket" type="Sprite2D" parent="Area2D" unique_id=1881277271]
 position = Vector2(347, -147)

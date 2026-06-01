@@ -19,6 +19,7 @@
 [ext_resource type="Resource" uid="uid://c7lmkx4rfg6sk" path="res://components/utils/audio/audio_configurations/loop_config/c1_3_steps_outside_loop.tres" id="6_xvkp8"]
 [ext_resource type="Resource" uid="uid://dj3y2ed33fmt0" path="res://components/utils/audio/audio_configurations/music_config/c2_1_walking_theme_panel_15_to_20.tres" id="7_a4fxu"]
 [ext_resource type="Resource" uid="uid://ckax75utljvro" path="res://components/utils/audio/audio_configurations/loop_config/c2_1_motocycle_not_running.tres" id="7_gqdoy"]
+[ext_resource type="AudioStream" uid="uid://f6gm842kgfes" path="res://audio/chapter1/ambient/panel_section_3/panel_3.28_3.29_bus_sound.wav" id="7_ql2kw"]
 [ext_resource type="Resource" uid="uid://dy6c0ys045bnl" path="res://components/utils/audio/audio_configurations/music_config/c2_1_motocycle_panel_20_to_24.tres" id="8_femi8"]
 [ext_resource type="Resource" uid="uid://kjsquroabufd" path="res://components/utils/audio/audio_configurations/sfx_config/puzzle_correct_piece.tres" id="8_pkc7b"]
 [ext_resource type="Resource" uid="uid://bi3sw2okh1svf" path="res://components/utils/audio/audio_configurations/loop_config/c2_1_motocycle_running_sound_loop_20_and_23.tres" id="8_v1u3r"]
@@ -33,6 +34,7 @@
 [ext_resource type="Resource" uid="uid://dx1n38hkurfs7" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_6_textil.tres" id="15_l82md"]
 [ext_resource type="AudioStream" uid="uid://d1jjetsntvge2" path="res://audio/chapter1/soundtrack/MIGRATION-THEME.wav" id="15_xnur5"]
 [ext_resource type="Resource" uid="uid://b8fcxi8n8wt7p" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_7_mmm_woman.tres" id="16_8i027"]
+[ext_resource type="AudioStream" uid="uid://51istcnxofiw" path="res://audio/chapter1/soundtrack/final_theme_.wav" id="16_tadwd"]
 [ext_resource type="Resource" uid="uid://cgl0u8c8v4c61" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_10_child_move.tres" id="17_wobcp"]
 [ext_resource type="Resource" uid="uid://fmn6ks5edqm1" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_11_hands.tres" id="18_o7t6w"]
 [ext_resource type="Resource" uid="uid://bjrs7vffdaxix" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_12_child_move2.tres" id="19_a4fxu"]
@@ -45,10 +47,22 @@
 [ext_resource type="AudioStream" uid="uid://qoly0ig3clh0" path="res://audio/chapter1/ambient/panel_section_3/panel_3.8_eating_sound_2.wav" id="42_xnur5"]
 [ext_resource type="AudioStream" uid="uid://bedpxltkhf5ii" path="res://audio/chapter1/ambient/panel_section_3/panel_3.13_paper_sound.wav" id="43_xvkp8"]
 
+[sub_resource type="Resource" id="Resource_vpsk8"]
+script = ExtResource("1_0736c")
+type = 1400
+stream = ExtResource("7_ql2kw")
+metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
+
 [sub_resource type="Resource" id="Resource_ql2kw"]
 script = ExtResource("3_qemoy")
 type = 1300
 stream = ExtResource("15_xnur5")
+metadata/_custom_type_script = "uid://bgl0a3vgvcmsb"
+
+[sub_resource type="Resource" id="Resource_acaqn"]
+script = ExtResource("3_qemoy")
+type = 1400
+stream = ExtResource("16_tadwd")
 metadata/_custom_type_script = "uid://bgl0a3vgvcmsb"
 
 [sub_resource type="Resource" id="Resource_po7nl"]
@@ -72,6 +86,6 @@ metadata/_custom_type_script = "uid://duuxorfspwlxi"
 [resource]
 script = ExtResource("1_lqs57")
 sfx_configuration = Array[ExtResource("1_imlmo")]([ExtResource("3_lhat2"), ExtResource("8_pkc7b"), ExtResource("9_oije2"), ExtResource("9_75gak"), ExtResource("9_1aw0s"), ExtResource("10_75gak"), ExtResource("11_pkc7b"), ExtResource("12_oije2"), ExtResource("13_behby"), ExtResource("14_e2tky"), ExtResource("15_l82md"), ExtResource("16_8i027"), ExtResource("17_wobcp"), ExtResource("18_o7t6w"), ExtResource("19_a4fxu"), ExtResource("20_femi8"), ExtResource("21_pwl8h"), ExtResource("22_a1sox"), ExtResource("23_gqdoy"), SubResource("Resource_po7nl"), SubResource("Resource_tadwd"), SubResource("Resource_xnur5")])
-loop_configuration = Array[ExtResource("1_0736c")]([ExtResource("2_po7nl"), ExtResource("3_c6civ"), ExtResource("4_gb34v"), ExtResource("5_v3pri"), ExtResource("6_xvkp8"), ExtResource("3_8i027"), ExtResource("2_l82md"), ExtResource("4_femi8"), ExtResource("5_pwl8h"), ExtResource("6_a1sox"), ExtResource("7_gqdoy"), ExtResource("8_v1u3r")])
-music_configuration = Array[ExtResource("3_qemoy")]([SubResource("Resource_ql2kw"), ExtResource("5_wobcp"), ExtResource("6_o7t6w"), ExtResource("7_a4fxu"), ExtResource("8_femi8")])
+loop_configuration = Array[ExtResource("1_0736c")]([ExtResource("2_po7nl"), ExtResource("3_c6civ"), ExtResource("4_gb34v"), ExtResource("5_v3pri"), ExtResource("6_xvkp8"), SubResource("Resource_vpsk8"), ExtResource("3_8i027"), ExtResource("2_l82md"), ExtResource("4_femi8"), ExtResource("5_pwl8h"), ExtResource("6_a1sox"), ExtResource("7_gqdoy"), ExtResource("8_v1u3r")])
+music_configuration = Array[ExtResource("3_qemoy")]([SubResource("Resource_ql2kw"), SubResource("Resource_acaqn"), ExtResource("5_wobcp"), ExtResource("6_o7t6w"), ExtResource("7_a4fxu"), ExtResource("8_femi8")])
 metadata/_custom_type_script = "uid://cqxrtlyvs0npt"
