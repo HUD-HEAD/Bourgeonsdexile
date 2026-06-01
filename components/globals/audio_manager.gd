@@ -171,7 +171,8 @@ func play_loop(key: AudioConfiguration.loop_type):
 		loop.pitch_scale = loop_info.pitch
 		loop.stream = loop_info.stream
 	
-		loop.play()
+		#loop.play()
+		fade_in(loop)
 	
 func stop_loop(key: AudioConfiguration.loop_type, fade_in_enable: bool = true ):
 	_free_loop(key, fade_in_enable)

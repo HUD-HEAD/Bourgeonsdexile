@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://crb67gas4jtht" path="res://components/chapter2/comic_panels/comic_2/panel_5.tscn" id="12_0qtw2"]
 [ext_resource type="PackedScene" uid="uid://b4wrk2bohakti" path="res://components/chapter2/comic_panels/comic_2/panel_6.tscn" id="13_24i2u"]
 [ext_resource type="PackedScene" uid="uid://b78hoghov0bc0" path="res://components/chapter2/comic_panels/comic_2/panel_7.tscn" id="14_r73yv"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="15_5ylu8"]
 [ext_resource type="PackedScene" uid="uid://t6aiy6ygkqlj" path="res://components/chapter2/comic_panels/comic_2/panel_8.tscn" id="15_rhiyq"]
 [ext_resource type="PackedScene" uid="uid://o1y7170fepis" path="res://components/chapter2/comic_panels/comic_2/panel_9.tscn" id="16_xit2h"]
 [ext_resource type="PackedScene" uid="uid://c4wqbvxsrfu6w" path="res://components/chapter2/comic_panels/comic_2/panel_10.tscn" id="17_r0851"]
@@ -84,6 +85,14 @@ position = Vector2(26896, 0)
 [node name="Panel12" parent="Panels" unique_id=1292771478 instance=ExtResource("19_hkqs5")]
 position = Vector2(30014, 0)
 
+[node name="TriggerLoopZone2" type="VisibleOnScreenNotifier2D" parent="Panels/Panel12" unique_id=939370971]
+position = Vector2(2102, 500)
+rect = Rect2(-27, -10, 37, 53)
+script = ExtResource("15_5ylu8")
+loop_name = 2202
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
 [node name="Panel14" parent="Panels" unique_id=2106480820 instance=ExtResource("21_0qtw2")]
 position = Vector2(32088, 0)
 
@@ -106,3 +115,11 @@ panels = [NodePath("../Panels/Panel1"), NodePath("../Panels/Panel2"), NodePath("
 position = Vector2(40335, 596)
 script = ExtResource("19_5ylu8")
 next_scene = "uid://calxcc2jttv3p"
+
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=1968681839]
+position = Vector2(1834, 446)
+rect = Rect2(-4, 33, 143, 159)
+script = ExtResource("15_5ylu8")
+loop_name = 2105
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"

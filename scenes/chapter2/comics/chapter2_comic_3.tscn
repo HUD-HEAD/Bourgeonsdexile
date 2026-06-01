@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://beyuhljsjvkd7" path="res://components/chapter2/comic_panels/comic_3/Panel_3.tscn" id="10_qbakg"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="11_08xu7"]
 [ext_resource type="PackedScene" uid="uid://dnsgd7d1ydmqv" path="res://components/chapter2/comic_panels/comic_3/Panel_4.tscn" id="11_m64im"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="12_1hfo3"]
 [ext_resource type="PackedScene" uid="uid://dxvnkp4f3rnwd" path="res://components/chapter2/comic_panels/comic_3/Panel_5.tscn" id="12_wogoy"]
 [ext_resource type="PackedScene" uid="uid://dohgjrclcdvw" path="res://components/chapter2/comic_panels/comic_3/Panel_6.tscn" id="13_krelq"]
 [ext_resource type="PackedScene" uid="uid://clom5eodmhl4h" path="res://components/chapter2/comic_panels/comic_3/Panel_12.tscn" id="15_8hjah"]
@@ -73,3 +74,11 @@ panels = [NodePath("../Panels/Panel1"), NodePath("../Panels/Panel2"), NodePath("
 position = Vector2(20899, 596)
 script = ExtResource("11_08xu7")
 next_scene = "uid://b2aetpff4f5gp"
+
+[node name="TriggerLoopZone2" type="VisibleOnScreenNotifier2D" parent="." unique_id=51445306]
+position = Vector2(1015, 386)
+rect = Rect2(-215, 246, 414, 320)
+script = ExtResource("12_1hfo3")
+loop_name = 2203
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"

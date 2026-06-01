@@ -14,7 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://cxij4r3n3o6nv" path="res://graphics/chapter2/comics/comic3/frameflashbacks/couplebby.png" id="13_y1cfd"]
 [ext_resource type="Texture2D" uid="uid://4qtpiiyt7fi2" path="res://graphics/chapter2/comics/comic3/frameflashbacks/fam.png" id="14_bwywc"]
 [ext_resource type="Texture2D" uid="uid://cyc55wagvw7px" path="res://graphics/chapter2/comics/comic3/frameflashbacks/hug.png" id="15_2love"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="16_imcbi"]
 [ext_resource type="Texture2D" uid="uid://rrx2gkjb7x6x" path="res://graphics/chapter2/comics/comic3/frameflashbacks/manback.png" id="16_vperd"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="17_y1cfd"]
+[ext_resource type="AudioStream" uid="uid://cq4csvvwec2q7" path="res://audio/chapter2/ambient/comic 3/panel_3.11_screaming_sound.wav" id="18_bwywc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xjtdg"]
 radius = 480.24265
@@ -361,6 +364,48 @@ tracks/13/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
+tracks/14/type = "method"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("AudioContainer/Play_BreathingSound")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"trigger_loop"
+}]
+}
+tracks/15/type = "method"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("AudioContainer/Stop_BreathingSound")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(23),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"trigger_loop"
+}]
+}
+tracks/16/type = "method"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("AudioContainer/TriggerSfxOnClick")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(21),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_sfx"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xwc27"]
 _data = {
@@ -444,3 +489,25 @@ anim_player = NodePath("../AnimationPlayer")
 metadata/_custom_type_script = "uid://u4636s8oa5d0"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1579479527]
+
+[node name="AudioContainer" type="Node" parent="." unique_id=461208160]
+
+[node name="Play_BreathingSound" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=17897086]
+script = ExtResource("16_imcbi")
+loop_name = 2301
+start_loop_on_enter_screen = false
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="Stop_BreathingSound" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=569355460]
+script = ExtResource("16_imcbi")
+loop_name = 2301
+start_loop_on_enter_screen = false
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerSfxOnClick" type="Node" parent="AudioContainer" unique_id=1549286389]
+script = ExtResource("17_y1cfd")
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("18_bwywc")
+linear_volume = 1.2
+metadata/_custom_type_script = "uid://b7avucygxykbp"

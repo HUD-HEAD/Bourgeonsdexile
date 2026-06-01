@@ -24,7 +24,9 @@ enum sfx_type{
 	,c2_1_13_sad_moment = 2111
 	,c2_1_14_doors_open = 2112
 	,c2_1_15_car = 2113
-	,c2_1_19_car = 2114	
+	,c2_1_19_car = 2114,
+	c2_3_water_drink = 2300,
+	
 }
 
 enum loop_type{
@@ -44,6 +46,14 @@ enum loop_type{
 	c2_1_voices_loop_15_to_19 = 2104,
 	c2_1_motocycle_running_sound_loop_20_and_23 = 2105,
 	c2_1_motocycle_not_running = 2106,
+	
+	c2_2_day_night_sound = 2200,
+	c2_2_people_sound = 2201,
+	c2_2_night_day_bus = 2202,
+	c2_2_bus_sound = 2203,
+	c2_3_bus_people = 2300,
+	c2_3_breathing_sound = 2301,
+	c2_3_city_space = 2302,
 }
 
 enum music_type{
