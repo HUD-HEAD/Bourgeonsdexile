@@ -30,6 +30,9 @@ const resolutions_modes = {
 	"4": {"size": Vector2i(3840, 2160), "scale": 2},
 }
 
+var popup_values = []
+static var screen_center_position
+
 static  var has_been_initialized = false
 static var player_preferences: PlayerPreferences
 static var main_viewport: Viewport
@@ -50,6 +53,7 @@ func _ready() -> void:
 	close_button.connect("pressed", _on_close_button_pressed)
 	credits_button.connect("pressed", _on_credits_button_pressed)
 	resolution_popup.id_pressed.connect(_on_popup_menu_value_change)
+	resolution_container.connect("pressed", _on_select_resolution_dropdown) 
 
 func _set_initial_values():
 	# Cargar valores guardados
@@ -65,6 +69,17 @@ func _set_initial_values():
 	cursor_slider.min_value = CURSOR_MIN
 	cursor_slider.max_value = CURSOR_MAX
 	cursor_slider.step = CURSOR_STEP
+	
+	save_popup_values()
+
+func save_popup_values():
+	for i in range(resolution_popup.item_count):
+		var popup_data = {
+			"id" = resolution_popup.get_item_id(i),
+			"icon" = resolution_popup.get_item_icon(i)
+		}
+		popup_values.append(popup_data)
+
 
 static func _initialize(viewport_aux: Viewport):
 	if !has_been_initialized:
@@ -121,6 +136,25 @@ func _on_vsync_check_toggled(pressed: bool) -> void:
 	_save_player_preferences()
 
 # ── Resolution Dropdown ────────────────────────────────────────
+func _on_select_resolution_dropdown():
+		var screen_index: int = DisplayServer.window_get_current_screen()
+		
+		var size = DisplayServer.screen_get_size(screen_index)
+		
+		if size.x < 2560 && size.y < 1440 && resolution_popup.item_count > 3:
+			resolution_popup.remove_item(3)
+		elif resolution_popup.item_count <= 3:
+			resolution_popup.add_item("", popup_values[3]["id"])
+			resolution_popup.set_item_icon(3, popup_values[3]["icon"])
+		
+		if size.x < 3840 && size.y < 2160 && resolution_popup.item_count > 3:
+			resolution_popup.remove_item(3)
+		elif resolution_popup.item_count <= 4:
+			resolution_popup.add_item("", popup_values[4]["id"])
+			resolution_popup.set_item_icon(3, popup_values[4]["icon"])
+		
+		
+
 func _on_popup_menu_value_change(id: int) -> void:
 	player_preferences.resolution = id
 	var resolution_sprite_index = _get_resolution_texture_index(id)
@@ -163,31 +197,6 @@ func _on_reset_player_preferences():
 func _on_reset_player_progress():
 	SaveManager.reset_save_file()
 
-# ── Idiomas ───────────────────────────────────────────
-#func _on_button_es_pressed() -> void:
-	#GameManager.language = "ES"
-#
-#func _on_button_en_pressed() -> void:
-	#GameManager.language = "EN"
-#
-#func _on_button_fr_pressed() -> void:
-	#GameManager.language = "FR"
-#
-#func _on_button_it_pressed() -> void:
-	#GameManager.language = "IT"
-#
-#func _on_button_zh_pressed() -> void:
-	#GameManager.language = "ZH"
-#
-#func _on_button_ar_pressed() -> void:
-	#GameManager.language = "AR"
-#
-#func _on_button_jp_pressed() -> void:
-	#GameManager.language = "JP"
-#
-#func _on_button_fa_pressed() -> void:
-	#GameManager.language = "FA"
-
 # ── Créditos ──────────────────────────────────────────
 func _on_credits_button_pressed() -> void:
 	if 	credits_container:
@@ -223,16 +232,22 @@ static func _apply_fullscreen(value: bool) -> void:
 		
 		#calculate screnn sizes
 		var full_size = DisplayServer.screen_get_size(screen_index) 
-		var window_size = Vector2i(int(full_size.x * 0.75), int(full_size.y * 0.75))
-		
+		#var window_size = Vector2i(int(full_size.x * 0.75), int(full_size.y * 0.75))
+		var window_size = resolutions_modes[str(player_preferences.resolution)]["size"]
 		#Set new size & deactivate borderless
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		DisplayServer.window_set_size(window_size)
 		DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, false)
 		
 		#center screen on the center
-		var new_screen_position = DisplayServer.screen_get_position(screen_index) + (full_size - window_size) / 2
-		DisplayServer.window_set_position(new_screen_position, screen_index)
+		#screen_center_position = DisplayServer.screen_get_position(screen_index) + (full_size - window_size) / 2
+		#DisplayServer.window_set_position(screen_center_position, screen_index)
+		_center_window()
+
+static func _center_window():
+	var idx = DisplayServer.window_get_current_screen()
+	screen_center_position = DisplayServer.screen_get_position(idx) + (DisplayServer.screen_get_size(idx)  - DisplayServer.window_get_size()) / 2
+	DisplayServer.window_set_position(screen_center_position, idx)
 
 static func _apply_vsync(value: bool) -> void:
 	if value:
@@ -241,16 +256,23 @@ static func _apply_vsync(value: bool) -> void:
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
 
 static func _apply_resolution_value(key: String) -> void:
-	var root_node = Engine.get_main_loop().root
-	print(root_node)
-	var resolution = resolutions_modes[key]
-	var scale_res: float = resolution["scale"]
-	main_viewport.content_scale_factor = scale_res
-	main_viewport.content_scale_size = resolution["size"]
-	#root_node.scale = Vector2(scale, scale)
-	
 	if !player_preferences.is_fullscreen:
-		DisplayServer.window_set_size(resolutions_modes[key]["size"])
+		DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, false)
+		_center_window()
+		
+	DisplayServer.window_set_size(resolutions_modes[key]["size"])
+	##Old implementation
+	
+	#var root_node = Engine.get_main_loop().root
+	#print(root_node)
+	#var resolution = resolutions_modes[key]
+	#var scale_res: float = resolution["scale"]
+	#main_viewport.content_scale_factor = scale_res
+	#main_viewport.content_scale_size = resolution["size"]
+	##root_node.scale = Vector2(scale, scale)
+	#
+	#if !player_preferences.is_fullscreen:
+		#DisplayServer.window_set_size(resolutions_modes[key]["size"])
 
  # ── Save Player Preferences ───────────────────────────────────
 func _save_player_preferences() -> void:

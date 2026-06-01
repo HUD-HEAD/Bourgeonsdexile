@@ -27,6 +27,8 @@
 [ext_resource type="Texture2D" uid="uid://dkm7pj8kxf23p" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow3.png" id="29_kde1w"]
 [ext_resource type="SpriteFrames" uid="uid://882iqrb47j8n" path="res://components/chapter1/levels/lajas_blancas/queue/teen.tres" id="30_h15xc"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="34_kde1w"]
+[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="35_sgj77"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="36_iscax"]
 [ext_resource type="PackedScene" uid="uid://cx455fd0kkpbt" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB3.tscn" id="43_nx082"]
 [ext_resource type="PackedScene" uid="uid://b0rp3ag1qca1u" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB1.tscn" id="45_i6383"]
 [ext_resource type="PackedScene" uid="uid://dhktyk6ijdbuk" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB5.tscn" id="48_jenef"]
@@ -140,7 +142,6 @@ position = Vector2(1, 5)
 [node name="QueuePerson" parent="QueuingPeople" unique_id=606944070 node_paths=PackedStringArray("model") instance=ExtResource("18_ih44s")]
 position = Vector2(689, 844)
 model = NodePath("../../Spawn/Nina")
-offset_from_model = 0.0
 
 [node name="QueuePerson2" type="Node2D" parent="QueuingPeople" unique_id=700974070 node_paths=PackedStringArray("model", "anim_sprite")]
 position = Vector2(821, 844)
@@ -453,6 +454,7 @@ position = Vector2(460, 867)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(45, -15)
+play_walking_sfx = true
 
 [node name="AnimSprite" parent="Spawn/Nina" index="0" unique_id=689873547]
 scale = Vector2(0.8, 0.8)
@@ -473,6 +475,55 @@ offset = Vector2(500, 0)
 [node name="CheckpointController" type="Node" parent="." unique_id=1005402094]
 script = ExtResource("34_kde1w")
 comic = 6
+
+[node name="AudioContainer" type="Node" parent="." unique_id=1196178060]
+
+[node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=81881556]
+position = Vector2(89, 49)
+rect = Rect2(-10, -10, 4893, 101)
+script = ExtResource("35_sgj77")
+loop_name = 1302
+metadata/_custom_type_script = "uid://brda7473wfj1v"
+
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=671470358]
+position = Vector2(3122, 794)
+rect = Rect2(-10, -10, 41, 48)
+script = ExtResource("36_iscax")
+loop_name = 1303
+loop_mode = 2
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone2" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=970991648]
+position = Vector2(4057, 793)
+rect = Rect2(-10, -10, 41, 48)
+script = ExtResource("36_iscax")
+loop_name = 1304
+loop_mode = 2
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone3" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=845469482]
+position = Vector2(301, 831)
+rect = Rect2(-10, -10, 112, 48)
+script = ExtResource("36_iscax")
+loop_name = 1304
+loop_mode = 2
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone4" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1312628124]
+position = Vector2(5774, 778)
+rect = Rect2(-10, -10, 41, 48)
+script = ExtResource("36_iscax")
+loop_name = 1303
+loop_mode = 2
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone5" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1270703491]
+position = Vector2(5915, 773)
+rect = Rect2(-10, -10, 41, 48)
+script = ExtResource("36_iscax")
+loop_name = 1303
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [editable path="QueuingPeople/QueuePerson"]
 [editable path="Queue1/Puzzle4/DragDropPuzzle11"]

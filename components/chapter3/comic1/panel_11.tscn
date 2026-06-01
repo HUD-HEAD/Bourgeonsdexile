@@ -1,9 +1,53 @@
 [gd_scene format=3 uid="uid://de2gbwl2xf52m"]
 
 [ext_resource type="Texture2D" uid="uid://bn16e5y6xqyyw" path="res://graphics/chapter3/comics/comic1/framehospitalpeople/1.png" id="1_8rixe"]
+[ext_resource type="Texture2D" uid="uid://1pil2u61aohe" path="res://graphics/chapter3/comics/comic1/framehospitalpeople/2.png" id="2_x3wyi"]
+[ext_resource type="Texture2D" uid="uid://gjsqjnplvthu" path="res://graphics/chapter3/comics/comic1/framehospitalpeople/3.png" id="3_dxr1f"]
+[ext_resource type="Texture2D" uid="uid://c1i884iey4ui6" path="res://graphics/chapter3/comics/comic1/framehospitalpeople/4.png" id="4_wpsl4"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="5_dxr1f"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="6_wpsl4"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="7_qgp3a"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qgp3a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8rixe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_x3wyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dxr1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wpsl4")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wpsl4"]
+size = Vector2(1604, 986)
 
 [node name="PanelDoctors" type="Node2D" unique_id=162787811]
 
-[node name="1" type="Sprite2D" parent="." unique_id=798600185]
-position = Vector2(0, -5)
-texture = ExtResource("1_8rixe")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1053469056 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_qgp3a")
+script = ExtResource("5_dxr1f")
+clickable = NodePath("../Clickable")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=1094554051]
+script = ExtResource("6_wpsl4")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=732239531]
+position = Vector2(0, 23)
+shape = SubResource("RectangleShape2D_wpsl4")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=1620536936 node_paths=PackedStringArray("clickables")]
+script = ExtResource("7_qgp3a")
+clickables = [NodePath("../Clickable")]
+obstacles_to_clear = 3
+metadata/_custom_type_script = "uid://c44tybeisilbv"

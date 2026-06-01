@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://dnon84uyke6c4" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow2.png" id="6_auyp5"]
 [ext_resource type="SpriteFrames" uid="uid://8wnk5pl0cnpd" path="res://components/chapter2/characters/nephew_sprite_frames.tres" id="7_bjdqe"]
 [ext_resource type="Texture2D" uid="uid://dkm7pj8kxf23p" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow3.png" id="7_p0wi7"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="8_rbhmf"]
+[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="9_wdx3e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vodvp"]
 animations = [{
@@ -70,5 +72,19 @@ autoplay = "default"
 frame_progress = 0.9875541
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2034754209]
+
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=464005847]
+position = Vector2(1278, -96)
+rect = Rect2(-10, -10, 262, 254)
+script = ExtResource("8_rbhmf")
+loop_name = 2100
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="." unique_id=1764894012]
+position = Vector2(-379, 246)
+rect = Rect2(-492, -339, 197, 189)
+script = ExtResource("9_wdx3e")
+music_name = 2102
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
 
 [editable path="ScrollingBackground"]

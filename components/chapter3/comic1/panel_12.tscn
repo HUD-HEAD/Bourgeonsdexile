@@ -1,9 +1,16 @@
 [gd_scene format=3 uid="uid://o2lunwmjplwk"]
 
 [ext_resource type="Texture2D" uid="uid://b3ql1et85gcss" path="res://graphics/chapter3/comics/comic1/framehospitaldoor/framehospital1.png" id="1_llcud"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_ti4td"]
 
 [node name="PanelDoctors" type="Node2D" unique_id=162787811]
 
 [node name="Framehospital1" type="Sprite2D" parent="." unique_id=114135818]
 position = Vector2(-1, 0)
 texture = ExtResource("1_llcud")
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=216011709]
+script = ExtResource("2_ti4td")
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1410360656]

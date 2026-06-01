@@ -785,7 +785,6 @@ position = Vector2(459.85278, 816.4505)
 
 [node name="JungleWomanReflection" parent="Path2D/ReflectionNina/ReflectionContainer" parent_id_path=PackedInt32Array(732020292, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
-offset_from_model = 0.0
 
 [node name="Shadow" parent="Path2D/ReflectionNina/ReflectionContainer/JungleWomanReflection/AnimSprite" parent_id_path=PackedInt32Array(732020292, 700974070, 689873547) index="0" unique_id=1632501669]
 visible = false
@@ -796,7 +795,6 @@ progress = 359.48
 
 [node name="JungleWomanReflection" parent="Path2D/ReflectionCompanion1/ReflectionContainer" parent_id_path=PackedInt32Array(1639842222, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
-offset_from_model = 0.0
 
 [node name="AnimSprite" parent="Path2D/ReflectionCompanion1/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 sprite_frames = ExtResource("16_17nyf")
@@ -811,7 +809,6 @@ progress = 256.8
 
 [node name="JungleWomanReflection" parent="Path2D/ReflectionCompanion2/ReflectionContainer" parent_id_path=PackedInt32Array(1162299954, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
-offset_from_model = 0.0
 
 [node name="AnimSprite" parent="Path2D/ReflectionCompanion2/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 sprite_frames = ExtResource("17_k7em6")
@@ -826,7 +823,6 @@ progress = 160.65
 
 [node name="JungleWomanReflection" parent="Path2D/ReflectionCompanion3/ReflectionContainer" parent_id_path=PackedInt32Array(2137896206, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
-offset_from_model = 0.0
 
 [node name="AnimSprite" parent="Path2D/ReflectionCompanion3/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 sprite_frames = ExtResource("19_jh4yo")
@@ -1388,9 +1384,6 @@ texture = ExtResource("157_idr4k")
 
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzles/Puzzle6/DragDropPuzzle3/BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(789965, 918960518, 2116105691) index="1" unique_id=991932022]
 texture = ExtResource("158_p6vwg")
-
-[node name="Receptacle4" parent="Puzzles/Puzzle6/DragDropPuzzle3/BuildingBlocks" parent_id_path=PackedInt32Array(789965, 1654234455) index="5" unique_id=607622472]
-position = Vector2(-783.71875, -180.88026)
 
 [node name="PuzzlePiece2" parent="Puzzles/Puzzle6/DragDropPuzzle3/BuildingBlocks" parent_id_path=PackedInt32Array(789965, 1654234455) index="6" unique_id=379005598]
 position = Vector2(-452.14066, -124.79294)

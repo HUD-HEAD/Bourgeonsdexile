@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c3ky5ftb6on5a" path="res://graphics/chapter1/comics/comic3/panel_kid_lajas/frame_kidlajas.png" id="1_cngrr"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_tjsn0"]
+[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="3_rdruj"]
 
 [node name="JungleComic3FrameKidLajas" type="Node2D" unique_id=120581857]
 
@@ -12,3 +13,10 @@ texture = ExtResource("1_cngrr")
 script = ExtResource("2_tjsn0")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1658164614]
+
+[node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=1514864882]
+position = Vector2(25, 82)
+rect = Rect2(-335, -222, 674, 476)
+script = ExtResource("3_rdruj")
+loop_name = 1301
+metadata/_custom_type_script = "uid://brda7473wfj1v"

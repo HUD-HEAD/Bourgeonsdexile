@@ -28,6 +28,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 			
 			#Only go to menu when the user is in a Chapter, To avoid reloading the menu scene while in the settings screen/Credits - Adrian
 			elif !get_tree().root.get_node("MainMenu"):
+				AudioManager.reset_audio()
 				SceneManager.goto_scene(ProjectSettings.get_setting("application/run/main_scene"))
 	
 	if OS.has_feature("debug"):

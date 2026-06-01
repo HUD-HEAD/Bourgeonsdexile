@@ -62,6 +62,9 @@
 [ext_resource type="Texture2D" uid="uid://bkwhwr5hvk0xe" path="res://graphics/chapter2/levels/goma/npcs/couple_wave_hand_5fps/couple_wave_hand_0004.png" id="60_6oc3f"]
 [ext_resource type="Texture2D" uid="uid://bnofl6njv0ih2" path="res://graphics/chapter2/levels/goma/npcs/couple_wave_hand_5fps/couple_wave_hand_0005.png" id="61_idrs3"]
 [ext_resource type="Texture2D" uid="uid://omkhv1qdcg3d" path="res://graphics/chapter2/levels/goma/npcs/couple_wave_hand_5fps/couple_wave_hand_0006.png" id="62_7kpd7"]
+[ext_resource type="Script" uid="uid://bvmwxu2au5j5l" path="res://components/utils/audio/audio integration nodes/audio_sfx_zone.gd" id="63_8oqhf"]
+[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="64_3d65b"]
+[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="65_6oc3f"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3ogmi"]
 animations = [{
@@ -551,7 +554,6 @@ shape = SubResource("CapsuleShape2D_6b20s")
 [node name="Companion" parent="CharWalking" unique_id=426633640 node_paths=PackedStringArray("model") instance=ExtResource("6_bing5")]
 position = Vector2(571, 839)
 model = NodePath("../Amani")
-offset_from_model = 0.0
 
 [node name="AnimSprite" parent="CharWalking/Companion" index="0" unique_id=689873547]
 sprite_frames = ExtResource("7_mp6eu")
@@ -567,6 +569,71 @@ camera_to_reparent = NodePath("../CharWalking/Amani/Camera2D")
 position = Vector2(19842, 645)
 script = ExtResource("15_xf2b4")
 next_scene = "uid://uy4d64oh4m1q"
+
+[node name="AudioContainer" type="Node" parent="." unique_id=300018168]
+
+[node name="AudioSfxZone" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=527767718]
+position = Vector2(913, 655)
+rect = Rect2(-82, -10, 92, 67)
+script = ExtResource("63_8oqhf")
+sfx = 2113
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
+
+[node name="AudioSfxZone2" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=348320338]
+position = Vector2(5044, 651)
+rect = Rect2(-82, -10, 92, 67)
+script = ExtResource("63_8oqhf")
+sfx = 2114
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
+
+[node name="LoopZone_15_19" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=2118223231]
+position = Vector2(116, 41)
+rect = Rect2(-44, -10, 5000, 912)
+script = ExtResource("64_3d65b")
+loop_name = 2102
+metadata/_custom_type_script = "uid://brda7473wfj1v"
+
+[node name="LoopZone2_15_19" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=88521695]
+position = Vector2(116, 41)
+rect = Rect2(-44, -10, 5000, 912)
+script = ExtResource("64_3d65b")
+loop_name = 2103
+metadata/_custom_type_script = "uid://brda7473wfj1v"
+
+[node name="LoopZone3_15_19" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=955856650]
+position = Vector2(116, 41)
+rect = Rect2(-44, -10, 5000, 912)
+script = ExtResource("64_3d65b")
+loop_name = 2104
+metadata/_custom_type_script = "uid://brda7473wfj1v"
+
+[node name="LoopZone_moto_notRunning" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1219073659]
+position = Vector2(5352, 517)
+rect = Rect2(-10, -10, 601, 430)
+script = ExtResource("64_3d65b")
+loop_name = 2106
+metadata/_custom_type_script = "uid://brda7473wfj1v"
+
+[node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1083261473]
+position = Vector2(6880, 440)
+rect = Rect2(-10, -10, 13883, 183)
+script = ExtResource("64_3d65b")
+loop_name = 2105
+metadata/_custom_type_script = "uid://brda7473wfj1v"
+
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=947001812]
+position = Vector2(134, 752)
+rect = Rect2(-6, -10, 254, 175)
+script = ExtResource("65_6oc3f")
+music_name = 2102
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="." unique_id=734422288]
+position = Vector2(6861, 522)
+rect = Rect2(-126, -10, 136, 157)
+script = ExtResource("65_6oc3f")
+music_name = 2103
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
 
 [editable path="Puzzles/Puzzle1/DragDropPuzzle2"]
 [editable path="Puzzles/Puzzle1/DragDropPuzzle2/BuildingBlocks/PuzzlePiece"]

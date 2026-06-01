@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://w8uh0fvrlddi" path="res://graphics/chapter1/comics/comic3/frame4/closedback.png" id="3_0s8tn"]
 [ext_resource type="Texture2D" uid="uid://by05t0qg8u6dy" path="res://graphics/chapter1/comics/comic3/frame_backpack/phone.png" id="3_e8six"]
 [ext_resource type="Texture2D" uid="uid://bgnj3352dju1s" path="res://graphics/chapter1/comics/comic3/frame_backpack/pills.png" id="4_0s8tn"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="4_pd87x"]
+[ext_resource type="AudioStream" uid="uid://ddfu46mg4gsa2" path="res://audio/chapter1/ambient/panel_section_3/panel_3.5_bag_selection.wav" id="5_0u8hi"]
 [ext_resource type="Texture2D" uid="uid://c86lcw644tk6h" path="res://graphics/chapter1/comics/comic3/frame_backpack/wallet.png" id="5_ejegh"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="6_yti6k"]
 
@@ -30,6 +32,16 @@ texture = ExtResource("2_0s8tn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1600363899]
 shape = SubResource("CapsuleShape2D_yti6k")
+
+[node name="TriggerSfxOnClick" type="Node" parent="Area2D" unique_id=1791772806 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_pd87x")
+clickables = [NodePath("..")]
+use_audio_stream = true
+stream = ExtResource("5_0u8hi")
+linear_volume = 0.9
+min_pitch = 0.95
+max_pitch = 1.05
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="Paassport" type="Sprite2D" parent="." unique_id=683147066]
 position = Vector2(279, -203)

@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="2_622gh"]
 [ext_resource type="Texture2D" uid="uid://ca1o21qdexyu7" path="res://graphics/chapter2/comics/comic1/frameadjusting/skirt2.png" id="2_h0el3"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="3_3j87b"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="5_h0el3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h0el3"]
 animations = [{
@@ -41,6 +42,12 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="frameadjustingskirt/Clickable" unique_id=1578995670]
 shape = SubResource("CircleShape2D_moath")
+
+[node name="TriggerSfxOnClick" type="Node" parent="frameadjustingskirt/Clickable" unique_id=1324990625 node_paths=PackedStringArray("clickables")]
+script = ExtResource("5_h0el3")
+clickables = [NodePath("..")]
+sfx = 2106
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="TransitionerCounter" type="Node" parent="." unique_id=565303799 node_paths=PackedStringArray("clickables")]
 script = ExtResource("3_3j87b")

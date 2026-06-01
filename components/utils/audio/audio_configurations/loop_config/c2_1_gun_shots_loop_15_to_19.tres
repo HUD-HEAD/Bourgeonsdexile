@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="loop_config" format=3 uid="uid://llrappg1cj4v"]
+
+[ext_resource type="Script" uid="uid://dojbh2mbjt6sh" path="res://components/utils/audio/loop_configuration.gd" id="1_t1i0c"]
+[ext_resource type="AudioStream" uid="uid://bq55wfhfehtft" path="res://audio/chapter2/ambient/level 1/panel_15_to_19_gun_shots_loop.wav" id="2_t1i0c"]
+
+[resource]
+script = ExtResource("1_t1i0c")
+type = 2102
+stream = ExtResource("2_t1i0c")
+metadata/_custom_type_script = "uid://dojbh2mbjt6sh"

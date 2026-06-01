@@ -1238,13 +1238,13 @@ stream = ExtResource("117_xf4f8")
 autoplay = true
 bus = &"Music"
 
+[node name="CheckpointController" type="Node" parent="." unique_id=1125817438]
+script = ExtResource("237_5h7fb")
+comic = 4
+
 [editable path="Puzzle1/CityPuzzle1"]
 [editable path="Puzzle2/CityPuzzle2"]
 [editable path="Puzzle3/DragDropPuzzle"]
 [editable path="Puzzle3/DragDropPuzzle/BuildingBlocks/PuzzlePiece"]
 [editable path="Puzzle3/DragDropPuzzle/BuildingBlocks/PuzzlePiece2"]
 [editable path="Puzzle3/DragDropPuzzle/BuildingBlocks/PuzzlePiece3"]
-
-[node name="CheckpointController" type="Node" parent="." unique_id=1125817438]
-script = ExtResource("237_5h7fb")
-comic = 4

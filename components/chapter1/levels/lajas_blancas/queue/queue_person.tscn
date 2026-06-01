@@ -11,6 +11,7 @@ height = 212.0
 
 [node name="QueuePerson" unique_id=700974070 instance=ExtResource("1_lfrhx")]
 script = ExtResource("2_trrhf")
+offset_from_model = 0.0
 
 [node name="AnimSprite" parent="." index="0" unique_id=689873547]
 sprite_frames = ExtResource("2_shsib")

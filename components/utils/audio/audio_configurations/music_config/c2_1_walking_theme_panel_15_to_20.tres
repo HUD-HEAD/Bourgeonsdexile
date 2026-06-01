@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="music_config" format=3 uid="uid://dj3y2ed33fmt0"]
+
+[ext_resource type="Script" uid="uid://bgl0a3vgvcmsb" path="res://components/utils/audio/music_configuration.gd" id="1_5l2og"]
+[ext_resource type="AudioStream" uid="uid://8mwhjbvf2b6o" path="res://audio/chapter2/soundtrack/level 1_part_1_walking_theme_panel_15_to_20_loop.wav" id="2_5l2og"]
+
+[resource]
+script = ExtResource("1_5l2og")
+type = 2102
+stream = ExtResource("2_5l2og")
+metadata/_custom_type_script = "uid://bgl0a3vgvcmsb"
