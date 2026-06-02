@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://df2rs52kcf4xd"
+path="res://.godot/imported/panel_3.4_sound_water_drink_1_sound.wav-98bcc60b0608c3f9b59a2ed478d865ba.sample"
+
+[deps]
+
+source_file="res://audio/chapter2/ambient/comic 3/panel_3.4_sound_water_drink_1_sound.wav"
+dest_files=["res://.godot/imported/panel_3.4_sound_water_drink_1_sound.wav-98bcc60b0608c3f9b59a2ed478d865ba.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

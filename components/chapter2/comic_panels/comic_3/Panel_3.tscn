@@ -5,7 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://bjo0o0gmq4mmf" path="res://graphics/chapter2/comics/comic3/frameating/2.png" id="2_tqhho"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="3_ce5nu"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="3_evk7g"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="6_4sc5f"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="6_kg3dy"]
+[ext_resource type="AudioStream" uid="uid://rte0d8dq8w3n" path="res://audio/chapter2/ambient/comic 3/panel_3.3_eating_sound.wav" id="7_8ye5d"]
+[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="7_owr0u"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ce5nu"]
 animations = [{
@@ -42,7 +45,22 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1884803713]
 shape = SubResource("CircleShape2D_tqhho")
 
+[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=723061378 node_paths=PackedStringArray("clickables")]
+script = ExtResource("6_4sc5f")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("7_8ye5d")
+linear_volume = 1.2
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
 [node name="TransitionerCounter" type="Node" parent="." unique_id=961104922 node_paths=PackedStringArray("clickables")]
 script = ExtResource("6_kg3dy")
 clickables = [NodePath("../Clickable")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=1871377106]
+rect = Rect2(-148, -96, 317, 241)
+script = ExtResource("7_owr0u")
+loop_name = 2300
+metadata/_custom_type_script = "uid://brda7473wfj1v"

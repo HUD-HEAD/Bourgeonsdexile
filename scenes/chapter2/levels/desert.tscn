@@ -57,6 +57,8 @@
 [ext_resource type="Texture2D" uid="uid://bs2hy56605dns" path="res://graphics/chapter2/levels/tangrampuzzles/7/7_7line.png" id="52_fabr7"]
 [ext_resource type="Texture2D" uid="uid://dudd5digrr5rb" path="res://graphics/chapter2/levels/tangrampuzzles/7/8_7line.png" id="53_j4odh"]
 [ext_resource type="Texture2D" uid="uid://wai0kjwxbksg" path="res://graphics/chapter2/levels/tangrampuzzles/7/8_7.png" id="54_owsko"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="58_k4v74"]
+[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="59_l3fw1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uu4gm"]
 size = Vector2(1545, 367)
@@ -610,6 +612,22 @@ shape = SubResource("RectangleShape2D_uu4gm")
 position = Vector2(127429, 645)
 script = ExtResource("3_aqeuv")
 next_scene = "uid://buy5yt5e73v7w"
+
+[node name="AudioContainer" type="Node" parent="." unique_id=577474811]
+
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=2028823691]
+position = Vector2(1240, 145)
+rect = Rect2(-10, -10, 209, 165)
+script = ExtResource("58_k4v74")
+loop_name = 2203
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=498956869]
+position = Vector2(1074, 573)
+rect = Rect2(-10, -10, 688, 68)
+script = ExtResource("59_l3fw1")
+music_name = 2200
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
 
 [editable path="Puzzles/Puzzle1/DragDropPuzzle"]
 [editable path="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece"]

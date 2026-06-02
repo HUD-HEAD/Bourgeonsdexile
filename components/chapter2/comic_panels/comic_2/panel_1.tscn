@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://24vjq7st4lnl" path="res://graphics/chapter2/comics/comic2/framebodaboda/framebodaboda2.png" id="2_xu0rb"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="3_6m734"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_6m734"]
+[ext_resource type="Script" uid="uid://bvmwxu2au5j5l" path="res://components/utils/audio/audio integration nodes/audio_sfx_zone.gd" id="5_2ih1y"]
+[ext_resource type="AudioStream" uid="uid://dbc4imgnaeijx" path="res://audio/chapter2/ambient/comic 2/panel_2.1_motocycle.wav" id="6_2obat"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eiw3d"]
 radius = 149.0
@@ -30,3 +32,12 @@ shape = SubResource("CapsuleShape2D_eiw3d")
 script = ExtResource("4_6m734")
 clickables = [NodePath("../Clickable")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="AudioSfxZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=1355557150]
+position = Vector2(164, 191)
+rect = Rect2(-41, -10, 51, 55)
+script = ExtResource("5_2ih1y")
+use_audio_stream = true
+stream = ExtResource("6_2obat")
+linear_volume = 1.1
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"

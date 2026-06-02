@@ -23,9 +23,10 @@
 [ext_resource type="SpriteFrames" uid="uid://s1fn7cbpginw" path="res://components/chapter1/levels/lajas_blancas/queue/green_woman.tres" id="26_lvato"]
 [ext_resource type="SpriteFrames" uid="uid://882iqrb47j8n" path="res://components/chapter1/levels/lajas_blancas/queue/teen.tres" id="30_h15xc"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="34_kde1w"]
+[ext_resource type="Script" uid="uid://bij60y62w1ho6" path="res://components/chapter1/main_characters/area_queue_off.gd" id="34_sgj77"]
 [ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="35_sgj77"]
 [ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="36_iscax"]
-[ext_resource type="Script" uid="uid://bij60y62w1ho6" path="res://components/chapter1/main_characters/area_queue_off.gd" id="37_b4pqv"]
+[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="37_b4pqv"]
 [ext_resource type="Script" uid="uid://b1sskfh26m851" path="res://components/utils/mechanics/area_entered_disable.gd" id="38_ex6vw"]
 [ext_resource type="PackedScene" uid="uid://cx455fd0kkpbt" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB3.tscn" id="43_nx082"]
 [ext_resource type="PackedScene" uid="uid://b0rp3ag1qca1u" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB1.tscn" id="45_i6383"]
@@ -535,11 +536,18 @@ loop_name = 1303
 loop_mode = 1
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=436130253]
+position = Vector2(94, 26)
+rect = Rect2(-10, -10, 134, 108)
+script = ExtResource("37_b4pqv")
+music_name = 1300
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
 [node name="AreaQueueOff" type="Area2D" parent="." unique_id=2081063707]
 position = Vector2(2427, 762)
 collision_layer = 0
 collision_mask = 8
-script = ExtResource("37_b4pqv")
+script = ExtResource("34_sgj77")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaQueueOff" unique_id=612840409]
 position = Vector2(25, -17.5)
@@ -558,7 +566,7 @@ shape = SubResource("RectangleShape2D_kde1w")
 position = Vector2(4579, 762)
 collision_layer = 0
 collision_mask = 8
-script = ExtResource("37_b4pqv")
+script = ExtResource("34_sgj77")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaQueueOff2" unique_id=1014640865]
 position = Vector2(25, -17.5)

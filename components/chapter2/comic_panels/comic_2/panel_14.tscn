@@ -5,6 +5,8 @@
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="3_shqb5"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="4_jsic2"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_lexxo"]
+[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="6_jsic2"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="7_lexxo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_or1kp"]
 animations = [{
@@ -49,3 +51,25 @@ clickables = [NodePath("../Clickable")]
 obstacles_to_clear = 3
 transition_delay = 2.0
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=736774254]
+position = Vector2(31, 150)
+rect = Rect2(-298, -82, 542, 181)
+script = ExtResource("6_jsic2")
+loop_name = 2201
+metadata/_custom_type_script = "uid://brda7473wfj1v"
+
+[node name="LoopZone2" type="VisibleOnScreenNotifier2D" parent="." unique_id=2077010801]
+position = Vector2(-3, 126)
+rect = Rect2(-256, -10, 525, 173)
+script = ExtResource("6_jsic2")
+loop_name = 2204
+metadata/_custom_type_script = "uid://brda7473wfj1v"
+
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=134880660]
+position = Vector2(1914, -34)
+rect = Rect2(-10, -10, 123, 83)
+script = ExtResource("7_lexxo")
+loop_name = 2204
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"

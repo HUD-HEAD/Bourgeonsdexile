@@ -6,7 +6,8 @@ extends Node2D
 #HACK
 @export var node_to_enable : Node
 
-
+@export_group("Sound")
+@export var loop_node_to_play : TriggerLoopZone
 #TODO optimize cursor shape signals
 
 func _ready() -> void:
@@ -36,3 +37,5 @@ func complete():
 	self.process_mode = Node.PROCESS_MODE_DISABLED
 	node_to_enable.process_mode = Node.PROCESS_MODE_INHERIT
 	
+	if loop_node_to_play != null:
+		loop_node_to_play.trigger_loop()

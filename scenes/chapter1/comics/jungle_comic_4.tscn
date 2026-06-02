@@ -9,11 +9,14 @@
 [ext_resource type="PackedScene" uid="uid://h67bkwvbgnvx" path="res://components/chapter1/comic_panels/comic_4/panel_bus.tscn" id="9_t5lhr"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="9_yggp2"]
 [ext_resource type="PackedScene" uid="uid://bjp2jprdkpbul" path="res://components/chapter1/comic_panels/comic_4/panel_topview.tscn" id="10_8767r"]
+[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="10_q8hgl"]
 [ext_resource type="PackedScene" uid="uid://kqn8hqak4g04" path="res://components/chapter1/comic_panels/comic_4/panel_phone_music.tscn" id="11_ot2ku"]
 [ext_resource type="PackedScene" uid="uid://dexx74rhechxm" path="res://components/chapter1/comic_panels/comic_4/panel_belly.tscn" id="11_p7egh"]
 [ext_resource type="PackedScene" uid="uid://crqtn2a43hhe8" path="res://components/chapter1/comic_panels/comic_4/panel_phone.tscn" id="12_xs8jl"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="13_ec356"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="14_fr0kj"]
+[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="16_qk0r3"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="17_sl4i0"]
 
 [node name="JungleComic4" type="Node2D" unique_id=1574922119]
 metadata/_edit_vertical_guides_ = [5131.0]
@@ -64,6 +67,12 @@ position = Vector2(12052, 534)
 [node name="Comic4Panel6" parent="." unique_id=1529630051 instance=ExtResource("9_t5lhr")]
 position = Vector2(14201, 540)
 
+[node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="Comic4Panel6" unique_id=2066880836]
+rect = Rect2(-10, -10, 1168, 191)
+script = ExtResource("10_q8hgl")
+loop_name = 1400
+metadata/_custom_type_script = "uid://brda7473wfj1v"
+
 [node name="PanelPhoneMusic" parent="." unique_id=1591460420 instance=ExtResource("11_ot2ku")]
 position = Vector2(16224, 540)
 
@@ -81,3 +90,18 @@ next_scene = "uid://ctau0miqtmbj2"
 [node name="CheckpointController" type="Node" parent="." unique_id=1709840026]
 script = ExtResource("14_fr0kj")
 comic = 3
+
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="." unique_id=1302950962]
+position = Vector2(355, 810)
+rect = Rect2(-57, -10, 67, 55)
+script = ExtResource("16_qk0r3")
+music_name = 1300
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=734733487]
+position = Vector2(320, 872)
+rect = Rect2(-10, -10, 41, 48)
+script = ExtResource("17_sl4i0")
+loop_name = 1302
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"

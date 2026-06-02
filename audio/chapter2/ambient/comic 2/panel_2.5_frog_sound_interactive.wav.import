@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://csxcfjd0a6055"
+path="res://.godot/imported/panel_2.5_frog_sound_interactive.wav-2dfbcc7f627bcb57aec3abc720e36e89.sample"
+
+[deps]
+
+source_file="res://audio/chapter2/ambient/comic 2/panel_2.5_frog_sound_interactive.wav"
+dest_files=["res://.godot/imported/panel_2.5_frog_sound_interactive.wav-2dfbcc7f627bcb57aec3abc720e36e89.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

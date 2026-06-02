@@ -37,7 +37,7 @@ clickables = [NodePath("..")]
 play_sfx_once = true
 use_audio_stream = true
 stream = ExtResource("5_lwsgk")
-linear_volume = 0.9
+linear_volume = 0.4
 metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="TransitionerCounter" type="Node" parent="." unique_id=402200503 node_paths=PackedStringArray("clickables")]

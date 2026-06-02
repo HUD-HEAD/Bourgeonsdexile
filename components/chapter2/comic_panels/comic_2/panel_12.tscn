@@ -5,6 +5,9 @@
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="3_7wvfg"]
 [ext_resource type="Material" uid="uid://dan4raduiqle3" path="res://scenes/prototyping/lut/mat_lut_nightcamp.tres" id="4_m2n67"]
 [ext_resource type="Script" uid="uid://bxdi7w06ul2j0" path="res://components/utils/comics/pan_modulate.gd" id="6_0bv3e"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="6_11q3p"]
+[ext_resource type="AudioStream" uid="uid://dv1xt2acgbr2m" path="res://audio/chapter2/ambient/comic 2/panel_2.12_night_day_bus_sound_interactive.wav" id="7_0bv3e"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="7_vorlf"]
 
 [sub_resource type="Animation" id="Animation_7wvfg"]
 length = 0.001
@@ -43,6 +46,9 @@ _data = {
 &"default": SubResource("Animation_4rdac")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jr8bs"]
+size = Vector2(2201.5, 1248.75)
+
 [node name="Panel1" type="Node2D" unique_id=547383153]
 
 [node name="Bg" type="Sprite2D" parent="." unique_id=795134189]
@@ -72,3 +78,19 @@ script = ExtResource("6_0bv3e")
 sensitivity = 0.001
 invert = true
 node_to_enable = NodePath("../AnimationPlayer")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=177205322]
+script = ExtResource("6_11q3p")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1138276266]
+position = Vector2(-5, 6)
+shape = SubResource("RectangleShape2D_jr8bs")
+
+[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=730712614 node_paths=PackedStringArray("clickables")]
+script = ExtResource("7_vorlf")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("7_0bv3e")
+metadata/_custom_type_script = "uid://b7avucygxykbp"

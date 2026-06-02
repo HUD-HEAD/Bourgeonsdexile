@@ -27,6 +27,7 @@ var music_dictionary: Dictionary[AudioConfiguration.music_type, music_config] = 
 var loop_pool: Array[loop_pool_item]
 # ── Variables ────────────────────────────────────────
 var last_music_player: int = -1
+var last_music_playing: AudioConfiguration.music_type = AudioConfiguration.music_type.c2_1_starting_theme
 var last_walking_loop: AudioConfiguration.loop_type = AudioConfiguration.loop_type.none
 
 const LOOP_POOL_SIZE = 6
@@ -170,42 +171,49 @@ func play_loop(key: AudioConfiguration.loop_type):
 		loop.pitch_scale = loop_info.pitch
 		loop.stream = loop_info.stream
 	
-		loop.play()
+		#loop.play()
+		fade_in(loop, 0, loop_info.volume)
 	
 func stop_loop(key: AudioConfiguration.loop_type, fade_in_enable: bool = true ):
 	_free_loop(key, fade_in_enable)
 
 func play_music(key: AudioConfiguration.music_type):
-	# Reminder: Set Loop_Mode to true
-	var music_info: music_config = _get_music(key)
-	var has_to_fade_out = true
-	var current_music_player: AudioStreamPlayer
-	
-	if last_music_player == -1:
-		current_music_player = music_1_player
-		has_to_fade_out = false
-		last_music_player = 1
-	elif last_music_player == 0:
-		current_music_player = music_1_player
-		last_music_player = 1
+	if last_music_playing == key && last_music_player != -1:
+		pass
 	else:
-		current_music_player = music_2_player
-		last_music_player = 0
+		last_music_playing = key
+		var music_info: music_config = _get_music(key)
+		var has_to_fade_out = true
+		var current_music_player: AudioStreamPlayer
 	
-	current_music_player.pitch_scale = music_info.pitch
-	current_music_player.stream = music_info.stream
+		if last_music_player == -1:
+			current_music_player = music_1_player
+			has_to_fade_out = false
+			last_music_player = 1
+		elif last_music_player == 0:
+			current_music_player = music_1_player
+			last_music_player = 1
+		else:
+			current_music_player = music_2_player
+			last_music_player = 0
+	
+		current_music_player.pitch_scale = music_info.pitch
+		current_music_player.stream = music_info.stream
 	#(current_music_player.stream as AudioStreamWAV).loop_mode = AudioStreamWAV.LOOP_FORWARD
 	
-	fade_in(current_music_player, 0, music_info.volume)
-	if has_to_fade_out:
-		if last_music_player == 0:
-			fade_out(music_1_player)
-		else:
-			fade_out(music_2_player)
+		fade_in(current_music_player, 0, music_info.volume)
+		if has_to_fade_out:
+			if last_music_player == 0:
+				fade_out(music_1_player)
+			else:
+				fade_out(music_2_player)
 
 func stop_music():
 	fade_out(music_1_player)
 	fade_out(music_2_player)
+	
+	#reset last music player index
+	last_music_player = -1
 
 func play_walking_loop():
 	if last_walking_loop != -1:
@@ -288,7 +296,7 @@ func _stop_sfx():
 #endregion
 
 #region Fade in/out, crossfade
-const TRANS_TIME = 0.5
+const TRANS_TIME = 1
 
 func cross_fade(fade_out_player : AudioStreamPlayer, fade_in_player : AudioStreamPlayer, min_volume = 0.0, max_volume = 1.0):
 	fade_out(fade_out_player, min_volume)

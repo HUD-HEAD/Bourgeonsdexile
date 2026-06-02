@@ -4,21 +4,30 @@
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_3bo45"]
 [ext_resource type="Material" uid="uid://mamd7s33ysol" path="res://scenes/prototyping/lut/mat_lut_rain.tres" id="2_i2khw"]
 [ext_resource type="Script" uid="uid://bxdi7w06ul2j0" path="res://components/utils/comics/pan_modulate.gd" id="4_nm27t"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="7_loucv"]
 
 [node name="Panel3" type="Node2D" unique_id=547383153]
 
 [node name="Bg" type="Sprite2D" parent="." unique_id=825403214]
 texture = ExtResource("1_xmlk0")
 
-[node name="OverlayRain" type="Sprite2D" parent="." unique_id=420456436 node_paths=PackedStringArray("node_to_enable")]
+[node name="OverlayRain" type="Sprite2D" parent="." unique_id=420456436 node_paths=PackedStringArray("node_to_enable", "loop_node_to_play")]
 material = ExtResource("2_i2khw")
 texture = ExtResource("1_xmlk0")
 script = ExtResource("4_nm27t")
 sensitivity = 0.001
 node_to_enable = NodePath("../TransitionerPassive")
+loop_node_to_play = NodePath("../TriggerLoopZone")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1616104888]
 
 [node name="TransitionerPassive" type="Node" parent="." unique_id=29688003]
 script = ExtResource("2_3bo45")
 metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=2120352443]
+position = Vector2(371, -1442)
+rect = Rect2(-10, -10, 42, 47)
+script = ExtResource("7_loucv")
+loop_name = 2200
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"

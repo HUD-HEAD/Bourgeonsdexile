@@ -158,6 +158,6 @@ shape = SubResource("CapsuleShape2D_4r3bi")
 
 [node name="TriggerSfxOnClick" type="Node" parent="." unique_id=1486711326 node_paths=PackedStringArray("clickables")]
 script = ExtResource("19_3dhvr")
-clickables = [NodePath("../Glass"), NodePath("../Meal"), NodePath("../Meal2")]
+clickables = [NodePath("../Meal"), NodePath("../Meal2")]
 sfx = 1301
 metadata/_custom_type_script = "uid://b7avucygxykbp"

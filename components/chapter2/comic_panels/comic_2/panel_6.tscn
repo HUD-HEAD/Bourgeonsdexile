@@ -3,7 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://blx1awsqu52ew" path="res://graphics/chapter2/comics/comic2/framereception/framereception.png" id="1_nln7s"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="2_i85k0"]
 [ext_resource type="Texture2D" uid="uid://q80laypxs4o1" path="res://graphics/chapter1/comics/comic3/frame10/bubbleinfo.png" id="3_ibe02"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="4_4jisv"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_fgk7f"]
+[ext_resource type="AudioStream" uid="uid://dov0rwr6j1lw1" path="res://audio/chapter2/ambient/comic 2/panel_2.6_explaining_voice.wav" id="5_rt5cv"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="5_tyjx8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ibe02"]
 radius = 324.0
@@ -30,7 +33,23 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1923981018]
 shape = SubResource("CapsuleShape2D_ibe02")
 
+[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=1570310861 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_4jisv")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("5_rt5cv")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
 [node name="TransitionerCounter" type="Node" parent="." unique_id=681222543 node_paths=PackedStringArray("clickables")]
 script = ExtResource("4_fgk7f")
 clickables = [NodePath("../Clickable")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=24238233]
+position = Vector2(-781, 254)
+rect = Rect2(-41, -10, 51, 64)
+script = ExtResource("5_tyjx8")
+loop_name = 2200
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
