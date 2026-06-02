@@ -4,8 +4,7 @@
 [ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/mechanics/click_hide.gd" id="2_sj13u"]
 [ext_resource type="Texture2D" uid="uid://dv2lj0r5nf3q5" path="res://graphics/chapter1/comics/comic4/framemusic/musicplay.png" id="3_xl3h6"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_xl3h6"]
-[ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/PlayOnClick.tscn" id="5_17e6c"]
-[ext_resource type="AudioStream" uid="uid://dfwytuv0vl8f6" path="res://audio/chapter1/soundtrack/walking_mercado_theme.wav" id="6_3a7ip"]
+[ext_resource type="Script" uid="uid://7li3hk5ohcss" path="res://components/utils/audio/audio integration nodes/trigger_music_on_click.gd" id="5_17e6c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17e6c"]
 size = Vector2(297, 545)
@@ -31,6 +30,8 @@ script = ExtResource("4_xl3h6")
 clickables = [NodePath("../Clickable")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
 
-[node name="PlayOnClick" parent="." unique_id=190012534 node_paths=PackedStringArray("clickables") instance=ExtResource("5_17e6c")]
-stream = ExtResource("6_3a7ip")
+[node name="TriggerMusicOnClick" type="Node" parent="." unique_id=171227967 node_paths=PackedStringArray("clickables")]
+script = ExtResource("5_17e6c")
 clickables = [NodePath("../Clickable")]
+music = 1400
+metadata/_custom_type_script = "uid://7li3hk5ohcss"

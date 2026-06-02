@@ -19,6 +19,7 @@
 [ext_resource type="Resource" uid="uid://c7lmkx4rfg6sk" path="res://components/utils/audio/audio_configurations/loop_config/c1_3_steps_outside_loop.tres" id="6_xvkp8"]
 [ext_resource type="Resource" uid="uid://dj3y2ed33fmt0" path="res://components/utils/audio/audio_configurations/music_config/c2_1_walking_theme_panel_15_to_20.tres" id="7_a4fxu"]
 [ext_resource type="Resource" uid="uid://ckax75utljvro" path="res://components/utils/audio/audio_configurations/loop_config/c2_1_motocycle_not_running.tres" id="7_gqdoy"]
+[ext_resource type="AudioStream" uid="uid://f6gm842kgfes" path="res://audio/chapter1/ambient/panel_section_3/panel_3.28_3.29_bus_sound.wav" id="7_ql2kw"]
 [ext_resource type="Resource" uid="uid://dy6c0ys045bnl" path="res://components/utils/audio/audio_configurations/music_config/c2_1_motocycle_panel_20_to_24.tres" id="8_femi8"]
 [ext_resource type="Resource" uid="uid://kjsquroabufd" path="res://components/utils/audio/audio_configurations/sfx_config/puzzle_correct_piece.tres" id="8_pkc7b"]
 [ext_resource type="Resource" uid="uid://bi3sw2okh1svf" path="res://components/utils/audio/audio_configurations/loop_config/c2_1_motocycle_running_sound_loop_20_and_23.tres" id="8_v1u3r"]
@@ -31,24 +32,183 @@
 [ext_resource type="Resource" uid="uid://dro6fvr3sfoc" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_4_plastic_blocks.tres" id="13_behby"]
 [ext_resource type="Resource" uid="uid://cmm3g6e5wpmyj" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_5_childs_playing.tres" id="14_e2tky"]
 [ext_resource type="Resource" uid="uid://dx1n38hkurfs7" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_6_textil.tres" id="15_l82md"]
+[ext_resource type="AudioStream" uid="uid://c3tgl1gtn2ujc" path="res://audio/chapter2/ambient/comic 2/panel_2.3_2.4_day-night_sound_interactive.wav" id="15_vpsk8"]
 [ext_resource type="AudioStream" uid="uid://d1jjetsntvge2" path="res://audio/chapter1/soundtrack/MIGRATION-THEME.wav" id="15_xnur5"]
+[ext_resource type="AudioStream" uid="uid://b01tt0glu7083" path="res://audio/chapter2/ambient/comic 2/panel_2.8_people_sound_loop_copia.wav" id="16_3x07x"]
 [ext_resource type="Resource" uid="uid://b8fcxi8n8wt7p" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_7_mmm_woman.tres" id="16_8i027"]
+[ext_resource type="AudioStream" uid="uid://51istcnxofiw" path="res://audio/chapter1/soundtrack/final_theme_.wav" id="16_tadwd"]
+[ext_resource type="AudioStream" uid="uid://dv1xt2acgbr2m" path="res://audio/chapter2/ambient/comic 2/panel_2.12_night_day_bus_sound_interactive.wav" id="17_3x07x"]
 [ext_resource type="Resource" uid="uid://cgl0u8c8v4c61" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_10_child_move.tres" id="17_wobcp"]
+[ext_resource type="AudioStream" uid="uid://c4jwjp4bxi6w3" path="res://audio/chapter2/ambient/level 2/level 2_panel_1_to_16_bus sound.wav" id="18_0gr4c"]
 [ext_resource type="Resource" uid="uid://fmn6ks5edqm1" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_11_hands.tres" id="18_o7t6w"]
+[ext_resource type="AudioStream" uid="uid://cmtrcjikuhgg4" path="res://audio/chapter2/ambient/comic 3/panel_3.1_3.3_bus_sound.wav" id="19_8rmwk"]
 [ext_resource type="Resource" uid="uid://bjrs7vffdaxix" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_12_child_move2.tres" id="19_a4fxu"]
 [ext_resource type="Resource" uid="uid://dkcof646kaunb" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_13_sad_moment.tres" id="20_femi8"]
+[ext_resource type="AudioStream" uid="uid://dj0uohpeilda0" path="res://audio/chapter2/ambient/comic 3/panel_3.5_to_3.10_breathing_sound.wav" id="20_v5tef"]
 [ext_resource type="Resource" uid="uid://d4molfhctssxm" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_14_doors_open.tres" id="21_pwl8h"]
+[ext_resource type="AudioStream" uid="uid://drqwx4u7bjs05" path="res://audio/chapter2/ambient/comic 3/panel_3.12_city_space_sound.wav" id="21_v5tef"]
 [ext_resource type="Resource" uid="uid://db7ghbhimi3hs" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_15_car.tres" id="22_a1sox"]
 [ext_resource type="Resource" uid="uid://blbe8fxfal57j" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_19_car.tres" id="23_gqdoy"]
+[ext_resource type="AudioStream" uid="uid://bwuka4f6l4r2t" path="res://audio/chapter1/ambient/panel_section_2/panel_2.16_all_jungle_steps_loop.wav" id="23_xc13h"]
+[ext_resource type="AudioStream" uid="uid://bnf682x6n064r" path="res://audio/chapter1/ambient/panel_section_2/panel_2.16_jungle_ambience_sound_loop.wav" id="24_p6ii5"]
+[ext_resource type="AudioStream" uid="uid://21g2g0m1grgf" path="res://audio/chapter1/ambient/panel_section_2/panel_2.18_walking_water_loop.wav" id="25_dte6o"]
+[ext_resource type="AudioStream" uid="uid://bjm40c8yttuq2" path="res://audio/chapter1/ambient/panel_section_2/panel_2.20_rain_loop.wav" id="26_ov2pk"]
+[ext_resource type="AudioStream" uid="uid://clbn4mxcbpuwd" path="res://audio/chapter1/ambient/panel_section_2/panel_2.25_2.26_memories_traumatic.wav" id="27_x200s"]
+[ext_resource type="AudioStream" uid="uid://c48d6w2xb5kuc" path="res://audio/chapter1/ambient/panel_section_2/panel_2.25_2.26_white_noise.wav" id="28_0yh3s"]
+[ext_resource type="AudioStream" uid="uid://eyx776ajpv6q" path="res://audio/chapter2/soundtrack/Waiting_theme_comic_2_all_panels_except_emotive_panels.wav" id="29_ewecq"]
+[ext_resource type="AudioStream" uid="uid://crwqtd4uhrvj7" path="res://audio/chapter2/soundtrack/emotive_moment_panel_2.9_2.10_2.11.wav" id="30_ucf83"]
+[ext_resource type="AudioStream" uid="uid://xaejsq8r5g4g" path="res://audio/chapter1/soundtrack/jungle_theme_1.wav" id="30_x200s"]
+[ext_resource type="AudioStream" uid="uid://be1vg7er2bb0v" path="res://audio/chapter1/soundtrack/jungle_theme_2_after_traumatic_moment.wav" id="31_0yh3s"]
+[ext_resource type="AudioStream" uid="uid://b7dp33i24xxa7" path="res://audio/chapter2/soundtrack/comic_3_theme song (1).wav" id="31_oghm0"]
+[ext_resource type="AudioStream" uid="uid://dsc8j0a15tdie" path="res://audio/chapter2/soundtrack/wc_bus_tense_moment_ comic_2_panel_2.14_2.15.wav" id="31_ucf83"]
+[ext_resource type="AudioStream" uid="uid://bmuld55d03814" path="res://audio/chapter2/soundtrack/comic_3_emotive_song (2).wav" id="32_t8ph6"]
 [ext_resource type="AudioStream" uid="uid://chp4yothn7faw" path="res://audio/chapter1/ambient/panel_section_3/panel_3.7_relief_sound.wav" id="40_v3pri"]
 [ext_resource type="AudioStream" uid="uid://dricj4xdns60n" path="res://audio/chapter1/ambient/panel_section_3/panel_3.8_eating_sound.wav" id="41_xvkp8"]
 [ext_resource type="AudioStream" uid="uid://qoly0ig3clh0" path="res://audio/chapter1/ambient/panel_section_3/panel_3.8_eating_sound_2.wav" id="42_xnur5"]
 [ext_resource type="AudioStream" uid="uid://bedpxltkhf5ii" path="res://audio/chapter1/ambient/panel_section_3/panel_3.13_paper_sound.wav" id="43_xvkp8"]
+[ext_resource type="AudioStream" uid="uid://df2rs52kcf4xd" path="res://audio/chapter2/ambient/comic 3/panel_3.4_sound_water_drink_1_sound.wav" id="54_hqvqq"]
+[ext_resource type="AudioStream" uid="uid://daernt6524t73" path="res://audio/chapter2/ambient/comic 3/panel_3.4_sound_water_drink_2_sound.wav" id="55_b0xf2"]
+
+[sub_resource type="Resource" id="Resource_vpsk8"]
+script = ExtResource("1_0736c")
+type = 1400
+stream = ExtResource("7_ql2kw")
+metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
+
+[sub_resource type="Resource" id="Resource_0gr4c"]
+script = ExtResource("1_0736c")
+type = 2200
+stream = ExtResource("15_vpsk8")
+metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
+
+[sub_resource type="Resource" id="Resource_n03nk"]
+script = ExtResource("1_0736c")
+type = 2201
+stream = ExtResource("16_3x07x")
+metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
+
+[sub_resource type="Resource" id="Resource_8rmwk"]
+script = ExtResource("1_0736c")
+type = 2202
+stream = ExtResource("17_3x07x")
+metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
+
+[sub_resource type="Resource" id="Resource_v5tef"]
+script = ExtResource("1_0736c")
+type = 2203
+stream = ExtResource("18_0gr4c")
+volume = 0.4
+metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
+
+[sub_resource type="Resource" id="Resource_x1jhh"]
+script = ExtResource("1_0736c")
+type = 2300
+stream = ExtResource("19_8rmwk")
+volume = 0.7
+metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
+
+[sub_resource type="Resource" id="Resource_hqvqq"]
+script = ExtResource("1_0736c")
+type = 2301
+stream = ExtResource("20_v5tef")
+metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
+
+[sub_resource type="Resource" id="Resource_b0xf2"]
+script = ExtResource("1_0736c")
+type = 2302
+stream = ExtResource("21_v5tef")
+volume = 0.9
+metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
+
+[sub_resource type="Resource" id="Resource_2224a"]
+script = ExtResource("1_0736c")
+type = 2204
+stream = ExtResource("31_ucf83")
+volume = 1.1
+metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
+
+[sub_resource type="Resource" id="Resource_1cu42"]
+script = ExtResource("1_0736c")
+type = 1200
+stream = ExtResource("23_xc13h")
+metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
+
+[sub_resource type="Resource" id="Resource_7keg5"]
+script = ExtResource("1_0736c")
+type = 1201
+stream = ExtResource("24_p6ii5")
+metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
+
+[sub_resource type="Resource" id="Resource_wgwom"]
+script = ExtResource("1_0736c")
+type = 1202
+stream = ExtResource("25_dte6o")
+metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
+
+[sub_resource type="Resource" id="Resource_8bssc"]
+script = ExtResource("1_0736c")
+type = 1203
+stream = ExtResource("26_ov2pk")
+metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
+
+[sub_resource type="Resource" id="Resource_wvn2x"]
+script = ExtResource("1_0736c")
+type = 1204
+stream = ExtResource("27_x200s")
+metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
+
+[sub_resource type="Resource" id="Resource_evake"]
+script = ExtResource("1_0736c")
+type = 1205
+stream = ExtResource("28_0yh3s")
+metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
+
+[sub_resource type="Resource" id="Resource_gxtfj"]
+script = ExtResource("3_qemoy")
+type = 1200
+stream = ExtResource("30_x200s")
+metadata/_custom_type_script = "uid://bgl0a3vgvcmsb"
+
+[sub_resource type="Resource" id="Resource_kx2pi"]
+script = ExtResource("3_qemoy")
+type = 1201
+stream = ExtResource("31_0yh3s")
+metadata/_custom_type_script = "uid://bgl0a3vgvcmsb"
 
 [sub_resource type="Resource" id="Resource_ql2kw"]
 script = ExtResource("3_qemoy")
 type = 1300
 stream = ExtResource("15_xnur5")
+metadata/_custom_type_script = "uid://bgl0a3vgvcmsb"
+
+[sub_resource type="Resource" id="Resource_acaqn"]
+script = ExtResource("3_qemoy")
+type = 1400
+stream = ExtResource("16_tadwd")
+metadata/_custom_type_script = "uid://bgl0a3vgvcmsb"
+
+[sub_resource type="Resource" id="Resource_oghm0"]
+script = ExtResource("3_qemoy")
+type = 2200
+stream = ExtResource("29_ewecq")
+metadata/_custom_type_script = "uid://bgl0a3vgvcmsb"
+
+[sub_resource type="Resource" id="Resource_t8ph6"]
+script = ExtResource("3_qemoy")
+type = 2201
+stream = ExtResource("30_ucf83")
+metadata/_custom_type_script = "uid://bgl0a3vgvcmsb"
+
+[sub_resource type="Resource" id="Resource_xc13h"]
+script = ExtResource("3_qemoy")
+type = 2300
+stream = ExtResource("31_oghm0")
+metadata/_custom_type_script = "uid://bgl0a3vgvcmsb"
+
+[sub_resource type="Resource" id="Resource_p6ii5"]
+script = ExtResource("3_qemoy")
+type = 2301
+stream = ExtResource("32_t8ph6")
 metadata/_custom_type_script = "uid://bgl0a3vgvcmsb"
 
 [sub_resource type="Resource" id="Resource_po7nl"]
@@ -69,9 +229,15 @@ type = 1302
 stream = Array[AudioStream]([ExtResource("43_xvkp8")])
 metadata/_custom_type_script = "uid://duuxorfspwlxi"
 
+[sub_resource type="Resource" id="Resource_ewecq"]
+script = ExtResource("1_imlmo")
+type = 2300
+stream = Array[AudioStream]([ExtResource("54_hqvqq"), ExtResource("55_b0xf2")])
+metadata/_custom_type_script = "uid://duuxorfspwlxi"
+
 [resource]
 script = ExtResource("1_lqs57")
-sfx_configuration = Array[ExtResource("1_imlmo")]([ExtResource("3_lhat2"), ExtResource("8_pkc7b"), ExtResource("9_oije2"), ExtResource("9_75gak"), ExtResource("9_1aw0s"), ExtResource("10_75gak"), ExtResource("11_pkc7b"), ExtResource("12_oije2"), ExtResource("13_behby"), ExtResource("14_e2tky"), ExtResource("15_l82md"), ExtResource("16_8i027"), ExtResource("17_wobcp"), ExtResource("18_o7t6w"), ExtResource("19_a4fxu"), ExtResource("20_femi8"), ExtResource("21_pwl8h"), ExtResource("22_a1sox"), ExtResource("23_gqdoy"), SubResource("Resource_po7nl"), SubResource("Resource_tadwd"), SubResource("Resource_xnur5")])
-loop_configuration = Array[ExtResource("1_0736c")]([ExtResource("2_po7nl"), ExtResource("3_c6civ"), ExtResource("4_gb34v"), ExtResource("5_v3pri"), ExtResource("6_xvkp8"), ExtResource("3_8i027"), ExtResource("2_l82md"), ExtResource("4_femi8"), ExtResource("5_pwl8h"), ExtResource("6_a1sox"), ExtResource("7_gqdoy"), ExtResource("8_v1u3r")])
-music_configuration = Array[ExtResource("3_qemoy")]([SubResource("Resource_ql2kw"), ExtResource("5_wobcp"), ExtResource("6_o7t6w"), ExtResource("7_a4fxu"), ExtResource("8_femi8")])
+sfx_configuration = Array[ExtResource("1_imlmo")]([ExtResource("3_lhat2"), ExtResource("8_pkc7b"), ExtResource("9_oije2"), ExtResource("9_75gak"), ExtResource("9_1aw0s"), ExtResource("10_75gak"), ExtResource("11_pkc7b"), ExtResource("12_oije2"), ExtResource("13_behby"), ExtResource("14_e2tky"), ExtResource("15_l82md"), ExtResource("16_8i027"), ExtResource("17_wobcp"), ExtResource("18_o7t6w"), ExtResource("19_a4fxu"), ExtResource("20_femi8"), ExtResource("21_pwl8h"), ExtResource("22_a1sox"), ExtResource("23_gqdoy"), SubResource("Resource_po7nl"), SubResource("Resource_tadwd"), SubResource("Resource_xnur5"), SubResource("Resource_ewecq")])
+loop_configuration = Array[ExtResource("1_0736c")]([ExtResource("2_po7nl"), ExtResource("3_c6civ"), ExtResource("4_gb34v"), ExtResource("5_v3pri"), ExtResource("6_xvkp8"), SubResource("Resource_vpsk8"), ExtResource("3_8i027"), ExtResource("2_l82md"), ExtResource("4_femi8"), ExtResource("5_pwl8h"), ExtResource("6_a1sox"), ExtResource("7_gqdoy"), ExtResource("8_v1u3r"), SubResource("Resource_0gr4c"), SubResource("Resource_n03nk"), SubResource("Resource_8rmwk"), SubResource("Resource_v5tef"), SubResource("Resource_x1jhh"), SubResource("Resource_hqvqq"), SubResource("Resource_b0xf2"), SubResource("Resource_2224a"), SubResource("Resource_1cu42"), SubResource("Resource_7keg5"), SubResource("Resource_wgwom"), SubResource("Resource_8bssc"), SubResource("Resource_wvn2x"), SubResource("Resource_evake")])
+music_configuration = Array[ExtResource("3_qemoy")]([SubResource("Resource_gxtfj"), SubResource("Resource_kx2pi"), SubResource("Resource_ql2kw"), SubResource("Resource_acaqn"), ExtResource("5_wobcp"), ExtResource("6_o7t6w"), ExtResource("7_a4fxu"), ExtResource("8_femi8"), SubResource("Resource_oghm0"), SubResource("Resource_t8ph6"), SubResource("Resource_xc13h"), SubResource("Resource_p6ii5")])
 metadata/_custom_type_script = "uid://cqxrtlyvs0npt"

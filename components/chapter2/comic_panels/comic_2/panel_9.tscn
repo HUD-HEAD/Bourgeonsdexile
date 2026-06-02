@@ -4,7 +4,9 @@
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="1_13gaw"]
 [ext_resource type="Texture2D" uid="uid://cqh4buvhd7cdh" path="res://graphics/chapter2/comics/comic2/framesleeping/2.png" id="2_425hu"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="4_erlyb"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="5_3yv0r"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_t7l0h"]
+[ext_resource type="AudioStream" uid="uid://cuiulsw01fp4" path="res://audio/chapter2/ambient/comic 2/panel_2.9_2.11_light_movil_sound_interactive.wav" id="6_lfc8n"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_erlyb"]
 animations = [{
@@ -37,6 +39,14 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=660136976]
 shape = SubResource("CircleShape2D_erlyb")
+
+[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=1497939126 node_paths=PackedStringArray("clickables")]
+script = ExtResource("5_3yv0r")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("6_lfc8n")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="TransitionerCounter" type="Node" parent="." unique_id=1391852715 node_paths=PackedStringArray("clickables")]
 script = ExtResource("5_t7l0h")

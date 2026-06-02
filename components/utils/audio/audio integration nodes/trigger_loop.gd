@@ -3,6 +3,7 @@ extends VisibleOnScreenNotifier2D
 
 @export var loop_name: AudioConfiguration.loop_type
 @export var loop_mode: trigger_mode = trigger_mode.play_loop
+@export var start_loop_on_enter_screen: bool = true
 
 enum trigger_mode{
 	play_loop,
@@ -12,7 +13,8 @@ enum trigger_mode{
 }
 
 func _ready() -> void:
-	self.screen_entered.connect(trigger_loop)
+	if start_loop_on_enter_screen:
+		self.screen_entered.connect(trigger_loop)
 
 func trigger_loop():
 	if loop_mode == trigger_mode.play_loop:

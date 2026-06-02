@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cjytd6mt0wdx7" path="res://graphics/chapter2/comics/comic2/frameinsidetent/tent.png" id="1_7totp"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_aplr7"]
+[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="3_vbe84"]
 
 [node name="Panel1" type="Node2D" unique_id=547383153]
 
@@ -14,3 +15,10 @@ script = ExtResource("2_aplr7")
 metadata/_custom_type_script = "uid://u4636s8oa5d0"
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=158106128]
+
+[node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=1959888853]
+position = Vector2(-43, -54)
+rect = Rect2(-304, -59, 771, 234)
+script = ExtResource("3_vbe84")
+loop_name = 2201
+metadata/_custom_type_script = "uid://brda7473wfj1v"

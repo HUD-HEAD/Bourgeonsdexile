@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dlufjr836r473"]
 
 [ext_resource type="Texture2D" uid="uid://d22en1s6mnitp" path="res://graphics/chapter1/comics/comic3/frame4/mochil.png" id="2_gks51"]
+[ext_resource type="AudioStream" uid="uid://cbyivj3062d4o" path="res://audio/chapter1/ambient/panel_section_3/panel_3.27_bag_selection.wav" id="2_nxhgm"]
 [ext_resource type="PackedScene" uid="uid://8imm2g6332ef" path="res://components/utils/puzzles/dragdrop_puzzle_template.tscn" id="3_868go"]
 [ext_resource type="Texture2D" uid="uid://b13sqvsicu285" path="res://graphics/chapter1/comics/comic4/framebackpack/paassport.png" id="3_bj5mn"]
 [ext_resource type="Texture2D" uid="uid://dltoxuw1jmlnj" path="res://graphics/chapter1/comics/comic4/framebackpack/phone.png" id="4_q7hyt"]
@@ -31,6 +32,9 @@ height = 872.0
 
 [node name="DragDropPuzzle" parent="." unique_id=131783519 node_paths=PackedStringArray("puzzle_pieces") instance=ExtResource("3_868go")]
 puzzle_pieces = [NodePath("BuildingBlocks/PuzzlePiece"), NodePath("BuildingBlocks/PuzzlePiece2"), NodePath("BuildingBlocks/PuzzlePiece3"), NodePath("BuildingBlocks/PuzzlePiece4")]
+correct_piece_stream = ExtResource("2_nxhgm")
+stream_volume = 0.9
+min_pitch_stream = 0.95
 
 [node name="OutlinePuzzle" parent="DragDropPuzzle" index="0" unique_id=1513168459]
 position = Vector2(-462, 0)

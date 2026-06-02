@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bow52bebaw302" path="res://graphics/chapter2/comics/comic3/framewaterbottle/4.png" id="4_fjj5u"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="5_a7tn4"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="5_fjj5u"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="7_3dhtj"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="7_m57by"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m57by"]
@@ -46,6 +47,12 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=899019]
 shape = SubResource("CapsuleShape2D_a7tn4")
+
+[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=819124966 node_paths=PackedStringArray("clickables")]
+script = ExtResource("7_3dhtj")
+clickables = [NodePath("..")]
+sfx = 2300
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="TransitionerCounter" type="Node" parent="." unique_id=2076130638 node_paths=PackedStringArray("clickables")]
 script = ExtResource("7_m57by")

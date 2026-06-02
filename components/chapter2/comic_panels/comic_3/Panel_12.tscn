@@ -3,7 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://byli3w3ems21c" path="res://graphics/chapter2/comics/comic3/blur/blur.png" id="1_2lw6u"]
 [ext_resource type="Texture2D" uid="uid://qmukd60trff6" path="res://graphics/chapter2/comics/comic3/blur/unblur.png" id="1_cvn85"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="3_4kx8p"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="4_2r27r"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_mu57v"]
+[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="5_1cc6h"]
+[ext_resource type="AudioStream" uid="uid://bnyrlxxnr0d2" path="res://audio/chapter2/ambient/comic 3/panel_3.12_window_selection_sound.wav" id="5_klx7d"]
+[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="8_klx7d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4kx8p"]
 size = Vector2(1673, 927)
@@ -26,8 +30,31 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 position = Vector2(26.5, -34.5)
 shape = SubResource("RectangleShape2D_4kx8p")
 
+[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=1037765247 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_2r27r")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("5_klx7d")
+linear_volume = 0.8
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
 [node name="TransitionerCounter" type="Node" parent="." unique_id=1323701855 node_paths=PackedStringArray("clickables")]
 script = ExtResource("4_mu57v")
 clickables = [NodePath("../Clickable")]
 transition_delay = 3.0
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=1778966689]
+position = Vector2(-58, 4)
+rect = Rect2(-220, -123, 558, 244)
+script = ExtResource("5_1cc6h")
+loop_name = 2302
+metadata/_custom_type_script = "uid://brda7473wfj1v"
+
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="." unique_id=1754684510]
+position = Vector2(-565, -73)
+rect = Rect2(-10, -41, 62, 51)
+script = ExtResource("8_klx7d")
+music_name = 2300
+metadata/_custom_type_script = "uid://2aadlm17sdsf"

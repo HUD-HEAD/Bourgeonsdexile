@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b0fqufhu03ppv"
+path="res://.godot/imported/panel_3.5_belly_sound.wav-2bbb59922740b189ebe8b6d224242c76.sample"
+
+[deps]
+
+source_file="res://audio/chapter2/ambient/comic 3/panel_3.5_belly_sound.wav"
+dest_files=["res://.godot/imported/panel_3.5_belly_sound.wav-2bbb59922740b189ebe8b6d224242c76.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

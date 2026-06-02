@@ -22,7 +22,6 @@
 [ext_resource type="Script" uid="uid://gchp60e2jp5r" path="res://components/utils/mechanics/set_camera_bounds.gd" id="19_31ufg"]
 [ext_resource type="PackedScene" uid="uid://kkmgx1eqpc4i" path="res://components/chapter1/main_characters/char_reflection.tscn" id="19_c5nq0"]
 [ext_resource type="SpriteFrames" uid="uid://dg15c2titrtgq" path="res://components/chapter1/main_characters/companion_3_sprite_frames.tres" id="19_jh4yo"]
-[ext_resource type="AudioStream" uid="uid://1bh8jat7waj1" path="res://audio/sfx_old/jungle-nature-229896.mp3" id="20_5j4y3"]
 [ext_resource type="Script" uid="uid://bchnidsm7kci0" path="res://components/chapter1/main_characters/companion.gd" id="20_t8bry"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="21_kdrkc"]
 [ext_resource type="Script" uid="uid://c6535mmpn7tng" path="res://components/chapter1/levels/jungle/rain_starter.gd" id="25_h7yo2"]
@@ -151,6 +150,7 @@
 [ext_resource type="Texture2D" uid="uid://dcvcmicvmkkfx" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/2_5.png" id="89_4av7t"]
 [ext_resource type="Texture2D" uid="uid://cxpqeido5bxuv" path="res://graphics/chapter1/levels/jungle/npcs/NPC_warning_10fps/npc_warning_0010.png" id="89_mo2v3"]
 [ext_resource type="Texture2D" uid="uid://qoeai8u1lpos" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/3_5line.png" id="90_wtncc"]
+[ext_resource type="AudioStream" uid="uid://dnysrrwsujmd1" path="res://audio/chapter1/ambient/panel_section_2/panel_2.25_puzzle_resolve_traumatic_moment.wav" id="90_yplh0"]
 [ext_resource type="Texture2D" uid="uid://dk70rfg0280qe" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/3_5.png" id="91_b8ue1"]
 [ext_resource type="Texture2D" uid="uid://djymrx7nsi00x" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/6_5line.png" id="92_y0x5r"]
 [ext_resource type="Texture2D" uid="uid://ju5oygokt2u4" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/6_5.png" id="93_qdw7b"]
@@ -187,6 +187,11 @@
 [ext_resource type="Texture2D" uid="uid://d0eisf3ukjgah" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/6/7_6line.png" id="165_ec7mn"]
 [ext_resource type="Texture2D" uid="uid://37wmratk0v0k" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/6/7_6.png" id="166_d5olm"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="174_qtras"]
+[ext_resource type="Script" uid="uid://bvmwxu2au5j5l" path="res://components/utils/audio/audio integration nodes/audio_sfx_zone.gd" id="187_nt033"]
+[ext_resource type="AudioStream" uid="uid://dkso7rwwc3xhh" path="res://audio/chapter1/ambient/panel_section_2/panel_2.24_pre_traumatic_moment.wav" id="188_yplh0"]
+[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="191_yplh0"]
+[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="192_b8fep"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="192_j6pee"]
 
 [sub_resource type="Gradient" id="Gradient_t8bry"]
 offsets = PackedFloat32Array(0, 0.14906304, 0.5562181, 1)
@@ -859,10 +864,6 @@ camera = NodePath("../Path2D/PathFollow2D/Nina/Camera2D")
 limit_top = -484
 limit_bottom = 596
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1466730914]
-stream = ExtResource("20_5j4y3")
-autoplay = true
-
 [node name="Puzzles" type="Node2D" parent="." unique_id=865858153]
 z_index = -1
 
@@ -1210,6 +1211,7 @@ collision_mask = 2
 
 [node name="DragDropPuzzle6" parent="Puzzles/Puzzle5" unique_id=1419407559 instance=ExtResource("33_tglbk")]
 position = Vector2(1772, 352)
+resolve_puzzle_stream = ExtResource("90_yplh0")
 
 [node name="PuzzlePiece" parent="Puzzles/Puzzle5/DragDropPuzzle6/BuildingBlocks" parent_id_path=PackedInt32Array(1419407559, 1654234455) index="0" unique_id=1667760579]
 position = Vector2(-298, 78)
@@ -1512,6 +1514,58 @@ stretch_mode = 1
 [node name="CheckpointController" type="Node" parent="." unique_id=274687109]
 script = ExtResource("174_qtras")
 comic = 5
+
+[node name="AudioContainer" type="Node" parent="." unique_id=1524005494]
+
+[node name="PreTraumatic_SfxZone" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1475041379]
+position = Vector2(18417, 562)
+rect = Rect2(-10, -10, 158, 141)
+script = ExtResource("187_nt033")
+use_audio_stream = true
+stream = ExtResource("188_yplh0")
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
+
+[node name="TraumaticMoment_Loop" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1855696257]
+position = Vector2(19142, 334)
+rect = Rect2(-10, -10, 2622, 192)
+script = ExtResource("192_b8fep")
+loop_name = 1204
+metadata/_custom_type_script = "uid://brda7473wfj1v"
+
+[node name="WhiteNoise_loop" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=369675775]
+position = Vector2(19142, 334)
+rect = Rect2(-10, -10, 2622, 192)
+script = ExtResource("192_b8fep")
+loop_name = 1205
+metadata/_custom_type_script = "uid://brda7473wfj1v"
+
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=742951993]
+position = Vector2(584, 771)
+rect = Rect2(-10, -10, 81, 78)
+script = ExtResource("191_yplh0")
+music_name = 1200
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="AudioMusicTransition2" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1040022331]
+position = Vector2(19137, 711)
+rect = Rect2(-10, -24, 116, 92)
+script = ExtResource("191_yplh0")
+music_name = 1201
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="JungleAmbience" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1181738706]
+position = Vector2(588, 873)
+rect = Rect2(-10, -10, 54, 63)
+script = ExtResource("192_j6pee")
+loop_name = 1201
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="JungleAmbience_Stop" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1886471954]
+position = Vector2(33030, 429)
+rect = Rect2(-10, -71, 226, 124)
+script = ExtResource("192_j6pee")
+loop_name = 1201
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [editable path="Path2D/PathFollowCompanion1/Companion1"]
 [editable path="Path2D/PathFollowCompanion2/Companion2"]
