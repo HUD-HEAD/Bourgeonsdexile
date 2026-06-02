@@ -44,8 +44,9 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 position = Vector2(0, 10)
 shape = SubResource("CircleShape2D_amswv")
 
-[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=1281593083]
+[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=1281593083 node_paths=PackedStringArray("clickables")]
 script = ExtResource("5_btp6j")
+clickables = [NodePath("..")]
 play_sfx_once = true
 use_audio_stream = true
 stream = ExtResource("6_ijya6")
