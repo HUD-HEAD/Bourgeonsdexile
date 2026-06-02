@@ -12,14 +12,17 @@ height = 212.0
 [node name="QueuePerson" unique_id=700974070 instance=ExtResource("1_lfrhx")]
 script = ExtResource("2_trrhf")
 offset_from_model = 0.0
+start_walking = false
+process_signals = true
 
 [node name="AnimSprite" parent="." index="0" unique_id=689873547]
 sprite_frames = ExtResource("2_shsib")
 frame_progress = 0.19968937
 
 [node name="Area2D" parent="." index="1" unique_id=960188442]
-collision_layer = 0
+collision_layer = 8
 collision_mask = 0
+input_pickable = false
 
 [node name="Clickable" type="Area2D" parent="." index="2" unique_id=39147721]
 position = Vector2(0, -107)

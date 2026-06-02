@@ -19,12 +19,8 @@
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="20_lvato"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/mechanics/obstacle.tscn" id="21_h15xc"]
 [ext_resource type="Texture2D" uid="uid://j6xoe428qgq6" path="res://graphics/chapter1/levels/lajas_blancas/puzzles/11/2_11.png" id="21_lj5p7"]
-[ext_resource type="Script" uid="uid://bchnidsm7kci0" path="res://components/chapter1/main_characters/companion.gd" id="25_67up0"]
 [ext_resource type="Texture2D" uid="uid://dke2if7xacrr0" path="res://graphics/chapter1/levels/lajas_blancas/puzzles/2/2_2.png" id="26_lj5p7"]
 [ext_resource type="SpriteFrames" uid="uid://s1fn7cbpginw" path="res://components/chapter1/levels/lajas_blancas/queue/green_woman.tres" id="26_lvato"]
-[ext_resource type="Texture2D" uid="uid://bqmwvwxnvy503" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow1.png" id="27_h15xc"]
-[ext_resource type="Texture2D" uid="uid://dnon84uyke6c4" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow2.png" id="28_lj5p7"]
-[ext_resource type="Texture2D" uid="uid://dkm7pj8kxf23p" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow3.png" id="29_kde1w"]
 [ext_resource type="SpriteFrames" uid="uid://882iqrb47j8n" path="res://components/chapter1/levels/lajas_blancas/queue/teen.tres" id="30_h15xc"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="34_kde1w"]
 [ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="35_sgj77"]
@@ -45,79 +41,14 @@ size = Vector2(871, 413)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h15xc"]
 size = Vector2(921, 384)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_vodvp"]
-animations = [{
-"frames": [{
-"duration": 10.0,
-"texture": ExtResource("27_h15xc")
-}, {
-"duration": 10.0,
-"texture": ExtResource("28_lj5p7")
-}, {
-"duration": 10.0,
-"texture": ExtResource("29_kde1w")
-}],
-"loop": true,
-"name": &"default",
-"speed": 30.0
-}]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sx88w"]
-radius = 48.0
-height = 212.0
-
-[sub_resource type="Animation" id="Animation_iscax"]
-resource_name = "start"
-tracks/0/type = "method"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("QueuingPeople/QueuePerson")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"_stop_walking"
-}]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("QueuingPeople/QueuePerson2")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"_stop_walking"
-}]
-}
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("QueuingPeople/QueuePerson3")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"_stop_walking"
-}]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_b4pqv"]
-_data = {
-&"start": SubResource("Animation_iscax")
-}
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ex6vw"]
-size = Vector2(254, 229)
+size = Vector2(170, 229)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kde1w"]
+size = Vector2(218, 229)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgj77"]
+size = Vector2(170, 229)
 
 [node name="LajasBlancas" type="Node2D" unique_id=1909938204]
 
@@ -199,66 +130,63 @@ debug_color = Color(0.8252278, 0.2592846, 0.75617933, 0.41960785)
 position = Vector2(1, 5)
 
 [node name="QueuePerson" parent="QueuingPeople" unique_id=606944070 node_paths=PackedStringArray("model") instance=ExtResource("18_ih44s")]
-position = Vector2(1337, 844)
+position = Vector2(1283, 844)
 model = NodePath("../../Spawn/Nina")
 
-[node name="Area2D" parent="QueuingPeople/QueuePerson" index="1" unique_id=960188442]
-collision_layer = 8
-input_pickable = false
-
-[node name="QueuePerson2" type="Node2D" parent="QueuingPeople" unique_id=700974070 node_paths=PackedStringArray("model", "anim_sprite")]
-position = Vector2(1488, 844)
-script = ExtResource("25_67up0")
+[node name="QueuePerson2" parent="QueuingPeople" unique_id=32140418 node_paths=PackedStringArray("model") instance=ExtResource("18_ih44s")]
+position = Vector2(1436, 844)
 model = NodePath("../../Spawn/Nina")
-anim_sprite = NodePath("Woman")
 
-[node name="Woman" type="AnimatedSprite2D" parent="QueuingPeople/QueuePerson2" unique_id=689873547]
+[node name="AnimSprite" parent="QueuingPeople/QueuePerson2" index="0" unique_id=689873547]
 sprite_frames = ExtResource("26_lvato")
-animation = &"walking"
-offset = Vector2(0, -100)
+frame_progress = 0.0
 
-[node name="Shadow" type="AnimatedSprite2D" parent="QueuingPeople/QueuePerson2/Woman" unique_id=1632501669]
-show_behind_parent = true
-sprite_frames = SubResource("SpriteFrames_vodvp")
-autoplay = "default"
-frame_progress = 0.9875541
-
-[node name="Area2D" type="Area2D" parent="QueuingPeople/QueuePerson2" unique_id=455623510]
-position = Vector2(5, -142)
-collision_layer = 8
-collision_mask = 0
+[node name="Clickable" parent="QueuingPeople/QueuePerson2" index="2" unique_id=39147721]
 input_pickable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="QueuingPeople/QueuePerson2/Area2D" unique_id=465165804]
-position = Vector2(0, 37)
-shape = SubResource("CapsuleShape2D_sx88w")
-
-[node name="QueuePerson3" type="Node2D" parent="QueuingPeople" unique_id=1934056135 node_paths=PackedStringArray("model", "anim_sprite")]
-position = Vector2(1641, 844)
-script = ExtResource("25_67up0")
+[node name="QueuePerson3" parent="QueuingPeople" unique_id=700974070 node_paths=PackedStringArray("model") instance=ExtResource("18_ih44s")]
+position = Vector2(1589, 844)
 model = NodePath("../../Spawn/Nina")
-anim_sprite = NodePath("Woman")
 
-[node name="Woman" type="AnimatedSprite2D" parent="QueuingPeople/QueuePerson3" unique_id=2028592394]
+[node name="AnimSprite" parent="QueuingPeople/QueuePerson3" index="0" unique_id=689873547]
 sprite_frames = ExtResource("30_h15xc")
-animation = &"walking"
-offset = Vector2(0, -100)
+frame_progress = 0.0
 
-[node name="Shadow" type="AnimatedSprite2D" parent="QueuingPeople/QueuePerson3/Woman" unique_id=1264319055]
-show_behind_parent = true
-sprite_frames = SubResource("SpriteFrames_vodvp")
-autoplay = "default"
-frame_progress = 0.9875541
-
-[node name="Area2D" type="Area2D" parent="QueuingPeople/QueuePerson3" unique_id=784874737]
-position = Vector2(5, -142)
-collision_layer = 8
-collision_mask = 0
+[node name="Clickable" parent="QueuingPeople/QueuePerson3" index="2" unique_id=39147721]
 input_pickable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="QueuingPeople/QueuePerson3/Area2D" unique_id=1320720615]
-position = Vector2(0, 37)
-shape = SubResource("CapsuleShape2D_sx88w")
+[node name="QueuingPeople2" type="Node2D" parent="." unique_id=337179385]
+position = Vector2(2530, 5)
+
+[node name="QueuePerson" parent="QueuingPeople2" unique_id=1441122431 node_paths=PackedStringArray("model") instance=ExtResource("18_ih44s")]
+position = Vector2(1237, 844)
+model = NodePath("../../Spawn/Nina")
+
+[node name="QueuePerson2" parent="QueuingPeople2" unique_id=892756225 node_paths=PackedStringArray("model") instance=ExtResource("18_ih44s")]
+position = Vector2(1436, 844)
+model = NodePath("../../Spawn/Nina")
+
+[node name="AnimSprite" parent="QueuingPeople2/QueuePerson2" index="0" unique_id=689873547]
+sprite_frames = ExtResource("26_lvato")
+frame_progress = 0.0
+
+[node name="Clickable" parent="QueuingPeople2/QueuePerson2" index="2" unique_id=39147721]
+input_pickable = false
+
+[node name="QueuePerson3" parent="QueuingPeople2" unique_id=199098210 node_paths=PackedStringArray("model") instance=ExtResource("18_ih44s")]
+position = Vector2(1589, 844)
+model = NodePath("../../Spawn/Nina")
+
+[node name="AnimSprite" parent="QueuingPeople2/QueuePerson3" index="0" unique_id=689873547]
+sprite_frames = ExtResource("30_h15xc")
+frame_progress = 0.0
+
+[node name="Clickable" parent="QueuingPeople2/QueuePerson3" index="2" unique_id=39147721]
+input_pickable = false
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="QueuingPeople2" unique_id=1189056533]
+position = Vector2(1227, 714)
+rect = Rect2(-57, -10, 2585, 20)
 
 [node name="PaperBackgroundPostTent" type="TextureRect" parent="." unique_id=1110596856]
 visible = false
@@ -460,8 +388,8 @@ script = ExtResource("11_lvato")
 [node name="PuzzleSpawner" type="Node" parent="Queue2/Puzzle1" unique_id=1415408882 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("20_lvato")
 puzzle = NodePath("../DragDropPuzzle7")
-piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../../../QueuingPeople/QueuePerson/MarkerBubbleSpawn")]
-spawn_trigger = NodePath("../../../QueuingPeople/QueuePerson/Clickable")
+piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../../../QueuingPeople2/QueuePerson/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../../../QueuingPeople2/QueuePerson/Clickable")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Queue2/Puzzle1" unique_id=754715582 instance=ExtResource("21_h15xc")]
@@ -486,8 +414,8 @@ script = ExtResource("11_lvato")
 [node name="PuzzleSpawner" type="Node" parent="Queue2/Puzzle2" unique_id=215774215 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("20_lvato")
 puzzle = NodePath("../DragDropPuzzle14")
-piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../../../QueuingPeople/QueuePerson/MarkerBubbleSpawn")]
-spawn_trigger = NodePath("../../../QueuingPeople/QueuePerson/Clickable")
+piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../../../QueuingPeople2/QueuePerson/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../../../QueuingPeople2/QueuePerson/Clickable")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Queue2/Puzzle2" unique_id=222064032 instance=ExtResource("21_h15xc")]
@@ -521,8 +449,8 @@ script = ExtResource("11_lvato")
 [node name="PuzzleSpawner" type="Node" parent="Queue2/Puzzle3" unique_id=2001654392 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("20_lvato")
 puzzle = NodePath("../DragDropPuzzle5")
-piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../../../QueuingPeople/QueuePerson/MarkerBubbleSpawn")]
-spawn_trigger = NodePath("../../../QueuingPeople/QueuePerson/Clickable")
+piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../../../QueuingPeople2/QueuePerson/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../../../QueuingPeople2/QueuePerson/Clickable")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Queue2/Puzzle3" unique_id=185623456 instance=ExtResource("21_h15xc")]
@@ -607,10 +535,6 @@ loop_name = 1303
 loop_mode = 1
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=437659163]
-libraries/ = SubResource("AnimationLibrary_b4pqv")
-autoplay = &"start"
-
 [node name="AreaQueueOff" type="Area2D" parent="." unique_id=2081063707]
 position = Vector2(2427, 762)
 collision_layer = 0
@@ -618,7 +542,7 @@ collision_mask = 8
 script = ExtResource("37_b4pqv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaQueueOff" unique_id=612840409]
-position = Vector2(-17, -17.5)
+position = Vector2(25, -17.5)
 shape = SubResource("RectangleShape2D_ex6vw")
 
 [node name="AreaQueueDisable" type="Area2D" parent="." unique_id=1772675203]
@@ -628,10 +552,24 @@ collision_mask = 8
 script = ExtResource("38_ex6vw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaQueueDisable" unique_id=776369223]
-position = Vector2(-17, -17.5)
-shape = SubResource("RectangleShape2D_ex6vw")
+shape = SubResource("RectangleShape2D_kde1w")
+
+[node name="AreaQueueOff2" type="Area2D" parent="." unique_id=625376948]
+position = Vector2(4579, 762)
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("37_b4pqv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaQueueOff2" unique_id=1014640865]
+position = Vector2(25, -17.5)
+shape = SubResource("RectangleShape2D_sgj77")
 
 [editable path="QueuingPeople/QueuePerson"]
+[editable path="QueuingPeople/QueuePerson2"]
+[editable path="QueuingPeople/QueuePerson3"]
+[editable path="QueuingPeople2/QueuePerson"]
+[editable path="QueuingPeople2/QueuePerson2"]
+[editable path="QueuingPeople2/QueuePerson3"]
 [editable path="Queue1/Puzzle4/DragDropPuzzle11"]
 [editable path="Queue1/Puzzle4/DragDropPuzzle11/BuildingBlocks/PuzzlePiece"]
 [editable path="Queue1/Puzzle4/DragDropPuzzle11/BuildingBlocks/PuzzlePiece2"]
