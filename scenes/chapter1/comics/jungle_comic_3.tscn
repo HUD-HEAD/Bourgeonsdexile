@@ -22,6 +22,7 @@
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="21_nn42y"]
 [ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="22_o3x7c"]
 [ext_resource type="PackedScene" uid="uid://cw1ikj5js4q4r" path="res://components/chapter1/comic_panels/comic_3/panel_ultrasound.tscn" id="22_w6r1n"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="23_o3x7c"]
 
 [node name="JungleComic3" type="Node2D" unique_id=1627757836]
 
@@ -116,3 +117,10 @@ rect = Rect2(-10, -10, 181, 146)
 script = ExtResource("22_o3x7c")
 music_name = 1300
 metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="JungleAmbience_Stop" type="VisibleOnScreenNotifier2D" parent="." unique_id=525456778]
+position = Vector2(489, 814)
+rect = Rect2(-10, -71, 226, 124)
+script = ExtResource("23_o3x7c")
+loop_name = 1201
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"

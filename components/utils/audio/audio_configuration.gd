@@ -31,6 +31,15 @@ enum sfx_type{
 
 enum loop_type{
 	none = -1,
+	
+	# c1_2_
+	c1_2_jungle_steps = 1200,
+	c1_2_jungle_ambience = 1201,
+	c1_2_walking_water = 1202,
+	c1_2_rain_loop = 1203,
+	c1_2_memories_traumatic = 1204,
+	c1_2_white_noise = 1205,
+	
 	c1_3_steps_loop = 1300,
 	c1_3_colombia_space_sound_loop = 1301,
 	c1_3_city_sound_loop = 1302,
@@ -58,6 +67,8 @@ enum loop_type{
 }
 
 enum music_type{
+	c1_2_jungle_theme = 1200,
+	c1_2_jungle_theme_after_traumatic_moment = 1201,
 	c1_3_migration_theme = 1300,
 	c1_4_final_theme = 1400,
 	c2_1_starting_theme = 2100,
