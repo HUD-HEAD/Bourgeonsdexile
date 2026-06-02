@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="9_ne1g0"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="9_tberq"]
 [ext_resource type="AudioStream" uid="uid://bnu1nalhyep0d" path="res://audio/chapter2/ambient/comic 2/panel_2.2_clock_sound_interactive.wav" id="10_07oul"]
+[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="12_07oul"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qy2mm"]
 animations = [{
@@ -82,3 +83,10 @@ script = ExtResource("9_tberq")
 clickables = [NodePath("../Clickable")]
 obstacles_to_clear = 2
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=835042585]
+position = Vector2(31, 150)
+rect = Rect2(-298, -82, 542, 181)
+script = ExtResource("12_07oul")
+loop_name = 2201
+metadata/_custom_type_script = "uid://brda7473wfj1v"

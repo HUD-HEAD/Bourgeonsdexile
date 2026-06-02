@@ -51,6 +51,7 @@ enum loop_type{
 	c2_2_people_sound = 2201,
 	c2_2_night_day_bus = 2202,
 	c2_2_bus_sound = 2203,
+	c2_2_bus_tense_moment  = 2204,
 	c2_3_bus_people = 2300,
 	c2_3_breathing_sound = 2301,
 	c2_3_city_space = 2302,
@@ -63,6 +64,10 @@ enum music_type{
 	c2_1_starting_theme_sad_moment_panel_10_to_15 = 2101,
 	c2_1_walking_theme_panel_15_to_20 = 2102,
 	c2_1_motocycle_panel_20_to_24 = 2103,
+	c2_2_theme = 2200,
+	c2_2_emotive_moment = 2201,
+	c2_3_theme  = 2300,
+	c2_3_emotive_song  = 2301,
 }
 
 @export var sfx_configuration: Array[sfx_config]

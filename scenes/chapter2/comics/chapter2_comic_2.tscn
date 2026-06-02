@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://bvpayxtg8pgtw" path="res://components/chapter2/comic_panels/comic_2/panel_16.tscn" id="19_2ahw6"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="19_5ylu8"]
 [ext_resource type="PackedScene" uid="uid://cse4dme0xetc3" path="res://components/chapter2/comic_panels/comic_2/panel_12.tscn" id="19_hkqs5"]
+[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="20_cg1sh"]
 [ext_resource type="PackedScene" uid="uid://duvxs2qfj8pfu" path="res://components/chapter2/comic_panels/comic_2/panel_14.tscn" id="20_ukg44"]
 [ext_resource type="PackedScene" uid="uid://dyu4nfimcgrb" path="res://components/chapter2/comic_panels/comic_2/panel_13.tscn" id="21_0qtw2"]
 
@@ -76,6 +77,13 @@ position = Vector2(19706, 0)
 [node name="Panel9" parent="Panels" unique_id=1920874665 instance=ExtResource("16_xit2h")]
 position = Vector2(22306, 0)
 
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="Panels/Panel9" unique_id=2021467181]
+position = Vector2(-940, -28)
+rect = Rect2(-78, -10, 88, 83)
+script = ExtResource("20_cg1sh")
+music_name = 2201
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
 [node name="Panel10" parent="Panels" unique_id=310300498 instance=ExtResource("17_r0851")]
 position = Vector2(24690, 0)
 
@@ -92,6 +100,13 @@ script = ExtResource("15_5ylu8")
 loop_name = 2202
 loop_mode = 1
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="Panels/Panel12" unique_id=1789928512]
+position = Vector2(-715, -280)
+rect = Rect2(-55, -48, 65, 58)
+script = ExtResource("20_cg1sh")
+music_name = 2200
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
 
 [node name="Panel14" parent="Panels" unique_id=2106480820 instance=ExtResource("21_0qtw2")]
 position = Vector2(32088, 0)
@@ -111,15 +126,22 @@ panels = [NodePath("../Panels/Panel1"), NodePath("../Panels/Panel2"), NodePath("
 
 [node name="Audio" type="Node" parent="." unique_id=619569792]
 
-[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=371142396]
-position = Vector2(40335, 596)
-script = ExtResource("19_5ylu8")
-next_scene = "uid://calxcc2jttv3p"
-
-[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=1968681839]
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=1968681839]
 position = Vector2(1834, 446)
 rect = Rect2(-4, 33, 143, 159)
 script = ExtResource("15_5ylu8")
 loop_name = 2105
 loop_mode = 1
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=1626684420]
+position = Vector2(1074, 573)
+rect = Rect2(-10, -10, 688, 68)
+script = ExtResource("20_cg1sh")
+music_name = 2200
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=371142396]
+position = Vector2(40335, 596)
+script = ExtResource("19_5ylu8")
+next_scene = "uid://calxcc2jttv3p"

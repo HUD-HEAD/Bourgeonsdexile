@@ -47,7 +47,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jr8bs"]
-size = Vector2(1574, 827)
+size = Vector2(2201.5, 1248.75)
 
 [node name="Panel1" type="Node2D" unique_id=547383153]
 
@@ -84,7 +84,7 @@ script = ExtResource("6_11q3p")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1138276266]
-position = Vector2(-305, 213)
+position = Vector2(-5, 6)
 shape = SubResource("RectangleShape2D_jr8bs")
 
 [node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=730712614 node_paths=PackedStringArray("clickables")]

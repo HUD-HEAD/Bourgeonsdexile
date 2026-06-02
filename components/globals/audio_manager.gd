@@ -172,7 +172,7 @@ func play_loop(key: AudioConfiguration.loop_type):
 		loop.stream = loop_info.stream
 	
 		#loop.play()
-		fade_in(loop)
+		fade_in(loop, 0, loop_info.volume)
 	
 func stop_loop(key: AudioConfiguration.loop_type, fade_in_enable: bool = true ):
 	_free_loop(key, fade_in_enable)
@@ -296,7 +296,7 @@ func _stop_sfx():
 #endregion
 
 #region Fade in/out, crossfade
-const TRANS_TIME = 0.5
+const TRANS_TIME = 1
 
 func cross_fade(fade_out_player : AudioStreamPlayer, fade_in_player : AudioStreamPlayer, min_volume = 0.0, max_volume = 1.0):
 	fade_out(fade_out_player, min_volume)
