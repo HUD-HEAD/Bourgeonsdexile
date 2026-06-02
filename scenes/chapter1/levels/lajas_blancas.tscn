@@ -29,6 +29,8 @@
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="34_kde1w"]
 [ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="35_sgj77"]
 [ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="36_iscax"]
+[ext_resource type="Script" uid="uid://bij60y62w1ho6" path="res://components/chapter1/main_characters/area_queue_off.gd" id="37_b4pqv"]
+[ext_resource type="Script" uid="uid://b1sskfh26m851" path="res://components/utils/mechanics/area_entered_disable.gd" id="38_ex6vw"]
 [ext_resource type="PackedScene" uid="uid://cx455fd0kkpbt" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB3.tscn" id="43_nx082"]
 [ext_resource type="PackedScene" uid="uid://b0rp3ag1qca1u" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB1.tscn" id="45_i6383"]
 [ext_resource type="PackedScene" uid="uid://dhktyk6ijdbuk" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB5.tscn" id="48_jenef"]
@@ -59,6 +61,63 @@ animations = [{
 "name": &"default",
 "speed": 30.0
 }]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sx88w"]
+radius = 48.0
+height = 212.0
+
+[sub_resource type="Animation" id="Animation_iscax"]
+resource_name = "start"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("QueuingPeople/QueuePerson")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_stop_walking"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("QueuingPeople/QueuePerson2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_stop_walking"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("QueuingPeople/QueuePerson3")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_stop_walking"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b4pqv"]
+_data = {
+&"start": SubResource("Animation_iscax")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ex6vw"]
+size = Vector2(254, 229)
 
 [node name="LajasBlancas" type="Node2D" unique_id=1909938204]
 
@@ -140,11 +199,15 @@ debug_color = Color(0.8252278, 0.2592846, 0.75617933, 0.41960785)
 position = Vector2(1, 5)
 
 [node name="QueuePerson" parent="QueuingPeople" unique_id=606944070 node_paths=PackedStringArray("model") instance=ExtResource("18_ih44s")]
-position = Vector2(689, 844)
+position = Vector2(1337, 844)
 model = NodePath("../../Spawn/Nina")
 
+[node name="Area2D" parent="QueuingPeople/QueuePerson" index="1" unique_id=960188442]
+collision_layer = 8
+input_pickable = false
+
 [node name="QueuePerson2" type="Node2D" parent="QueuingPeople" unique_id=700974070 node_paths=PackedStringArray("model", "anim_sprite")]
-position = Vector2(821, 844)
+position = Vector2(1488, 844)
 script = ExtResource("25_67up0")
 model = NodePath("../../Spawn/Nina")
 anim_sprite = NodePath("Woman")
@@ -160,14 +223,23 @@ sprite_frames = SubResource("SpriteFrames_vodvp")
 autoplay = "default"
 frame_progress = 0.9875541
 
+[node name="Area2D" type="Area2D" parent="QueuingPeople/QueuePerson2" unique_id=455623510]
+position = Vector2(5, -142)
+collision_layer = 8
+collision_mask = 0
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QueuingPeople/QueuePerson2/Area2D" unique_id=465165804]
+position = Vector2(0, 37)
+shape = SubResource("CapsuleShape2D_sx88w")
+
 [node name="QueuePerson3" type="Node2D" parent="QueuingPeople" unique_id=1934056135 node_paths=PackedStringArray("model", "anim_sprite")]
-position = Vector2(821, 844)
+position = Vector2(1641, 844)
 script = ExtResource("25_67up0")
 model = NodePath("../../Spawn/Nina")
 anim_sprite = NodePath("Woman")
 
 [node name="Woman" type="AnimatedSprite2D" parent="QueuingPeople/QueuePerson3" unique_id=2028592394]
-position = Vector2(149, 6)
 sprite_frames = ExtResource("30_h15xc")
 animation = &"walking"
 offset = Vector2(0, -100)
@@ -177,6 +249,16 @@ show_behind_parent = true
 sprite_frames = SubResource("SpriteFrames_vodvp")
 autoplay = "default"
 frame_progress = 0.9875541
+
+[node name="Area2D" type="Area2D" parent="QueuingPeople/QueuePerson3" unique_id=784874737]
+position = Vector2(5, -142)
+collision_layer = 8
+collision_mask = 0
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QueuingPeople/QueuePerson3/Area2D" unique_id=1320720615]
+position = Vector2(0, 37)
+shape = SubResource("CapsuleShape2D_sx88w")
 
 [node name="PaperBackgroundPostTent" type="TextureRect" parent="." unique_id=1110596856]
 visible = false
@@ -524,6 +606,30 @@ script = ExtResource("36_iscax")
 loop_name = 1303
 loop_mode = 1
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=437659163]
+libraries/ = SubResource("AnimationLibrary_b4pqv")
+autoplay = &"start"
+
+[node name="AreaQueueOff" type="Area2D" parent="." unique_id=2081063707]
+position = Vector2(2427, 762)
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("37_b4pqv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaQueueOff" unique_id=612840409]
+position = Vector2(-17, -17.5)
+shape = SubResource("RectangleShape2D_ex6vw")
+
+[node name="AreaQueueDisable" type="Area2D" parent="." unique_id=1772675203]
+position = Vector2(2732, 772)
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("38_ex6vw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaQueueDisable" unique_id=776369223]
+position = Vector2(-17, -17.5)
+shape = SubResource("RectangleShape2D_ex6vw")
 
 [editable path="QueuingPeople/QueuePerson"]
 [editable path="Queue1/Puzzle4/DragDropPuzzle11"]

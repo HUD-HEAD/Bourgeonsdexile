@@ -1,4 +1,4 @@
-extends Woman
+class_name Companion extends Woman
 #TODO refactor/cleanup 
 
 @export var model : Woman
@@ -15,10 +15,6 @@ func _ready() -> void:
 	else:
 		offset_from_model = self.global_position.x - model.global_position.x
 
-func _process(delta: float) -> void:
-	anim_sprite.animation = model.anim_sprite.animation
-	if model.walking :
-		if walk_along_path:
-			path_follow.progress = model.path_follow.progress + offset_from_model
-		else:
-			global_position.x = model.global_position.x + offset_from_model
+func disable():
+	hide()
+	queue_free()
