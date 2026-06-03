@@ -522,6 +522,7 @@ shape = SubResource("CapsuleShape2D_hsmfu")
 [node name="Companion" parent="." unique_id=1753872610 node_paths=PackedStringArray("model") instance=ExtResource("4_nonyt")]
 position = Vector2(687, 773)
 model = NodePath("../Amani")
+start_walking = true
 
 [node name="AnimSprite" parent="Companion" index="0" unique_id=689873547]
 sprite_frames = ExtResource("5_yuvbc")
