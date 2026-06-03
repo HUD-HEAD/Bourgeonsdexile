@@ -482,6 +482,8 @@ position = Vector2(0, -237)
 [node name="Camera2D" type="Camera2D" parent="Spawn/Nina" unique_id=1900272272]
 position = Vector2(0, -327)
 offset = Vector2(500, 0)
+limit_top = 0
+limit_bottom = 1080
 
 [node name="CheckpointController" type="Node" parent="." unique_id=1005402094]
 script = ExtResource("34_kde1w")

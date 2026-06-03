@@ -66,6 +66,7 @@
 [ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="64_3d65b"]
 [ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="65_6oc3f"]
 [ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="66_idrs3"]
+[ext_resource type="Script" uid="uid://cpn4fytrpjypm" path="res://components/chapter1/main_characters/area_switch_anim.gd" id="67_7kpd7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3ogmi"]
 animations = [{
@@ -102,6 +103,9 @@ size = Vector2(630, 566)
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6b20s"]
 radius = 48.0
 height = 212.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7kpd7"]
+radius = 100.0
 
 [node name="Goma" type="Node2D" unique_id=987125979]
 
@@ -557,6 +561,7 @@ shape = SubResource("CapsuleShape2D_6b20s")
 position = Vector2(571, 839)
 model = NodePath("../Amani")
 start_walking = true
+follow_model = true
 
 [node name="AnimSprite" parent="CharWalking/Companion" index="0" unique_id=689873547]
 sprite_frames = ExtResource("7_mp6eu")
@@ -675,6 +680,28 @@ rect = Rect2(-126, -10, 136, 157)
 script = ExtResource("65_6oc3f")
 music_name = 2103
 metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="AreaCrawl" type="Area2D" parent="." unique_id=1243578540]
+position = Vector2(2087, 723)
+collision_layer = 0
+collision_mask = 10
+input_pickable = false
+script = ExtResource("67_7kpd7")
+anim_name = "crawl"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaCrawl" unique_id=1861239115]
+shape = SubResource("CircleShape2D_7kpd7")
+
+[node name="AreaEndCrawl" type="Area2D" parent="." unique_id=862010122]
+position = Vector2(2530, 716)
+collision_layer = 0
+collision_mask = 10
+input_pickable = false
+script = ExtResource("67_7kpd7")
+anim_name = "walking"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaEndCrawl" unique_id=777600366]
+shape = SubResource("CircleShape2D_7kpd7")
 
 [editable path="Puzzles/Puzzle1/DragDropPuzzle2"]
 [editable path="Puzzles/Puzzle1/DragDropPuzzle2/BuildingBlocks/PuzzlePiece"]

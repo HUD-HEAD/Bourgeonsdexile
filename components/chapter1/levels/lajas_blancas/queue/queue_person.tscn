@@ -13,7 +13,7 @@ height = 212.0
 script = ExtResource("2_trrhf")
 offset_from_model = 0.0
 start_walking = false
-process_signals = true
+follow_model = false
 
 [node name="AnimSprite" parent="." index="0" unique_id=689873547]
 sprite_frames = ExtResource("2_shsib")

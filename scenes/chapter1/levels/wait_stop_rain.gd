@@ -2,14 +2,15 @@ extends Node2D
 
 @export var puzzle : DragDropPuzzle
 @export var rains : Array[GPUParticles2D]
-@export var nina : Woman
+@export var women : Array[Woman]
 @export var rain_sfx: TriggerLoopZone
 
 func _ready() -> void:
 	puzzle.puzzle_complete.connect(_on_puzzle_complete)
 	
 func _on_puzzle_complete():
-	nina._stop_walking()
+	for woman in women:
+		woman._stop_walking()
 	for rain in rains:
 		var tween : Tween = rain.create_tween()
 		tween.tween_property(rain, "amount_ratio", 0.0, 5)

@@ -101,6 +101,7 @@ shape = SubResource("RectangleShape2D_dposx")
 position = Vector2(133, 43)
 
 [node name="CompletePuzzle" parent="." index="2" unique_id=1933061263]
+z_index = 1
 texture = ExtResource("9_plf6c")
 
 [editable path="BuildingBlocks/PuzzlePiece"]

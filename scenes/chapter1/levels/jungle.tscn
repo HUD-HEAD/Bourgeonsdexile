@@ -204,9 +204,9 @@ height = 1080
 
 [sub_resource type="Curve2D" id="Curve2D_8pokd"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 805, -389.74353, 128.61536, 389.74353, -128.61536, 2284, 742, 0, 0, 0, 0, 18016, 770, -188.4297, 62.8099, 188.4297, -62.8099, 24551, 829, -454.16388, 6.4420395, 454.16388, -6.4420395, 25567, 364, -356.8931, -4.9555283, 356.8931, 4.9555283, 26835, 344, 0, 0, 0, 0, 34903, 275)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 805, -389.74353, 128.61536, 389.74353, -128.61536, 2284, 742, 0, 0, 0, 0, 14729.226, 730.5856, -260.96332, -11.45157, 260.96332, 11.45157, 15084, 817, 0, 0, 0, 0, 15815.768, 751.33545, 0, 0, 0, 0, 18016, 770, -188.4297, 62.8099, 188.4297, -62.8099, 24551, 829, -454.16388, 6.4420395, 454.16388, -6.4420395, 25567, 364, -356.8931, -4.9555283, 356.8931, 4.9555283, 26835, 344, 0, 0, 0, 0, 34903, 275)
 }
-point_count = 7
+point_count = 10
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1yhnw"]
 radius = 146.38
@@ -336,7 +336,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_2wqw0"]
 resource_name = "trauma"
-length = 8.0
+length = 14.0
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -358,7 +358,7 @@ tracks/1/path = NodePath("../../../Path2D/PathFollow2D/Nina")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 7.9),
+"times": PackedFloat32Array(0, 13.033334),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
@@ -399,7 +399,7 @@ tracks/4/path = NodePath("../../../CanvasLayer/Control/TextureRect:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(8),
+"times": PackedFloat32Array(13.6),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
@@ -411,7 +411,7 @@ tracks/5/path = NodePath("../../../Path2D/PathFollow2D:progress")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(7.7798176),
+"times": PackedFloat32Array(12.833333),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [19433.77]
@@ -729,6 +729,7 @@ script = ExtResource("20_t8bry")
 model = NodePath("../../PathFollow2D/Nina")
 offset_from_model = 0.0
 start_walking = true
+follow_model = true
 path_follow = NodePath("..")
 
 [node name="AnimSprite" parent="Path2D/PathFollowCompanion1/Companion1" index="0" unique_id=689873547]
@@ -758,6 +759,7 @@ script = ExtResource("20_t8bry")
 model = NodePath("../../PathFollow2D/Nina")
 offset_from_model = 0.0
 start_walking = true
+follow_model = true
 path_follow = NodePath("..")
 
 [node name="AnimSprite" parent="Path2D/PathFollowCompanion2/Companion2" index="0" unique_id=689873547]
@@ -779,6 +781,7 @@ script = ExtResource("20_t8bry")
 model = NodePath("../../PathFollow2D/Nina")
 offset_from_model = 0.0
 start_walking = true
+follow_model = true
 path_follow = NodePath("..")
 
 [node name="AnimSprite" parent="Path2D/PathFollowCompanion3/Companion3" index="0" unique_id=689873547]
@@ -795,6 +798,7 @@ position = Vector2(459.85278, 816.4505)
 [node name="JungleWomanReflection" parent="Path2D/ReflectionNina/ReflectionContainer" parent_id_path=PackedInt32Array(732020292, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
 start_walking = true
+follow_model = true
 
 [node name="Shadow" parent="Path2D/ReflectionNina/ReflectionContainer/JungleWomanReflection/AnimSprite" parent_id_path=PackedInt32Array(732020292, 700974070, 689873547) index="0" unique_id=1632501669]
 visible = false
@@ -806,6 +810,7 @@ progress = 359.48
 [node name="JungleWomanReflection" parent="Path2D/ReflectionCompanion1/ReflectionContainer" parent_id_path=PackedInt32Array(1639842222, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
 start_walking = true
+follow_model = true
 
 [node name="AnimSprite" parent="Path2D/ReflectionCompanion1/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 sprite_frames = ExtResource("16_17nyf")
@@ -821,6 +826,7 @@ progress = 256.8
 [node name="JungleWomanReflection" parent="Path2D/ReflectionCompanion2/ReflectionContainer" parent_id_path=PackedInt32Array(1162299954, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
 start_walking = true
+follow_model = true
 
 [node name="AnimSprite" parent="Path2D/ReflectionCompanion2/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 sprite_frames = ExtResource("17_k7em6")
@@ -836,6 +842,7 @@ progress = 160.65
 [node name="JungleWomanReflection" parent="Path2D/ReflectionCompanion3/ReflectionContainer" parent_id_path=PackedInt32Array(2137896206, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
 start_walking = true
+follow_model = true
 
 [node name="AnimSprite" parent="Path2D/ReflectionCompanion3/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 sprite_frames = ExtResource("19_jh4yo")
@@ -850,7 +857,7 @@ script = ExtResource("16_aewef")
 next_scene = "uid://deifii0sv125i"
 
 [node name="Rain" parent="." unique_id=498998463 instance=ExtResource("18_nqhdg")]
-position = Vector2(8252, -53)
+position = Vector2(8325, -53)
 amount = 5000
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Rain" unique_id=2096811711 node_paths=PackedStringArray("rain")]
@@ -997,12 +1004,12 @@ texture = ExtResource("45_vy7rn")
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzles/Puzzle2/DragDropPuzzle2/BuildingBlocks/PuzzlePiece6/Draggable" parent_id_path=PackedInt32Array(52554836, 1631794380, 2116105691) index="1" unique_id=991932022]
 texture = ExtResource("46_65248")
 
-[node name="WaitStopRain" type="Node2D" parent="Puzzles/Puzzle2" unique_id=764478138 node_paths=PackedStringArray("puzzle", "rains", "nina", "rain_sfx")]
+[node name="WaitStopRain" type="Node2D" parent="Puzzles/Puzzle2" unique_id=764478138 node_paths=PackedStringArray("puzzle", "rains", "women", "rain_sfx")]
 position = Vector2(-6, 0)
 script = ExtResource("31_c3f0v")
 puzzle = NodePath("../DragDropPuzzle2")
 rains = [NodePath("../../../Rain")]
-nina = NodePath("../../../Path2D/PathFollow2D/Nina")
+women = [NodePath("../../../Path2D/PathFollow2D/Nina"), NodePath("../../../Path2D/PathFollowCompanion1/Companion1"), NodePath("../../../Path2D/PathFollowCompanion2/Companion2"), NodePath("../../../Path2D/PathFollowCompanion3/Companion3")]
 rain_sfx = NodePath("../../../AudioContainer/Rain_loop_stop")
 
 [node name="Puzzle4" type="Node2D" parent="Puzzles" unique_id=1658305612]
