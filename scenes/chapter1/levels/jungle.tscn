@@ -704,6 +704,7 @@ loop = false
 
 [node name="Nina" parent="Path2D/PathFollow2D" unique_id=1358938074 node_paths=PackedStringArray("path_follow") instance=ExtResource("15_td1vu")]
 path_follow = NodePath("..")
+play_walking_sfx = true
 
 [node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D/Nina" unique_id=1732687290]
 position = Vector2(0, -233)
@@ -727,6 +728,7 @@ loop = false
 script = ExtResource("20_t8bry")
 model = NodePath("../../PathFollow2D/Nina")
 offset_from_model = 0.0
+start_walking = true
 path_follow = NodePath("..")
 
 [node name="AnimSprite" parent="Path2D/PathFollowCompanion1/Companion1" index="0" unique_id=689873547]
@@ -755,6 +757,7 @@ loop = false
 script = ExtResource("20_t8bry")
 model = NodePath("../../PathFollow2D/Nina")
 offset_from_model = 0.0
+start_walking = true
 path_follow = NodePath("..")
 
 [node name="AnimSprite" parent="Path2D/PathFollowCompanion2/Companion2" index="0" unique_id=689873547]
@@ -775,6 +778,7 @@ loop = false
 script = ExtResource("20_t8bry")
 model = NodePath("../../PathFollow2D/Nina")
 offset_from_model = 0.0
+start_walking = true
 path_follow = NodePath("..")
 
 [node name="AnimSprite" parent="Path2D/PathFollowCompanion3/Companion3" index="0" unique_id=689873547]
@@ -790,6 +794,7 @@ position = Vector2(459.85278, 816.4505)
 
 [node name="JungleWomanReflection" parent="Path2D/ReflectionNina/ReflectionContainer" parent_id_path=PackedInt32Array(732020292, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
+start_walking = true
 
 [node name="Shadow" parent="Path2D/ReflectionNina/ReflectionContainer/JungleWomanReflection/AnimSprite" parent_id_path=PackedInt32Array(732020292, 700974070, 689873547) index="0" unique_id=1632501669]
 visible = false
@@ -800,6 +805,7 @@ progress = 359.48
 
 [node name="JungleWomanReflection" parent="Path2D/ReflectionCompanion1/ReflectionContainer" parent_id_path=PackedInt32Array(1639842222, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
+start_walking = true
 
 [node name="AnimSprite" parent="Path2D/ReflectionCompanion1/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 sprite_frames = ExtResource("16_17nyf")
@@ -814,6 +820,7 @@ progress = 256.8
 
 [node name="JungleWomanReflection" parent="Path2D/ReflectionCompanion2/ReflectionContainer" parent_id_path=PackedInt32Array(1162299954, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
+start_walking = true
 
 [node name="AnimSprite" parent="Path2D/ReflectionCompanion2/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 sprite_frames = ExtResource("17_k7em6")
@@ -828,6 +835,7 @@ progress = 160.65
 
 [node name="JungleWomanReflection" parent="Path2D/ReflectionCompanion3/ReflectionContainer" parent_id_path=PackedInt32Array(2137896206, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
+start_walking = true
 
 [node name="AnimSprite" parent="Path2D/ReflectionCompanion3/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 sprite_frames = ExtResource("19_jh4yo")
@@ -989,12 +997,13 @@ texture = ExtResource("45_vy7rn")
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzles/Puzzle2/DragDropPuzzle2/BuildingBlocks/PuzzlePiece6/Draggable" parent_id_path=PackedInt32Array(52554836, 1631794380, 2116105691) index="1" unique_id=991932022]
 texture = ExtResource("46_65248")
 
-[node name="WaitStopRain" type="Node2D" parent="Puzzles/Puzzle2" unique_id=764478138 node_paths=PackedStringArray("puzzle", "rains", "nina")]
+[node name="WaitStopRain" type="Node2D" parent="Puzzles/Puzzle2" unique_id=764478138 node_paths=PackedStringArray("puzzle", "rains", "nina", "rain_sfx")]
 position = Vector2(-6, 0)
 script = ExtResource("31_c3f0v")
 puzzle = NodePath("../DragDropPuzzle2")
 rains = [NodePath("../../../Rain")]
 nina = NodePath("../../../Path2D/PathFollow2D/Nina")
+rain_sfx = NodePath("../../../AudioContainer/Rain_loop_stop")
 
 [node name="Puzzle4" type="Node2D" parent="Puzzles" unique_id=1658305612]
 position = Vector2(13085, 14)
@@ -1565,6 +1574,65 @@ position = Vector2(33030, 429)
 rect = Rect2(-10, -71, 226, 124)
 script = ExtResource("192_j6pee")
 loop_name = 1201
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="Steps_loop" type="Node" parent="AudioContainer" unique_id=604421724]
+
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="AudioContainer/Steps_loop" unique_id=894523335]
+position = Vector2(126, 910)
+rect = Rect2(-10, -10, 73, 67)
+script = ExtResource("192_j6pee")
+loop_name = 1200
+loop_mode = 2
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone2" type="VisibleOnScreenNotifier2D" parent="AudioContainer/Steps_loop" unique_id=1975444769]
+position = Vector2(9404, 649)
+rect = Rect2(-10, -59, 114, 116)
+script = ExtResource("192_j6pee")
+loop_name = 1200
+loop_mode = 2
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone4" type="VisibleOnScreenNotifier2D" parent="AudioContainer/Steps_loop" unique_id=432461886]
+position = Vector2(30762, 333)
+rect = Rect2(-10, -59, 114, 116)
+script = ExtResource("192_j6pee")
+loop_name = 1200
+loop_mode = 2
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone_water" type="VisibleOnScreenNotifier2D" parent="AudioContainer/Steps_loop" unique_id=272174332]
+position = Vector2(6124, 652)
+rect = Rect2(-10, -24, 73, 81)
+script = ExtResource("192_j6pee")
+loop_name = 1202
+loop_mode = 2
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone_water3" type="VisibleOnScreenNotifier2D" parent="AudioContainer/Steps_loop" unique_id=771519784]
+position = Vector2(27860, 332)
+rect = Rect2(-67, -24, 117, 81)
+script = ExtResource("192_j6pee")
+loop_name = 1202
+loop_mode = 2
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="Rain_loop" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=952376731]
+position = Vector2(9327, 716)
+rect = Rect2(-29, -10, 58, 60)
+script = ExtResource("192_j6pee")
+loop_name = 1203
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="Rain_loop_stop" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=937792513]
+position = Vector2(9327, 716)
+rect = Rect2(-29, -10, 58, 60)
+script = ExtResource("192_j6pee")
+loop_name = 1203
+loop_mode = 1
+start_loop_on_enter_screen = false
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [editable path="Path2D/PathFollowCompanion1/Companion1"]

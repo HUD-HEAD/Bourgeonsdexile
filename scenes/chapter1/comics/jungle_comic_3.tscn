@@ -123,4 +123,13 @@ position = Vector2(489, 814)
 rect = Rect2(-10, -71, 226, 124)
 script = ExtResource("23_o3x7c")
 loop_name = 1201
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=767101275]
+position = Vector2(910, 827)
+rect = Rect2(-10, -10, 139, 112)
+script = ExtResource("23_o3x7c")
+loop_name = 1200
+loop_mode = 1
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"

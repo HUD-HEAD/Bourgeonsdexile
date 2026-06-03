@@ -32,6 +32,8 @@ enum sfx_type{
 enum loop_type{
 	none = -1,
 	
+	c1_1_market_colombia = 1100,
+	
 	# c1_2_
 	c1_2_jungle_steps = 1200,
 	c1_2_jungle_ambience = 1201,

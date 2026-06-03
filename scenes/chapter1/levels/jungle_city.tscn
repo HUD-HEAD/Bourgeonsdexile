@@ -237,6 +237,7 @@
 [ext_resource type="Texture2D" uid="uid://cjd0cved1hco8" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0119.png" id="227_wjkiy"]
 [ext_resource type="Texture2D" uid="uid://bg5s78yi6ix11" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0120.png" id="228_1rf41"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="237_5h7fb"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="238_48jc3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_48jwk"]
 animations = [{
@@ -1241,6 +1242,21 @@ bus = &"Music"
 [node name="CheckpointController" type="Node" parent="." unique_id=1125817438]
 script = ExtResource("237_5h7fb")
 comic = 4
+
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=589738477]
+position = Vector2(2178, 567)
+rect = Rect2(-65, -10, 75, 79)
+script = ExtResource("238_48jc3")
+loop_name = 1100
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone2" type="VisibleOnScreenNotifier2D" parent="." unique_id=1549316634]
+position = Vector2(4955, 407)
+rect = Rect2(-65, -10, 75, 79)
+script = ExtResource("238_48jc3")
+loop_name = 1100
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [editable path="Puzzle1/CityPuzzle1"]
 [editable path="Puzzle2/CityPuzzle2"]
