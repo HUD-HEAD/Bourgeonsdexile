@@ -52,6 +52,8 @@
 [ext_resource type="Texture2D" uid="uid://xmkmak8t5q3b" path="res://graphics/chapter2/levels/goma/npcs/man_woman_talk_6fps/man_woman_talk_0015.png" id="50_7agjy"]
 [ext_resource type="Texture2D" uid="uid://dshditxo3e1pa" path="res://graphics/chapter2/levels/goma/npcs/man_woman_talk_6fps/man_woman_talk_0016.png" id="51_cbojg"]
 [ext_resource type="Texture2D" uid="uid://dmx0ommwpr0x8" path="res://graphics/chapter2/levels/goma/npcs/man_woman_talk_6fps/man_woman_talk_0017.png" id="52_e28ne"]
+[ext_resource type="Texture2D" uid="uid://c2xxo5ok547ah" path="res://graphics/background_paperdark.png" id="53_sa0ao"]
+[ext_resource type="Script" uid="uid://qu5hfw1uwm0x" path="res://components/utils/mechanics/area_reveal.gd" id="54_adwnm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_61fec"]
 animations = [{
@@ -112,6 +114,9 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_726rr"]
+size = Vector2(489, 240)
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hsmfu"]
 radius = 48.0
 height = 212.0
@@ -152,6 +157,38 @@ frame_progress = 0.67656565
 [node name="Theme" type="AudioStreamPlayer" parent="." unique_id=67967600]
 autoplay = true
 bus = &"Music"
+
+[node name="InteriorReveal" type="Node2D" parent="." unique_id=1174613595]
+visible = false
+
+[node name="PaperBackground" type="TextureRect" parent="InteriorReveal" unique_id=1565404881]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1669.0
+offset_right = 4878.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("53_sa0ao")
+stretch_mode = 1
+
+[node name="Interior2" type="Sprite2D" parent="InteriorReveal" unique_id=1725472311]
+position = Vector2(3152, 546)
+texture = ExtResource("4_fklnn")
+
+[node name="AreaReveal" type="Area2D" parent="InteriorReveal/Interior2" unique_id=766745585 node_paths=PackedStringArray("nodes_to_reveal", "nodes_to_hide")]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("54_adwnm")
+nodes_to_reveal = [NodePath("../..")]
+nodes_to_hide = [NodePath("../../../Puzzles/Puzzle2")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteriorReveal/Interior2/AreaReveal" unique_id=2096691618]
+position = Vector2(52.5, 55)
+shape = SubResource("RectangleShape2D_726rr")
+debug_color = Color(0.8252278, 0.2592846, 0.75617933, 0.41960785)
 
 [node name="Puzzles" type="Node2D" parent="." unique_id=2096714344]
 
@@ -415,6 +452,8 @@ shape = SubResource("CapsuleShape2D_hsmfu")
 [node name="Companion" parent="." unique_id=1753872610 node_paths=PackedStringArray("model") instance=ExtResource("4_nonyt")]
 position = Vector2(687, 773)
 model = NodePath("../Amani")
+start_walking = true
+follow_model = true
 
 [node name="AnimSprite" parent="Companion" index="0" unique_id=689873547]
 sprite_frames = ExtResource("5_yuvbc")
