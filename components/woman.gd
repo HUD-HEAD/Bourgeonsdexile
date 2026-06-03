@@ -32,6 +32,9 @@ func _process(delta: float) -> void:
 			self.global_position.x += WALK_SPEED*delta
 
 
+func switch_animation(anim_name : String):
+	anim_sprite.animation = anim_name
+
 func _on_area_entered(area : Area2D):
 	_stop_walking()
 	InputManager.show_mouse()

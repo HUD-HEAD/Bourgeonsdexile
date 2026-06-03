@@ -1,11 +1,17 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://cteyh286rov0u"]
 
+[ext_resource type="Texture2D" uid="uid://dguuc8564y5v7" path="res://graphics/chapter2/main_characters/main_character/amani_crawl_5fps/amani_crawl_0001.png" id="1_3klnj"]
 [ext_resource type="Texture2D" uid="uid://buq471cpbrmjv" path="res://graphics/chapter2/main_characters/main_character/amani_idle1_15fps/amani_idle1_0001.png" id="1_c4x26"]
+[ext_resource type="Texture2D" uid="uid://cwcuy2vr4b1wc" path="res://graphics/chapter2/main_characters/main_character/amani_crawl_5fps/amani_crawl_0002.png" id="2_eq1g3"]
 [ext_resource type="Texture2D" uid="uid://dy7uhlni0cg88" path="res://graphics/chapter2/main_characters/main_character/amani_idle1_15fps/amani_idle1_0002.png" id="2_ywvm6"]
+[ext_resource type="Texture2D" uid="uid://bjw8jk7hhppw3" path="res://graphics/chapter2/main_characters/main_character/amani_crawl_5fps/amani_crawl_0003.png" id="3_5rmsa"]
 [ext_resource type="Texture2D" uid="uid://cx12k664bppv3" path="res://graphics/chapter2/main_characters/main_character/amani_idle1_15fps/amani_idle1_0003.png" id="3_slu6j"]
+[ext_resource type="Texture2D" uid="uid://cdo628f3s07g5" path="res://graphics/chapter2/main_characters/main_character/amani_crawl_5fps/amani_crawl_0004.png" id="4_eyclb"]
 [ext_resource type="Texture2D" uid="uid://cl670nvvye6os" path="res://graphics/chapter2/main_characters/main_character/amani_idle1_15fps/amani_idle1_0004.png" id="4_hkq72"]
 [ext_resource type="Texture2D" uid="uid://d3yjw53iiy0vh" path="res://graphics/chapter2/main_characters/main_character/amani_idle1_15fps/amani_idle1_0005.png" id="5_8fc8b"]
+[ext_resource type="Texture2D" uid="uid://v2tv78sydft2" path="res://graphics/chapter2/main_characters/main_character/amani_crawl_5fps/amani_crawl_0005.png" id="5_rtx83"]
 [ext_resource type="Texture2D" uid="uid://ccxdt1ftcw257" path="res://graphics/chapter2/main_characters/main_character/amani_idle1_15fps/amani_idle1_0006.png" id="6_8rrbe"]
+[ext_resource type="Texture2D" uid="uid://dnchsrpgkuxe7" path="res://graphics/chapter2/main_characters/main_character/amani_crawl_5fps/amani_crawl_0006.png" id="6_mn23b"]
 [ext_resource type="Texture2D" uid="uid://c0fxk70ohyxvu" path="res://graphics/chapter2/main_characters/main_character/amani_idle1_15fps/amani_idle1_0007.png" id="7_d2s01"]
 [ext_resource type="Texture2D" uid="uid://gohw3lusxihf" path="res://graphics/chapter2/main_characters/main_character/amani_idle1_15fps/amani_idle1_0008.png" id="8_i1mlx"]
 [ext_resource type="Texture2D" uid="uid://dkhwoyg8iuvcg" path="res://graphics/chapter2/main_characters/main_character/amani_idle1_15fps/amani_idle1_0009.png" id="9_4liwc"]
@@ -55,6 +61,29 @@
 
 [resource]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3klnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_eq1g3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5rmsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_eyclb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rtx83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mn23b")
+}],
+"loop": true,
+"name": &"crawl",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_c4x26")
