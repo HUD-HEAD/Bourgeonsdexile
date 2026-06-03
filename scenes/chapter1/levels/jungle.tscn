@@ -729,6 +729,7 @@ script = ExtResource("20_t8bry")
 model = NodePath("../../PathFollow2D/Nina")
 offset_from_model = 0.0
 start_walking = true
+follow_model = true
 path_follow = NodePath("..")
 
 [node name="AnimSprite" parent="Path2D/PathFollowCompanion1/Companion1" index="0" unique_id=689873547]
@@ -758,6 +759,7 @@ script = ExtResource("20_t8bry")
 model = NodePath("../../PathFollow2D/Nina")
 offset_from_model = 0.0
 start_walking = true
+follow_model = true
 path_follow = NodePath("..")
 
 [node name="AnimSprite" parent="Path2D/PathFollowCompanion2/Companion2" index="0" unique_id=689873547]
@@ -779,6 +781,7 @@ script = ExtResource("20_t8bry")
 model = NodePath("../../PathFollow2D/Nina")
 offset_from_model = 0.0
 start_walking = true
+follow_model = true
 path_follow = NodePath("..")
 
 [node name="AnimSprite" parent="Path2D/PathFollowCompanion3/Companion3" index="0" unique_id=689873547]
@@ -795,6 +798,7 @@ position = Vector2(459.85278, 816.4505)
 [node name="JungleWomanReflection" parent="Path2D/ReflectionNina/ReflectionContainer" parent_id_path=PackedInt32Array(732020292, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
 start_walking = true
+follow_model = true
 
 [node name="Shadow" parent="Path2D/ReflectionNina/ReflectionContainer/JungleWomanReflection/AnimSprite" parent_id_path=PackedInt32Array(732020292, 700974070, 689873547) index="0" unique_id=1632501669]
 visible = false
@@ -806,6 +810,7 @@ progress = 359.48
 [node name="JungleWomanReflection" parent="Path2D/ReflectionCompanion1/ReflectionContainer" parent_id_path=PackedInt32Array(1639842222, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
 start_walking = true
+follow_model = true
 
 [node name="AnimSprite" parent="Path2D/ReflectionCompanion1/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 sprite_frames = ExtResource("16_17nyf")
@@ -821,6 +826,7 @@ progress = 256.8
 [node name="JungleWomanReflection" parent="Path2D/ReflectionCompanion2/ReflectionContainer" parent_id_path=PackedInt32Array(1162299954, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
 start_walking = true
+follow_model = true
 
 [node name="AnimSprite" parent="Path2D/ReflectionCompanion2/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 sprite_frames = ExtResource("17_k7em6")
@@ -836,6 +842,7 @@ progress = 160.65
 [node name="JungleWomanReflection" parent="Path2D/ReflectionCompanion3/ReflectionContainer" parent_id_path=PackedInt32Array(2137896206, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
 start_walking = true
+follow_model = true
 
 [node name="AnimSprite" parent="Path2D/ReflectionCompanion3/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 sprite_frames = ExtResource("19_jh4yo")
