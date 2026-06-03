@@ -857,7 +857,7 @@ script = ExtResource("16_aewef")
 next_scene = "uid://deifii0sv125i"
 
 [node name="Rain" parent="." unique_id=498998463 instance=ExtResource("18_nqhdg")]
-position = Vector2(8252, -53)
+position = Vector2(8325, -53)
 amount = 5000
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Rain" unique_id=2096811711 node_paths=PackedStringArray("rain")]
@@ -1004,12 +1004,12 @@ texture = ExtResource("45_vy7rn")
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzles/Puzzle2/DragDropPuzzle2/BuildingBlocks/PuzzlePiece6/Draggable" parent_id_path=PackedInt32Array(52554836, 1631794380, 2116105691) index="1" unique_id=991932022]
 texture = ExtResource("46_65248")
 
-[node name="WaitStopRain" type="Node2D" parent="Puzzles/Puzzle2" unique_id=764478138 node_paths=PackedStringArray("puzzle", "rains", "nina", "rain_sfx")]
+[node name="WaitStopRain" type="Node2D" parent="Puzzles/Puzzle2" unique_id=764478138 node_paths=PackedStringArray("puzzle", "rains", "women", "rain_sfx")]
 position = Vector2(-6, 0)
 script = ExtResource("31_c3f0v")
 puzzle = NodePath("../DragDropPuzzle2")
 rains = [NodePath("../../../Rain")]
-nina = NodePath("../../../Path2D/PathFollow2D/Nina")
+women = [NodePath("../../../Path2D/PathFollow2D/Nina"), NodePath("../../../Path2D/PathFollowCompanion1/Companion1"), NodePath("../../../Path2D/PathFollowCompanion2/Companion2"), NodePath("../../../Path2D/PathFollowCompanion3/Companion3")]
 rain_sfx = NodePath("../../../AudioContainer/Rain_loop_stop")
 
 [node name="Puzzle4" type="Node2D" parent="Puzzles" unique_id=1658305612]
