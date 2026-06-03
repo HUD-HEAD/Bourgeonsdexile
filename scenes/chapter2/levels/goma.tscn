@@ -65,6 +65,7 @@
 [ext_resource type="Script" uid="uid://bvmwxu2au5j5l" path="res://components/utils/audio/audio integration nodes/audio_sfx_zone.gd" id="63_8oqhf"]
 [ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="64_3d65b"]
 [ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="65_6oc3f"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="66_idrs3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3ogmi"]
 animations = [{
@@ -534,6 +535,7 @@ shape = SubResource("RectangleShape2D_1fm80")
 
 [node name="Amani" parent="CharWalking" unique_id=700974070 instance=ExtResource("6_fssrv")]
 position = Vector2(463, 840)
+play_walking_sfx = true
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="CharWalking/Amani" unique_id=826409052]
 position = Vector2(20, -220)
@@ -586,13 +588,6 @@ rect = Rect2(-82, -10, 92, 67)
 script = ExtResource("63_8oqhf")
 sfx = 2114
 metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
-
-[node name="LoopZone2_15_19" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=88521695]
-position = Vector2(116, 41)
-rect = Rect2(-44, -10, 5000, 209)
-script = ExtResource("64_3d65b")
-loop_name = 2103
-metadata/_custom_type_script = "uid://brda7473wfj1v"
 
 [node name="LoopZone3_15_19" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=955856650]
 position = Vector2(116, 41)
@@ -657,6 +652,22 @@ sfx = 2100
 linear_volume = 0.8
 min_pitch = 0.95
 metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
+
+[node name="TriggerLoopZone_steps" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1202652206]
+position = Vector2(236, 960)
+rect = Rect2(-10, -10, 80, 74)
+script = ExtResource("66_idrs3")
+loop_name = 2103
+loop_mode = 2
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone_steps2" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1640128641]
+position = Vector2(7925, 303)
+rect = Rect2(-10, -10, 80, 74)
+script = ExtResource("66_idrs3")
+loop_name = 2103
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="." unique_id=734422288]
 position = Vector2(6861, 522)
