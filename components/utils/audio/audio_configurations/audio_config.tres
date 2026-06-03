@@ -55,6 +55,7 @@
 [ext_resource type="AudioStream" uid="uid://bjm40c8yttuq2" path="res://audio/chapter1/ambient/panel_section_2/panel_2.20_rain_loop.wav" id="26_ov2pk"]
 [ext_resource type="AudioStream" uid="uid://clbn4mxcbpuwd" path="res://audio/chapter1/ambient/panel_section_2/panel_2.25_2.26_memories_traumatic.wav" id="27_x200s"]
 [ext_resource type="AudioStream" uid="uid://c48d6w2xb5kuc" path="res://audio/chapter1/ambient/panel_section_2/panel_2.25_2.26_white_noise.wav" id="28_0yh3s"]
+[ext_resource type="AudioStream" uid="uid://dhjvrpl3ib3r" path="res://audio/chapter1/ambient/panel_17_23_market_colombia_loop.wav" id="29_0yh3s"]
 [ext_resource type="AudioStream" uid="uid://eyx776ajpv6q" path="res://audio/chapter2/soundtrack/Waiting_theme_comic_2_all_panels_except_emotive_panels.wav" id="29_ewecq"]
 [ext_resource type="AudioStream" uid="uid://crwqtd4uhrvj7" path="res://audio/chapter2/soundtrack/emotive_moment_panel_2.9_2.10_2.11.wav" id="30_ucf83"]
 [ext_resource type="AudioStream" uid="uid://xaejsq8r5g4g" path="res://audio/chapter1/soundtrack/jungle_theme_1.wav" id="30_x200s"]
@@ -161,6 +162,13 @@ metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
 script = ExtResource("1_0736c")
 type = 1205
 stream = ExtResource("28_0yh3s")
+volume = 0.6
+metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
+
+[sub_resource type="Resource" id="Resource_x200s"]
+script = ExtResource("1_0736c")
+type = 1100
+stream = ExtResource("29_0yh3s")
 metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
 
 [sub_resource type="Resource" id="Resource_gxtfj"]
@@ -238,6 +246,6 @@ metadata/_custom_type_script = "uid://duuxorfspwlxi"
 [resource]
 script = ExtResource("1_lqs57")
 sfx_configuration = Array[ExtResource("1_imlmo")]([ExtResource("3_lhat2"), ExtResource("8_pkc7b"), ExtResource("9_oije2"), ExtResource("9_75gak"), ExtResource("9_1aw0s"), ExtResource("10_75gak"), ExtResource("11_pkc7b"), ExtResource("12_oije2"), ExtResource("13_behby"), ExtResource("14_e2tky"), ExtResource("15_l82md"), ExtResource("16_8i027"), ExtResource("17_wobcp"), ExtResource("18_o7t6w"), ExtResource("19_a4fxu"), ExtResource("20_femi8"), ExtResource("21_pwl8h"), ExtResource("22_a1sox"), ExtResource("23_gqdoy"), SubResource("Resource_po7nl"), SubResource("Resource_tadwd"), SubResource("Resource_xnur5"), SubResource("Resource_ewecq")])
-loop_configuration = Array[ExtResource("1_0736c")]([ExtResource("2_po7nl"), ExtResource("3_c6civ"), ExtResource("4_gb34v"), ExtResource("5_v3pri"), ExtResource("6_xvkp8"), SubResource("Resource_vpsk8"), ExtResource("3_8i027"), ExtResource("2_l82md"), ExtResource("4_femi8"), ExtResource("5_pwl8h"), ExtResource("6_a1sox"), ExtResource("7_gqdoy"), ExtResource("8_v1u3r"), SubResource("Resource_0gr4c"), SubResource("Resource_n03nk"), SubResource("Resource_8rmwk"), SubResource("Resource_v5tef"), SubResource("Resource_x1jhh"), SubResource("Resource_hqvqq"), SubResource("Resource_b0xf2"), SubResource("Resource_2224a"), SubResource("Resource_1cu42"), SubResource("Resource_7keg5"), SubResource("Resource_wgwom"), SubResource("Resource_8bssc"), SubResource("Resource_wvn2x"), SubResource("Resource_evake")])
+loop_configuration = Array[ExtResource("1_0736c")]([ExtResource("2_po7nl"), ExtResource("3_c6civ"), ExtResource("4_gb34v"), ExtResource("5_v3pri"), ExtResource("6_xvkp8"), SubResource("Resource_vpsk8"), ExtResource("3_8i027"), ExtResource("2_l82md"), ExtResource("4_femi8"), ExtResource("5_pwl8h"), ExtResource("6_a1sox"), ExtResource("7_gqdoy"), ExtResource("8_v1u3r"), SubResource("Resource_0gr4c"), SubResource("Resource_n03nk"), SubResource("Resource_8rmwk"), SubResource("Resource_v5tef"), SubResource("Resource_x1jhh"), SubResource("Resource_hqvqq"), SubResource("Resource_b0xf2"), SubResource("Resource_2224a"), SubResource("Resource_1cu42"), SubResource("Resource_7keg5"), SubResource("Resource_wgwom"), SubResource("Resource_8bssc"), SubResource("Resource_wvn2x"), SubResource("Resource_evake"), SubResource("Resource_x200s")])
 music_configuration = Array[ExtResource("3_qemoy")]([SubResource("Resource_gxtfj"), SubResource("Resource_kx2pi"), SubResource("Resource_ql2kw"), SubResource("Resource_acaqn"), ExtResource("5_wobcp"), ExtResource("6_o7t6w"), ExtResource("7_a4fxu"), ExtResource("8_femi8"), SubResource("Resource_oghm0"), SubResource("Resource_t8ph6"), SubResource("Resource_xc13h"), SubResource("Resource_p6ii5")])
 metadata/_custom_type_script = "uid://cqxrtlyvs0npt"

@@ -114,7 +114,7 @@ func _init_players():
 	for i in range(LOOP_POOL_SIZE):
 		# Create new Audio Stream Player for loops
 		var loop_player =  AudioStreamPlayer.new()
-		loop_player.bus = "Music"
+		loop_player.bus = "Sfx"
 		loop_player.name = "loop_player_" + str(i)
 		loop_players_pool[i] = loop_player
 		
@@ -178,7 +178,7 @@ func stop_loop(key: AudioConfiguration.loop_type, fade_in_enable: bool = true ):
 	_free_loop(key, fade_in_enable)
 
 func play_music(key: AudioConfiguration.music_type):
-	if last_music_playing == key && last_music_player != -1:
+	if last_music_playing == key && last_music_player > -1:
 		pass
 	else:
 		last_music_playing = key
@@ -234,9 +234,8 @@ func update_last_walking_loop(key: AudioConfiguration.loop_type):
 
 func reset_audio():
 	_stop_loops()
-	fade_out(music_1_player)
-	fade_out(music_2_player)
 	_stop_sfx()
+	stop_music()
 
 func _get_sfx(key: AudioConfiguration.sfx_type) -> sfx_config:
 	if sfx_dictionary[key]:
