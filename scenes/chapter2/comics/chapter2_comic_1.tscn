@@ -71,11 +71,6 @@ metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
 [node name="Panel1" parent="Panels" unique_id=9427924 instance=ExtResource("9_erqdw")]
 position = Vector2(10360, 527)
 
-[node name="AudioSfxZone" type="VisibleOnScreenNotifier2D" parent="Panels/Panel1" unique_id=610477875]
-script = ExtResource("3_4a5vy")
-sfx = 2105
-metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
-
 [node name="Panel2" parent="Panels" unique_id=169044954 instance=ExtResource("10_4a5vy")]
 position = Vector2(8092, 498)
 

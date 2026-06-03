@@ -554,6 +554,7 @@ shape = SubResource("CapsuleShape2D_6b20s")
 [node name="Companion" parent="CharWalking" unique_id=426633640 node_paths=PackedStringArray("model") instance=ExtResource("6_bing5")]
 position = Vector2(571, 839)
 model = NodePath("../Amani")
+start_walking = true
 
 [node name="AnimSprite" parent="CharWalking/Companion" index="0" unique_id=689873547]
 sprite_frames = ExtResource("7_mp6eu")
@@ -586,23 +587,16 @@ script = ExtResource("63_8oqhf")
 sfx = 2114
 metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
 
-[node name="LoopZone_15_19" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=2118223231]
-position = Vector2(116, 41)
-rect = Rect2(-44, -10, 5000, 912)
-script = ExtResource("64_3d65b")
-loop_name = 2102
-metadata/_custom_type_script = "uid://brda7473wfj1v"
-
 [node name="LoopZone2_15_19" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=88521695]
 position = Vector2(116, 41)
-rect = Rect2(-44, -10, 5000, 912)
+rect = Rect2(-44, -10, 5000, 209)
 script = ExtResource("64_3d65b")
 loop_name = 2103
 metadata/_custom_type_script = "uid://brda7473wfj1v"
 
 [node name="LoopZone3_15_19" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=955856650]
 position = Vector2(116, 41)
-rect = Rect2(-44, -10, 5000, 912)
+rect = Rect2(-44, -10, 5000, 195)
 script = ExtResource("64_3d65b")
 loop_name = 2104
 metadata/_custom_type_script = "uid://brda7473wfj1v"
@@ -627,6 +621,42 @@ rect = Rect2(-6, -10, 254, 175)
 script = ExtResource("65_6oc3f")
 music_name = 2102
 metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="Shoot_SfxZone" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=459972495]
+position = Vector2(782, 932)
+rect = Rect2(-10, -10, 63, 67)
+script = ExtResource("63_8oqhf")
+sfx = 2101
+linear_volume = 0.8
+min_pitch = 0.95
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
+
+[node name="Shoot_SfxZone2" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=74989205]
+position = Vector2(1504, 759)
+rect = Rect2(-10, -10, 63, 67)
+script = ExtResource("63_8oqhf")
+sfx = 2101
+linear_volume = 0.8
+min_pitch = 0.95
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
+
+[node name="Shoot_SfxZone4" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1209941386]
+position = Vector2(4335, 897)
+rect = Rect2(-10, -10, 63, 67)
+script = ExtResource("63_8oqhf")
+sfx = 2101
+linear_volume = 0.8
+min_pitch = 0.95
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
+
+[node name="Shoot_SfxZone3" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=347496458]
+position = Vector2(3308, 974)
+rect = Rect2(-10, -10, 63, 67)
+script = ExtResource("63_8oqhf")
+sfx = 2100
+linear_volume = 0.8
+min_pitch = 0.95
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
 
 [node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="." unique_id=734422288]
 position = Vector2(6861, 522)

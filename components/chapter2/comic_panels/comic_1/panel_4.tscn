@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://c0wro4keqrw1k"]
 
 [ext_resource type="Texture2D" uid="uid://c16p4j4v2gt60" path="res://graphics/chapter2/comics/comic1/frameplaying/kidsplayinglegs.png" id="3_3cciq"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="3_dov0l"]
 [ext_resource type="PackedScene" uid="uid://bomhqj3lxkka3" path="res://components/utils/comics/scrolling_background.tscn" id="3_xgdjl"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="4_4tme6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dov0l"]
+size = Vector2(1874, 1164)
 
 [node name="Panel1" type="Node2D" unique_id=299868253]
 
@@ -12,5 +17,20 @@
 [node name="Background" parent="ScrollingBackground/PanNode" parent_id_path=PackedInt32Array(231777281, 379019586) index="0" unique_id=524227348]
 position = Vector2(783, 0)
 texture = ExtResource("3_3cciq")
+
+[node name="Clickable_trigger_sfx" type="Area2D" parent="." unique_id=2081867023]
+script = ExtResource("3_dov0l")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable_trigger_sfx" unique_id=1655115002]
+position = Vector2(154, 5)
+shape = SubResource("RectangleShape2D_dov0l")
+
+[node name="TriggerSfxOnClick" type="Node" parent="Clickable_trigger_sfx" unique_id=608595801 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_4tme6")
+clickables = [NodePath("..")]
+sfx = 2105
+play_sfx_once = true
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [editable path="ScrollingBackground"]
