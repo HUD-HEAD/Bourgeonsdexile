@@ -557,6 +557,7 @@ shape = SubResource("CapsuleShape2D_6b20s")
 position = Vector2(571, 839)
 model = NodePath("../Amani")
 start_walking = true
+follow_model = true
 
 [node name="AnimSprite" parent="CharWalking/Companion" index="0" unique_id=689873547]
 sprite_frames = ExtResource("7_mp6eu")

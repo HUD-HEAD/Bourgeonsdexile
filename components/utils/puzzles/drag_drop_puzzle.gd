@@ -30,7 +30,6 @@ func _ready() -> void:
 		return
 	
 	if complete_image:
-		complete_image.z_index = 1
 		complete_image.hide()
 	# Associate each puzzle piece with its receptacle
 	for piece in puzzle_pieces:
