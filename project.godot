@@ -28,6 +28,7 @@ SceneManager="*res://components/globals/scene_manager.gd"
 AudioManager="*uid://ciqufic027swg"
 GameManager="*uid://d2wginhwv3f4"
 SaveManager="*uid://dll27e1wao2rl"
+PauseController="*uid://bx5rqpfsa8n7c"
 
 [display]
 
