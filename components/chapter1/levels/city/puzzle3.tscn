@@ -22,7 +22,6 @@ size = Vector2(244.84326, 207.17447)
 puzzle_pieces = [NodePath("BuildingBlocks/PuzzlePiece"), NodePath("BuildingBlocks/PuzzlePiece3"), NodePath("BuildingBlocks/PuzzlePiece2")]
 
 [node name="OutlinePuzzle" parent="." index="0" unique_id=1513168459]
-self_modulate = Color(0.53999996, 0.9463333, 1, 1)
 texture = ExtResource("2_wnoic")
 
 [node name="PuzzlePiece" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="0" unique_id=1667760579]

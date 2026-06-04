@@ -930,20 +930,21 @@ position = Vector2(330, 1)
 texture = ExtResource("2_y6iwd")
 centered = false
 
-[node name="Parallax2D" type="Parallax2D" parent="Background" unique_id=903095176]
-scroll_scale = Vector2(0.9, 0.9)
-scroll_offset = Vector2(-1466, -25)
-
-[node name="CloudsFake" type="Sprite2D" parent="Background/Parallax2D" unique_id=503779958]
-position = Vector2(-1814, 23)
+[node name="CloudsFake" type="Sprite2D" parent="Background" unique_id=503779958]
+position = Vector2(-3280, -2)
 texture = ExtResource("3_y6iwd")
 centered = false
 flip_h = true
 
-[node name="Clouds" type="Sprite2D" parent="Background/Parallax2D" unique_id=1687548403]
-position = Vector2(1922, 0)
+[node name="Clouds" type="Sprite2D" parent="Background" unique_id=1687548403]
+position = Vector2(456, -25)
 texture = ExtResource("3_y6iwd")
 centered = false
+
+[node name="Parallax2D" type="Parallax2D" parent="Background" unique_id=903095176]
+process_mode = 4
+scroll_scale = Vector2(0.9, 0.9)
+scroll_offset = Vector2(-1466, -25)
 
 [node name="Houseback" type="Sprite2D" parent="Background" unique_id=701906805]
 position = Vector2(2415, 550)
@@ -1172,6 +1173,15 @@ position = Vector2(-2, -145)
 position = Vector2(161, 542)
 scale = Vector2(0.7, 0.7)
 
+[node name="PuzzlePiece" parent="Puzzle4/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1019054959, 1654234455) index="0" unique_id=1667760579]
+position = Vector2(251.42868, 34.28573)
+
+[node name="PuzzlePiece3" parent="Puzzle4/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1019054959, 1654234455) index="2" unique_id=1476348094]
+position = Vector2(-290.00024, 8)
+
+[node name="PuzzlePiece2" parent="Puzzle4/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1019054959, 1654234455) index="4" unique_id=1166541870]
+position = Vector2(235.71428, -171.42859)
+
 [node name="PuzzleSpawner" type="Node" parent="Puzzle4/DragDropPuzzle2" unique_id=1676081078 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("17_4dc1s")
 puzzle = NodePath("..")
@@ -1264,3 +1274,7 @@ metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 [editable path="Puzzle3/DragDropPuzzle/BuildingBlocks/PuzzlePiece"]
 [editable path="Puzzle3/DragDropPuzzle/BuildingBlocks/PuzzlePiece2"]
 [editable path="Puzzle3/DragDropPuzzle/BuildingBlocks/PuzzlePiece3"]
+[editable path="Puzzle4/DragDropPuzzle2"]
+[editable path="Puzzle4/DragDropPuzzle2/BuildingBlocks/PuzzlePiece"]
+[editable path="Puzzle4/DragDropPuzzle2/BuildingBlocks/PuzzlePiece3"]
+[editable path="Puzzle4/DragDropPuzzle2/BuildingBlocks/PuzzlePiece2"]
