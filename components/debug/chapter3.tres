@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Chapter" format=3 uid="uid://cfr40denaranm"]
+
+[ext_resource type="Script" uid="uid://ccemeindm6uht" path="res://components/debug/chapter.gd" id="1_rj3q7"]
+
+[resource]
+script = ExtResource("1_rj3q7")
+ordered_scene_list = Array[String](["uid://da27n50yts6q2"])
