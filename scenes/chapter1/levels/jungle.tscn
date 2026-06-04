@@ -1503,6 +1503,9 @@ texture = ExtResource("158_wtncc")
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzles/Puzzle7/DragDropPuzzle/BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(274836859, 729525704, 2116105691) index="1" unique_id=991932022]
 texture = ExtResource("159_b8ue1")
 
+[node name="CompletePuzzle" parent="Puzzles/Puzzle7/DragDropPuzzle" index="2" unique_id=1933061263]
+z_index = 1
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=314951155]
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=696890455]

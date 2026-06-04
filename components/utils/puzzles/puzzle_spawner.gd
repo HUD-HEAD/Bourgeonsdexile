@@ -30,6 +30,8 @@ func _deactivate_puzzle():
 	
 	
 func _on_obstacle_entered(area2d : Area2D):
+	GameManager.current_puzzle_spawner = self
+	
 	#Signal is one shot
 	obstacle.area_entered.disconnect(_on_obstacle_entered)
 	
@@ -40,8 +42,9 @@ func _on_obstacle_entered(area2d : Area2D):
 
 ## On click, hide trigger and spawn puzzle pieces
 func _on_spawner_clicked():
-	#Signal is one shot
-	spawn_trigger.clicked.disconnect(_on_spawner_clicked)
+	if spawn_trigger.clicked.has_connections() :
+		#Signal is one shot
+		spawn_trigger.clicked.disconnect(_on_spawner_clicked)
 	spawn_trigger.disable()
 	_spawn_puzzle()
 
@@ -99,3 +102,22 @@ func _compute_spawn_position(piece_idx : int):
 func _on_puzzle_complete():
 	obstacle.process_mode = Node.PROCESS_MODE_DISABLED
 	_deactivate_puzzle()
+
+## Debug function
+func autosolve_puzzle():
+	#Spawn all pieces
+	var pieces_amount =  puzzle.puzzle_pieces.size()
+	for idx in pieces_amount:
+		_spawn_piece(idx)
+	
+	#Show outline
+	puzzle.outline_image.show()
+	
+	#Enable interactivity
+	for piece in puzzle.puzzle_pieces:
+		piece.enable_piece()
+		
+		piece._snap_to_receptacle()
+	
+	#HACK : need to delay so _snap is finished and puzzle area overlap is updated by the time we check
+	await get_tree().create_timer(0.8).timeout.connect(puzzle._on_correct_piece)

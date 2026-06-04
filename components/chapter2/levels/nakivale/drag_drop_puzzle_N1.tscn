@@ -15,6 +15,10 @@ puzzle_pieces = [NodePath("BuildingBlocks/PuzzlePiece")]
 [node name="OutlinePuzzle" parent="." index="0" unique_id=1513168459]
 texture = ExtResource("2_5brsd")
 
+[node name="12" type="Sprite2D" parent="OutlinePuzzle" index="0" unique_id=278567993]
+position = Vector2(122, -8)
+texture = ExtResource("5_xwxu5")
+
 [node name="PuzzlePiece" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="0" unique_id=1667760579]
 position = Vector2(-1, 4)
 
@@ -36,8 +40,8 @@ position = Vector2(-1, 4)
 position = Vector2(48, 5)
 texture = ExtResource("4_u2gb2")
 
-[node name="12" type="Sprite2D" parent="." index="3" unique_id=278567993]
-position = Vector2(122, -8)
+[node name="12" type="Sprite2D" parent="CompletePuzzle" index="0" unique_id=1006840432]
+position = Vector2(74, -13)
 texture = ExtResource("5_xwxu5")
 
 [editable path="BuildingBlocks/PuzzlePiece"]
