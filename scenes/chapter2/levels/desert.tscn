@@ -501,6 +501,7 @@ obstacle = NodePath("../Obstacle")
 collision_mask = 2
 
 [node name="DragDropPuzzle4" parent="Puzzles/PuzzleWindowBus" unique_id=2122580379 instance=ExtResource("11_tn746")]
+z_index = 1
 position = Vector2(-1154, 840)
 scale = Vector2(0.6, 0.6)
 
