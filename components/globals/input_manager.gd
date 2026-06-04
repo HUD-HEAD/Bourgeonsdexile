@@ -50,4 +50,7 @@ func _debug_inputs(event : InputEvent) -> void :
 		debug_console.toggle()
 	elif event.is_action_pressed("debug_load_checkpoint"):
 		SaveManager.debug_load_checkpoint()
+	elif event.is_action_pressed("debug_autosolve_puzzle"):
+		if is_instance_valid(GameManager.current_puzzle_spawner):
+			GameManager.current_puzzle_spawner.autosolve_puzzle()
 	

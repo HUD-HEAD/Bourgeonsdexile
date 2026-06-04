@@ -2,6 +2,8 @@ extends Node
 
 var puzzle_automatic_positioning : bool = false
 
+var current_puzzle_spawner : Node
+
 # Settings
 
 ## Deprecated

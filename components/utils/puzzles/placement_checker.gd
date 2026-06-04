@@ -16,7 +16,11 @@ func is_correctly_placed() -> bool:
 	#TASK assess design, should it support drag and drop without receptacle? Or create overload?
 	if receptacle == null:
 		return false
-	return overlaps_area(receptacle)
+		
+	var test = overlaps_area(receptacle)
+	print_debug(test)
+	return test
+	#return overlaps_area(receptacle)
 
 #region tooling
 func _init() -> void:
