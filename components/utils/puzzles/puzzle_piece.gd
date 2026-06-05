@@ -35,9 +35,13 @@ func deactivate():
 	#draggable.input_pickable = false
 	draggable.process_mode = Node.PROCESS_MODE_DISABLED	
 
-## If piece dropped in the right place, snap to receptacle position then validate placement
+## Check placement on piece dropped
 func _on_piece_dropped():
-	if placement_checker.is_correctly_placed():
+	_check_placement()
+
+## If piece dropped in the right place, snap to receptacle position then validate placement
+func _check_placement():
+	if is_correctly_placed():
 		var tween : Tween = _snap_to_receptacle()
 		tween.tween_callback(_validate_placement)
 

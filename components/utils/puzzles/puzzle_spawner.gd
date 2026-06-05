@@ -101,7 +101,7 @@ func _compute_spawn_position(piece_idx : int):
 
 func _on_puzzle_complete():
 	obstacle.process_mode = Node.PROCESS_MODE_DISABLED
-	_deactivate_puzzle()
+	__puzzle()
 
 ## Debug function
 func autosolve_puzzle():

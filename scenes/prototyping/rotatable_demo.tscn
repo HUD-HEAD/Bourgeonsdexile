@@ -1,0 +1,297 @@
+[gd_scene format=3 uid="uid://cxe28eb18j2up"]
+
+[ext_resource type="Script" uid="uid://chrql2wwvrdt1" path="res://components/utils/puzzles/drag_drop_puzzle.gd" id="1_diid3"]
+[ext_resource type="Texture2D" uid="uid://cc2op1q8fulnt" path="res://graphics/chapter3/levels/CH3_puzzles/9/empty9.png" id="2_j0qm3"]
+[ext_resource type="Texture2D" uid="uid://br7s04rlxv4ac" path="res://graphics/chapter3/levels/CH3_puzzles/9/1_9 copia.png" id="3_hbv74"]
+[ext_resource type="Texture2D" uid="uid://j8rf73bra7dx" path="res://graphics/chapter3/levels/CH3_puzzles/9/1_9.png" id="4_b7wyw"]
+[ext_resource type="PackedScene" uid="uid://b15l0pq6dea3h" path="res://components/utils/puzzles/puzzle_piece_template.tscn" id="5_uej5f"]
+[ext_resource type="Texture2D" uid="uid://dh8dbjap2fe1u" path="res://graphics/chapter3/levels/CH3_puzzles/9/2_9 copia.png" id="6_13vb1"]
+[ext_resource type="Texture2D" uid="uid://ckcb5354gooaa" path="res://graphics/chapter3/levels/CH3_puzzles/9/2_9.png" id="7_ktq7x"]
+[ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="8_kpts1"]
+[ext_resource type="Texture2D" uid="uid://rw72b52cxo3b" path="res://graphics/chapter3/levels/CH3_puzzles/9/3_9 copia.png" id="9_c6hom"]
+[ext_resource type="Texture2D" uid="uid://bjf58dura0waa" path="res://graphics/chapter3/levels/CH3_puzzles/9/3_9.png" id="10_bf55c"]
+[ext_resource type="Texture2D" uid="uid://b21j5xbl32muf" path="res://graphics/chapter3/levels/CH3_puzzles/9/4_9 copia.png" id="11_ihta6"]
+[ext_resource type="Texture2D" uid="uid://dyssw2ltyqft0" path="res://graphics/chapter3/levels/CH3_puzzles/9/4_9.png" id="12_4pw13"]
+[ext_resource type="Texture2D" uid="uid://c0jnalpan4rdx" path="res://graphics/chapter3/levels/CH3_puzzles/9/5_9 copia.png" id="13_10iud"]
+[ext_resource type="Texture2D" uid="uid://wwne25krrmjd" path="res://graphics/chapter3/levels/CH3_puzzles/9/5_9.png" id="14_ibn77"]
+[ext_resource type="Texture2D" uid="uid://dek8f5mgrdhw0" path="res://graphics/chapter3/levels/CH3_puzzles/9/6_9 copia.png" id="15_60hx5"]
+[ext_resource type="Texture2D" uid="uid://qlrwptmim2rx" path="res://graphics/chapter3/levels/CH3_puzzles/9/6_9.png" id="16_aqkx1"]
+[ext_resource type="Texture2D" uid="uid://cp5mupiqjfs5d" path="res://graphics/chapter3/levels/CH3_puzzles/9/7-9 copia.png" id="17_bwx20"]
+[ext_resource type="Script" uid="uid://dxeplon7hj2wi" path="res://components/utils/puzzles/puzzle_piece_rotatable.gd" id="17_diid3"]
+[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="18_2bxhy"]
+[ext_resource type="Texture2D" uid="uid://cdlddyg2n42lq" path="res://graphics/chapter3/levels/CH3_puzzles/9/7-9.png" id="18_enat2"]
+[ext_resource type="Texture2D" uid="uid://ctjhrav1v2sp4" path="res://graphics/chapter3/levels/CH3_puzzles/9/full9.png" id="19_xa4m1"]
+[ext_resource type="Texture2D" uid="uid://bw8joghirmh2v" path="res://graphics/chapter3/levels/CH3_puzzles/9/Capa 16.png" id="20_uwkv3"]
+[ext_resource type="Script" uid="uid://dbi6reje46na3" path="res://components/utils/puzzles/swap_sprite_on_click.gd" id="21_okp58"]
+[ext_resource type="PackedScene" uid="uid://xyq2m2kx86ku" path="res://components/utils/puzzles/placement_checker.tscn" id="22_iff7q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4p4vi"]
+size = Vector2(71.80437, 193.1553)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p7nb8"]
+size = Vector2(165.34157, 157.16022)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lrtqk"]
+size = Vector2(113.87213, 145.98419)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xoaqb"]
+size = Vector2(226.6507, 99.647995)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kxndn"]
+size = Vector2(191.64603, 117.747025)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_im3xk"]
+size = Vector2(222.17834, 87.95005)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cq0yk"]
+size = Vector2(267.26404, 107.13249)
+
+[node name="DragDropPuzzle" type="Node2D" unique_id=1767003607 node_paths=PackedStringArray("puzzle_pieces", "complete_image", "outline_image")]
+editor_description = "To create new drag and drop puzzles, in FileSystem -> Right click --> New inherited scene, then modify and save new scene."
+script = ExtResource("1_diid3")
+puzzle_pieces = [NodePath("BuildingBlocks/PuzzlePiece"), NodePath("BuildingBlocks/PuzzlePiece2"), NodePath("BuildingBlocks/PuzzlePiece3"), NodePath("BuildingBlocks/PuzzlePiece4"), NodePath("BuildingBlocks/PuzzlePiece5"), NodePath("BuildingBlocks/PuzzlePiece6"), NodePath("BuildingBlocks/PuzzlePiece7")]
+complete_image = NodePath("CompletePuzzle")
+outline_image = NodePath("OutlinePuzzle")
+
+[node name="OutlinePuzzle" type="Sprite2D" parent="." unique_id=1513168459]
+editor_description = "Outline hint of puzzle. Should be at the top of hierarchy."
+texture = ExtResource("2_j0qm3")
+
+[node name="BuildingBlocks" type="Node2D" parent="." unique_id=1654234455]
+editor_description = "Helper ode to hold children. Duplicate as many PuzzlePiece and Receptacles as needed for complete puzzle."
+
+[node name="PuzzlePiece" parent="BuildingBlocks" unique_id=1667760579 instance=ExtResource("5_uej5f")]
+position = Vector2(-340, 6)
+
+[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="0" unique_id=1266676352]
+position = Vector2(11, 19)
+texture = ExtResource("3_hbv74")
+
+[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="1" unique_id=991932022]
+texture = ExtResource("4_b7wyw")
+
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+receptacle = NodePath("../../../Receptacle")
+
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="3" unique_id=1105802255]
+position = Vector2(-6.481262, 1.4304962)
+rotation = 0.024569202
+shape = SubResource("RectangleShape2D_4p4vi")
+
+[node name="Receptacle" parent="BuildingBlocks" unique_id=1559191435 instance=ExtResource("8_kpts1")]
+position = Vector2(-340, 6)
+
+[node name="PuzzlePiece2" parent="BuildingBlocks" unique_id=729525704 instance=ExtResource("5_uej5f")]
+position = Vector2(-280, -31)
+
+[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="0" unique_id=1266676352]
+position = Vector2(-24, 17)
+texture = ExtResource("6_13vb1")
+
+[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="1" unique_id=991932022]
+texture = ExtResource("7_ktq7x")
+
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+receptacle = NodePath("../../../Receptacle2")
+
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="3" unique_id=1105802255]
+position = Vector2(-5.0238647, -4.0041504)
+rotation = 0.16426528
+shape = SubResource("RectangleShape2D_p7nb8")
+
+[node name="Receptacle2" parent="BuildingBlocks" unique_id=600273107 instance=ExtResource("8_kpts1")]
+position = Vector2(-280, -31)
+
+[node name="PuzzlePiece3" type="Node2D" parent="BuildingBlocks" unique_id=1223294122 node_paths=PackedStringArray("draggable", "placement_checker")]
+editor_description = "Template for a puzzle piece. Add to scene then Right click -> Editable children, then customize."
+position = Vector2(308, -37)
+script = ExtResource("17_diid3")
+draggable = NodePath("Draggable")
+placement_checker = NodePath("Draggable/PlacementChecker")
+metadata/_custom_type_script = "uid://dxeplon7hj2wi"
+
+[node name="Draggable" type="Area2D" parent="BuildingBlocks/PuzzlePiece3" unique_id=2116105691]
+editor_description = "Component enabling drag and drop."
+script = ExtResource("18_2bxhy")
+metadata/_custom_type_script = "uid://cxam1cepgkl3s"
+
+[node name="PuzzlePieceSprite" type="Sprite2D" parent="BuildingBlocks/PuzzlePiece3/Draggable" unique_id=1827087629]
+position = Vector2(1, 14)
+texture = ExtResource("9_c6hom")
+
+[node name="PuzzlePieceSpriteOnClick" type="Sprite2D" parent="BuildingBlocks/PuzzlePiece3/Draggable" unique_id=476885252 node_paths=PackedStringArray("clickable", "old_sprite")]
+texture = ExtResource("10_bf55c")
+script = ExtResource("21_okp58")
+clickable = NodePath("..")
+old_sprite = NodePath("../PuzzlePieceSprite")
+
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece3/Draggable" unique_id=692863269 node_paths=PackedStringArray("receptacle") instance=ExtResource("22_iff7q")]
+receptacle = NodePath("../../../Receptacle3")
+
+[node name="DraggableZone" type="CollisionShape2D" parent="BuildingBlocks/PuzzlePiece3/Draggable" unique_id=385972390]
+editor_description = "Defines boundaries on which user can click and drag.
+TODO : Add and customize shape property.
+Beware, duplicated nodes will share the same Shape. Either assign a new shape or Right click -> Make unique"
+position = Vector2(-6.4651184, -3.869873)
+rotation = -0.26832515
+shape = SubResource("RectangleShape2D_lrtqk")
+
+[node name="Receptacle3" parent="BuildingBlocks" unique_id=2008516326 instance=ExtResource("8_kpts1")]
+position = Vector2(308, -37)
+
+[node name="PuzzlePiece4" parent="BuildingBlocks" unique_id=779710154 instance=ExtResource("5_uej5f")]
+position = Vector2(104, -29)
+
+[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(779710154, 2116105691) index="0" unique_id=1266676352]
+position = Vector2(4, 8)
+texture = ExtResource("11_ihta6")
+
+[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(779710154, 2116105691) index="1" unique_id=991932022]
+texture = ExtResource("12_4pw13")
+
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(779710154, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+receptacle = NodePath("../../../Receptacle4")
+
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(779710154, 2116105691) index="3" unique_id=1105802255]
+position = Vector2(19.025635, -12.312805)
+rotation = -0.37589487
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_xoaqb")
+
+[node name="Receptacle4" parent="BuildingBlocks" unique_id=1972162376 instance=ExtResource("8_kpts1")]
+position = Vector2(104, -29)
+
+[node name="PuzzlePiece5" parent="BuildingBlocks" unique_id=752721607 instance=ExtResource("5_uej5f")]
+position = Vector2(160, 44)
+
+[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece5/Draggable" parent_id_path=PackedInt32Array(752721607, 2116105691) index="0" unique_id=1266676352]
+position = Vector2(-3, 11)
+texture = ExtResource("13_10iud")
+
+[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece5/Draggable" parent_id_path=PackedInt32Array(752721607, 2116105691) index="1" unique_id=991932022]
+texture = ExtResource("14_ibn77")
+
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece5/Draggable" parent_id_path=PackedInt32Array(752721607, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+receptacle = NodePath("../../../Receptacle5")
+
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece5/Draggable" parent_id_path=PackedInt32Array(752721607, 2116105691) index="3" unique_id=1105802255]
+position = Vector2(8.121216, 0.38690186)
+rotation = -0.41456673
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_kxndn")
+
+[node name="Receptacle5" parent="BuildingBlocks" unique_id=1324912109 instance=ExtResource("8_kpts1")]
+position = Vector2(160, 44)
+
+[node name="PuzzlePiece6" parent="BuildingBlocks" unique_id=857918950 instance=ExtResource("5_uej5f")]
+position = Vector2(-97, -44)
+
+[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece6/Draggable" parent_id_path=PackedInt32Array(857918950, 2116105691) index="0" unique_id=1266676352]
+position = Vector2(0, 24)
+texture = ExtResource("15_60hx5")
+
+[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece6/Draggable" parent_id_path=PackedInt32Array(857918950, 2116105691) index="1" unique_id=991932022]
+texture = ExtResource("16_aqkx1")
+
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece6/Draggable" parent_id_path=PackedInt32Array(857918950, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+receptacle = NodePath("../../../Receptacle6")
+
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece6/Draggable" parent_id_path=PackedInt32Array(857918950, 2116105691) index="3" unique_id=1105802255]
+position = Vector2(7.285858, 4.3082275)
+rotation = 0.16731113
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_im3xk")
+
+[node name="Receptacle6" parent="BuildingBlocks" unique_id=1995568701 instance=ExtResource("8_kpts1")]
+position = Vector2(-97, -44)
+
+[node name="PuzzlePiece7" type="Node2D" parent="BuildingBlocks" unique_id=1308697322 node_paths=PackedStringArray("draggable", "placement_checker")]
+editor_description = "Template for a puzzle piece. Add to scene then Right click -> Editable children, then customize."
+position = Vector2(-95, 67)
+script = ExtResource("17_diid3")
+draggable = NodePath("Draggable")
+placement_checker = NodePath("Draggable/PlacementChecker")
+metadata/_custom_type_script = "uid://dxeplon7hj2wi"
+
+[node name="Draggable" type="Area2D" parent="BuildingBlocks/PuzzlePiece7" unique_id=1639397562]
+editor_description = "Component enabling drag and drop."
+script = ExtResource("18_2bxhy")
+metadata/_custom_type_script = "uid://cxam1cepgkl3s"
+
+[node name="PuzzlePieceSprite" type="Sprite2D" parent="BuildingBlocks/PuzzlePiece7/Draggable" unique_id=2014120865]
+position = Vector2(-19, 19)
+texture = ExtResource("17_bwx20")
+
+[node name="PuzzlePieceSpriteOnClick" type="Sprite2D" parent="BuildingBlocks/PuzzlePiece7/Draggable" unique_id=2049915878 node_paths=PackedStringArray("clickable", "old_sprite")]
+texture = ExtResource("18_enat2")
+script = ExtResource("21_okp58")
+clickable = NodePath("..")
+old_sprite = NodePath("../PuzzlePieceSprite")
+
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece7/Draggable" unique_id=612746646 node_paths=PackedStringArray("receptacle") instance=ExtResource("22_iff7q")]
+receptacle = NodePath("../../../Receptacle7")
+
+[node name="DraggableZone" type="CollisionShape2D" parent="BuildingBlocks/PuzzlePiece7/Draggable" unique_id=599517327]
+editor_description = "Defines boundaries on which user can click and drag.
+TODO : Add and customize shape property.
+Beware, duplicated nodes will share the same Shape. Either assign a new shape or Right click -> Make unique"
+position = Vector2(0.41168213, -20.770355)
+rotation = -0.099942945
+scale = Vector2(0.9999996, 0.9999996)
+shape = SubResource("RectangleShape2D_cq0yk")
+
+[node name="PuzzlePiece8" type="Node2D" parent="BuildingBlocks" unique_id=60084820 node_paths=PackedStringArray("draggable", "placement_checker")]
+editor_description = "Template for a puzzle piece. Add to scene then Right click -> Editable children, then customize."
+position = Vector2(-475, -186)
+script = ExtResource("17_diid3")
+draggable = NodePath("Draggable")
+placement_checker = NodePath("Draggable/PlacementChecker")
+metadata/_custom_type_script = "uid://dxeplon7hj2wi"
+
+[node name="Draggable" type="Area2D" parent="BuildingBlocks/PuzzlePiece8" unique_id=1533407511]
+editor_description = "Component enabling drag and drop."
+script = ExtResource("18_2bxhy")
+metadata/_custom_type_script = "uid://cxam1cepgkl3s"
+
+[node name="PuzzlePieceSprite" type="Sprite2D" parent="BuildingBlocks/PuzzlePiece8/Draggable" unique_id=1261822867]
+position = Vector2(-19, 19)
+texture = ExtResource("17_bwx20")
+
+[node name="PuzzlePieceSpriteOnClick" type="Sprite2D" parent="BuildingBlocks/PuzzlePiece8/Draggable" unique_id=1348928002 node_paths=PackedStringArray("clickable", "old_sprite")]
+texture = ExtResource("18_enat2")
+script = ExtResource("21_okp58")
+clickable = NodePath("..")
+old_sprite = NodePath("../PuzzlePieceSprite")
+
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece8/Draggable" unique_id=663138769 node_paths=PackedStringArray("receptacle") instance=ExtResource("22_iff7q")]
+receptacle = NodePath("../../../Receptacle7")
+
+[node name="DraggableZone" type="CollisionShape2D" parent="BuildingBlocks/PuzzlePiece8/Draggable" unique_id=1158088880]
+editor_description = "Defines boundaries on which user can click and drag.
+TODO : Add and customize shape property.
+Beware, duplicated nodes will share the same Shape. Either assign a new shape or Right click -> Make unique"
+position = Vector2(0.41168213, -20.770355)
+rotation = -0.099942945
+scale = Vector2(0.9999996, 0.9999996)
+shape = SubResource("RectangleShape2D_cq0yk")
+
+[node name="Receptacle7" parent="BuildingBlocks" unique_id=701245954 instance=ExtResource("8_kpts1")]
+position = Vector2(-95, 67)
+
+[node name="CompletePuzzle" type="Sprite2D" parent="." unique_id=1933061263]
+editor_description = "Image to show when puzzle is complete. Should be at the bottom of hierarchy."
+visible = false
+position = Vector2(-1, 0)
+texture = ExtResource("19_xa4m1")
+
+[node name="Capa16" type="Sprite2D" parent="." unique_id=1617452957]
+position = Vector2(-1, 2)
+texture = ExtResource("20_uwkv3")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=241943766]
+
+[editable path="BuildingBlocks/PuzzlePiece"]
+[editable path="BuildingBlocks/PuzzlePiece2"]
+[editable path="BuildingBlocks/PuzzlePiece4"]
+[editable path="BuildingBlocks/PuzzlePiece5"]
+[editable path="BuildingBlocks/PuzzlePiece6"]
