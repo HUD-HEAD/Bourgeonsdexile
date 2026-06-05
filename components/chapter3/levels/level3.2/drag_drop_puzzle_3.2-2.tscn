@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://ds13261ncmyq2"]
+
+[ext_resource type="PackedScene" uid="uid://8imm2g6332ef" path="res://components/utils/puzzles/dragdrop_puzzle_template.tscn" id="1_4q4sg"]
+[ext_resource type="Texture2D" uid="uid://b04tx8rh3lb8r" path="res://graphics/chapter2/levels/tangrampuzzles/2/empty2.png" id="2_qlf4g"]
+[ext_resource type="Texture2D" uid="uid://wc3uea3kamj3" path="res://graphics/chapter3/levels/CH3_puzzles/2/half1line.png" id="3_83eqp"]
+[ext_resource type="Texture2D" uid="uid://bretbhkowuynb" path="res://graphics/chapter3/levels/CH3_puzzles/2/half1.png" id="4_o23a3"]
+[ext_resource type="PackedScene" uid="uid://b15l0pq6dea3h" path="res://components/utils/puzzles/puzzle_piece_template.tscn" id="5_sq5r7"]
+[ext_resource type="Texture2D" uid="uid://c6osyb6x1rwc8" path="res://graphics/chapter3/levels/CH3_puzzles/2/half2line.png" id="6_ydhxt"]
+[ext_resource type="Texture2D" uid="uid://c0bmq4dpm4jgs" path="res://graphics/chapter3/levels/CH3_puzzles/2/half2.png" id="7_7ad77"]
+[ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="8_6p6fr"]
+[ext_resource type="Texture2D" uid="uid://b1j6iaqlvt82e" path="res://graphics/chapter3/levels/CH3_puzzles/2/square1line.png" id="9_oljwr"]
+[ext_resource type="Texture2D" uid="uid://pahpcf2c7w37" path="res://graphics/chapter3/levels/CH3_puzzles/2/square1.png" id="10_vm7vg"]
+[ext_resource type="Texture2D" uid="uid://c88x4m8em58nr" path="res://graphics/chapter3/levels/CH3_puzzles/2/square2line.png" id="11_os028"]
+[ext_resource type="Texture2D" uid="uid://bmo3uaydlns3n" path="res://graphics/chapter3/levels/CH3_puzzles/2/square2.png" id="12_ksk6t"]
+[ext_resource type="Texture2D" uid="uid://bowjgjyyf0dsf" path="res://graphics/chapter2/levels/tangrampuzzles/2/fulldrawing2.png" id="13_6gi2h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4p4vi"]
+size = Vector2(346.269, 132.29166)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gklma"]
+size = Vector2(365.7881, 137.99414)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2j2og"]
+size = Vector2(162.11108, 161.14877)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gmgio"]
+size = Vector2(148.0014, 156.29355)
+
+[node name="DragDropPuzzle" unique_id=1767003607 node_paths=PackedStringArray("puzzle_pieces") instance=ExtResource("1_4q4sg")]
+puzzle_pieces = [NodePath("BuildingBlocks/PuzzlePiece"), NodePath("BuildingBlocks/PuzzlePiece2"), NodePath("BuildingBlocks/PuzzlePiece3"), NodePath("BuildingBlocks/PuzzlePiece4")]
+
+[node name="OutlinePuzzle" parent="." index="0" unique_id=1513168459]
+texture = ExtResource("2_qlf4g")
+
+[node name="PuzzlePiece" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="0" unique_id=1667760579]
+position = Vector2(152, -74)
+
+[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="0" unique_id=1266676352]
+position = Vector2(0, 17)
+texture = ExtResource("3_83eqp")
+
+[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="1" unique_id=991932022]
+texture = ExtResource("4_o23a3")
+
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+receptacle = NodePath("../../../Receptacle")
+
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="3" unique_id=1105802255]
+position = Vector2(2.4251404, -4.035614)
+rotation = 0.025055278
+shape = SubResource("RectangleShape2D_4p4vi")
+
+[node name="Receptacle" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="1" unique_id=1559191435]
+position = Vector2(152, -74)
+
+[node name="PuzzlePiece2" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="2" unique_id=729525704 instance=ExtResource("5_sq5r7")]
+position = Vector2(145, 99)
+
+[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="0" unique_id=1266676352]
+position = Vector2(0, -16)
+texture = ExtResource("6_ydhxt")
+
+[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="1" unique_id=991932022]
+texture = ExtResource("7_7ad77")
+
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+receptacle = NodePath("../../../Receptacle2")
+
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="3" unique_id=1105802255]
+position = Vector2(1.1064911, -14.998665)
+rotation = 0.00083057745
+shape = SubResource("RectangleShape2D_gklma")
+
+[node name="Receptacle2" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="3" unique_id=600273107 instance=ExtResource("8_6p6fr")]
+position = Vector2(145, 99)
+
+[node name="PuzzlePiece3" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="4" unique_id=2075337317 instance=ExtResource("5_sq5r7")]
+position = Vector2(-40, -90)
+
+[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(2075337317, 2116105691) index="0" unique_id=1266676352]
+position = Vector2(1, 31)
+texture = ExtResource("9_oljwr")
+
+[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(2075337317, 2116105691) index="1" unique_id=991932022]
+texture = ExtResource("10_vm7vg")
+
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(2075337317, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+receptacle = NodePath("../../../Receptacle3")
+
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(2075337317, 2116105691) index="3" unique_id=1105802255]
+position = Vector2(-68.093094, -1.4849472)
+rotation = 0.036998574
+shape = SubResource("RectangleShape2D_2j2og")
+
+[node name="Receptacle3" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="5" unique_id=1564407550 instance=ExtResource("8_6p6fr")]
+position = Vector2(-40, -90)
+
+[node name="PuzzlePiece4" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="6" unique_id=1470086235 instance=ExtResource("5_sq5r7")]
+position = Vector2(-97, 72)
+
+[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(1470086235, 2116105691) index="0" unique_id=1266676352]
+position = Vector2(1, 11)
+texture = ExtResource("11_os028")
+
+[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(1470086235, 2116105691) index="1" unique_id=991932022]
+texture = ExtResource("12_ksk6t")
+
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(1470086235, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+receptacle = NodePath("../../../Receptacle4")
+
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(1470086235, 2116105691) index="3" unique_id=1105802255]
+position = Vector2(-15.060165, -4.545105)
+rotation = -0.011923284
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_gmgio")
+
+[node name="Receptacle4" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="7" unique_id=126137542 instance=ExtResource("8_6p6fr")]
+position = Vector2(-97, 72)
+
+[node name="CompletePuzzle" parent="." index="2" unique_id=1933061263]
+texture = ExtResource("13_6gi2h")
+
+[editable path="BuildingBlocks/PuzzlePiece"]
+[editable path="BuildingBlocks/PuzzlePiece2"]
+[editable path="BuildingBlocks/PuzzlePiece3"]
+[editable path="BuildingBlocks/PuzzlePiece4"]

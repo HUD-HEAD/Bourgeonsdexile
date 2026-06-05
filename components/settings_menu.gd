@@ -38,6 +38,8 @@ static var player_preferences: PlayerPreferences
 static var main_viewport: Viewport
 
 func _ready() -> void:
+	process_mode = PROCESS_MODE_ALWAYS
+	
 	_initialize(get_viewport())
 	_set_initial_values()
 	
@@ -206,7 +208,8 @@ func _on_credits_button_pressed() -> void:
 func _on_close_button_pressed() -> void:
 	if credits_container.visible:
 		credits_container.visible = false
-	else :	
+	else :
+		PauseController.settings_enabled = false
 		SceneManager.close_settings()
 
 

@@ -1,0 +1,9 @@
+[gd_resource type="Theme" format=3 uid="uid://byc6ry1lsr6xk"]
+
+[ext_resource type="Texture2D" uid="uid://b4ietau1augkw" path="res://graphics/ui/buttons/pause/play.png" id="1_wb3kc"]
+
+[resource]
+Button/colors/icon_hover_color = Color(1, 1, 1, 0.8627451)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 0.74509805)
+Button/icons/icon = ExtResource("1_wb3kc")
