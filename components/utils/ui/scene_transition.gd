@@ -10,8 +10,23 @@ extends Node
 
 @export var background: TextureRect
 
+var next_scene: String
+@export var is_scene_transition: bool
+
 func  _ready() -> void:
-	menu_transition()
+	if is_scene_transition:
+		scene_transition()
+	else:
+		menu_transition()
+
+func scene_transition():
+	var lambda_load_next_scene = func():
+		SceneManager.goto_scene(next_scene)
+		
+	var lambda_destroy_transition = func():
+		queue_free()
+	
+	_trigger_scene_transition(lambda_load_next_scene, lambda_destroy_transition)
 
 func menu_transition():
 	var lambda_load_menu = func():

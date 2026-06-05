@@ -1,7 +1,7 @@
 class_name ChapterEnder
 extends Node
 
-@onready var transition_scene: PackedScene = preload("res://scenes/menus/scene_transition.tscn")
+@onready var transition_scene: PackedScene = preload("res://scenes/menus/chapter_transition.tscn")
 var transition_scene_instance: CanvasLayer
 
 func trigger_scene_transition():
