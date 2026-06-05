@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://by2x0js73j5ew"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_867kd"]
+[ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="8_x8xde"]
 [ext_resource type="PackedScene" uid="uid://c3taxlnlcerfn" path="res://components/chapter3/comic2/C3_2_panel1.tscn" id="12_f4prm"]
 [ext_resource type="PackedScene" uid="uid://dcqf4qiy61c0h" path="res://components/chapter3/comic2/C3_2_panel2.tscn" id="13_pi4cn"]
 [ext_resource type="PackedScene" uid="uid://b4lixqemjmn7a" path="res://components/chapter3/comic2/C3_2_panel3.tscn" id="14_me2wc"]
@@ -55,3 +56,8 @@ script = ExtResource("21_t5b7w")
 [node name="UI" parent="." unique_id=1829896958 instance=ExtResource("22_u4ovr")]
 
 [node name="Audio" type="Node" parent="." unique_id=619569792]
+
+[node name="CheckpointController" type="Node" parent="." unique_id=1892684394]
+script = ExtResource("8_x8xde")
+chapter = 2
+comic = 15

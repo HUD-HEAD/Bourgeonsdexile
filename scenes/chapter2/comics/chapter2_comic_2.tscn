@@ -21,6 +21,7 @@
 [ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="20_cg1sh"]
 [ext_resource type="PackedScene" uid="uid://duvxs2qfj8pfu" path="res://components/chapter2/comic_panels/comic_2/panel_14.tscn" id="20_ukg44"]
 [ext_resource type="PackedScene" uid="uid://dyu4nfimcgrb" path="res://components/chapter2/comic_panels/comic_2/panel_13.tscn" id="21_0qtw2"]
+[ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="22_ukg44"]
 
 [node name="ChapterIIComic1" type="Node2D" unique_id=150562309]
 metadata/_edit_vertical_guides_ = [3098.0, 5247.0, 7539.0, 9944.0, 12375.0, 14408.0, 16384.0, 18203.0, 20749.0, 22655.0, 24690.0, 26712.0, 29795.0, 32039.0, 34449.0]
@@ -145,3 +146,8 @@ metadata/_custom_type_script = "uid://2aadlm17sdsf"
 position = Vector2(40335, 596)
 script = ExtResource("19_5ylu8")
 next_scene = "uid://calxcc2jttv3p"
+
+[node name="CheckpointController" type="Node" parent="." unique_id=1613312542]
+script = ExtResource("22_ukg44")
+chapter = 1
+comic = 8
