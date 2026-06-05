@@ -1,3 +1,4 @@
+@tool
 class_name RotationInterface
 extends Node2D
 
