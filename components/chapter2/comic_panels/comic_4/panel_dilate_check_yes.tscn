@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bvsowyigikf23" path="res://graphics/chapter2/comics/comic4/framecontractions/5.png" id="1_jos6g"]
 [ext_resource type="Texture2D" uid="uid://dubwjd322ehj8" path="res://graphics/chapter2/comics/comic4/framecontractions/4.png" id="2_mg072"]
-[ext_resource type="Texture2D" uid="uid://ocrq83y8mpyb" path="res://graphics/chapter2/comics/comic4/framecontractions/b/b3.png" id="3_mg072"]
+[ext_resource type="Texture2D" uid="uid://bv4cr8kq8m5ps" path="res://graphics/chapter2/comics/comic4/framecontractions/5b.png" id="3_mg072"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="3_ymavp"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_fe4t6"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="5_dilmp"]
