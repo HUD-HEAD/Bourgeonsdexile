@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://72txvs2l48m6" path="res://components/chapter2/comic_panels/comic_4/panel_6.tscn" id="12_l8dec"]
 [ext_resource type="Texture2D" uid="uid://bw7bnww0347ym" path="res://graphics/chapter2/comics/comic4/framecontractions/2.png" id="12_ngmml"]
 [ext_resource type="PackedScene" uid="uid://2q3jntyih2e7" path="res://components/chapter2/comic_panels/comic_4/panel_5.tscn" id="13_8mv4y"]
+[ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="17_vuetd"]
 [ext_resource type="PackedScene" uid="uid://xrhjayy04y7b" path="res://components/chapter2/contractions/contraction_wobble/contraction_wobble.tscn" id="18_ngmml"]
 
 [node name="ChapterIIComic1" type="Node2D" unique_id=150562309]
@@ -136,6 +137,11 @@ panels = [NodePath("../Panels/Panel1"), NodePath("../Panels/Panel2"), NodePath("
 position = Vector2(37771, 540)
 script = ExtResource("12_jxjoi")
 next_scene = "uid://ctau0miqtmbj2"
+
+[node name="CheckpointController" type="Node" parent="." unique_id=2097612793]
+script = ExtResource("17_vuetd")
+chapter = 1
+comic = 10
 
 [editable path="Panels/PanelContraction1"]
 [editable path="Panels/PanelContraction2"]

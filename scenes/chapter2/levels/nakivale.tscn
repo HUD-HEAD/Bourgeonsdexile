@@ -65,6 +65,7 @@
 [ext_resource type="Texture2D" uid="uid://dmx0ommwpr0x8" path="res://graphics/chapter2/levels/goma/npcs/man_woman_talk_6fps/man_woman_talk_0017.png" id="52_e28ne"]
 [ext_resource type="Texture2D" uid="uid://c2xxo5ok547ah" path="res://graphics/background_paperdark.png" id="53_sa0ao"]
 [ext_resource type="Script" uid="uid://qu5hfw1uwm0x" path="res://components/utils/mechanics/area_reveal.gd" id="54_adwnm"]
+[ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="66_f8hwx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_61fec"]
 animations = [{
@@ -127,6 +128,7 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_726rr"]
 size = Vector2(489, 240)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ss357"]
 size = Vector2(260.00134, 94.99814)
 
@@ -563,6 +565,11 @@ follow_model = true
 
 [node name="AnimSprite" parent="Companion" index="0" unique_id=689873547]
 sprite_frames = ExtResource("5_yuvbc")
+
+[node name="CheckpointController" type="Node" parent="." unique_id=1303317184]
+script = ExtResource("66_f8hwx")
+chapter = 1
+comic = 13
 
 [editable path="Puzzles/Puzzle1/DragDropPuzzle"]
 [editable path="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece"]
