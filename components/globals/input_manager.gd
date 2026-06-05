@@ -6,6 +6,9 @@ var mouse_sensitivity = 1.0
 var debug_console : DebugConsole
 
 func _ready() -> void:
+	#Can detect input on pause game
+	process_mode = PROCESS_MODE_ALWAYS
+	
 	##Clicks on e.g. Area2Ds (Clickables) will only trigger on topmost item
 	get_viewport().physics_object_picking_first_only = true
 	get_viewport().physics_object_picking_sort = true
@@ -25,11 +28,8 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		if OS.has_feature("debug"):
 			if debug_console.visible:
 				debug_console.toggle()
-			
-			#Only go to menu when the user is in a Chapter, To avoid reloading the menu scene while in the settings screen/Credits - Adrian
-			elif !get_tree().root.get_node("MainMenu"):
-				AudioManager.reset_audio()
-				SceneManager.goto_scene(ProjectSettings.get_setting("application/run/main_scene"))
+		
+		PauseController.show_pause_menu()
 	
 	if OS.has_feature("debug"):
 		_debug_inputs(event)
