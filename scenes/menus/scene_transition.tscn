@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c2n1c8lwcaixx" path="res://components/utils/ui/scene_transition.gd" id="1_y6fi4"]
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="2_n08x7"]
+[ext_resource type="Texture2D" uid="uid://dptgdwp3kmkgp" path="res://graphics/utils/alpha_mask_3.png" id="2_sromv"]
 
 [node name="SceneTransition" type="CanvasLayer" unique_id=1457713146 node_paths=PackedStringArray("background")]
 layer = 200
@@ -9,11 +10,19 @@ script = ExtResource("1_y6fi4")
 fade_in_curve = 1
 fade_in_time = 0.5
 fade_out_time = 0.5
-background = NodePath("Background")
+waiting_time = 0.5
+background = NodePath("Background2")
 is_scene_transition = true
 
-[node name="Background" type="TextureRect" parent="." unique_id=1208053317]
+[node name="Background2" type="TextureRect" parent="." unique_id=1476471481]
 z_index = 102
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_n08x7")
+
+[node name="Background" type="TextureRect" parent="Background2" unique_id=1208053317]
+z_index = 102
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_sromv")
