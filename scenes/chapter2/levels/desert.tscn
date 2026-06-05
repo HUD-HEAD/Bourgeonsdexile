@@ -276,6 +276,11 @@ position = Vector2(-127.5, -5.5)
 [node name="PuzzleHole" type="Node2D" parent="Puzzles" unique_id=1907762738]
 position = Vector2(60266, 0)
 
+[node name="Hole5" type="Sprite2D" parent="Puzzles/PuzzleHole" unique_id=1884555083]
+position = Vector2(559, 1210.0001)
+scale = Vector2(1.7469136, 1.7701863)
+texture = ExtResource("21_3sla2")
+
 [node name="PuzzleSpawner" type="Node" parent="Puzzles/PuzzleHole" unique_id=1754513984 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("5_6tu1w")
 puzzle = NodePath("../DragDropPuzzle2")
@@ -362,11 +367,6 @@ texture = ExtResource("34_u00n8")
 
 [node name="CompletePuzzle" parent="Puzzles/PuzzleHole/DragDropPuzzle2" index="2" unique_id=1933061263]
 texture = ExtResource("21_tlbbx")
-
-[node name="Hole5" type="Sprite2D" parent="Puzzles/PuzzleHole" unique_id=1884555083]
-position = Vector2(559, 1210.0001)
-scale = Vector2(1.7469136, 1.7701863)
-texture = ExtResource("21_3sla2")
 
 [node name="Puzzle4" type="Node2D" parent="Puzzles" unique_id=1412279860]
 position = Vector2(59406, 0)
@@ -501,6 +501,7 @@ obstacle = NodePath("../Obstacle")
 collision_mask = 2
 
 [node name="DragDropPuzzle4" parent="Puzzles/PuzzleWindowBus" unique_id=2122580379 instance=ExtResource("11_tn746")]
+z_index = 1
 position = Vector2(-1154, 840)
 scale = Vector2(0.6, 0.6)
 

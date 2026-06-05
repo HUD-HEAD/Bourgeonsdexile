@@ -514,6 +514,7 @@ shape = SubResource("RectangleShape2D_6b20s")
 [node name="BodaBodaStopped" type="Area2D" parent="CharWalking" unique_id=749611477]
 position = Vector2(6236, 740)
 scale = Vector2(0.4, 0.4)
+input_pickable = false
 script = ExtResource("46_fm2bo")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
