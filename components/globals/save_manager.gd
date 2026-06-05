@@ -35,6 +35,10 @@ func debug_load_checkpoint():
 
 # ── Save Progress ───────────────────────────────────
 func save_last_checkpoint(chapter: int, comic: CheckpointConfiguration.comic_types, panel: int):
+	last_checkpoint = CheckpointData.new(chapter)
+	last_checkpoint.comic = comic
+	last_checkpoint.panel = panel
+	
 	match chapter:
 		0:
 			actual_save_file.chapter_1_last_comic = comic as int
@@ -58,11 +62,18 @@ func is_chapter_unlock(chapter_id: int) -> bool:
 	
 	return true
 
-func unlock_chapter(chapter_id: int):
+func unlock_chapter(chapter_id: int = -1):
+	if chapter_id == -1:
+		chapter_id = last_checkpoint.chapter
+	else:
+		last_checkpoint = CheckpointData.new(chapter_id)
+	
 	if chapter_id + 1 >= actual_save_file.chapter_unlock:
 		actual_save_file.chapter_unlock = chapter_id + 1
 		_save()
 		update_menu_buttons()
+	
+	reset_current_chapter()
 
 # ── Menu ───────────────────────────────────
 func update_menu_buttons():
@@ -76,6 +87,19 @@ func reset_save_file():
 	actual_save_file = SaveFile.reset_save_file()
 	update_menu_buttons()
 
+func reset_current_chapter():
+	match last_checkpoint.chapter:
+		0:
+			actual_save_file.chapter_1_last_comic = 0
+			actual_save_file.chapter_1_last_panel = 0
+		1:
+			actual_save_file.chapter_2_last_comic = 7
+			actual_save_file.chapter_2_last_panel = 0
+		2:
+			actual_save_file.chapter_3_last_comic = 14
+			actual_save_file.chapter_3_last_panel = 0
+	
+	_save()
 
 func _save():
 	actual_save_file.save()
