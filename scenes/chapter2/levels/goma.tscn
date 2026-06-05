@@ -67,6 +67,7 @@
 [ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="65_6oc3f"]
 [ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="66_idrs3"]
 [ext_resource type="Script" uid="uid://cpn4fytrpjypm" path="res://components/chapter1/main_characters/area_switch_anim.gd" id="67_7kpd7"]
+[ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="68_3ogmi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3ogmi"]
 animations = [{
@@ -703,6 +704,11 @@ anim_name = "walking"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaEndCrawl" unique_id=777600366]
 shape = SubResource("CircleShape2D_7kpd7")
+
+[node name="CheckpointController" type="Node" parent="." unique_id=503992988]
+script = ExtResource("68_3ogmi")
+chapter = 1
+comic = 11
 
 [editable path="Puzzles/Puzzle1/DragDropPuzzle2"]
 [editable path="Puzzles/Puzzle1/DragDropPuzzle2/BuildingBlocks/PuzzlePiece"]

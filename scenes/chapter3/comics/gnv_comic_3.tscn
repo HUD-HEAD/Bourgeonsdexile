@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ctnyqrfovdjxg" path="res://components/chapter3/comic3/C3_3_Panel2.tscn" id="3_0yydu"]
 [ext_resource type="PackedScene" uid="uid://d1k46kr3djyp" path="res://components/chapter3/comic3/panel_reading.tscn" id="4_0yydu"]
 [ext_resource type="PackedScene" uid="uid://cpmykfqut1qex" path="res://components/chapter3/comic3/C3_3_Panel4.tscn" id="13_1jcxn"]
+[ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="14_1jcxn"]
 [ext_resource type="PackedScene" uid="uid://v70tkjsqc01b" path="res://components/chapter3/comic3/C3_3_Panel5.tscn" id="14_h0n83"]
 [ext_resource type="PackedScene" uid="uid://ciedovdbed85e" path="res://components/chapter3/comic3/C3_3_Panel6.tscn" id="15_q26rv"]
 [ext_resource type="PackedScene" uid="uid://bjpisg46n2tpb" path="res://components/chapter3/comic3/C3_3_Panel7.tscn" id="16_xhsn2"]
@@ -77,3 +78,8 @@ script = ExtResource("21_2yq1v")
 [node name="UI" parent="." unique_id=1829896958 instance=ExtResource("22_463pp")]
 
 [node name="Audio" type="Node" parent="." unique_id=619569792]
+
+[node name="CheckpointController" type="Node" parent="." unique_id=1768502718]
+script = ExtResource("14_1jcxn")
+chapter = 2
+comic = 16

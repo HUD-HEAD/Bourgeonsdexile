@@ -59,6 +59,7 @@
 [ext_resource type="Texture2D" uid="uid://wai0kjwxbksg" path="res://graphics/chapter2/levels/tangrampuzzles/7/8_7.png" id="54_owsko"]
 [ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="58_k4v74"]
 [ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="59_l3fw1"]
+[ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="60_88lvr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uu4gm"]
 size = Vector2(1545, 367)
@@ -629,6 +630,11 @@ rect = Rect2(-10, -10, 688, 68)
 script = ExtResource("59_l3fw1")
 music_name = 2200
 metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="CheckpointController" type="Node" parent="." unique_id=125355349]
+script = ExtResource("60_88lvr")
+chapter = 1
+comic = 12
 
 [editable path="Puzzles/Puzzle1/DragDropPuzzle"]
 [editable path="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece"]
