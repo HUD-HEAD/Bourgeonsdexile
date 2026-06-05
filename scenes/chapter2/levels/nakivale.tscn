@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://bx1qek36fgkbh" path="res://components/chapter2/characters/companion.tscn" id="4_nonyt"]
 [ext_resource type="SpriteFrames" uid="uid://8wnk5pl0cnpd" path="res://components/chapter2/characters/nephew_sprite_frames.tres" id="5_yuvbc"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="6_isbuh"]
-[ext_resource type="Texture2D" uid="uid://cos4ystbahcdv" path="res://graphics/chapter1/levels/lajas_blancas/puzzles/halfpuzzles/2/2_2.png" id="7_lnnqp"]
 [ext_resource type="PackedScene" uid="uid://vj707oi6xv2n" path="res://components/chapter2/levels/nakivale/drag_drop_puzzle_N1.tscn" id="8_qdplb"]
 [ext_resource type="PackedScene" uid="uid://ww5a6ce8rx7r" path="res://components/chapter2/levels/nakivale/drag_drop_puzzle_N2.tscn" id="9_hmuug"]
 [ext_resource type="Texture2D" uid="uid://ckhynvxlog6mo" path="res://graphics/chapter2/levels/tangrampuzzles/9/1_9line.png" id="10_tl3ag"]
@@ -31,10 +30,22 @@
 [ext_resource type="Texture2D" uid="uid://bjybi0w3vkw2i" path="res://graphics/chapter2/levels/tangrampuzzles/9/8_9line.png" id="23_gmrap"]
 [ext_resource type="Texture2D" uid="uid://x8reasjp31sa" path="res://graphics/chapter2/levels/tangrampuzzles/9/7_9.png" id="23_tl3ag"]
 [ext_resource type="Texture2D" uid="uid://mviow6sdh7w4" path="res://graphics/chapter2/levels/tangrampuzzles/9/8_9.png" id="24_jcuem"]
+[ext_resource type="Texture2D" uid="uid://cdr0ef3fhll3g" path="res://graphics/chapter2/levels/nakivale/bignakipuzzles/1/empty1.png" id="25_ecivx"]
 [ext_resource type="Texture2D" uid="uid://hfnifxbq2xl" path="res://graphics/chapter2/levels/tangrampuzzles/9/9_9line.png" id="25_odemf"]
+[ext_resource type="Texture2D" uid="uid://iqq6vioxjqbb" path="res://graphics/chapter2/levels/nakivale/bignakipuzzles/1/1_1line.png" id="26_3bav3"]
 [ext_resource type="Texture2D" uid="uid://c2ut7yxg0x7dp" path="res://graphics/chapter2/levels/tangrampuzzles/9/9_9.png" id="26_e65kt"]
 [ext_resource type="Texture2D" uid="uid://b8ycdxa08s1hs" path="res://graphics/chapter2/levels/tangrampuzzles/9/10_9line.png" id="27_jnfmt"]
+[ext_resource type="Texture2D" uid="uid://ktnswgikmucg" path="res://graphics/chapter2/levels/nakivale/bignakipuzzles/1/1_1.png" id="27_pibye"]
+[ext_resource type="PackedScene" uid="uid://b15l0pq6dea3h" path="res://components/utils/puzzles/puzzle_piece_template.tscn" id="28_f8hwx"]
 [ext_resource type="Texture2D" uid="uid://dgdqd56o8uxch" path="res://graphics/chapter2/levels/tangrampuzzles/9/10_9.png" id="28_sa0ao"]
+[ext_resource type="Texture2D" uid="uid://bm3u41qdhpg1m" path="res://graphics/chapter2/levels/nakivale/bignakipuzzles/1/2_1line.png" id="29_osbl6"]
+[ext_resource type="Texture2D" uid="uid://m6nfefg6r5jl" path="res://graphics/chapter2/levels/nakivale/bignakipuzzles/1/2_1.png" id="30_7agjy"]
+[ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="31_cbojg"]
+[ext_resource type="Texture2D" uid="uid://brrmgotg1vl5g" path="res://graphics/chapter2/levels/nakivale/bignakipuzzles/1/3_1line.png" id="32_e28ne"]
+[ext_resource type="Texture2D" uid="uid://bv72gqhiii4mg" path="res://graphics/chapter2/levels/nakivale/bignakipuzzles/1/3_1.png" id="33_61fec"]
+[ext_resource type="Texture2D" uid="uid://8s88yca5jwl2" path="res://graphics/chapter2/levels/nakivale/bignakipuzzles/1/4_1ine.png" id="34_nm25k"]
+[ext_resource type="Texture2D" uid="uid://dlsfofejia52u" path="res://graphics/chapter2/levels/nakivale/bignakipuzzles/1/4_1.png" id="35_ntkgk"]
+[ext_resource type="Texture2D" uid="uid://buejiv1fdfxpm" path="res://graphics/chapter2/levels/nakivale/bignakipuzzles/1/fulldrawing1.png" id="36_0tndx"]
 [ext_resource type="Texture2D" uid="uid://cf6ulesj202xk" path="res://graphics/chapter2/levels/goma/npcs/man_woman_talk_6fps/man_woman_talk_0001.png" id="36_sa0ao"]
 [ext_resource type="Texture2D" uid="uid://cse0vdx6eodv4" path="res://graphics/chapter2/levels/goma/npcs/man_woman_talk_6fps/man_woman_talk_0002.png" id="37_adwnm"]
 [ext_resource type="Texture2D" uid="uid://xj2ju0tgre7" path="res://graphics/chapter2/levels/goma/npcs/man_woman_talk_6fps/man_woman_talk_0003.png" id="38_726rr"]
@@ -116,6 +127,17 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_726rr"]
 size = Vector2(489, 240)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ss357"]
+size = Vector2(260.00134, 94.99814)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mwlor"]
+size = Vector2(317.005, 104.982346)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u7xie"]
+size = Vector2(359.99463, 145.00256)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v48gm"]
+size = Vector2(268.019, 145.00256)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hsmfu"]
 radius = 48.0
@@ -205,17 +227,101 @@ obstacle = NodePath("../Obstacle")
 [node name="Obstacle" parent="Puzzles/Puzzle1" unique_id=310843140 instance=ExtResource("12_isbuh")]
 collision_mask = 2
 
-[node name="DragDropPuzzle" parent="Puzzles/Puzzle1" unique_id=1767003607 instance=ExtResource("8_qdplb")]
+[node name="DragDropPuzzle" parent="Puzzles/Puzzle1" unique_id=1767003607 node_paths=PackedStringArray("puzzle_pieces") instance=ExtResource("8_qdplb")]
 position = Vector2(314, 458)
+puzzle_pieces = [NodePath("BuildingBlocks/PuzzlePiece"), NodePath("BuildingBlocks/PuzzlePiece2"), NodePath("BuildingBlocks/PuzzlePiece3"), NodePath("BuildingBlocks/PuzzlePiece4")]
+
+[node name="OutlinePuzzle" parent="Puzzles/Puzzle1/DragDropPuzzle" index="0" unique_id=1513168459]
+position = Vector2(28, -155)
+texture = ExtResource("25_ecivx")
 
 [node name="PuzzlePiece" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="0" unique_id=1667760579]
-position = Vector2(-243, 2)
+position = Vector2(-177, -31)
 
 [node name="PuzzlePieceSprite" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1767003607, 1667760579, 2116105691) index="0" unique_id=1266676352]
 position = Vector2(-1, 0)
+texture = ExtResource("26_3bav3")
 
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1767003607, 1667760579, 2116105691) index="1" unique_id=991932022]
-texture = ExtResource("7_lnnqp")
+texture = ExtResource("27_pibye")
+
+[node name="DraggableZone" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1767003607, 1667760579, 2116105691) index="3" unique_id=1105802255]
+position = Vector2(-0.99902344, -5.5009155)
+rotation = 0.00018574297
+shape = SubResource("RectangleShape2D_ss357")
+
+[node name="Receptacle" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="1" unique_id=1559191435]
+position = Vector2(-125, -377)
+
+[node name="PuzzlePiece2" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="2" unique_id=729525704 instance=ExtResource("28_f8hwx")]
+position = Vector2(-387, -141)
+
+[node name="PuzzlePieceSprite" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="0" unique_id=1266676352]
+position = Vector2(-1, 0)
+texture = ExtResource("29_osbl6")
+
+[node name="PuzzlePieceSpriteOnClick" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="1" unique_id=991932022]
+position = Vector2(-1, -11)
+texture = ExtResource("30_7agjy")
+
+[node name="PlacementChecker" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+receptacle = NodePath("../../../Receptacle2")
+
+[node name="DraggableZone" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="3" unique_id=1105802255]
+position = Vector2(1.5461426, -10.510071)
+rotation = 0.0034147054
+shape = SubResource("RectangleShape2D_mwlor")
+
+[node name="Receptacle2" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="3" unique_id=600273107 instance=ExtResource("31_cbojg")]
+position = Vector2(23, -295)
+
+[node name="PuzzlePiece3" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="4" unique_id=2082946397 instance=ExtResource("28_f8hwx")]
+position = Vector2(-499, 13)
+
+[node name="PuzzlePieceSprite" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(2082946397, 2116105691) index="0" unique_id=1266676352]
+position = Vector2(-1, 0)
+texture = ExtResource("32_e28ne")
+
+[node name="PuzzlePieceSpriteOnClick" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(2082946397, 2116105691) index="1" unique_id=991932022]
+position = Vector2(-5, -13)
+texture = ExtResource("33_61fec")
+
+[node name="PlacementChecker" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(2082946397, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+receptacle = NodePath("../../../Receptacle3")
+
+[node name="DraggableZone" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(2082946397, 2116105691) index="3" unique_id=1105802255]
+position = Vector2(-3, -8.511932)
+rotation = 0.0034147054
+shape = SubResource("RectangleShape2D_u7xie")
+
+[node name="Receptacle3" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="5" unique_id=1505048662 instance=ExtResource("31_cbojg")]
+position = Vector2(157, -170)
+
+[node name="PuzzlePiece4" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="6" unique_id=1162043200 instance=ExtResource("28_f8hwx")]
+position = Vector2(-392, -291)
+
+[node name="PuzzlePieceSprite" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(1162043200, 2116105691) index="0" unique_id=1266676352]
+position = Vector2(-1, 0)
+texture = ExtResource("34_nm25k")
+
+[node name="PuzzlePieceSpriteOnClick" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(1162043200, 2116105691) index="1" unique_id=991932022]
+position = Vector2(-5, -13)
+texture = ExtResource("35_ntkgk")
+
+[node name="PlacementChecker" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(1162043200, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+receptacle = NodePath("../../../Receptacle4")
+
+[node name="DraggableZone" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(1162043200, 2116105691) index="3" unique_id=1105802255]
+position = Vector2(-7.991333, -8.528961)
+rotation = 0.0034147054
+shape = SubResource("RectangleShape2D_v48gm")
+
+[node name="Receptacle4" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="7" unique_id=1137583358 instance=ExtResource("31_cbojg")]
+position = Vector2(275, -29)
+
+[node name="CompletePuzzle" parent="Puzzles/Puzzle1/DragDropPuzzle" index="2" unique_id=1933061263]
+position = Vector2(36, -158)
+texture = ExtResource("36_0tndx")
 
 [node name="Puzzle2" type="Node2D" parent="Puzzles" unique_id=2004378291]
 position = Vector2(2741, 0)
@@ -460,6 +566,9 @@ sprite_frames = ExtResource("5_yuvbc")
 
 [editable path="Puzzles/Puzzle1/DragDropPuzzle"]
 [editable path="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece"]
+[editable path="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece2"]
+[editable path="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece3"]
+[editable path="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece4"]
 [editable path="Puzzles/Puzzle2/DragDropPuzzle2"]
 [editable path="Puzzles/Puzzle2/DragDropPuzzle2/BuildingBlocks/PuzzlePiece"]
 [editable path="Puzzles/Puzzle2/DragDropPuzzle2/BuildingBlocks/PuzzlePiece2"]
