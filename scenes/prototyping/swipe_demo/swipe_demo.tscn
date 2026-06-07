@@ -5,6 +5,14 @@
 [ext_resource type="Shader" uid="uid://rnrjeipt84wq" path="res://scenes/prototyping/swipe_demo/alpha_mask.gdshader" id="2_uksmt"]
 [ext_resource type="Script" uid="uid://b6lghrcp5hl6o" path="res://scenes/prototyping/swipe_demo/brush_helper.gd" id="5_kqnbt"]
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_kqnbt"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dpdtw"]
+resource_local_to_scene = true
+shader = ExtResource("2_uksmt")
+shader_parameter/texture_albedo = SubResource("ViewportTexture_kqnbt")
+
 [sub_resource type="Gradient" id="Gradient_kd4q4"]
 interpolation_mode = 1
 offsets = PackedFloat32Array(0, 0.5)
@@ -17,32 +25,7 @@ height = 500
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_kqnbt"]
-viewport_path = NodePath("SubViewportContainer/SubViewport")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_dpdtw"]
-resource_local_to_scene = true
-shader = ExtResource("2_uksmt")
-shader_parameter/texture_albedo = SubResource("ViewportTexture_kqnbt")
-
 [node name="SwipeDemo" type="Node2D" unique_id=1530184277]
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=406356084]
-visibility_layer = 3
-offset_left = 5.0
-offset_top = 1213.0
-offset_right = 1925.0
-offset_bottom = 2293.0
-
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1098068814]
-transparent_bg = true
-handle_input_locally = false
-size = Vector2i(1920, 1080)
-render_target_clear_mode = 1
-render_target_update_mode = 4
-
-[node name="Brush" type="Sprite2D" parent="SubViewportContainer/SubViewport" unique_id=598870061]
-texture = SubResource("GradientTexture2D_uksmt")
 
 [node name="Blur" type="Sprite2D" parent="." unique_id=2009020356]
 texture = ExtResource("1_51puc")
@@ -55,4 +38,14 @@ centered = false
 
 [node name="BrushHelper" type="Node2D" parent="." unique_id=1432388107 node_paths=PackedStringArray("brush")]
 script = ExtResource("5_kqnbt")
-brush = NodePath("../SubViewportContainer/SubViewport/Brush")
+brush = NodePath("../SubViewport/Brush")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=1098068814]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_clear_mode = 1
+render_target_update_mode = 4
+
+[node name="Brush" type="Sprite2D" parent="SubViewport" unique_id=598870061]
+texture = SubResource("GradientTexture2D_uksmt")
