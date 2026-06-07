@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dc3angby73c88" path="res://graphics/chapter2/levels/tangrampuzzles/1/2_1line.png" id="8_bejlw"]
 [ext_resource type="Texture2D" uid="uid://ia2oeqhw2g7g" path="res://graphics/chapter2/levels/goma/wheel1.png" id="8_hfpvf"]
 [ext_resource type="Texture2D" uid="uid://bmhoojrjyafbr" path="res://graphics/chapter2/levels/tangrampuzzles/1/2_1.png" id="9_6se2c"]
+[ext_resource type="Texture2D" uid="uid://dituvwkbu4vw8" path="res://graphics/chapter1/main_characters/enemies/enemiesprite2.png" id="9_ge572"]
 [ext_resource type="Texture2D" uid="uid://bt4al565mnwhh" path="res://graphics/chapter2/levels/goma/wheel2.png" id="9_plsra"]
 [ext_resource type="Texture2D" uid="uid://c4vvnpgt05haw" path="res://graphics/chapter2/levels/tangrampuzzles/1/3_1line.png" id="10_f3f72"]
 [ext_resource type="Script" uid="uid://bjexrnveh5vkf" path="res://components/chapter2/characters/switch_char.gd" id="11_7o0y3"]
@@ -132,6 +133,12 @@ position = Vector2(4845, 680)
 sprite_frames = SubResource("SpriteFrames_3ogmi")
 autoplay = "default"
 frame_progress = 0.91606015
+
+[node name="Enemiesprite2" type="Sprite2D" parent="." unique_id=1578704885]
+position = Vector2(2369, 635)
+scale = Vector2(0.47635135, 0.47635135)
+texture = ExtResource("9_ge572")
+flip_h = true
 
 [node name="Theme" type="AudioStreamPlayer" parent="." unique_id=67967600]
 autoplay = true
