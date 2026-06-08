@@ -1,26 +1,29 @@
 [gd_scene format=3 uid="uid://bewuaqd6css6q"]
 
 [ext_resource type="Texture2D" uid="uid://b07nxvkm0uwi1" path="res://graphics/chapter3/levels/museum/bg.png" id="1_llu7i"]
-[ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/chapter1/main_characters/jungle_woman.tscn" id="1_nfpdc"]
+[ext_resource type="PackedScene" uid="uid://dy84a73ucflwu" path="res://components/chapter3/main_characters/zlata.tscn" id="3_sb6ig"]
 
 [node name="Level33" type="Node2D" unique_id=2125939091]
+metadata/_edit_horizontal_guides_ = [-2206.0]
+metadata/_edit_vertical_guides_ = [7963.0]
 
 [node name="Bg" type="Sprite2D" parent="." unique_id=636733600]
 position = Vector2(3987, 539)
 texture = ExtResource("1_llu7i")
 
-[node name="Nina" parent="." unique_id=700974070 instance=ExtResource("1_nfpdc")]
-position = Vector2(965, 970)
+[node name="Zlata" parent="." unique_id=826116100 instance=ExtResource("3_sb6ig")]
+position = Vector2(467, 970)
 scale = Vector2(2.0799963, 2.0799963)
-play_walking_sfx = true
 
-[node name="Camera2D" type="Camera2D" parent="Nina" unique_id=2072470020]
+[node name="Camera2D" type="Camera2D" parent="Zlata" unique_id=2072470020]
 position = Vector2(0, -233)
+scale = Vector2(0.99999994, 0.99999994)
 offset = Vector2(500, 0)
 limit_left = -9999959
 limit_top = 0
-limit_right = 10000041
+limit_right = 7360
 limit_bottom = 1080
 
-[node name="MarkerBubbleSpawn" type="Marker2D" parent="Nina" unique_id=2137270662]
-position = Vector2(48.147217, -249.4505)
+[node name="MarkerBubbleSpawn" type="Marker2D" parent="Zlata" unique_id=2137270662]
+position = Vector2(48.147186, -249.4505)
+scale = Vector2(0.99999994, 0.99999994)
