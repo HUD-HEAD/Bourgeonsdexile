@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://6wu3diw8sljb" path="res://graphics/chapter2/comics/comic4/framecontractions/6.png" id="1_8gium"]
 [ext_resource type="PackedScene" uid="uid://c7of5l5s248sl" path="res://components/chapter2/contractions/contraction_circle/contraction_circle.tscn" id="2_fdbdw"]
-[ext_resource type="AudioStream" uid="uid://celeq1b7cu3ts" path="res://audio/chapter2/ambient/comic 4/panel_4.14_pain_sound_interactive.wav" id="3_jchia"]
+[ext_resource type="AudioStream" uid="uid://dm7xpcn7cx5df" path="res://audio/chapter2/ambient/comic 4/panel_4.13_pain_sound_4.wav" id="3_jchia"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="3_rbx5o"]
-[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="4_kleua"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="6_xftsx"]
 
 [node name="PanelPush1" type="Node2D" unique_id=220555847]
 
@@ -16,6 +16,7 @@ position = Vector2(60, -13.5)
 node_to_enable = NodePath("../TransitionerPassive")
 play_sfx = true
 stream = ExtResource("3_jchia")
+linear_volume = 2.0
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=515992168]
 
@@ -24,7 +25,9 @@ script = ExtResource("3_rbx5o")
 timer_wait = 1.0
 metadata/_custom_type_script = "uid://u4636s8oa5d0"
 
-[node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=1277014741]
-script = ExtResource("4_kleua")
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=1509695093]
+position = Vector2(-33, 233)
+rect = Rect2(-259, -29, 585, 119)
+script = ExtResource("6_xftsx")
 loop_name = 2403
-metadata/_custom_type_script = "uid://brda7473wfj1v"
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"

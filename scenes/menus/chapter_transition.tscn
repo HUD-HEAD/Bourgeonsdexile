@@ -11,6 +11,7 @@ fade_in_time = 2.0
 fade_out_time = 1.0
 waiting_time = 0.5
 background = NodePath("Background")
+scene_transition_type = 1
 
 [node name="Background" type="TextureRect" parent="." unique_id=1208053317]
 modulate = Color(0, 0.09019608, 0.14117648, 1)

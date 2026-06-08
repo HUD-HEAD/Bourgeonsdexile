@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://3aywsa5n31sw"]
+
+[ext_resource type="Script" uid="uid://c2n1c8lwcaixx" path="res://components/utils/ui/scene_transition.gd" id="1_nntfg"]
+[ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="2_a6206"]
+
+[node name="SceneTransition" type="CanvasLayer" unique_id=1457713146 node_paths=PackedStringArray("background")]
+layer = 200
+script = ExtResource("1_nntfg")
+fade_in_curve = 1
+fade_in_time = 0.5
+fade_out_time = 0.5
+waiting_time = 20.0
+background = NodePath("Background")
+scene_transition_type = 2
+
+[node name="Background" type="TextureRect" parent="." unique_id=1208053317]
+modulate = Color(0, 0, 0, 1)
+z_index = 102
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_a6206")

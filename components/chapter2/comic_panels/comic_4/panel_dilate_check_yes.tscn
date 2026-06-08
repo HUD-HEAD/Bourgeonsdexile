@@ -9,7 +9,6 @@
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="7_k22hq"]
 [ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="7_ymavp"]
 [ext_resource type="AudioStream" uid="uid://cdjnxbo5efoo8" path="res://audio/chapter2/ambient/comic 4/panel_4.5_4.9_4.13_pain_sound_interactive.wav" id="8_m5rpv"]
-[ext_resource type="AudioStream" uid="uid://dm7xpcn7cx5df" path="res://audio/chapter2/ambient/comic 4/panel_4.13_pain_sound_4.wav" id="9_v7xpm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q2fi1"]
 animations = [{
@@ -51,22 +50,16 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1942356265]
 shape = SubResource("RectangleShape2D_m5rpv")
 
-[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=830579642]
+[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=830579642 node_paths=PackedStringArray("clickables")]
 script = ExtResource("7_k22hq")
+clickables = [NodePath("..")]
 play_sfx_once = true
 use_audio_stream = true
 stream = ExtResource("8_m5rpv")
 metadata/_custom_type_script = "uid://b7avucygxykbp"
 
-[node name="TriggerSfxOnClick2" type="Node" parent="Clickable" unique_id=1387992077 node_paths=PackedStringArray("clickables")]
-script = ExtResource("7_k22hq")
-clickables = [NodePath("..")]
-play_sfx_once = true
-use_audio_stream = true
-stream = ExtResource("9_v7xpm")
-metadata/_custom_type_script = "uid://b7avucygxykbp"
-
 [node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=29517063]
+rect = Rect2(-10, -10, 293, 52)
 script = ExtResource("7_ymavp")
 loop_name = 2402
 metadata/_custom_type_script = "uid://brda7473wfj1v"

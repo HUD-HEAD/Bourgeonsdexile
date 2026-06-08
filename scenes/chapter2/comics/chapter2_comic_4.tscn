@@ -169,7 +169,7 @@ clickables = [NodePath("..")]
 play_sfx_once = true
 use_audio_stream = true
 stream = ExtResource("13_kiieq")
-linear_volume = 1.2
+linear_volume = 1.3
 metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="PanelDilateCheckYes" parent="Panels" unique_id=222378827 instance=ExtResource("8_h2s7f")]
@@ -213,7 +213,8 @@ loop_name = 2404
 metadata/_custom_type_script = "uid://brda7473wfj1v"
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1805948442]
-position = Vector2(37771, 540)
+position = Vector2(59058, 497)
+rect = Rect2(-555, -259, 613.8164, 298)
 script = ExtResource("12_jxjoi")
 next_scene = "uid://ctau0miqtmbj2"
 
