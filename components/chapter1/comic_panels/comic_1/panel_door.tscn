@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="4_lsi5m"]
 [ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/PlayOnClick.tscn" id="5_uuwu5"]
 [ext_resource type="AudioStream" uid="uid://bu7vk44k4yvfk" path="res://audio/chapter1/ambient/PANEL_2_KEYS_DOOR_STEPS.wav" id="6_5p3lq"]
+[ext_resource type="PackedScene" uid="uid://1itm8eikeop4" path="res://components/utils/mechanics/tutorial/tutorial_click.tscn" id="8_i2uo5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ilj8p"]
 size = Vector2(271, 659)
@@ -88,3 +89,6 @@ clickables = [NodePath("../Clickable")]
 [node name="DoorFeedbackFade" type="AnimationPlayer" parent="." unique_id=842254567]
 libraries/ = SubResource("AnimationLibrary_450so")
 autoplay = &"DoorFade"
+
+[node name="TutorialClick" parent="." unique_id=1104291269 instance=ExtResource("8_i2uo5")]
+position = Vector2(69, -72)

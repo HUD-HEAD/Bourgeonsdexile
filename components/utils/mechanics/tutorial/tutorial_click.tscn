@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://1itm8eikeop4"]
+
+[ext_resource type="Texture2D" uid="uid://bxph6dg8vuyh4" path="res://graphics/ui/cursor/pointinghand.png" id="1_mo3x6"]
+[ext_resource type="Script" uid="uid://2es1qplqra2o" path="res://components/utils/mechanics/tutorial/tutorial_trigger.gd" id="1_p723c"]
+[ext_resource type="Texture2D" uid="uid://1vth65eomjcq" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_feedbackcandle/feedbackcandle1.png" id="2_gx545"]
+[ext_resource type="Texture2D" uid="uid://6tfh6ph64vrr" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_feedbackcandle/feedbackcandle2.png" id="3_ovfad"]
+[ext_resource type="Texture2D" uid="uid://bfby2v64o86h1" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_feedbackcandle/feedbackcandle3.png" id="4_2rt68"]
+[ext_resource type="Texture2D" uid="uid://rsst2padx5q" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_feedbackcandle/feedbackcandle4.png" id="5_58p4u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ft8q0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gx545")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ovfad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2rt68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_58p4u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_p723c"]
+resource_name = "hint"
+loop_mode = 1
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q52k8"]
+_data = {
+&"hint": SubResource("Animation_p723c")
+}
+
+[node name="TutorialClick" type="Node2D" unique_id=1104291269 node_paths=PackedStringArray("anim_player", "visuals", "visible_notifier")]
+modulate = Color(1, 1, 1, 0.49803922)
+script = ExtResource("1_p723c")
+anim_player = NodePath("AnimationPlayer")
+visuals = NodePath("Visuals")
+visible_notifier = NodePath("VisibleOnScreenNotifier2D")
+
+[node name="Visuals" type="Node2D" parent="." unique_id=1205911136]
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals" unique_id=1119684075]
+texture = ExtResource("1_mo3x6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Visuals" unique_id=2080891227]
+position = Vector2(-27.526445, -47.354385)
+rotation = -2.4421651
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_ft8q0")
+autoplay = "default"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Visuals" unique_id=2027091738]
+position = Vector2(14.000006, -46.000004)
+rotation = -1.1123581
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_ft8q0")
+autoplay = "default"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Visuals" unique_id=937877767]
+position = Vector2(-2.9999998, -53.000004)
+rotation = -1.5273128
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_ft8q0")
+autoplay = "default"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1003026230]
+libraries/ = SubResource("AnimationLibrary_q52k8")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1153990128]

@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c2xpj702cxmrl" path="res://graphics/chapter1/comics/comic1/panel_ponytail/frameponytail2.png" id="2_qnnkq"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="3_b5os6"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_2n6ho"]
+[ext_resource type="PackedScene" uid="uid://1itm8eikeop4" path="res://components/utils/mechanics/tutorial/tutorial_click.tscn" id="6_qnnkq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qnnkq"]
 animations = [{
@@ -47,3 +48,6 @@ shape = SubResource("CircleShape2D_2n6ho")
 script = ExtResource("4_2n6ho")
 clickables = [NodePath("../Frameponytail/Clickable")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="TutorialClick" parent="." unique_id=1104291269 instance=ExtResource("6_qnnkq")]
+position = Vector2(170, 234)

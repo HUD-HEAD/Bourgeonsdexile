@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dgnbx8g2en04" path="res://graphics/chapter1/comics/comic1/panel_boat_crossing/frame6_boat.png" id="2_6enyl"]
 [ext_resource type="Script" uid="uid://bwhw2o2u7v43i" path="res://components/utils/comics/vertical_sine_anim.gd" id="3_j3dv7"]
 [ext_resource type="AudioStream" uid="uid://cr26dm0ehhw5p" path="res://audio/chapter1/ambient/panel_14_boat.wav" id="5_d8as8"]
+[ext_resource type="PackedScene" uid="uid://dyfndyhgc808n" path="res://components/utils/mechanics/tutorial/tutorial_drag_left.tscn" id="6_mj0yy"]
 
 [node name="JungleComic1Frame6" type="Node2D" unique_id=618598756]
 metadata/_edit_group_ = true
@@ -28,5 +29,8 @@ speed = 2.0
 stream = ExtResource("5_d8as8")
 autoplay = true
 bus = &"Sfx"
+
+[node name="TutorialDragLeft" parent="." unique_id=1104291269 instance=ExtResource("6_mj0yy")]
+position = Vector2(107, 23)
 
 [editable path="ScrollingBackground"]
