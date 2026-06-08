@@ -6,6 +6,8 @@ extends Node2D
 
 @export var path_follow : PathFollow2D
 
+@export var play_walking_sfx: bool = false
+
 const WALK_SPEED = 75
 
 var walking : bool
@@ -30,6 +32,9 @@ func _process(delta: float) -> void:
 			self.global_position.x += WALK_SPEED*delta
 
 
+func switch_animation(anim_name : String):
+	anim_sprite.animation = anim_name
+
 func _on_area_entered(area : Area2D):
 	_stop_walking()
 	InputManager.show_mouse()
@@ -38,8 +43,11 @@ func _on_area_entered(area : Area2D):
 func _start_walking():
 	walking = true
 	anim_sprite.play("walking")
+	if play_walking_sfx:
+		AudioManager.play_walking_loop()
 
 func _stop_walking():
 	anim_sprite.play("idle")
 	walking = false
-	
+	if play_walking_sfx:
+		AudioManager.stop_walking_loop()

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bmfmgeoi2y4kc"
+path="res://.godot/imported/panel_2.13_aghhh_sound_interactive.wav-d4ca4ad698ba4cb73365e21a375f0f69.sample"
+
+[deps]
+
+source_file="res://audio/chapter2/ambient/comic 2/panel_2.13_aghhh_sound_interactive.wav"
+dest_files=["res://.godot/imported/panel_2.13_aghhh_sound_interactive.wav-d4ca4ad698ba4cb73365e21a375f0f69.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

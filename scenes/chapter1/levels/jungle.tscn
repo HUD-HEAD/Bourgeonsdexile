@@ -22,7 +22,6 @@
 [ext_resource type="Script" uid="uid://gchp60e2jp5r" path="res://components/utils/mechanics/set_camera_bounds.gd" id="19_31ufg"]
 [ext_resource type="PackedScene" uid="uid://kkmgx1eqpc4i" path="res://components/chapter1/main_characters/char_reflection.tscn" id="19_c5nq0"]
 [ext_resource type="SpriteFrames" uid="uid://dg15c2titrtgq" path="res://components/chapter1/main_characters/companion_3_sprite_frames.tres" id="19_jh4yo"]
-[ext_resource type="AudioStream" uid="uid://1bh8jat7waj1" path="res://audio/sfx_old/jungle-nature-229896.mp3" id="20_5j4y3"]
 [ext_resource type="Script" uid="uid://bchnidsm7kci0" path="res://components/chapter1/main_characters/companion.gd" id="20_t8bry"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="21_kdrkc"]
 [ext_resource type="Script" uid="uid://c6535mmpn7tng" path="res://components/chapter1/levels/jungle/rain_starter.gd" id="25_h7yo2"]
@@ -33,17 +32,14 @@
 [ext_resource type="Script" uid="uid://bhkx6r42i55jn" path="res://scenes/chapter1/levels/wait_stop_rain.gd" id="31_c3f0v"]
 [ext_resource type="PackedScene" uid="uid://b7280mshbm13l" path="res://components/chapter1/levels/jungle/puzzle6.tscn" id="31_ljtv2"]
 [ext_resource type="Texture2D" uid="uid://bow4ifhdb5bv5" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction1.png" id="32_2wqw0"]
-[ext_resource type="Texture2D" uid="uid://4n7my7ycpy30" path="res://graphics/chapter1/main_characters/enemies/enemiesprite1.png" id="32_808hi"]
 [ext_resource type="Texture2D" uid="uid://cbsslcnjdrrpv" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/1/4_1line.png" id="32_qf8se"]
 [ext_resource type="PackedScene" uid="uid://b88g225o2t0is" path="res://components/chapter1/levels/jungle/puzzle3.tscn" id="32_t8bry"]
 [ext_resource type="Texture2D" uid="uid://d2hmayoft57fn" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/1/4_1.png" id="33_6wsaw"]
-[ext_resource type="Texture2D" uid="uid://dituvwkbu4vw8" path="res://graphics/chapter1/main_characters/enemies/enemiesprite2.png" id="33_aa6lj"]
 [ext_resource type="PackedScene" uid="uid://bcepqdv01o1ry" path="res://components/chapter1/levels/jungle/puzzle4.tscn" id="33_h7yo2"]
 [ext_resource type="Texture2D" uid="uid://bg5y7pg1m38l2" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction2.png" id="33_jh4yo"]
 [ext_resource type="PackedScene" uid="uid://c8pymntn6ge5" path="res://components/chapter1/levels/jungle/puzzle5.tscn" id="33_tglbk"]
 [ext_resource type="Texture2D" uid="uid://dvchkdwlq3wo" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction3.png" id="34_c3f0v"]
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="35_ljtv2"]
-[ext_resource type="Texture2D" uid="uid://dxryv082uocw8" path="res://graphics/chapter1/levels/city/npcs/npc3.png" id="35_rw1nd"]
 [ext_resource type="Texture2D" uid="uid://bjbev463l8cuf" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction4.png" id="35_skl6x"]
 [ext_resource type="Texture2D" uid="uid://drqyc110ynywx" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/2/1_2line.png" id="35_ulyey"]
 [ext_resource type="Texture2D" uid="uid://dlasfaha3cejo" path="res://graphics/chapter1/comics/comic1/panel_argument/anim_destruction/frame2_destruction5.png" id="36_7a5p8"]
@@ -128,22 +124,33 @@
 [ext_resource type="Texture2D" uid="uid://cj84yv6y71sg7" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_10fps/enemy_idle_0031.png" id="78_4anvc"]
 [ext_resource type="Texture2D" uid="uid://chrowuba8qqoc" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_10fps/enemy_idle_0032.png" id="79_4fty7"]
 [ext_resource type="Texture2D" uid="uid://byrfojq4cgbfh" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_10fps/enemy_idle_0033.png" id="80_a6lic"]
+[ext_resource type="Texture2D" uid="uid://c3llkf3hm86pb" path="res://graphics/chapter1/levels/jungle/npcs/NPC_warning_10fps/npc_warning_0001.png" id="80_d5olm"]
+[ext_resource type="Texture2D" uid="uid://75sxo1fggfgd" path="res://graphics/chapter1/levels/jungle/npcs/NPC_warning_10fps/npc_warning_0002.png" id="81_4cr10"]
 [ext_resource type="Texture2D" uid="uid://djapk6jq6eicf" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_10fps/enemy_idle_0034.png" id="81_k4vjh"]
 [ext_resource type="Texture2D" uid="uid://bpxcvmtrus37o" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_10fps/enemy_idle_0035.png" id="82_1u6v0"]
 [ext_resource type="Texture2D" uid="uid://cosolmxc8o57v" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/1_5line.png" id="82_md07l"]
+[ext_resource type="Texture2D" uid="uid://bsuq4k821kfef" path="res://graphics/chapter1/levels/jungle/npcs/NPC_warning_10fps/npc_warning_0003.png" id="82_plhlf"]
 [ext_resource type="Texture2D" uid="uid://c1t36mmjp3ieq" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_10fps/enemy_idle_0036.png" id="83_5k73x"]
 [ext_resource type="Texture2D" uid="uid://b4xl8bacgqd3p" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/1_5.png" id="83_nm80h"]
+[ext_resource type="Texture2D" uid="uid://dv88sfynd3x7w" path="res://graphics/chapter1/levels/jungle/npcs/NPC_warning_10fps/npc_warning_0004.png" id="83_xtbpl"]
 [ext_resource type="Texture2D" uid="uid://8d3j38vge25a" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_10fps/enemy_idle_0037.png" id="84_avj4j"]
+[ext_resource type="Texture2D" uid="uid://cx3yg1nvtmuuq" path="res://graphics/chapter1/levels/jungle/npcs/NPC_warning_10fps/npc_warning_0005.png" id="84_nt033"]
 [ext_resource type="Texture2D" uid="uid://cgpghty6yxyed" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/5_5line.png" id="84_u2mqu"]
 [ext_resource type="Texture2D" uid="uid://dpfiqfp4kngsc" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/5_5.png" id="85_no6wu"]
 [ext_resource type="Texture2D" uid="uid://cloqityhxnanw" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_10fps/enemy_idle_0038.png" id="85_pkixr"]
+[ext_resource type="Texture2D" uid="uid://b5dl50m5udajm" path="res://graphics/chapter1/levels/jungle/npcs/NPC_warning_10fps/npc_warning_0006.png" id="85_yplh0"]
 [ext_resource type="Texture2D" uid="uid://bgw81auokc1hr" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_10fps/enemy_idle_0039.png" id="86_00rrj"]
+[ext_resource type="Texture2D" uid="uid://yktl43pydchm" path="res://graphics/chapter1/levels/jungle/npcs/NPC_warning_10fps/npc_warning_0007.png" id="86_b8fep"]
 [ext_resource type="Texture2D" uid="uid://dld4fniokwofg" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/4_5line.png" id="86_o75y3"]
 [ext_resource type="Texture2D" uid="uid://biamshe0ngfko" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_10fps/enemy_idle_0040.png" id="87_73n22"]
+[ext_resource type="Texture2D" uid="uid://rpu824uuboee" path="res://graphics/chapter1/levels/jungle/npcs/NPC_warning_10fps/npc_warning_0008.png" id="87_j6pee"]
 [ext_resource type="Texture2D" uid="uid://dkmxvjaufimko" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/4_5.png" id="87_vk8eo"]
+[ext_resource type="Texture2D" uid="uid://dde22ffv8wg4f" path="res://graphics/chapter1/levels/jungle/npcs/NPC_warning_10fps/npc_warning_0009.png" id="88_5rstg"]
 [ext_resource type="Texture2D" uid="uid://8ye7dw6neuq4" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/2_5line.png" id="88_hoqsx"]
 [ext_resource type="Texture2D" uid="uid://dcvcmicvmkkfx" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/2_5.png" id="89_4av7t"]
+[ext_resource type="Texture2D" uid="uid://cxpqeido5bxuv" path="res://graphics/chapter1/levels/jungle/npcs/NPC_warning_10fps/npc_warning_0010.png" id="89_mo2v3"]
 [ext_resource type="Texture2D" uid="uid://qoeai8u1lpos" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/3_5line.png" id="90_wtncc"]
+[ext_resource type="AudioStream" uid="uid://dnysrrwsujmd1" path="res://audio/chapter1/ambient/panel_section_2/panel_2.25_puzzle_resolve_traumatic_moment.wav" id="90_yplh0"]
 [ext_resource type="Texture2D" uid="uid://dk70rfg0280qe" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/3_5.png" id="91_b8ue1"]
 [ext_resource type="Texture2D" uid="uid://djymrx7nsi00x" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/6_5line.png" id="92_y0x5r"]
 [ext_resource type="Texture2D" uid="uid://ju5oygokt2u4" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/6_5.png" id="93_qdw7b"]
@@ -153,7 +160,13 @@
 [ext_resource type="Texture2D" uid="uid://c5f3esufjycph" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/8_5.png" id="97_b28kc"]
 [ext_resource type="Texture2D" uid="uid://bwy3gmjwmft1u" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/9_5line.png" id="98_aifp2"]
 [ext_resource type="Texture2D" uid="uid://dx8yvfy1bkd8t" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/5/9_5.png" id="99_k13op"]
+[ext_resource type="Texture2D" uid="uid://dyl4ys5nfggfy" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_rifle_5fps/enemy_idle_rifle_0001.png" id="149_idr4k"]
+[ext_resource type="Texture2D" uid="uid://bdtr8q76uv8ca" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_rifle_5fps/enemy_idle_rifle_0002.png" id="150_p6vwg"]
+[ext_resource type="Texture2D" uid="uid://br2w8t35mcngu" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_rifle_5fps/enemy_idle_rifle_0003.png" id="151_j5188"]
+[ext_resource type="Texture2D" uid="uid://cxrs6cuf8rcwf" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_rifle_5fps/enemy_idle_rifle_0004.png" id="152_2rqqh"]
 [ext_resource type="Texture2D" uid="uid://cy4c33bvkx18" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/6/1_6line.png" id="153_67a8o"]
+[ext_resource type="Texture2D" uid="uid://se0chm4n7dow" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_rifle_5fps/enemy_idle_rifle_0005.png" id="153_igan2"]
+[ext_resource type="Texture2D" uid="uid://csu3bp2ngkeot" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_rifle_5fps/enemy_idle_rifle_0006.png" id="154_hhg6g"]
 [ext_resource type="Texture2D" uid="uid://5jp5n6saiw8g" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/7/1_7line.png" id="154_o75y3"]
 [ext_resource type="Texture2D" uid="uid://bie0tpxf2aeof" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/6/1_6.png" id="154_qtras"]
 [ext_resource type="Texture2D" uid="uid://diqcais6dm5ry" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/6/3_6line.png" id="155_qq3xp"]
@@ -173,6 +186,12 @@
 [ext_resource type="Texture2D" uid="uid://7di6dp22qr3" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/6/6_6.png" id="164_sa0y6"]
 [ext_resource type="Texture2D" uid="uid://d0eisf3ukjgah" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/6/7_6line.png" id="165_ec7mn"]
 [ext_resource type="Texture2D" uid="uid://37wmratk0v0k" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/6/7_6.png" id="166_d5olm"]
+[ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="174_qtras"]
+[ext_resource type="Script" uid="uid://bvmwxu2au5j5l" path="res://components/utils/audio/audio integration nodes/audio_sfx_zone.gd" id="187_nt033"]
+[ext_resource type="AudioStream" uid="uid://dkso7rwwc3xhh" path="res://audio/chapter1/ambient/panel_section_2/panel_2.24_pre_traumatic_moment.wav" id="188_yplh0"]
+[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="191_yplh0"]
+[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="192_b8fep"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="192_j6pee"]
 
 [sub_resource type="Gradient" id="Gradient_t8bry"]
 offsets = PackedFloat32Array(0, 0.14906304, 0.5562181, 1)
@@ -185,12 +204,52 @@ height = 1080
 
 [sub_resource type="Curve2D" id="Curve2D_8pokd"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 805, -389.74353, 128.61536, 389.74353, -128.61536, 2284, 742, 0, 0, 0, 0, 18016, 770, -188.4297, 62.8099, 188.4297, -62.8099, 24551, 829, -454.16388, 6.4420395, 454.16388, -6.4420395, 25567, 364, -356.8931, -4.9555283, 356.8931, 4.9555283, 26835, 344, 0, 0, 0, 0, 34903, 275)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 805, -389.74353, 128.61536, 389.74353, -128.61536, 2284, 742, 0, 0, 0, 0, 14729.226, 730.5856, -260.96332, -11.45157, 260.96332, 11.45157, 15084, 817, 0, 0, 0, 0, 15815.768, 751.33545, 0, 0, 0, 0, 18016, 770, -188.4297, 62.8099, 188.4297, -62.8099, 24551, 829, -454.16388, 6.4420395, 454.16388, -6.4420395, 25567, 364, -356.8931, -4.9555283, 356.8931, 4.9555283, 26835, 344, 0, 0, 0, 0, 34903, 275)
 }
-point_count = 7
+point_count = 10
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1yhnw"]
 radius = 146.38
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pekss"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("80_d5olm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_4cr10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_plhlf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_xtbpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_nt033")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_yplh0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_b8fep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_j6pee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_5rstg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_mo2v3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_swtbi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hi6ya"]
 animations = [{
@@ -277,7 +336,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_2wqw0"]
 resource_name = "trauma"
-length = 8.0
+length = 14.0
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -299,7 +358,7 @@ tracks/1/path = NodePath("../../../Path2D/PathFollow2D/Nina")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 7.9),
+"times": PackedFloat32Array(0, 13.033334),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
@@ -340,7 +399,7 @@ tracks/4/path = NodePath("../../../CanvasLayer/Control/TextureRect:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(8),
+"times": PackedFloat32Array(13.6),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
@@ -352,7 +411,7 @@ tracks/5/path = NodePath("../../../Path2D/PathFollow2D:progress")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(7.7798176),
+"times": PackedFloat32Array(12.833333),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [19433.77]
@@ -492,8 +551,34 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ewv6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("149_idr4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_p6vwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_j5188")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_2rqqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_igan2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_hhg6g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_808hi"]
-size = Vector2(619.6719, 431.14734)
+size = Vector2(406.55664, 431.14734)
 
 [sub_resource type="Gradient" id="Gradient_h7yo2"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -619,6 +704,7 @@ loop = false
 
 [node name="Nina" parent="Path2D/PathFollow2D" unique_id=1358938074 node_paths=PackedStringArray("path_follow") instance=ExtResource("15_td1vu")]
 path_follow = NodePath("..")
+play_walking_sfx = true
 
 [node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D/Nina" unique_id=1732687290]
 position = Vector2(0, -233)
@@ -642,6 +728,8 @@ loop = false
 script = ExtResource("20_t8bry")
 model = NodePath("../../PathFollow2D/Nina")
 offset_from_model = 0.0
+start_walking = true
+follow_model = true
 path_follow = NodePath("..")
 
 [node name="AnimSprite" parent="Path2D/PathFollowCompanion1/Companion1" index="0" unique_id=689873547]
@@ -670,6 +758,8 @@ loop = false
 script = ExtResource("20_t8bry")
 model = NodePath("../../PathFollow2D/Nina")
 offset_from_model = 0.0
+start_walking = true
+follow_model = true
 path_follow = NodePath("..")
 
 [node name="AnimSprite" parent="Path2D/PathFollowCompanion2/Companion2" index="0" unique_id=689873547]
@@ -690,6 +780,8 @@ loop = false
 script = ExtResource("20_t8bry")
 model = NodePath("../../PathFollow2D/Nina")
 offset_from_model = 0.0
+start_walking = true
+follow_model = true
 path_follow = NodePath("..")
 
 [node name="AnimSprite" parent="Path2D/PathFollowCompanion3/Companion3" index="0" unique_id=689873547]
@@ -705,7 +797,8 @@ position = Vector2(459.85278, 816.4505)
 
 [node name="JungleWomanReflection" parent="Path2D/ReflectionNina/ReflectionContainer" parent_id_path=PackedInt32Array(732020292, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
-offset_from_model = 0.0
+start_walking = true
+follow_model = true
 
 [node name="Shadow" parent="Path2D/ReflectionNina/ReflectionContainer/JungleWomanReflection/AnimSprite" parent_id_path=PackedInt32Array(732020292, 700974070, 689873547) index="0" unique_id=1632501669]
 visible = false
@@ -716,7 +809,8 @@ progress = 359.48
 
 [node name="JungleWomanReflection" parent="Path2D/ReflectionCompanion1/ReflectionContainer" parent_id_path=PackedInt32Array(1639842222, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
-offset_from_model = 0.0
+start_walking = true
+follow_model = true
 
 [node name="AnimSprite" parent="Path2D/ReflectionCompanion1/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 sprite_frames = ExtResource("16_17nyf")
@@ -731,7 +825,8 @@ progress = 256.8
 
 [node name="JungleWomanReflection" parent="Path2D/ReflectionCompanion2/ReflectionContainer" parent_id_path=PackedInt32Array(1162299954, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
-offset_from_model = 0.0
+start_walking = true
+follow_model = true
 
 [node name="AnimSprite" parent="Path2D/ReflectionCompanion2/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 sprite_frames = ExtResource("17_k7em6")
@@ -746,7 +841,8 @@ progress = 160.65
 
 [node name="JungleWomanReflection" parent="Path2D/ReflectionCompanion3/ReflectionContainer" parent_id_path=PackedInt32Array(2137896206, 334837576) index="0" unique_id=700974070 node_paths=PackedStringArray("model")]
 model = NodePath("../../../PathFollow2D/Nina")
-offset_from_model = 0.0
+start_walking = true
+follow_model = true
 
 [node name="AnimSprite" parent="Path2D/ReflectionCompanion3/ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
 sprite_frames = ExtResource("19_jh4yo")
@@ -761,7 +857,7 @@ script = ExtResource("16_aewef")
 next_scene = "uid://deifii0sv125i"
 
 [node name="Rain" parent="." unique_id=498998463 instance=ExtResource("18_nqhdg")]
-position = Vector2(8252, -53)
+position = Vector2(8325, -53)
 amount = 5000
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Rain" unique_id=2096811711 node_paths=PackedStringArray("rain")]
@@ -782,10 +878,6 @@ script = ExtResource("19_31ufg")
 camera = NodePath("../Path2D/PathFollow2D/Nina/Camera2D")
 limit_top = -484
 limit_bottom = 596
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1466730914]
-stream = ExtResource("20_5j4y3")
-autoplay = true
 
 [node name="Puzzles" type="Node2D" parent="." unique_id=865858153]
 z_index = -1
@@ -912,12 +1004,13 @@ texture = ExtResource("45_vy7rn")
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzles/Puzzle2/DragDropPuzzle2/BuildingBlocks/PuzzlePiece6/Draggable" parent_id_path=PackedInt32Array(52554836, 1631794380, 2116105691) index="1" unique_id=991932022]
 texture = ExtResource("46_65248")
 
-[node name="WaitStopRain" type="Node2D" parent="Puzzles/Puzzle2" unique_id=764478138 node_paths=PackedStringArray("puzzle", "rains", "nina")]
+[node name="WaitStopRain" type="Node2D" parent="Puzzles/Puzzle2" unique_id=764478138 node_paths=PackedStringArray("puzzle", "rains", "women", "rain_sfx")]
 position = Vector2(-6, 0)
 script = ExtResource("31_c3f0v")
 puzzle = NodePath("../DragDropPuzzle2")
 rains = [NodePath("../../../Rain")]
-nina = NodePath("../../../Path2D/PathFollow2D/Nina")
+women = [NodePath("../../../Path2D/PathFollow2D/Nina"), NodePath("../../../Path2D/PathFollowCompanion1/Companion1"), NodePath("../../../Path2D/PathFollowCompanion2/Companion2"), NodePath("../../../Path2D/PathFollowCompanion3/Companion3")]
+rain_sfx = NodePath("../../../AudioContainer/Rain_loop_stop")
 
 [node name="Puzzle4" type="Node2D" parent="Puzzles" unique_id=1658305612]
 position = Vector2(13085, 14)
@@ -1102,10 +1195,18 @@ texture = ExtResource("64_73n22")
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzles/Puzzle3/DragDropPuzzle5/BuildingBlocks/PuzzlePiece8/Draggable" parent_id_path=PackedInt32Array(496082450, 354999682, 2116105691) index="1" unique_id=991932022]
 texture = ExtResource("65_kqexy")
 
-[node name="PlaceholderNPC" type="Sprite2D" parent="Puzzles/Puzzle3" unique_id=577064758]
-position = Vector2(-1144, 584)
-scale = Vector2(1.525, 1.525)
-texture = ExtResource("35_rw1nd")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Puzzles/Puzzle3" unique_id=1250055475]
+position = Vector2(-1225, 562)
+scale = Vector2(1.31, 1.3100001)
+sprite_frames = SubResource("SpriteFrames_pekss")
+autoplay = "default"
+frame_progress = 0.49003345
+flip_h = true
+
+[node name="PlaceholderNPC" type="AnimatedSprite2D" parent="Puzzles/Puzzle3" unique_id=653973915]
+position = Vector2(-1105.0001, 600)
+scale = Vector2(1.3167192, 1.3558333)
+sprite_frames = SubResource("SpriteFrames_swtbi")
 
 [node name="MarkerNPC" type="Marker2D" parent="Puzzles/Puzzle3/PlaceholderNPC" unique_id=1153432582]
 position = Vector2(46.55712, -116.065575)
@@ -1126,6 +1227,7 @@ collision_mask = 2
 
 [node name="DragDropPuzzle6" parent="Puzzles/Puzzle5" unique_id=1419407559 instance=ExtResource("33_tglbk")]
 position = Vector2(1772, 352)
+resolve_puzzle_stream = ExtResource("90_yplh0")
 
 [node name="PuzzlePiece" parent="Puzzles/Puzzle5/DragDropPuzzle6/BuildingBlocks" parent_id_path=PackedInt32Array(1419407559, 1654234455) index="0" unique_id=1667760579]
 position = Vector2(-298, 78)
@@ -1237,26 +1339,25 @@ scale = Vector2(0.61, 0.61)
 script = ExtResource("21_kdrkc")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
-[node name="Enemiesprite1" type="Sprite2D" parent="Puzzles/Puzzle5/Enemies" unique_id=484849167]
-position = Vector2(204.91803, 0)
-texture = ExtResource("32_808hi")
-
-[node name="Enemiesprite2" type="Sprite2D" parent="Puzzles/Puzzle5/Enemies" unique_id=235485957]
-position = Vector2(-194, 0)
-texture = ExtResource("33_aa6lj")
-
 [node name="EnemyAnimated" type="AnimatedSprite2D" parent="Puzzles/Puzzle5/Enemies" unique_id=1673582706]
-position = Vector2(9.83606, -29.508198)
+position = Vector2(227.86885, -22.95082)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_kqexy")
 autoplay = "default"
-frame_progress = 0.17754737
+flip_h = true
+
+[node name="EnemyAnimated2" type="AnimatedSprite2D" parent="Puzzles/Puzzle5/Enemies" unique_id=1115231015]
+position = Vector2(-44.2623, -26.229507)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_8ewv6")
+autoplay = "default"
+frame_progress = 0.3512267
 
 [node name="MarkerEnemy" type="Marker2D" parent="Puzzles/Puzzle5/Enemies" unique_id=91322150]
 position = Vector2(36, -270)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzles/Puzzle5/Enemies" unique_id=1789449637]
-position = Vector2(8.197266, -15.573486)
+position = Vector2(91.80469, -15.573486)
 shape = SubResource("RectangleShape2D_808hi")
 
 [node name="Puzzle6" type="Node2D" parent="Puzzles" unique_id=2026587298]
@@ -1301,9 +1402,6 @@ texture = ExtResource("157_idr4k")
 
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzles/Puzzle6/DragDropPuzzle3/BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(789965, 918960518, 2116105691) index="1" unique_id=991932022]
 texture = ExtResource("158_p6vwg")
-
-[node name="Receptacle4" parent="Puzzles/Puzzle6/DragDropPuzzle3/BuildingBlocks" parent_id_path=PackedInt32Array(789965, 1654234455) index="5" unique_id=607622472]
-position = Vector2(-783.71875, -180.88026)
 
 [node name="PuzzlePiece2" parent="Puzzles/Puzzle6/DragDropPuzzle3/BuildingBlocks" parent_id_path=PackedInt32Array(789965, 1654234455) index="6" unique_id=379005598]
 position = Vector2(-452.14066, -124.79294)
@@ -1405,6 +1503,9 @@ texture = ExtResource("158_wtncc")
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzles/Puzzle7/DragDropPuzzle/BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(274836859, 729525704, 2116105691) index="1" unique_id=991932022]
 texture = ExtResource("159_b8ue1")
 
+[node name="CompletePuzzle" parent="Puzzles/Puzzle7/DragDropPuzzle" index="2" unique_id=1933061263]
+z_index = 1
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=314951155]
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=696890455]
@@ -1428,6 +1529,121 @@ grow_vertical = 2
 mouse_filter = 2
 texture = SubResource("GradientTexture1D_rw1nd")
 stretch_mode = 1
+
+[node name="CheckpointController" type="Node" parent="." unique_id=274687109]
+script = ExtResource("174_qtras")
+comic = 5
+
+[node name="AudioContainer" type="Node" parent="." unique_id=1524005494]
+
+[node name="PreTraumatic_SfxZone" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1475041379]
+position = Vector2(18417, 562)
+rect = Rect2(-10, -10, 158, 141)
+script = ExtResource("187_nt033")
+use_audio_stream = true
+stream = ExtResource("188_yplh0")
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
+
+[node name="TraumaticMoment_Loop" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1855696257]
+position = Vector2(19142, 334)
+rect = Rect2(-10, -10, 2622, 192)
+script = ExtResource("192_b8fep")
+loop_name = 1204
+metadata/_custom_type_script = "uid://brda7473wfj1v"
+
+[node name="WhiteNoise_loop" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=369675775]
+position = Vector2(19142, 334)
+rect = Rect2(-10, -10, 2622, 192)
+script = ExtResource("192_b8fep")
+loop_name = 1205
+metadata/_custom_type_script = "uid://brda7473wfj1v"
+
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=742951993]
+position = Vector2(584, 771)
+rect = Rect2(-10, -10, 81, 78)
+script = ExtResource("191_yplh0")
+music_name = 1200
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="AudioMusicTransition2" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1040022331]
+position = Vector2(19137, 711)
+rect = Rect2(-10, -24, 116, 92)
+script = ExtResource("191_yplh0")
+music_name = 1201
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="JungleAmbience" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1181738706]
+position = Vector2(588, 873)
+rect = Rect2(-10, -10, 54, 63)
+script = ExtResource("192_j6pee")
+loop_name = 1201
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="JungleAmbience_Stop" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1886471954]
+position = Vector2(33030, 429)
+rect = Rect2(-10, -71, 226, 124)
+script = ExtResource("192_j6pee")
+loop_name = 1201
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="Steps_loop" type="Node" parent="AudioContainer" unique_id=604421724]
+
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="AudioContainer/Steps_loop" unique_id=894523335]
+position = Vector2(126, 910)
+rect = Rect2(-10, -10, 73, 67)
+script = ExtResource("192_j6pee")
+loop_name = 1200
+loop_mode = 2
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone2" type="VisibleOnScreenNotifier2D" parent="AudioContainer/Steps_loop" unique_id=1975444769]
+position = Vector2(9404, 649)
+rect = Rect2(-10, -59, 114, 116)
+script = ExtResource("192_j6pee")
+loop_name = 1200
+loop_mode = 2
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone4" type="VisibleOnScreenNotifier2D" parent="AudioContainer/Steps_loop" unique_id=432461886]
+position = Vector2(30762, 333)
+rect = Rect2(-10, -59, 114, 116)
+script = ExtResource("192_j6pee")
+loop_name = 1200
+loop_mode = 2
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone_water" type="VisibleOnScreenNotifier2D" parent="AudioContainer/Steps_loop" unique_id=272174332]
+position = Vector2(6124, 652)
+rect = Rect2(-10, -24, 73, 81)
+script = ExtResource("192_j6pee")
+loop_name = 1202
+loop_mode = 2
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone_water3" type="VisibleOnScreenNotifier2D" parent="AudioContainer/Steps_loop" unique_id=771519784]
+position = Vector2(27860, 332)
+rect = Rect2(-67, -24, 117, 81)
+script = ExtResource("192_j6pee")
+loop_name = 1202
+loop_mode = 2
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="Rain_loop" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=952376731]
+position = Vector2(9327, 716)
+rect = Rect2(-29, -10, 58, 60)
+script = ExtResource("192_j6pee")
+loop_name = 1203
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="Rain_loop_stop" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=937792513]
+position = Vector2(9327, 716)
+rect = Rect2(-29, -10, 58, 60)
+script = ExtResource("192_j6pee")
+loop_name = 1203
+loop_mode = 1
+start_loop_on_enter_screen = false
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [editable path="Path2D/PathFollowCompanion1/Companion1"]
 [editable path="Path2D/PathFollowCompanion2/Companion2"]

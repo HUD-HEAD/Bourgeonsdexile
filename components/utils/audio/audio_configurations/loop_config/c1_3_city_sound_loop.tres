@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="loop_config" format=3 uid="uid://c43b41vh77jh1"]
+
+[ext_resource type="Script" uid="uid://dojbh2mbjt6sh" path="res://components/utils/audio/loop_configuration.gd" id="1_cw63u"]
+[ext_resource type="AudioStream" uid="uid://dei2887u1bix6" path="res://audio/chapter1/ambient/panel_section_3/panel_3.17_to_3.22_city_sound_loop.wav" id="2_3xhwc"]
+
+[resource]
+script = ExtResource("1_cw63u")
+type = 1302
+stream = ExtResource("2_3xhwc")
+metadata/_custom_type_script = "uid://dojbh2mbjt6sh"

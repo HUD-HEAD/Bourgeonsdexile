@@ -10,11 +10,14 @@
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="6_s4ind"]
 [ext_resource type="Texture2D" uid="uid://dr4ou01aytlde" path="res://graphics/chapter1/comics/comic4/panelmissingboard/NPCAnim/2.png" id="7_cqg6m"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="9_lmdhm"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="10_16pkg"]
 [ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/mechanics/click_hide.gd" id="10_lw7vi"]
 [ext_resource type="Texture2D" uid="uid://rvmvahhqtp8p" path="res://graphics/chapter1/comics/comic4/panelmissingboard/posters/big/1.png" id="11_2qr7t"]
+[ext_resource type="AudioStream" uid="uid://dsvfuxc2ne8ay" path="res://audio/chapter1/ambient/panel_section_3/panel_3.23_hola_sound.wav" id="11_onvyt"]
 [ext_resource type="Texture2D" uid="uid://b23seiv0ice54" path="res://graphics/chapter1/comics/comic4/panelmissingboard/posters/big/2.png" id="12_ifv13"]
 [ext_resource type="Texture2D" uid="uid://ddfvgk0wp34tl" path="res://graphics/chapter1/comics/comic4/panelmissingboard/posters/big/3.png" id="13_16pkg"]
 [ext_resource type="Texture2D" uid="uid://bttdutob2e07p" path="res://graphics/chapter1/comics/comic4/panelmissingboard/posters/big/4.png" id="14_onvyt"]
+[ext_resource type="AudioStream" uid="uid://cd41jp18ag3iq" path="res://audio/chapter1/ambient/panel_section_3/panel_3.23_selection_item.wav" id="18_onvyt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_arsgw"]
 animations = [{
@@ -159,3 +162,21 @@ transition_delay = 2.0
 metadata/_custom_type_script = "uid://c44tybeisilbv"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=81032125]
+
+[node name="TriggerSfxOnClick_Hola" type="Node" parent="." unique_id=1416817127 node_paths=PackedStringArray("clickables")]
+script = ExtResource("10_16pkg")
+clickables = [NodePath("../Posters/4/Clickable")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("11_onvyt")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
+[node name="TriggerSfxOnClick_Selection" type="Node" parent="." unique_id=397967652 node_paths=PackedStringArray("clickables")]
+script = ExtResource("10_16pkg")
+clickables = [NodePath("../Posters/1/Clickable"), NodePath("../Posters/2/Clickable"), NodePath("../Posters/3/Clickable"), NodePath("../Posters/4/Clickable")]
+use_audio_stream = true
+stream = ExtResource("18_onvyt")
+linear_volume = 0.9
+min_pitch = 0.95
+max_pitch = 1.05
+metadata/_custom_type_script = "uid://b7avucygxykbp"

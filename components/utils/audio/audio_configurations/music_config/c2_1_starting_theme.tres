@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="music_config" format=3 uid="uid://bmdp0jek4jnnq"]
+
+[ext_resource type="Script" uid="uid://bgl0a3vgvcmsb" path="res://components/utils/audio/music_configuration.gd" id="1_ppbpg"]
+[ext_resource type="AudioStream" uid="uid://borj5rsoht02v" path="res://audio/chapter2/soundtrack/starting_theme.wav" id="2_ppbpg"]
+
+[resource]
+script = ExtResource("1_ppbpg")
+type = 2100
+stream = ExtResource("2_ppbpg")
+metadata/_custom_type_script = "uid://bgl0a3vgvcmsb"

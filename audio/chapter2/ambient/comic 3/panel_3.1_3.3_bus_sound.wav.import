@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cmtrcjikuhgg4"
+path="res://.godot/imported/panel_3.1_3.3_bus_sound.wav-ff8a9949be3d63af5cce49eea1b6059b.sample"
+
+[deps]
+
+source_file="res://audio/chapter2/ambient/comic 3/panel_3.1_3.3_bus_sound.wav"
+dest_files=["res://.godot/imported/panel_3.1_3.3_bus_sound.wav-ff8a9949be3d63af5cce49eea1b6059b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="3_7ynmp"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_l815q"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="5_r2haq"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="6_wh2rv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cmlx7"]
 animations = [{
@@ -45,3 +46,9 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=400792681]
 position = Vector2(-7, -62)
 shape = SubResource("CircleShape2D_qc1yf")
+
+[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=1088810996 node_paths=PackedStringArray("clickables")]
+script = ExtResource("6_wh2rv")
+clickables = [NodePath("..")]
+sfx = 2107
+metadata/_custom_type_script = "uid://b7avucygxykbp"

@@ -236,6 +236,8 @@
 [ext_resource type="Texture2D" uid="uid://botlwlbdqi70l" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0118.png" id="226_sr367"]
 [ext_resource type="Texture2D" uid="uid://cjd0cved1hco8" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0119.png" id="227_wjkiy"]
 [ext_resource type="Texture2D" uid="uid://bg5s78yi6ix11" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0120.png" id="228_1rf41"]
+[ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="237_5h7fb"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="238_48jc3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_48jwk"]
 animations = [{
@@ -928,20 +930,21 @@ position = Vector2(330, 1)
 texture = ExtResource("2_y6iwd")
 centered = false
 
-[node name="Parallax2D" type="Parallax2D" parent="Background" unique_id=903095176]
-scroll_scale = Vector2(0.9, 0.9)
-scroll_offset = Vector2(-1466, -25)
-
-[node name="CloudsFake" type="Sprite2D" parent="Background/Parallax2D" unique_id=503779958]
-position = Vector2(-1814, 23)
+[node name="CloudsFake" type="Sprite2D" parent="Background" unique_id=503779958]
+position = Vector2(-3280, -2)
 texture = ExtResource("3_y6iwd")
 centered = false
 flip_h = true
 
-[node name="Clouds" type="Sprite2D" parent="Background/Parallax2D" unique_id=1687548403]
-position = Vector2(1922, 0)
+[node name="Clouds" type="Sprite2D" parent="Background" unique_id=1687548403]
+position = Vector2(456, -25)
 texture = ExtResource("3_y6iwd")
 centered = false
+
+[node name="Parallax2D" type="Parallax2D" parent="Background" unique_id=903095176]
+process_mode = 4
+scroll_scale = Vector2(0.9, 0.9)
+scroll_offset = Vector2(-1466, -25)
 
 [node name="Houseback" type="Sprite2D" parent="Background" unique_id=701906805]
 position = Vector2(2415, 550)
@@ -1028,6 +1031,21 @@ collision_mask = 2
 [node name="CityPuzzle1" parent="Puzzle1" unique_id=1664370194 instance=ExtResource("13_vf82b")]
 position = Vector2(161, 465)
 
+[node name="PuzzlePiece" parent="Puzzle1/CityPuzzle1" index="1" unique_id=1946677134]
+position = Vector2(-142, -11)
+
+[node name="Draggable2" parent="Puzzle1/CityPuzzle1/PuzzlePiece2" parent_id_path=PackedInt32Array(1664370194, 1020331673) index="0" unique_id=1127443213]
+position = Vector2(-228, 200)
+
+[node name="PuzzlePiece3" parent="Puzzle1/CityPuzzle1" index="3" unique_id=352785790]
+position = Vector2(154, 107)
+
+[node name="PuzzlePiece4" parent="Puzzle1/CityPuzzle1" index="4" unique_id=1564268117]
+position = Vector2(61, 113)
+
+[node name="Fullsquare" parent="Puzzle1/CityPuzzle1" index="9" unique_id=1863100166]
+visible = false
+
 [node name="PuzzleSpawner" type="Node" parent="Puzzle1/CityPuzzle1" unique_id=1970663373 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("17_4dc1s")
 puzzle = NodePath("..")
@@ -1059,6 +1077,25 @@ collision_mask = 2
 
 [node name="CityPuzzle2" parent="Puzzle2" unique_id=22391943 instance=ExtResource("19_4dc1s")]
 position = Vector2(196, 529)
+
+[node name="Emptysquare" parent="Puzzle2/CityPuzzle2" index="0" unique_id=378736329]
+position = Vector2(-56.5, 12.5)
+
+[node name="Receptacle" parent="Puzzle2/CityPuzzle2" index="1" unique_id=1753590750]
+position = Vector2(-128.5, 16.5)
+
+[node name="Receptacle2" parent="Puzzle2/CityPuzzle2" index="2" unique_id=800679547]
+position = Vector2(11.5, 20.5)
+
+[node name="PuzzlePiece" parent="Puzzle2/CityPuzzle2" index="3" unique_id=107123918]
+position = Vector2(-259, 39)
+
+[node name="PuzzlePiece2" parent="Puzzle2/CityPuzzle2" index="4" unique_id=475507319]
+position = Vector2(163, 117)
+
+[node name="Fullsquare" parent="Puzzle2/CityPuzzle2" index="5" unique_id=691156988]
+visible = false
+position = Vector2(-54, 19)
 
 [node name="PuzzleSpawner" type="Node" parent="Puzzle2/CityPuzzle2" unique_id=1363570419 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("17_4dc1s")
@@ -1093,6 +1130,18 @@ position = Vector2(232, 586)
 rotation = -0.015458716
 scale = Vector2(0.7, 0.7)
 
+[node name="PuzzlePiece" parent="Puzzle3/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(235220143, 1654234455) index="0" unique_id=1667760579]
+position = Vector2(-404.59784, 109.47302)
+
+[node name="PuzzlePiece2" parent="Puzzle3/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(235220143, 1654234455) index="2" unique_id=1932002971]
+position = Vector2(-410.0765, -90.63556)
+
+[node name="PuzzlePiece3" parent="Puzzle3/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(235220143, 1654234455) index="4" unique_id=1700809214]
+position = Vector2(372.7464, 10.048851)
+
+[node name="CompletePuzzle" parent="Puzzle3/DragDropPuzzle" index="2" unique_id=1933061263]
+visible = false
+
 [node name="PuzzleSpawner" type="Node" parent="Puzzle3/DragDropPuzzle" unique_id=638176887 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("17_4dc1s")
 puzzle = NodePath("..")
@@ -1123,6 +1172,15 @@ position = Vector2(-2, -145)
 [node name="DragDropPuzzle2" parent="Puzzle4" unique_id=1019054959 instance=ExtResource("100_lvrd1")]
 position = Vector2(161, 542)
 scale = Vector2(0.7, 0.7)
+
+[node name="PuzzlePiece" parent="Puzzle4/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1019054959, 1654234455) index="0" unique_id=1667760579]
+position = Vector2(251.42868, 34.28573)
+
+[node name="PuzzlePiece3" parent="Puzzle4/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1019054959, 1654234455) index="2" unique_id=1476348094]
+position = Vector2(-290.00024, 8)
+
+[node name="PuzzlePiece2" parent="Puzzle4/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1019054959, 1654234455) index="4" unique_id=1166541870]
+position = Vector2(235.71428, -171.42859)
 
 [node name="PuzzleSpawner" type="Node" parent="Puzzle4/DragDropPuzzle2" unique_id=1676081078 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("17_4dc1s")
@@ -1190,3 +1248,33 @@ offset = Vector2(3, -77)
 stream = ExtResource("117_xf4f8")
 autoplay = true
 bus = &"Music"
+
+[node name="CheckpointController" type="Node" parent="." unique_id=1125817438]
+script = ExtResource("237_5h7fb")
+comic = 4
+
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=589738477]
+position = Vector2(2178, 567)
+rect = Rect2(-65, -10, 75, 79)
+script = ExtResource("238_48jc3")
+loop_name = 1100
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone2" type="VisibleOnScreenNotifier2D" parent="." unique_id=1549316634]
+position = Vector2(4955, 407)
+rect = Rect2(-65, -10, 75, 79)
+script = ExtResource("238_48jc3")
+loop_name = 1100
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[editable path="Puzzle1/CityPuzzle1"]
+[editable path="Puzzle2/CityPuzzle2"]
+[editable path="Puzzle3/DragDropPuzzle"]
+[editable path="Puzzle3/DragDropPuzzle/BuildingBlocks/PuzzlePiece"]
+[editable path="Puzzle3/DragDropPuzzle/BuildingBlocks/PuzzlePiece2"]
+[editable path="Puzzle3/DragDropPuzzle/BuildingBlocks/PuzzlePiece3"]
+[editable path="Puzzle4/DragDropPuzzle2"]
+[editable path="Puzzle4/DragDropPuzzle2/BuildingBlocks/PuzzlePiece"]
+[editable path="Puzzle4/DragDropPuzzle2/BuildingBlocks/PuzzlePiece3"]
+[editable path="Puzzle4/DragDropPuzzle2/BuildingBlocks/PuzzlePiece2"]

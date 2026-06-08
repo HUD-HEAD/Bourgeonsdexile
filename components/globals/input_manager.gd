@@ -6,6 +6,9 @@ var mouse_sensitivity = 1.0
 var debug_console : DebugConsole
 
 func _ready() -> void:
+	#Can detect input on pause game
+	process_mode = PROCESS_MODE_ALWAYS
+	
 	##Clicks on e.g. Area2Ds (Clickables) will only trigger on topmost item
 	get_viewport().physics_object_picking_first_only = true
 	get_viewport().physics_object_picking_sort = true
@@ -25,8 +28,8 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		if OS.has_feature("debug"):
 			if debug_console.visible:
 				debug_console.toggle()
-			else:
-				SceneManager.goto_scene(ProjectSettings.get_setting("application/run/main_scene"))
+		
+		PauseController.show_pause_menu()
 	
 	if OS.has_feature("debug"):
 		_debug_inputs(event)
@@ -45,4 +48,9 @@ func _debug_inputs(event : InputEvent) -> void :
 		SignalManager.next_panel.emit()
 	elif event.is_action_pressed("debug_toggle_console"):
 		debug_console.toggle()
+	elif event.is_action_pressed("debug_load_checkpoint"):
+		SaveManager.debug_load_checkpoint()
+	elif event.is_action_pressed("debug_autosolve_puzzle"):
+		if is_instance_valid(GameManager.current_puzzle_spawner):
+			GameManager.current_puzzle_spawner.autosolve_puzzle()
 	

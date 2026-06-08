@@ -28,6 +28,7 @@
 [ext_resource type="AudioStream" uid="uid://bsrfqlei4ae4h" path="res://audio/chapter1/ambient/panel_12_13_bus_sound_loop.wav" id="26_k2450"]
 [ext_resource type="AudioStream" uid="uid://cono3427ytinl" path="res://audio/chapter1/ambient/panel_15_16_ocean.wav" id="27_u17d1"]
 [ext_resource type="AudioStream" uid="uid://dhjvrpl3ib3r" path="res://audio/chapter1/ambient/panel_17_23_market_colombia_loop.wav" id="28_dxliq"]
+[ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="29_0858f"]
 
 [node name="JungleComic1" type="Node2D" unique_id=150562309]
 
@@ -200,3 +201,8 @@ bus = &"Sfx"
 [node name="Market" type="AudioStreamPlayer" parent="Audio" unique_id=987654775]
 stream = ExtResource("28_dxliq")
 bus = &"Sfx"
+
+[node name="CheckpointController" type="Node" parent="." unique_id=1754782834]
+script = ExtResource("29_0858f")
+chapter = 2
+comic = 17

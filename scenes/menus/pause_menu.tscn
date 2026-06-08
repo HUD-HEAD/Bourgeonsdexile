@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://c3u8g0bf4hyrb"]
+
+[ext_resource type="Texture2D" uid="uid://c2urmxg5mww6s" path="res://graphics/ui/buttons/pause/darker_layer.png" id="1_fwndu"]
+[ext_resource type="Texture2D" uid="uid://b4ietau1augkw" path="res://graphics/ui/buttons/pause/play.png" id="2_7unhi"]
+[ext_resource type="Texture2D" uid="uid://dubaus1nmdimo" path="res://graphics/ui/buttons/pause/settings.png" id="3_gsnt3"]
+[ext_resource type="Texture2D" uid="uid://dnx5ujhxtbpjk" path="res://graphics/ui/buttons/pause/exit.png" id="4_2wrho"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gsnt3"]
+texture = ExtResource("2_7unhi")
+modulate_color = Color(1, 1, 1, 0.74509805)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2wrho"]
+texture = ExtResource("2_7unhi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gh0u6"]
+texture = ExtResource("2_7unhi")
+modulate_color = Color(1, 1, 1, 0.8627451)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eyfc8"]
+texture = ExtResource("3_gsnt3")
+modulate_color = Color(1, 1, 1, 0.74509805)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xiui8"]
+texture = ExtResource("3_gsnt3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gqhbq"]
+texture = ExtResource("3_gsnt3")
+modulate_color = Color(1, 1, 1, 0.8627451)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dgi6y"]
+texture = ExtResource("4_2wrho")
+modulate_color = Color(1, 1, 1, 0.74509805)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dqjbd"]
+texture = ExtResource("4_2wrho")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_opdvj"]
+texture = ExtResource("4_2wrho")
+modulate_color = Color(1, 1, 1, 0.8627451)
+
+[node name="PauseMenu" type="Control" unique_id=1265180807]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Sprite2D" parent="." unique_id=2084473745]
+z_index = 100
+position = Vector2(430, 540)
+texture = ExtResource("1_fwndu")
+
+[node name="Resume_Button" type="Button" parent="." unique_id=1196042830]
+z_index = 101
+layout_mode = 0
+offset_left = 100.0
+offset_top = 180.0
+offset_right = 235.0
+offset_bottom = 310.99988
+theme_override_styles/normal = SubResource("StyleBoxTexture_gsnt3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2wrho")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gh0u6")
+
+[node name="Settings_Button" type="Button" parent="." unique_id=97382169]
+z_index = 101
+layout_mode = 0
+offset_left = 100.0
+offset_top = 430.0
+offset_right = 235.0
+offset_bottom = 560.9999
+theme_override_styles/normal = SubResource("StyleBoxTexture_eyfc8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xiui8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gqhbq")
+
+[node name="MainMenu_Button" type="Button" parent="." unique_id=1034014931]
+z_index = 101
+layout_mode = 0
+offset_left = 100.0
+offset_top = 680.0
+offset_right = 235.0
+offset_bottom = 810.9999
+theme_override_styles/normal = SubResource("StyleBoxTexture_dgi6y")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dqjbd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_opdvj")

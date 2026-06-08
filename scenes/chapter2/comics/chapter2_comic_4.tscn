@@ -5,13 +5,24 @@
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="3_48xq6"]
 [ext_resource type="PackedScene" uid="uid://b56ss21jw1ocf" path="res://components/chapter2/comic_panels/comic_4/panel_dilate_check_yes.tscn" id="8_h2s7f"]
 [ext_resource type="PackedScene" uid="uid://t5vptpn877fw" path="res://components/chapter2/comic_panels/comic_4/panel_1.tscn" id="8_pwk57"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="8_r62f8"]
 [ext_resource type="PackedScene" uid="uid://cka75w6c1or7q" path="res://components/chapter2/comic_panels/comic_4/panel_2.tscn" id="9_hb21k"]
+[ext_resource type="AudioStream" uid="uid://7lm1jk8ftdj1" path="res://audio/chapter2/ambient/comic 4/panel_4.6_4.10_pain_sound_2.wav" id="9_ngmml"]
 [ext_resource type="PackedScene" uid="uid://dj2re0mny6s56" path="res://components/chapter2/comic_panels/comic_4/panel_8.tscn" id="10_jxjoi"]
 [ext_resource type="PackedScene" uid="uid://b1ybct1a4a20o" path="res://components/chapter2/comic_panels/comic_4/panel_3.tscn" id="10_rlfy7"]
+[ext_resource type="PackedScene" uid="uid://coc10p4r60i8k" path="res://components/chapter2/comic_panels/comic_4/panel_push_1.tscn" id="11_8mv4y"]
+[ext_resource type="AudioStream" uid="uid://bpu5dnphbkpcr" path="res://audio/chapter2/ambient/comic 4/panel_4.7_4.11breathe_sound.wav" id="11_ngmml"]
+[ext_resource type="Texture2D" uid="uid://chqrwx4xorobv" path="res://graphics/chapter2/comics/comic4/framecontractions/1.png" id="11_r62f8"]
 [ext_resource type="PackedScene" uid="uid://tdurdvnqfpne" path="res://components/chapter2/comic_panels/comic_4/panel_4.tscn" id="11_tu2ht"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="12_jxjoi"]
 [ext_resource type="PackedScene" uid="uid://72txvs2l48m6" path="res://components/chapter2/comic_panels/comic_4/panel_6.tscn" id="12_l8dec"]
+[ext_resource type="Texture2D" uid="uid://bw7bnww0347ym" path="res://graphics/chapter2/comics/comic4/framecontractions/2.png" id="12_ngmml"]
 [ext_resource type="PackedScene" uid="uid://2q3jntyih2e7" path="res://components/chapter2/comic_panels/comic_4/panel_5.tscn" id="13_8mv4y"]
+[ext_resource type="AudioStream" uid="uid://csqcq0d7cn473" path="res://audio/chapter2/ambient/comic 4/panel_4.8_4.12_pain_sound_3.wav" id="13_kiieq"]
+[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="16_nrvn0"]
+[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="17_cxg14"]
+[ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="17_vuetd"]
+[ext_resource type="PackedScene" uid="uid://xrhjayy04y7b" path="res://components/chapter2/contractions/contraction_wobble/contraction_wobble.tscn" id="18_ngmml"]
 
 [node name="ChapterIIComic1" type="Node2D" unique_id=150562309]
 metadata/_edit_vertical_guides_ = [3098.0, 5247.0, 7539.0, 9944.0, 12375.0, 14408.0, 16384.0, 18203.0, 20749.0, 22655.0, 24690.0, 26712.0, 29795.0, 32039.0, 34449.0]
@@ -55,30 +66,166 @@ position = Vector2(7524, 0)
 position = Vector2(9937, 0)
 scale = Vector2(0.38665813, 0.38665813)
 
-[node name="PanelContractionLoop" parent="Panels" unique_id=280197590 instance=ExtResource("13_8mv4y")]
+[node name="PanelDoctorCheck1" parent="Panels" unique_id=280197590 instance=ExtResource("13_8mv4y")]
 position = Vector2(12362, 0)
 
-[node name="PanelDilateCheckNo" parent="Panels" unique_id=405070053 instance=ExtResource("11_tu2ht")]
+[node name="PanelContraction1" parent="Panels" unique_id=405070053 instance=ExtResource("11_tu2ht")]
 position = Vector2(14405, 0)
 
-[node name="PanelContractionLoop2" parent="Panels" unique_id=1977320620 instance=ExtResource("13_8mv4y")]
-position = Vector2(16232, 0)
+[node name="ContractionTrigger" parent="Panels/PanelContraction1" index="0" unique_id=1876947053 node_paths=PackedStringArray("contraction_controller")]
+contraction_controller = NodePath("../../ContractionController")
+
+[node name="TriggerSfxOnClick_pain" type="Node" parent="Panels/PanelContraction1/Clickable" parent_id_path=PackedInt32Array(405070053, 371612507) index="2" unique_id=723601504 node_paths=PackedStringArray("clickables")]
+script = ExtResource("8_r62f8")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("9_ngmml")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
+[node name="PanelContraction2" parent="Panels" unique_id=1460964746 instance=ExtResource("11_tu2ht")]
+position = Vector2(16440, 0)
+
+[node name="ContractionTrigger" parent="Panels/PanelContraction2" index="0" unique_id=1876947053 node_paths=PackedStringArray("contraction_controller")]
+contraction_controller = NodePath("../../ContractionController")
+
+[node name="3" parent="Panels/PanelContraction2" index="1" unique_id=1488750130]
+texture = ExtResource("11_r62f8")
+
+[node name="TriggerSfxOnClick_pain" type="Node" parent="Panels/PanelContraction2/Clickable" parent_id_path=PackedInt32Array(1460964746, 371612507) index="2" unique_id=2052432233 node_paths=PackedStringArray("clickables")]
+script = ExtResource("8_r62f8")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("11_ngmml")
+linear_volume = 1.1
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
+[node name="PanelContraction3" parent="Panels" unique_id=1675799870 instance=ExtResource("11_tu2ht")]
+position = Vector2(18600, 0)
+
+[node name="ContractionTrigger" parent="Panels/PanelContraction3" index="0" unique_id=1876947053 node_paths=PackedStringArray("contraction_controller")]
+contraction_controller = NodePath("../../ContractionController")
+
+[node name="3" parent="Panels/PanelContraction3" index="1" unique_id=1488750130]
+texture = ExtResource("12_ngmml")
+
+[node name="TriggerSfxOnClick_pain" type="Node" parent="Panels/PanelContraction3/Clickable" parent_id_path=PackedInt32Array(1675799870, 371612507) index="2" unique_id=2132269324 node_paths=PackedStringArray("clickables")]
+script = ExtResource("8_r62f8")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("13_kiieq")
+linear_volume = 1.2
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
+[node name="PanelDoctorCheck2" parent="Panels" unique_id=1977320620 instance=ExtResource("13_8mv4y")]
+position = Vector2(20898, 0)
+
+[node name="PanelContraction4" parent="Panels" unique_id=1447836535 instance=ExtResource("11_tu2ht")]
+position = Vector2(22700, 0)
+
+[node name="ContractionTrigger" parent="Panels/PanelContraction4" index="0" unique_id=1876947053 node_paths=PackedStringArray("contraction_controller")]
+contraction_controller = NodePath("../../ContractionController")
+
+[node name="TriggerSfxOnClick_pain" type="Node" parent="Panels/PanelContraction4/Clickable" parent_id_path=PackedInt32Array(1447836535, 371612507) index="2" unique_id=1040930732 node_paths=PackedStringArray("clickables")]
+script = ExtResource("8_r62f8")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("9_ngmml")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
+[node name="PanelContraction5" parent="Panels" unique_id=1610494996 instance=ExtResource("11_tu2ht")]
+position = Vector2(24735, 0)
+
+[node name="ContractionTrigger" parent="Panels/PanelContraction5" index="0" unique_id=1876947053 node_paths=PackedStringArray("contraction_controller")]
+contraction_controller = NodePath("../../ContractionController")
+
+[node name="3" parent="Panels/PanelContraction5" index="1" unique_id=1488750130]
+texture = ExtResource("11_r62f8")
+
+[node name="TriggerSfxOnClick_pain" type="Node" parent="Panels/PanelContraction5/Clickable" parent_id_path=PackedInt32Array(1610494996, 371612507) index="2" unique_id=1293302102 node_paths=PackedStringArray("clickables")]
+script = ExtResource("8_r62f8")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("11_ngmml")
+linear_volume = 1.2
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
+[node name="PanelContraction6" parent="Panels" unique_id=676691208 instance=ExtResource("11_tu2ht")]
+position = Vector2(26895, 0)
+
+[node name="ContractionTrigger" parent="Panels/PanelContraction6" index="0" unique_id=1876947053 node_paths=PackedStringArray("contraction_controller")]
+contraction_controller = NodePath("../../ContractionController")
+
+[node name="3" parent="Panels/PanelContraction6" index="1" unique_id=1488750130]
+texture = ExtResource("12_ngmml")
+
+[node name="TriggerSfxOnClick_pain" type="Node" parent="Panels/PanelContraction6/Clickable" parent_id_path=PackedInt32Array(676691208, 371612507) index="2" unique_id=1328085354 node_paths=PackedStringArray("clickables")]
+script = ExtResource("8_r62f8")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("13_kiieq")
+linear_volume = 1.3
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="PanelDilateCheckYes" parent="Panels" unique_id=222378827 instance=ExtResource("8_h2s7f")]
-position = Vector2(18247, 0)
+position = Vector2(29366, 0)
 
-[node name="PanelPush" parent="Panels" unique_id=2046092439 instance=ExtResource("10_jxjoi")]
-position = Vector2(20485, 0)
+[node name="PanelPush1" parent="Panels" unique_id=220555847 instance=ExtResource("11_8mv4y")]
+position = Vector2(32569, 16)
+
+[node name="PanelPush2" parent="Panels" unique_id=2046092439 instance=ExtResource("10_jxjoi")]
+position = Vector2(34771, 0)
+
+[node name="ContractionController" parent="Panels" unique_id=948422643 instance=ExtResource("18_ngmml")]
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("2_cxg14")
-panels = [NodePath("../Panels/Panel1"), NodePath("../Panels/Panel2"), NodePath("../Panels/Panel3"), NodePath("../Panels/Panel5"), NodePath("../Panels/PanelContractionLoop"), NodePath("../Panels/PanelDilateCheckNo"), NodePath("../Panels/PanelContractionLoop2"), NodePath("../Panels/PanelDilateCheckYes"), NodePath("../Panels/PanelPush"), NodePath("../SceneEnder")]
+panels = [NodePath("../Panels/Panel1"), NodePath("../Panels/Panel2"), NodePath("../Panels/Panel3"), NodePath("../Panels/Panel5"), NodePath("../Panels/PanelDoctorCheck1"), NodePath("../Panels/PanelContraction1"), NodePath("../Panels/PanelContraction2"), NodePath("../Panels/PanelContraction3"), NodePath("../Panels/PanelDoctorCheck2"), NodePath("../Panels/PanelContraction4"), NodePath("../Panels/PanelContraction5"), NodePath("../Panels/PanelContraction6"), NodePath("../Panels/PanelDilateCheckYes"), NodePath("../Panels/PanelPush1"), NodePath("../Panels/PanelPush2"), NodePath("../SceneEnder")]
 
 [node name="UI" parent="." unique_id=1829896958 instance=ExtResource("3_48xq6")]
 
 [node name="Audio" type="Node" parent="." unique_id=619569792]
 
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=1813658606]
+position = Vector2(984, 595)
+rect = Rect2(-10, -10, 643, 270)
+script = ExtResource("16_nrvn0")
+music_name = 2400
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=1384727853]
+position = Vector2(14254, 296)
+rect = Rect2(-10, -10, 4828, 97)
+script = ExtResource("17_cxg14")
+loop_name = 2404
+metadata/_custom_type_script = "uid://brda7473wfj1v"
+
+[node name="LoopZone2" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=871380030]
+position = Vector2(22384, 275)
+rect = Rect2(-10, -10, 4828, 97)
+script = ExtResource("17_cxg14")
+loop_name = 2404
+metadata/_custom_type_script = "uid://brda7473wfj1v"
+
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1805948442]
-position = Vector2(25421, 540)
+position = Vector2(59058, 497)
+rect = Rect2(-555, -259, 613.8164, 298)
 script = ExtResource("12_jxjoi")
 next_scene = "uid://ctau0miqtmbj2"
+
+[node name="CheckpointController" type="Node" parent="." unique_id=2097612793]
+script = ExtResource("17_vuetd")
+chapter = 1
+comic = 10
+
+[editable path="Panels/PanelContraction1"]
+[editable path="Panels/PanelContraction2"]
+[editable path="Panels/PanelContraction3"]
+[editable path="Panels/PanelContraction4"]
+[editable path="Panels/PanelContraction5"]
+[editable path="Panels/PanelContraction6"]

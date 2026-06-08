@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://btvhmvhx64dkr" path="res://graphics/chapter2/comics/comic4/framwaitingroom/bubble2.png" id="3_5awcb"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="4_5awcb"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_2hoat"]
+[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="6_dhjhq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5awcb"]
 radius = 339.01328
@@ -37,3 +38,9 @@ script = ExtResource("5_2hoat")
 clickables = [NodePath("../Clickable")]
 obstacles_to_clear = 2
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=802351187]
+rect = Rect2(-361, -10, 680, 20)
+script = ExtResource("6_dhjhq")
+loop_name = 2400
+metadata/_custom_type_script = "uid://brda7473wfj1v"

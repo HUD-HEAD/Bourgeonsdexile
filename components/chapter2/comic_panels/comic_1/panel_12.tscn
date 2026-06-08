@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://001fo68fi8nn" path="res://components/utils/puzzles/draggable_restricted.gd" id="4_tu3wo"]
 [ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/mechanics/area_entered_enable.gd" id="5_me28v"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="7_r2vlp"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="7_y7234"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y7234"]
 radius = 229.55827
@@ -92,6 +93,20 @@ tracks/2/keys = {
 "update": 1,
 "values": [true, false]
 }
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TriggerSfxOnClick")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_sfx"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y7234"]
 _data = {
@@ -100,11 +115,14 @@ _data = {
 }
 
 [node name="Panel1" type="Node2D" unique_id=299868253]
+position = Vector2(147, 20)
 
 [node name="Tgether" type="Sprite2D" parent="." unique_id=66807286]
+position = Vector2(227, 0)
 texture = ExtResource("1_pmt6i")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1949426084]
+position = Vector2(227, 0)
 
 [node name="DraggableRestricted" type="Area2D" parent="Node2D" unique_id=12593609]
 position = Vector2(-130, 0)
@@ -130,7 +148,7 @@ shape = SubResource("SegmentShape2D_8wo4r")
 
 [node name="Hand1" type="Sprite2D" parent="Node2D" unique_id=34444941]
 visible = false
-position = Vector2(189, -39)
+position = Vector2(213, -60)
 texture = ExtResource("3_6w7me")
 
 [node name="TransitionerPassive" type="Node" parent="Node2D" unique_id=150016412 node_paths=PackedStringArray("anim_player")]
@@ -141,3 +159,10 @@ metadata/_custom_type_script = "uid://u4636s8oa5d0"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1350606008]
 libraries/ = SubResource("AnimationLibrary_y7234")
 autoplay = &"default"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1562486641]
+
+[node name="TriggerSfxOnClick" type="Node" parent="." unique_id=1434172664]
+script = ExtResource("7_y7234")
+sfx = 2109
+metadata/_custom_type_script = "uid://b7avucygxykbp"

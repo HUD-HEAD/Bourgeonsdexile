@@ -1,9 +1,44 @@
 [gd_scene format=3 uid="uid://coloiobyvwn8w"]
 
 [ext_resource type="Texture2D" uid="uid://brsnb1okkyhkh" path="res://graphics/chapter3/comics/comic1/framebabyonzlata/1.png" id="1_gd65n"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="1_tn2yb"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="2_flwdw"]
+[ext_resource type="Texture2D" uid="uid://b130hgk7wpnk0" path="res://graphics/chapter3/comics/comic1/framebabyonzlata/2.png" id="4_wv60d"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="5_w3wvd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1q2mk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gd65n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wv60d")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tn2yb"]
+radius = 242.00206
 
 [node name="PanelDoctors" type="Node2D" unique_id=162787811]
 
-[node name="1" type="Sprite2D" parent="." unique_id=340620303]
-position = Vector2(1, -11)
-texture = ExtResource("1_gd65n")
+[node name="TransitionerCounter" type="Node" parent="." unique_id=979608888 node_paths=PackedStringArray("clickables")]
+script = ExtResource("2_flwdw")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1001108406 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_1q2mk")
+script = ExtResource("5_w3wvd")
+clickable = NodePath("../Clickable")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=954050235]
+position = Vector2(-75, 190)
+script = ExtResource("1_tn2yb")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1188409991]
+shape = SubResource("CircleShape2D_tn2yb")

@@ -5,6 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://baib1xeyomnlv" path="res://graphics/chapter2/comics/comic4/framevideocall/2.png" id="3_g7c6u"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="4_g7c6u"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_w41ca"]
+[ext_resource type="Script" uid="uid://bvmwxu2au5j5l" path="res://components/utils/audio/audio integration nodes/audio_sfx_zone.gd" id="6_kj5cj"]
+[ext_resource type="AudioStream" uid="uid://cysvoxohuas1b" path="res://audio/chapter2/ambient/comic 4/panel_4.2_ringtone_phone.wav" id="7_qh67n"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="8_0w4rb"]
+[ext_resource type="AudioStream" uid="uid://c60ngc1fbxt6m" path="res://audio/chapter2/ambient/comic 4/panel_4.2_mmm_interactive.wav" id="9_ikg0e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n1fxr"]
 animations = [{
@@ -42,3 +46,19 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1735865603]
 shape = SubResource("RectangleShape2D_g7c6u")
+
+[node name="AudioSfxZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=1447371258]
+position = Vector2(117, 234)
+rect = Rect2(-151, -134, 307, 144)
+script = ExtResource("6_kj5cj")
+use_audio_stream = true
+stream = ExtResource("7_qh67n")
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
+
+[node name="TriggerSfxOnClick" type="Node" parent="." unique_id=609407320 node_paths=PackedStringArray("clickables")]
+script = ExtResource("8_0w4rb")
+clickables = [NodePath("../Clickable")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("9_ikg0e")
+metadata/_custom_type_script = "uid://b7avucygxykbp"

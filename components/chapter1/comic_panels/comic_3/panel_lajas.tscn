@@ -3,8 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://el2r6hjrjesy" path="res://graphics/chapter1/comics/comic3/frame1/background.png" id="2_kbw2m"]
 [ext_resource type="Texture2D" uid="uid://kdd67niwbol8" path="res://graphics/chapter1/comics/comic3/frame1/jungel right.png" id="3_reawd"]
 [ext_resource type="Texture2D" uid="uid://b20pvcs1uf35c" path="res://graphics/chapter1/comics/comic3/frame1/jungle left.png" id="4_2bryf"]
+[ext_resource type="AudioStream" uid="uid://cmaoe7vyk8puf" path="res://audio/chapter1/ambient/panel_section_3/panel_3.1_plant_movement.wav" id="4_5fo7e"]
 [ext_resource type="Script" uid="uid://001fo68fi8nn" path="res://components/utils/puzzles/draggable_restricted.gd" id="4_reawd"]
 [ext_resource type="Script" uid="uid://dbrvsujabjlm" path="res://components/utils/puzzles/placement_checker.gd" id="5_mouw2"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="7_mouw2"]
 [ext_resource type="Script" uid="uid://dt4apmm1b4e51" path="res://components/utils/puzzles/puzzle_piece.gd" id="7_pkspt"]
 [ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="9_5fo7e"]
 [ext_resource type="Script" uid="uid://chrql2wwvrdt1" path="res://components/utils/puzzles/drag_drop_puzzle.gd" id="9_mouw2"]
@@ -23,7 +25,15 @@ texture = ExtResource("2_kbw2m")
 [node name="DragDropPuzzle" type="Node2D" parent="." unique_id=2105087556 node_paths=PackedStringArray("puzzle_pieces")]
 script = ExtResource("9_mouw2")
 puzzle_pieces = [NodePath("PuzzlePiece"), NodePath("PuzzlePiece2")]
+play_correct_piece = false
 metadata/_custom_type_script = "uid://chrql2wwvrdt1"
+
+[node name="TriggerSfxOnClick" type="Node" parent="DragDropPuzzle" unique_id=136248402 node_paths=PackedStringArray("clickables")]
+script = ExtResource("7_mouw2")
+clickables = [NodePath("../PuzzlePiece/DraggableRestricted"), NodePath("../PuzzlePiece2/DraggableRestricted2")]
+use_audio_stream = true
+stream = ExtResource("4_5fo7e")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="PuzzlePiece" type="Node2D" parent="DragDropPuzzle" unique_id=1123657211 node_paths=PackedStringArray("draggable", "placement_checker")]
 script = ExtResource("7_pkspt")

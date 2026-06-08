@@ -4,10 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://b7gtx3ymyamky" path="res://components/utils/puzzles/mask_out/puzzle_piece_hollow.tscn" id="3_uye0a"]
 [ext_resource type="AudioStream" uid="uid://3ffx61j4su3a" path="res://audio/chapter1/sfx/resolve_puzzle.wav" id="5_5yh8q"]
 [ext_resource type="AudioStream" uid="uid://bj0aafjx3b0wc" path="res://audio/chapter1/sfx/puzzle_sound_1_intercalate_with_2.wav" id="6_uv6sq"]
+[ext_resource type="Script" uid="uid://cwo7l3tuyc7g6" path="res://components/utils/puzzles/puzzle_hide_on_complete.gd" id="7_uv6sq"]
 [ext_resource type="PackedScene" uid="uid://b15l0pq6dea3h" path="res://components/utils/puzzles/puzzle_piece_template.tscn" id="9_xasnt"]
 [ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="10_bo17s"]
 
 [node name="PuzzleMasking" type="Node2D" unique_id=1941159865 node_paths=PackedStringArray("complete_image", "outline_image")]
+z_index = 1
 script = ExtResource("1_nrmhh")
 complete_image = NodePath("CompletePuzzle")
 outline_image = NodePath("OutlinePuzzle")
@@ -25,7 +27,7 @@ Needed so they always appear masked out (behind Hollow pieces), even when dragge
 
 [node name="PuzzlePiece" parent="BuildingBlocks/FullPieces" unique_id=729525704 instance=ExtResource("9_xasnt")]
 
-[node name="DraggableZone" parent="BuildingBlocks/FullPieces/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="2" unique_id=1105802255]
+[node name="DraggableZone" parent="BuildingBlocks/FullPieces/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="3" unique_id=1105802255]
 shape = null
 
 [node name="HollowPieces" type="Node2D" parent="BuildingBlocks" unique_id=1500445843]
@@ -50,6 +52,9 @@ unique_name_in_owner = true
 stream = ExtResource("6_uv6sq")
 max_polyphony = 2
 bus = &"Sfx"
+
+[node name="HideComplete" type="Node" parent="." unique_id=776130056]
+script = ExtResource("7_uv6sq")
 
 [editable path="BuildingBlocks/FullPieces/PuzzlePiece"]
 [editable path="BuildingBlocks/HollowPieces/PuzzlePieceHollow"]

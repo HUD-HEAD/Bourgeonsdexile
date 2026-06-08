@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="sfx_config" format=3 uid="uid://cjr54ccgssbu2"]
+
+[ext_resource type="Script" uid="uid://duuxorfspwlxi" path="res://components/utils/audio/sfx_configuration.gd" id="1_abbye"]
+[ext_resource type="AudioStream" uid="uid://5oal57qd8k25" path="res://audio/chapter1/sfx/click_selection.wav" id="2_jcvhs"]
+
+[resource]
+script = ExtResource("1_abbye")
+stream = Array[AudioStream]([ExtResource("2_jcvhs")])
+metadata/_custom_type_script = "uid://duuxorfspwlxi"

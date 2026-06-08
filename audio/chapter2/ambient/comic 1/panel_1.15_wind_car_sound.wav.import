@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d2c3rjwqu245p"
+path="res://.godot/imported/panel_1.15_wind_car_sound.wav-c3f42d75652983d4950f24a9f248bce6.sample"
+
+[deps]
+
+source_file="res://audio/chapter2/ambient/comic 1/panel_1.15_wind_car_sound.wav"
+dest_files=["res://.godot/imported/panel_1.15_wind_car_sound.wav-c3f42d75652983d4950f24a9f248bce6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

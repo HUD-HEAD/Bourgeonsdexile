@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://yawndltdkb52"
+path="res://.godot/imported/panel_3.2_crispy_sound.wav-21d89bbc214149e43c097bcafb7f309a.sample"
+
+[deps]
+
+source_file="res://audio/chapter2/ambient/comic 3/panel_3.2_crispy_sound.wav"
+dest_files=["res://.godot/imported/panel_3.2_crispy_sound.wav-21d89bbc214149e43c097bcafb7f309a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

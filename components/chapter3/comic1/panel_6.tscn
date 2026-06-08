@@ -1,9 +1,53 @@
 [gd_scene format=3 uid="uid://d1vflffgbdtux"]
 
 [ext_resource type="Texture2D" uid="uid://car74rmsh5jye" path="res://graphics/chapter3/comics/comic1/framefood/1.png" id="1_j3ln8"]
+[ext_resource type="Texture2D" uid="uid://de4al6jhnq5so" path="res://graphics/chapter3/comics/comic1/framefood/2.png" id="2_fpsvu"]
+[ext_resource type="Texture2D" uid="uid://ceb32wrucvr8f" path="res://graphics/chapter3/comics/comic1/framefood/3.png" id="3_r6kpl"]
+[ext_resource type="Texture2D" uid="uid://cj1k2bwxip1fm" path="res://graphics/chapter3/comics/comic1/framefood/4.png" id="4_fv6ab"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="5_mwomg"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="6_idow8"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="7_r6kpl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oo03a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_j3ln8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fpsvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_r6kpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fv6ab")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpsvu"]
+size = Vector2(1280, 899)
 
 [node name="PanelDoctors" type="Node2D" unique_id=162787811]
 
-[node name="1" type="Sprite2D" parent="." unique_id=1997956202]
-position = Vector2(-5, 4)
-texture = ExtResource("1_j3ln8")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1308018376 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_oo03a")
+script = ExtResource("5_mwomg")
+clickable = NodePath("../Clickable")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=621803135]
+script = ExtResource("6_idow8")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1970770824]
+position = Vector2(91, 23.5)
+shape = SubResource("RectangleShape2D_fpsvu")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=697688746 node_paths=PackedStringArray("clickables")]
+script = ExtResource("7_r6kpl")
+clickables = [NodePath("../Clickable")]
+obstacles_to_clear = 3
+metadata/_custom_type_script = "uid://c44tybeisilbv"

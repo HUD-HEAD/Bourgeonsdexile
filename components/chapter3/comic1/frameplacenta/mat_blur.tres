@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://d1kfs2bsr3b58"]
+
+[ext_resource type="Shader" uid="uid://b4j4uwo5bpe0r" path="res://components/utils/blur.gdshader" id="1_xgem8"]
+
+[resource]
+shader = ExtResource("1_xgem8")
+shader_parameter/blur_amount = 5.0

@@ -6,7 +6,7 @@
 particle_flag_align_y = true
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(1500, 1, 1)
+emission_box_extents = Vector3(2000, 1, 1)
 direction = Vector3(0.1, 1, 0)
 spread = 0.0
 initial_velocity_min = 668.63

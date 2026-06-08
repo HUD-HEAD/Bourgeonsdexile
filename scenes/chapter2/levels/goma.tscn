@@ -10,8 +10,8 @@
 [ext_resource type="SpriteFrames" uid="uid://8wnk5pl0cnpd" path="res://components/chapter2/characters/nephew_sprite_frames.tres" id="7_mp6eu"]
 [ext_resource type="Texture2D" uid="uid://dc3angby73c88" path="res://graphics/chapter2/levels/tangrampuzzles/1/2_1line.png" id="8_bejlw"]
 [ext_resource type="Texture2D" uid="uid://ia2oeqhw2g7g" path="res://graphics/chapter2/levels/goma/wheel1.png" id="8_hfpvf"]
-[ext_resource type="Texture2D" uid="uid://u3821gox51mn" path="res://graphics/chapter2/levels/goma/bodabodaman2.png" id="8_ub4v2"]
 [ext_resource type="Texture2D" uid="uid://bmhoojrjyafbr" path="res://graphics/chapter2/levels/tangrampuzzles/1/2_1.png" id="9_6se2c"]
+[ext_resource type="Texture2D" uid="uid://dituvwkbu4vw8" path="res://graphics/chapter1/main_characters/enemies/enemiesprite2.png" id="9_ge572"]
 [ext_resource type="Texture2D" uid="uid://bt4al565mnwhh" path="res://graphics/chapter2/levels/goma/wheel2.png" id="9_plsra"]
 [ext_resource type="Texture2D" uid="uid://c4vvnpgt05haw" path="res://graphics/chapter2/levels/tangrampuzzles/1/3_1line.png" id="10_f3f72"]
 [ext_resource type="Script" uid="uid://bjexrnveh5vkf" path="res://components/chapter2/characters/switch_char.gd" id="11_7o0y3"]
@@ -38,7 +38,6 @@
 [ext_resource type="Texture2D" uid="uid://c1gejve2sb0ko" path="res://graphics/chapter2/levels/tangrampuzzles/2/5_2line.png" id="26_2dy2v"]
 [ext_resource type="Texture2D" uid="uid://b2qp5hf3jlcd2" path="res://graphics/chapter2/levels/tangrampuzzles/2/5_2.png" id="27_yt5k8"]
 [ext_resource type="Texture2D" uid="uid://bfsm4yrsdyead" path="res://graphics/chapter2/levels/tangrampuzzles/3/2_3line.png" id="29_bg8wc"]
-[ext_resource type="Texture2D" uid="uid://4n7my7ycpy30" path="res://graphics/chapter1/main_characters/enemies/enemiesprite1.png" id="30_gkaax"]
 [ext_resource type="Texture2D" uid="uid://be1nqh3wo7x51" path="res://graphics/chapter2/levels/tangrampuzzles/3/2_3.png" id="30_ua771"]
 [ext_resource type="Texture2D" uid="uid://gmlg1k5yac04" path="res://graphics/chapter2/levels/tangrampuzzles/3/1_3line.png" id="31_1dkcx"]
 [ext_resource type="Texture2D" uid="uid://dhurbql3iuc1u" path="res://graphics/chapter2/levels/tangrampuzzles/3/1_3.png" id="32_pl5p6"]
@@ -57,6 +56,45 @@
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="46_fm2bo"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/mechanics/obstacle.tscn" id="47_e2evj"]
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="49_4l7c7"]
+[ext_resource type="Texture2D" uid="uid://y0yycenucf2e" path="res://graphics/chapter2/levels/goma/bodabodamanfeetground.png" id="50_ua771"]
+[ext_resource type="Texture2D" uid="uid://2d4s4mtmvwpn" path="res://graphics/chapter2/levels/goma/npcs/couple_wave_hand_5fps/couple_wave_hand_0001.png" id="57_y6q1w"]
+[ext_resource type="Texture2D" uid="uid://dqcpjndgcjte8" path="res://graphics/chapter2/levels/goma/npcs/couple_wave_hand_5fps/couple_wave_hand_0002.png" id="58_8oqhf"]
+[ext_resource type="Texture2D" uid="uid://b7kc7u7lxacks" path="res://graphics/chapter2/levels/goma/npcs/couple_wave_hand_5fps/couple_wave_hand_0003.png" id="59_3d65b"]
+[ext_resource type="Texture2D" uid="uid://bkwhwr5hvk0xe" path="res://graphics/chapter2/levels/goma/npcs/couple_wave_hand_5fps/couple_wave_hand_0004.png" id="60_6oc3f"]
+[ext_resource type="Texture2D" uid="uid://bnofl6njv0ih2" path="res://graphics/chapter2/levels/goma/npcs/couple_wave_hand_5fps/couple_wave_hand_0005.png" id="61_idrs3"]
+[ext_resource type="Texture2D" uid="uid://omkhv1qdcg3d" path="res://graphics/chapter2/levels/goma/npcs/couple_wave_hand_5fps/couple_wave_hand_0006.png" id="62_7kpd7"]
+[ext_resource type="Script" uid="uid://bvmwxu2au5j5l" path="res://components/utils/audio/audio integration nodes/audio_sfx_zone.gd" id="63_8oqhf"]
+[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="64_3d65b"]
+[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="65_6oc3f"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="66_idrs3"]
+[ext_resource type="Script" uid="uid://cpn4fytrpjypm" path="res://components/chapter1/main_characters/area_switch_anim.gd" id="67_7kpd7"]
+[ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="68_3ogmi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3ogmi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("57_y6q1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_8oqhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_3d65b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_6oc3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_idrs3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_7kpd7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6b20s"]
 size = Vector2(580, 500.00006)
@@ -67,6 +105,9 @@ size = Vector2(630, 566)
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6b20s"]
 radius = 48.0
 height = 212.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7kpd7"]
+radius = 100.0
 
 [node name="Goma" type="Node2D" unique_id=987125979]
 
@@ -86,6 +127,18 @@ metadata/_edit_use_anchors_ = true
 [node name="Gomasmalldark" type="Sprite2D" parent="Background" unique_id=744396735]
 texture = ExtResource("2_bing5")
 centered = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1384241759]
+position = Vector2(4845, 680)
+sprite_frames = SubResource("SpriteFrames_3ogmi")
+autoplay = "default"
+frame_progress = 0.91606015
+
+[node name="Enemiesprite2" type="Sprite2D" parent="." unique_id=1578704885]
+position = Vector2(2369, 635)
+scale = Vector2(0.47635135, 0.47635135)
+texture = ExtResource("9_ge572")
+flip_h = true
 
 [node name="Theme" type="AudioStreamPlayer" parent="." unique_id=67967600]
 autoplay = true
@@ -464,31 +517,29 @@ position = Vector2(-10, 159.5)
 scale = Vector2(0.9999997, 0.9999997)
 shape = SubResource("RectangleShape2D_6b20s")
 
-[node name="Enemiesprite1" type="Sprite2D" parent="." unique_id=339836947]
-position = Vector2(4882, 730)
-scale = Vector2(0.52000976, 0.52000976)
-texture = ExtResource("30_gkaax")
-
 [node name="CharWalking" type="Node2D" parent="." unique_id=304248373]
 
 [node name="BodaBodaStopped" type="Area2D" parent="CharWalking" unique_id=749611477]
-position = Vector2(6238, 742)
+position = Vector2(6236, 740)
 scale = Vector2(0.4, 0.4)
+input_pickable = false
 script = ExtResource("46_fm2bo")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="Bodabodaman" type="Sprite2D" parent="CharWalking/BodaBodaStopped" unique_id=2080153153]
-texture = ExtResource("8_ub4v2")
+position = Vector2(0, 37.5)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("50_ua771")
 
 [node name="Wheel1" type="Sprite2D" parent="CharWalking/BodaBodaStopped/Bodabodaman" unique_id=2082465619]
 show_behind_parent = true
-position = Vector2(-147.5, 162.50006)
+position = Vector2(-147.5, 124.99988)
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("8_hfpvf")
 
 [node name="Wheel2" type="Sprite2D" parent="CharWalking/BodaBodaStopped/Bodabodaman" unique_id=1894226021]
 show_behind_parent = true
-position = Vector2(215, 172.50003)
+position = Vector2(222.5, 134.99988)
 texture = ExtResource("9_plsra")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharWalking/BodaBodaStopped" unique_id=1510371182]
@@ -497,6 +548,7 @@ shape = SubResource("RectangleShape2D_1fm80")
 
 [node name="Amani" parent="CharWalking" unique_id=700974070 instance=ExtResource("6_fssrv")]
 position = Vector2(463, 840)
+play_walking_sfx = true
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="CharWalking/Amani" unique_id=826409052]
 position = Vector2(20, -220)
@@ -517,7 +569,8 @@ shape = SubResource("CapsuleShape2D_6b20s")
 [node name="Companion" parent="CharWalking" unique_id=426633640 node_paths=PackedStringArray("model") instance=ExtResource("6_bing5")]
 position = Vector2(571, 839)
 model = NodePath("../Amani")
-offset_from_model = 0.0
+start_walking = true
+follow_model = true
 
 [node name="AnimSprite" parent="CharWalking/Companion" index="0" unique_id=689873547]
 sprite_frames = ExtResource("7_mp6eu")
@@ -533,6 +586,136 @@ camera_to_reparent = NodePath("../CharWalking/Amani/Camera2D")
 position = Vector2(19842, 645)
 script = ExtResource("15_xf2b4")
 next_scene = "uid://uy4d64oh4m1q"
+
+[node name="AudioContainer" type="Node" parent="." unique_id=300018168]
+
+[node name="AudioSfxZone" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=527767718]
+position = Vector2(913, 655)
+rect = Rect2(-82, -10, 92, 67)
+script = ExtResource("63_8oqhf")
+sfx = 2113
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
+
+[node name="AudioSfxZone2" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=348320338]
+position = Vector2(5044, 651)
+rect = Rect2(-82, -10, 92, 67)
+script = ExtResource("63_8oqhf")
+sfx = 2114
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
+
+[node name="LoopZone3_15_19" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=955856650]
+position = Vector2(116, 41)
+rect = Rect2(-44, -10, 5000, 195)
+script = ExtResource("64_3d65b")
+loop_name = 2104
+metadata/_custom_type_script = "uid://brda7473wfj1v"
+
+[node name="LoopZone_moto_notRunning" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1219073659]
+position = Vector2(5352, 517)
+rect = Rect2(-10, -10, 601, 430)
+script = ExtResource("64_3d65b")
+loop_name = 2106
+metadata/_custom_type_script = "uid://brda7473wfj1v"
+
+[node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1083261473]
+position = Vector2(6880, 440)
+rect = Rect2(-10, -10, 13883, 183)
+script = ExtResource("64_3d65b")
+loop_name = 2105
+metadata/_custom_type_script = "uid://brda7473wfj1v"
+
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=947001812]
+position = Vector2(134, 752)
+rect = Rect2(-6, -10, 254, 175)
+script = ExtResource("65_6oc3f")
+music_name = 2102
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="Shoot_SfxZone" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=459972495]
+position = Vector2(782, 932)
+rect = Rect2(-10, -10, 63, 67)
+script = ExtResource("63_8oqhf")
+sfx = 2101
+linear_volume = 0.8
+min_pitch = 0.95
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
+
+[node name="Shoot_SfxZone2" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=74989205]
+position = Vector2(1504, 759)
+rect = Rect2(-10, -10, 63, 67)
+script = ExtResource("63_8oqhf")
+sfx = 2101
+linear_volume = 0.8
+min_pitch = 0.95
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
+
+[node name="Shoot_SfxZone4" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1209941386]
+position = Vector2(4335, 897)
+rect = Rect2(-10, -10, 63, 67)
+script = ExtResource("63_8oqhf")
+sfx = 2101
+linear_volume = 0.8
+min_pitch = 0.95
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
+
+[node name="Shoot_SfxZone3" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=347496458]
+position = Vector2(3308, 974)
+rect = Rect2(-10, -10, 63, 67)
+script = ExtResource("63_8oqhf")
+sfx = 2100
+linear_volume = 0.8
+min_pitch = 0.95
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
+
+[node name="TriggerLoopZone_steps" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1202652206]
+position = Vector2(236, 960)
+rect = Rect2(-10, -10, 80, 74)
+script = ExtResource("66_idrs3")
+loop_name = 2103
+loop_mode = 2
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone_steps2" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1640128641]
+position = Vector2(7892, 219)
+rect = Rect2(-10, -68, 927, 192)
+script = ExtResource("66_idrs3")
+loop_name = 2103
+loop_mode = 3
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="." unique_id=734422288]
+position = Vector2(6861, 522)
+rect = Rect2(-126, -10, 136, 157)
+script = ExtResource("65_6oc3f")
+music_name = 2103
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="AreaCrawl" type="Area2D" parent="." unique_id=1243578540]
+position = Vector2(2087, 723)
+collision_layer = 0
+collision_mask = 10
+input_pickable = false
+script = ExtResource("67_7kpd7")
+anim_name = "crawl"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaCrawl" unique_id=1861239115]
+shape = SubResource("CircleShape2D_7kpd7")
+
+[node name="AreaEndCrawl" type="Area2D" parent="." unique_id=862010122]
+position = Vector2(2530, 716)
+collision_layer = 0
+collision_mask = 10
+input_pickable = false
+script = ExtResource("67_7kpd7")
+anim_name = "walking"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaEndCrawl" unique_id=777600366]
+shape = SubResource("CircleShape2D_7kpd7")
+
+[node name="CheckpointController" type="Node" parent="." unique_id=503992988]
+script = ExtResource("68_3ogmi")
+chapter = 1
+comic = 11
 
 [editable path="Puzzles/Puzzle1/DragDropPuzzle2"]
 [editable path="Puzzles/Puzzle1/DragDropPuzzle2/BuildingBlocks/PuzzlePiece"]

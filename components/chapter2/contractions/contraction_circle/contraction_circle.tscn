@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://cs2pc6hyqcdl4" path="res://components/chapter2/contractions/contraction_circle/contraction_circle.gd" id="3_3vlrm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3vlrm"]
+radius = 25.0
 
 [node name="ContractionCircle" type="Node2D" unique_id=1677856602 node_paths=PackedStringArray("circle", "handle", "drag_rotate")]
 script = ExtResource("3_3vlrm")
@@ -26,4 +27,4 @@ shape = SubResource("CircleShape2D_3vlrm")
 
 [node name="CircleToHold" type="Node2D" parent="DraggableRotate/CollisionShape2D" unique_id=1225491168]
 script = ExtResource("1_ad4nm")
-radius = 10.0
+radius = 25.0

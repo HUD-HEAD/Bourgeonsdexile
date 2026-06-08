@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CheckpointConfiguration" format=3 uid="uid://c0ap0bqywn0ce"]
+
+[ext_resource type="Script" uid="uid://cpjrrx1h33cmr" path="res://components/utils/save_system/checkpoint_configuration.gd" id="1_2qdjf"]
+
+[resource]
+script = ExtResource("1_2qdjf")
+lock_chapters = false
+metadata/_custom_type_script = "uid://cpjrrx1h33cmr"

@@ -18,6 +18,7 @@
 [ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/mechanics/click_hide.gd" id="17_4r3bi"]
 [ext_resource type="Texture2D" uid="uid://dftpkro0gmmv8" path="res://graphics/chapter1/comics/comic3/frame_food/plate2/plate2_5.png" id="17_hlfp0"]
 [ext_resource type="Texture2D" uid="uid://b7lfvoqgxd3nn" path="res://graphics/chapter1/comics/comic3/frame_food/plate2/plate2_6.png" id="18_c8x4o"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="19_3dhvr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4npjt"]
 animations = [{
@@ -154,3 +155,9 @@ texture = ExtResource("10_v0h4g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fork" unique_id=9577214]
 shape = SubResource("CapsuleShape2D_4r3bi")
+
+[node name="TriggerSfxOnClick" type="Node" parent="." unique_id=1486711326 node_paths=PackedStringArray("clickables")]
+script = ExtResource("19_3dhvr")
+clickables = [NodePath("../Meal"), NodePath("../Meal2")]
+sfx = 1301
+metadata/_custom_type_script = "uid://b7avucygxykbp"

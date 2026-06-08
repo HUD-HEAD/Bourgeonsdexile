@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b7b8a8ucullfr"
+path="res://.godot/imported/panel_1.11_hands_sound_selection_image.wav-1aebd1aa1f0b12187ea55758b1c58980.sample"
+
+[deps]
+
+source_file="res://audio/chapter2/ambient/comic 1/panel_1.11_hands_sound_selection_image.wav"
+dest_files=["res://.godot/imported/panel_1.11_hands_sound_selection_image.wav-1aebd1aa1f0b12187ea55758b1c58980.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

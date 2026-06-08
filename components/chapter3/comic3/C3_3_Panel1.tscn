@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cm1b7vgqmiyby"]
+
+[ext_resource type="Texture2D" uid="uid://cxr3hif05q11c" path="res://graphics/chapter3/comics/comic3/socialworker.png" id="1_sj8qh"]
+
+[node name="C33Panel1" type="Node2D" unique_id=1800611031]
+
+[node name="Socialworker" type="Sprite2D" parent="." unique_id=972873342]
+position = Vector2(2, -2)
+texture = ExtResource("1_sj8qh")

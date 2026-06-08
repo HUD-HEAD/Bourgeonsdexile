@@ -1,16 +1,27 @@
 [gd_scene format=3 uid="uid://bvpayxtg8pgtw"]
 
-[ext_resource type="Texture2D" uid="uid://dy4dw0w6oepje" path="res://graphics/chapter2/comics/comic2/framebussection/1.png" id="1_nvb6t"]
+[ext_resource type="Texture2D" uid="uid://ckkcs4qr2b7q5" path="res://graphics/chapter2/comics/comic2/framequeuewc/insidethebus.png" id="1_i158a"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_i158a"]
+[ext_resource type="Script" uid="uid://bvmwxu2au5j5l" path="res://components/utils/audio/audio integration nodes/audio_sfx_zone.gd" id="3_lsdmm"]
+[ext_resource type="AudioStream" uid="uid://c0a41i5vdv5ik" path="res://audio/chapter2/ambient/comic 2/panel_2.16_bus_sound.wav" id="4_tegbl"]
 
 [node name="Panel1" type="Node2D" unique_id=547383153]
 
 [node name="1" type="Sprite2D" parent="." unique_id=1290792277]
-position = Vector2(-2, -1)
-texture = ExtResource("1_nvb6t")
+position = Vector2(4.0000153, 1)
+scale = Vector2(2.6817157, 2.6817153)
+texture = ExtResource("1_i158a")
 
 [node name="TransitionerPassive" type="Node" parent="." unique_id=1919610894]
 script = ExtResource("2_i158a")
 metadata/_custom_type_script = "uid://u4636s8oa5d0"
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=376250090]
+
+[node name="AudioSfxZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=989321789]
+position = Vector2(-418, 903)
+rect = Rect2(-90, -10, 100, 124)
+script = ExtResource("3_lsdmm")
+use_audio_stream = true
+stream = ExtResource("4_tegbl")
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c3taxlnlcerfn"]
+
+[ext_resource type="Texture2D" uid="uid://bd0atn2mjyb8t" path="res://graphics/chapter3/comics/comic2/morning/morning.png" id="1_me57d"]
+
+[node name="C32Panel1" type="Node2D" unique_id=942978313]
+
+[node name="Morning" type="Sprite2D" parent="." unique_id=1964900336]
+position = Vector2(2, 6)
+texture = ExtResource("1_me57d")

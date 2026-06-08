@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cbywnch7guolu" path="res://graphics/chapter1/comics/comic3/panel_phonelajas/buttons.png" id="6_l50va"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="7_47wdq"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="8_l50va"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="10_nvgmp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18wv5"]
 size = Vector2(1499, 969)
@@ -80,3 +81,9 @@ clickables = [NodePath("../Phone/Sprite2D/ZoomIn"), NodePath("../Phone/Sprite2D/
 obstacles_to_clear = 3
 transition_delay = 0.5
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="TriggerSfxOnClick" type="Node" parent="." unique_id=1655730162 node_paths=PackedStringArray("clickables")]
+script = ExtResource("10_nvgmp")
+clickables = [NodePath("../Mask/Node2D/DraggableRestricted"), NodePath("../Phone/Sprite2D/ZoomIn"), NodePath("../Phone/Sprite2D/ZoomOut")]
+sfx = 2
+metadata/_custom_type_script = "uid://b7avucygxykbp"

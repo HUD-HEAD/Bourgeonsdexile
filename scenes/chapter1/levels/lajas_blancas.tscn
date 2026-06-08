@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b4celum0shjhc" path="res://graphics/chapter1/levels/lajas_blancas/environment/floor.png" id="5_3f63v"]
 [ext_resource type="Texture2D" uid="uid://bm1w5c4d7gypv" path="res://graphics/chapter1/levels/lajas_blancas/npcs/npc_redcross1.png" id="6_a464j"]
 [ext_resource type="Texture2D" uid="uid://dqmvc1ic64ki" path="res://graphics/chapter1/levels/lajas_blancas/environment/houses.png" id="6_h6g4n"]
+[ext_resource type="Texture2D" uid="uid://c2xxo5ok547ah" path="res://graphics/background_paperdark.png" id="6_kde1w"]
 [ext_resource type="Script" uid="uid://qu5hfw1uwm0x" path="res://components/utils/mechanics/area_reveal.gd" id="7_3f63v"]
 [ext_resource type="Texture2D" uid="uid://dl42jc3le60jk" path="res://graphics/chapter1/levels/lajas_blancas/environment/int1.png" id="7_dau4e"]
 [ext_resource type="Texture2D" uid="uid://dxmmdnpwj6wa0" path="res://graphics/chapter1/levels/lajas_blancas/environment/int2.png" id="8_of5dn"]
@@ -18,14 +19,15 @@
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="20_lvato"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/mechanics/obstacle.tscn" id="21_h15xc"]
 [ext_resource type="Texture2D" uid="uid://j6xoe428qgq6" path="res://graphics/chapter1/levels/lajas_blancas/puzzles/11/2_11.png" id="21_lj5p7"]
-[ext_resource type="Script" uid="uid://bchnidsm7kci0" path="res://components/chapter1/main_characters/companion.gd" id="25_67up0"]
 [ext_resource type="Texture2D" uid="uid://dke2if7xacrr0" path="res://graphics/chapter1/levels/lajas_blancas/puzzles/2/2_2.png" id="26_lj5p7"]
 [ext_resource type="SpriteFrames" uid="uid://s1fn7cbpginw" path="res://components/chapter1/levels/lajas_blancas/queue/green_woman.tres" id="26_lvato"]
-[ext_resource type="Texture2D" uid="uid://bqmwvwxnvy503" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow1.png" id="27_h15xc"]
-[ext_resource type="Texture2D" uid="uid://dnon84uyke6c4" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow2.png" id="28_lj5p7"]
-[ext_resource type="Texture2D" uid="uid://dkm7pj8kxf23p" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow3.png" id="29_kde1w"]
 [ext_resource type="SpriteFrames" uid="uid://882iqrb47j8n" path="res://components/chapter1/levels/lajas_blancas/queue/teen.tres" id="30_h15xc"]
-[ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="32_h15xc"]
+[ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="34_kde1w"]
+[ext_resource type="Script" uid="uid://bij60y62w1ho6" path="res://components/chapter1/main_characters/area_queue_off.gd" id="34_sgj77"]
+[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="35_sgj77"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="36_iscax"]
+[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="37_b4pqv"]
+[ext_resource type="Script" uid="uid://b1sskfh26m851" path="res://components/utils/mechanics/area_entered_disable.gd" id="38_ex6vw"]
 [ext_resource type="PackedScene" uid="uid://cx455fd0kkpbt" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB3.tscn" id="43_nx082"]
 [ext_resource type="PackedScene" uid="uid://b0rp3ag1qca1u" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB1.tscn" id="45_i6383"]
 [ext_resource type="PackedScene" uid="uid://dhktyk6ijdbuk" path="res://components/chapter1/levels/lajas_blancas/drag_drop_puzzle_LB5.tscn" id="48_jenef"]
@@ -40,22 +42,14 @@ size = Vector2(871, 413)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h15xc"]
 size = Vector2(921, 384)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_vodvp"]
-animations = [{
-"frames": [{
-"duration": 10.0,
-"texture": ExtResource("27_h15xc")
-}, {
-"duration": 10.0,
-"texture": ExtResource("28_lj5p7")
-}, {
-"duration": 10.0,
-"texture": ExtResource("29_kde1w")
-}],
-"loop": true,
-"name": &"default",
-"speed": 30.0
-}]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ex6vw"]
+size = Vector2(170, 229)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kde1w"]
+size = Vector2(218, 229)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgj77"]
+size = Vector2(170, 229)
 
 [node name="LajasBlancas" type="Node2D" unique_id=1909938204]
 
@@ -94,7 +88,7 @@ offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("32_h15xc")
+texture = ExtResource("6_kde1w")
 stretch_mode = 1
 
 [node name="Int1" type="Sprite2D" parent="InteriorReveal" unique_id=916796917]
@@ -137,44 +131,63 @@ debug_color = Color(0.8252278, 0.2592846, 0.75617933, 0.41960785)
 position = Vector2(1, 5)
 
 [node name="QueuePerson" parent="QueuingPeople" unique_id=606944070 node_paths=PackedStringArray("model") instance=ExtResource("18_ih44s")]
-position = Vector2(689, 844)
+position = Vector2(1283, 844)
 model = NodePath("../../Spawn/Nina")
-offset_from_model = 0.0
 
-[node name="QueuePerson2" type="Node2D" parent="QueuingPeople" unique_id=700974070 node_paths=PackedStringArray("model", "anim_sprite")]
-position = Vector2(821, 844)
-script = ExtResource("25_67up0")
+[node name="QueuePerson2" parent="QueuingPeople" unique_id=32140418 node_paths=PackedStringArray("model") instance=ExtResource("18_ih44s")]
+position = Vector2(1436, 844)
 model = NodePath("../../Spawn/Nina")
-anim_sprite = NodePath("Woman")
 
-[node name="Woman" type="AnimatedSprite2D" parent="QueuingPeople/QueuePerson2" unique_id=689873547]
+[node name="AnimSprite" parent="QueuingPeople/QueuePerson2" index="0" unique_id=689873547]
 sprite_frames = ExtResource("26_lvato")
-animation = &"walking"
-offset = Vector2(0, -100)
+frame_progress = 0.0
 
-[node name="Shadow" type="AnimatedSprite2D" parent="QueuingPeople/QueuePerson2/Woman" unique_id=1632501669]
-show_behind_parent = true
-sprite_frames = SubResource("SpriteFrames_vodvp")
-autoplay = "default"
-frame_progress = 0.9875541
+[node name="Clickable" parent="QueuingPeople/QueuePerson2" index="2" unique_id=39147721]
+input_pickable = false
 
-[node name="QueuePerson3" type="Node2D" parent="QueuingPeople" unique_id=1934056135 node_paths=PackedStringArray("model", "anim_sprite")]
-position = Vector2(821, 844)
-script = ExtResource("25_67up0")
+[node name="QueuePerson3" parent="QueuingPeople" unique_id=700974070 node_paths=PackedStringArray("model") instance=ExtResource("18_ih44s")]
+position = Vector2(1589, 844)
 model = NodePath("../../Spawn/Nina")
-anim_sprite = NodePath("Woman")
 
-[node name="Woman" type="AnimatedSprite2D" parent="QueuingPeople/QueuePerson3" unique_id=2028592394]
-position = Vector2(149, 6)
+[node name="AnimSprite" parent="QueuingPeople/QueuePerson3" index="0" unique_id=689873547]
 sprite_frames = ExtResource("30_h15xc")
-animation = &"walking"
-offset = Vector2(0, -100)
+frame_progress = 0.0
 
-[node name="Shadow" type="AnimatedSprite2D" parent="QueuingPeople/QueuePerson3/Woman" unique_id=1264319055]
-show_behind_parent = true
-sprite_frames = SubResource("SpriteFrames_vodvp")
-autoplay = "default"
-frame_progress = 0.9875541
+[node name="Clickable" parent="QueuingPeople/QueuePerson3" index="2" unique_id=39147721]
+input_pickable = false
+
+[node name="QueuingPeople2" type="Node2D" parent="." unique_id=337179385]
+position = Vector2(2530, 5)
+
+[node name="QueuePerson" parent="QueuingPeople2" unique_id=1441122431 node_paths=PackedStringArray("model") instance=ExtResource("18_ih44s")]
+position = Vector2(1237, 844)
+model = NodePath("../../Spawn/Nina")
+
+[node name="QueuePerson2" parent="QueuingPeople2" unique_id=892756225 node_paths=PackedStringArray("model") instance=ExtResource("18_ih44s")]
+position = Vector2(1436, 844)
+model = NodePath("../../Spawn/Nina")
+
+[node name="AnimSprite" parent="QueuingPeople2/QueuePerson2" index="0" unique_id=689873547]
+sprite_frames = ExtResource("26_lvato")
+frame_progress = 0.0
+
+[node name="Clickable" parent="QueuingPeople2/QueuePerson2" index="2" unique_id=39147721]
+input_pickable = false
+
+[node name="QueuePerson3" parent="QueuingPeople2" unique_id=199098210 node_paths=PackedStringArray("model") instance=ExtResource("18_ih44s")]
+position = Vector2(1589, 844)
+model = NodePath("../../Spawn/Nina")
+
+[node name="AnimSprite" parent="QueuingPeople2/QueuePerson3" index="0" unique_id=689873547]
+sprite_frames = ExtResource("30_h15xc")
+frame_progress = 0.0
+
+[node name="Clickable" parent="QueuingPeople2/QueuePerson3" index="2" unique_id=39147721]
+input_pickable = false
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="QueuingPeople2" unique_id=1189056533]
+position = Vector2(1227, 714)
+rect = Rect2(-57, -10, 2585, 20)
 
 [node name="PaperBackgroundPostTent" type="TextureRect" parent="." unique_id=1110596856]
 visible = false
@@ -187,7 +200,7 @@ offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("32_h15xc")
+texture = ExtResource("6_kde1w")
 stretch_mode = 1
 
 [node name="Outsidehouse1" type="Sprite2D" parent="." unique_id=1804838306]
@@ -218,7 +231,7 @@ position = Vector2(16, 221)
 texture = ExtResource("20_h15xc")
 
 [node name="Receptacle" parent="Queue1/Puzzle4/DragDropPuzzle11/BuildingBlocks" parent_id_path=PackedInt32Array(839630799, 1654234455) index="1" unique_id=1559191435]
-position = Vector2(5.5, -154)
+position = Vector2(6, -144)
 
 [node name="PuzzlePiece2" parent="Queue1/Puzzle4/DragDropPuzzle11/BuildingBlocks" parent_id_path=PackedInt32Array(839630799, 1654234455) index="2" unique_id=216605940]
 position = Vector2(-168, 140)
@@ -256,7 +269,7 @@ position = Vector2(-4, -57.5)
 position = Vector2(-178, 23)
 
 [node name="Receptacle" parent="Queue1/Puzzle5/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(2092257195, 1654234455) index="1" unique_id=1559191435]
-position = Vector2(-46, -39.5)
+position = Vector2(-42, -46)
 
 [node name="PuzzlePiece2" parent="Queue1/Puzzle5/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(2092257195, 1654234455) index="2" unique_id=1391763950]
 position = Vector2(155, -25)
@@ -266,7 +279,7 @@ position = Vector2(1, -1)
 texture = ExtResource("26_lj5p7")
 
 [node name="Receptacle2" parent="Queue1/Puzzle5/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(2092257195, 1654234455) index="3" unique_id=1454574238]
-position = Vector2(61, -67.5)
+position = Vector2(56, -52)
 
 [node name="HideOnComplete" type="Node" parent="Queue1/Puzzle5/DragDropPuzzle" unique_id=1613584730]
 script = ExtResource("11_lvato")
@@ -295,13 +308,13 @@ position = Vector2(0.5, -60)
 position = Vector2(-204, -7)
 
 [node name="Receptacle" parent="Queue1/Puzzle6/DragDropPuzzle8/BuildingBlocks" parent_id_path=PackedInt32Array(561042216, 1654234455) index="1" unique_id=1559191435]
-position = Vector2(-59.5, -48)
+position = Vector2(-42, -47)
 
 [node name="PuzzlePiece2" parent="Queue1/Puzzle6/DragDropPuzzle8/BuildingBlocks" parent_id_path=PackedInt32Array(561042216, 1654234455) index="2" unique_id=1148590767]
 position = Vector2(211, -39)
 
 [node name="Receptacle2" parent="Queue1/Puzzle6/DragDropPuzzle8/BuildingBlocks" parent_id_path=PackedInt32Array(561042216, 1654234455) index="3" unique_id=536957716]
-position = Vector2(66.5, -71)
+position = Vector2(65, -64)
 
 [node name="HideOnComplete" type="Node" parent="Queue1/Puzzle6/DragDropPuzzle8" unique_id=895555493]
 script = ExtResource("11_lvato")
@@ -329,8 +342,19 @@ position = Vector2(204, 787)
 texture = null
 
 [node name="DragDropPuzzle2" parent="Queue1/Puzzle7" unique_id=1767003607 instance=ExtResource("45_i6383")]
-modulate = Color(0.38109094, 0.6756369, 0.7122601, 1)
 position = Vector2(94, 487)
+
+[node name="PuzzlePiece" parent="Queue1/Puzzle7/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="0" unique_id=1667760579]
+position = Vector2(-237, -32)
+
+[node name="PuzzlePiece2" parent="Queue1/Puzzle7/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="2" unique_id=1716682434]
+position = Vector2(-310, -138)
+
+[node name="PuzzlePiece3" parent="Queue1/Puzzle7/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="4" unique_id=1238210237]
+position = Vector2(-263, 215)
+
+[node name="PuzzlePiece4" parent="Queue1/Puzzle7/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="6" unique_id=468251664]
+position = Vector2(-289, 93)
 
 [node name="HideOnComplete" type="Node" parent="Queue1/Puzzle7/DragDropPuzzle2" unique_id=793575586]
 script = ExtResource("11_lvato")
@@ -351,13 +375,13 @@ position = Vector2(-194, -27.5)
 position = Vector2(-443, 19)
 
 [node name="Receptacle" parent="Queue2/Puzzle1/DragDropPuzzle7/BuildingBlocks" parent_id_path=PackedInt32Array(189400561, 1654234455) index="1" unique_id=1559191435]
-position = Vector2(-268, -19.5)
+position = Vector2(-267, -16)
 
 [node name="PuzzlePiece2" parent="Queue2/Puzzle1/DragDropPuzzle7/BuildingBlocks" parent_id_path=PackedInt32Array(189400561, 1654234455) index="2" unique_id=558028899]
 position = Vector2(35, -23)
 
 [node name="Receptacle2" parent="Queue2/Puzzle1/DragDropPuzzle7/BuildingBlocks" parent_id_path=PackedInt32Array(189400561, 1654234455) index="3" unique_id=1081322503]
-position = Vector2(-120, -26.5)
+position = Vector2(-125, -30)
 
 [node name="HideOnComplete" type="Node" parent="Queue2/Puzzle1/DragDropPuzzle7" unique_id=1045230970]
 script = ExtResource("11_lvato")
@@ -365,8 +389,8 @@ script = ExtResource("11_lvato")
 [node name="PuzzleSpawner" type="Node" parent="Queue2/Puzzle1" unique_id=1415408882 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("20_lvato")
 puzzle = NodePath("../DragDropPuzzle7")
-piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../../../QueuingPeople/QueuePerson/MarkerBubbleSpawn")]
-spawn_trigger = NodePath("../../../QueuingPeople/QueuePerson/Clickable")
+piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../../../QueuingPeople2/QueuePerson/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../../../QueuingPeople2/QueuePerson/Clickable")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Queue2/Puzzle1" unique_id=754715582 instance=ExtResource("21_h15xc")]
@@ -382,14 +406,17 @@ position = Vector2(177, 364)
 [node name="PuzzlePiece" parent="Queue2/Puzzle2/DragDropPuzzle14/BuildingBlocks" parent_id_path=PackedInt32Array(559797596, 1654234455) index="0" unique_id=1667760579]
 position = Vector2(-234, 223)
 
+[node name="Receptacle" parent="Queue2/Puzzle2/DragDropPuzzle14/BuildingBlocks" parent_id_path=PackedInt32Array(559797596, 1654234455) index="1" unique_id=1559191435]
+position = Vector2(-4, 7)
+
 [node name="HideOnComplete" type="Node" parent="Queue2/Puzzle2/DragDropPuzzle14" unique_id=1258875576]
 script = ExtResource("11_lvato")
 
 [node name="PuzzleSpawner" type="Node" parent="Queue2/Puzzle2" unique_id=215774215 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("20_lvato")
 puzzle = NodePath("../DragDropPuzzle14")
-piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../../../QueuingPeople/QueuePerson/MarkerBubbleSpawn")]
-spawn_trigger = NodePath("../../../QueuingPeople/QueuePerson/Clickable")
+piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../../../QueuingPeople2/QueuePerson/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../../../QueuingPeople2/QueuePerson/Clickable")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Queue2/Puzzle2" unique_id=222064032 instance=ExtResource("21_h15xc")]
@@ -409,13 +436,13 @@ position = Vector2(4, -27)
 position = Vector2(-195, -24)
 
 [node name="Receptacle" parent="Queue2/Puzzle3/DragDropPuzzle5/BuildingBlocks" parent_id_path=PackedInt32Array(192951279, 1654234455) index="1" unique_id=1559191435]
-position = Vector2(-45, -29)
+position = Vector2(-39, -22)
 
 [node name="PuzzlePiece2" parent="Queue2/Puzzle3/DragDropPuzzle5/BuildingBlocks" parent_id_path=PackedInt32Array(192951279, 1654234455) index="2" unique_id=1466574082]
 position = Vector2(189, -1)
 
 [node name="Receptacle2" parent="Queue2/Puzzle3/DragDropPuzzle5/BuildingBlocks" parent_id_path=PackedInt32Array(192951279, 1654234455) index="3" unique_id=1513131294]
-position = Vector2(69, -29)
+position = Vector2(55, -27)
 
 [node name="HideOnComplete" type="Node" parent="Queue2/Puzzle3/DragDropPuzzle5" unique_id=1929496938]
 script = ExtResource("11_lvato")
@@ -423,8 +450,8 @@ script = ExtResource("11_lvato")
 [node name="PuzzleSpawner" type="Node" parent="Queue2/Puzzle3" unique_id=2001654392 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("20_lvato")
 puzzle = NodePath("../DragDropPuzzle5")
-piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../../../QueuingPeople/QueuePerson/MarkerBubbleSpawn")]
-spawn_trigger = NodePath("../../../QueuingPeople/QueuePerson/Clickable")
+piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../../../QueuingPeople2/QueuePerson/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../../../QueuingPeople2/QueuePerson/Clickable")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Queue2/Puzzle3" unique_id=185623456 instance=ExtResource("21_h15xc")]
@@ -438,6 +465,7 @@ position = Vector2(460, 867)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(45, -15)
+play_walking_sfx = true
 
 [node name="AnimSprite" parent="Spawn/Nina" index="0" unique_id=689873547]
 scale = Vector2(0.8, 0.8)
@@ -454,8 +482,104 @@ position = Vector2(0, -237)
 [node name="Camera2D" type="Camera2D" parent="Spawn/Nina" unique_id=1900272272]
 position = Vector2(0, -327)
 offset = Vector2(500, 0)
+limit_top = 0
+limit_bottom = 1080
+
+[node name="CheckpointController" type="Node" parent="." unique_id=1005402094]
+script = ExtResource("34_kde1w")
+comic = 6
+
+[node name="AudioContainer" type="Node" parent="." unique_id=1196178060]
+
+[node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=81881556]
+position = Vector2(89, 49)
+rect = Rect2(-10, -10, 4893, 101)
+script = ExtResource("35_sgj77")
+loop_name = 1302
+metadata/_custom_type_script = "uid://brda7473wfj1v"
+
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=671470358]
+position = Vector2(3122, 794)
+rect = Rect2(-10, -10, 41, 48)
+script = ExtResource("36_iscax")
+loop_name = 1303
+loop_mode = 2
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone2" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=970991648]
+position = Vector2(4057, 793)
+rect = Rect2(-10, -10, 41, 48)
+script = ExtResource("36_iscax")
+loop_name = 1304
+loop_mode = 2
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone3" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=845469482]
+position = Vector2(301, 831)
+rect = Rect2(-10, -10, 112, 48)
+script = ExtResource("36_iscax")
+loop_name = 1304
+loop_mode = 2
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone4" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1312628124]
+position = Vector2(5774, 778)
+rect = Rect2(-10, -10, 41, 48)
+script = ExtResource("36_iscax")
+loop_name = 1303
+loop_mode = 2
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone5" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1270703491]
+position = Vector2(5915, 773)
+rect = Rect2(-10, -10, 41, 48)
+script = ExtResource("36_iscax")
+loop_name = 1303
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=436130253]
+position = Vector2(94, 26)
+rect = Rect2(-10, -10, 134, 108)
+script = ExtResource("37_b4pqv")
+music_name = 1300
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="AreaQueueOff" type="Area2D" parent="." unique_id=2081063707]
+position = Vector2(2427, 762)
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("34_sgj77")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaQueueOff" unique_id=612840409]
+position = Vector2(25, -17.5)
+shape = SubResource("RectangleShape2D_ex6vw")
+
+[node name="AreaQueueDisable" type="Area2D" parent="." unique_id=1772675203]
+position = Vector2(2732, 772)
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("38_ex6vw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaQueueDisable" unique_id=776369223]
+shape = SubResource("RectangleShape2D_kde1w")
+
+[node name="AreaQueueOff2" type="Area2D" parent="." unique_id=625376948]
+position = Vector2(4579, 762)
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("34_sgj77")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaQueueOff2" unique_id=1014640865]
+position = Vector2(25, -17.5)
+shape = SubResource("RectangleShape2D_sgj77")
 
 [editable path="QueuingPeople/QueuePerson"]
+[editable path="QueuingPeople/QueuePerson2"]
+[editable path="QueuingPeople/QueuePerson3"]
+[editable path="QueuingPeople2/QueuePerson"]
+[editable path="QueuingPeople2/QueuePerson2"]
+[editable path="QueuingPeople2/QueuePerson3"]
 [editable path="Queue1/Puzzle4/DragDropPuzzle11"]
 [editable path="Queue1/Puzzle4/DragDropPuzzle11/BuildingBlocks/PuzzlePiece"]
 [editable path="Queue1/Puzzle4/DragDropPuzzle11/BuildingBlocks/PuzzlePiece2"]
@@ -466,6 +590,11 @@ offset = Vector2(500, 0)
 [editable path="Queue1/Puzzle6/DragDropPuzzle8/BuildingBlocks/PuzzlePiece"]
 [editable path="Queue1/Puzzle6/DragDropPuzzle8/BuildingBlocks/PuzzlePiece2"]
 [editable path="Queue1/Puzzle7"]
+[editable path="Queue1/Puzzle7/DragDropPuzzle2"]
+[editable path="Queue1/Puzzle7/DragDropPuzzle2/BuildingBlocks/PuzzlePiece"]
+[editable path="Queue1/Puzzle7/DragDropPuzzle2/BuildingBlocks/PuzzlePiece2"]
+[editable path="Queue1/Puzzle7/DragDropPuzzle2/BuildingBlocks/PuzzlePiece3"]
+[editable path="Queue1/Puzzle7/DragDropPuzzle2/BuildingBlocks/PuzzlePiece4"]
 [editable path="Queue2/Puzzle1/DragDropPuzzle7"]
 [editable path="Queue2/Puzzle1/DragDropPuzzle7/BuildingBlocks/PuzzlePiece"]
 [editable path="Queue2/Puzzle1/DragDropPuzzle7/BuildingBlocks/PuzzlePiece2"]
