@@ -9,7 +9,7 @@ enum trigger_mode{
 	play_loop,
 	stop_loop,
 	update_last_walk_loop,
-	
+	stop_walking_loop,
 }
 
 func _ready() -> void:
@@ -23,3 +23,5 @@ func trigger_loop():
 		AudioManager.stop_loop(loop_name)
 	elif loop_mode == trigger_mode.update_last_walk_loop:
 		AudioManager.update_last_walking_loop(loop_name)
+	elif loop_mode == trigger_mode.stop_walking_loop:
+		AudioManager.free_walking_loop(loop_name)

@@ -177,6 +177,11 @@ func play_loop(key: AudioConfiguration.loop_type):
 func stop_loop(key: AudioConfiguration.loop_type, fade_in_enable: bool = true ):
 	_free_loop(key, fade_in_enable)
 
+func free_walking_loop(key: AudioConfiguration.loop_type, fade_in_enable: bool = true ):
+	last_walking_loop = AudioConfiguration.loop_type.none
+	stop_loop(key, fade_in_enable)
+	
+
 func play_music(key: AudioConfiguration.music_type):
 	if last_music_playing == key && last_music_player > -1:
 		pass
