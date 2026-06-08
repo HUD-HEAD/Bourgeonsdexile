@@ -101,6 +101,7 @@
 [ext_resource type="Texture2D" uid="uid://dcsaegytphg76" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/3/6_3.png" id="61_avj4j"]
 [ext_resource type="Texture2D" uid="uid://b5vrs1fekdtw8" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/4/7_4line.png" id="61_cqpa4"]
 [ext_resource type="Texture2D" uid="uid://ruda3efp76ck" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/4/7_4.png" id="62_4obdl"]
+[ext_resource type="Script" uid="uid://36ohgxip80qn" path="res://components/chapter1/levels/jungle/obstacle_stop_follow.gd" id="62_j6pee"]
 [ext_resource type="Texture2D" uid="uid://de0b36nglshod" path="res://graphics/chapter1/main_characters/enemies/enemy_idle_10fps/enemy_idle_0015.png" id="62_mf0du"]
 [ext_resource type="Texture2D" uid="uid://dmwapatkm2rjt" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/3/7_3line.png" id="62_pkixr"]
 [ext_resource type="Texture2D" uid="uid://b20i1yaeba6l0" path="res://graphics/chapter1/levels/jungle/puzzles/junglepuzzles_new/3/7_3.png" id="63_00rrj"]
@@ -713,9 +714,7 @@ frame_progress = 0.0
 [node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D/Leader" unique_id=1732687290]
 position = Vector2(0, -233)
 offset = Vector2(500, 0)
-limit_left = -9999959
 limit_top = 0
-limit_right = 10000041
 limit_bottom = 1080
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Path2D/PathFollow2D/Leader" unique_id=686947029]
@@ -768,6 +767,9 @@ path_follow = NodePath("..")
 [node name="AnimSprite" parent="Path2D/PathFollowCompanion2/Companion2" index="0" unique_id=689873547]
 sprite_frames = ExtResource("17_k7em6")
 frame_progress = 0.0
+
+[node name="Area2D" parent="Path2D/PathFollowCompanion2/Companion2" index="1" unique_id=960188442]
+collision_layer = 8
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Path2D/PathFollowCompanion2/Companion2" unique_id=1619587080]
 position = Vector2(-75.69696, -253.19049)
@@ -1101,11 +1103,22 @@ script = ExtResource("35_ljtv2")
 puzzle = NodePath("../DragDropPuzzle")
 piece_spawners = [NodePath("../../../Path2D/PathFollow2D/Leader/MarkerBubbleSpawn"), NodePath("../../../Path2D/PathFollowCompanion1/Companion1/MarkerBubbleSpawn"), NodePath("../../../Path2D/PathFollowCompanion2/Companion2/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../../Path2D/PathFollowCompanion1/Clickable")
-obstacle = NodePath("../Obstacle")
+obstacle = NodePath("../ObstacleLeader")
 
-[node name="Obstacle" parent="Puzzles/Puzzle4" unique_id=1393710936 instance=ExtResource("36_t8bry")]
-position = Vector2(1686, 0)
+[node name="ObstacleLeader" parent="Puzzles/Puzzle4" unique_id=1393710936 instance=ExtResource("36_t8bry")]
+position = Vector2(2565, 0)
 collision_mask = 2
+
+[node name="ObstacleCompanion" parent="Puzzles/Puzzle4" unique_id=1835850386 node_paths=PackedStringArray("companions_to_stop", "people_waiting", "puzzle", "camera", "obstacle_leader") instance=ExtResource("36_t8bry")]
+position = Vector2(1686, 0)
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("62_j6pee")
+companions_to_stop = [NodePath("../../../Path2D/PathFollowCompanion2/Companion2"), NodePath("../../../Path2D/PathFollowCompanion3/Companion3")]
+people_waiting = [NodePath("../../../Path2D/PathFollow2D/Leader"), NodePath("../../../Path2D/PathFollowCompanion1/Companion1")]
+puzzle = NodePath("../DragDropPuzzle")
+camera = NodePath("../../../Path2D/PathFollow2D/Leader/Camera2D")
+obstacle_leader = NodePath("../ObstacleLeader")
 
 [node name="Puzzle3" type="Node2D" parent="Puzzles" unique_id=1643202236]
 position = Vector2(13625, 0)
