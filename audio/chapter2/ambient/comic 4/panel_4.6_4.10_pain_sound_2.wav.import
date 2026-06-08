@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://7lm1jk8ftdj1"
+path="res://.godot/imported/panel_4.6_4.10_pain_sound_2.wav-42f916eb3e5bfb673a85200efd977fe1.sample"
+
+[deps]
+
+source_file="res://audio/chapter2/ambient/comic 4/panel_4.6_4.10_pain_sound_2.wav"
+dest_files=["res://.godot/imported/panel_4.6_4.10_pain_sound_2.wav-42f916eb3e5bfb673a85200efd977fe1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

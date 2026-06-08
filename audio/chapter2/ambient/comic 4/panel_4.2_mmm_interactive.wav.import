@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c60ngc1fbxt6m"
+path="res://.godot/imported/panel_4.2_mmm_interactive.wav-db30215875ba109f71487bedefe7d36e.sample"
+
+[deps]
+
+source_file="res://audio/chapter2/ambient/comic 4/panel_4.2_mmm_interactive.wav"
+dest_files=["res://.godot/imported/panel_4.2_mmm_interactive.wav-db30215875ba109f71487bedefe7d36e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

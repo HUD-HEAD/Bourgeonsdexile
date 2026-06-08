@@ -12,7 +12,6 @@ fade_in_time = 0.5
 fade_out_time = 0.5
 waiting_time = 0.5
 background = NodePath("Background2")
-is_scene_transition = true
 
 [node name="Background2" type="TextureRect" parent="." unique_id=1476471481]
 z_index = 102

@@ -11,3 +11,6 @@ func _ready() -> void:
 
 func change_music():
 	AudioManager.play_music(music_name)
+
+func stop_music():
+	AudioManager.stop_music()

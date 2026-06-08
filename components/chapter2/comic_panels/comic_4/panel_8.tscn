@@ -2,7 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://b8e1nu8kgtaht" path="res://graphics/chapter2/comics/comic4/framecontractions/7.png" id="1_vq423"]
 [ext_resource type="PackedScene" uid="uid://c7of5l5s248sl" path="res://components/chapter2/contractions/contraction_circle/contraction_circle.tscn" id="2_vux10"]
+[ext_resource type="AudioStream" uid="uid://celeq1b7cu3ts" path="res://audio/chapter2/ambient/comic 4/panel_4.14_pain_sound_interactive.wav" id="3_0nm0r"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="3_vux10"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="4_u1omq"]
+[ext_resource type="AudioStream" uid="uid://davoiv46jrwnl" path="res://audio/chapter2/ambient/comic 4/panel_4.15_baby_&_nana_sound.wav" id="5_0p4wx"]
+[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="6_0p4wx"]
+[ext_resource type="Script" uid="uid://oqhhwb6aug4h" path="res://components/utils/comics/chapter_ender.gd" id="8_01wm6"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="8_mgm6y"]
 
 [sub_resource type="Animation" id="Animation_vux10"]
 length = 0.001
@@ -21,10 +27,10 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_vq423"]
 resource_name = "default"
-length = 4.0
+length = 11.0
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/path = NodePath("Blackout:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
@@ -33,6 +39,65 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Audio/TriggerSfxOnClick")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_sfx"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Audio/AudioMusicTransition")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3, 10.95),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"stop_music"
+}, {
+"args": [],
+"method": &"change_music"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ChapterEnder")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.05),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"trigger_scene_transition"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Audio/TriggerLoopZone")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"trigger_loop"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vux10"]
@@ -50,6 +115,8 @@ texture = ExtResource("1_vq423")
 position = Vector2(60, -13.5)
 scale = Vector2(2, 2)
 node_to_enable = NodePath("../AnimationPlayer")
+play_sfx = true
+stream = ExtResource("3_0nm0r")
 
 [node name="Blackout" type="Node2D" parent="." unique_id=1642997845]
 visible = false
@@ -94,3 +161,30 @@ autoplay = &"default"
 script = ExtResource("3_vux10")
 anim_player = NodePath("../AnimationPlayer")
 metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="Audio" type="Node" parent="." unique_id=535399714]
+
+[node name="TriggerSfxOnClick" type="Node" parent="Audio" unique_id=134956075]
+script = ExtResource("4_u1omq")
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("5_0p4wx")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=905083858]
+script = ExtResource("6_0p4wx")
+music_name = 2401
+trigger_on_enter_zone = false
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=256807503]
+script = ExtResource("8_mgm6y")
+loop_name = 2403
+loop_mode = 1
+start_loop_on_enter_screen = false
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="ChapterEnder" type="Node" parent="." unique_id=1098449593]
+script = ExtResource("8_01wm6")
+chapter_index = 1
+metadata/_custom_type_script = "uid://oqhhwb6aug4h"

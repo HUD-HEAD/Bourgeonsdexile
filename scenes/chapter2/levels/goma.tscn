@@ -676,11 +676,11 @@ loop_mode = 2
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [node name="TriggerLoopZone_steps2" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1640128641]
-position = Vector2(7925, 303)
-rect = Rect2(-10, -10, 80, 74)
+position = Vector2(7892, 219)
+rect = Rect2(-10, -68, 927, 192)
 script = ExtResource("66_idrs3")
 loop_name = 2103
-loop_mode = 1
+loop_mode = 3
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="." unique_id=734422288]
