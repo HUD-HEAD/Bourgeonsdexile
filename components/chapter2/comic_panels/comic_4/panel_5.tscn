@@ -3,8 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://dubwjd322ehj8" path="res://graphics/chapter2/comics/comic4/framecontractions/4.png" id="1_0d466"]
 [ext_resource type="Texture2D" uid="uid://bvsowyigikf23" path="res://graphics/chapter2/comics/comic4/framecontractions/5.png" id="2_sqrfm"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="5_ldi3y"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="6_ldi3y"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="6_ry0rc"]
+[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="6_sqrfm"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="7_c42hg"]
+[ext_resource type="AudioStream" uid="uid://cdjnxbo5efoo8" path="res://audio/chapter2/ambient/comic 4/panel_4.5_4.9_4.13_pain_sound_interactive.wav" id="7_ry0rc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ldi3y"]
 animations = [{
@@ -41,3 +44,17 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1929783327]
 shape = SubResource("RectangleShape2D_4sw8q")
+
+[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=1627556537 node_paths=PackedStringArray("clickables")]
+script = ExtResource("6_ldi3y")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("7_ry0rc")
+linear_volume = 1.3
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
+[node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=1090756294]
+script = ExtResource("6_sqrfm")
+loop_name = 2401
+metadata/_custom_type_script = "uid://brda7473wfj1v"

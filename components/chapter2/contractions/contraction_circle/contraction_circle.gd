@@ -11,10 +11,16 @@ var min_radius : float
 @export var handle : Node2D
 @export var drag_rotate : DraggableRotate
 
+@export_group("Sound")
+@export var play_sfx: bool = false
+var sfx_played: bool = false
+@export var stream: AudioStream
+@export var linear_volume: float = 1
 
 func _ready() -> void:
 	node_to_enable.process_mode = Node.PROCESS_MODE_DISABLED
 	min_radius = circle.radius
+	sfx_played = false
 
 func _process(delta: float) -> void:
 	if drag_rotate.dragging :
@@ -23,6 +29,10 @@ func _process(delta: float) -> void:
 		
 		handle.position.y = circle.radius
 		
+		if !sfx_played:
+			sfx_played= true
+			AudioManager.play_audio_stream(stream, linear_volume)
+			
 	if circle.radius >= max_radius:
 		disable()
 
