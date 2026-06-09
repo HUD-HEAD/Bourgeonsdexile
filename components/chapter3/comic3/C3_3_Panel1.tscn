@@ -1,9 +1,16 @@
 [gd_scene format=3 uid="uid://cm1b7vgqmiyby"]
 
 [ext_resource type="Texture2D" uid="uid://cxr3hif05q11c" path="res://graphics/chapter3/comics/comic3/socialworker.png" id="1_sj8qh"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_d7sdj"]
 
 [node name="C33Panel1" type="Node2D" unique_id=1800611031]
 
 [node name="Socialworker" type="Sprite2D" parent="." unique_id=972873342]
 position = Vector2(2, -2)
 texture = ExtResource("1_sj8qh")
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=342042615]
+script = ExtResource("2_d7sdj")
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1404595436]

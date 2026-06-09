@@ -100,7 +100,7 @@ panels = [NodePath("../Panels/PanelDoctors"), NodePath("../Panels/PanelDoctors12
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=849983846]
 position = Vector2(35649, 596)
 script = ExtResource("20_u5654")
-next_scene = "uid://ctau0miqtmbj2"
+next_scene = "uid://c7v7368h5n57f"
 
 [node name="CheckpointController" type="Node" parent="." unique_id=1708548725]
 script = ExtResource("19_ma0sg")

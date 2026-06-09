@@ -1,8 +1,15 @@
 [gd_scene format=3 uid="uid://d1k46kr3djyp"]
 
 [ext_resource type="Texture2D" uid="uid://de1t2jxq50xl" path="res://components/chapter3/comic3/framereading.png" id="1_wi5le"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_ny7kf"]
 
 [node name="PanelReading" type="Node2D" unique_id=652350790]
 
 [node name="Framereading" type="Sprite2D" parent="." unique_id=193292660]
 texture = ExtResource("1_wi5le")
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=861236887]
+script = ExtResource("2_ny7kf")
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1084473453]

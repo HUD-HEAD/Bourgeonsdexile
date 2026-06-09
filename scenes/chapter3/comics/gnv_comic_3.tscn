@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cpmykfqut1qex" path="res://components/chapter3/comic3/C3_3_Panel4.tscn" id="13_1jcxn"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="14_1jcxn"]
 [ext_resource type="PackedScene" uid="uid://v70tkjsqc01b" path="res://components/chapter3/comic3/C3_3_Panel5.tscn" id="14_h0n83"]
+[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="15_h0n83"]
 [ext_resource type="PackedScene" uid="uid://ciedovdbed85e" path="res://components/chapter3/comic3/C3_3_Panel6.tscn" id="15_q26rv"]
 [ext_resource type="PackedScene" uid="uid://bjpisg46n2tpb" path="res://components/chapter3/comic3/C3_3_Panel7.tscn" id="16_xhsn2"]
 [ext_resource type="PackedScene" uid="uid://cudd3kgt36aqv" path="res://components/chapter3/comic3/C3_3_Panel8.tscn" id="17_xhsn2"]
@@ -72,8 +73,9 @@ position = Vector2(18261, 0)
 [node name="C33Panel7" parent="Panels" unique_id=175912677 instance=ExtResource("19_xgelu")]
 position = Vector2(20480, 0)
 
-[node name="PanelPanner" type="Node" parent="." unique_id=1650562923]
+[node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("21_2yq1v")
+panels = [NodePath("../Panels/C33Panel8"), NodePath("../Panels/C33Panel9"), NodePath("../Panels/PanelReading"), NodePath("../Panels/C33Panel1"), NodePath("../Panels/C33Panel2"), NodePath("../Panels/C33Panel3"), NodePath("../Panels/C33Panel4"), NodePath("../Panels/C33Panel5"), NodePath("../Panels/C33Panel6"), NodePath("../Panels/C33Panel7"), NodePath("../SceneEnder")]
 
 [node name="UI" parent="." unique_id=1829896958 instance=ExtResource("22_463pp")]
 
@@ -83,3 +85,8 @@ script = ExtResource("21_2yq1v")
 script = ExtResource("14_1jcxn")
 chapter = 2
 comic = 16
+
+[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1628058061]
+position = Vector2(22596, 596)
+script = ExtResource("15_h0n83")
+next_scene = "uid://bewuaqd6css6q"

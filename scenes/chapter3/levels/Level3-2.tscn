@@ -1,3 +1,37 @@
 [gd_scene format=3 uid="uid://2ogwn12qlycr"]
 
+[ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_jv2u6"]
+[ext_resource type="PackedScene" uid="uid://dy84a73ucflwu" path="res://components/chapter3/main_characters/zlata.tscn" id="2_0xeah"]
+[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="3_q0nn3"]
+
 [node name="Level31" type="Node2D" unique_id=2125939091]
+
+[node name="Bg" type="Sprite2D" parent="." unique_id=6113399]
+texture = ExtResource("1_jv2u6")
+centered = false
+
+[node name="Bg2" type="Sprite2D" parent="." unique_id=108551981]
+position = Vector2(1594, 0)
+texture = ExtResource("1_jv2u6")
+centered = false
+
+[node name="Zlata" parent="." unique_id=700974070 instance=ExtResource("2_0xeah")]
+position = Vector2(467, 970)
+scale = Vector2(2.0799963, 2.0799963)
+
+[node name="Camera2D" type="Camera2D" parent="Zlata" unique_id=937718987]
+position = Vector2(0, -233)
+scale = Vector2(0.99999994, 0.99999994)
+offset = Vector2(500, 0)
+limit_top = 0
+limit_right = 7360
+limit_bottom = 1080
+
+[node name="MarkerBubbleSpawn" type="Marker2D" parent="Zlata" unique_id=5867330]
+position = Vector2(48.147186, -249.4505)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1294251435]
+position = Vector2(2665, 596)
+script = ExtResource("3_q0nn3")
+next_scene = "uid://d4cccbwuwp1rh"
