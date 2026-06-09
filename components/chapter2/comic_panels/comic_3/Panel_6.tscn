@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://f4ai0d3wgts4" path="res://graphics/chapter2/comics/comic3/frameflashbacks/4.png" id="6_bey2t"]
 [ext_resource type="Texture2D" uid="uid://dafm75oifk1lh" path="res://graphics/chapter2/comics/comic3/frameflashbacks/3.png" id="7_vgwfd"]
 [ext_resource type="Texture2D" uid="uid://lpdkpv0ttrj2" path="res://graphics/chapter2/comics/comic3/frameflashbacks/2.png" id="8_jgrrl"]
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="9_x5v3o"]
 [ext_resource type="Texture2D" uid="uid://byml288v3jb6w" path="res://graphics/chapter2/comics/comic3/frameflashbacks/bby.png" id="10_imcbi"]
 [ext_resource type="Texture2D" uid="uid://0so7be3p24r7" path="res://graphics/chapter2/comics/comic3/frameflashbacks/bigcontraction.png" id="12_faedh"]
 [ext_resource type="Texture2D" uid="uid://cxij4r3n3o6nv" path="res://graphics/chapter2/comics/comic3/frameflashbacks/couplebby.png" id="13_y1cfd"]
@@ -19,6 +18,8 @@
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="17_y1cfd"]
 [ext_resource type="AudioStream" uid="uid://cq4csvvwec2q7" path="res://audio/chapter2/ambient/comic 3/panel_3.11_screaming_sound.wav" id="18_bwywc"]
 [ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="19_bwywc"]
+[ext_resource type="PackedScene" uid="uid://xrhjayy04y7b" path="res://components/chapter2/contractions/contraction_wobble/contraction_wobble.tscn" id="20_2love"]
+[ext_resource type="Script" uid="uid://b53lydy2nagvh" path="res://components/chapter2/contractions/contraction_wobble/contraction_trigger.gd" id="21_vperd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xjtdg"]
 radius = 480.24265
@@ -192,6 +193,18 @@ tracks/13/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("ContractionTrigger:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_x5v3o"]
@@ -421,6 +434,18 @@ tracks/17/keys = {
 "method": &"change_music"
 }]
 }
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("ContractionTrigger:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 21.266666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xwc27"]
 _data = {
@@ -498,11 +523,6 @@ texture = ExtResource("8_jgrrl")
 [node name="1" type="Sprite2D" parent="." unique_id=1571084251]
 texture = ExtResource("1_k0goi")
 
-[node name="TransitionerPassive" type="Node" parent="." unique_id=484397848 node_paths=PackedStringArray("anim_player")]
-script = ExtResource("9_x5v3o")
-anim_player = NodePath("../AnimationPlayer")
-metadata/_custom_type_script = "uid://u4636s8oa5d0"
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1579479527]
 
 [node name="AudioContainer" type="Node" parent="." unique_id=461208160]
@@ -533,3 +553,10 @@ script = ExtResource("19_bwywc")
 music_name = 2301
 trigger_on_enter_zone = false
 metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="ContractionController" parent="." unique_id=948422643 instance=ExtResource("20_2love")]
+
+[node name="ContractionTrigger" type="VisibleOnScreenNotifier2D" parent="." unique_id=985540832 node_paths=PackedStringArray("contraction_controller")]
+visible = false
+script = ExtResource("21_vperd")
+contraction_controller = NodePath("../ContractionController")
