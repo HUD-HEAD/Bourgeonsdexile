@@ -53,7 +53,7 @@ position = Vector2(-46, 215)
 texture = ExtResource("7_p4fqx")
 
 [node name="Camion2" type="Sprite2D" parent="Visuals" unique_id=1535899176]
-position = Vector2(-637, 439)
+position = Vector2(956, 439)
 scale = Vector2(0.32, 0.32)
 texture = ExtResource("8_m07mj")
 offset = 0.5
@@ -81,7 +81,7 @@ scale = Vector2(1.605, 1.605)
 texture = ExtResource("7_p4fqx")
 
 [node name="Camion3" type="Sprite2D" parent="Visuals" unique_id=1156265125]
-position = Vector2(855, 457)
+position = Vector2(-595, 457)
 scale = Vector2(0.32, 0.32)
 texture = ExtResource("9_proip")
 offset = 1.0
