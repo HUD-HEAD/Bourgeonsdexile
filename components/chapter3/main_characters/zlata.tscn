@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dy84a73ucflwu"]
+
+[ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/chapter1/main_characters/jungle_woman.tscn" id="1_34xh4"]
+[ext_resource type="SpriteFrames" uid="uid://dfxgw5rh4banl" path="res://components/chapter3/main_characters/zlata_sprite_frames.tres" id="2_w7bd5"]
+
+[node name="Zlata" unique_id=700974070 instance=ExtResource("1_34xh4")]
+
+[node name="AnimSprite" parent="." index="0" unique_id=689873547]
+sprite_frames = ExtResource("2_w7bd5")
+frame_progress = 0.0

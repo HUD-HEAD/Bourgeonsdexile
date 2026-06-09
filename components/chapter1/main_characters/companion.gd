@@ -14,11 +14,8 @@ func _ready() -> void:
 	else :
 		_stop_walking()
 	
-	if path_follow != null:
-		walk_along_path = true
-		offset_from_model = self.path_follow.progress - model.path_follow.progress
-	else:
-		offset_from_model = self.global_position.x - model.global_position.x
+	walk_along_path = path_follow != null
+	offset_from_model = _compute_offset()
 
 func _process(delta: float) -> void:
 	if follow_model:
@@ -30,6 +27,18 @@ func _process(delta: float) -> void:
 	else:
 		#HACK Could/should instead make separate script for queuing people
 		super(delta)
+
+func rejoin_model() -> Signal:
+	var time_to_walk : float = (offset_from_model - _compute_offset())/float(WALK_SPEED)
+	#print_debug(time_to_walk)
+	_start_walking()
+	return get_tree().create_timer(time_to_walk).timeout
+
+func _compute_offset() -> float:
+	if walk_along_path :
+		return self.path_follow.progress - model.path_follow.progress
+	else:
+		return self.global_position.x - model.global_position.x
 
 
 func _start_walking():

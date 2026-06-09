@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bv8h3s13wsgfo" path="res://graphics/chapter3/comics/comic3/exam/bg.png" id="1_ah0e4"]
 [ext_resource type="Texture2D" uid="uid://d2pjq4k1saqah" path="res://graphics/chapter3/comics/comic3/exam/pen.png" id="2_sejeo"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="3_0c638"]
 
 [node name="C33Panel1" type="Node2D" unique_id=1800611031]
 
@@ -12,3 +13,9 @@ texture = ExtResource("1_ah0e4")
 [node name="Pen" type="Sprite2D" parent="." unique_id=1483304641]
 position = Vector2(537, -53)
 texture = ExtResource("2_sejeo")
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=1756369501]
+script = ExtResource("3_0c638")
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=995982538]

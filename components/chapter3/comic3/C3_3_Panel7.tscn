@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bjpisg46n2tpb"]
 
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="1_7jyva"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_uiukp"]
 font_size = 50
 font_color = Color(0, 0, 0, 1)
@@ -13,3 +15,9 @@ offset_right = 774.0
 offset_bottom = 402.0
 text = "MOVIL PHONE"
 label_settings = SubResource("LabelSettings_uiukp")
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=51209014]
+script = ExtResource("1_7jyva")
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1156759783]

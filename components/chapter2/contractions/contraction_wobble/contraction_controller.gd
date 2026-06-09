@@ -5,6 +5,8 @@ class_name ContractionController extends Node
 
 @export var contraction_overlay : CanvasItem
 
+const SOOTHE_ACCELERATOR : float = 2
+
 func _ready() -> void:
 	for sp in shader_params:
 		shader_mat.set_shader_parameter(sp.name, sp.curr_val)
@@ -12,7 +14,7 @@ func _ready() -> void:
 #TODO need to fix in shader Speed adjustment looing like "rewind"
 func soothe_contraction(delta):
 	for sp in shader_params:
-		var new_val = move_toward(sp.curr_val, sp.min_val, delta)
+		var new_val = move_toward(sp.curr_val, sp.min_val, delta*(sp.max_val-sp.min_val)*SOOTHE_ACCELERATOR)
 		shader_mat.set_shader_parameter(sp.name, new_val)
 		sp.curr_val = new_val
 

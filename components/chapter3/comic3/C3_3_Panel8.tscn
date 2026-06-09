@@ -1,9 +1,16 @@
 [gd_scene format=3 uid="uid://cudd3kgt36aqv"]
 
 [ext_resource type="Texture2D" uid="uid://ddaamgfg2qpfl" path="res://graphics/chapter3/comics/comic3/pierogi/pierogi.png" id="1_dj46o"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_rcyhn"]
 
 [node name="C33Panel1" type="Node2D" unique_id=1800611031]
 
 [node name="Pierogi" type="Sprite2D" parent="." unique_id=549834714]
 position = Vector2(-1, 0)
 texture = ExtResource("1_dj46o")
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=1732337141]
+script = ExtResource("2_rcyhn")
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=257576506]

@@ -1,9 +1,16 @@
 [gd_scene format=3 uid="uid://b4lixqemjmn7a"]
 
 [ext_resource type="Texture2D" uid="uid://bhewyojqcr2c7" path="res://graphics/chapter3/comics/comic2/worry/worry.png" id="1_w2fc6"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_qjtl7"]
 
 [node name="C32Panel1" type="Node2D" unique_id=942978313]
 
 [node name="Worry" type="Sprite2D" parent="." unique_id=1622745961]
 position = Vector2(2, -6)
 texture = ExtResource("1_w2fc6")
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=1811952974]
+script = ExtResource("2_qjtl7")
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=719314175]

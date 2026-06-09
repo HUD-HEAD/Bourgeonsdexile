@@ -4,7 +4,7 @@ extends Node2D
 @export var speed : float = 1.0
 
 var base_pos_y : float
-var offset : float = 0.0
+@export var offset : float = 0.0
 
 func _ready() -> void:
 	base_pos_y = position.y

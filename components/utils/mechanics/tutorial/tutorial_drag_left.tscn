@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://dyfndyhgc808n"]
+
+[ext_resource type="Script" uid="uid://2es1qplqra2o" path="res://components/utils/mechanics/tutorial/tutorial_trigger.gd" id="1_u446y"]
+[ext_resource type="Texture2D" uid="uid://cs0wxphp7odeo" path="res://graphics/ui/cursor/dragginghand.png" id="2_xlc1d"]
+
+[sub_resource type="Animation" id="Animation_sm0cq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_kd4j5"]
+resource_name = "hint"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1.36, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-200, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sm0cq"]
+_data = {
+&"RESET": SubResource("Animation_sm0cq"),
+&"hint": SubResource("Animation_kd4j5")
+}
+
+[node name="TutorialDragLeft" type="Node2D" unique_id=1104291269 node_paths=PackedStringArray("anim_player", "visuals", "visible_notifier")]
+modulate = Color(1, 1, 1, 0.49803922)
+script = ExtResource("1_u446y")
+anim_player = NodePath("AnimationPlayer")
+visuals = NodePath("Visuals")
+visible_notifier = NodePath("VisibleOnScreenNotifier2D")
+
+[node name="Visuals" type="Node2D" parent="." unique_id=1205911136]
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals" unique_id=1119684075]
+texture = ExtResource("2_xlc1d")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=41409370]
+libraries/ = SubResource("AnimationLibrary_sm0cq")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1153990128]

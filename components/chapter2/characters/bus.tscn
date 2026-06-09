@@ -7,6 +7,8 @@
 [ext_resource type="Script" uid="uid://cvlenn1q1qyrk" path="res://components/chapter2/characters/rotator.gd" id="5_cn30k"]
 [ext_resource type="Texture2D" uid="uid://cq4oebmiej7bw" path="res://graphics/chapter2/levels/desert/separatedbus/wheel2.png" id="6_ilylu"]
 [ext_resource type="Texture2D" uid="uid://b6rk6np2twi31" path="res://graphics/chapter2/levels/desert/separatedbus/shadow.png" id="7_p4fqx"]
+[ext_resource type="Texture2D" uid="uid://cuf1vofnap5qh" path="res://graphics/chapter2/levels/desert/separatedbus/camion2.png" id="8_m07mj"]
+[ext_resource type="Texture2D" uid="uid://ufxqwa3gorkc" path="res://graphics/chapter2/levels/desert/separatedbus/camion3.png" id="9_proip"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uu4gm"]
 size = Vector2(1545, 367)
@@ -15,28 +17,7 @@ size = Vector2(1545, 367)
 script = ExtResource("1_e61wx")
 char_area = NodePath("Area2D")
 move_speed = 800.0
-visuals = NodePath("Bus")
-
-[node name="Bus" type="Sprite2D" parent="." unique_id=1589932159]
-texture = ExtResource("2_m07mj")
-script = ExtResource("3_proip")
-amplitude = 20.0
-speed = 5.0
-
-[node name="Wheel1" type="Sprite2D" parent="Bus" unique_id=1321947491]
-position = Vector2(-379, 150)
-texture = ExtResource("4_voyh7")
-script = ExtResource("5_cn30k")
-
-[node name="Wheel2" type="Sprite2D" parent="Bus" unique_id=1030157116]
-position = Vector2(383, 148)
-texture = ExtResource("6_ilylu")
-script = ExtResource("5_cn30k")
-
-[node name="Shadow" type="Sprite2D" parent="Bus" unique_id=1298887155]
-show_behind_parent = true
-position = Vector2(-46, 215)
-texture = ExtResource("7_p4fqx")
+visuals = NodePath("Visuals")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=60382203]
 position = Vector2(5, -142)
@@ -47,3 +28,82 @@ input_pickable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1904925766]
 position = Vector2(-49.5, 143.5)
 shape = SubResource("RectangleShape2D_uu4gm")
+
+[node name="Visuals" type="Node2D" parent="." unique_id=973948120]
+
+[node name="Bus" type="Sprite2D" parent="Visuals" unique_id=1589932159]
+texture = ExtResource("2_m07mj")
+script = ExtResource("3_proip")
+amplitude = 20.0
+speed = 5.0
+
+[node name="Wheel1" type="Sprite2D" parent="Visuals/Bus" unique_id=1321947491]
+position = Vector2(-379, 150)
+texture = ExtResource("4_voyh7")
+script = ExtResource("5_cn30k")
+
+[node name="Wheel2" type="Sprite2D" parent="Visuals/Bus" unique_id=1030157116]
+position = Vector2(383, 148)
+texture = ExtResource("6_ilylu")
+script = ExtResource("5_cn30k")
+
+[node name="Shadow" type="Sprite2D" parent="Visuals/Bus" unique_id=1298887155]
+show_behind_parent = true
+position = Vector2(-46, 215)
+texture = ExtResource("7_p4fqx")
+
+[node name="Camion2" type="Sprite2D" parent="Visuals" unique_id=1535899176]
+position = Vector2(-637, 439)
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("8_m07mj")
+offset = 0.5
+script = ExtResource("3_proip")
+amplitude = 30.0
+speed = 5.0
+offset = 0.5
+
+[node name="Wheel1" type="Sprite2D" parent="Visuals/Camion2" unique_id=20275225]
+position = Vector2(-612.5, 317.1875)
+scale = Vector2(3.125, 3.125)
+texture = ExtResource("4_voyh7")
+script = ExtResource("5_cn30k")
+
+[node name="Wheel2" type="Sprite2D" parent="Visuals/Camion2" unique_id=722727216]
+position = Vector2(937.5, 275)
+scale = Vector2(3.125, 3.125)
+texture = ExtResource("6_ilylu")
+script = ExtResource("5_cn30k")
+
+[node name="Shadow" type="Sprite2D" parent="Visuals/Camion2" unique_id=2063902560]
+show_behind_parent = true
+position = Vector2(-3.1250877, 506.25003)
+scale = Vector2(1.605, 1.605)
+texture = ExtResource("7_p4fqx")
+
+[node name="Camion3" type="Sprite2D" parent="Visuals" unique_id=1156265125]
+position = Vector2(855, 457)
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("9_proip")
+offset = 1.0
+script = ExtResource("3_proip")
+amplitude = 20.0
+speed = 5.0
+offset = 1.0
+
+[node name="Wheel1" type="Sprite2D" parent="Visuals/Camion3" unique_id=1326381358]
+position = Vector2(-681.25, 548.4375)
+scale = Vector2(4.078125, 4.078125)
+texture = ExtResource("4_voyh7")
+script = ExtResource("5_cn30k")
+
+[node name="Wheel2" type="Sprite2D" parent="Visuals/Camion3" unique_id=1986973449]
+position = Vector2(1046.8755, 490.625)
+scale = Vector2(4.078125, 4.078125)
+texture = ExtResource("6_ilylu")
+script = ExtResource("5_cn30k")
+
+[node name="Shadow" type="Sprite2D" parent="Visuals/Camion3" unique_id=1222233073]
+show_behind_parent = true
+position = Vector2(71.874916, 768.75)
+scale = Vector2(2.01, 2.01)
+texture = ExtResource("7_p4fqx")

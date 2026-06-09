@@ -46,12 +46,13 @@ position = Vector2(5350, 0)
 position = Vector2(7682, 0)
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=849983846]
-position = Vector2(34433, 596)
+position = Vector2(9779, 596)
 script = ExtResource("20_8wlj1")
-next_scene = "uid://s3spdg0qqc77"
+next_scene = "uid://2ogwn12qlycr"
 
-[node name="PanelPanner" type="Node" parent="." unique_id=1650562923]
+[node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("21_t5b7w")
+panels = [NodePath("../Panels/C32Panel1"), NodePath("../Panels/C32Panel2"), NodePath("../Panels/C32Panel3"), NodePath("../SceneEnder")]
 
 [node name="UI" parent="." unique_id=1829896958 instance=ExtResource("22_u4ovr")]
 

@@ -17,21 +17,21 @@ texture = ExtResource("3_rofvx")
 [node name="VisibleOnScreenEnabler2D" parent="ScrollingBackground/PanNode/Background/AutomaticPanner" parent_id_path=PackedInt32Array(231777281, 1343872761) index="0" unique_id=574415259]
 position = Vector2(-120, 0)
 
-[node name="JungleWoman" parent="ScrollingBackground" unique_id=700974070 instance=ExtResource("3_jfo1i")]
-position = Vector2(-397, 290)
-script = null
-
-[node name="AnimSprite" parent="ScrollingBackground/JungleWoman" index="0" unique_id=689873547]
-autoplay = "walking"
-
 [node name="JungleWoman2" parent="ScrollingBackground" unique_id=582263270 instance=ExtResource("3_jfo1i")]
-position = Vector2(-497, 290)
+position = Vector2(-397, 290)
 script = null
 
 [node name="AnimSprite" parent="ScrollingBackground/JungleWoman2" index="0" unique_id=689873547]
 sprite_frames = ExtResource("4_rofvx")
 autoplay = "walking"
 frame_progress = 0.0
+
+[node name="JungleWoman" parent="ScrollingBackground" unique_id=700974070 instance=ExtResource("3_jfo1i")]
+position = Vector2(-497, 290)
+script = null
+
+[node name="AnimSprite" parent="ScrollingBackground/JungleWoman" index="0" unique_id=689873547]
+autoplay = "walking"
 
 [node name="JungleWoman3" parent="ScrollingBackground" unique_id=1177839373 instance=ExtResource("3_jfo1i")]
 position = Vector2(-595, 290)
@@ -52,6 +52,6 @@ metadata/_custom_type_script = "uid://brda7473wfj1v"
 rect = Rect2(-760, -462, 1645, 898)
 
 [editable path="ScrollingBackground"]
-[editable path="ScrollingBackground/JungleWoman"]
 [editable path="ScrollingBackground/JungleWoman2"]
+[editable path="ScrollingBackground/JungleWoman"]
 [editable path="ScrollingBackground/JungleWoman3"]

@@ -1,9 +1,16 @@
 [gd_scene format=3 uid="uid://ctnyqrfovdjxg"]
 
 [ext_resource type="Texture2D" uid="uid://cxgmspxndooqh" path="res://graphics/chapter3/comics/comic3/frameflyer.png" id="1_oahkv"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_tkarc"]
 
 [node name="C33Panel1" type="Node2D" unique_id=1800611031]
 
 [node name="Frameflyer" type="Sprite2D" parent="." unique_id=632563079]
 position = Vector2(-1, -2)
 texture = ExtResource("1_oahkv")
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=445543058]
+script = ExtResource("2_tkarc")
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=496010278]
