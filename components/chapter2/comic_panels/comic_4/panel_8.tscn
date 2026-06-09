@@ -3,9 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://b8e1nu8kgtaht" path="res://graphics/chapter2/comics/comic4/framecontractions/7.png" id="1_vq423"]
 [ext_resource type="PackedScene" uid="uid://c7of5l5s248sl" path="res://components/chapter2/contractions/contraction_circle/contraction_circle.tscn" id="2_vux10"]
 [ext_resource type="AudioStream" uid="uid://celeq1b7cu3ts" path="res://audio/chapter2/ambient/comic 4/panel_4.14_pain_sound_interactive.wav" id="3_0nm0r"]
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="3_vux10"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="4_u1omq"]
+[ext_resource type="VideoStream" uid="uid://bjsdsfjpio5ow" path="res://video/ch2_video_intro_zoom.ogv" id="4_xxijd"]
 [ext_resource type="AudioStream" uid="uid://davoiv46jrwnl" path="res://audio/chapter2/ambient/comic 4/panel_4.15_baby_&_nana_sound.wav" id="5_0p4wx"]
+[ext_resource type="Texture2D" uid="uid://mlkekce8m3rj" path="res://graphics/chapter2/comics/comic4/framevideo/video copia.png" id="5_ql723"]
 [ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="6_0p4wx"]
 [ext_resource type="Script" uid="uid://oqhhwb6aug4h" path="res://components/utils/comics/chapter_ender.gd" id="8_01wm6"]
 [ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="8_mgm6y"]
@@ -24,21 +25,74 @@ tracks/0/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BeforeContraction:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AfterContraction:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AfterContraction/VideoCopia:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AfterContraction/VideoStreamPlayer:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_vq423"]
 resource_name = "default"
-length = 11.0
+length = 20.0
+markers = [{
+"color": Color(1, 1, 1, 1),
+"name": &"after_blackout",
+"time": 5.0
+}]
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("Blackout:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [false, true]
+"values": [false, true, false]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -78,7 +132,7 @@ tracks/3/path = NodePath("ChapterEnder")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.05),
+"times": PackedFloat32Array(19.133333),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -99,6 +153,68 @@ tracks/4/keys = {
 "method": &"trigger_loop"
 }]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("BeforeContraction:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AfterContraction:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AfterContraction/VideoStreamPlayer")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(5.9666667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play"
+}]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AfterContraction/VideoCopia:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(6.01, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AfterContraction/VideoStreamPlayer:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(6, 7.02),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vux10"]
 _data = {
@@ -108,13 +224,15 @@ _data = {
 
 [node name="Panel8" type="Node2D" unique_id=2046092439]
 
-[node name="15" type="Sprite2D" parent="." unique_id=2116017028]
+[node name="BeforeContraction" type="Node2D" parent="." unique_id=1035944176]
+
+[node name="15" type="Sprite2D" parent="BeforeContraction" unique_id=2116017028]
 texture = ExtResource("1_vq423")
 
-[node name="ContractionCircle" parent="." unique_id=1677856602 node_paths=PackedStringArray("node_to_enable") instance=ExtResource("2_vux10")]
+[node name="ContractionCircle" parent="BeforeContraction" unique_id=1677856602 node_paths=PackedStringArray("node_to_enable") instance=ExtResource("2_vux10")]
 position = Vector2(60, -13.5)
 scale = Vector2(2, 2)
-node_to_enable = NodePath("../AnimationPlayer")
+node_to_enable = NodePath("../../AnimationPlayer")
 play_sfx = true
 stream = ExtResource("3_0nm0r")
 
@@ -151,16 +269,32 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
+[node name="AfterContraction" type="Node2D" parent="." unique_id=1909522387]
+visible = false
+
+[node name="VideoCopia" type="Sprite2D" parent="AfterContraction" unique_id=1414491576]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_ql723")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="AfterContraction" unique_id=313850674]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("4_xxijd")
+volume_db = -80.0
+
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1223474245]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=386885887]
 libraries/ = SubResource("AnimationLibrary_vux10")
 autoplay = &"default"
-
-[node name="TransitionerPassive" type="Node" parent="." unique_id=313047952 node_paths=PackedStringArray("anim_player")]
-script = ExtResource("3_vux10")
-anim_player = NodePath("../AnimationPlayer")
-metadata/_custom_type_script = "uid://u4636s8oa5d0"
 
 [node name="Audio" type="Node" parent="." unique_id=535399714]
 
@@ -188,3 +322,5 @@ metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 script = ExtResource("8_01wm6")
 chapter_index = 1
 metadata/_custom_type_script = "uid://oqhhwb6aug4h"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=10966170]
