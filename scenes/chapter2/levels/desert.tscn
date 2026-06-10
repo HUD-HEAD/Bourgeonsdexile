@@ -275,7 +275,7 @@ position = Vector2(-15.5, 122.5)
 position = Vector2(-127.5, -5.5)
 
 [node name="PuzzleHole" type="Node2D" parent="Puzzles" unique_id=1907762738]
-position = Vector2(60266, 0)
+position = Vector2(62516, 0)
 
 [node name="Hole5" type="Sprite2D" parent="Puzzles/PuzzleHole" unique_id=1884555083]
 position = Vector2(559, 1210.0001)
