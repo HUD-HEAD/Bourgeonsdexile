@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d0y8ngax3np53" path="res://graphics/chapter2/levels/goma/environment/background/cabin.png" id="2_7nh63"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="3_aqeuv"]
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="5_6tu1w"]
+[ext_resource type="Script" uid="uid://c8c80cw43axdp" path="res://components/chapter2/levels/goma-nakivale/desert_bus/desert_area.gd" id="5_e5jvt"]
 [ext_resource type="Texture2D" uid="uid://o84b45ex1xtm" path="res://graphics/chapter2/levels/tangrampuzzles/4/1_4line.png" id="5_kaq42"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="5_ogvpn"]
 [ext_resource type="Texture2D" uid="uid://blrpjfcod1aam" path="res://graphics/chapter2/levels/tangrampuzzles/4/1_4.png" id="6_i4ccv"]
@@ -57,6 +58,7 @@
 [ext_resource type="Texture2D" uid="uid://bs2hy56605dns" path="res://graphics/chapter2/levels/tangrampuzzles/7/7_7line.png" id="52_fabr7"]
 [ext_resource type="Texture2D" uid="uid://dudd5digrr5rb" path="res://graphics/chapter2/levels/tangrampuzzles/7/8_7line.png" id="53_j4odh"]
 [ext_resource type="Texture2D" uid="uid://wai0kjwxbksg" path="res://graphics/chapter2/levels/tangrampuzzles/7/8_7.png" id="54_owsko"]
+[ext_resource type="Script" uid="uid://l4jpb75n4okb" path="res://components/chapter2/levels/goma-nakivale/desert_bus/desert_controller.gd" id="58_eqw4s"]
 [ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="58_k4v74"]
 [ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="59_l3fw1"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="60_88lvr"]
@@ -105,6 +107,7 @@ obstacle = NodePath("../Obstacle")
 [node name="Obstacle" parent="Puzzles/Puzzle1" unique_id=310843140 instance=ExtResource("6_ogvpn")]
 position = Vector2(-239, 0)
 collision_mask = 2
+script = ExtResource("5_e5jvt")
 
 [node name="DragDropPuzzle" parent="Puzzles/Puzzle1" unique_id=1767003607 instance=ExtResource("7_swud2")]
 position = Vector2(-958, 629)
@@ -219,6 +222,7 @@ obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Puzzles/Puzzle2" unique_id=1913969595 instance=ExtResource("6_ogvpn")]
 collision_mask = 2
+script = ExtResource("5_e5jvt")
 
 [node name="Puzzle2" parent="Puzzles/Puzzle2" unique_id=422744521 instance=ExtResource("13_ul5of")]
 position = Vector2(-651, 593)
@@ -381,6 +385,7 @@ obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Puzzles/Puzzle4" unique_id=1954108570 instance=ExtResource("6_ogvpn")]
 collision_mask = 2
+script = ExtResource("5_e5jvt")
 
 [node name="Puzzle3" parent="Puzzles/Puzzle4" unique_id=2043914400 instance=ExtResource("14_25xat")]
 position = Vector2(-1171.9999, 948)
@@ -450,6 +455,7 @@ obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Puzzles/Puzzle6" unique_id=2058141431 instance=ExtResource("6_ogvpn")]
 collision_mask = 2
+script = ExtResource("5_e5jvt")
 
 [node name="Puzzle1" parent="Puzzles/Puzzle6" unique_id=1941159865 instance=ExtResource("12_otqxj")]
 position = Vector2(106, 957)
@@ -500,6 +506,7 @@ obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Puzzles/PuzzleWindowBus" unique_id=1129667608 instance=ExtResource("6_ogvpn")]
 collision_mask = 2
+script = ExtResource("5_e5jvt")
 
 [node name="DragDropPuzzle4" parent="Puzzles/PuzzleWindowBus" unique_id=2122580379 instance=ExtResource("11_tn746")]
 z_index = 1
@@ -584,8 +591,10 @@ texture = ExtResource("53_j4odh")
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzles/PuzzleWindowBus/DragDropPuzzle4/BuildingBlocks/PuzzlePiece8/Draggable" parent_id_path=PackedInt32Array(2122580379, 379497506, 2116105691) index="1" unique_id=991932022]
 texture = ExtResource("54_owsko")
 
-[node name="Bus" parent="." unique_id=1136971117 instance=ExtResource("25_iym2s")]
+[node name="Bus" parent="." unique_id=1136971117 node_paths=PackedStringArray("desert_controller") instance=ExtResource("25_iym2s")]
 position = Vector2(1168, 883)
+is_desert_bus = true
+desert_controller = NodePath("../DesertController")
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Bus" unique_id=218413136]
 position = Vector2(-422, -360)
@@ -609,6 +618,11 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bus/SpawnTrigger" unique_id=1398344228]
 position = Vector2(-46, 4)
 shape = SubResource("RectangleShape2D_uu4gm")
+
+[node name="DesertController" type="Node" parent="." unique_id=441189883 node_paths=PackedStringArray("background_reference")]
+script = ExtResource("58_eqw4s")
+background_reference = NodePath("../Background/DesertTiled")
+metadata/_custom_type_script = "uid://l4jpb75n4okb"
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1352526241]
 position = Vector2(127429, 645)
