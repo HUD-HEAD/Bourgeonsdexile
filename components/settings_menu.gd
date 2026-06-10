@@ -14,9 +14,9 @@ class_name SettingsController extends CanvasLayer
 @onready var resolution_container = $TextureRect/MenuButton
 @onready var resolution_popup: PopupMenu = resolution_container.get_popup()
 
-@onready var resolution_icon: Sprite2D = $TextureRect/MenuButton/ResolutionIcon
+@onready var resolution_icon: Label = $TextureRect/MenuButton/ResolutionIcon
 
-@export var resolution_textures: Array[Texture2D]
+@export var resolution_textures: Array[String]
 
 const CURSOR_MIN = 0.5
 const CURSOR_MAX = 2.0
@@ -65,7 +65,7 @@ func _set_initial_values():
 	cursor_slider.value = player_preferences.cursor_size
 	fullscreen_check.button_pressed = player_preferences.is_fullscreen
 	vsync_check.button_pressed = player_preferences.is_vsync
-	resolution_icon.set_texture(resolution_textures[_get_resolution_texture_index(player_preferences.resolution)])
+	resolution_icon.text = (resolution_textures[_get_resolution_texture_index(player_preferences.resolution)])
 	
 	# Configurar rango del cursor slider
 	cursor_slider.min_value = CURSOR_MIN
@@ -75,6 +75,8 @@ func _set_initial_values():
 	save_popup_values()
 
 func save_popup_values():
+	resolution_popup.add_theme_font_size_override("font_size", 64)
+	
 	for i in range(resolution_popup.item_count):
 		var popup_data = {
 			"id" = resolution_popup.get_item_id(i),
@@ -160,7 +162,7 @@ func _on_select_resolution_dropdown():
 func _on_popup_menu_value_change(id: int) -> void:
 	player_preferences.resolution = id
 	var resolution_sprite_index = _get_resolution_texture_index(id)
-	resolution_icon.set_texture(resolution_textures[resolution_sprite_index])
+	resolution_icon.text = (resolution_textures[resolution_sprite_index])
 	match id:
 		360:
 			_apply_resolution_value("360")

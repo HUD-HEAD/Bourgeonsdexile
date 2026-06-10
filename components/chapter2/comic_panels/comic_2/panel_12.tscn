@@ -6,8 +6,9 @@
 [ext_resource type="Material" uid="uid://dan4raduiqle3" path="res://scenes/prototyping/lut/mat_lut_nightcamp.tres" id="4_m2n67"]
 [ext_resource type="Script" uid="uid://bxdi7w06ul2j0" path="res://components/utils/comics/pan_modulate.gd" id="6_0bv3e"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="6_11q3p"]
-[ext_resource type="AudioStream" uid="uid://dv1xt2acgbr2m" path="res://audio/chapter2/ambient/comic 2/panel_2.12_night_day_bus_sound_interactive.wav" id="7_0bv3e"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="7_vorlf"]
+[ext_resource type="AudioStream" uid="uid://cj087vstnn8o7" path="res://audio/chapter2/ambient/comic 2/panel_2.12_night_day_sound.wav" id="8_0bv3e"]
+[ext_resource type="AudioStream" uid="uid://cdpmtaw11xj5r" path="res://audio/chapter2/ambient/comic 2/panel_2.12_bus_sound.wav" id="9_11q3p"]
 
 [sub_resource type="Animation" id="Animation_7wvfg"]
 length = 0.001
@@ -38,6 +39,20 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [-1980.0, -120.0]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TriggerSfx_bus")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_sfx"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7wvfg"]
@@ -92,5 +107,12 @@ script = ExtResource("7_vorlf")
 clickables = [NodePath("..")]
 play_sfx_once = true
 use_audio_stream = true
-stream = ExtResource("7_0bv3e")
+stream = ExtResource("8_0bv3e")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
+[node name="TriggerSfx_bus" type="Node" parent="." unique_id=1475908206]
+script = ExtResource("7_vorlf")
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("9_11q3p")
 metadata/_custom_type_script = "uid://b7avucygxykbp"

@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="6_sqrfm"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="7_c42hg"]
 [ext_resource type="AudioStream" uid="uid://cdjnxbo5efoo8" path="res://audio/chapter2/ambient/comic 4/panel_4.5_4.9_4.13_pain_sound_interactive.wav" id="7_ry0rc"]
+[ext_resource type="Script" uid="uid://ccgnalbw7s5yu" path="res://components/utils/audio/audio integration nodes/audio_stop_sfx_zone.gd" id="9_ry0rc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ldi3y"]
 animations = [{
@@ -58,3 +59,9 @@ metadata/_custom_type_script = "uid://b7avucygxykbp"
 script = ExtResource("6_sqrfm")
 loop_name = 2401
 metadata/_custom_type_script = "uid://brda7473wfj1v"
+
+[node name="StopSfx" type="VisibleOnScreenNotifier2D" parent="." unique_id=1856749340]
+position = Vector2(-195, 5)
+rect = Rect2(-62, -54, 111, 100)
+script = ExtResource("9_ry0rc")
+metadata/_custom_type_script = "uid://ccgnalbw7s5yu"
