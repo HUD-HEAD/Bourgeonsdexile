@@ -10,6 +10,7 @@ extends Node
 @export var linear_volume: float = 1
 @export var min_pitch: float = 1
 @export var max_pitch: float = 1
+@export var save_sfx_id: bool = false
 
 func _ready() -> void:
 	for clickable in clickables:
@@ -17,7 +18,7 @@ func _ready() -> void:
 
 func play_sfx():
 	if use_audio_stream:
-		AudioManager.play_audio_stream(stream, linear_volume, min_pitch, max_pitch)
+		AudioManager.play_audio_stream(stream, linear_volume, min_pitch, max_pitch, save_sfx_id)
 	else:
 		AudioManager.play_sfx(sfx)
 	

@@ -30,8 +30,8 @@ metadata/_custom_type_script = "uid://u4636s8oa5d0"
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=751118568]
 
 [node name="AudioSfxZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=857613075]
-position = Vector2(419, 7)
-rect = Rect2(-550, -255, 1089, 542)
+position = Vector2(782, -11)
+rect = Rect2(-384, -255, 923, 542)
 script = ExtResource("5_1ra1h")
 use_audio_stream = true
 stream = ExtResource("6_sf72s")

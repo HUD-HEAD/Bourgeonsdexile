@@ -30,6 +30,8 @@ var last_music_player: int = -1
 var last_music_playing: AudioConfiguration.music_type = AudioConfiguration.music_type.c2_1_starting_theme
 var last_walking_loop: AudioConfiguration.loop_type = AudioConfiguration.loop_type.none
 
+var last_sfx_id: int
+
 const LOOP_POOL_SIZE = 6
 
 # ── Structure ────────────────────────────────────────
@@ -156,11 +158,16 @@ func play_sfx(key: AudioConfiguration.sfx_type):
 	
 	polyphonic_player.play_stream(stream, 0, linear_to_db(volume), pitch, 0 as AudioServer.PlaybackType, "Sfx")
 
-func play_audio_stream(stream: AudioStream, volume: float = 1, min_pitch: float = 1, max_pitch: float = 1):
+func play_audio_stream(stream: AudioStream, volume: float = 1, min_pitch: float = 1, max_pitch: float = 1, save_sfx_id: bool = false):
 	var pitch: float = min_pitch
 	if min_pitch != max_pitch:
 		pitch = randf_range(min_pitch, max_pitch)
-	polyphonic_player.play_stream(stream, 0, linear_to_db(volume), pitch, 0 as AudioServer.PlaybackType, "Sfx")
+	var id = polyphonic_player.play_stream(stream, 0, linear_to_db(volume), pitch, 0 as AudioServer.PlaybackType, "Sfx")
+	if save_sfx_id:
+		last_sfx_id = id
+
+func stop_last_sfx_saved():
+	polyphonic_player.stop_stream(last_sfx_id)
 
 func play_loop(key: AudioConfiguration.loop_type):
 	var loop: AudioStreamPlayer = _get_free_loop(key)
@@ -296,6 +303,11 @@ func _stop_loops():
 func _stop_sfx():
 	polyphonic_player.stop()
 	polyphonic_player.start()
+
+func _stop_all_sfx():
+	sfx_player.stop()
+	sfx_player.play()
+	polyphonic_player = sfx_player.get_stream_playback()
 
 #endregion
 

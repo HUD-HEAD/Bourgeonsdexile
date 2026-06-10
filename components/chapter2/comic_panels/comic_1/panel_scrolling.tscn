@@ -8,6 +8,7 @@
 [ext_resource type="SpriteFrames" uid="uid://8wnk5pl0cnpd" path="res://components/chapter2/characters/nephew_sprite_frames.tres" id="7_bjdqe"]
 [ext_resource type="Texture2D" uid="uid://dkm7pj8kxf23p" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow3.png" id="7_p0wi7"]
 [ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="8_rbhmf"]
+[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="9_wdx3e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vodvp"]
 animations = [{
@@ -78,5 +79,11 @@ rect = Rect2(-10, -10, 262, 254)
 script = ExtResource("8_rbhmf")
 loop_name = 2100
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=2128439701]
+rect = Rect2(-362, -81, 1046, 192)
+script = ExtResource("9_wdx3e")
+loop_name = 2103
+metadata/_custom_type_script = "uid://brda7473wfj1v"
 
 [editable path="ScrollingBackground"]
