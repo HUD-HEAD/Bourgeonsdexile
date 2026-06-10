@@ -628,7 +628,7 @@ metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 position = Vector2(1074, 573)
 rect = Rect2(-10, -10, 688, 68)
 script = ExtResource("59_l3fw1")
-music_name = 2200
+music_name = 2103
 metadata/_custom_type_script = "uid://2aadlm17sdsf"
 
 [node name="CheckpointController" type="Node" parent="." unique_id=125355349]

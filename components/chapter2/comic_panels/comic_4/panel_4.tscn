@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://b53lydy2nagvh" path="res://components/chapter2/contractions/contraction_wobble/contraction_trigger.gd" id="4_5ewns"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="4_qo8b1"]
 [ext_resource type="AudioStream" uid="uid://dg8telg0p3nrb" path="res://audio/chapter2/ambient/comic 4/panel_4.6_4.7_4.8_4.10_4.11_4.12_circle_sound_interactive.wav" id="5_vedhh"]
+[ext_resource type="Script" uid="uid://ccgnalbw7s5yu" path="res://components/utils/audio/audio integration nodes/audio_stop_sfx_zone.gd" id="6_qo8b1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1qtt0"]
 size = Vector2(1920, 1080)
@@ -32,4 +33,11 @@ clickables = [NodePath("..")]
 play_sfx_once = true
 use_audio_stream = true
 stream = ExtResource("5_vedhh")
+linear_volume = 1.3
+save_sfx_id = true
 metadata/_custom_type_script = "uid://b7avucygxykbp"
+
+[node name="StopSfx" type="VisibleOnScreenNotifier2D" parent="." unique_id=1431239375]
+rect = Rect2(-62, -54, 111, 100)
+script = ExtResource("6_qo8b1")
+metadata/_custom_type_script = "uid://ccgnalbw7s5yu"
