@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cg1eoj5oqtjqa"]
 
 [ext_resource type="Texture2D" uid="uid://byli3w3ems21c" path="res://graphics/chapter2/comics/comic3/blur/blur.png" id="1_51puc"]
+[ext_resource type="Script" uid="uid://bfp1vdskof5jh" path="res://components/utils/puzzles/swipe_controller.gd" id="1_kqnbt"]
 [ext_resource type="Texture2D" uid="uid://qmukd60trff6" path="res://graphics/chapter2/comics/comic3/blur/unblur.png" id="2_kd4q4"]
 [ext_resource type="Shader" uid="uid://rnrjeipt84wq" path="res://scenes/prototyping/swipe_demo/alpha_mask.gdshader" id="2_uksmt"]
 [ext_resource type="Script" uid="uid://b6lghrcp5hl6o" path="res://scenes/prototyping/swipe_demo/brush_helper.gd" id="5_kqnbt"]
@@ -25,7 +26,15 @@ height = 500
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
-[node name="SwipeDemo" type="Node2D" unique_id=1530184277]
+[node name="SwipePuzzle" type="Node2D" unique_id=1530184277]
+
+[node name="SwipeController" type="VisibleOnScreenNotifier2D" parent="." unique_id=2105092970 node_paths=PackedStringArray("viewport", "blur_image")]
+position = Vector2(260, 113)
+rect = Rect2(-10, -10, 1497, 852)
+script = ExtResource("1_kqnbt")
+viewport = NodePath("../SubViewport")
+blur_image = NodePath("../Blur")
+metadata/_custom_type_script = "uid://bfp1vdskof5jh"
 
 [node name="Blur" type="Sprite2D" parent="." unique_id=2009020356]
 texture = ExtResource("1_51puc")
@@ -36,9 +45,11 @@ material = SubResource("ShaderMaterial_dpdtw")
 texture = ExtResource("2_kd4q4")
 centered = false
 
-[node name="BrushHelper" type="Node2D" parent="." unique_id=1432388107 node_paths=PackedStringArray("brush")]
+[node name="BrushHelper" type="Node2D" parent="." unique_id=1432388107 node_paths=PackedStringArray("brush", "viewport", "container")]
 script = ExtResource("5_kqnbt")
-brush = NodePath("../SubViewport/Brush")
+brush = NodePath("../SubViewport/Container/Brush")
+viewport = NodePath("../SubViewport")
+container = NodePath("../SubViewport/Container")
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=1098068814]
 transparent_bg = true
@@ -46,5 +57,7 @@ handle_input_locally = false
 size = Vector2i(1920, 1080)
 render_target_clear_mode = 1
 
-[node name="Brush" type="Sprite2D" parent="SubViewport" unique_id=598870061]
+[node name="Container" type="Node2D" parent="SubViewport" unique_id=788294040]
+
+[node name="Brush" type="Sprite2D" parent="SubViewport/Container" unique_id=598870061]
 texture = SubResource("GradientTexture2D_uksmt")
