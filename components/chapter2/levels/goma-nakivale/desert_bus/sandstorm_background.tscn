@@ -1,5 +1,67 @@
 [gd_scene format=3 uid="uid://b68v4cqwkgmx0"]
 
+[ext_resource type="Texture2D" uid="uid://b7dstqduo0v3c" path="res://components/chapter2/levels/goma-nakivale/desert_bus/cloud_background.png" id="1_vb7n5"]
+[ext_resource type="Material" uid="uid://b4l7jjdlmddhn" path="res://background_desert_particle.tres" id="2_apfe8"]
+
+[sub_resource type="Curve" id="Curve_vb7n5"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.71637434, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_apfe8"]
+curve = SubResource("Curve_vb7n5")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_apfe8"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(15000, 700, 1)
+angle_min = 1.0728835e-05
+angle_max = 360.00003
+direction = Vector3(-1, 0, 0)
+spread = 0.0
+initial_velocity_min = 700.0
+initial_velocity_max = 800.0
+gravity = Vector3(0, 0, 0)
+color = Color(0.77, 0.123200014, 0.123200014, 1)
+alpha_curve = SubResource("CurveTexture_apfe8")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bq72f"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(15000, 700, 1)
+angle_min = 1.0728835e-05
+angle_max = 360.00003
+direction = Vector3(-1, 0, 0)
+spread = 0.0
+initial_velocity_min = 700.0
+initial_velocity_max = 800.0
+gravity = Vector3(0, 0, 0)
+color = Color(0.84, 0.29022, 0.1932, 1)
+alpha_curve = SubResource("CurveTexture_apfe8")
+
 [node name="SandstormBackground" type="Node2D" unique_id=459258114]
+z_index = -50
+z_as_relative = false
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1135206040]
+amount = 700
+texture = ExtResource("1_vb7n5")
+lifetime = 8.0
+process_material = ExtResource("2_apfe8")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="." unique_id=2024388620]
+amount = 700
+texture = ExtResource("1_vb7n5")
+lifetime = 8.0
+process_material = SubResource("ParticleProcessMaterial_apfe8")
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="." unique_id=2033740756]
+amount = 700
+texture = ExtResource("1_vb7n5")
+lifetime = 8.0
+process_material = SubResource("ParticleProcessMaterial_bq72f")
+
+[node name="GPUParticles2D4" type="GPUParticles2D" parent="." unique_id=551442125]
+amount = 700
+texture = ExtResource("1_vb7n5")
+lifetime = 8.0
+process_material = ExtResource("2_apfe8")

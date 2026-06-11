@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://nmnugin8465q"]
 
 [ext_resource type="Texture2D" uid="uid://uur6ugvylijq" path="res://components/chapter2/levels/goma-nakivale/desert_bus/dust_red_12px_2.png" id="1_h7bd4"]
+[ext_resource type="PackedScene" uid="uid://b68v4cqwkgmx0" path="res://components/chapter2/levels/goma-nakivale/desert_bus/sandstorm_background.tscn" id="2_yipbk"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fgw2s"]
 particle_flag_align_y = true
@@ -25,3 +26,6 @@ texture = ExtResource("1_h7bd4")
 lifetime = 2.0
 speed_scale = 2.5
 process_material = SubResource("ParticleProcessMaterial_fgw2s")
+
+[node name="SandstormBackground" parent="." unique_id=459258114 instance=ExtResource("2_yipbk")]
+position = Vector2(0, -50)
