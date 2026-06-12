@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 		contraction_controller.soothe_contraction(delta*0.1)
 		
 		if contraction_controller._check_soothed() :
-			#HACKs
+			#HACK
 			process_mode = Node.PROCESS_MODE_DISABLED
 			contraction_controller.stop_contraction()
 			SignalManager.show_next_button.emit()

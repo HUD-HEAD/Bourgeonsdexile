@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfhtbx8fn6cdx"
-path="res://.godot/imported/bglong.png-e3e9be4f567a1e80e083d07d9a00def8.ctex"
+uid="uid://cjrrsr1gx208"
+path="res://.godot/imported/dust_background_3.png-66c13469d6f6c8fee1be733181a52f4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter3/levels/bigavenue/bglong.png"
-dest_files=["res://.godot/imported/bglong.png-e3e9be4f567a1e80e083d07d9a00def8.ctex"]
+source_file="res://components/chapter2/levels/goma-nakivale/desert_bus/dust_background_3.png"
+dest_files=["res://.godot/imported/dust_background_3.png-66c13469d6f6c8fee1be733181a52f4a.ctex"]
 
 [params]
 

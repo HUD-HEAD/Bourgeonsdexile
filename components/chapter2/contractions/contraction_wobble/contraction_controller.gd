@@ -20,13 +20,11 @@ func soothe_contraction(delta):
 
 
 func _check_soothed() -> bool:
-	var fully_soothed : bool = true
 	for sp in shader_params:
-		if sp.curr_val > sp.min_val:
-			fully_soothed = false
-			#print_debug(str(sp.name, " ",sp.curr_val, " " ,sp.min_val))
-			
-	return fully_soothed
+		if sp.curr_val <= sp.min_val:
+			return true
+	return false
+
 
 func trigger_contraction():
 	for sp in shader_params:

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u3821gox51mn"
-path="res://.godot/imported/bodabodaman.png-cf365506537007e81975ee0bb2eea5bb.ctex"
+uid="uid://b7dstqduo0v3c"
+path="res://.godot/imported/cloud_background.png-56d804a90b3b9682e81dead6e77aa327.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter2/levels/goma/bodabodaman.png"
-dest_files=["res://.godot/imported/bodabodaman.png-cf365506537007e81975ee0bb2eea5bb.ctex"]
+source_file="res://components/chapter2/levels/goma-nakivale/desert_bus/cloud_background.png"
+dest_files=["res://.godot/imported/cloud_background.png-56d804a90b3b9682e81dead6e77aa327.ctex"]
 
 [params]
 

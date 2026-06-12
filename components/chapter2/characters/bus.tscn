@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dkfqmwb4acl5k"]
 
-[ext_resource type="Script" uid="uid://cag8j8gn5a5kn" path="res://components/chapter2/characters/vehicle.gd" id="1_e61wx"]
+[ext_resource type="Script" uid="uid://5r0g3xyw34dn" path="res://components/chapter2/characters/desert_bus.gd" id="1_m07mj"]
 [ext_resource type="Texture2D" uid="uid://clala6idvmos3" path="res://graphics/chapter2/levels/desert/separatedbus/businside.png" id="2_m07mj"]
 [ext_resource type="Script" uid="uid://bwhw2o2u7v43i" path="res://components/utils/comics/vertical_sine_anim.gd" id="3_proip"]
 [ext_resource type="Texture2D" uid="uid://b2ipjbn25qct0" path="res://graphics/chapter2/levels/desert/separatedbus/wheel1.png" id="4_voyh7"]
@@ -14,7 +14,7 @@
 size = Vector2(1545, 367)
 
 [node name="Bus" type="Node2D" unique_id=1136971117 node_paths=PackedStringArray("char_area", "visuals")]
-script = ExtResource("1_e61wx")
+script = ExtResource("1_m07mj")
 char_area = NodePath("Area2D")
 move_speed = 800.0
 visuals = NodePath("Visuals")

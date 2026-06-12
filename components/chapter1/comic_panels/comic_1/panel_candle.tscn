@@ -22,21 +22,8 @@
 [ext_resource type="Texture2D" uid="uid://b070wr8hrmj8d" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_match/match_fire7.png" id="21_fg1k7"]
 [ext_resource type="Texture2D" uid="uid://8u2cymnoa30k" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_match/match_fire8.png" id="22_klx3m"]
 [ext_resource type="Texture2D" uid="uid://b3ldlcshyx6vy" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_match/match_fire9.png" id="23_vtse2"]
-[ext_resource type="Texture2D" uid="uid://1vth65eomjcq" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_feedbackcandle/feedbackcandle1.png" id="24_donto"]
 [ext_resource type="AudioStream" uid="uid://c1rrf6siqpn8u" path="res://audio/chapter1/ambient/PANEL_8_CANDLE.wav" id="24_pv5dd"]
 [ext_resource type="Texture2D" uid="uid://c6wbvvqav2h5c" path="res://graphics/chapter1/comics/comic1/panel_light_candle/match_nofire.png" id="24_pw80g"]
-[ext_resource type="Texture2D" uid="uid://6tfh6ph64vrr" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_feedbackcandle/feedbackcandle2.png" id="25_4klx2"]
-[ext_resource type="Texture2D" uid="uid://bfby2v64o86h1" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_feedbackcandle/feedbackcandle3.png" id="26_547b4"]
-[ext_resource type="Texture2D" uid="uid://rsst2padx5q" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_feedbackcandle/feedbackcandle4.png" id="27_guhgs"]
-[ext_resource type="Texture2D" uid="uid://5gxmecmbi1j4" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_feedbackcandle/feedbackcandle5.png" id="28_0ichg"]
-[ext_resource type="Texture2D" uid="uid://546pnh30c28x" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_feedbackcandle/feedbackcandle6.png" id="29_bibnv"]
-[ext_resource type="Texture2D" uid="uid://bql6hfn08dkx1" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_feedbackcandle/feedbackcandle7.png" id="30_p17nq"]
-[ext_resource type="Texture2D" uid="uid://ob21521lkv6n" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_feedbackcandle/feedbackcandle8.png" id="31_j42xp"]
-[ext_resource type="Texture2D" uid="uid://2jpel2hpv1" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_feedbackcandle/feedbackcandle9.png" id="32_lf1w1"]
-[ext_resource type="Texture2D" uid="uid://bkx3hicw07d7m" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_feedbackcandle/feedbackcandle10.png" id="33_1rla7"]
-[ext_resource type="Texture2D" uid="uid://bvuqdi07c7eld" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_feedbackcandle/feedbackcandle11.png" id="34_i6fpu"]
-[ext_resource type="Texture2D" uid="uid://djdnsar4brijy" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_feedbackcandle/feedbackcandle12.png" id="35_syqc2"]
-[ext_resource type="Texture2D" uid="uid://og00f0ved6xy" path="res://graphics/chapter1/comics/comic1/panel_light_candle/anim_feedbackcandle/feedbackcandle13.png" id="36_qfq35"]
 [ext_resource type="PackedScene" uid="uid://dw4guehdvtxka" path="res://components/utils/mechanics/tutorial/tutorial_drag_right.tscn" id="38_4klx2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pw80g"]
@@ -138,53 +125,6 @@ animations = [{
 }],
 "loop": false,
 "name": &"off",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_k4pwe"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("24_donto")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_4klx2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_547b4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_guhgs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_0ichg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_bibnv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_p17nq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_j42xp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("32_lf1w1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_1rla7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("34_i6fpu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_syqc2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("36_qfq35")
-}],
-"loop": true,
-"name": &"default",
 "speed": 5.0
 }]
 
@@ -348,13 +288,6 @@ shape = SubResource("RectangleShape2D_eyl0t")
 position = Vector2(-221, -39)
 sprite_frames = SubResource("SpriteFrames_ldxfp")
 autoplay = "default"
-
-[node name="FeedbackCandle" type="AnimatedSprite2D" parent="Candle/Match/Hand" unique_id=1694066717]
-position = Vector2(239, 155)
-scale = Vector2(0.5, 0.5)
-sprite_frames = SubResource("SpriteFrames_k4pwe")
-autoplay = "default"
-frame_progress = 0.04717231
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=726061850]
 libraries/ = SubResource("AnimationLibrary_roaln")

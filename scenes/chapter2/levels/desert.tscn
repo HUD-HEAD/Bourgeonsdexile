@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://tx1s43xa61vj" path="res://graphics/chapter2/levels/goma/environment/background/gomatiledbig.png" id="1_swud2"]
 [ext_resource type="Texture2D" uid="uid://d0y8ngax3np53" path="res://graphics/chapter2/levels/goma/environment/background/cabin.png" id="2_7nh63"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="3_aqeuv"]
+[ext_resource type="PackedScene" uid="uid://nmnugin8465q" path="res://components/chapter2/levels/goma-nakivale/desert_bus/sandstorm.tscn" id="3_syw4w"]
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="5_6tu1w"]
 [ext_resource type="Script" uid="uid://c8c80cw43axdp" path="res://components/chapter2/levels/goma-nakivale/desert_bus/desert_area.gd" id="5_e5jvt"]
 [ext_resource type="Texture2D" uid="uid://o84b45ex1xtm" path="res://graphics/chapter2/levels/tangrampuzzles/4/1_4line.png" id="5_kaq42"]
@@ -91,6 +92,9 @@ texture = ExtResource("2_7nh63")
 [node name="Theme" type="AudioStreamPlayer" parent="." unique_id=67967600]
 autoplay = true
 bus = &"Music"
+
+[node name="Sandstorm" parent="." unique_id=1971968963 instance=ExtResource("3_syw4w")]
+position = Vector2(97400, 262)
 
 [node name="Puzzles" type="Node2D" parent="." unique_id=161984896]
 
@@ -593,7 +597,6 @@ texture = ExtResource("54_owsko")
 
 [node name="Bus" parent="." unique_id=1136971117 node_paths=PackedStringArray("desert_controller") instance=ExtResource("25_iym2s")]
 position = Vector2(1168, 883)
-is_desert_bus = true
 desert_controller = NodePath("../DesertController")
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Bus" unique_id=218413136]

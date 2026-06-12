@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3kxl25pf3l8v"
-path="res://.godot/imported/level2correction.png-5b532b9a1b6c76446d6be9252fa3a4b9.ctex"
+uid="uid://cbxh0tf5l3pp4"
+path="res://.godot/imported/holdingbaby.png-0a322c7f3ae473c1fc478e415275a664.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter3/levels/bigavenue/level2correction.png"
-dest_files=["res://.godot/imported/level2correction.png-5b532b9a1b6c76446d6be9252fa3a4b9.ctex"]
+source_file="res://graphics/chapter3/comics/comic2/holdingbaby.png"
+dest_files=["res://.godot/imported/holdingbaby.png-0a322c7f3ae473c1fc478e415275a664.ctex"]
 
 [params]
 

@@ -18,8 +18,9 @@
 [ext_resource type="Texture2D" uid="uid://i0sh27jfa8i0" path="res://graphics/menus/settings/settingsAdrian/soundhigh.png" id="9_rrg86"]
 [ext_resource type="Texture2D" uid="uid://cic5r0nd0kjvy" path="res://graphics/menus/settings/settingsAdrian/reset.png" id="9_udegp"]
 [ext_resource type="Script" uid="uid://bbiqxr254bujx" path="res://components/utils/ui/auto_scale_component.gd" id="10_afkw7"]
+[ext_resource type="Texture2D" uid="uid://ds1gdssffhjo0" path="res://graphics/menus/settings/settingsAdrian/papers.png" id="14_5fu2g"]
 [ext_resource type="Texture2D" uid="uid://p4yqxm1eixov" path="res://graphics/menus/settings/settingsAdrian/fullscreen.png" id="16_udegp"]
-[ext_resource type="Texture2D" uid="uid://dvng8klu0ad87" path="res://graphics/menus/settings/3731553(1).png" id="18_10nm4"]
+[ext_resource type="Texture2D" uid="uid://brsf276kfi0nr" path="res://graphics/menus/settings/settingsAdrian/playmusic.png" id="19_hiabw"]
 [ext_resource type="Texture2D" uid="uid://djnowmdhye88v" path="res://graphics/menus/settings/texture.png" id="20_fs1xy"]
 [ext_resource type="FontFile" uid="uid://dp68wwjt2pqmg" path="res://graphics/ui/font/font_type.otf" id="27_2ibmv"]
 
@@ -64,14 +65,14 @@ texture = ExtResource("9_udegp")
 modulate_color = Color(1, 1, 1, 0.8627451)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2ibmv"]
-texture = ExtResource("18_10nm4")
+texture = ExtResource("14_5fu2g")
 modulate_color = Color(1, 1, 1, 0.78431374)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_asps2"]
-texture = ExtResource("18_10nm4")
+texture = ExtResource("14_5fu2g")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ffd5i"]
-texture = ExtResource("18_10nm4")
+texture = ExtResource("14_5fu2g")
 modulate_color = Color(1, 1, 1, 0.8627451)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_08gdp"]
@@ -220,7 +221,7 @@ anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -240.0
 offset_top = -541.795
-offset_right = 245.0
+offset_right = 237.0
 offset_bottom = -261.79498
 grow_horizontal = 2
 grow_vertical = 0
@@ -234,28 +235,32 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_afkw7")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_10nm4")
 theme_override_styles/hover = SubResource("StyleBoxTexture_fs1xy")
 item_count = 5
-popup/item_0/text = "640 x 360"
+popup/item_0/text = "                    640 X 360"
 popup/item_0/id = 360
-popup/item_1/text = "1280 x 720"
+popup/item_1/text = "                  1280 X 720"
 popup/item_1/id = 720
-popup/item_2/text = "1920 x 1080"
+popup/item_2/text = "                  1920 X 1080"
 popup/item_2/id = 1080
-popup/item_3/text = "2560 x 1440"
+popup/item_3/text = "                  2560 X 1440"
 popup/item_3/id = 2
-popup/item_4/text = "3840 x 2160"
+popup/item_4/text = "                  3840 X 2160"
 popup/item_4/id = 4
 script = ExtResource("10_afkw7")
 
 [node name="ResolutionIcon" type="Label" parent="TextureRect/MenuButton" unique_id=1515661737]
-layout_mode = 0
-offset_left = 25.5
-offset_top = 39.31665
-offset_right = 449.5
-offset_bottom = 235.98315
+custom_minimum_size = Vector2(477, 280)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 6.1035156e-05
+grow_horizontal = 2
+grow_vertical = 2
 text = "1920 x 1080"
 label_settings = SubResource("LabelSettings_2ibmv")
 horizontal_alignment = 1
 vertical_alignment = 1
+clip_text = true
 
 [node name="CreditsButton" type="Button" parent="TextureRect" unique_id=203228299]
 layout_mode = 1
@@ -365,23 +370,13 @@ texture = ExtResource("4_jjfif")
 
 [node name="MasterIconBig" type="Sprite2D" parent="." unique_id=1671223530]
 position = Vector2(1225, 174)
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("7_muhwa")
-
-[node name="SubMasterIconBig" type="Sprite2D" parent="MasterIconBig" unique_id=701271754]
-position = Vector2(120, 0)
-scale = Vector2(0.8333333, 0.8333333)
-texture = ExtResource("9_rrg86")
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("19_hiabw")
 
 [node name="MasterIconSmall" type="Sprite2D" parent="." unique_id=1528895144]
-position = Vector2(660, 175)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("8_g67jo")
-
-[node name="SubMasterIconSmall" type="Sprite2D" parent="MasterIconSmall" unique_id=1180856746]
-position = Vector2(50, 0)
-scale = Vector2(0.62499994, 0.62499994)
-texture = ExtResource("8_mcc4n")
+position = Vector2(691, 175)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("19_hiabw")
 
 [node name="MusicIconBig" type="Sprite2D" parent="." unique_id=1408104159]
 position = Vector2(1225, 307)
@@ -416,15 +411,17 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="BackGround" type="NinePatchRect" parent="CreditsContainer" unique_id=46832164]
-modulate = Color(0.19607843, 0.19607843, 0.19607843, 0.78431374)
+modulate = Color(0.24, 0.24, 0.24, 0.9411765)
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 459.0
-offset_top = 32.0
-offset_right = -461.0
-offset_bottom = 40.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -750.0
+offset_top = -513.0
+offset_right = 750.0
+offset_bottom = 490.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("20_fs1xy")
@@ -445,82 +442,60 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -300.0
-offset_top = 73.545
-offset_right = 300.0
-offset_bottom = 1821.545
+offset_left = -638.0
+offset_top = 56.0
+offset_right = 644.0
+offset_bottom = 1003.0
 grow_horizontal = 2
+theme_override_colors/scroll_hint_vertical_color = Color(0.22799999, 0.236, 0.24, 1)
 scroll_hint_mode = 2
 tile_scroll_hint = true
 
 [node name="Label" type="Label" parent="CreditsContainer/Credits" unique_id=675914694]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("27_2ibmv")
+theme_override_font_sizes/font_size = 18
 text = "BOURGEONS D'EXIL
 
-Creative Director
-Aida Navarro Redon
+Creative Director — Aida Navarro Redón
+Art Direction — Juana Miquel
+Illustration — Rosalía Armentoers · Sabela Álvarez
+Animation & Design — Léonie Courbat
+Programming — Claire Delhomme · Adrián Herrera Cosgaya
+Sound Design — alv adina
 
-Illustrator
-Juana Miquel
+Testimonial Coordinator & Mental Health Counselor — Swann Pichon
+Research & Consulting — Nora Doukkali Elamajidi
+Gynaecological Advisor — Dr. Caroline Bensky
+Midwife Advisor — Caterina Montagnoli
 
-Animator & Designer
-Leonie Courbat
+Video
+Chapters 1 & 3 — Maevia Griffiths
+Chapter 2 — [pendiente]
 
-Programmer
-Claire Delhomme
-Adrián Herrera Cosgaya
-
-Sound Designer
-Adina Garcia
-
-Testimonial Coordinator & Mental Health Counselor
-Swann Pichon
-
-Researcher & Consultant
-Nora Dukkali
-
-Gynaecological Advisor
-Caroline Bensky
-
-Midwife Advisor
-Caterina Montagnoli
-
+Trailer — Rio Bravo Trailers
+Marketing Consulting — Lucía Quijano
 ─────────────────────
+This project has been funded by the HES-SO Innovation Grant and developed at HEAD – Genève, with the invaluable collaboration of:
+Research Director — Anthony Masure
+Secretary of the Research Direction — Christelle Granite-Nobles
 
-This project has been funded by HES-SO Innovation Grant
-and developed at HEAD–Genève with the invaluable collaboration of:
-
-Anthony Masure
-Research Director
-
-Christelle Granite-Nobles
-Secretary of the Research Direction
-
-HEdS
-
+And the partnership of HEdS (Haute École de Santé)
 ─────────────────────
-
-This game is part of the FNS project
+Part of the FNS / SNSF project
 The Future of Humanitarian Design
-Architecture Group coordinated by:
-
-Javier Fernandez Contreras
-
+Architecture Design at HEAD coordinated by Javier Fernández Contreras
 ─────────────────────
-
 Partners
+ICRC — VR Lab · Melissa Kiehl (Project Manager)
+International Red Cross and Red Crescent Museum · Pascal Husmith (Director)
 
-ICRC — VR Lab
-Melissa Kiehl, Project Manager
-
-Museum of the Red Cross and Red Crescent
-Pascal Husmith, Director
-
-─────────────────────
-
-With the collaboration of:
-
+In collaboration with
 HUG — Hôpitaux Universitaires de Genève
-ONG GEFAM"
+association cefam
+─────────────────────
+Acknowledgments
+ Alejandra Rosales · Damien Greder · Pedro Torres
+
+© 2026 —"
 horizontal_alignment = 1
