@@ -73,6 +73,9 @@ func _set_initial_values():
 	cursor_slider.step = CURSOR_STEP
 	
 	save_popup_values()
+	
+	#Remove useless resolutions
+	_on_select_resolution_dropdown()
 
 func save_popup_values():
 	resolution_popup.add_theme_font_size_override("font_size", 64)
