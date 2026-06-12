@@ -4,7 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://cm1b7vgqmiyby" path="res://components/chapter3/comic3/C3_3_Panel1.tscn" id="2_8tp2s"]
 [ext_resource type="PackedScene" uid="uid://ctnyqrfovdjxg" path="res://components/chapter3/comic3/C3_3_Panel2.tscn" id="3_0yydu"]
 [ext_resource type="PackedScene" uid="uid://d1k46kr3djyp" path="res://components/chapter3/comic3/panel_reading.tscn" id="4_0yydu"]
+[ext_resource type="PackedScene" uid="uid://bg7m27mphdfy7" path="res://components/chapter3/comic3/C3_3_Panel13.tscn" id="12_xhsn2"]
 [ext_resource type="PackedScene" uid="uid://cpmykfqut1qex" path="res://components/chapter3/comic3/C3_3_Panel4.tscn" id="13_1jcxn"]
+[ext_resource type="PackedScene" uid="uid://d1c8ipuillbmb" path="res://components/chapter3/comic3/C3_3_Panel12.tscn" id="13_ej0hg"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="14_1jcxn"]
 [ext_resource type="PackedScene" uid="uid://v70tkjsqc01b" path="res://components/chapter3/comic3/C3_3_Panel5.tscn" id="14_h0n83"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="15_h0n83"]
@@ -62,7 +64,8 @@ position = Vector2(10920, 0)
 position = Vector2(13133, 0)
 
 [node name="C33Panel4" parent="Panels" unique_id=2046769291 instance=ExtResource("16_xhsn2")]
-position = Vector2(14796, 0)
+position = Vector2(14856.999, -11)
+scale = Vector2(0.76, 0.76)
 
 [node name="C33Panel5" parent="Panels" unique_id=666202683 instance=ExtResource("17_xhsn2")]
 position = Vector2(16473, 0)
@@ -72,6 +75,13 @@ position = Vector2(18261, 0)
 
 [node name="C33Panel7" parent="Panels" unique_id=175912677 instance=ExtResource("19_xgelu")]
 position = Vector2(20480, 0)
+
+[node name="C33Panel10" parent="Panels" unique_id=1572821537 instance=ExtResource("12_xhsn2")]
+position = Vector2(26593, -30)
+scale = Vector2(0.76, 0.76)
+
+[node name="C33Panel11" parent="Panels" unique_id=1156264135 instance=ExtResource("13_ej0hg")]
+position = Vector2(24367, -22)
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("21_2yq1v")
@@ -90,3 +100,6 @@ comic = 16
 position = Vector2(22596, 596)
 script = ExtResource("15_h0n83")
 next_scene = "uid://bewuaqd6css6q"
+
+[node name="C33Panel1" parent="." unique_id=1882704822 instance=ExtResource("13_1jcxn")]
+position = Vector2(28539, 493)

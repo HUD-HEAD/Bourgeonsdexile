@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cvypmwioryx3k"]
+
+[ext_resource type="Texture2D" uid="uid://c1dsr00eik0h7" path="res://graphics/chapter3/comics/comic3/phone_frames/phone_background_full2.png" id="1_rhyvx"]
+[ext_resource type="Texture2D" uid="uid://d14rpq132g50f" path="res://graphics/chapter3/comics/comic3/phone_frames/phone_zlata.png" id="2_v8na7"]
+[ext_resource type="Texture2D" uid="uid://dnaxhao3rvoxf" path="res://graphics/chapter3/comics/comic3/phone_frames/phone_background1.png" id="3_mw4ar"]
+
+[node name="C32Panel1" type="Node2D" unique_id=942978313]
+
+[node name="PhoneBackgroundFull2" type="Sprite2D" parent="." unique_id=628445338]
+position = Vector2(25.999985, 14.000008)
+scale = Vector2(0.397605, 0.3976049)
+texture = ExtResource("1_rhyvx")
+
+[node name="PhoneBackground1" type="Sprite2D" parent="." unique_id=228357155]
+position = Vector2(-6, -6)
+texture = ExtResource("3_mw4ar")
+
+[node name="PhoneZlata" type="Sprite2D" parent="." unique_id=83888910]
+position = Vector2(116, 101)
+texture = ExtResource("2_v8na7")

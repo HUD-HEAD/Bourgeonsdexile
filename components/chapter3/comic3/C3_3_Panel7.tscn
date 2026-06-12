@@ -1,23 +1,27 @@
 [gd_scene format=3 uid="uid://bjpisg46n2tpb"]
 
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="1_7jyva"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_uiukp"]
-font_size = 50
-font_color = Color(0, 0, 0, 1)
+[ext_resource type="Texture2D" uid="uid://dwi8td06o7chk" path="res://graphics/chapter3/comics/comic3/phone_frames/phone_background_full.png" id="2_444gc"]
+[ext_resource type="Texture2D" uid="uid://x87iq52wgrs4" path="res://graphics/chapter3/comics/comic3/phone_frames/phone_background3.png" id="3_y1pg1"]
+[ext_resource type="Texture2D" uid="uid://d14rpq132g50f" path="res://graphics/chapter3/comics/comic3/phone_frames/phone_zlata.png" id="4_13v3p"]
 
 [node name="C33Panel1" type="Node2D" unique_id=1800611031]
-
-[node name="Label" type="Label" parent="." unique_id=307442712]
-offset_left = -168.0
-offset_top = -30.0
-offset_right = 774.0
-offset_bottom = 402.0
-text = "MOVIL PHONE"
-label_settings = SubResource("LabelSettings_uiukp")
 
 [node name="TransitionerPassive" type="Node" parent="." unique_id=51209014]
 script = ExtResource("1_7jyva")
 metadata/_custom_type_script = "uid://u4636s8oa5d0"
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1156759783]
+
+[node name="PhoneBackgroundFull" type="Sprite2D" parent="." unique_id=1753140085]
+position = Vector2(-17.999985, 15.000001)
+scale = Vector2(0.4377018, 0.43770185)
+texture = ExtResource("2_444gc")
+
+[node name="PhoneBackground3" type="Sprite2D" parent="." unique_id=1575261460]
+position = Vector2(-52, 32)
+texture = ExtResource("3_y1pg1")
+
+[node name="PhoneZlata" type="Sprite2D" parent="." unique_id=2144403420]
+position = Vector2(74, 145)
+texture = ExtResource("4_13v3p")

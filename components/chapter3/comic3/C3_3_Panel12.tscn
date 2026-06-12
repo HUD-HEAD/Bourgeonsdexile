@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://d1c8ipuillbmb"]
+
+[ext_resource type="Texture2D" uid="uid://b026hibwaw0d6" path="res://graphics/chapter1/comics/comic4/framepaperwork/background.png" id="1_wmiu2"]
+[ext_resource type="Texture2D" uid="uid://csxv3n7gida3l" path="res://graphics/chapter3/comics/comic3/frame_folder/bluefolder1.png" id="2_k88ri"]
+[ext_resource type="Texture2D" uid="uid://cbht0rl1jvgpu" path="res://graphics/chapter3/comics/comic3/frame_folder/bluefolder2.png" id="3_ng0qo"]
+[ext_resource type="Texture2D" uid="uid://tvuwlh73x3fh" path="res://graphics/chapter3/comics/comic3/frame_folder/1.png" id="4_5aex6"]
+[ext_resource type="Texture2D" uid="uid://dig1h02aekl4m" path="res://graphics/chapter3/comics/comic3/frame_folder/3.png" id="5_68enu"]
+[ext_resource type="Texture2D" uid="uid://6dr27s5p3n03" path="res://graphics/chapter3/comics/comic3/frame_folder/4.png" id="6_78swe"]
+[ext_resource type="Texture2D" uid="uid://unpw2yiybgxk" path="res://graphics/chapter3/comics/comic3/frame_folder/5.png" id="7_kv1xu"]
+[ext_resource type="Texture2D" uid="uid://drbv35181p0y3" path="res://graphics/chapter3/comics/comic3/frame_folder/6.png" id="8_tup7h"]
+[ext_resource type="Texture2D" uid="uid://bxqyy533os66f" path="res://graphics/chapter3/comics/comic3/frame_folder/2.png" id="9_kahwj"]
+
+[node name="C33Panel1" type="Node2D" unique_id=1800611031]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1963036117]
+position = Vector2(2, 1)
+texture = ExtResource("1_wmiu2")
+
+[node name="Bluefolder1" type="Sprite2D" parent="." unique_id=1274024487]
+position = Vector2(114, 5)
+texture = ExtResource("2_k88ri")
+
+[node name="Bluefolder2" type="Sprite2D" parent="." unique_id=20027093]
+position = Vector2(593, -7)
+texture = ExtResource("3_ng0qo")
+
+[node name="1" type="Sprite2D" parent="." unique_id=510671844]
+position = Vector2(-485, 42)
+texture = ExtResource("4_5aex6")
+
+[node name="3" type="Sprite2D" parent="." unique_id=193644397]
+position = Vector2(-392, 90)
+texture = ExtResource("5_68enu")
+
+[node name="4" type="Sprite2D" parent="." unique_id=695029524]
+position = Vector2(-402, 22)
+texture = ExtResource("6_78swe")
+
+[node name="5" type="Sprite2D" parent="." unique_id=575009879]
+position = Vector2(-445, 52)
+texture = ExtResource("7_kv1xu")
+
+[node name="6" type="Sprite2D" parent="." unique_id=1769155156]
+position = Vector2(-473, 12)
+texture = ExtResource("8_tup7h")
+
+[node name="2" type="Sprite2D" parent="." unique_id=1190612270]
+position = Vector2(-412, 42)
+texture = ExtResource("9_kahwj")
