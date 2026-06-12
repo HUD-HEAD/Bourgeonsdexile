@@ -2,13 +2,36 @@
 
 [ext_resource type="Texture2D" uid="uid://b7dstqduo0v3c" path="res://components/chapter2/levels/goma-nakivale/desert_bus/cloud_background.png" id="1_vb7n5"]
 [ext_resource type="Material" uid="uid://b4l7jjdlmddhn" path="res://background_desert_particle.tres" id="2_apfe8"]
+[ext_resource type="Material" uid="uid://b4vcssl3njgh0" path="res://front_desert_particle.tres" id="3_bq72f"]
 
-[sub_resource type="Curve" id="Curve_vb7n5"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_apfe8"]
+load_path = "res://.godot/imported/cloud_background.png-56d804a90b3b9682e81dead6e77aa327.ctex"
+
+[sub_resource type="Curve" id="Curve_apfe8"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.71637434, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="CurveTexture" id="CurveTexture_apfe8"]
-curve = SubResource("Curve_vb7n5")
+[sub_resource type="CurveTexture" id="CurveTexture_bq72f"]
+curve = SubResource("Curve_apfe8")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jj6is"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(15000, 700, 1)
+angle_min = 1.0728835e-05
+angle_max = 360.00003
+direction = Vector3(-5, 0, 0)
+spread = 0.0
+initial_velocity_min = 950.0
+initial_velocity_max = 1000.0
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = -1.6093254e-05
+gravity = Vector3(0, 0, 0)
+scale_min = 0.79999995
+color = Color(1, 0.725, 0.45, 1)
+alpha_curve = SubResource("CurveTexture_bq72f")
+hue_variation_min = -2.2351742e-08
+hue_variation_max = -2.2351742e-08
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_apfe8"]
 particle_flag_disable_z = true
@@ -16,13 +39,18 @@ emission_shape = 3
 emission_box_extents = Vector3(15000, 700, 1)
 angle_min = 1.0728835e-05
 angle_max = 360.00003
-direction = Vector3(-1, 0, 0)
+direction = Vector3(-5, 0, 0)
 spread = 0.0
-initial_velocity_min = 700.0
-initial_velocity_max = 800.0
+initial_velocity_min = 950.0
+initial_velocity_max = 1000.0
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = -1.6093254e-05
 gravity = Vector3(0, 0, 0)
-color = Color(0.77, 0.123200014, 0.123200014, 1)
-alpha_curve = SubResource("CurveTexture_apfe8")
+scale_min = 0.79999995
+color = Color(0.92, 0.47993332, 0.27600002, 1)
+alpha_curve = SubResource("CurveTexture_bq72f")
+hue_variation_min = -2.2351742e-08
+hue_variation_max = -2.2351742e-08
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bq72f"]
 particle_flag_disable_z = true
@@ -30,38 +58,156 @@ emission_shape = 3
 emission_box_extents = Vector3(15000, 700, 1)
 angle_min = 1.0728835e-05
 angle_max = 360.00003
-direction = Vector3(-1, 0, 0)
+direction = Vector3(-5, 0, 0)
 spread = 0.0
-initial_velocity_min = 700.0
-initial_velocity_max = 800.0
+initial_velocity_min = 950.0
+initial_velocity_max = 1000.0
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = -1.6093254e-05
 gravity = Vector3(0, 0, 0)
-color = Color(0.84, 0.29022, 0.1932, 1)
-alpha_curve = SubResource("CurveTexture_apfe8")
+scale_min = 0.79999995
+color = Color(0.85, 0.53054166, 0.3825, 1)
+alpha_curve = SubResource("CurveTexture_bq72f")
+hue_variation_min = -2.2351742e-08
+hue_variation_max = -2.2351742e-08
+
+[sub_resource type="Curve" id="Curve_bq72f"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.7105264, 0.72196543), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_jj6is"]
+curve = SubResource("Curve_bq72f")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_24dul"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(15000, 700, 1)
+angle_min = 1.0728835e-05
+angle_max = 360.00003
+direction = Vector3(-5, 0, 0)
+spread = 0.0
+initial_velocity_min = 950.0
+initial_velocity_max = 1000.0
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = -1.6093254e-05
+gravity = Vector3(0, 0, 0)
+scale_min = 0.59999996
+scale_max = 0.79999995
+color = Color(0.92156863, 0.47843137, 0.27450982, 1)
+alpha_curve = SubResource("CurveTexture_jj6is")
+hue_variation_min = -2.2351742e-08
+hue_variation_max = -2.2351742e-08
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6rp4n"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(15000, 700, 1)
+angle_min = 1.0728835e-05
+angle_max = 360.00003
+direction = Vector3(-5, 0, 0)
+spread = 0.0
+initial_velocity_min = 950.0
+initial_velocity_max = 1000.0
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = -1.6093254e-05
+gravity = Vector3(0, 0, 0)
+scale_min = 0.59999996
+scale_max = 0.79999995
+color = Color(0.92941177, 0.53333336, 0.2509804, 1)
+alpha_curve = SubResource("CurveTexture_jj6is")
+hue_variation_min = -2.2351742e-08
+hue_variation_max = -2.2351742e-08
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_tc4kh"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(15000, 700, 1)
+angle_min = 1.0728835e-05
+angle_max = 360.00003
+direction = Vector3(-5, 0, 0)
+spread = 0.0
+initial_velocity_min = 950.0
+initial_velocity_max = 1000.0
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = -1.6093254e-05
+gravity = Vector3(0, 0, 0)
+scale_min = 0.59999996
+scale_max = 0.79999995
+color = Color(0.8509804, 0.5294118, 0.38431373, 1)
+alpha_curve = SubResource("CurveTexture_jj6is")
+hue_variation_min = -2.2351742e-08
+hue_variation_max = -2.2351742e-08
 
 [node name="SandstormBackground" type="Node2D" unique_id=459258114]
-z_index = -50
 z_as_relative = false
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1135206040]
-amount = 700
-texture = ExtResource("1_vb7n5")
-lifetime = 8.0
-process_material = ExtResource("2_apfe8")
+[node name="Background" type="Node2D" parent="." unique_id=655885200]
+z_index = -50
 
-[node name="GPUParticles2D2" type="GPUParticles2D" parent="." unique_id=2024388620]
-amount = 700
+[node name="GPUParticles2D4" type="GPUParticles2D" parent="Background" unique_id=1384603299]
+amount = 900
+texture = SubResource("CompressedTexture2D_apfe8")
+lifetime = 8.0
+speed_scale = 2.0
+process_material = SubResource("ParticleProcessMaterial_jj6is")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="Background" unique_id=842679394]
+amount = 1100
 texture = ExtResource("1_vb7n5")
 lifetime = 8.0
+speed_scale = 2.0
 process_material = SubResource("ParticleProcessMaterial_apfe8")
 
-[node name="GPUParticles2D3" type="GPUParticles2D" parent="." unique_id=2033740756]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Background" unique_id=1135206040]
+amount = 1100
+texture = ExtResource("1_vb7n5")
+lifetime = 8.0
+speed_scale = 2.0
+process_material = ExtResource("2_apfe8")
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="Background" unique_id=1617141988]
 amount = 700
 texture = ExtResource("1_vb7n5")
 lifetime = 8.0
+speed_scale = 2.0
 process_material = SubResource("ParticleProcessMaterial_bq72f")
 
-[node name="GPUParticles2D4" type="GPUParticles2D" parent="." unique_id=551442125]
-amount = 700
+[node name="Background2" type="Node2D" parent="." unique_id=1364865121]
+z_index = 99
+position = Vector2(0, 600)
+
+[node name="GPUParticles2D_front" type="GPUParticles2D" parent="Background2" unique_id=830555442]
+amount = 100
 texture = ExtResource("1_vb7n5")
 lifetime = 8.0
-process_material = ExtResource("2_apfe8")
+speed_scale = 2.0
+explosiveness = 0.6
+randomness = 0.4
+process_material = ExtResource("3_bq72f")
+
+[node name="GPUParticles2D_front2" type="GPUParticles2D" parent="Background2" unique_id=1550827852]
+amount = 100
+texture = ExtResource("1_vb7n5")
+lifetime = 8.0
+speed_scale = 2.0
+explosiveness = 0.6
+randomness = 0.4
+process_material = SubResource("ParticleProcessMaterial_24dul")
+
+[node name="GPUParticles2D_front3" type="GPUParticles2D" parent="Background2" unique_id=61104106]
+amount = 100
+texture = ExtResource("1_vb7n5")
+lifetime = 8.0
+speed_scale = 2.0
+explosiveness = 0.6
+randomness = 0.4
+process_material = SubResource("ParticleProcessMaterial_6rp4n")
+
+[node name="GPUParticles2D_front4" type="GPUParticles2D" parent="Background2" unique_id=373811720]
+amount = 100
+texture = ExtResource("1_vb7n5")
+lifetime = 8.0
+speed_scale = 2.0
+explosiveness = 0.6
+randomness = 0.4
+process_material = SubResource("ParticleProcessMaterial_tc4kh")
