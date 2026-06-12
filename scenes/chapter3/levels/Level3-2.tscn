@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c7v7368h5n57f"]
+[gd_scene format=3 uid="uid://2ogwn12qlycr"]
 
 [ext_resource type="Texture2D" uid="uid://bfhtbx8fn6cdx" path="res://graphics/chapter3/levels/bigavenue/bglong.png" id="1_6u231"]
 [ext_resource type="Texture2D" uid="uid://cb7s0emtm0q1y" path="res://graphics/chapter3/levels/bigavenue/apartment.png" id="2_1xl77"]
@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://nt4gnpskq1tn" path="res://graphics/chapter3/levels/bigavenue/pharmacie.png" id="4_0vj6m"]
 [ext_resource type="Texture2D" uid="uid://1rrpcsdgsv8b" path="res://graphics/chapter3/levels/bigavenue/reels.png" id="5_0vj6m"]
 [ext_resource type="Texture2D" uid="uid://bjespq0dbijkq" path="res://graphics/chapter3/levels/bigavenue/squares.png" id="6_5yy0j"]
+[ext_resource type="Texture2D" uid="uid://cppdt16jlkb7i" path="res://graphics/chapter3/levels/bigavenue/bg.png" id="9_lmlo0"]
+[ext_resource type="Texture2D" uid="uid://mpyrv8f4bfkj" path="res://graphics/chapter3/levels/bigavenue/building apt.png" id="10_neqyx"]
+[ext_resource type="Texture2D" uid="uid://b8utg0kolgvhy" path="res://graphics/chapter3/levels/bigavenue/building.png" id="11_3qftp"]
 
 [sub_resource type="Curve2D" id="Curve2D_viwsd"]
 _data = {
@@ -39,7 +42,7 @@ position = Vector2(883.7473, 662.1886)
 texture = ExtResource("3_en45g")
 
 [node name="Reels" type="Sprite2D" parent="Bg/OnTop" unique_id=280147069]
-position = Vector2(836.32733, 573.05334)
+position = Vector2(850.9323, 508.48398)
 texture = ExtResource("5_0vj6m")
 
 [node name="Squares" type="Sprite2D" parent="Bg/OnTop" unique_id=899175235]
@@ -71,3 +74,15 @@ limit_bottom = 1080
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Path2D/PathFollow2D/Zlata" unique_id=1853851490]
 position = Vector2(48.147217, -249.4505)
+
+[node name="Bg2" type="Sprite2D" parent="." unique_id=1307761575]
+position = Vector2(5520, -3061)
+texture = ExtResource("9_lmlo0")
+
+[node name="BuildingApt" type="Sprite2D" parent="." unique_id=639287802]
+position = Vector2(3420, -3023)
+texture = ExtResource("10_neqyx")
+
+[node name="Building" type="Sprite2D" parent="." unique_id=446403469]
+position = Vector2(3408, -3008)
+texture = ExtResource("11_3qftp")
