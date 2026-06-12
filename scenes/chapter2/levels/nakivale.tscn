@@ -147,6 +147,12 @@ size = Vector2(359.99463, 145.00256)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v48gm"]
 size = Vector2(268.019, 145.00256)
 
+[sub_resource type="Curve2D" id="Curve2D_nm25k"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 576, 777, 0, 0, 0, 0, 1937, 810, -194.87175, 14.030766, 194.87175, -14.030766, 2683, 705, 0, 0, 0, 0, 3144, 697, 0, 0, 0, 0, 6222, 779)
+}
+point_count = 5
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hsmfu"]
 radius = 48.0
 height = 212.0
@@ -228,8 +234,8 @@ position = Vector2(1014, 0)
 [node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle1" unique_id=261562117 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("11_hsmfu")
 puzzle = NodePath("../DragDropPuzzle")
-piece_spawners = [NodePath("../../../Amani/MarkerBubbleSpawn")]
-spawn_trigger = NodePath("../../../Amani/SpawnTrigger")
+piece_spawners = [NodePath("../../../Path2D/PathFollow2D/Amani/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../../../Path2D/PathFollow2D/Amani/SpawnTrigger")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Puzzles/Puzzle1" unique_id=310843140 instance=ExtResource("12_isbuh")]
@@ -337,8 +343,8 @@ position = Vector2(2741, 0)
 [node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle2" unique_id=1077710549 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("11_hsmfu")
 puzzle = NodePath("../DragDropPuzzle2")
-piece_spawners = [NodePath("../../../Amani/MarkerBubbleSpawn")]
-spawn_trigger = NodePath("../../../Amani/SpawnTrigger")
+piece_spawners = [NodePath("../../../Path2D/PathFollow2D/Amani/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../../../Path2D/PathFollow2D/Amani/SpawnTrigger")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Puzzles/Puzzle2" unique_id=212597287 instance=ExtResource("12_isbuh")]
@@ -494,8 +500,8 @@ position = Vector2(4068, 0)
 [node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle3" unique_id=323740516 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("11_hsmfu")
 puzzle = NodePath("../DragDropPuzzle")
-piece_spawners = [NodePath("../../../Amani/MarkerBubbleSpawn")]
-spawn_trigger = NodePath("../../../Amani/SpawnTrigger")
+piece_spawners = [NodePath("../../../Path2D/PathFollow2D/Amani/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../../../Path2D/PathFollow2D/Amani/SpawnTrigger")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Puzzles/Puzzle3" unique_id=656531198 instance=ExtResource("12_isbuh")]
@@ -503,6 +509,7 @@ position = Vector2(-951, 0)
 collision_mask = 2
 
 [node name="DragDropPuzzle" parent="Puzzles/Puzzle3" unique_id=1588097281 instance=ExtResource("12_hsmfu")]
+z_index = 1
 position = Vector2(-1054, 413)
 scale = Vector2(0.25, 0.25)
 
@@ -521,8 +528,8 @@ position = Vector2(4648, 0)
 [node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle4" unique_id=904513653 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("11_hsmfu")
 puzzle = NodePath("../Puzzle2")
-piece_spawners = [NodePath("../../../Amani/MarkerBubbleSpawn")]
-spawn_trigger = NodePath("../../../Amani/SpawnTrigger")
+piece_spawners = [NodePath("../../../Path2D/PathFollow2D/Amani/MarkerBubbleSpawn")]
+spawn_trigger = NodePath("../../../Path2D/PathFollow2D/Amani/SpawnTrigger")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Puzzles/Puzzle4" unique_id=1928987050 instance=ExtResource("12_isbuh")]
@@ -547,33 +554,46 @@ position = Vector2(-80, -512)
 [node name="PuzzlePieceHollow3" parent="Puzzles/Puzzle4/Puzzle2/BuildingBlocks/HollowPieces" parent_id_path=PackedInt32Array(71446804, 1500445843) index="2" unique_id=1052747192]
 position = Vector2(56, -370)
 
-[node name="Amani" parent="." unique_id=700974070 instance=ExtResource("4_5uaoj")]
-position = Vector2(579, 774)
+[node name="Path2D" type="Path2D" parent="." unique_id=688251695]
+curve = SubResource("Curve2D_nm25k")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1260437326]
+position = Vector2(576, 777)
+rotation = -0.031142574
+rotates = false
+loop = false
+
+[node name="Amani" parent="Path2D/PathFollow2D" unique_id=700974070 node_paths=PackedStringArray("path_follow") instance=ExtResource("4_5uaoj")]
+position = Vector2(5.017395, -0.48156738)
+path_follow = NodePath("..")
 play_walking_sfx = true
 
-[node name="MarkerBubbleSpawn" type="Marker2D" parent="Amani" unique_id=1504323811]
+[node name="MarkerBubbleSpawn" type="Marker2D" parent="Path2D/PathFollow2D/Amani" unique_id=1504323811]
 position = Vector2(20, -220)
 
-[node name="Camera2D" type="Camera2D" parent="Amani" unique_id=128381685]
+[node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D/Amani" unique_id=128381685]
 position = Vector2(0, -236)
 offset = Vector2(500, 0)
+limit_top = 0
+limit_bottom = 1080
 
-[node name="SpawnTrigger" type="Area2D" parent="Amani" unique_id=718918311]
+[node name="SpawnTrigger" type="Area2D" parent="Path2D/PathFollow2D/Amani" unique_id=718918311]
 position = Vector2(5, -142)
 script = ExtResource("6_isbuh")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Amani/SpawnTrigger" unique_id=967471748]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Amani/SpawnTrigger" unique_id=967471748]
 position = Vector2(0, 37)
 shape = SubResource("CapsuleShape2D_hsmfu")
 
-[node name="Companion" parent="." unique_id=1753872610 node_paths=PackedStringArray("model") instance=ExtResource("4_nonyt")]
-position = Vector2(687, 773)
+[node name="Companion" parent="Path2D/PathFollow2D" unique_id=1753872610 node_paths=PackedStringArray("model", "path_follow") instance=ExtResource("4_nonyt")]
+position = Vector2(113.017395, -1.4815674)
 model = NodePath("../Amani")
 start_walking = true
 follow_model = true
+path_follow = NodePath("..")
 
-[node name="AnimSprite" parent="Companion" index="0" unique_id=689873547]
+[node name="AnimSprite" parent="Path2D/PathFollow2D/Companion" index="0" unique_id=689873547]
 sprite_frames = ExtResource("5_yuvbc")
 
 [node name="CheckpointController" type="Node" parent="." unique_id=1303317184]
@@ -663,4 +683,4 @@ metadata/_custom_type_script = "uid://brda7473wfj1v"
 [editable path="Puzzles/Puzzle4/Puzzle2/BuildingBlocks/HollowPieces/PuzzlePieceHollow"]
 [editable path="Puzzles/Puzzle4/Puzzle2/BuildingBlocks/HollowPieces/PuzzlePieceHollow2"]
 [editable path="Puzzles/Puzzle4/Puzzle2/BuildingBlocks/HollowPieces/PuzzlePieceHollow3"]
-[editable path="Companion"]
+[editable path="Path2D/PathFollow2D/Companion"]
