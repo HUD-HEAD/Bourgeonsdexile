@@ -1,53 +1,57 @@
 [gd_scene format=3 uid="uid://2ogwn12qlycr"]
 
-[ext_resource type="Texture2D" uid="uid://bfhtbx8fn6cdx" path="res://graphics/chapter3/levels/bigavenue/bglong.png" id="1_6u231"]
-[ext_resource type="Texture2D" uid="uid://cb7s0emtm0q1y" path="res://graphics/chapter3/levels/bigavenue/apartment.png" id="2_1xl77"]
 [ext_resource type="PackedScene" uid="uid://dy84a73ucflwu" path="res://components/chapter3/main_characters/zlata.tscn" id="2_xppgi"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="3_38rxf"]
-[ext_resource type="Texture2D" uid="uid://dbv62ucw17npk" path="res://graphics/chapter3/levels/bigavenue/ccrib.png" id="3_en45g"]
 [ext_resource type="Texture2D" uid="uid://nt4gnpskq1tn" path="res://graphics/chapter3/levels/bigavenue/pharmacie.png" id="4_0vj6m"]
 [ext_resource type="Texture2D" uid="uid://1rrpcsdgsv8b" path="res://graphics/chapter3/levels/bigavenue/reels.png" id="5_0vj6m"]
 [ext_resource type="Texture2D" uid="uid://bjespq0dbijkq" path="res://graphics/chapter3/levels/bigavenue/squares.png" id="6_5yy0j"]
 [ext_resource type="Texture2D" uid="uid://cppdt16jlkb7i" path="res://graphics/chapter3/levels/bigavenue/bg.png" id="9_lmlo0"]
+[ext_resource type="Script" uid="uid://crcrgrn18h2m6" path="res://components/utils/mechanics/pathfollow_pingpong.gd" id="9_w80ex"]
 [ext_resource type="Texture2D" uid="uid://mpyrv8f4bfkj" path="res://graphics/chapter3/levels/bigavenue/building apt.png" id="10_neqyx"]
 [ext_resource type="Texture2D" uid="uid://b8utg0kolgvhy" path="res://graphics/chapter3/levels/bigavenue/building.png" id="11_3qftp"]
 
-[sub_resource type="Curve2D" id="Curve2D_viwsd"]
+[sub_resource type="Curve2D" id="Curve2D_wn2jm"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1983, 19, 0, 0, 0, 0, 3255, 11, 0, 0, 0, 0, 3389, 751, 0, 0, 0, 0, 14654, 744)
+"points": PackedVector2Array(0, 0, 0, 0, 821, 674, 0, 0, 0, 0, 1298, 671, 0, 0, 0, 0, 1219, 804, 0, 0, 0, 0, 1293, 916, 0, 0, 0, 0, 5647, 946)
 }
-point_count = 4
+point_count = 5
 
 [node name="Level31" type="Node2D" unique_id=2125939091]
 
-[node name="Bg" type="Sprite2D" parent="." unique_id=349737748]
-position = Vector2(0, -1732)
-scale = Vector2(2.601852, 2.601852)
-texture = ExtResource("1_6u231")
+[node name="Bg2" type="Sprite2D" parent="." unique_id=1307761575]
+texture = ExtResource("9_lmlo0")
 centered = false
 
-[node name="Apartment" type="Sprite2D" parent="Bg" unique_id=394761230]
-position = Vector2(838.395, 616.4519)
-texture = ExtResource("2_1xl77")
-
-[node name="Pharmacie" type="Sprite2D" parent="Bg" unique_id=468358328]
-position = Vector2(5507.6157, 843.6299)
+[node name="Pharmacie" type="Sprite2D" parent="Bg2" unique_id=1901605799]
+position = Vector2(5431, 880)
 texture = ExtResource("4_0vj6m")
 
-[node name="OnTop" type="Node2D" parent="Bg" unique_id=879371620]
-z_index = 1
+[node name="BuildingApt" type="Sprite2D" parent="Bg2" unique_id=639287802]
+position = Vector2(835, 589)
+texture = ExtResource("10_neqyx")
 
-[node name="Crib" type="Sprite2D" parent="Bg/OnTop" unique_id=803209619]
-position = Vector2(883.7473, 662.1886)
-texture = ExtResource("3_en45g")
-
-[node name="Reels" type="Sprite2D" parent="Bg/OnTop" unique_id=280147069]
-position = Vector2(850.9323, 508.48398)
-texture = ExtResource("5_0vj6m")
-
-[node name="Squares" type="Sprite2D" parent="Bg/OnTop" unique_id=899175235]
-position = Vector2(1261.0248, 609.18146)
+[node name="Squares" type="Sprite2D" parent="Bg2/BuildingApt" unique_id=1883759949]
+position = Vector2(423, 22)
 texture = ExtResource("6_5yy0j")
+
+[node name="OnTop" type="Node2D" parent="Bg2" unique_id=879371620]
+visible = false
+z_index = 1
+position = Vector2(0, -1732)
+scale = Vector2(2.601852, 2.601852)
+
+[node name="Building" type="Sprite2D" parent="Bg2/OnTop" unique_id=446403469]
+position = Vector2(320.92526, 892.0569)
+scale = Vector2(0.38434163, 0.38434163)
+texture = ExtResource("11_3qftp")
+
+[node name="Squares" type="Sprite2D" parent="Bg2/OnTop/Building" unique_id=251764111]
+position = Vector2(423, 22)
+texture = ExtResource("6_5yy0j")
+
+[node name="Reels" type="Sprite2D" parent="Bg2/OnTop/Building" unique_id=177189604]
+position = Vector2(2, 59)
+texture = ExtResource("5_0vj6m")
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1221118698]
 position = Vector2(14915, 596)
@@ -55,14 +59,15 @@ script = ExtResource("3_38rxf")
 next_scene = "uid://by2x0js73j5ew"
 
 [node name="Path2D" type="Path2D" parent="." unique_id=1272328632]
-curve = SubResource("Curve2D_viwsd")
+curve = SubResource("Curve2D_wn2jm")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=666369972]
-position = Vector2(1983, 19)
+position = Vector2(821, 674)
 rotates = false
+loop = false
 
 [node name="Zlata" parent="Path2D/PathFollow2D" unique_id=700974070 node_paths=PackedStringArray("path_follow") instance=ExtResource("2_xppgi")]
-position = Vector2(7, 5)
+scale = Vector2(0.5, 0.5)
 path_follow = NodePath("..")
 
 [node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D/Zlata" unique_id=1600606219]
@@ -75,14 +80,6 @@ limit_bottom = 1080
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Path2D/PathFollow2D/Zlata" unique_id=1853851490]
 position = Vector2(48.147217, -249.4505)
 
-[node name="Bg2" type="Sprite2D" parent="." unique_id=1307761575]
-position = Vector2(5520, -3061)
-texture = ExtResource("9_lmlo0")
-
-[node name="BuildingApt" type="Sprite2D" parent="." unique_id=639287802]
-position = Vector2(3420, -3023)
-texture = ExtResource("10_neqyx")
-
-[node name="Building" type="Sprite2D" parent="." unique_id=446403469]
-position = Vector2(3408, -3008)
-texture = ExtResource("11_3qftp")
+[node name="PathFollowPingPong" type="Node" parent="Path2D/PathFollow2D/Zlata" unique_id=288736946 node_paths=PackedStringArray("char")]
+script = ExtResource("9_w80ex")
+char = NodePath("..")

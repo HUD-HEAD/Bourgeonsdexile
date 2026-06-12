@@ -69,6 +69,10 @@
 [ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="66_idrs3"]
 [ext_resource type="Script" uid="uid://cpn4fytrpjypm" path="res://components/chapter1/main_characters/area_switch_anim.gd" id="67_7kpd7"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="68_3ogmi"]
+[ext_resource type="Texture2D" uid="uid://u3821gox51mn" path="res://graphics/chapter2/levels/goma/bodabodaman.png" id="70_0up0r"]
+[ext_resource type="Script" uid="uid://bwhw2o2u7v43i" path="res://components/utils/comics/vertical_sine_anim.gd" id="71_cw4mc"]
+[ext_resource type="Script" uid="uid://cvlenn1q1qyrk" path="res://components/chapter2/characters/rotator.gd" id="72_5mn6d"]
+[ext_resource type="Script" uid="uid://bn0sxcor0g10k" path="res://components/utils/mechanics/area_trigger_anim.gd" id="73_5mn6d"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3ogmi"]
 animations = [{
@@ -108,6 +112,118 @@ height = 212.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7kpd7"]
 radius = 100.0
+
+[sub_resource type="Animation" id="Animation_cw4mc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharWalking/BodaBodaStopped/BodabodamanArrival:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3596.0005]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharWalking/BodaBodaStopped/BodabodamanArrival:process_mode")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharWalking/BodaBodaStopped/BodabodamanArrival:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CharWalking/BodaBodaStopped/BodabodamanStopped:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ge572"]
+resource_name = "default"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharWalking/BodaBodaStopped/BodabodamanArrival:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-5000.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharWalking/BodaBodaStopped/BodabodamanArrival:process_mode")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharWalking/BodaBodaStopped/BodabodamanArrival:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CharWalking/BodaBodaStopped/BodabodamanStopped:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0up0r"]
+_data = {
+&"RESET": SubResource("Animation_cw4mc"),
+&"default": SubResource("Animation_ge572")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cw4mc"]
+size = Vector2(211, 823)
 
 [node name="Goma" type="Node2D" unique_id=987125979]
 
@@ -500,6 +616,7 @@ position = Vector2(22.856598, -594.2857)
 position = Vector2(-88.57145, -445.7143)
 
 [node name="BodaBodaMove" parent="." unique_id=925815680 instance=ExtResource("5_qc0ah")]
+visible = false
 position = Vector2(6245, 740)
 scale = Vector2(0.4, 0.4)
 move_speed = 800.0
@@ -526,25 +643,47 @@ input_pickable = false
 script = ExtResource("46_fm2bo")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
-[node name="Bodabodaman" type="Sprite2D" parent="CharWalking/BodaBodaStopped" unique_id=2080153153]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharWalking/BodaBodaStopped" unique_id=1510371182]
+position = Vector2(7, 21.999878)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_1fm80")
+
+[node name="BodabodamanStopped" type="Sprite2D" parent="CharWalking/BodaBodaStopped" unique_id=2080153153]
+visible = false
 position = Vector2(0, 37.5)
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("50_ua771")
 
-[node name="Wheel1" type="Sprite2D" parent="CharWalking/BodaBodaStopped/Bodabodaman" unique_id=2082465619]
+[node name="Wheel1" type="Sprite2D" parent="CharWalking/BodaBodaStopped/BodabodamanStopped" unique_id=2082465619]
 show_behind_parent = true
 position = Vector2(-147.5, 124.99988)
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("8_hfpvf")
 
-[node name="Wheel2" type="Sprite2D" parent="CharWalking/BodaBodaStopped/Bodabodaman" unique_id=1894226021]
+[node name="Wheel2" type="Sprite2D" parent="CharWalking/BodaBodaStopped/BodabodamanStopped" unique_id=1894226021]
 show_behind_parent = true
 position = Vector2(222.5, 134.99988)
 texture = ExtResource("9_plsra")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharWalking/BodaBodaStopped" unique_id=1510371182]
-position = Vector2(7, 22)
-shape = SubResource("RectangleShape2D_1fm80")
+[node name="BodabodamanArrival" type="Sprite2D" parent="CharWalking/BodaBodaStopped" unique_id=1626587685]
+visible = false
+position = Vector2(3596.0005, 0)
+scale = Vector2(0.9999998, 0.9999998)
+texture = ExtResource("70_0up0r")
+script = ExtResource("71_cw4mc")
+
+[node name="Wheel1" type="Sprite2D" parent="CharWalking/BodaBodaStopped/BodabodamanArrival" unique_id=562506685]
+show_behind_parent = true
+position = Vector2(-147.5, 161.49997)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("8_hfpvf")
+script = ExtResource("72_5mn6d")
+
+[node name="Wheel2" type="Sprite2D" parent="CharWalking/BodaBodaStopped/BodabodamanArrival" unique_id=1833889674]
+show_behind_parent = true
+position = Vector2(222.5, 171.49997)
+texture = ExtResource("9_plsra")
+script = ExtResource("72_5mn6d")
 
 [node name="Amani" parent="CharWalking" unique_id=700974070 instance=ExtResource("6_fssrv")]
 position = Vector2(463, 840)
@@ -716,6 +855,20 @@ shape = SubResource("CircleShape2D_7kpd7")
 script = ExtResource("68_3ogmi")
 chapter = 1
 comic = 11
+
+[node name="BodaManArrive" type="AnimationPlayer" parent="." unique_id=1020808909]
+libraries/ = SubResource("AnimationLibrary_0up0r")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1980686204 node_paths=PackedStringArray("anim_player")]
+position = Vector2(5227, 725)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("73_5mn6d")
+anim_player = NodePath("../BodaManArrive")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2001870416]
+position = Vector2(9.5, -80.5)
+shape = SubResource("RectangleShape2D_cw4mc")
 
 [editable path="Puzzles/Puzzle1/DragDropPuzzle2"]
 [editable path="Puzzles/Puzzle1/DragDropPuzzle2/BuildingBlocks/PuzzlePiece"]
