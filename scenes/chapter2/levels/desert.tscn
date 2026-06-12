@@ -597,7 +597,6 @@ texture = ExtResource("54_owsko")
 
 [node name="Bus" parent="." unique_id=1136971117 node_paths=PackedStringArray("desert_controller") instance=ExtResource("25_iym2s")]
 position = Vector2(1168, 883)
-is_desert_bus = true
 desert_controller = NodePath("../DesertController")
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Bus" unique_id=218413136]
