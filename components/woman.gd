@@ -12,8 +12,10 @@ const WALK_SPEED = 75
 
 var walking : bool
 
-#TODO cleanup. Should we set a path on all scenes? 
+
 var walk_along_path = false
+## Used to go backwards on Path2D
+var dir = 1
 
 func _ready() -> void:
 	char_area.area_entered.connect(_on_area_entered)
@@ -27,7 +29,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if walking:
 		if walk_along_path:
-			path_follow.progress += WALK_SPEED*delta
+			path_follow.progress += WALK_SPEED*delta*dir
 		else:
 			self.global_position.x += WALK_SPEED*delta
 
