@@ -16,3 +16,12 @@ func _start_timer():
 func _on_timer_timeout():
 	anim_player.play("hint")
 	visuals.show()
+
+
+##On interaction, hide tutorial
+##And restart timer in case user doesn't fully complete interaction
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("select_element"):
+		visuals.hide()
+		anim_player.stop()
+		_start_timer()
