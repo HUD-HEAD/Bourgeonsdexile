@@ -1,5 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://cxlpi08yjpy6h"]
 
+[ext_resource type="FontFile" uid="uid://dp68wwjt2pqmg" path="res://graphics/ui/font/font_type.otf" id="1_eavl3"]
 [ext_resource type="Texture2D" uid="uid://djnowmdhye88v" path="res://graphics/menus/settings/texture.png" id="1_jt0rs"]
 [ext_resource type="Texture2D" uid="uid://bpdlk00x2744i" path="res://graphics/menus/settings/textureopacity30.png" id="2_eavl3"]
 
@@ -9,13 +10,20 @@
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jt0rs"]
 texture = ExtResource("1_jt0rs")
-modulate_color = Color(1, 1, 1, 0.7058824)
+modulate_color = Color(1, 1, 1, 0.3137255)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eavl3"]
+content_margin_top = 5.0
+content_margin_bottom = 5.0
 texture = ExtResource("1_jt0rs")
-modulate_color = Color(1, 1, 1, 0.47058824)
+expand_margin_top = 30.0
+expand_margin_bottom = 30.0
+modulate_color = Color(0.32, 0.32, 0.32, 0.9019608)
 
 [resource]
+PopupMenu/constants/item_end_padding = -200
+PopupMenu/constants/item_start_padding = -20
+PopupMenu/fonts/font = ExtResource("1_eavl3")
 PopupMenu/icons/checked = ExtResource("1_jt0rs")
 PopupMenu/icons/checked_disabled = ExtResource("2_eavl3")
 PopupMenu/styles/embedded_border = SubResource("StyleBoxEmpty_bxngk")
