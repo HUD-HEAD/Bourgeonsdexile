@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oehhou1smag0"
-path="res://.godot/imported/3_2.png-ce2eacdab299919af0e7a8ce7e956d04.ctex"
+uid="uid://c6g17v5i7vuho"
+path="res://.godot/imported/3_2.png-bf6082651b5a1fb0fd986580c6a8fc36.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter1/levels/city/puzzles/2/3_2.png"
-dest_files=["res://.godot/imported/3_2.png-ce2eacdab299919af0e7a8ce7e956d04.ctex"]
+source_file="res://graphics/chapter1/levels/city/2/3_2.png"
+dest_files=["res://.godot/imported/3_2.png-bf6082651b5a1fb0fd986580c6a8fc36.ctex"]
 
 [params]
 
