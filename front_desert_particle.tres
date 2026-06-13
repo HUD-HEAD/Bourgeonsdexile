@@ -1,7 +1,7 @@
-[gd_resource type="ParticleProcessMaterial" format=3 uid="uid://b4l7jjdlmddhn"]
+[gd_resource type="ParticleProcessMaterial" format=3 uid="uid://b4vcssl3njgh0"]
 
 [sub_resource type="Curve" id="Curve_bq72f"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.71637434, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.7105264, 0.72196543), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 3
 
 [sub_resource type="CurveTexture" id="CurveTexture_jj6is"]
@@ -20,8 +20,9 @@ initial_velocity_max = 1000.0
 angular_velocity_min = -1.6093254e-05
 angular_velocity_max = -1.6093254e-05
 gravity = Vector3(0, 0, 0)
-scale_min = 0.79999995
-color = Color(0.92941177, 0.53333336, 0.2509804, 1)
+scale_min = 0.59999996
+scale_max = 0.79999995
+color = Color(1, 0.7254902, 0.4509804, 1)
 alpha_curve = SubResource("CurveTexture_jj6is")
 hue_variation_min = -2.2351742e-08
 hue_variation_max = -2.2351742e-08
