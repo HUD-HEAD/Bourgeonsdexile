@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b0gp67mdq1g3e"
+path="res://.godot/imported/panel_1.2_hospital_sound.wav-57692e093d8bf669bcd1f6daf752e1db.sample"
+
+[deps]
+
+source_file="res://audio/chapter3/ambient/comic 1/panel_1.2_hospital_sound.wav"
+dest_files=["res://.godot/imported/panel_1.2_hospital_sound.wav-57692e093d8bf669bcd1f6daf752e1db.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bcc2g4qf7aw0y"
+path="res://.godot/imported/panel_1.13_hi_woman_sound.wav-ad51de7d7e483eecf01ebd60e7e9e272.sample"
+
+[deps]
+
+source_file="res://audio/chapter3/ambient/comic 1/panel_1.13_hi_woman_sound.wav"
+dest_files=["res://.godot/imported/panel_1.13_hi_woman_sound.wav-ad51de7d7e483eecf01ebd60e7e9e272.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

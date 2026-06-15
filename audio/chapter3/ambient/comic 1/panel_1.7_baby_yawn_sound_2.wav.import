@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://byu0bot182re3"
+path="res://.godot/imported/panel_1.7_baby_yawn_sound_2.wav-7bee508a25f6118c6c00f9dff8ba35f6.sample"
+
+[deps]
+
+source_file="res://audio/chapter3/ambient/comic 1/panel_1.7_baby_yawn_sound_2.wav"
+dest_files=["res://.godot/imported/panel_1.7_baby_yawn_sound_2.wav-7bee508a25f6118c6c00f9dff8ba35f6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
