@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://p47nn7pwnmxn"]
+
+[ext_resource type="Texture2D" uid="uid://do65f7d5g1wwx" path="res://graphics/chapter3/comics/comic2/morning/morning2.png" id="1_2ybe4"]
+[ext_resource type="Texture2D" uid="uid://bd0atn2mjyb8t" path="res://graphics/chapter3/comics/comic2/morning/morning.png" id="2_h0kxp"]
+[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/mechanics/click_hide.gd" id="2_hibxk"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_17yhj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hibxk"]
+radius = 468.96054
+
+[node name="PanelBedNews" type="Node2D" unique_id=1981830405]
+
+[node name="Morning2" type="Sprite2D" parent="." unique_id=1894604784]
+texture = ExtResource("1_2ybe4")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=1753776499]
+position = Vector2(123, -87)
+script = ExtResource("2_hibxk")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=317079423]
+shape = SubResource("CircleShape2D_hibxk")
+
+[node name="Morning" type="Sprite2D" parent="Clickable" unique_id=1155629840]
+position = Vector2(-123, 87)
+texture = ExtResource("2_h0kxp")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=777541841 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_17yhj")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"
