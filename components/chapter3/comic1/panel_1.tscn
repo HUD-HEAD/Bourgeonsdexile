@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="3_5gjjb"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="4_c8c6m"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_spt0h"]
+[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="6_5gjjb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_letxt"]
 animations = [{
@@ -42,3 +43,8 @@ shape = SubResource("RectangleShape2D_rs2d4")
 script = ExtResource("5_spt0h")
 clickables = [NodePath("../Clickable")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=420201388]
+script = ExtResource("6_5gjjb")
+loop_name = 3100
+metadata/_custom_type_script = "uid://brda7473wfj1v"

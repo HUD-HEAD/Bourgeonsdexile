@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://c7of5l5s248sl" path="res://components/chapter2/contractions/contraction_circle/contraction_circle.tscn" id="2_la8ku"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="3_0v6bs"]
 [ext_resource type="Script" uid="uid://cdxymm0wa0dha" path="res://components/chapter3/comic1/contraction_unblur.gd" id="5_2ahkj"]
+[ext_resource type="AudioStream" uid="uid://cdjnxbo5efoo8" path="res://audio/chapter2/ambient/comic 4/panel_4.5_4.9_4.13_pain_sound_interactive.wav" id="6_vkhcj"]
+[ext_resource type="AudioStream" uid="uid://b72lmigpgo1g0" path="res://audio/chapter3/sfx/circle_opening_sound.wav" id="8_t1cmy"]
+[ext_resource type="AudioStream" uid="uid://brrxg5uj51nfu" path="res://audio/chapter3/ambient/comic 1/panel_1.4_placenta_sound.wav" id="9_wjyd8"]
 
 [sub_resource type="Gradient" id="Gradient_ok1vr"]
 offsets = PackedFloat32Array(0, 0.1, 0.5, 0.9, 1)
@@ -27,6 +30,8 @@ texture = SubResource("GradientTexture2D_b1ewe")
 
 [node name="ContractionCircle" parent="." unique_id=1677856602 node_paths=PackedStringArray("node_to_enable") instance=ExtResource("2_la8ku")]
 node_to_enable = NodePath("../TransitionerPassive")
+play_sfx = true
+stream_list = Array[AudioStream]([ExtResource("9_wjyd8"), ExtResource("8_t1cmy"), ExtResource("6_vkhcj")])
 
 [node name="TransitionerPassive" type="Node" parent="." unique_id=100635095]
 script = ExtResource("3_0v6bs")

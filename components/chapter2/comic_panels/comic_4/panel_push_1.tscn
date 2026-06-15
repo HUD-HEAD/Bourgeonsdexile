@@ -15,7 +15,7 @@ texture = ExtResource("1_8gium")
 position = Vector2(60, -13.5)
 node_to_enable = NodePath("../TransitionerPassive")
 play_sfx = true
-stream = ExtResource("3_jchia")
+stream_list = Array[AudioStream]([ExtResource("3_jchia")])
 linear_volume = 2.0
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=515992168]

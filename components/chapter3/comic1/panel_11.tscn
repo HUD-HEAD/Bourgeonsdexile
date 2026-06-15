@@ -6,7 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://c1i884iey4ui6" path="res://graphics/chapter3/comics/comic1/framehospitalpeople/4.png" id="4_wpsl4"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="5_dxr1f"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="6_wpsl4"]
+[ext_resource type="Script" uid="uid://h8iq0ry15ka8" path="res://components/utils/audio/audio integration nodes/trigger_sfx_list.gd" id="7_7ey2h"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="7_qgp3a"]
+[ext_resource type="AudioStream" uid="uid://bcc2g4qf7aw0y" path="res://audio/chapter3/ambient/comic 1/panel_1.13_hi_woman_sound.wav" id="8_wfvsc"]
+[ext_resource type="AudioStream" uid="uid://b6evtlou1nwtb" path="res://audio/chapter3/ambient/comic 1/panel_1.13_nurse_sound.wav" id="9_ab5xi"]
+[ext_resource type="AudioStream" uid="uid://dw1f0seraumsd" path="res://audio/chapter3/ambient/comic 1/panel_1.14_man_sound.wav" id="10_rdy7j"]
+[ext_resource type="AudioStream" uid="uid://832e8bri0o5p" path="res://audio/chapter3/ambient/comic 1/panel_1.15_baby_sleeping_sound.wav" id="11_4fj4r"]
+[ext_resource type="Script" uid="uid://bvmwxu2au5j5l" path="res://components/utils/audio/audio integration nodes/audio_sfx_zone.gd" id="12_wfvsc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qgp3a"]
 animations = [{
@@ -46,8 +52,23 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 position = Vector2(0, 23)
 shape = SubResource("RectangleShape2D_wpsl4")
 
+[node name="TriggerSfxList" type="Node" parent="Clickable" unique_id=1103790537 node_paths=PackedStringArray("clickables")]
+script = ExtResource("7_7ey2h")
+clickables = [NodePath("..")]
+stream_list = Array[AudioStream]([ExtResource("9_ab5xi"), ExtResource("10_rdy7j"), ExtResource("11_4fj4r")])
+linear_volume = 2.0
+metadata/_custom_type_script = "uid://h8iq0ry15ka8"
+
 [node name="TransitionerCounter" type="Node" parent="." unique_id=1620536936 node_paths=PackedStringArray("clickables")]
 script = ExtResource("7_qgp3a")
 clickables = [NodePath("../Clickable")]
 obstacles_to_clear = 3
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="AudioSfxZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=14471896]
+position = Vector2(578, -12)
+rect = Rect2(-10, -10, 52, 43)
+script = ExtResource("12_wfvsc")
+use_audio_stream = true
+stream = ExtResource("8_wfvsc")
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"

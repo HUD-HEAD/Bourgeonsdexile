@@ -96,7 +96,7 @@ autoplay = true
 bus = &"Music"
 
 [node name="Sandstorm" parent="." unique_id=1971968963 instance=ExtResource("3_syw4w")]
-position = Vector2(97400, 262)
+position = Vector2(105000, 262)
 
 [node name="Puzzles" type="Node2D" parent="." unique_id=161984896]
 
@@ -380,7 +380,7 @@ texture = ExtResource("34_u00n8")
 texture = ExtResource("21_tlbbx")
 
 [node name="Puzzle4" type="Node2D" parent="Puzzles" unique_id=1412279860]
-position = Vector2(59406, 0)
+position = Vector2(62000, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle4" unique_id=101828173 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
 script = ExtResource("5_6tu1w")
@@ -390,8 +390,8 @@ spawn_trigger = NodePath("../../../Bus/SpawnTrigger")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Puzzles/Puzzle4" unique_id=1954108570 instance=ExtResource("6_ogvpn")]
+position = Vector2(-400, 0)
 collision_mask = 2
-script = ExtResource("5_e5jvt")
 
 [node name="Puzzle3" parent="Puzzles/Puzzle4" unique_id=2043914400 instance=ExtResource("14_25xat")]
 position = Vector2(-1171.9999, 948)

@@ -2,8 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://dyog3tw57qfcf" path="res://graphics/chapter3/comics/comic1/framebaby/1.png" id="1_ex4v3"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="2_g7nyj"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="3_vaiks"]
 [ext_resource type="Texture2D" uid="uid://ce2jeafy8bs6f" path="res://graphics/chapter1/comics/comic3/frame13/frame13_bubble.png" id="3_yj5ch"]
+[ext_resource type="AudioStream" uid="uid://byu0bot182re3" path="res://audio/chapter3/ambient/comic 1/panel_1.7_baby_yawn_sound_2.wav" id="4_b27t0"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_yj5ch"]
+[ext_resource type="Texture2D" uid="uid://du2s0t041ogf6" path="res://graphics/chapter3/comics/comic1/framebaby/2.png" id="5_hxa8n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yj5ch"]
 radius = 295.58417
@@ -25,6 +28,14 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=5141488]
 shape = SubResource("CircleShape2D_yj5ch")
 
+[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=1193692655 node_paths=PackedStringArray("clickables")]
+script = ExtResource("3_vaiks")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("4_b27t0")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
 [node name="Frame13Bubble" type="Sprite2D" parent="." unique_id=1561205216]
 position = Vector2(-92, -415.5)
 texture = ExtResource("3_yj5ch")
@@ -33,3 +44,7 @@ texture = ExtResource("3_yj5ch")
 script = ExtResource("4_yj5ch")
 clickables = [NodePath("../Clickable")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="2" type="Sprite2D" parent="." unique_id=1774007169]
+position = Vector2(18, -1050)
+texture = ExtResource("5_hxa8n")
