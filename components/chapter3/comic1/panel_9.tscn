@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cq550awokpo8a" path="res://graphics/chapter3/comics/comic1/framemirror/mirror.png" id="1_22nh7"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_gsq8s"]
+[ext_resource type="Script" uid="uid://bvmwxu2au5j5l" path="res://components/utils/audio/audio integration nodes/audio_sfx_zone.gd" id="3_oaejj"]
+[ext_resource type="AudioStream" uid="uid://1vwsgkvkk2pf" path="res://audio/chapter3/ambient/comic 1/panel_1.11_breathing_sound.wav" id="4_2xy1h"]
 
 [node name="PanelDoctors" type="Node2D" unique_id=162787811]
 
@@ -14,3 +16,11 @@ script = ExtResource("2_gsq8s")
 metadata/_custom_type_script = "uid://u4636s8oa5d0"
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=735127877]
+
+[node name="AudioSfxZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=1118659955]
+position = Vector2(410, -6)
+rect = Rect2(-10, -10, 33, 30)
+script = ExtResource("3_oaejj")
+use_audio_stream = true
+stream = ExtResource("4_2xy1h")
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"

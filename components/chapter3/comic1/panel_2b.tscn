@@ -14,3 +14,5 @@ script = ExtResource("2_sm1io")
 metadata/_custom_type_script = "uid://u4636s8oa5d0"
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=896978743]
+
+[node name="audio" type="Node" parent="." unique_id=1420549910]

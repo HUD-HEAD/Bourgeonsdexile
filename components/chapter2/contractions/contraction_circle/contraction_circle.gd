@@ -14,7 +14,7 @@ var min_radius : float
 @export_group("Sound")
 @export var play_sfx: bool = false
 var sfx_played: bool = false
-@export var stream: AudioStream
+@export var stream_list: Array[AudioStream]
 @export var linear_volume: float = 1
 
 func _ready() -> void:
@@ -31,7 +31,8 @@ func _process(delta: float) -> void:
 		
 		if !sfx_played:
 			sfx_played= true
-			AudioManager.play_audio_stream(stream, linear_volume)
+			for stream in stream_list:
+				AudioManager.play_audio_stream(stream, linear_volume)
 			
 	if circle.radius >= max_radius:
 		disable()

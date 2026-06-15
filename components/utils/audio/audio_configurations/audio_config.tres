@@ -68,12 +68,15 @@
 [ext_resource type="AudioStream" uid="uid://bmuld55d03814" path="res://audio/chapter2/soundtrack/comic_3_emotive_song (2).wav" id="32_t8ph6"]
 [ext_resource type="AudioStream" uid="uid://blhr0y7giqdxb" path="res://audio/chapter2/ambient/comic 4/panel_4.14_hospital_sound_4.wav" id="33_gyc3t"]
 [ext_resource type="AudioStream" uid="uid://dfkkwk6vfu8bv" path="res://audio/chapter2/ambient/comic 4/panel_4.6_4.7_4.8_4.10_4.11_4.12_4.13_hospital_sound_2.wav" id="34_f01en"]
+[ext_resource type="AudioStream" uid="uid://b0gp67mdq1g3e" path="res://audio/chapter3/ambient/comic 1/panel_1.2_hospital_sound.wav" id="35_gyc3t"]
+[ext_resource type="AudioStream" uid="uid://cl8l888p5hlwd" path="res://audio/chapter3/ambient/comic 1/panel_1.3_baby_crying_sound.wav" id="36_kt3xt"]
 [ext_resource type="AudioStream" uid="uid://chp4yothn7faw" path="res://audio/chapter1/ambient/panel_section_3/panel_3.7_relief_sound.wav" id="40_v3pri"]
 [ext_resource type="AudioStream" uid="uid://dricj4xdns60n" path="res://audio/chapter1/ambient/panel_section_3/panel_3.8_eating_sound.wav" id="41_xvkp8"]
 [ext_resource type="AudioStream" uid="uid://qoly0ig3clh0" path="res://audio/chapter1/ambient/panel_section_3/panel_3.8_eating_sound_2.wav" id="42_xnur5"]
 [ext_resource type="AudioStream" uid="uid://dlgebnxo7bos6" path="res://audio/chapter2/soundtrack/comic_4_theme_stress.wav" id="43_wgwom"]
 [ext_resource type="AudioStream" uid="uid://bedpxltkhf5ii" path="res://audio/chapter1/ambient/panel_section_3/panel_3.13_paper_sound.wav" id="43_xvkp8"]
 [ext_resource type="AudioStream" uid="uid://bwif4w1qoansi" path="res://audio/chapter2/soundtrack/credits_theme.wav" id="44_8bssc"]
+[ext_resource type="AudioStream" uid="uid://b5rmb4xfx2txs" path="res://audio/chapter3/soundtrack/comic_1_day_after_day_theme.wav" id="52_kt3xt"]
 [ext_resource type="AudioStream" uid="uid://df2rs52kcf4xd" path="res://audio/chapter2/ambient/comic 3/panel_3.4_sound_water_drink_1_sound.wav" id="54_hqvqq"]
 [ext_resource type="AudioStream" uid="uid://daernt6524t73" path="res://audio/chapter2/ambient/comic 3/panel_3.4_sound_water_drink_2_sound.wav" id="55_b0xf2"]
 
@@ -208,6 +211,18 @@ type = 2404
 stream = ExtResource("34_f01en")
 metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
 
+[sub_resource type="Resource" id="Resource_g67k2"]
+script = ExtResource("1_0736c")
+type = 3100
+stream = ExtResource("35_gyc3t")
+metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
+
+[sub_resource type="Resource" id="Resource_eivfp"]
+script = ExtResource("1_0736c")
+type = 3101
+stream = ExtResource("36_kt3xt")
+metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
+
 [sub_resource type="Resource" id="Resource_gxtfj"]
 script = ExtResource("3_qemoy")
 type = 1200
@@ -269,6 +284,12 @@ type = 2401
 stream = ExtResource("44_8bssc")
 metadata/_custom_type_script = "uid://bgl0a3vgvcmsb"
 
+[sub_resource type="Resource" id="Resource_cj8dm"]
+script = ExtResource("3_qemoy")
+type = 3100
+stream = ExtResource("52_kt3xt")
+metadata/_custom_type_script = "uid://bgl0a3vgvcmsb"
+
 [sub_resource type="Resource" id="Resource_po7nl"]
 script = ExtResource("1_imlmo")
 type = 1300
@@ -296,6 +317,6 @@ metadata/_custom_type_script = "uid://duuxorfspwlxi"
 [resource]
 script = ExtResource("1_lqs57")
 sfx_configuration = Array[ExtResource("1_imlmo")]([ExtResource("3_lhat2"), ExtResource("8_pkc7b"), ExtResource("9_oije2"), ExtResource("9_75gak"), ExtResource("9_1aw0s"), ExtResource("10_75gak"), ExtResource("11_pkc7b"), ExtResource("12_oije2"), ExtResource("13_behby"), ExtResource("14_e2tky"), ExtResource("15_l82md"), ExtResource("16_8i027"), ExtResource("17_wobcp"), ExtResource("18_o7t6w"), ExtResource("19_a4fxu"), ExtResource("20_femi8"), ExtResource("21_pwl8h"), ExtResource("22_a1sox"), ExtResource("23_gqdoy"), SubResource("Resource_po7nl"), SubResource("Resource_tadwd"), SubResource("Resource_xnur5"), SubResource("Resource_ewecq")])
-loop_configuration = Array[ExtResource("1_0736c")]([ExtResource("2_po7nl"), ExtResource("3_c6civ"), ExtResource("4_gb34v"), ExtResource("5_v3pri"), ExtResource("6_xvkp8"), SubResource("Resource_vpsk8"), ExtResource("3_8i027"), ExtResource("2_l82md"), ExtResource("4_femi8"), ExtResource("5_pwl8h"), ExtResource("6_a1sox"), ExtResource("7_gqdoy"), ExtResource("8_v1u3r"), SubResource("Resource_0gr4c"), SubResource("Resource_n03nk"), SubResource("Resource_8rmwk"), SubResource("Resource_v5tef"), SubResource("Resource_x1jhh"), SubResource("Resource_hqvqq"), SubResource("Resource_b0xf2"), SubResource("Resource_2224a"), SubResource("Resource_1cu42"), SubResource("Resource_7keg5"), SubResource("Resource_wgwom"), SubResource("Resource_8bssc"), SubResource("Resource_wvn2x"), SubResource("Resource_evake"), SubResource("Resource_x200s"), SubResource("Resource_kt3xt"), SubResource("Resource_qo6dw"), SubResource("Resource_21rge"), SubResource("Resource_2moqr"), SubResource("Resource_gyc3t")])
-music_configuration = Array[ExtResource("3_qemoy")]([SubResource("Resource_gxtfj"), SubResource("Resource_kx2pi"), SubResource("Resource_ql2kw"), SubResource("Resource_acaqn"), ExtResource("5_wobcp"), ExtResource("6_o7t6w"), ExtResource("7_a4fxu"), ExtResource("8_femi8"), SubResource("Resource_oghm0"), SubResource("Resource_t8ph6"), SubResource("Resource_xc13h"), SubResource("Resource_p6ii5"), SubResource("Resource_f01en"), SubResource("Resource_p0irk")])
+loop_configuration = Array[ExtResource("1_0736c")]([ExtResource("2_po7nl"), ExtResource("3_c6civ"), ExtResource("4_gb34v"), ExtResource("5_v3pri"), ExtResource("6_xvkp8"), SubResource("Resource_vpsk8"), ExtResource("3_8i027"), ExtResource("2_l82md"), ExtResource("4_femi8"), ExtResource("5_pwl8h"), ExtResource("6_a1sox"), ExtResource("7_gqdoy"), ExtResource("8_v1u3r"), SubResource("Resource_0gr4c"), SubResource("Resource_n03nk"), SubResource("Resource_8rmwk"), SubResource("Resource_v5tef"), SubResource("Resource_x1jhh"), SubResource("Resource_hqvqq"), SubResource("Resource_b0xf2"), SubResource("Resource_2224a"), SubResource("Resource_1cu42"), SubResource("Resource_7keg5"), SubResource("Resource_wgwom"), SubResource("Resource_8bssc"), SubResource("Resource_wvn2x"), SubResource("Resource_evake"), SubResource("Resource_x200s"), SubResource("Resource_kt3xt"), SubResource("Resource_qo6dw"), SubResource("Resource_21rge"), SubResource("Resource_2moqr"), SubResource("Resource_gyc3t"), SubResource("Resource_g67k2"), SubResource("Resource_eivfp")])
+music_configuration = Array[ExtResource("3_qemoy")]([SubResource("Resource_gxtfj"), SubResource("Resource_kx2pi"), SubResource("Resource_ql2kw"), SubResource("Resource_acaqn"), ExtResource("5_wobcp"), ExtResource("6_o7t6w"), ExtResource("7_a4fxu"), ExtResource("8_femi8"), SubResource("Resource_oghm0"), SubResource("Resource_t8ph6"), SubResource("Resource_xc13h"), SubResource("Resource_p6ii5"), SubResource("Resource_f01en"), SubResource("Resource_p0irk"), SubResource("Resource_cj8dm")])
 metadata/_custom_type_script = "uid://cqxrtlyvs0npt"

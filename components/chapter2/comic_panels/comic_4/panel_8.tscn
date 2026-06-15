@@ -231,7 +231,7 @@ position = Vector2(60, -13.5)
 scale = Vector2(2, 2)
 node_to_enable = NodePath("../../AnimationPlayer")
 play_sfx = true
-stream = ExtResource("3_0nm0r")
+stream_list = Array[AudioStream]([ExtResource("3_0nm0r")])
 
 [node name="Blackout" type="Node2D" parent="." unique_id=1642997845]
 visible = false

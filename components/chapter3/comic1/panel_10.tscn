@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://ceq6nocq87xs6" path="res://graphics/chapter3/comics/comic1/framehospitalsection/section.png" id="1_i7u6x"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_ub2q8"]
+[ext_resource type="Script" uid="uid://bvmwxu2au5j5l" path="res://components/utils/audio/audio integration nodes/audio_sfx_zone.gd" id="3_mmfs1"]
+[ext_resource type="AudioStream" uid="uid://b1gw4vqxqsyf1" path="res://audio/chapter3/ambient/comic 1/panel_1.12_hospital_sound_2.wav" id="4_wq72f"]
 
 [node name="PanelDoctors" type="Node2D" unique_id=162787811]
 
@@ -14,3 +16,9 @@ script = ExtResource("2_ub2q8")
 metadata/_custom_type_script = "uid://u4636s8oa5d0"
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1611675040]
+
+[node name="AudioSfxZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=2088218901]
+script = ExtResource("3_mmfs1")
+use_audio_stream = true
+stream = ExtResource("4_wq72f")
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
