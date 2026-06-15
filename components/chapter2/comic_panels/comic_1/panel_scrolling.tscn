@@ -34,12 +34,12 @@ rect = Rect2(-728, -460, 1539, 965)
 
 [node name="ScrollingBackground" parent="." unique_id=231777281 instance=ExtResource("1_yo06y")]
 
-[node name="Background" parent="ScrollingBackground/PanNode" parent_id_path=PackedInt32Array(231777281, 379019586) index="0" unique_id=524227348]
+[node name="PanNode" parent="ScrollingBackground" index="0" unique_id=379019586]
+final_pos_x = -1077
+
+[node name="Background" parent="ScrollingBackground/PanNode" index="0" unique_id=524227348]
 position = Vector2(503, 0)
 texture = ExtResource("2_l5hv5")
-
-[node name="AutomaticPanner" parent="ScrollingBackground/PanNode/Background" index="0" unique_id=1343872761]
-position = Vector2(1301, 0)
 
 [node name="Amani" type="Node2D" parent="ScrollingBackground" unique_id=700974070]
 position = Vector2(-169, 197)
