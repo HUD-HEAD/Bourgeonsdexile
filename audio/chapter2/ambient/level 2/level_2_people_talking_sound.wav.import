@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bqgibp1kutb4u"
+path="res://.godot/imported/level_2_people_talking_sound.wav-50cf6de4596c7380a3cfc650133ca15d.sample"
+
+[deps]
+
+source_file="res://audio/chapter2/ambient/level 2/level_2_people_talking_sound.wav"
+dest_files=["res://.godot/imported/level_2_people_talking_sound.wav-50cf6de4596c7380a3cfc650133ca15d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
