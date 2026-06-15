@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://boui2uiurwlf2"]
 
 [ext_resource type="PackedScene" uid="uid://8imm2g6332ef" path="res://components/utils/puzzles/dragdrop_puzzle_template.tscn" id="1_mvfr6"]
-[ext_resource type="Texture2D" uid="uid://b04tx8rh3lb8r" path="res://graphics/chapter2/levels/tangrampuzzles/2/empty2.png" id="2_1sk71"]
+[ext_resource type="Texture2D" uid="uid://4t8ypwje6buh" path="res://graphics/chapter3/levels/CH3_puzzles/2/empty2.png" id="2_eenj1"]
 [ext_resource type="Texture2D" uid="uid://wc3uea3kamj3" path="res://graphics/chapter3/levels/CH3_puzzles/2/half1line.png" id="3_gi43e"]
 [ext_resource type="PackedScene" uid="uid://b15l0pq6dea3h" path="res://components/utils/puzzles/puzzle_piece_template.tscn" id="4_gi43e"]
 [ext_resource type="Texture2D" uid="uid://bretbhkowuynb" path="res://graphics/chapter3/levels/CH3_puzzles/2/half1.png" id="4_rkpfd"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://c6osyb6x1rwc8" path="res://graphics/chapter3/levels/CH3_puzzles/2/half2line.png" id="6_yfrmk"]
 [ext_resource type="Texture2D" uid="uid://c0bmq4dpm4jgs" path="res://graphics/chapter3/levels/CH3_puzzles/2/half2.png" id="7_7n5u7"]
 [ext_resource type="Texture2D" uid="uid://b1j6iaqlvt82e" path="res://graphics/chapter3/levels/CH3_puzzles/2/square1line.png" id="9_b51xq"]
-[ext_resource type="Texture2D" uid="uid://bowjgjyyf0dsf" path="res://graphics/chapter2/levels/tangrampuzzles/2/fulldrawing2.png" id="10_6fkjw"]
 [ext_resource type="Texture2D" uid="uid://pahpcf2c7w37" path="res://graphics/chapter3/levels/CH3_puzzles/2/square1.png" id="10_xt34e"]
 [ext_resource type="Texture2D" uid="uid://c88x4m8em58nr" path="res://graphics/chapter3/levels/CH3_puzzles/2/square2line.png" id="11_dhics"]
 [ext_resource type="Texture2D" uid="uid://bmo3uaydlns3n" path="res://graphics/chapter3/levels/CH3_puzzles/2/square2.png" id="12_qyeeu"]
@@ -30,7 +29,8 @@ size = Vector2(148.0014, 156.29355)
 puzzle_pieces = [NodePath("BuildingBlocks/PuzzlePiece"), NodePath("BuildingBlocks/PuzzlePiece2"), NodePath("BuildingBlocks/PuzzlePiece3"), NodePath("BuildingBlocks/PuzzlePiece4")]
 
 [node name="OutlinePuzzle" parent="." index="0" unique_id=1513168459]
-texture = ExtResource("2_1sk71")
+position = Vector2(69, 4)
+texture = ExtResource("2_eenj1")
 
 [node name="PuzzlePiece" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="0" unique_id=1667760579]
 position = Vector2(152, -74)
@@ -118,7 +118,10 @@ shape = SubResource("RectangleShape2D_gmgio")
 position = Vector2(-97, 72)
 
 [node name="CompletePuzzle" parent="." index="2" unique_id=1933061263]
-texture = ExtResource("10_6fkjw")
+position = Vector2(2.9999998, -6)
+rotation = 3.1379519
+scale = Vector2(-2.0847316, -2.0040038)
+texture = ExtResource("12_qyeeu")
 
 [editable path="BuildingBlocks/PuzzlePiece"]
 [editable path="BuildingBlocks/PuzzlePiece2"]

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cffb0fkdvdx5x"]
+
+[ext_resource type="Texture2D" uid="uid://g2sjy4ja5r4n" path="res://graphics/chapter3/comics/comic4/museum_big/1.png" id="1_sjjn3"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_h1ybx"]
+
+[node name="C34Panel4" type="Node2D" unique_id=1800611031]
+
+[node name="museuminside2" type="Sprite2D" parent="." unique_id=972873342]
+position = Vector2(2, -2)
+texture = ExtResource("1_sjjn3")
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=342042615]
+script = ExtResource("2_h1ybx")
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1404595436]

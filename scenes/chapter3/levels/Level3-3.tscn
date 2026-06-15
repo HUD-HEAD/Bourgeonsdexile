@@ -4,6 +4,10 @@
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="3_a5j32"]
 [ext_resource type="PackedScene" uid="uid://dy84a73ucflwu" path="res://components/chapter3/main_characters/zlata.tscn" id="3_sb6ig"]
 [ext_resource type="Texture2D" uid="uid://b1gj3exb0nvcd" path="res://graphics/chapter3/levels/museum/walls.png" id="4_a5j32"]
+[ext_resource type="PackedScene" uid="uid://ds13261ncmyq2" path="res://components/chapter3/levels/level3.3/drag_drop_puzzle_3.3-1.tscn" id="5_4gg6y"]
+[ext_resource type="PackedScene" uid="uid://bftts86syqkvg" path="res://components/chapter3/levels/level3.3/drag_drop_puzzle_3.3-2.tscn" id="6_5sp7s"]
+[ext_resource type="PackedScene" uid="uid://bxup6ytcbadyv" path="res://components/chapter3/levels/level3.3/thinking_puzzle_3.3-3.tscn" id="7_sst3i"]
+[ext_resource type="PackedScene" uid="uid://crcegtlclps7m" path="res://components/chapter3/levels/level3.3/thinking_puzzle_3.3-4.tscn" id="8_bryjj"]
 
 [node name="Level33" type="Node2D" unique_id=2125939091]
 metadata/_edit_horizontal_guides_ = [-2206.0]
@@ -37,3 +41,15 @@ next_scene = "uid://bty624uf5tape"
 [node name="Walls" type="Sprite2D" parent="." unique_id=1134852493]
 position = Vector2(4010, 531)
 texture = ExtResource("4_a5j32")
+
+[node name="DragDropPuzzle" parent="." unique_id=1767003607 instance=ExtResource("5_4gg6y")]
+position = Vector2(1517, 333)
+
+[node name="DragDropPuzzle2" parent="." unique_id=1829428137 instance=ExtResource("6_5sp7s")]
+position = Vector2(4496, 362)
+
+[node name="Puzzle1" parent="." unique_id=1941159865 instance=ExtResource("7_sst3i")]
+position = Vector2(7688, 468)
+
+[node name="Puzzle2" parent="." unique_id=1374852389 instance=ExtResource("8_bryjj")]
+position = Vector2(11163, 457)

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://e2glqvk4u04n"]
+
+[ext_resource type="Texture2D" uid="uid://bho7qtmlxpooc" path="res://graphics/chapter3/comics/comic4/zlatafrontview/1.png" id="1_r0bun"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_v7370"]
+
+[node name="C34Panel5" type="Node2D" unique_id=1800611031]
+
+[node name="Zlatathinking" type="Sprite2D" parent="." unique_id=972873342]
+position = Vector2(2, -2)
+texture = ExtResource("1_r0bun")
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=342042615]
+script = ExtResource("2_v7370")
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1404595436]
