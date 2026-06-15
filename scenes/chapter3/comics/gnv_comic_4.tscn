@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bty624uf5tape"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_m6jpt"]
-[ext_resource type="PackedScene" uid="uid://btxe11ryflnbo" path="res://components/chapter3/comic4/panel_museum_friends.tscn" id="2_vanan"]
 [ext_resource type="PackedScene" uid="uid://bj78rc526rh07" path="res://components/chapter3/comic4/C3_4_Panel1.tscn" id="6_ve7nb"]
 [ext_resource type="PackedScene" uid="uid://dn08ehkn3r66h" path="res://components/chapter3/comic4/C3_4_Panel2.tscn" id="7_vanan"]
 [ext_resource type="PackedScene" uid="uid://umk8q5qgyl1r" path="res://components/chapter3/comic4/C3_4_Panel3.tscn" id="8_vtamx"]
@@ -38,9 +37,6 @@ editor_draw_limits = true
 
 [node name="Panels" type="Node2D" parent="." unique_id=1288726585]
 position = Vector2(0, 540)
-
-[node name="C34Panel7" parent="Panels" unique_id=693645180 instance=ExtResource("2_vanan")]
-position = Vector2(994, 1232)
 
 [node name="C34Panel1" parent="Panels" unique_id=2114412934 instance=ExtResource("6_ve7nb")]
 position = Vector2(3107, 0)
