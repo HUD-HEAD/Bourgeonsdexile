@@ -1,16 +1,252 @@
 [gd_scene format=3 uid="uid://cu1lmj34y2sxm"]
 
 [ext_resource type="Texture2D" uid="uid://c3ky5ftb6on5a" path="res://graphics/chapter1/comics/comic3/panel_kid_lajas/frame_kidlajas.png" id="1_cngrr"]
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_tjsn0"]
 [ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="3_rdruj"]
+[ext_resource type="Texture2D" uid="uid://cbikpe74njnhu" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0001.png" id="4_d0b3x"]
+[ext_resource type="Texture2D" uid="uid://calqy8q4poois" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0002.png" id="5_8ljuf"]
+[ext_resource type="Texture2D" uid="uid://ddqfn1f5yvmb" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0003.png" id="6_7skfb"]
+[ext_resource type="Texture2D" uid="uid://bylij5ijuf6c2" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0004.png" id="7_tycyr"]
+[ext_resource type="Texture2D" uid="uid://cylscd5oeew5f" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0005.png" id="8_fydef"]
+[ext_resource type="Texture2D" uid="uid://fy3734tiqm55" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0006.png" id="9_xudnq"]
+[ext_resource type="Texture2D" uid="uid://dqq501j420su8" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0007.png" id="10_xxn8c"]
+[ext_resource type="Texture2D" uid="uid://33ny2m8ku76t" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0008.png" id="11_lahmr"]
+[ext_resource type="Texture2D" uid="uid://b31dhms6gr0tr" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0009.png" id="12_arblv"]
+[ext_resource type="Texture2D" uid="uid://bpty8mbuy6yqb" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0010.png" id="13_rlq47"]
+[ext_resource type="Texture2D" uid="uid://bknawiafv2ssr" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0011.png" id="14_gu5no"]
+[ext_resource type="Texture2D" uid="uid://b5clp220wk4cx" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0012.png" id="15_eou2i"]
+[ext_resource type="Texture2D" uid="uid://cgob03cy2y0cs" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0013.png" id="16_6sisx"]
+[ext_resource type="Texture2D" uid="uid://0x4w41we2apo" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0014.png" id="17_kd6v1"]
+[ext_resource type="Texture2D" uid="uid://bgenexts1sirg" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0015.png" id="18_aq11l"]
+[ext_resource type="Texture2D" uid="uid://cx3fksqxvtygj" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0016.png" id="19_80vhy"]
+[ext_resource type="Texture2D" uid="uid://dmdluyiyplwyo" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0017.png" id="20_yam48"]
+[ext_resource type="Texture2D" uid="uid://cn4bji1sig245" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0018.png" id="21_ttngq"]
+[ext_resource type="Texture2D" uid="uid://jhq75xmt74c7" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0019.png" id="22_mcgkh"]
+[ext_resource type="Texture2D" uid="uid://bg112kw8p6b7g" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0020.png" id="23_qc68o"]
+[ext_resource type="Texture2D" uid="uid://b7bsyykl3his3" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0021.png" id="24_loueh"]
+[ext_resource type="Texture2D" uid="uid://cynibdiglvypw" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0022.png" id="25_x8ulh"]
+[ext_resource type="Texture2D" uid="uid://b71t2p637ht6u" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0023.png" id="26_whyyx"]
+[ext_resource type="Texture2D" uid="uid://br2h5clse687s" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0024.png" id="27_hvy2v"]
+[ext_resource type="Texture2D" uid="uid://c2jh3swt088kd" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0025.png" id="28_chh72"]
+[ext_resource type="Texture2D" uid="uid://coy5iu62iu1ek" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0026.png" id="29_4oqne"]
+[ext_resource type="Texture2D" uid="uid://burus1tiqk54n" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0027.png" id="30_rqdy6"]
+[ext_resource type="Texture2D" uid="uid://dlir083lr6dkw" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0028.png" id="31_rcxia"]
+[ext_resource type="Texture2D" uid="uid://btmvblwdjhgsn" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0029.png" id="32_n5im6"]
+[ext_resource type="Texture2D" uid="uid://0rgr06kwi0r1" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0030.png" id="33_s40if"]
+[ext_resource type="Texture2D" uid="uid://d32igwoej6d1h" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0031.png" id="34_h0r7h"]
+[ext_resource type="Texture2D" uid="uid://bsdb1co144ibw" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0032.png" id="35_g451m"]
+[ext_resource type="Texture2D" uid="uid://t5e3xs35omyf" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0033.png" id="36_hbgkp"]
+[ext_resource type="Texture2D" uid="uid://cctspxevgvthk" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0034.png" id="37_a8ddi"]
+[ext_resource type="Texture2D" uid="uid://cla1nrnqd22lb" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0035.png" id="38_k6phf"]
+[ext_resource type="Texture2D" uid="uid://bhsc5fnemagbn" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0036.png" id="39_sirla"]
+[ext_resource type="Texture2D" uid="uid://d3ockhl20jnw0" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0037.png" id="40_uj0df"]
+[ext_resource type="Texture2D" uid="uid://cyq2yu6gmgwku" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0038.png" id="41_nmhsl"]
+[ext_resource type="Texture2D" uid="uid://cd8r7eu8wo5vm" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0039.png" id="42_jmwby"]
+[ext_resource type="Texture2D" uid="uid://c84015dgxgr3q" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0040.png" id="43_udrcf"]
+[ext_resource type="Texture2D" uid="uid://cpq8qjlfmnbto" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0041.png" id="44_ioyfh"]
+[ext_resource type="Texture2D" uid="uid://da2ghr35acnpi" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0042.png" id="45_wdkwr"]
+[ext_resource type="Texture2D" uid="uid://bx4qvr05saj5v" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0043.png" id="46_r0icy"]
+[ext_resource type="Texture2D" uid="uid://dj66wj075q3pj" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0044.png" id="47_3457c"]
+[ext_resource type="Texture2D" uid="uid://cf7tfp476e1fh" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0045.png" id="48_uj8je"]
+[ext_resource type="Texture2D" uid="uid://bcb4fd0jypd3b" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0046.png" id="49_6tig1"]
+[ext_resource type="Texture2D" uid="uid://cinbik46qg30f" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0047.png" id="50_2rcgd"]
+[ext_resource type="Texture2D" uid="uid://dhpgys8j5o581" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0048.png" id="51_ryevv"]
+[ext_resource type="Texture2D" uid="uid://dmmde78ian7o7" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0049.png" id="52_cair2"]
+[ext_resource type="Texture2D" uid="uid://dhv6cww2l5s6q" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0050.png" id="53_augqs"]
+[ext_resource type="Texture2D" uid="uid://dnpqtqq7q6jex" path="res://graphics/chapter1/comics/comic3/kid_jump_15fps/kid_jump_0051.png" id="54_lqtxa"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="55_8ljuf"]
+[ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/mechanics/click_enable.gd" id="56_7skfb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7skfb"]
+radius = 45.0
+height = 186.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nbilm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_d0b3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8ljuf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7skfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tycyr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fydef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xudnq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xxn8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_lahmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_arblv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rlq47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_gu5no")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_eou2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_6sisx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_kd6v1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_aq11l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_80vhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_yam48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ttngq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_mcgkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_qc68o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_loueh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_x8ulh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_whyyx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_hvy2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_chh72")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_4oqne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_rqdy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_rcxia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_n5im6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_s40if")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_h0r7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_g451m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_hbgkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_a8ddi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_k6phf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_sirla")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_uj0df")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_nmhsl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_jmwby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_udrcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_ioyfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_wdkwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_r0icy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_3457c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_uj8je")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_6tig1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_2rcgd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_ryevv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_cair2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_augqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_lqtxa")
+}],
+"loop": false,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="Animation" id="Animation_7skfb"]
+resource_name = "default"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Clickable/KidJumping")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03333333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"default", 1.0, false],
+"method": &"play"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tycyr"]
+_data = {
+&"default": SubResource("Animation_7skfb")
+}
 
 [node name="JungleComic3FrameKidLajas" type="Node2D" unique_id=120581857]
 
 [node name="FrameKidlajas" type="Sprite2D" parent="." unique_id=883360089]
 texture = ExtResource("1_cngrr")
-
-[node name="Transition" type="Node" parent="." unique_id=1507078159]
-script = ExtResource("2_tjsn0")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1658164614]
 
@@ -20,3 +256,26 @@ rect = Rect2(-335, -222, 674, 476)
 script = ExtResource("3_rdruj")
 loop_name = 1301
 metadata/_custom_type_script = "uid://brda7473wfj1v"
+
+[node name="Clickable" type="Area2D" parent="." unique_id=1072100955 node_paths=PackedStringArray("node_to_enable")]
+position = Vector2(168, 176)
+script = ExtResource("56_7skfb")
+node_to_enable = NodePath("../AnimationPlayer")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=200153123]
+shape = SubResource("CapsuleShape2D_7skfb")
+
+[node name="KidJumping" type="AnimatedSprite2D" parent="Clickable" unique_id=715832670]
+position = Vector2(-95, -23)
+sprite_frames = SubResource("SpriteFrames_nbilm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=482258124]
+libraries/ = SubResource("AnimationLibrary_tycyr")
+autoplay = &"default"
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=264864203 node_paths=PackedStringArray("clickables")]
+script = ExtResource("55_8ljuf")
+clickables = [NodePath("../Clickable")]
+transition_delay = 4.0
+metadata/_custom_type_script = "uid://c44tybeisilbv"
