@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c1dsr00eik0h7" path="res://graphics/chapter3/comics/comic3/phone_frames/phone_background_full2.png" id="1_rhyvx"]
 [ext_resource type="Texture2D" uid="uid://d14rpq132g50f" path="res://graphics/chapter3/comics/comic3/phone_frames/phone_zlata.png" id="2_v8na7"]
 [ext_resource type="Texture2D" uid="uid://dnaxhao3rvoxf" path="res://graphics/chapter3/comics/comic3/phone_frames/phone_background1.png" id="3_mw4ar"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="4_v8na7"]
 
 [node name="C32Panel1" type="Node2D" unique_id=942978313]
 
@@ -18,3 +19,9 @@ texture = ExtResource("3_mw4ar")
 [node name="PhoneZlata" type="Sprite2D" parent="." unique_id=83888910]
 position = Vector2(116, 101)
 texture = ExtResource("2_v8na7")
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=629484108]
+script = ExtResource("4_v8na7")
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=2114559640]

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dellk1l7xtgc"]
+
+[ext_resource type="Texture2D" uid="uid://cxh11jsev4yks" path="res://graphics/chapter3/comics/comic2/zlataeyesflashback/1.png" id="1_oythj"]
+[ext_resource type="Texture2D" uid="uid://bvv7aiqor7y50" path="res://graphics/chapter3/comics/comic2/zlataeyesflashback/2.png" id="2_8c10t"]
+[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/mechanics/click_hide.gd" id="2_am7xf"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_am7xf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o2tpk"]
+radius = 617.23334
+
+[node name="PanelFlashback" type="Node2D" unique_id=163066824]
+
+[node name="4" type="Sprite2D" parent="." unique_id=770468227]
+texture = ExtResource("2_8c10t")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=270046529]
+script = ExtResource("2_am7xf")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="3" type="Sprite2D" parent="Clickable" unique_id=1151036671]
+texture = ExtResource("1_oythj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=801327734]
+shape = SubResource("CircleShape2D_o2tpk")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=1537779768 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_am7xf")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"

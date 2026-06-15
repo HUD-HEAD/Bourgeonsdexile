@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://djynr3n5lggeh"]
+
+[ext_resource type="Texture2D" uid="uid://cnlm7rhor40sq" path="res://graphics/chapter3/comics/comic2/babynecklace/1.png" id="1_e3g35"]
+[ext_resource type="Texture2D" uid="uid://bacdn5mpdnxf" path="res://graphics/chapter3/comics/comic2/babynecklace/2.png" id="2_dtrrt"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="3_lf5c5"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="4_itvh6"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_itvh6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e7dcv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_e3g35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dtrrt")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ilq8u"]
+radius = 125.765656
+
+[node name="PanelBabyPendant" type="Node2D" unique_id=454523046]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1249273615 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_e7dcv")
+script = ExtResource("3_lf5c5")
+clickable = NodePath("../Clickable")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=918390912]
+position = Vector2(-30, 37)
+script = ExtResource("4_itvh6")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1222880378]
+shape = SubResource("CircleShape2D_ilq8u")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=38358957 node_paths=PackedStringArray("clickables")]
+script = ExtResource("5_itvh6")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"
