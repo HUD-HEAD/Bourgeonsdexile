@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://du6ilkm4sh11x" path="res://graphics/utils/maskclaire.png" id="1_2nipq"]
 [ext_resource type="Script" uid="uid://bgpah31hretcf" path="res://components/utils/mechanics/pan_node.gd" id="2_niifh"]
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="3_3wy8m"]
 
 [node name="ScrollingBackground" type="Sprite2D" unique_id=231777281]
 clip_children = 1
@@ -13,11 +12,3 @@ script = ExtResource("2_niifh")
 
 [node name="Background" type="Sprite2D" parent="PanNode" unique_id=524227348]
 position = Vector2(941, 0)
-
-[node name="AutomaticPanner" type="Node2D" parent="PanNode/Background" unique_id=1343872761]
-position = Vector2(1641, 0)
-script = ExtResource("3_3wy8m")
-timer_wait = 0.5
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="PanNode/Background/AutomaticPanner" unique_id=574415259]
-rect = Rect2(-112, -137, 252, 315)
