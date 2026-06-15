@@ -364,8 +364,9 @@ piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath(".
 position = Vector2(204, 787)
 texture = null
 
-[node name="DragDropPuzzle2" parent="Queue1/Puzzle7" unique_id=1767003607 instance=ExtResource("45_i6383")]
+[node name="DragDropPuzzle2" parent="Queue1/Puzzle7" unique_id=1767003607 node_paths=PackedStringArray("complete_image") instance=ExtResource("45_i6383")]
 position = Vector2(94, 487)
+complete_image = NodePath("../../../Queue2/Puzzle3/DragDropPuzzle5/CompletePuzzle")
 
 [node name="PuzzlePiece" parent="Queue1/Puzzle7/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="0" unique_id=1667760579]
 position = Vector2(-237, -32)
