@@ -96,7 +96,7 @@ autoplay = true
 bus = &"Music"
 
 [node name="Sandstorm" parent="." unique_id=1971968963 instance=ExtResource("3_syw4w")]
-position = Vector2(97400, 262)
+position = Vector2(105000, 262)
 
 [node name="Puzzles" type="Node2D" parent="." unique_id=161984896]
 
