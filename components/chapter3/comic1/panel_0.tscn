@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ddn1g6uehgd2k"]
+
+[ext_resource type="Texture2D" uid="uid://dbmuid0d22x60" path="res://graphics/chapter3/comics/comic1/framevideo/hugmaternite.png" id="1_5uhyc"]
+
+[node name="Panel0" type="Node2D" unique_id=866521096]
+
+[node name="Hugmaternite" type="Sprite2D" parent="." unique_id=341576556]
+position = Vector2(-4, -15)
+texture = ExtResource("1_5uhyc")
