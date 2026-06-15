@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://btxe11ryflnbo"]
+
+[ext_resource type="Texture2D" uid="uid://g2sjy4ja5r4n" path="res://graphics/chapter3/comics/comic4/museum_big/1.png" id="2_1akrp"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_23xfw"]
+[ext_resource type="Texture2D" uid="uid://dibw8y2gf6qi4" path="res://graphics/chapter3/comics/comic4/museum_big/2.png" id="3_ktbvn"]
+
+[node name="C34Panel7" type="Node2D" unique_id=693645180]
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=1637547474]
+script = ExtResource("2_23xfw")
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1976665779]
+
+[node name="1" type="Sprite2D" parent="." unique_id=40360983]
+texture = ExtResource("2_1akrp")
+
+[node name="2" type="Sprite2D" parent="." unique_id=469587595]
+texture = ExtResource("3_ktbvn")
