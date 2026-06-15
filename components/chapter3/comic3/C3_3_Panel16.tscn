@@ -1,3 +1,14 @@
 [gd_scene format=3 uid="uid://cj8w035om8wej"]
 
-[node name="C33Panel1" type="Node2D" unique_id=1800611031]
+[ext_resource type="Texture2D" uid="uid://cbcx3r2m1bkxj" path="res://graphics/chapter3/comics/comic3/museumentrance/museum.png" id="1_0w2q8"]
+[ext_resource type="Texture2D" uid="uid://xul1vrbex2qv" path="res://graphics/chapter3/comics/comic3/museumentrance/signals.png" id="2_ibohk"]
+
+[node name="C33Panel16" type="Node2D" unique_id=1800611031]
+
+[node name="Museum" type="Sprite2D" parent="." unique_id=167974437]
+position = Vector2(6, 10)
+texture = ExtResource("1_0w2q8")
+
+[node name="Signals" type="Sprite2D" parent="." unique_id=83696088]
+position = Vector2(-942, 1064)
+texture = ExtResource("2_ibohk")
