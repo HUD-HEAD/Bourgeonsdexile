@@ -1,6 +1,12 @@
 [gd_scene format=3 uid="uid://bty624uf5tape"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_m6jpt"]
+[ext_resource type="PackedScene" uid="uid://bj78rc526rh07" path="res://components/chapter3/comic4/C3_4_Panel1.tscn" id="6_ve7nb"]
+[ext_resource type="PackedScene" uid="uid://dn08ehkn3r66h" path="res://components/chapter3/comic4/C3_4_Panel2.tscn" id="7_vanan"]
+[ext_resource type="PackedScene" uid="uid://umk8q5qgyl1r" path="res://components/chapter3/comic4/C3_4_Panel3.tscn" id="8_vtamx"]
+[ext_resource type="PackedScene" uid="uid://cffb0fkdvdx5x" path="res://components/chapter3/comic4/C3_4_Panel4.tscn" id="9_0nuyj"]
+[ext_resource type="PackedScene" uid="uid://e2glqvk4u04n" path="res://components/chapter3/comic4/C3_4_Panel5.tscn" id="10_8g0td"]
+[ext_resource type="PackedScene" uid="uid://7hhur4kakw2r" path="res://components/chapter3/comic4/C3_4_Panel6.tscn" id="11_djphk"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="20_ql82s"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="21_hqiua"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="22_2pr0c"]
@@ -14,6 +20,7 @@ follow_viewport_enabled = true
 
 [node name="TextureRect" type="TextureRect" parent="PaperBackground" unique_id=161488343]
 anchors_preset = -1
+anchor_left = -18.173958
 anchor_right = -18.173958
 anchor_bottom = 1.0
 offset_right = 37962.0
@@ -51,3 +58,22 @@ panels = [NodePath("../SceneEnder")]
 script = ExtResource("29_0858f")
 chapter = 3
 comic = 17
+
+[node name="C34Panel1" parent="." unique_id=1800611031 instance=ExtResource("6_ve7nb")]
+position = Vector2(-31403, 502)
+
+[node name="C34Panel2" parent="." unique_id=1387757775 instance=ExtResource("7_vanan")]
+position = Vector2(-28560, 526)
+
+[node name="C34Panel3" parent="." unique_id=2140840453 instance=ExtResource("8_vtamx")]
+position = Vector2(-25580, 524)
+
+[node name="C34Panel4" parent="." unique_id=882413132 instance=ExtResource("9_0nuyj")]
+position = Vector2(-20261, 511)
+scale = Vector2(0.91999024, 0.91999024)
+
+[node name="C34Panel5" parent="." unique_id=2070031313 instance=ExtResource("10_8g0td")]
+position = Vector2(-22910, 527)
+
+[node name="C34Panel6" parent="." unique_id=1945035822 instance=ExtResource("11_djphk")]
+position = Vector2(-15489, 548)
