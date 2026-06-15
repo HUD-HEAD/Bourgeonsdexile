@@ -1,13 +1,21 @@
 [gd_scene format=3 uid="uid://by2x0js73j5ew"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_867kd"]
-[ext_resource type="PackedScene" uid="uid://cubb0fgjkgivq" path="res://components/chapter3/comic2/C3_2_panel1.tscn" id="2_v6b2d"]
+[ext_resource type="PackedScene" uid="uid://c3taxlnlcerfn" path="res://components/chapter3/comic2/C3_2_panel1.tscn" id="2_v6b2d"]
 [ext_resource type="PackedScene" uid="uid://cvypmwioryx3k" path="res://components/chapter3/comic2/C3_2_panel5.tscn" id="6_edyyq"]
 [ext_resource type="PackedScene" uid="uid://7wfexl2ikia2" path="res://components/chapter3/comic2/C3_2_panel14.tscn" id="7_edyyq"]
+[ext_resource type="Texture2D" uid="uid://cnlm7rhor40sq" path="res://graphics/chapter3/comics/comic2/babynecklace/1.png" id="8_pi4cn"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="8_x8xde"]
+[ext_resource type="Texture2D" uid="uid://bacdn5mpdnxf" path="res://graphics/chapter3/comics/comic2/babynecklace/2.png" id="9_me2wc"]
+[ext_resource type="Texture2D" uid="uid://cxh11jsev4yks" path="res://graphics/chapter3/comics/comic2/zlataeyesflashback/1.png" id="10_ybaar"]
+[ext_resource type="Texture2D" uid="uid://bvv7aiqor7y50" path="res://graphics/chapter3/comics/comic2/zlataeyesflashback/2.png" id="11_unqgw"]
+[ext_resource type="Texture2D" uid="uid://do65f7d5g1wwx" path="res://graphics/chapter3/comics/comic2/morning/morning2.png" id="12_8adqe"]
 [ext_resource type="PackedScene" uid="uid://c3taxlnlcerfn" path="res://components/chapter3/comic2/C3_2_panel4.tscn" id="12_f4prm"]
+[ext_resource type="Texture2D" uid="uid://k3rxm5d3irs6" path="res://graphics/chapter3/comics/comic2/tv/remote.png" id="13_p0dum"]
 [ext_resource type="PackedScene" uid="uid://dcqf4qiy61c0h" path="res://components/chapter3/comic2/C3_2_panel6.tscn" id="13_pi4cn"]
 [ext_resource type="PackedScene" uid="uid://b4lixqemjmn7a" path="res://components/chapter3/comic2/C3_2_panel7.tscn" id="14_me2wc"]
+[ext_resource type="Texture2D" uid="uid://rapj1dddmrlg" path="res://graphics/chapter3/comics/comic2/tv/2.png" id="14_q624s"]
+[ext_resource type="Texture2D" uid="uid://cify6iotaflyj" path="res://graphics/chapter3/comics/comic2/tv/3.png" id="15_qcc2v"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="20_8wlj1"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="21_t5b7w"]
 [ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="22_u4ovr"]
@@ -58,6 +66,38 @@ scale = Vector2(0.92, 0.92)
 [node name="C32Panel6" parent="Panels" unique_id=830714939 instance=ExtResource("7_edyyq")]
 position = Vector2(21006, -32)
 scale = Vector2(0.88, 0.88)
+
+[node name="1" type="Sprite2D" parent="Panels" unique_id=211253979]
+position = Vector2(4780, 1166)
+texture = ExtResource("8_pi4cn")
+
+[node name="2" type="Sprite2D" parent="Panels" unique_id=82303341]
+position = Vector2(4861, 2423)
+texture = ExtResource("9_me2wc")
+
+[node name="3" type="Sprite2D" parent="Panels" unique_id=94440241]
+position = Vector2(6534, 1235)
+texture = ExtResource("10_ybaar")
+
+[node name="4" type="Sprite2D" parent="Panels" unique_id=1306317306]
+position = Vector2(6568, 2400)
+texture = ExtResource("11_unqgw")
+
+[node name="Morning2" type="Sprite2D" parent="Panels" unique_id=154138235]
+position = Vector2(8288, 1150)
+texture = ExtResource("12_8adqe")
+
+[node name="Remote" type="Sprite2D" parent="Panels" unique_id=490963152]
+position = Vector2(13670, 819)
+texture = ExtResource("13_p0dum")
+
+[node name="5" type="Sprite2D" parent="Panels" unique_id=1912758235]
+position = Vector2(12604, 805)
+texture = ExtResource("14_q624s")
+
+[node name="6" type="Sprite2D" parent="Panels" unique_id=1140350916]
+position = Vector2(13059, 979)
+texture = ExtResource("15_qcc2v")
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=849983846]
 position = Vector2(9779, 596)

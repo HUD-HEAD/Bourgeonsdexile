@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://dn08ehkn3r66h" path="res://components/chapter3/comic4/C3_4_Panel2.tscn" id="7_vanan"]
 [ext_resource type="PackedScene" uid="uid://umk8q5qgyl1r" path="res://components/chapter3/comic4/C3_4_Panel3.tscn" id="8_vtamx"]
 [ext_resource type="PackedScene" uid="uid://cffb0fkdvdx5x" path="res://components/chapter3/comic4/C3_4_Panel4.tscn" id="9_0nuyj"]
+[ext_resource type="Texture2D" uid="uid://c83bvhq35lbnw" path="res://graphics/chapter3/comics/comic4/amanidraw/2.png" id="9_8g0td"]
 [ext_resource type="PackedScene" uid="uid://e2glqvk4u04n" path="res://components/chapter3/comic4/C3_4_Panel5.tscn" id="10_8g0td"]
+[ext_resource type="Texture2D" uid="uid://dddpuu4s7e772" path="res://graphics/chapter3/comics/comic4/ninababy/2.png" id="10_djphk"]
 [ext_resource type="PackedScene" uid="uid://7hhur4kakw2r" path="res://components/chapter3/comic4/C3_4_Panel6.tscn" id="11_djphk"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="20_ql82s"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="21_hqiua"]
@@ -58,6 +60,14 @@ scale = Vector2(0.91999024, 0.91999024)
 
 [node name="C34Panel6" parent="Panels" unique_id=1945035822 instance=ExtResource("11_djphk")]
 position = Vector2(19021, 0)
+
+[node name="2" type="Sprite2D" parent="Panels" unique_id=828684042]
+position = Vector2(7754, 2046)
+texture = ExtResource("9_8g0td")
+
+[node name="3" type="Sprite2D" parent="Panels" unique_id=387249906]
+position = Vector2(5304, 1652)
+texture = ExtResource("10_djphk")
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=446980408]
 position = Vector2(37314, 596)

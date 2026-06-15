@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="2_g7nyj"]
 [ext_resource type="Texture2D" uid="uid://ce2jeafy8bs6f" path="res://graphics/chapter1/comics/comic3/frame13/frame13_bubble.png" id="3_yj5ch"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_yj5ch"]
+[ext_resource type="Texture2D" uid="uid://du2s0t041ogf6" path="res://graphics/chapter3/comics/comic1/framebaby/2.png" id="5_hxa8n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yj5ch"]
 radius = 295.58417
@@ -33,3 +34,7 @@ texture = ExtResource("3_yj5ch")
 script = ExtResource("4_yj5ch")
 clickables = [NodePath("../Clickable")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="2" type="Sprite2D" parent="." unique_id=1774007169]
+position = Vector2(18, -1050)
+texture = ExtResource("5_hxa8n")
