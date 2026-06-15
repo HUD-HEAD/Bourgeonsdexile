@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://ca3e1tygpqiwf" path="res://graphics/chapter3/comics/comic1/cutting/tijeras.png" id="3_h3y6k"]
 [ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/mechanics/area_entered_enable.gd" id="5_2h6xf"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="6_2h6xf"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="9_4h06k"]
+[ext_resource type="AudioStream" uid="uid://dxv6jnxqv4sbc" path="res://audio/chapter3/ambient/comic 1/panel_1.3_scissors_sound_interactive.wav" id="10_jx4a4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f4xom"]
 animations = [{
@@ -58,6 +60,20 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [0, 1]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("audio/TriggerSfxOnClick")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.05),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_sfx"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4h06k"]
@@ -113,3 +129,12 @@ metadata/_custom_type_script = "uid://u4636s8oa5d0"
 [node name="Node2D" type="Node2D" parent="." unique_id=342487400]
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1614054050]
+
+[node name="audio" type="Node" parent="." unique_id=787518665]
+
+[node name="TriggerSfxOnClick" type="Node" parent="audio" unique_id=93289564]
+script = ExtResource("9_4h06k")
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("10_jx4a4")
+metadata/_custom_type_script = "uid://b7avucygxykbp"

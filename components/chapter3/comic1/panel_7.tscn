@@ -4,7 +4,9 @@
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="2_aj56n"]
 [ext_resource type="Texture2D" uid="uid://cc5qhfw3ygsw" path="res://graphics/chapter3/comics/comic1/framehospitalinside/2.png" id="2_l4oka"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="3_kyqvn"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="5_4xvd6"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_jcgv7"]
+[ext_resource type="AudioStream" uid="uid://dfe6xigkhuret" path="res://audio/chapter3/ambient/comic 1/panel_1.9_light_on_off_sound.wav" id="6_duc67"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kyqvn"]
 animations = [{
@@ -36,6 +38,14 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1572937564]
 shape = SubResource("RectangleShape2D_aj56n")
+
+[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=2050887986 node_paths=PackedStringArray("clickables")]
+script = ExtResource("5_4xvd6")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("6_duc67")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="TransitionerCounter" type="Node" parent="." unique_id=2080410214 node_paths=PackedStringArray("clickables")]
 script = ExtResource("5_jcgv7")
