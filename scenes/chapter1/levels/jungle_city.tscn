@@ -1040,13 +1040,10 @@ collision_mask = 2
 position = Vector2(161, 465)
 
 [node name="PuzzlePiece" parent="Puzzle1/CityPuzzle1" index="1" unique_id=1946677134]
-position = Vector2(-204, -6)
+position = Vector2(-201, -4)
 
 [node name="Draggable" parent="Puzzle1/CityPuzzle1/PuzzlePiece" index="0" unique_id=1850877402]
 position = Vector2(0, 0)
-
-[node name="PlacementChecker" parent="Puzzle1/CityPuzzle1/PuzzlePiece/Draggable" index="2" unique_id=1364854589]
-position = Vector2(-3, -10)
 
 [node name="PuzzlePiece2" parent="Puzzle1/CityPuzzle1" index="2" unique_id=1020331673]
 position = Vector2(-193, 191)
@@ -1065,6 +1062,9 @@ position = Vector2(117, 204)
 
 [node name="Draggable4" parent="Puzzle1/CityPuzzle1/PuzzlePiece4" index="0" unique_id=2108100227]
 position = Vector2(0, 0)
+
+[node name="Receptacle" parent="Puzzle1/CityPuzzle1" index="5" unique_id=361477373]
+position = Vector2(-95, 7)
 
 [node name="Receptacle2" parent="Puzzle1/CityPuzzle1" index="6" unique_id=638974156]
 position = Vector2(13, -37)
