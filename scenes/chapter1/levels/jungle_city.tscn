@@ -1206,10 +1206,13 @@ texture = ExtResource("232_fc5qj")
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzle4/DragDropPuzzle2/BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1019054959, 1667760579, 2116105691) index="1" unique_id=991932022]
 texture = ExtResource("233_2kxa1")
 
+[node name="PlacementChecker" parent="Puzzle4/DragDropPuzzle2/BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1019054959, 1667760579, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+receptacle = NodePath("../../../Receptacle2")
+
 [node name="DraggableZone" parent="Puzzle4/DragDropPuzzle2/BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1019054959, 1667760579, 2116105691) index="3" unique_id=1105802255]
-position = Vector2(0.82958984, 10.149841)
-rotation = 0.17158398
-scale = Vector2(0.9999998, 0.9999998)
+position = Vector2(1.9804688, 3.5431519)
+rotation = 1.764373
+scale = Vector2(0.9999995, 0.9999995)
 
 [node name="Receptacle" parent="Puzzle4/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1019054959, 1654234455) index="1" unique_id=1559191435]
 position = Vector2(-166.50027, 13.142847)
@@ -1232,10 +1235,13 @@ texture = ExtResource("235_yglif")
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzle4/DragDropPuzzle2/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(1019054959, 1166541870, 2116105691) index="1" unique_id=991932022]
 texture = ExtResource("236_m8wud")
 
+[node name="PlacementChecker" parent="Puzzle4/DragDropPuzzle2/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(1019054959, 1166541870, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+receptacle = NodePath("../../../Receptacle")
+
 [node name="DraggableZone" parent="Puzzle4/DragDropPuzzle2/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(1019054959, 1166541870, 2116105691) index="3" unique_id=1105802255]
-position = Vector2(-1.359375, -9.280579)
-rotation = 0.0034313055
-scale = Vector2(0.9999997, 0.9999997)
+position = Vector2(-0.71435547, -9.27829)
+rotation = 0.003431306
+scale = Vector2(0.9999995, 0.9999995)
 
 [node name="Receptacle2" parent="Puzzle4/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1019054959, 1654234455) index="5" unique_id=1635499963]
 position = Vector2(241.49973, 16.142847)
