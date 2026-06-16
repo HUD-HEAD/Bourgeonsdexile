@@ -11,11 +11,11 @@
 
 [node name="ScrollingBackground" parent="." unique_id=231777281 instance=ExtResource("8_7itc7")]
 
-[node name="Background" parent="ScrollingBackground/PanNode" parent_id_path=PackedInt32Array(231777281, 379019586) index="0" unique_id=524227348]
-texture = ExtResource("3_rofvx")
+[node name="PanNode" parent="ScrollingBackground" index="0" unique_id=379019586]
+final_pos_x = -1684
 
-[node name="VisibleOnScreenEnabler2D" parent="ScrollingBackground/PanNode/Background/AutomaticPanner" parent_id_path=PackedInt32Array(231777281, 1343872761) index="0" unique_id=574415259]
-position = Vector2(-120, 0)
+[node name="Background" parent="ScrollingBackground/PanNode" index="0" unique_id=524227348]
+texture = ExtResource("3_rofvx")
 
 [node name="JungleWoman2" parent="ScrollingBackground" unique_id=582263270 instance=ExtResource("3_jfo1i")]
 position = Vector2(-397, 290)

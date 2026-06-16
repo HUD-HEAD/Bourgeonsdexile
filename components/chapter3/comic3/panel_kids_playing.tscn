@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://c1dt7op7l1prk"]
+
+[ext_resource type="Texture2D" uid="uid://bmvtky6n6avex" path="res://graphics/chapter3/comics/comic3/kidsplaying/1.png" id="2_jsy1g"]
+[ext_resource type="Texture2D" uid="uid://dq5hjvls7882s" path="res://graphics/chapter3/comics/comic3/kidsplaying/2.png" id="3_81317"]
+[ext_resource type="Texture2D" uid="uid://dqug4ob2bisnj" path="res://graphics/chapter3/comics/comic3/kidsplaying/3.png" id="4_63flh"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="4_81317"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_jsy1g"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="5_btgtg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eppqv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jsy1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_81317")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_63flh")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_81317"]
+radius = 335.07312
+
+[node name="C33Panel12" type="Node2D" unique_id=20670636]
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=647445317]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=169031445 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_eppqv")
+script = ExtResource("4_81317")
+clickable = NodePath("../Clickable")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=1231123498 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_jsy1g")
+clickables = [NodePath("../Clickable")]
+obstacles_to_clear = 2
+metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="Clickable" type="Area2D" parent="." unique_id=1560897925]
+position = Vector2(-41, 148)
+script = ExtResource("5_btgtg")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=2043369512]
+shape = SubResource("CircleShape2D_81317")

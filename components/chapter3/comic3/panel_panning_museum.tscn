@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://c8o84ge52r8yp"]
+
+[ext_resource type="PackedScene" uid="uid://bomhqj3lxkka3" path="res://components/utils/comics/scrolling_background.tscn" id="1_ag5sf"]
+[ext_resource type="PackedScene" uid="uid://dy84a73ucflwu" path="res://components/chapter3/main_characters/zlata.tscn" id="3_yjq3x"]
+[ext_resource type="Texture2D" uid="uid://cbcx3r2m1bkxj" path="res://graphics/chapter3/comics/comic3/museumentrance/museum.png" id="4_53u8b"]
+[ext_resource type="Texture2D" uid="uid://xul1vrbex2qv" path="res://graphics/chapter3/comics/comic3/museumentrance/signals.png" id="4_v4bin"]
+
+[node name="PanelPanningMuseum" type="Node2D" unique_id=1673791543]
+
+[node name="ScrollingBackground" parent="." unique_id=231777281 instance=ExtResource("1_ag5sf")]
+
+[node name="PanNode" parent="ScrollingBackground" index="0" unique_id=379019586]
+scale = Vector2(0.265, 0.265)
+pan_left = true
+final_pos_x = 200
+
+[node name="Background" parent="ScrollingBackground/PanNode" index="0" unique_id=524227348]
+position = Vector2(-456.60376, 0)
+texture = ExtResource("4_53u8b")
+
+[node name="Signals" type="Sprite2D" parent="ScrollingBackground/PanNode/Background" index="0" unique_id=1088341563]
+position = Vector2(-1358.4906, 894.3396)
+texture = ExtResource("4_v4bin")
+
+[node name="Zlata" parent="ScrollingBackground" unique_id=700974070 instance=ExtResource("3_yjq3x")]
+position = Vector2(-184, 285)
+script = null
+
+[node name="AnimSprite" parent="ScrollingBackground/Zlata" index="0" unique_id=689873547]
+autoplay = "walking"
+flip_h = true
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=546815014]
+rect = Rect2(-904, -429, 1793, 885)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1598365616]
+
+[editable path="ScrollingBackground"]
+[editable path="ScrollingBackground/Zlata"]

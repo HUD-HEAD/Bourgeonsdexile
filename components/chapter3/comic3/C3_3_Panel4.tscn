@@ -2,9 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://e1lico8g8tbt" path="res://graphics/chapter3/comics/comic3/calendar/8.png" id="1_bgj58"]
 [ext_resource type="Texture2D" uid="uid://b12bukfsokqbu" path="res://graphics/chapter3/comics/comic3/calendar/10.png" id="1_pb11t"]
+[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="2_yeoha"]
 [ext_resource type="Texture2D" uid="uid://mb83pink5ebt" path="res://graphics/chapter3/comics/comic3/calendar/7.png" id="3_p5had"]
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="4_p5had"]
 [ext_resource type="Texture2D" uid="uid://bdjba4q5iybrh" path="res://graphics/chapter3/comics/comic3/calendar/9.png" id="4_yghun"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="6_7bv1c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tkglb"]
+size = Vector2(392, 463)
 
 [node name="C33Panel1" type="Node2D" unique_id=1800611031]
 
@@ -12,20 +16,43 @@
 position = Vector2(-3, 2)
 texture = ExtResource("1_pb11t")
 
-[node name="8" type="Sprite2D" parent="10" unique_id=1829745910]
-position = Vector2(336, 758)
-texture = ExtResource("1_bgj58")
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1518095453]
 
-[node name="7" type="Sprite2D" parent="10" unique_id=1591358777]
-position = Vector2(-925, 802)
-texture = ExtResource("3_p5had")
+[node name="Draggable9" type="Area2D" parent="." unique_id=1966013996]
+position = Vector2(0, 221)
+script = ExtResource("2_yeoha")
+metadata/_custom_type_script = "uid://cxam1cepgkl3s"
 
-[node name="9" type="Sprite2D" parent="10" unique_id=1542060996]
-position = Vector2(93, 891)
+[node name="9" type="Sprite2D" parent="Draggable9" unique_id=1542060996]
 texture = ExtResource("4_yghun")
 
-[node name="TransitionerPassive" type="Node" parent="." unique_id=2055028708]
-script = ExtResource("4_p5had")
-metadata/_custom_type_script = "uid://u4636s8oa5d0"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Draggable9" unique_id=269581175]
+shape = SubResource("RectangleShape2D_tkglb")
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1518095453]
+[node name="Draggable8" type="Area2D" parent="." unique_id=727677811]
+position = Vector2(0, 221)
+script = ExtResource("2_yeoha")
+metadata/_custom_type_script = "uid://cxam1cepgkl3s"
+
+[node name="8" type="Sprite2D" parent="Draggable8" unique_id=1829745910]
+texture = ExtResource("1_bgj58")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Draggable8" unique_id=19120384]
+shape = SubResource("RectangleShape2D_tkglb")
+
+[node name="Draggable7" type="Area2D" parent="." unique_id=1887829703]
+position = Vector2(0, 221)
+script = ExtResource("2_yeoha")
+metadata/_custom_type_script = "uid://cxam1cepgkl3s"
+
+[node name="7" type="Sprite2D" parent="Draggable7" unique_id=1591358777]
+texture = ExtResource("3_p5had")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Draggable7" unique_id=1339145245]
+shape = SubResource("RectangleShape2D_tkglb")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=557924975 node_paths=PackedStringArray("clickables")]
+script = ExtResource("6_7bv1c")
+clickables = [NodePath("../Draggable9")]
+transition_delay = 2.0
+metadata/_custom_type_script = "uid://c44tybeisilbv"
