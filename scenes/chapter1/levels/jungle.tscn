@@ -673,13 +673,8 @@ metadata/_edit_group_ = true
 position = Vector2(4163, 315)
 texture = ExtResource("14_t8mqy")
 
-[node name="Mockupgarbage4" type="Sprite2D" parent="JungleSprites" unique_id=1316751311]
-self_modulate = Color(1, 1, 1, 0.29411766)
-position = Vector2(29344, 304)
-texture = ExtResource("14_t8mqy")
-
 [node name="Jungle5" type="Node2D" parent="JungleSprites" unique_id=1958294793]
-position = Vector2(34384, -467)
+position = Vector2(34384, -489)
 
 [node name="Jungle5" type="Sprite2D" parent="JungleSprites/Jungle5" unique_id=1703863041]
 texture = ExtResource("14_7ab2f")
