@@ -1,19 +1,22 @@
 [gd_scene format=3 uid="uid://cv2n5accwy8jy"]
 
 [ext_resource type="Texture2D" uid="uid://ceq6nocq87xs6" path="res://graphics/chapter3/comics/comic1/framehospitalsection/section.png" id="1_i7u6x"]
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_ub2q8"]
 [ext_resource type="Script" uid="uid://bvmwxu2au5j5l" path="res://components/utils/audio/audio integration nodes/audio_sfx_zone.gd" id="3_mmfs1"]
 [ext_resource type="AudioStream" uid="uid://b1gw4vqxqsyf1" path="res://audio/chapter3/ambient/comic 1/panel_1.12_hospital_sound_2.wav" id="4_wq72f"]
+[ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="5_uktcc"]
+[ext_resource type="Texture2D" uid="uid://bkcmknovdaxvg" path="res://graphics/chapter3/comics/comic1/framehospitalsection/bed.png" id="5_wq72f"]
+[ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="6_hf4f4"]
+[ext_resource type="Script" uid="uid://dt4apmm1b4e51" path="res://components/utils/puzzles/puzzle_piece.gd" id="7_rcyu6"]
+[ext_resource type="PackedScene" uid="uid://xyq2m2kx86ku" path="res://components/utils/puzzles/placement_checker.tscn" id="9_ovo3p"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5a1j8"]
+radius = 118.0
 
 [node name="PanelDoctors" type="Node2D" unique_id=162787811]
 
 [node name="Section" type="Sprite2D" parent="." unique_id=1967141693]
 position = Vector2(2, 0)
 texture = ExtResource("1_i7u6x")
-
-[node name="TransitionerPassive" type="Node" parent="." unique_id=745906987]
-script = ExtResource("2_ub2q8")
-metadata/_custom_type_script = "uid://u4636s8oa5d0"
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1611675040]
 
@@ -22,3 +25,30 @@ script = ExtResource("3_mmfs1")
 use_audio_stream = true
 stream = ExtResource("4_wq72f")
 metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
+
+[node name="Receptacle" parent="." unique_id=600273107 instance=ExtResource("5_uktcc")]
+position = Vector2(-717, -263)
+
+[node name="Bed2" type="Sprite2D" parent="Receptacle" unique_id=657632844]
+self_modulate = Color(1, 1, 1, 0.4627451)
+texture = ExtResource("5_wq72f")
+
+[node name="PuzzlePiece" type="Node2D" parent="." unique_id=282936287 node_paths=PackedStringArray("draggable", "placement_checker")]
+position = Vector2(301, -264)
+script = ExtResource("7_rcyu6")
+draggable = NodePath("Draggable")
+placement_checker = NodePath("Draggable/PlacementChecker")
+metadata/_custom_type_script = "uid://dt4apmm1b4e51"
+
+[node name="Draggable" type="Area2D" parent="PuzzlePiece" unique_id=872331798]
+script = ExtResource("6_hf4f4")
+metadata/_custom_type_script = "uid://cxam1cepgkl3s"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzlePiece/Draggable" unique_id=692516544]
+shape = SubResource("CircleShape2D_5a1j8")
+
+[node name="Bed" type="Sprite2D" parent="PuzzlePiece/Draggable" unique_id=1265519807]
+texture = ExtResource("5_wq72f")
+
+[node name="PlacementChecker" parent="PuzzlePiece/Draggable" unique_id=663138769 node_paths=PackedStringArray("receptacle") instance=ExtResource("9_ovo3p")]
+receptacle = NodePath("../../../Receptacle")
