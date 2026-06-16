@@ -2,7 +2,7 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://oxtyvcf68r6v"
+uid="uid://cnb7i4tc8c6u2"
 path="res://.godot/imported/font_type.otf-43b61651469c60a5dbdb8a5977fdca4a.fontdata"
 
 [deps]
@@ -30,13 +30,7 @@ Fallbacks=null
 fallbacks=[]
 Compress=null
 compress=true
-preload=[{
-"chars": [103],
-"glyphs": [],
-"name": "Nueva Configuración",
-"size": Vector2i(16, 0),
-&"variation_embolden": 0.0
-}]
+preload=[]
 language_support={}
 script_support={}
 opentype_features={}

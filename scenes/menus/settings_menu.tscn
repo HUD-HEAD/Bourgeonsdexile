@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://ds1gdssffhjo0" path="res://graphics/menus/settings/settingsAdrian/papers.png" id="14_5fu2g"]
 [ext_resource type="Texture2D" uid="uid://p4yqxm1eixov" path="res://graphics/menus/settings/settingsAdrian/fullscreen.png" id="16_udegp"]
 [ext_resource type="Texture2D" uid="uid://brsf276kfi0nr" path="res://graphics/menus/settings/settingsAdrian/playmusic.png" id="19_hiabw"]
-[ext_resource type="Texture2D" uid="uid://djnowmdhye88v" path="res://graphics/menus/settings/texture.png" id="20_fs1xy"]
+[ext_resource type="FontFile" uid="uid://cnb7i4tc8c6u2" path="res://graphics/ui/font/font_type.otf" id="27_2ibmv"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rrg86"]
 load_path = "res://.godot/imported/grabber.png-475198f4760f482d83ffe3adf0ba9ddb.ctex"
@@ -1361,8 +1361,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Background" type="TextureRect" parent="CreditsContainer" unique_id=1246306364]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_hayap")
+
 [node name="BackGround" type="NinePatchRect" parent="CreditsContainer" unique_id=46832164]
-modulate = Color(0.24, 0.24, 0.24, 0.9411765)
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1375,7 +1384,7 @@ offset_right = 750.0
 offset_bottom = 490.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("20_fs1xy")
+texture = ExtResource("1_hayap")
 region_rect = Rect2(0, 8.890053, 475.51028, 265.80997)
 patch_margin_top = 38
 patch_margin_bottom = 98
@@ -1404,7 +1413,7 @@ tile_scroll_hint = true
 
 [node name="Label" type="Label" parent="CreditsContainer/Credits" unique_id=675914694]
 layout_mode = 2
-theme_override_fonts/font = SubResource("FontFile_afkw7")
+theme_override_fonts/font = ExtResource("27_2ibmv")
 theme_override_font_sizes/font_size = 18
 text = "BOURGEONS D'EXIL
 
@@ -1450,3 +1459,14 @@ Acknowledgments
 
 © 2026 —"
 horizontal_alignment = 1
+
+[node name="CloseButton" type="Button" parent="CreditsContainer" unique_id=498740728]
+layout_mode = 0
+offset_left = 1794.0
+offset_top = 966.0
+offset_right = 1879.0
+offset_bottom = 1047.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_08gdp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5fu2g")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hiabw")
+script = ExtResource("10_afkw7")
