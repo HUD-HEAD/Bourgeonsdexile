@@ -1,26 +1,41 @@
 [gd_scene format=3 uid="uid://cffb0fkdvdx5x"]
 
 [ext_resource type="Texture2D" uid="uid://g2sjy4ja5r4n" path="res://graphics/chapter3/comics/comic4/museum_big/1.png" id="1_sjjn3"]
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_h1ybx"]
 [ext_resource type="Texture2D" uid="uid://be4w8r6eugper" path="res://graphics/chapter3/comics/comic4/museum_small/1.png" id="3_2kj5e"]
 [ext_resource type="Texture2D" uid="uid://dibw8y2gf6qi4" path="res://graphics/chapter3/comics/comic4/museum_big/2.png" id="4_dxkuf"]
+[ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="5_dxkuf"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_p4wsx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dxkuf"]
+size = Vector2(1565, 1050)
 
 [node name="C34Panel4" type="Node2D" unique_id=1800611031]
-
-[node name="museuminside2" type="Sprite2D" parent="." unique_id=972873342]
-position = Vector2(2, -2)
-texture = ExtResource("1_sjjn3")
-
-[node name="TransitionerPassive" type="Node" parent="." unique_id=342042615]
-script = ExtResource("2_h1ybx")
-metadata/_custom_type_script = "uid://u4636s8oa5d0"
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1404595436]
 
 [node name="1" type="Sprite2D" parent="." unique_id=616982721]
-position = Vector2(-87, -1132)
 texture = ExtResource("3_2kj5e")
 
+[node name="museuminside2" type="Sprite2D" parent="." unique_id=972873342]
+visible = false
+texture = ExtResource("1_sjjn3")
+
 [node name="2" type="Sprite2D" parent="." unique_id=473665319]
-position = Vector2(-82, 916)
+visible = false
+position = Vector2(0, 64)
 texture = ExtResource("4_dxkuf")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=450713850 node_paths=PackedStringArray("nodes_to_show")]
+script = ExtResource("5_dxkuf")
+nodes_to_show = [NodePath("../museuminside2"), NodePath("../2")]
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=789128376]
+position = Vector2(8.5, 25)
+shape = SubResource("RectangleShape2D_dxkuf")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=1397816974 node_paths=PackedStringArray("clickables")]
+script = ExtResource("5_p4wsx")
+clickables = [NodePath("../Clickable")]
+obstacles_to_clear = 2
+metadata/_custom_type_script = "uid://c44tybeisilbv"
