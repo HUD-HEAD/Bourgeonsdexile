@@ -1,7 +1,22 @@
 [gd_scene format=3 uid="uid://bj78rc526rh07"]
 
 [ext_resource type="Texture2D" uid="uid://be4w8r6eugper" path="res://graphics/chapter3/comics/comic4/museum_small/1.png" id="1_3gm02"]
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_jclcp"]
+[ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="3_igktf"]
+[ext_resource type="Texture2D" uid="uid://cb6x6dpdfrhb8" path="res://graphics/chapter3/comics/comic4/amanidraw/1.png" id="4_n1vjs"]
+[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/mechanics/click_hide.gd" id="4_x3340"]
+[ext_resource type="Texture2D" uid="uid://c83bvhq35lbnw" path="res://graphics/chapter3/comics/comic4/amanidraw/2.png" id="5_3ckhu"]
+[ext_resource type="Texture2D" uid="uid://hcactpwxopde" path="res://graphics/chapter3/comics/comic4/ninababy/1.png" id="5_igktf"]
+[ext_resource type="Texture2D" uid="uid://dddpuu4s7e772" path="res://graphics/chapter3/comics/comic4/ninababy/2.png" id="7_x3340"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="8_igktf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bpavt"]
+size = Vector2(413, 228.5)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_fe7bx"]
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aucby"]
+size = Vector2(1920, 1080)
 
 [node name="C34Panel1" type="Node2D" unique_id=1800611031]
 
@@ -9,8 +24,127 @@
 position = Vector2(2, -2)
 texture = ExtResource("1_3gm02")
 
-[node name="TransitionerPassive" type="Node" parent="." unique_id=342042615]
-script = ExtResource("2_jclcp")
-metadata/_custom_type_script = "uid://u4636s8oa5d0"
-
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1404595436]
+
+[node name="Pictures" type="Node2D" parent="." unique_id=2030206845]
+
+[node name="Clickable" type="Area2D" parent="Pictures" unique_id=2135769268 node_paths=PackedStringArray("nodes_to_show")]
+position = Vector2(-489, -304)
+script = ExtResource("3_igktf")
+nodes_to_show = [NodePath("../../PicturesBig/Picture1")]
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pictures/Clickable" unique_id=910582968]
+shape = SubResource("RectangleShape2D_bpavt")
+
+[node name="1" type="Sprite2D" parent="Pictures/Clickable" unique_id=244539392]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_n1vjs")
+
+[node name="Clickable2" type="Area2D" parent="Pictures" unique_id=1823157514 node_paths=PackedStringArray("nodes_to_show")]
+position = Vector2(10, -304)
+script = ExtResource("3_igktf")
+nodes_to_show = [NodePath("../../PicturesBig/Picture2")]
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pictures/Clickable2" unique_id=590359895]
+shape = SubResource("RectangleShape2D_bpavt")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pictures/Clickable2" unique_id=1108256961]
+texture = SubResource("PlaceholderTexture2D_fe7bx")
+
+[node name="Clickable3" type="Area2D" parent="Pictures" unique_id=165268151 node_paths=PackedStringArray("nodes_to_show")]
+position = Vector2(507, -304)
+script = ExtResource("3_igktf")
+nodes_to_show = [NodePath("../../PicturesBig/Picture3")]
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pictures/Clickable3" unique_id=189852308]
+shape = SubResource("RectangleShape2D_bpavt")
+
+[node name="1" type="Sprite2D" parent="Pictures/Clickable3" unique_id=1277327461]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_igktf")
+
+[node name="Clickable4" type="Area2D" parent="Pictures" unique_id=352203850 node_paths=PackedStringArray("nodes_to_show")]
+position = Vector2(-489, -8)
+script = ExtResource("3_igktf")
+nodes_to_show = [NodePath("../../PicturesBig/Picture4")]
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pictures/Clickable4" unique_id=1385925416]
+shape = SubResource("RectangleShape2D_bpavt")
+
+[node name="2" type="Sprite2D" parent="Pictures/Clickable4" unique_id=366321085]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_3ckhu")
+
+[node name="Clickable5" type="Area2D" parent="Pictures" unique_id=1942476412 node_paths=PackedStringArray("nodes_to_show")]
+position = Vector2(507, -8)
+script = ExtResource("3_igktf")
+nodes_to_show = [NodePath("../../PicturesBig/Picture5")]
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pictures/Clickable5" unique_id=1043516459]
+shape = SubResource("RectangleShape2D_bpavt")
+
+[node name="2" type="Sprite2D" parent="Pictures/Clickable5" unique_id=1831327831]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_x3340")
+
+[node name="PicturesBig" type="Node2D" parent="." unique_id=2060104433]
+
+[node name="Picture1" type="Area2D" parent="PicturesBig" unique_id=1085406049]
+visible = false
+script = ExtResource("4_x3340")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PicturesBig/Picture1" unique_id=384420505]
+shape = SubResource("RectangleShape2D_aucby")
+
+[node name="1" type="Sprite2D" parent="PicturesBig/Picture1" unique_id=1419296633]
+texture = ExtResource("4_n1vjs")
+
+[node name="Picture2" type="Area2D" parent="PicturesBig" unique_id=1316249207]
+visible = false
+script = ExtResource("4_x3340")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PicturesBig/Picture2" unique_id=1474467875]
+shape = SubResource("RectangleShape2D_aucby")
+
+[node name="Sprite2D" type="Sprite2D" parent="PicturesBig/Picture2" unique_id=859783746]
+texture = SubResource("PlaceholderTexture2D_fe7bx")
+
+[node name="Picture3" type="Area2D" parent="PicturesBig" unique_id=34016147]
+visible = false
+script = ExtResource("4_x3340")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PicturesBig/Picture3" unique_id=2091478523]
+shape = SubResource("RectangleShape2D_aucby")
+
+[node name="1" type="Sprite2D" parent="PicturesBig/Picture3" unique_id=876866138]
+texture = ExtResource("5_igktf")
+
+[node name="Picture4" type="Area2D" parent="PicturesBig" unique_id=395761641]
+visible = false
+script = ExtResource("4_x3340")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PicturesBig/Picture4" unique_id=858519885]
+shape = SubResource("RectangleShape2D_aucby")
+
+[node name="2" type="Sprite2D" parent="PicturesBig/Picture4" unique_id=1888357717]
+texture = ExtResource("5_3ckhu")
+
+[node name="Picture5" type="Area2D" parent="PicturesBig" unique_id=227507947]
+visible = false
+script = ExtResource("4_x3340")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PicturesBig/Picture5" unique_id=549474152]
+shape = SubResource("RectangleShape2D_aucby")
+
+[node name="2" type="Sprite2D" parent="PicturesBig/Picture5" unique_id=1377165419]
+texture = ExtResource("7_x3340")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=36763632 node_paths=PackedStringArray("clickables")]
+script = ExtResource("8_igktf")
+clickables = [NodePath("../PicturesBig/Picture1"), NodePath("../PicturesBig/Picture2"), NodePath("../PicturesBig/Picture3"), NodePath("../PicturesBig/Picture4"), NodePath("../PicturesBig/Picture5")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"
