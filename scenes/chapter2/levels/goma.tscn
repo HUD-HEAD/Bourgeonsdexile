@@ -103,9 +103,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6b20s"]
 size = Vector2(580, 500.00006)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1fm80"]
-size = Vector2(630, 566)
-
 [sub_resource type="Curve2D" id="Curve2D_5mn6d"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 461, 838, 0, 0, 0, 0, 1724, 741, 0, 0, 0, 0, 2468, 733, 0, 0, 0, 0, 2790, 795, 0, 0, 0, 0, 6513, 776)
@@ -115,6 +112,9 @@ point_count = 5
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6b20s"]
 radius = 48.0
 height = 212.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1fm80"]
+size = Vector2(630, 566)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7kpd7"]
 radius = 100.0
@@ -644,55 +644,6 @@ shape = SubResource("RectangleShape2D_6b20s")
 
 [node name="CharWalking" type="Node2D" parent="." unique_id=304248373]
 
-[node name="BodaBodaStopped" type="Area2D" parent="CharWalking" unique_id=749611477]
-position = Vector2(6236, 740)
-scale = Vector2(0.4, 0.4)
-input_pickable = false
-script = ExtResource("46_fm2bo")
-metadata/_custom_type_script = "uid://ba2byqse4kn1f"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharWalking/BodaBodaStopped" unique_id=1510371182]
-position = Vector2(7, 21.999878)
-scale = Vector2(0.99999994, 0.99999994)
-shape = SubResource("RectangleShape2D_1fm80")
-
-[node name="BodabodamanStopped" type="Sprite2D" parent="CharWalking/BodaBodaStopped" unique_id=2080153153]
-visible = false
-position = Vector2(0, 37.5)
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("50_ua771")
-
-[node name="Wheel1" type="Sprite2D" parent="CharWalking/BodaBodaStopped/BodabodamanStopped" unique_id=2082465619]
-show_behind_parent = true
-position = Vector2(-147.5, 124.99988)
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("8_hfpvf")
-
-[node name="Wheel2" type="Sprite2D" parent="CharWalking/BodaBodaStopped/BodabodamanStopped" unique_id=1894226021]
-show_behind_parent = true
-position = Vector2(222.5, 134.99988)
-texture = ExtResource("9_plsra")
-
-[node name="BodabodamanArrival" type="Sprite2D" parent="CharWalking/BodaBodaStopped" unique_id=1626587685]
-visible = false
-position = Vector2(3596.0005, 0)
-scale = Vector2(0.9999998, 0.9999998)
-texture = ExtResource("70_0up0r")
-script = ExtResource("71_cw4mc")
-
-[node name="Wheel1" type="Sprite2D" parent="CharWalking/BodaBodaStopped/BodabodamanArrival" unique_id=562506685]
-show_behind_parent = true
-position = Vector2(-147.5, 161.49997)
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("8_hfpvf")
-script = ExtResource("72_5mn6d")
-
-[node name="Wheel2" type="Sprite2D" parent="CharWalking/BodaBodaStopped/BodabodamanArrival" unique_id=1833889674]
-show_behind_parent = true
-position = Vector2(222.5, 171.49997)
-texture = ExtResource("9_plsra")
-script = ExtResource("72_5mn6d")
-
 [node name="Path2D" type="Path2D" parent="CharWalking" unique_id=594782573]
 curve = SubResource("Curve2D_5mn6d")
 
@@ -733,6 +684,54 @@ path_follow = NodePath("..")
 
 [node name="AnimSprite" parent="CharWalking/Path2D/PathFollow2D/Companion" index="0" unique_id=689873547]
 sprite_frames = ExtResource("7_mp6eu")
+
+[node name="BodaBodaStopped" type="Area2D" parent="CharWalking" unique_id=749611477]
+position = Vector2(6236, 740)
+scale = Vector2(0.4, 0.4)
+input_pickable = false
+script = ExtResource("46_fm2bo")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharWalking/BodaBodaStopped" unique_id=1510371182]
+position = Vector2(7, 21.999878)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_1fm80")
+
+[node name="BodabodamanStopped" type="Sprite2D" parent="CharWalking/BodaBodaStopped" unique_id=2080153153]
+visible = false
+position = Vector2(0, 37.5)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("50_ua771")
+
+[node name="Wheel1" type="Sprite2D" parent="CharWalking/BodaBodaStopped/BodabodamanStopped" unique_id=2082465619]
+show_behind_parent = true
+position = Vector2(-147.5, 124.99988)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("8_hfpvf")
+
+[node name="Wheel2" type="Sprite2D" parent="CharWalking/BodaBodaStopped/BodabodamanStopped" unique_id=1894226021]
+show_behind_parent = true
+position = Vector2(222.5, 134.99988)
+texture = ExtResource("9_plsra")
+
+[node name="BodabodamanArrival" type="Sprite2D" parent="CharWalking/BodaBodaStopped" unique_id=1626587685]
+visible = false
+position = Vector2(3596.0005, 0)
+texture = ExtResource("70_0up0r")
+script = ExtResource("71_cw4mc")
+
+[node name="Wheel1" type="Sprite2D" parent="CharWalking/BodaBodaStopped/BodabodamanArrival" unique_id=562506685]
+show_behind_parent = true
+position = Vector2(-147.5, 161.49997)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("8_hfpvf")
+script = ExtResource("72_5mn6d")
+
+[node name="Wheel2" type="Sprite2D" parent="CharWalking/BodaBodaStopped/BodabodamanArrival" unique_id=1833889674]
+show_behind_parent = true
+position = Vector2(222.5, 171.49997)
+texture = ExtResource("9_plsra")
+script = ExtResource("72_5mn6d")
 
 [node name="CharSwitcher" type="Node" parent="." unique_id=1111871830 node_paths=PackedStringArray("puzzle_trigger", "char_to_disable", "char_to_enable", "camera_to_reparent")]
 script = ExtResource("11_7o0y3")
