@@ -885,15 +885,15 @@ rain = NodePath("..")
 position = Vector2(24394, 569)
 script = ExtResource("19_31ufg")
 camera = NodePath("../Path2D/PathFollow2D/Leader/Camera2D")
-limit_top = -484
+limit_top = -477
 limit_bottom = 1080
 
 [node name="ChangeCameraBounds2" type="VisibleOnScreenNotifier2D" parent="." unique_id=678497456 node_paths=PackedStringArray("camera")]
-position = Vector2(27661, 330)
+position = Vector2(26222, 330)
 script = ExtResource("19_31ufg")
 camera = NodePath("../Path2D/PathFollow2D/Leader/Camera2D")
-limit_top = -484
-limit_bottom = 596
+limit_top = -477
+limit_bottom = 603
 
 [node name="Puzzles" type="Node2D" parent="." unique_id=865858153]
 z_index = -1
