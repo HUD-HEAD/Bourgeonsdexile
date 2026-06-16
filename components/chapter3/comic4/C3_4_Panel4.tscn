@@ -20,14 +20,13 @@ texture = ExtResource("3_2kj5e")
 visible = false
 texture = ExtResource("1_sjjn3")
 
-[node name="2" type="Sprite2D" parent="." unique_id=473665319]
-visible = false
+[node name="2" type="Sprite2D" parent="museuminside2" unique_id=473665319]
 position = Vector2(0, 64)
 texture = ExtResource("4_dxkuf")
 
 [node name="Clickable" type="Area2D" parent="." unique_id=450713850 node_paths=PackedStringArray("nodes_to_show")]
 script = ExtResource("5_dxkuf")
-nodes_to_show = [NodePath("../museuminside2"), NodePath("../2")]
+nodes_to_show = [NodePath("../museuminside2")]
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=789128376]
@@ -37,5 +36,4 @@ shape = SubResource("RectangleShape2D_dxkuf")
 [node name="TransitionerCounter" type="Node" parent="." unique_id=1397816974 node_paths=PackedStringArray("clickables")]
 script = ExtResource("5_p4wsx")
 clickables = [NodePath("../Clickable")]
-obstacles_to_clear = 2
 metadata/_custom_type_script = "uid://c44tybeisilbv"
