@@ -666,7 +666,7 @@ position = Vector2(2987, 540)
 texture = ExtResource("10_7a5p8")
 
 [node name="Jungle4" type="Node2D" parent="JungleSprites" unique_id=284464738]
-position = Vector2(25219, -14)
+position = Vector2(25063, -150)
 metadata/_edit_group_ = true
 
 [node name="Mockupgarbage4" type="Sprite2D" parent="JungleSprites/Jungle4" unique_id=1820755942]
