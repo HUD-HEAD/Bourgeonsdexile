@@ -8,9 +8,16 @@ extends Node2D
 var mask: ViewportTexture
 @export var container: Node2D
 
+var x_offset: float
+var y_offset: float
+
 func _ready() -> void:
 	brush.hide()
 	set_process(false)
+	var parent_node = viewport.get_parent()
+	x_offset = parent_node.position.x
+	y_offset = parent_node.position.y
+	
 	
 func _process(delta: float) -> void:
 	#print(get_global_mouse_position())
@@ -21,8 +28,11 @@ func _process(delta: float) -> void:
 	var mouse_local = scene_ref.to_local(get_global_mouse_position())
 	
 	#Revert the offset we have applied to swipe puzzle to be centered
-	mouse_local.x +=960
-	mouse_local.y +=540
+	#mouse_local.x +=960
+	#mouse_local.y +=540
+	
+	mouse_local.x += (x_offset * -1)
+	mouse_local.y += (y_offset * -1)
 	 
 	brush.position = mouse_local
 
