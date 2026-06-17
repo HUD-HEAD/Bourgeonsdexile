@@ -25,3 +25,10 @@ func trigger_loop():
 		AudioManager.update_last_walking_loop(loop_name)
 	elif loop_mode == trigger_mode.stop_walking_loop:
 		AudioManager.free_walking_loop(loop_name)
+
+func play_loop():
+	AudioManager.play_loop(loop_name)
+
+func stop_loop():
+	AudioManager.stop_loop(loop_name)
+	

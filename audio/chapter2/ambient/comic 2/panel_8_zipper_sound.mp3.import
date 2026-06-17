@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cdy5chkrwywwj"
+path="res://.godot/imported/panel_8_zipper_sound.mp3-a9df6e7916906253a50293ea4eb95a0d.mp3str"
+
+[deps]
+
+source_file="res://audio/chapter2/ambient/comic 2/panel_8_zipper_sound.mp3"
+dest_files=["res://.godot/imported/panel_8_zipper_sound.mp3-a9df6e7916906253a50293ea4eb95a0d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

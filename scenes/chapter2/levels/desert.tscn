@@ -65,6 +65,7 @@
 [ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="58_k4v74"]
 [ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="59_l3fw1"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="60_88lvr"]
+[ext_resource type="AudioStream" uid="uid://30npljjgdj2o" path="res://audio/chapter2/ambient/level 2/level_2_frenazo_sound.wav" id="60_hqomx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uu4gm"]
 size = Vector2(1545, 367)
@@ -300,7 +301,7 @@ spawn_trigger = NodePath("../../../Bus/SpawnTrigger")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Puzzles/PuzzleHole" unique_id=1151734988 instance=ExtResource("6_ogvpn")]
-position = Vector2(-664, 0)
+position = Vector2(-664, 1707)
 collision_mask = 2
 
 [node name="DragDropPuzzle2" parent="Puzzles/PuzzleHole" unique_id=1761994222 instance=ExtResource("9_f7a6g")]
@@ -389,9 +390,12 @@ piece_spawners = [NodePath("../../../Bus/MarkerBubbleSpawn"), NodePath("../../..
 spawn_trigger = NodePath("../../../Bus/SpawnTrigger")
 obstacle = NodePath("../Obstacle")
 
-[node name="Obstacle" parent="Puzzles/Puzzle4" unique_id=1954108570 instance=ExtResource("6_ogvpn")]
+[node name="Obstacle" parent="Puzzles/Puzzle4" unique_id=1954108570 node_paths=PackedStringArray("next_puzzle") instance=ExtResource("6_ogvpn")]
 position = Vector2(-400, 0)
 collision_mask = 2
+script = ExtResource("5_e5jvt")
+type = 1
+next_puzzle = NodePath("../../PuzzleHole/PuzzleSpawner")
 
 [node name="Puzzle3" parent="Puzzles/Puzzle4" unique_id=2043914400 instance=ExtResource("14_25xat")]
 position = Vector2(-1171.9999, 948)
@@ -608,9 +612,14 @@ texture = ExtResource("53_j4odh")
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzles/PuzzleWindowBus/DragDropPuzzle4/BuildingBlocks/PuzzlePiece8/Draggable" parent_id_path=PackedInt32Array(2122580379, 379497506, 2116105691) index="1" unique_id=991932022]
 texture = ExtResource("54_owsko")
 
-[node name="Bus" parent="." unique_id=1136971117 node_paths=PackedStringArray("desert_controller") instance=ExtResource("25_iym2s")]
+[node name="Bus" parent="." unique_id=1136971117 node_paths=PackedStringArray("desert_controller", "moving_loop", "stop_loop", "people_loop") instance=ExtResource("25_iym2s")]
 position = Vector2(1168, 883)
 desert_controller = NodePath("../DesertController")
+delay_on_stop = 0.5
+moving_loop = NodePath("../AudioContainer/Bus_moving_loop")
+stop_loop = NodePath("../AudioContainer/Bus_stop_loop")
+people_loop = NodePath("../AudioContainer/Bus_people_loop")
+stop_stream = ExtResource("60_hqomx")
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Bus" unique_id=218413136]
 position = Vector2(-422, -360)
@@ -652,6 +661,7 @@ position = Vector2(1240, 145)
 rect = Rect2(-10, -10, 209, 165)
 script = ExtResource("58_k4v74")
 loop_name = 2203
+start_loop_on_enter_screen = false
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=498956869]
@@ -660,6 +670,48 @@ rect = Rect2(-10, -10, 688, 68)
 script = ExtResource("59_l3fw1")
 music_name = 2103
 metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="Bus_moving_loop" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=878252348]
+script = ExtResource("58_k4v74")
+loop_name = 2205
+start_loop_on_enter_screen = false
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="Bus_stop_loop" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1239888465]
+script = ExtResource("58_k4v74")
+loop_name = 2206
+start_loop_on_enter_screen = false
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="Bus_people_loop" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=437596150]
+script = ExtResource("58_k4v74")
+loop_name = 2207
+start_loop_on_enter_screen = false
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="Stop_all_loops" type="Node2D" parent="AudioContainer" unique_id=88198687]
+position = Vector2(126692, 21)
+
+[node name="Bus_moving_loop" type="VisibleOnScreenNotifier2D" parent="AudioContainer/Stop_all_loops" unique_id=1372222384]
+rect = Rect2(-10, -10, 89, 268)
+script = ExtResource("58_k4v74")
+loop_name = 2205
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="Bus_stop_loop" type="VisibleOnScreenNotifier2D" parent="AudioContainer/Stop_all_loops" unique_id=528637647]
+rect = Rect2(-10, -10, 97, 276)
+script = ExtResource("58_k4v74")
+loop_name = 2206
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="Bus_people_loop" type="VisibleOnScreenNotifier2D" parent="AudioContainer/Stop_all_loops" unique_id=1518992014]
+rect = Rect2(-10, -10, 112, 295)
+script = ExtResource("58_k4v74")
+loop_name = 2207
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [node name="CheckpointController" type="Node" parent="." unique_id=125355349]
 script = ExtResource("60_88lvr")
