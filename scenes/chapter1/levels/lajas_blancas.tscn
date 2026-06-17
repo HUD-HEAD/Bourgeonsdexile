@@ -191,9 +191,8 @@ debug_color = Color(0.8252278, 0.2592846, 0.75617933, 0.41960785)
 [node name="Puzzle7" parent="InteriorReveal1" unique_id=1293805936 instance=ExtResource("15_h6dcd")]
 position = Vector2(2253, 0)
 
-[node name="PuzzleSpawner" parent="InteriorReveal1/Puzzle7" index="0" unique_id=1455650157 node_paths=PackedStringArray("puzzle", "piece_spawners")]
+[node name="PuzzleSpawner" parent="InteriorReveal1/Puzzle7" index="0" unique_id=1455650157 node_paths=PackedStringArray("puzzle")]
 puzzle = NodePath("../DragDropPuzzle2")
-piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../Npc/MarkerBubbleSpawn")]
 
 [node name="Npc" parent="InteriorReveal1/Puzzle7" index="1" unique_id=2093839101]
 position = Vector2(204, 787)
@@ -300,10 +299,9 @@ position = Vector2(-0.5, 23)
 [node name="HideOnComplete" type="Node" parent="Queue1/Puzzle4/DragDropPuzzle11" unique_id=602513452]
 script = ExtResource("11_lvato")
 
-[node name="PuzzleSpawner" type="Node" parent="Queue1/Puzzle4" unique_id=208217617 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="Queue1/Puzzle4" unique_id=208217617 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("20_lvato")
 puzzle = NodePath("../DragDropPuzzle11")
-piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../../../QueuingPeople/QueuePerson/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../../QueuingPeople/QueuePerson/Clickable")
 obstacle = NodePath("../Obstacle")
 
@@ -343,10 +341,9 @@ position = Vector2(56, -52)
 [node name="HideOnComplete" type="Node" parent="Queue1/Puzzle5/DragDropPuzzle" unique_id=1613584730]
 script = ExtResource("11_lvato")
 
-[node name="PuzzleSpawner" type="Node" parent="Queue1/Puzzle5" unique_id=1755366299 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="Queue1/Puzzle5" unique_id=1755366299 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("20_lvato")
 puzzle = NodePath("../DragDropPuzzle")
-piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../../../QueuingPeople/QueuePerson/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../../QueuingPeople/QueuePerson/Clickable")
 obstacle = NodePath("../Obstacle")
 
@@ -384,10 +381,9 @@ position = Vector2(65, -64)
 [node name="HideOnComplete" type="Node" parent="Queue1/Puzzle6/DragDropPuzzle8" unique_id=895555493]
 script = ExtResource("11_lvato")
 
-[node name="PuzzleSpawner" type="Node" parent="Queue1/Puzzle6" unique_id=1595058988 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="Queue1/Puzzle6" unique_id=1595058988 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("20_lvato")
 puzzle = NodePath("../DragDropPuzzle8")
-piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../../../QueuingPeople/QueuePerson/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../../QueuingPeople/QueuePerson/Clickable")
 obstacle = NodePath("../Obstacle")
 
@@ -428,10 +424,9 @@ position = Vector2(-125, -30)
 [node name="HideOnComplete" type="Node" parent="Queue2/Puzzle1/DragDropPuzzle7" unique_id=1045230970]
 script = ExtResource("11_lvato")
 
-[node name="PuzzleSpawner" type="Node" parent="Queue2/Puzzle1" unique_id=1415408882 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="Queue2/Puzzle1" unique_id=1415408882 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("20_lvato")
 puzzle = NodePath("../DragDropPuzzle7")
-piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../../../QueuingPeople2/QueuePerson/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../../QueuingPeople2/QueuePerson/Clickable")
 obstacle = NodePath("../Obstacle")
 
@@ -457,10 +452,9 @@ position = Vector2(-4, 7)
 [node name="HideOnComplete" type="Node" parent="Queue2/Puzzle2/DragDropPuzzle14" unique_id=1258875576]
 script = ExtResource("11_lvato")
 
-[node name="PuzzleSpawner" type="Node" parent="Queue2/Puzzle2" unique_id=215774215 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="Queue2/Puzzle2" unique_id=215774215 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("20_lvato")
 puzzle = NodePath("../DragDropPuzzle14")
-piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../../../QueuingPeople2/QueuePerson/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../../QueuingPeople2/QueuePerson/Clickable")
 obstacle = NodePath("../Obstacle")
 
@@ -498,10 +492,9 @@ position = Vector2(55, -27)
 [node name="HideOnComplete" type="Node" parent="Queue2/Puzzle3/DragDropPuzzle5" unique_id=1929496938]
 script = ExtResource("11_lvato")
 
-[node name="PuzzleSpawner" type="Node" parent="Queue2/Puzzle3" unique_id=2001654392 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="Queue2/Puzzle3" unique_id=2001654392 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("20_lvato")
 puzzle = NodePath("../DragDropPuzzle5")
-piece_spawners = [NodePath("../../../Spawn/Nina/MarkerBubbleSpawn"), NodePath("../../../QueuingPeople2/QueuePerson/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../../QueuingPeople2/QueuePerson/Clickable")
 obstacle = NodePath("../Obstacle")
 

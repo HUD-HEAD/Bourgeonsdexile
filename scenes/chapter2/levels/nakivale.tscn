@@ -231,10 +231,9 @@ debug_color = Color(0.8252278, 0.2592846, 0.75617933, 0.41960785)
 [node name="Puzzle1" type="Node2D" parent="Puzzles" unique_id=842201109]
 position = Vector2(1014, 0)
 
-[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle1" unique_id=261562117 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle1" unique_id=261562117 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("11_hsmfu")
 puzzle = NodePath("../DragDropPuzzle")
-piece_spawners = [NodePath("../../../Path2D/PathFollow2D/Amani/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../../Path2D/PathFollow2D/Amani/SpawnTrigger")
 obstacle = NodePath("../Obstacle")
 
@@ -278,8 +277,8 @@ texture = ExtResource("29_osbl6")
 position = Vector2(-1, -11)
 texture = ExtResource("30_7agjy")
 
-[node name="PlacementChecker" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
-receptacle = NodePath("../../../Receptacle2")
+[node name="PlacementChecker" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacles")]
+receptacles = [NodePath("../../../Receptacle2")]
 
 [node name="DraggableZone" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="3" unique_id=1105802255]
 position = Vector2(1.5461426, -10.510071)
@@ -300,8 +299,8 @@ texture = ExtResource("32_e28ne")
 position = Vector2(-5, -13)
 texture = ExtResource("33_61fec")
 
-[node name="PlacementChecker" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(2082946397, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
-receptacle = NodePath("../../../Receptacle3")
+[node name="PlacementChecker" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(2082946397, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacles")]
+receptacles = [NodePath("../../../Receptacle3")]
 
 [node name="DraggableZone" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(2082946397, 2116105691) index="3" unique_id=1105802255]
 position = Vector2(-3, -8.511932)
@@ -322,8 +321,8 @@ texture = ExtResource("34_nm25k")
 position = Vector2(-5, -13)
 texture = ExtResource("35_ntkgk")
 
-[node name="PlacementChecker" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(1162043200, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
-receptacle = NodePath("../../../Receptacle4")
+[node name="PlacementChecker" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(1162043200, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacles")]
+receptacles = [NodePath("../../../Receptacle4")]
 
 [node name="DraggableZone" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(1162043200, 2116105691) index="3" unique_id=1105802255]
 position = Vector2(-7.991333, -8.528961)
@@ -340,10 +339,9 @@ texture = ExtResource("36_0tndx")
 [node name="Puzzle2" type="Node2D" parent="Puzzles" unique_id=2004378291]
 position = Vector2(2741, 0)
 
-[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle2" unique_id=1077710549 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle2" unique_id=1077710549 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("11_hsmfu")
 puzzle = NodePath("../DragDropPuzzle2")
-piece_spawners = [NodePath("../../../Path2D/PathFollow2D/Amani/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../../Path2D/PathFollow2D/Amani/SpawnTrigger")
 obstacle = NodePath("../Obstacle")
 
@@ -497,10 +495,9 @@ script = ExtResource("60_nm25k")
 [node name="Puzzle3" type="Node2D" parent="Puzzles" unique_id=129801294]
 position = Vector2(4068, 0)
 
-[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle3" unique_id=323740516 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle3" unique_id=323740516 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("11_hsmfu")
 puzzle = NodePath("../DragDropPuzzle")
-piece_spawners = [NodePath("../../../Path2D/PathFollow2D/Amani/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../../Path2D/PathFollow2D/Amani/SpawnTrigger")
 obstacle = NodePath("../Obstacle")
 
@@ -525,10 +522,9 @@ position = Vector2(464, 340)
 [node name="Puzzle4" type="Node2D" parent="Puzzles" unique_id=1867814965]
 position = Vector2(4648, 0)
 
-[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle4" unique_id=904513653 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle4" unique_id=904513653 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("11_hsmfu")
 puzzle = NodePath("../Puzzle2")
-piece_spawners = [NodePath("../../../Path2D/PathFollow2D/Amani/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../../Path2D/PathFollow2D/Amani/SpawnTrigger")
 obstacle = NodePath("../Obstacle")
 
@@ -589,8 +585,6 @@ shape = SubResource("CapsuleShape2D_hsmfu")
 [node name="Companion" parent="Path2D/PathFollow2D" unique_id=1753872610 node_paths=PackedStringArray("model", "path_follow") instance=ExtResource("4_nonyt")]
 position = Vector2(113.017395, -1.4815674)
 model = NodePath("../Amani")
-start_walking = true
-follow_model = true
 path_follow = NodePath("..")
 
 [node name="AnimSprite" parent="Path2D/PathFollow2D/Companion" index="0" unique_id=689873547]

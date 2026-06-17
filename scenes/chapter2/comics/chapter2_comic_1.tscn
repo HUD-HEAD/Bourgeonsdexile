@@ -20,7 +20,6 @@
 [ext_resource type="PackedScene" uid="uid://by0uwcf5syiic" path="res://components/chapter2/comic_panels/comic_1/panel_13.tscn" id="18_040dt"]
 [ext_resource type="PackedScene" uid="uid://cl7jmbkryr1h7" path="res://components/chapter2/comic_panels/comic_1/panel_16.tscn" id="20_4a5vy"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="20_kue4r"]
-[ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="21_e3e0c"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="22_xuvnd"]
 
 [node name="ChapterIIComic1" type="Node2D" unique_id=150562309]
@@ -114,8 +113,6 @@ position = Vector2(33959, 540)
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("20_kue4r")
 panels = [NodePath("../Panels/PanelVideo"), NodePath("../Panels/Panel0"), NodePath("../Panels/PanelOpenWindow"), NodePath("../Panels/Panel2"), NodePath("../Panels/Panel1"), NodePath("../Panels/Panel3"), NodePath("../Panels/Panel4"), NodePath("../Panels/Panel5"), NodePath("../Panels/Panel6"), NodePath("../Panels/Panel7"), NodePath("../Panels/Panel9"), NodePath("../Panels/Panel12"), NodePath("../Panels/Panel8"), NodePath("../Panels/Panel10"), NodePath("../Panels/PanelScrolling"), NodePath("../SceneEnder")]
-
-[node name="UI" parent="." unique_id=1829896958 instance=ExtResource("21_e3e0c")]
 
 [node name="Audio" type="Node" parent="." unique_id=619569792]
 

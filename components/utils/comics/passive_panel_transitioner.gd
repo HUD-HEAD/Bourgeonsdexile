@@ -10,12 +10,12 @@ extends Node
 func _ready() -> void:
 	#Trigger at end of animation if present
 	if anim_player != null :
-		anim_player.animation_finished.connect(SignalManager.show_next_button.emit.unbind(1))
+		anim_player.animation_finished.connect(SignalManager.next_panel.emit.unbind(1))
 	#Otherwise create a timer and wait for timeout
 	else :
 		var timer : Timer = Timer.new()
 		timer.wait_time = timer_wait
 		timer.one_shot = true
-		timer.timeout.connect(SignalManager.show_next_button.emit)
+		timer.timeout.connect(SignalManager.next_panel.emit)
 		add_child(timer)
 		timer.start()

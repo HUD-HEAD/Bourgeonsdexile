@@ -13,16 +13,13 @@ signal obstacle_cleared
 ## Demand next panel in comic section
 signal next_panel
 
-##Display next button UI
-signal show_next_button
-
 @warning_ignore_restore("unused_signal")
 
 
 func _ready():
 	#Trigger transition automatically
-	show_next_button.connect(next_panel.emit)
 	#next_panel.connect(_on_next_panel)
+	pass
 
 func _on_next_panel():
 	print_debug("next panel")

@@ -5,16 +5,12 @@ extends Node
 ## Puzzle to solve
 @export var puzzle : DragDropPuzzle
 
-## The puzzle pieces will be spawned at given spawner nodes positions. Cycles through spawners.
-@export var piece_spawners: Array[Node2D]
 ## Spawn a puzzle piece when clicked
 @export var spawn_trigger: Clickable
 ## Obstacle triggering puzzle activation
 @export var obstacle : Area2D
 
 func _ready() -> void:
-	assert(piece_spawners.size()>0)
-	
 	obstacle.area_entered.connect(_on_obstacle_entered)
 
 	_deactivate_puzzle()
@@ -67,37 +63,7 @@ func _spawn_puzzle():
 ## Activate given puzzle piece. #NOTICE does NOT check if idx is valid
 func _spawn_piece(piece_idx : int):
 	var piece : PuzzlePiece = puzzle.puzzle_pieces[piece_idx]
-	
-	if GameManager.puzzle_automatic_positioning :
-		var target_pos = _compute_spawn_position(piece_idx)
-		piece.spawn_piece(target_pos)
-	else :
-		piece.spawn_piece(piece.global_position)
-
-func _compute_spawn_position(piece_idx : int):
-	var prev_piece_idx = piece_idx-piece_spawners.size()
-	var current_piece = puzzle.puzzle_pieces[piece_idx]
-	var y_offset = current_piece.get_dimensions().y/2
-	
-	#No previous piece spawned here
-	if prev_piece_idx < 0 :
-		return  piece_spawners[piece_idx%piece_spawners.size()].global_position + y_offset*Vector2.UP
-	
-	
-	var prev_piece = puzzle.puzzle_pieces[prev_piece_idx]
-	
-	#Offset vertically from previous piece
-	y_offset += prev_piece.global_transform.get_scale().y * prev_piece.get_dimensions().y/2
-	
-
-	var target_pos : Vector2 =  prev_piece.draggable.global_position + y_offset*Vector2.UP
-	
-	#TODO #HACK cleanup
-	if target_pos.y < 0 :
-		target_pos.y = puzzle.puzzle_pieces[0].global_position.y
-		target_pos.x += 300
-	
-	return target_pos
+	piece.spawn_piece(piece.global_position)
 
 
 func _on_puzzle_complete():
@@ -117,8 +83,13 @@ func autosolve_puzzle():
 	#Enable interactivity
 	for piece in puzzle.puzzle_pieces:
 		piece.enable_piece()
+		##HACK x2 :
+		## Can fail if two puzzle pieces have the same primary recptacle
+		## Simulates placement checker being validated
+		piece.placement_checker.current_receptacle = piece.placement_checker.receptacles[0]
+		piece.placement_checker.current_receptacle.occupied = true
 		
 		piece._snap_to_receptacle()
 	
 	#HACK : need to delay so _snap is finished and puzzle area overlap is updated by the time we check
-	await get_tree().create_timer(0.8).timeout.connect(puzzle._on_correct_piece)
+	get_tree().create_timer(0.8).timeout.connect(puzzle._on_correct_piece)

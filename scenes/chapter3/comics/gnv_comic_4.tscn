@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://7hhur4kakw2r" path="res://components/chapter3/comic4/C3_4_Panel6.tscn" id="11_djphk"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="20_ql82s"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="21_hqiua"]
-[ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="22_2pr0c"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="29_0858f"]
 
 [node name="GnvComic4" type="Node2D" unique_id=150562309]
@@ -55,8 +54,6 @@ next_scene = "uid://ctau0miqtmbj2"
 [node name="PanelPanner" type="Node" parent="." unique_id=1801829837 node_paths=PackedStringArray("panels")]
 script = ExtResource("21_hqiua")
 panels = [NodePath("../Panels/C34Panel1"), NodePath("../Panels/C34Panel5"), NodePath("../Panels/C34Panel4"), NodePath("../Panels/C34Panel6"), NodePath("../SceneEnder")]
-
-[node name="UI" parent="." unique_id=621920414 instance=ExtResource("22_2pr0c")]
 
 [node name="Audio" type="Node" parent="." unique_id=339414803]
 

@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://c0cewrgpnckyx"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_p64sh"]
-[ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="3_qar8e"]
 [ext_resource type="PackedScene" uid="uid://c680a302go6m2" path="res://components/chapter1/comic_panels/comic_4/panel_missing_posters.tscn" id="4_8767r"]
 [ext_resource type="PackedScene" uid="uid://bx3vvp3in2pvr" path="res://components/chapter1/comic_panels/comic_4/panel_folders.tscn" id="4_drdnr"]
 [ext_resource type="PackedScene" uid="uid://ds1b5xoce25kf" path="res://components/chapter1/comic_panels/comic_4/panel_ticket.tscn" id="5_xs8jl"]
@@ -46,8 +45,6 @@ limit_left = 0
 limit_smoothed = true
 position_smoothing_enabled = true
 editor_draw_limits = true
-
-[node name="UI" parent="." unique_id=1841331448 instance=ExtResource("3_qar8e")]
 
 [node name="PanelMissingPosters" parent="." unique_id=56505651 instance=ExtResource("4_8767r")]
 position = Vector2(3024, 534)

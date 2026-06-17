@@ -19,7 +19,6 @@
 [ext_resource type="PackedScene" uid="uid://bi4kbbnyg1r6g" path="res://components/chapter1/comic_panels/comic_1/panel_boat_closeup.tscn" id="19_p78bu"]
 [ext_resource type="AudioStream" uid="uid://curu5rxi6emup" path="res://audio/chapter1/soundtrack/STARTING_THEME.wav" id="21_imely"]
 [ext_resource type="AudioStream" uid="uid://d1jjetsntvge2" path="res://audio/chapter1/soundtrack/MIGRATION-THEME.wav" id="22_ixmb8"]
-[ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="24_7ejrb"]
 [ext_resource type="AudioStream" uid="uid://dt8b3qx12b5jb" path="res://audio/chapter1/ambient/PANEL_9_10_CRICKETS_NIGHT.wav" id="24_ujwga"]
 [ext_resource type="AudioStream" uid="uid://bsrfqlei4ae4h" path="res://audio/chapter1/ambient/panel_12_13_bus_sound_loop.wav" id="26_2ovga"]
 [ext_resource type="AudioStream" uid="uid://cono3427ytinl" path="res://audio/chapter1/ambient/panel_15_16_ocean.wav" id="28_nv3qa"]
@@ -172,8 +171,6 @@ next_scene = "uid://s3spdg0qqc77"
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("17_13xj0")
 panels = [NodePath("../Panels/JungleComic1Frame1"), NodePath("../Panels/JungleComic1FrameEntry"), NodePath("../Panels/JungleComic1FramePonytail"), NodePath("../Panels/JungleComic1FrameSink"), NodePath("../Panels/JungleComic1FrameBoard"), NodePath("../Panels/JungleComic1FrameFoodReady"), NodePath("../Panels/JuncleComic1TVAndSwitch"), NodePath("../Panels/JungleComicCandle"), NodePath("../Panels/JungleComic1Frame2"), NodePath("../Panels/JungleComic1Frame3"), NodePath("../Panels/JungleComic1Frame4"), NodePath("../Panels/JungleComic1Frame5"), NodePath("../Panels/JungleComic1FramePhoneBus"), NodePath("../Panels/JungleComic1Frame6"), NodePath("../Panels/JungleComic1Frame7"), NodePath("../Panels/JungleComic1Frame9"), NodePath("../SceneEnder")]
-
-[node name="UI" parent="." unique_id=1829896958 instance=ExtResource("24_7ejrb")]
 
 [node name="Audio" type="Node" parent="." unique_id=619569792]
 

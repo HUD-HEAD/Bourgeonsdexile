@@ -38,7 +38,7 @@ func complete_puzzle():
 		blur_image.visible = false
 	
 	await get_tree().create_timer(transition_delay).timeout
-	SignalManager.show_next_button.emit()
+	SignalManager.next_panel.emit()
 
 func check_puzzle_completion() -> bool:
 	var progress =  1 - _calculate_progress()

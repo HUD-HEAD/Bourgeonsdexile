@@ -1072,10 +1072,9 @@ position = Vector2(13, -37)
 [node name="Fullsquare" parent="Puzzle1/CityPuzzle1" index="9" unique_id=1863100166]
 visible = false
 
-[node name="PuzzleSpawner" type="Node" parent="Puzzle1/CityPuzzle1" unique_id=1970663373 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="Puzzle1/CityPuzzle1" unique_id=1970663373 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("17_4dc1s")
 puzzle = NodePath("..")
-piece_spawners = [NodePath("../../../YSorting/JungleWoman/MarkerBubbleSpawn"), NodePath("../../Npc1/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../Npc1/Clickable")
 obstacle = NodePath("../../Obstacle")
 
@@ -1123,10 +1122,9 @@ position = Vector2(163, 117)
 visible = false
 position = Vector2(-54, 19)
 
-[node name="PuzzleSpawner" type="Node" parent="Puzzle2/CityPuzzle2" unique_id=1363570419 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="Puzzle2/CityPuzzle2" unique_id=1363570419 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("17_4dc1s")
 puzzle = NodePath("..")
-piece_spawners = [NodePath("../../../YSorting/JungleWoman/MarkerBubbleSpawn"), NodePath("../../Npc2/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../Npc2/Clickable")
 obstacle = NodePath("../../Obstacle")
 
@@ -1180,10 +1178,9 @@ texture = ExtResource("110_lgqoq")
 [node name="CompletePuzzle" parent="Puzzle3/DragDropPuzzle" index="2" unique_id=1933061263]
 visible = false
 
-[node name="PuzzleSpawner" type="Node" parent="Puzzle3/DragDropPuzzle" unique_id=638176887 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="Puzzle3/DragDropPuzzle" unique_id=638176887 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("17_4dc1s")
 puzzle = NodePath("..")
-piece_spawners = [NodePath("../../../YSorting/JungleWoman/MarkerBubbleSpawn"), NodePath("../../Npc2/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../Npc2/Clickable")
 obstacle = NodePath("../../Obstacle")
 
@@ -1224,8 +1221,8 @@ texture = ExtResource("232_fc5qj")
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzle4/DragDropPuzzle2/BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1019054959, 1667760579, 2116105691) index="1" unique_id=991932022]
 texture = ExtResource("233_2kxa1")
 
-[node name="PlacementChecker" parent="Puzzle4/DragDropPuzzle2/BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1019054959, 1667760579, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
-receptacle = NodePath("../../../Receptacle2")
+[node name="PlacementChecker" parent="Puzzle4/DragDropPuzzle2/BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1019054959, 1667760579, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacles")]
+receptacles = [NodePath("../../../Receptacle2")]
 
 [node name="DraggableZone" parent="Puzzle4/DragDropPuzzle2/BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1019054959, 1667760579, 2116105691) index="3" unique_id=1105802255]
 position = Vector2(1.9804688, 3.5431519)
@@ -1253,8 +1250,8 @@ texture = ExtResource("235_yglif")
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzle4/DragDropPuzzle2/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(1019054959, 1166541870, 2116105691) index="1" unique_id=991932022]
 texture = ExtResource("236_m8wud")
 
-[node name="PlacementChecker" parent="Puzzle4/DragDropPuzzle2/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(1019054959, 1166541870, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
-receptacle = NodePath("../../../Receptacle")
+[node name="PlacementChecker" parent="Puzzle4/DragDropPuzzle2/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(1019054959, 1166541870, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacles")]
+receptacles = [NodePath("../../../Receptacle")]
 
 [node name="DraggableZone" parent="Puzzle4/DragDropPuzzle2/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(1019054959, 1166541870, 2116105691) index="3" unique_id=1105802255]
 position = Vector2(-0.71435547, -9.27829)
@@ -1268,10 +1265,9 @@ position = Vector2(241.49973, 16.142847)
 visible = false
 position = Vector2(60, 20)
 
-[node name="PuzzleSpawner" type="Node" parent="Puzzle4/DragDropPuzzle2" unique_id=1676081078 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="Puzzle4/DragDropPuzzle2" unique_id=1676081078 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("17_4dc1s")
 puzzle = NodePath("..")
-piece_spawners = [NodePath("../../../YSorting/JungleWoman/MarkerBubbleSpawn"), NodePath("../../Npc1/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../Npc1/Clickable")
 obstacle = NodePath("../../Obstacle")
 

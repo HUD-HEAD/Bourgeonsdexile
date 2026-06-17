@@ -60,7 +60,7 @@ func _complete_puzzle():
 	
 	#HACK
 	SignalManager.obstacle_cleared.emit()
-	SignalManager.show_next_button.emit()
+	SignalManager.next_panel.emit()
 	puzzle_complete.emit()
 	
 	if play_resolve_puzzle:
@@ -73,7 +73,8 @@ func _complete_puzzle():
 ## Check if all puzzle pieces in puzzle are in the correct place
 func _check_complete() -> bool:
 	for piece in puzzle_pieces:
-		if !piece.is_correctly_placed():
+		#if !piece.is_correctly_placed():
+		if piece.placement_checker.current_receptacle == null || !piece.placement_checker.current_receptacle.occupied :
 			return false
 	
 	return true

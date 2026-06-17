@@ -18,7 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://b2oq2eui2qotl" path="res://components/chapter3/comic3/C3_3_Panel9.tscn" id="18_ej0hg"]
 [ext_resource type="PackedScene" uid="uid://ktkvuk38rind" path="res://components/chapter3/comic3/C3_3_Panel10.tscn" id="19_xgelu"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="21_2yq1v"]
-[ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="22_463pp"]
 
 [node name="JungleComic1" type="Node2D" unique_id=150562309]
 
@@ -102,8 +101,6 @@ next_scene = "uid://bewuaqd6css6q"
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("21_2yq1v")
 panels = [NodePath("../Panels/C33Panel8"), NodePath("../Panels/C33Panel9"), NodePath("../Panels/PanelReading"), NodePath("../Panels/C33Panel1"), NodePath("../Panels/C33Panel2"), NodePath("../Panels/C33Panel3"), NodePath("../Panels/C33Panel4"), NodePath("../Panels/C33Panel5"), NodePath("../Panels/C33Panel6"), NodePath("../Panels/C33Panel7"), NodePath("../Panels/C33Panel12"), NodePath("../Panels/C33Panel11"), NodePath("../Panels/C33Panel10"), NodePath("../Panels/C33Panel13"), NodePath("../Panels/PanelPanningMuseum"), NodePath("../Panels/SceneEnder")]
-
-[node name="UI" parent="." unique_id=1829896958 instance=ExtResource("22_463pp")]
 
 [node name="Audio" type="Node" parent="." unique_id=619569792]
 

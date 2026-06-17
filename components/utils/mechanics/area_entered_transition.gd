@@ -13,7 +13,7 @@ func _ready() -> void:
 
 func _on_area_entered(_area2d : Area2D):
 	to_disable.disable()
-	SignalManager.show_next_button.emit()
+	SignalManager.next_panel.emit()
 	
 	if play_sfx:
 		if stream != null:
