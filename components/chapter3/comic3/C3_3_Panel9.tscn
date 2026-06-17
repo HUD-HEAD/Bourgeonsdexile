@@ -2,6 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://c8h2bebdrfv4u" path="res://graphics/chapter3/comics/comic3/class/class.png" id="1_bik6m"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_68clv"]
+[ext_resource type="Texture2D" uid="uid://bnxqyqsdrokov" path="res://graphics/chapter3/comics/comic3/class/bubbles_class_position.png" id="3_4pv2t"]
+[ext_resource type="Texture2D" uid="uid://wgqib4hgj3wm" path="res://graphics/chapter3/comics/comic3/class/bubble_class1.png" id="4_hpyqk"]
+[ext_resource type="Texture2D" uid="uid://b2and1g34abeb" path="res://graphics/chapter3/comics/comic3/class/bubble_class2.png" id="5_h1od5"]
+[ext_resource type="Texture2D" uid="uid://cohjibtyvkmvv" path="res://graphics/chapter3/comics/comic3/class/bubble_class3.png" id="6_m6eus"]
+[ext_resource type="Texture2D" uid="uid://by6m5xjwvb1hb" path="res://graphics/chapter3/comics/comic3/class/bubble_class4.png" id="7_gxvu3"]
 
 [node name="C33Panel1" type="Node2D" unique_id=1800611031]
 
@@ -14,3 +19,23 @@ script = ExtResource("2_68clv")
 metadata/_custom_type_script = "uid://u4636s8oa5d0"
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1547384362]
+
+[node name="BubblesClassPosition" type="Sprite2D" parent="." unique_id=252090793]
+position = Vector2(202, 352)
+texture = ExtResource("3_4pv2t")
+
+[node name="BubbleClass1" type="Sprite2D" parent="." unique_id=1287704430]
+position = Vector2(-184, -332)
+texture = ExtResource("4_hpyqk")
+
+[node name="BubbleClass2" type="Sprite2D" parent="." unique_id=387806546]
+position = Vector2(77, -347)
+texture = ExtResource("5_h1od5")
+
+[node name="BubbleClass3" type="Sprite2D" parent="." unique_id=1370696844]
+position = Vector2(522, -341)
+texture = ExtResource("6_m6eus")
+
+[node name="BubbleClass4" type="Sprite2D" parent="." unique_id=79764618]
+position = Vector2(-488, -285)
+texture = ExtResource("7_gxvu3")
