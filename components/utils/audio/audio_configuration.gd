@@ -5,6 +5,9 @@ enum sfx_type{
 	puzzle_correct_piece = 1,
 	movile_selection = 2,
 	resolve_puzzle = 3,
+	bubble_correct_piece = 4,
+	bubble_resolve_puzzle = 5,
+	
 	gun_shots = 2100,
 	c1_3_relief_sound = 1300,
 	c1_3_eating_sound = 1301,
