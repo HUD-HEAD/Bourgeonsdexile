@@ -231,10 +231,9 @@ debug_color = Color(0.8252278, 0.2592846, 0.75617933, 0.41960785)
 [node name="Puzzle1" type="Node2D" parent="Puzzles" unique_id=842201109]
 position = Vector2(1014, 0)
 
-[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle1" unique_id=261562117 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle1" unique_id=261562117 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("11_hsmfu")
 puzzle = NodePath("../DragDropPuzzle")
-piece_spawners = [NodePath("../../../Path2D/PathFollow2D/Amani/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../../Path2D/PathFollow2D/Amani/SpawnTrigger")
 obstacle = NodePath("../Obstacle")
 
@@ -340,10 +339,9 @@ texture = ExtResource("36_0tndx")
 [node name="Puzzle2" type="Node2D" parent="Puzzles" unique_id=2004378291]
 position = Vector2(2741, 0)
 
-[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle2" unique_id=1077710549 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle2" unique_id=1077710549 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("11_hsmfu")
 puzzle = NodePath("../DragDropPuzzle2")
-piece_spawners = [NodePath("../../../Path2D/PathFollow2D/Amani/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../../Path2D/PathFollow2D/Amani/SpawnTrigger")
 obstacle = NodePath("../Obstacle")
 
@@ -497,10 +495,9 @@ script = ExtResource("60_nm25k")
 [node name="Puzzle3" type="Node2D" parent="Puzzles" unique_id=129801294]
 position = Vector2(4068, 0)
 
-[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle3" unique_id=323740516 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle3" unique_id=323740516 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("11_hsmfu")
 puzzle = NodePath("../DragDropPuzzle")
-piece_spawners = [NodePath("../../../Path2D/PathFollow2D/Amani/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../../Path2D/PathFollow2D/Amani/SpawnTrigger")
 obstacle = NodePath("../Obstacle")
 
@@ -525,10 +522,9 @@ position = Vector2(464, 340)
 [node name="Puzzle4" type="Node2D" parent="Puzzles" unique_id=1867814965]
 position = Vector2(4648, 0)
 
-[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle4" unique_id=904513653 node_paths=PackedStringArray("puzzle", "piece_spawners", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle4" unique_id=904513653 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("11_hsmfu")
 puzzle = NodePath("../Puzzle2")
-piece_spawners = [NodePath("../../../Path2D/PathFollow2D/Amani/MarkerBubbleSpawn")]
 spawn_trigger = NodePath("../../../Path2D/PathFollow2D/Amani/SpawnTrigger")
 obstacle = NodePath("../Obstacle")
 

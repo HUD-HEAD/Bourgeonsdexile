@@ -1,3 +1,4 @@
+@tool
 class_name PlacementChecker
 extends Area2D
 
