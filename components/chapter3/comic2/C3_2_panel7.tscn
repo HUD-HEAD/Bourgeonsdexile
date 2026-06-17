@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b4lixqemjmn7a"]
 
-[ext_resource type="Texture2D" uid="uid://bhewyojqcr2c7" path="res://graphics/chapter3/comics/comic2/worry/worry.png" id="1_w2fc6"]
+[ext_resource type="Texture2D" uid="uid://n6gse867tx5p" path="res://graphics/chapter3/comics/comic2/worry/worry_CON_realce.png" id="1_ikgsg"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="3_ikgsg"]
 [ext_resource type="Texture2D" uid="uid://m7twj1jj3ods" path="res://graphics/chapter1/comics/comic3/frame10/bubblequestion.png" id="4_246ev"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_ikgsg"]
@@ -12,7 +12,7 @@ radius = 367.03406
 
 [node name="Worry" type="Sprite2D" parent="." unique_id=1622745961]
 position = Vector2(2, -6)
-texture = ExtResource("1_w2fc6")
+texture = ExtResource("1_ikgsg")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=719314175]
 

@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://obbtdtwo3cdi"]
 
-[ext_resource type="Texture2D" uid="uid://bd0atn2mjyb8t" path="res://graphics/chapter3/comics/comic2/morning/morning.png" id="1_me57d"]
+[ext_resource type="Texture2D" uid="uid://dfbcwt5qdf477" path="res://graphics/chapter3/comics/comic2/morning/0.png" id="1_yfqw1"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_raabg"]
 
 [node name="C32Panel1" type="Node2D" unique_id=942978313]
 
 [node name="Morning" type="Sprite2D" parent="." unique_id=1964900336]
 position = Vector2(2, 6)
-texture = ExtResource("1_me57d")
+texture = ExtResource("1_yfqw1")
 
 [node name="TransitionerPassive" type="Node" parent="." unique_id=1928048712]
 script = ExtResource("2_raabg")
