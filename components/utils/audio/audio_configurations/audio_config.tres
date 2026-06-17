@@ -31,8 +31,8 @@
 [ext_resource type="Resource" uid="uid://cvyvieyi6yjxr" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_3_gun_wind_window.tres" id="12_oije2"]
 [ext_resource type="Resource" uid="uid://dro6fvr3sfoc" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_4_plastic_blocks.tres" id="13_behby"]
 [ext_resource type="Resource" uid="uid://cmm3g6e5wpmyj" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_5_childs_playing.tres" id="14_e2tky"]
+[ext_resource type="AudioStream" uid="uid://yei37uy1powr" path="res://audio/chapter2/ambient/comic 2/panel_2.3_2.4_rain_loop.wav" id="15_2moqr"]
 [ext_resource type="Resource" uid="uid://dx1n38hkurfs7" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_6_textil.tres" id="15_l82md"]
-[ext_resource type="AudioStream" uid="uid://c3tgl1gtn2ujc" path="res://audio/chapter2/ambient/comic 2/panel_2.3_2.4_day-night_sound_interactive.wav" id="15_vpsk8"]
 [ext_resource type="AudioStream" uid="uid://d1jjetsntvge2" path="res://audio/chapter1/soundtrack/MIGRATION-THEME.wav" id="15_xnur5"]
 [ext_resource type="AudioStream" uid="uid://b01tt0glu7083" path="res://audio/chapter2/ambient/comic 2/panel_2.8_people_sound_loop_copia.wav" id="16_3x07x"]
 [ext_resource type="Resource" uid="uid://b8fcxi8n8wt7p" path="res://components/utils/audio/audio_configurations/sfx_config/2_1_7_mmm_woman.tres" id="16_8i027"]
@@ -92,7 +92,7 @@ metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
 [sub_resource type="Resource" id="Resource_0gr4c"]
 script = ExtResource("1_0736c")
 type = 2200
-stream = ExtResource("15_vpsk8")
+stream = ExtResource("15_2moqr")
 metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
 
 [sub_resource type="Resource" id="Resource_n03nk"]

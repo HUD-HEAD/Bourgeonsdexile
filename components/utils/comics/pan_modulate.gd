@@ -7,6 +7,10 @@ extends Node2D
 @export var node_to_enable : Node
 
 @export_group("Sound")
+@export var stream: AudioStream
+@export var linear_volume: float = 1
+@export var min_pitch: float = 1
+@export var max_pitch: float = 1
 @export var loop_node_to_play : TriggerLoopZone
 #TODO optimize cursor shape signals
 
@@ -39,3 +43,5 @@ func complete():
 	
 	if loop_node_to_play != null:
 		loop_node_to_play.trigger_loop()
+	if stream != null:
+		AudioManager.play_audio_stream(stream, linear_volume, min_pitch, max_pitch)
