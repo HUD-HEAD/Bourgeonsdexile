@@ -1,9 +1,14 @@
 [gd_scene format=3 uid="uid://c3taxlnlcerfn"]
 
 [ext_resource type="Texture2D" uid="uid://dajl08puwm1iy" path="res://graphics/chapter3/comics/comic2/C2.1.png" id="1_me57d"]
+[ext_resource type="Texture2D" uid="uid://bof1j07ia7a1d" path="res://graphics/chapter3/comics/comic2/bubble_C2.1.png" id="2_raabg"]
 
 [node name="C32Panel1" type="Node2D" unique_id=942978313]
 
 [node name="C2_1" type="Sprite2D" parent="." unique_id=1998700119]
 position = Vector2(16, 4)
 texture = ExtResource("1_me57d")
+
+[node name="BubbleC2_1" type="Sprite2D" parent="." unique_id=1955380109]
+position = Vector2(491, -223)
+texture = ExtResource("2_raabg")

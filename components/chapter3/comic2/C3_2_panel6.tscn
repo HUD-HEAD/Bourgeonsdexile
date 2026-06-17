@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dcqf4qiy61c0h"]
 
-[ext_resource type="Texture2D" uid="uid://doprwfds6he4i" path="res://graphics/chapter3/comics/comic2/tv/tv.png" id="1_hkpfw"]
-[ext_resource type="Texture2D" uid="uid://k3rxm5d3irs6" path="res://graphics/chapter3/comics/comic2/tv/remote.png" id="3_b5rdn"]
+[ext_resource type="Texture2D" uid="uid://bj4uktlkjod7b" path="res://graphics/chapter3/comics/comic2/tv/tv_realce.png" id="1_3frnk"]
+[ext_resource type="Texture2D" uid="uid://3vs7jcx6uoln" path="res://graphics/chapter3/comics/comic2/tv/remote_realce.png" id="3_byrn3"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="4_3jmn4"]
 [ext_resource type="Texture2D" uid="uid://rapj1dddmrlg" path="res://graphics/chapter3/comics/comic2/tv/2.png" id="4_n4akh"]
 [ext_resource type="Texture2D" uid="uid://duvt6fvni55s0" path="res://graphics/chapter3/comics/comic2/tv/1.png" id="5_3frnk"]
@@ -36,7 +36,7 @@ animations = [{
 
 [node name="Tv" type="Sprite2D" parent="." unique_id=1196845639]
 position = Vector2(3, -4)
-texture = ExtResource("1_hkpfw")
+texture = ExtResource("1_3frnk")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1881772360]
 
@@ -47,7 +47,7 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="Remote" type="Sprite2D" parent="Clickable" unique_id=516726183]
 position = Vector2(68, -47)
-texture = ExtResource("3_b5rdn")
+texture = ExtResource("3_byrn3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1582891683]
 shape = SubResource("CircleShape2D_3frnk")

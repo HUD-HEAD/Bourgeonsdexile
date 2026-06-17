@@ -23,6 +23,7 @@
 [ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="17_cxg14"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="17_vuetd"]
 [ext_resource type="PackedScene" uid="uid://xrhjayy04y7b" path="res://components/chapter2/contractions/contraction_wobble/contraction_wobble.tscn" id="18_ngmml"]
+[ext_resource type="Texture2D" uid="uid://cvyg530o4g8xb" path="res://graphics/chapter2/comics/comic4/framebedhospital/closed.png" id="24_2pprd"]
 
 [node name="ChapterIIComic1" type="Node2D" unique_id=150562309]
 metadata/_edit_vertical_guides_ = [3098.0, 5247.0, 7539.0, 9944.0, 12375.0, 14408.0, 16384.0, 18203.0, 20749.0, 22655.0, 24690.0, 26712.0, 29795.0, 32039.0, 34449.0]
@@ -222,6 +223,11 @@ next_scene = "uid://ctau0miqtmbj2"
 script = ExtResource("17_vuetd")
 chapter = 1
 comic = 10
+
+[node name="Closed" type="Sprite2D" parent="." unique_id=774752142]
+position = Vector2(9959, -531)
+scale = Vector2(1.0527778, 1.0527778)
+texture = ExtResource("24_2pprd")
 
 [editable path="Panels/PanelContraction1"]
 [editable path="Panels/PanelContraction2"]

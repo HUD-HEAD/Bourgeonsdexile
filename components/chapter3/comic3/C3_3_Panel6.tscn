@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://sbxyhht7jrs1" path="res://graphics/chapter3/comics/comic3/coffee/coffee.png" id="1_bjs7r"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="2_gvalb"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="3_gvalb"]
-[ext_resource type="Texture2D" uid="uid://ce2jeafy8bs6f" path="res://graphics/chapter1/comics/comic3/frame13/frame13_bubble.png" id="4_gvalb"]
+[ext_resource type="Texture2D" uid="uid://coxo66kpavanv" path="res://graphics/chapter3/comics/comic3/coffee/bubble_coffee.png" id="4_gvalb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gvalb"]
 radius = 410.011
@@ -31,5 +31,5 @@ clickables = [NodePath("../Clickable")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
 
 [node name="Frame13Bubble" type="Sprite2D" parent="." unique_id=872287571]
-position = Vector2(-237, -330)
+position = Vector2(-55, -330)
 texture = ExtResource("4_gvalb")
