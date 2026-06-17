@@ -44,6 +44,8 @@ func _check_placement():
 	if is_correctly_placed():
 		var tween : Tween = _snap_to_receptacle()
 		tween.tween_callback(_validate_placement)
+	elif placement_checker.current_receptacle:
+		placement_checker.current_receptacle.occupied = false
 
 ##Move PuzzlePiece to front (on top of siblings).
 func _on_piece_clicked():
@@ -57,7 +59,7 @@ func _validate_placement():
 ## Snap to receptacle position
 func _snap_to_receptacle() -> Tween:
 	var tween = get_tree().create_tween()
-	tween.tween_property(draggable, "global_position", placement_checker.receptacle.global_position - placement_checker.position, 0.5)	\
+	tween.tween_property(draggable, "global_position", placement_checker.current_receptacle.global_position - placement_checker.position, 0.5)	\
 		.set_ease(Tween.EASE_OUT)
 	return tween
 
