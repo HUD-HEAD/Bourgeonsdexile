@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_nrvn0"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="2_cxg14"]
-[ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="3_48xq6"]
 [ext_resource type="PackedScene" uid="uid://b56ss21jw1ocf" path="res://components/chapter2/comic_panels/comic_4/panel_dilate_check_yes.tscn" id="8_h2s7f"]
 [ext_resource type="PackedScene" uid="uid://t5vptpn877fw" path="res://components/chapter2/comic_panels/comic_4/panel_1.tscn" id="8_pwk57"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="8_r62f8"]
@@ -187,8 +186,6 @@ position = Vector2(34771, 0)
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("2_cxg14")
 panels = [NodePath("../Panels/Panel1"), NodePath("../Panels/Panel2"), NodePath("../Panels/Panel3"), NodePath("../Panels/Panel5"), NodePath("../Panels/PanelDoctorCheck1"), NodePath("../Panels/PanelContraction1"), NodePath("../Panels/PanelContraction2"), NodePath("../Panels/PanelContraction3"), NodePath("../Panels/PanelDoctorCheck2"), NodePath("../Panels/PanelContraction4"), NodePath("../Panels/PanelContraction5"), NodePath("../Panels/PanelContraction6"), NodePath("../Panels/PanelDilateCheckYes"), NodePath("../Panels/PanelPush1"), NodePath("../Panels/PanelPush2"), NodePath("../SceneEnder")]
-
-[node name="UI" parent="." unique_id=1829896958 instance=ExtResource("3_48xq6")]
 
 [node name="Audio" type="Node" parent="." unique_id=619569792]
 

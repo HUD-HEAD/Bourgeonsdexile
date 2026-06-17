@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 			#HACK
 			process_mode = Node.PROCESS_MODE_DISABLED
 			contraction_controller.stop_contraction()
-			SignalManager.show_next_button.emit()
+			SignalManager.next_panel.emit()
 			
 			if stop_contraction_sfx:
 				AudioManager.stop_last_sfx_saved()

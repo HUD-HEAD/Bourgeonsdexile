@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://ho5wjpeqrptp" path="res://components/chapter1/comic_panels/comic_3/panel_arrival.tscn" id="13_w6r1n"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="15_sw7mp"]
 [ext_resource type="PackedScene" uid="uid://clojdgf3punl6" path="res://components/chapter1/comic_panels/comic_3/panel_phone_canteen.tscn" id="15_w6r1n"]
-[ext_resource type="PackedScene" uid="uid://wpdacnf6nbuu" path="res://components/utils/ui/comic_ui.tscn" id="16_scavv"]
 [ext_resource type="PackedScene" uid="uid://vgkc31qlpwka" path="res://components/chapter1/comic_panels/comic_3/panel_care.tscn" id="16_txuxr"]
 [ext_resource type="PackedScene" uid="uid://chdy4smhkeha0" path="res://components/chapter1/comic_panels/comic_3/panel_helpdesk.tscn" id="16_w6r1n"]
 [ext_resource type="PackedScene" uid="uid://b6wnjm88x58xc" path="res://components/chapter1/comic_panels/comic_3/panel_worker.tscn" id="17_w6r1n"]
@@ -51,8 +50,6 @@ editor_draw_limits = true
 [node name="PanelPanner" type="Node" parent="." unique_id=1862196438 node_paths=PackedStringArray("panels")]
 script = ExtResource("15_sw7mp")
 panels = [NodePath("../JungleComic3FrameLajas"), NodePath("../JungleComic3PhoneInterface"), NodePath("../JungleComic3FrameHug"), NodePath("../Comic3PanelArrival"), NodePath("../JungleComic3FrameBackpack"), NodePath("../JungleComic3FramePhone"), NodePath("../JungleComic3FrameCare"), NodePath("../PanelUltrasound"), NodePath("../JungleComic3FrameFood"), NodePath("../Comic3Panel8"), NodePath("../JungleComic3FrameKidLajas"), NodePath("../JungleComic3FrameAyuda"), NodePath("../Comic3PanelHelpdesk"), NodePath("../JungleComic3FrameFolders"), NodePath("../PanelWorker"), NodePath("../PanelAngry"), NodePath("../SceneEnder")]
-
-[node name="UI" parent="." unique_id=1396622433 instance=ExtResource("16_scavv")]
 
 [node name="JungleComic3FrameLajas" parent="." unique_id=2139961229 instance=ExtResource("4_xd2lk")]
 position = Vector2(2903.15, 534)

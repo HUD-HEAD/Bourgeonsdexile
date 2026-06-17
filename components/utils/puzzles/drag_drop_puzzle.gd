@@ -60,7 +60,7 @@ func _complete_puzzle():
 	
 	#HACK
 	SignalManager.obstacle_cleared.emit()
-	SignalManager.show_next_button.emit()
+	SignalManager.next_panel.emit()
 	puzzle_complete.emit()
 	
 	if play_resolve_puzzle:
