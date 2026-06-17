@@ -1,9 +1,19 @@
 [gd_scene format=3 uid="uid://c43i2vcml3xtv"]
 
 [ext_resource type="Texture2D" uid="uid://bh7k0foeuvcqa" path="res://graphics/chapter3/comics/comic3/framereading.png" id="1_8cwn4"]
+[ext_resource type="Texture2D" uid="uid://cc81ucbfgefv7" path="res://graphics/chapter3/comics/comic3/bubble_framereading1.png" id="2_os0b2"]
+[ext_resource type="Texture2D" uid="uid://px2uvwfpc7wg" path="res://graphics/chapter3/comics/comic3/bubble_framereading2.png" id="3_ktdjc"]
 
 [node name="C33Panel1" type="Node2D" unique_id=1800611031]
 
 [node name="Framereading" type="Sprite2D" parent="." unique_id=1770449645]
 position = Vector2(0, -1)
 texture = ExtResource("1_8cwn4")
+
+[node name="BubbleFramereading1" type="Sprite2D" parent="." unique_id=1959048708]
+position = Vector2(-310, -302)
+texture = ExtResource("2_os0b2")
+
+[node name="BubbleFramereading2" type="Sprite2D" parent="." unique_id=147912509]
+position = Vector2(591, -321)
+texture = ExtResource("3_ktdjc")

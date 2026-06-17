@@ -246,6 +246,8 @@ _data = {
 [node name="JungleComic3FrameKidLajas" type="Node2D" unique_id=120581857]
 
 [node name="FrameKidlajas" type="Sprite2D" parent="." unique_id=883360089]
+position = Vector2(76, 8)
+scale = Vector2(0.26057473, 0.25570127)
 texture = ExtResource("1_cngrr")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1658164614]
