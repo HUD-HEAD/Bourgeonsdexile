@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_riv3q"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="5_1jeax"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="6_n3srf"]
+[ext_resource type="AudioStream" uid="uid://cdy5chkrwywwj" path="res://audio/chapter2/ambient/comic 2/panel_8_zipper_sound.mp3" id="7_46thp"]
 [ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="7_ip0lj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cmlx7"]
@@ -51,7 +52,9 @@ shape = SubResource("CircleShape2D_qc1yf")
 [node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=1088810996 node_paths=PackedStringArray("clickables")]
 script = ExtResource("6_n3srf")
 clickables = [NodePath("..")]
-sfx = 2107
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("7_46thp")
 metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=1029403531]
