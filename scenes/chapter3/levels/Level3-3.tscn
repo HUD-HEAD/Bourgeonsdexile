@@ -52,4 +52,4 @@ position = Vector2(4496, 362)
 position = Vector2(7688, 468)
 
 [node name="Puzzle2" parent="." unique_id=1374852389 instance=ExtResource("8_bryjj")]
-position = Vector2(11163, 457)
+position = Vector2(10067, 266)
