@@ -46,8 +46,9 @@ position = Vector2(529, -225)
 [node name="PuzzlePieceSprite" parent="DragDropPuzzle/BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(131783519, 1667760579, 2116105691) index="0" unique_id=1266676352]
 texture = ExtResource("3_bj5mn")
 
-[node name="PlacementChecker" parent="DragDropPuzzle/BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(131783519, 1667760579, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+[node name="PlacementChecker" parent="DragDropPuzzle/BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(131783519, 1667760579, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle", "receptacles")]
 receptacle = NodePath("../../../Receptacle")
+receptacles = [NodePath("../../../Receptacle")]
 
 [node name="DraggableZone" parent="DragDropPuzzle/BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(131783519, 1667760579, 2116105691) index="3" unique_id=1105802255]
 position = Vector2(0.70490026, 9.675177)
@@ -60,8 +61,9 @@ position = Vector2(688, 318)
 [node name="PuzzlePieceSprite" parent="DragDropPuzzle/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(475217857, 2116105691) index="0" unique_id=1266676352]
 texture = ExtResource("4_q7hyt")
 
-[node name="PlacementChecker" parent="DragDropPuzzle/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(475217857, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+[node name="PlacementChecker" parent="DragDropPuzzle/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(475217857, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle", "receptacles")]
 receptacle = NodePath("../../../Receptacle")
+receptacles = [NodePath("../../../Receptacle")]
 
 [node name="DraggableZone" parent="DragDropPuzzle/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(475217857, 2116105691) index="3" unique_id=1105802255]
 position = Vector2(0.4210968, -0.6276703)
@@ -74,8 +76,9 @@ position = Vector2(196, -283)
 [node name="PuzzlePieceSprite" parent="DragDropPuzzle/BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(1557597032, 2116105691) index="0" unique_id=1266676352]
 texture = ExtResource("5_gks51")
 
-[node name="PlacementChecker" parent="DragDropPuzzle/BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(1557597032, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+[node name="PlacementChecker" parent="DragDropPuzzle/BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(1557597032, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle", "receptacles")]
 receptacle = NodePath("../../../Receptacle")
+receptacles = [NodePath("../../../Receptacle")]
 
 [node name="DraggableZone" parent="DragDropPuzzle/BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(1557597032, 2116105691) index="3" unique_id=1105802255]
 position = Vector2(-12.781967, -7.528412)
@@ -89,8 +92,9 @@ position = Vector2(229, 300)
 [node name="PuzzlePieceSprite" parent="DragDropPuzzle/BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(293983695, 2116105691) index="0" unique_id=1266676352]
 texture = ExtResource("6_8hajh")
 
-[node name="PlacementChecker" parent="DragDropPuzzle/BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(293983695, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+[node name="PlacementChecker" parent="DragDropPuzzle/BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(293983695, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle", "receptacles")]
 receptacle = NodePath("../../../Receptacle")
+receptacles = [NodePath("../../../Receptacle")]
 
 [node name="DraggableZone" parent="DragDropPuzzle/BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(293983695, 2116105691) index="3" unique_id=1105802255]
 position = Vector2(0, 13)

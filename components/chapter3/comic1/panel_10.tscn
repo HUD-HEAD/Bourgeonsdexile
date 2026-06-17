@@ -50,5 +50,6 @@ shape = SubResource("CircleShape2D_5a1j8")
 [node name="Bed" type="Sprite2D" parent="PuzzlePiece/Draggable" unique_id=1265519807]
 texture = ExtResource("5_wq72f")
 
-[node name="PlacementChecker" parent="PuzzlePiece/Draggable" unique_id=663138769 node_paths=PackedStringArray("receptacle") instance=ExtResource("9_ovo3p")]
+[node name="PlacementChecker" parent="PuzzlePiece/Draggable" unique_id=663138769 node_paths=PackedStringArray("receptacle", "receptacles") instance=ExtResource("9_ovo3p")]
 receptacle = NodePath("../../../Receptacle")
+receptacles = [NodePath("../../../Receptacle")]

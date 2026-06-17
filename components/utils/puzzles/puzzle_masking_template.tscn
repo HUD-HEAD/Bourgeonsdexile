@@ -29,6 +29,9 @@ Needed so they always appear masked out (behind Hollow pieces), even when dragge
 
 [node name="PuzzlePiece" parent="BuildingBlocks/FullPieces" unique_id=729525704 instance=ExtResource("9_xasnt")]
 
+[node name="PlacementChecker" parent="BuildingBlocks/FullPieces/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacles")]
+receptacles = [null]
+
 [node name="DraggableZone" parent="BuildingBlocks/FullPieces/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="3" unique_id=1105802255]
 shape = null
 
@@ -37,6 +40,9 @@ editor_description = "Holder for Hollow pieces.
 Needed so full pieces always appear behind (masked out), even when dragged"
 
 [node name="PuzzlePieceHollow" parent="BuildingBlocks/HollowPieces" unique_id=1809332932 instance=ExtResource("3_uye0a")]
+
+[node name="PlacementChecker" parent="BuildingBlocks/HollowPieces/PuzzlePieceHollow/Draggable" parent_id_path=PackedInt32Array(1809332932, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacles")]
+receptacles = [null]
 
 [node name="Receptacle" parent="BuildingBlocks" unique_id=600273107 instance=ExtResource("10_bo17s")]
 

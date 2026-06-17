@@ -17,6 +17,9 @@ func _ready() -> void:
 	input_pickable = false
 	
 	#TODO run tool receptacles upgrade
+	if receptacles.size() < 1:
+		receptacles.resize(1)
+	receptacles[0] = receptacle
 
 func is_correctly_placed() -> bool:
 	for _receptacle in receptacles:

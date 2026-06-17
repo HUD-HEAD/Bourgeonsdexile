@@ -26,7 +26,8 @@ script = ExtResource("3_fv06a")
 clickable = NodePath("..")
 old_sprite = NodePath("../PuzzlePieceSprite")
 
-[node name="PlacementChecker" parent="Draggable" unique_id=1710133272 instance=ExtResource("3_f1kk3")]
+[node name="PlacementChecker" parent="Draggable" unique_id=1710133272 node_paths=PackedStringArray("receptacles") instance=ExtResource("3_f1kk3")]
+receptacles = [null]
 
 [node name="DraggableZone" type="CollisionShape2D" parent="Draggable" unique_id=1105802255]
 editor_description = "Defines boundaries on which user can click and drag.

@@ -20,6 +20,8 @@ material = SubResource("CanvasItemMaterial_8pokd")
 position = Vector2(0, 200)
 script = ExtResource("2_2q0qh")
 offset_from_model = 0.0
+start_walking = true
+follow_model = true
 path_follow = NodePath("../..")
 
 [node name="AnimSprite" parent="ReflectionContainer/JungleWomanReflection" index="0" unique_id=689873547]
