@@ -1,4 +1,5 @@
 ## Handles extended puzzle obstacle logic : activation, piece spawning, deactivation etc.
+class_name PuzzleSpawner
 extends Node
 
 ## Puzzle to solve

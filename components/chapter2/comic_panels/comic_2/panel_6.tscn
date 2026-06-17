@@ -47,7 +47,7 @@ clickables = [NodePath("../Clickable")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
 
 [node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=24238233]
-position = Vector2(-781, 254)
+position = Vector2(-227, 267)
 rect = Rect2(-41, -10, 51, 64)
 script = ExtResource("5_tyjx8")
 loop_name = 2200

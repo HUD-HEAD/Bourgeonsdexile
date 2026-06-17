@@ -1285,6 +1285,7 @@ position = Vector2(-728, 0)
 [node name="JungleWoman" parent="YSorting" unique_id=1338989938 instance=ExtResource("7_2dtoo")]
 y_sort_enabled = true
 position = Vector2(809, 956)
+play_walking_sfx = true
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="YSorting/JungleWoman" unique_id=1967625911]
 position = Vector2(-186, 0)
@@ -1352,6 +1353,16 @@ rect = Rect2(-65, -10, 75, 79)
 script = ExtResource("238_48jc3")
 loop_name = 1100
 loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="Audio" type="Node" parent="." unique_id=1708691802]
+
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=762634006]
+position = Vector2(126, 910)
+rect = Rect2(-308, -72, 371, 129)
+script = ExtResource("238_48jc3")
+loop_name = 1200
+loop_mode = 2
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [editable path="Puzzle1/CityPuzzle1"]
