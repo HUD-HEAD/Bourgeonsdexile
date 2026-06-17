@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bj3dfcws2vy1g"
+path="res://.godot/imported/panel_2.3_day-night_edited.wav-2b02cc0a42310446a4f5da61325f6f69.sample"
+
+[deps]
+
+source_file="res://audio/chapter2/ambient/comic 2/panel_2.3_day-night_edited.wav"
+dest_files=["res://.godot/imported/panel_2.3_day-night_edited.wav-2b02cc0a42310446a4f5da61325f6f69.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

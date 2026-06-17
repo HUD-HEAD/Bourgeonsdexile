@@ -13,6 +13,8 @@ z_index = 1
 script = ExtResource("1_nrmhh")
 complete_image = NodePath("CompletePuzzle")
 outline_image = NodePath("OutlinePuzzle")
+correct_piece_sfx = 4
+resolve_puzzle_sfx = 5
 metadata/_custom_type_script = "uid://chrql2wwvrdt1"
 
 [node name="OutlinePuzzle" type="Sprite2D" parent="." unique_id=705975536]
