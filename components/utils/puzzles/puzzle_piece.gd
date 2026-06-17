@@ -39,13 +39,18 @@ func deactivate():
 func _on_piece_dropped():
 	_check_placement()
 
+func _reset_receptacle():
+	if placement_checker.current_receptacle:
+		placement_checker.current_receptacle.occupied = false
+		placement_checker.current_receptacle = null
+	
 ## If piece dropped in the right place, snap to receptacle position then validate placement
 func _check_placement():
+	## Need to clear previous receptacle
+	_reset_receptacle()
 	if is_correctly_placed():
 		var tween : Tween = _snap_to_receptacle()
 		tween.tween_callback(_validate_placement)
-	elif placement_checker.current_receptacle:
-		placement_checker.current_receptacle.occupied = false
 
 ##Move PuzzlePiece to front (on top of siblings).
 func _on_piece_clicked():

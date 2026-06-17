@@ -1,7 +1,10 @@
 class_name Receptacle
 extends Area2D
 
-var occupied : bool = false
+var occupied : bool = false:
+	set(_occupied):
+		occupied = _occupied
+		#print(occupied)
 
 #func _ready() -> void:
 	#area_entered.connect(_on_area_entered)
