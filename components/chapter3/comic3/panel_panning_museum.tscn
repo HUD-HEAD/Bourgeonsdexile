@@ -11,7 +11,6 @@
 
 [node name="PanNode" parent="ScrollingBackground" index="0" unique_id=379019586]
 scale = Vector2(0.265, 0.265)
-pan_left = true
 final_pos_x = 200
 
 [node name="Background" parent="ScrollingBackground/PanNode" index="0" unique_id=524227348]
@@ -24,6 +23,7 @@ texture = ExtResource("4_v4bin")
 
 [node name="Zlata" parent="ScrollingBackground" unique_id=700974070 instance=ExtResource("3_yjq3x")]
 position = Vector2(-184, 285)
+scale = Vector2(0.61, 0.61)
 script = null
 
 [node name="AnimSprite" parent="ScrollingBackground/Zlata" index="0" unique_id=689873547]

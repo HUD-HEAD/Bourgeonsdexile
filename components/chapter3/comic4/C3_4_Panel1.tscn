@@ -27,6 +27,7 @@ texture = ExtResource("1_3gm02")
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1404595436]
 
 [node name="Pictures" type="Node2D" parent="." unique_id=2030206845]
+modulate = Color(1, 1, 1, 0.77254903)
 
 [node name="Clickable" type="Area2D" parent="Pictures" unique_id=2135769268 node_paths=PackedStringArray("nodes_to_show")]
 position = Vector2(-489, -304)

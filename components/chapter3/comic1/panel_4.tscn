@@ -7,15 +7,26 @@
 [ext_resource type="AudioStream" uid="uid://byu0bot182re3" path="res://audio/chapter3/ambient/comic 1/panel_1.7_baby_yawn_sound_2.wav" id="4_b27t0"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_yj5ch"]
 [ext_resource type="Texture2D" uid="uid://du2s0t041ogf6" path="res://graphics/chapter3/comics/comic1/framebaby/2.png" id="5_hxa8n"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="8_myj6h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yj5ch"]
 radius = 295.58417
 
-[node name="PanelDoctors" type="Node2D" unique_id=162787811]
+[sub_resource type="SpriteFrames" id="SpriteFrames_cks4m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_hxa8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_ex4v3")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
 
-[node name="1" type="Sprite2D" parent="." unique_id=539904946]
-position = Vector2(-2, 152.5)
-texture = ExtResource("1_ex4v3")
+[node name="PanelDoctors" type="Node2D" unique_id=162787811]
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1367265949]
 
@@ -45,6 +56,8 @@ script = ExtResource("4_yj5ch")
 clickables = [NodePath("../Clickable")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
 
-[node name="2" type="Sprite2D" parent="." unique_id=1774007169]
-position = Vector2(18, -1050)
-texture = ExtResource("5_hxa8n")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=305350918 node_paths=PackedStringArray("clickable")]
+position = Vector2(0, 154)
+sprite_frames = SubResource("SpriteFrames_cks4m")
+script = ExtResource("8_myj6h")
+clickable = NodePath("../Clickable")
