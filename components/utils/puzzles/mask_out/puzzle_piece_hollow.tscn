@@ -7,6 +7,3 @@
 
 [node name="PuzzleMaskout" type="Sprite2D" parent="Draggable/PuzzlePieceSprite" parent_id_path=PackedInt32Array(1266676352) index="0" unique_id=1415682081]
 material = ExtResource("2_im64v")
-
-[node name="PlacementChecker" parent="Draggable" parent_id_path=PackedInt32Array(2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacles")]
-receptacles = [null]
