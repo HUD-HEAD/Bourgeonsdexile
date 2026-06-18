@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxgmspxndooqh"
-path="res://.godot/imported/frameflyer.png-013bbf5a23364c78d9087df75e87754a.ctex"
+uid="uid://dl6rauu7067ti"
+path="res://.godot/imported/neigbours.png-c49d4cbc8bd077639baf959fdfc3daec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter3/comics/comic3/frameflyer.png"
-dest_files=["res://.godot/imported/frameflyer.png-013bbf5a23364c78d9087df75e87754a.ctex"]
+source_file="res://graphics/chapter3/comics/comic3/neighbours/neigbours.png"
+dest_files=["res://.godot/imported/neigbours.png-c49d4cbc8bd077639baf959fdfc3daec.ctex"]
 
 [params]
 

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cy2i6bkp7im25"]
+
+[ext_resource type="PackedScene" uid="uid://cpmykfqut1qex" path="res://components/chapter3/comic3/C3_3_Panel4.tscn" id="1_ved3f"]
+[ext_resource type="Texture2D" uid="uid://bro1mi0p4cx8v" path="res://graphics/chapter3/comics/comic3/calendar/19.png" id="2_a2gbf"]
+[ext_resource type="Texture2D" uid="uid://cnfdbxuj6sfqa" path="res://graphics/chapter3/comics/comic3/calendar/18.png" id="3_xa65l"]
+[ext_resource type="Texture2D" uid="uid://fu1mns47v7jf" path="res://graphics/chapter3/comics/comic3/calendar/17.png" id="4_imwbn"]
+[ext_resource type="Texture2D" uid="uid://cufbmrjwyuyoo" path="res://graphics/chapter3/comics/comic3/calendar/16.png" id="5_i12u2"]
+
+[node name="C33Panel1" unique_id=1800611031 instance=ExtResource("1_ved3f")]
+
+[node name="10" parent="." index="0" unique_id=17949223]
+texture = ExtResource("2_a2gbf")
+
+[node name="9" parent="Draggable9" parent_id_path=PackedInt32Array(1966013996) index="0" unique_id=1542060996]
+texture = ExtResource("3_xa65l")
+
+[node name="8" parent="Draggable8" parent_id_path=PackedInt32Array(727677811) index="0" unique_id=1829745910]
+texture = ExtResource("4_imwbn")
+
+[node name="7" parent="Draggable7" parent_id_path=PackedInt32Array(1887829703) index="0" unique_id=1591358777]
+texture = ExtResource("5_i12u2")

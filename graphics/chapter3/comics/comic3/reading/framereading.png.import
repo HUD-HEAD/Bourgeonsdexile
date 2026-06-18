@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3xnwy8smu12a"
-path="res://.godot/imported/8.png-2f114f4df5ae86453c2d5fe836e422c3.ctex"
+uid="uid://bh7k0foeuvcqa"
+path="res://.godot/imported/framereading.png-97a7cd2e880c0611a804f8d023f058ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://components/chapter3/comic3/calendar/8.png"
-dest_files=["res://.godot/imported/8.png-2f114f4df5ae86453c2d5fe836e422c3.ctex"]
+source_file="res://graphics/chapter3/comics/comic3/reading/framereading.png"
+dest_files=["res://.godot/imported/framereading.png-97a7cd2e880c0611a804f8d023f058ed.ctex"]
 
 [params]
 
