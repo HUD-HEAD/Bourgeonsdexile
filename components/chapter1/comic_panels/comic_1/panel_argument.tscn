@@ -34,7 +34,8 @@
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="29_f5xcq"]
 [ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/mechanics/click_enable.gd" id="30_khho4"]
 [ext_resource type="AudioStream" uid="uid://bahokpj1lihaw" path="res://audio/chapter1/soundtrack/TENSE-MOMENT.wav" id="32_bosar"]
-[ext_resource type="AudioStream" uid="uid://bg2futiccmapt" path="res://audio/chapter1/ambient/PANEL_9_MAN_SCREAMING_INTERACTIVE.wav" id="33_xn0vl"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="35_oi3xf"]
+[ext_resource type="AudioStream" uid="uid://dvpbva7420tgc" path="res://audio/chapter1/ambient/comic_1_discussion_v4.wav" id="36_oi3xf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_37uka"]
 animations = [{
@@ -318,28 +319,13 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0.06666667)
 }
 tracks/5/use_blend = true
-tracks/6/type = "audio"
+tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Sfx")
+tracks/6/path = NodePath("Music:volume_db")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("33_xn0vl")
-}],
-"times": PackedFloat32Array(0.06666667)
-}
-tracks/6/use_blend = true
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("Music:volume_db")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
 "times": PackedFloat32Array(3.2, 7),
 "transitions": PackedFloat32Array(4.438279, 1),
 "update": 0,
@@ -397,5 +383,10 @@ shape = SubResource("RectangleShape2D_khho4")
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=864387841]
 bus = &"Music"
 
-[node name="Sfx" type="AudioStreamPlayer" parent="." unique_id=127431579]
-bus = &"Sfx"
+[node name="TriggerSfxOnClick" type="Node" parent="." unique_id=1318281669 node_paths=PackedStringArray("clickables")]
+script = ExtResource("35_oi3xf")
+clickables = [NodePath("../TriggerAnimation")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("36_oi3xf")
+metadata/_custom_type_script = "uid://b7avucygxykbp"

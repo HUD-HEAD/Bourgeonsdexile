@@ -3,6 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://c1dsr00eik0h7" path="res://graphics/chapter3/comics/comic3/phone_frames/phone_background_full2.png" id="1_0r1we"]
 [ext_resource type="Texture2D" uid="uid://daws5bwvkux2q" path="res://graphics/chapter3/comics/comic3/phone_frames/phone_background4.png" id="2_g2q5k"]
 [ext_resource type="Texture2D" uid="uid://d14rpq132g50f" path="res://graphics/chapter3/comics/comic3/phone_frames/phone_zlata.png" id="3_w7ygg"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="4_w7ygg"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_4wxrq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jyjm"]
+size = Vector2(188, 168.5)
 
 [node name="C33Panel1" type="Node2D" unique_id=1800611031]
 
@@ -19,3 +24,16 @@ texture = ExtResource("2_g2q5k")
 [node name="PhoneZlata" type="Sprite2D" parent="." unique_id=592640005]
 position = Vector2(74, 145)
 texture = ExtResource("3_w7ygg")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=686282010]
+position = Vector2(-17, 137)
+script = ExtResource("4_w7ygg")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1107409372]
+shape = SubResource("RectangleShape2D_1jyjm")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=49504453 node_paths=PackedStringArray("clickables")]
+script = ExtResource("5_4wxrq")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"

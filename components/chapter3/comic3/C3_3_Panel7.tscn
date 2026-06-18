@@ -1,27 +1,139 @@
 [gd_scene format=3 uid="uid://bjpisg46n2tpb"]
 
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="1_7jyva"]
 [ext_resource type="Texture2D" uid="uid://dwi8td06o7chk" path="res://graphics/chapter3/comics/comic3/phone_frames/phone_background_full.png" id="2_444gc"]
-[ext_resource type="Texture2D" uid="uid://x87iq52wgrs4" path="res://graphics/chapter3/comics/comic3/phone_frames/phone_background3.png" id="3_y1pg1"]
 [ext_resource type="Texture2D" uid="uid://d14rpq132g50f" path="res://graphics/chapter3/comics/comic3/phone_frames/phone_zlata.png" id="4_13v3p"]
+[ext_resource type="Texture2D" uid="uid://c1afdlt8n1gta" path="res://graphics/chapter1/comics/comic3/panel_phonelajas/mask.png" id="4_grpda"]
+[ext_resource type="Script" uid="uid://daanj2uv1dts1" path="res://components/chapter1/comic_panels/comic_3/phone_zoom.gd" id="5_j38bq"]
+[ext_resource type="Script" uid="uid://001fo68fi8nn" path="res://components/utils/puzzles/draggable_restricted.gd" id="6_mg6ma"]
+[ext_resource type="Texture2D" uid="uid://qkqlasnibrp0" path="res://graphics/chapter3/comics/comic3/phone_frames/map_geneve.png" id="7_cv0sx"]
+[ext_resource type="Texture2D" uid="uid://cbywnch7guolu" path="res://graphics/chapter1/comics/comic3/panel_phonelajas/buttons.png" id="9_3go1a"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="10_r5u67"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="11_ttj1o"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="12_yadpj"]
+[ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="13_j38bq"]
+[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/mechanics/click_hide.gd" id="14_3go1a"]
+[ext_resource type="Texture2D" uid="uid://cm8i6yy5b1ojp" path="res://graphics/chapter3/comics/comic3/phone_frames/geneva_woman.png" id="14_cv0sx"]
+[ext_resource type="Texture2D" uid="uid://d36iaqgusw6ql" path="res://graphics/chapter3/comics/comic3/phone_frames/hospital.png" id="15_3go1a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ti580"]
+size = Vector2(1499, 969)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_grpda"]
+radius = 28.071337
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bpujd"]
+size = Vector2(80, 79)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cv0sx"]
+radius = 1134.741
 
 [node name="C33Panel1" type="Node2D" unique_id=1800611031]
-
-[node name="TransitionerPassive" type="Node" parent="." unique_id=51209014]
-script = ExtResource("1_7jyva")
-metadata/_custom_type_script = "uid://u4636s8oa5d0"
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1156759783]
 
 [node name="PhoneBackgroundFull" type="Sprite2D" parent="." unique_id=1753140085]
-position = Vector2(-17.999985, 15.000001)
 scale = Vector2(0.4377018, 0.43770185)
 texture = ExtResource("2_444gc")
 
-[node name="PhoneBackground3" type="Sprite2D" parent="." unique_id=1575261460]
-position = Vector2(-52, 32)
-texture = ExtResource("3_y1pg1")
+[node name="Mask" type="Sprite2D" parent="." unique_id=322705202]
+clip_children = 2
+texture = ExtResource("4_grpda")
+
+[node name="NodeZoom" type="Node2D" parent="Mask" unique_id=1269207413 node_paths=PackedStringArray("zoom_in", "zoom_out")]
+script = ExtResource("5_j38bq")
+zoom_in = NodePath("../../PhoneZlata/Sprite2D/ZoomIn")
+zoom_out = NodePath("../../PhoneZlata/Sprite2D/ZoomOut")
+
+[node name="DraggableRestricted" type="Area2D" parent="Mask/NodeZoom" unique_id=37681265]
+script = ExtResource("6_mg6ma")
+left = -700.0
+right = 600.0
+up = -250.0
+down = 340.0
+metadata/_custom_type_script = "uid://001fo68fi8nn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mask/NodeZoom/DraggableRestricted" unique_id=2034774344]
+position = Vector2(-122.5, 22.5)
+shape = SubResource("RectangleShape2D_ti580")
+
+[node name="MapGeneve" type="Sprite2D" parent="Mask/NodeZoom/DraggableRestricted" unique_id=1193386536]
+texture = ExtResource("7_cv0sx")
+
+[node name="PicturePoint1" type="Area2D" parent="Mask/NodeZoom/DraggableRestricted/MapGeneve" unique_id=1995640757 node_paths=PackedStringArray("nodes_to_show")]
+position = Vector2(-159, -69)
+script = ExtResource("13_j38bq")
+nodes_to_show = [NodePath("../../../../../Picture1")]
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mask/NodeZoom/DraggableRestricted/MapGeneve/PicturePoint1" unique_id=2040336066]
+shape = SubResource("CircleShape2D_grpda")
+
+[node name="PicturePoint2" type="Area2D" parent="Mask/NodeZoom/DraggableRestricted/MapGeneve" unique_id=959672416 node_paths=PackedStringArray("nodes_to_show")]
+position = Vector2(-48, 346)
+script = ExtResource("13_j38bq")
+nodes_to_show = [NodePath("../../../../../Picture2")]
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mask/NodeZoom/DraggableRestricted/MapGeneve/PicturePoint2" unique_id=348300232]
+shape = SubResource("CircleShape2D_grpda")
 
 [node name="PhoneZlata" type="Sprite2D" parent="." unique_id=2144403420]
-position = Vector2(74, 145)
+position = Vector2(123, 109)
 texture = ExtResource("4_13v3p")
+
+[node name="Sprite2D" type="Sprite2D" parent="PhoneZlata" unique_id=1689306308]
+position = Vector2(-25, -254)
+texture = ExtResource("9_3go1a")
+
+[node name="ZoomIn" type="Area2D" parent="PhoneZlata/Sprite2D" unique_id=413769276]
+position = Vector2(0, -41)
+script = ExtResource("10_r5u67")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PhoneZlata/Sprite2D/ZoomIn" unique_id=1180308644]
+position = Vector2(-1, -1.5)
+shape = SubResource("RectangleShape2D_bpujd")
+
+[node name="ZoomOut" type="Area2D" parent="PhoneZlata/Sprite2D" unique_id=909058966]
+position = Vector2(0, 44)
+script = ExtResource("10_r5u67")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PhoneZlata/Sprite2D/ZoomOut" unique_id=970343238]
+position = Vector2(-1, -1.5)
+shape = SubResource("RectangleShape2D_bpujd")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=1621103613 node_paths=PackedStringArray("clickables")]
+script = ExtResource("11_ttj1o")
+clickables = [NodePath("../Picture1"), NodePath("../Picture2")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="TriggerSfxOnClick" type="Node" parent="." unique_id=622213735 node_paths=PackedStringArray("clickables")]
+script = ExtResource("12_yadpj")
+clickables = [NodePath("../Mask/NodeZoom/DraggableRestricted"), NodePath("../PhoneZlata/Sprite2D/ZoomIn"), NodePath("../PhoneZlata/Sprite2D/ZoomOut")]
+sfx = 2
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
+[node name="Picture1" type="Area2D" parent="." unique_id=1937043702]
+script = ExtResource("14_3go1a")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Picture1" unique_id=1449872826]
+shape = SubResource("CircleShape2D_cv0sx")
+
+[node name="GenevaWoman" type="Sprite2D" parent="Picture1" unique_id=914094432]
+position = Vector2(336.56003, -181.12248)
+scale = Vector2(0.43495837, 0.43495837)
+texture = ExtResource("14_cv0sx")
+
+[node name="Picture2" type="Area2D" parent="." unique_id=1178579248]
+script = ExtResource("14_3go1a")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Picture2" unique_id=1085926314]
+shape = SubResource("CircleShape2D_cv0sx")
+
+[node name="Hospital" type="Sprite2D" parent="Picture2" unique_id=1650717985]
+position = Vector2(336.56003, -181.12248)
+scale = Vector2(0.16745898, 0.16745898)
+texture = ExtResource("15_3go1a")

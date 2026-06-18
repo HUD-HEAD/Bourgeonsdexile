@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dlf27ti3uqkxw"]
+
+[ext_resource type="Texture2D" uid="uid://br6onvdt7l7s8" path="res://graphics/chapter3/comics/comic3/friends/1.png" id="1_lmjog"]
+[ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="2_266s7"]
+[ext_resource type="Texture2D" uid="uid://dfvgwhfpfhjd1" path="res://graphics/chapter3/comics/comic3/friends/2.png" id="3_xuq5g"]
+[ext_resource type="Texture2D" uid="uid://nwa3havoua8g" path="res://graphics/chapter3/comics/comic2/worry/bubble_worry_man.png" id="4_ww2wl"]
+[ext_resource type="Texture2D" uid="uid://csy0f3uonw46p" path="res://graphics/chapter3/comics/comic3/friends/3.png" id="5_bcnda"]
+[ext_resource type="Texture2D" uid="uid://c2w2aodf0xbjp" path="res://graphics/chapter3/comics/comic2/worry/bubble_worry_woman.png" id="6_prix4"]
+[ext_resource type="Texture2D" uid="uid://dl2md531s5p85" path="res://graphics/chapter3/comics/comic3/friends/4.png" id="7_wd1uj"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="8_266s7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xd7ct"]
+radius = 160.25293
+
+[node name="PanelFriends" type="Node2D" unique_id=897828462]
+
+[node name="1" type="Sprite2D" parent="." unique_id=1111364536]
+texture = ExtResource("1_lmjog")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=1075719943 node_paths=PackedStringArray("nodes_to_show")]
+position = Vector2(-272, -124)
+script = ExtResource("2_266s7")
+nodes_to_show = [NodePath("../2")]
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1002383222]
+shape = SubResource("CircleShape2D_xd7ct")
+
+[node name="2" type="Sprite2D" parent="." unique_id=604848694]
+texture = ExtResource("3_xuq5g")
+
+[node name="BubbleWorryMan" type="Sprite2D" parent="2" unique_id=1111931835]
+position = Vector2(-179, 151)
+texture = ExtResource("4_ww2wl")
+
+[node name="Clickable2" type="Area2D" parent="2" unique_id=355641743 node_paths=PackedStringArray("nodes_to_show")]
+position = Vector2(394, -164)
+script = ExtResource("2_266s7")
+nodes_to_show = [NodePath("../../3")]
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2/Clickable2" unique_id=1584390578]
+shape = SubResource("CircleShape2D_xd7ct")
+
+[node name="3" type="Sprite2D" parent="." unique_id=307987514]
+texture = ExtResource("5_bcnda")
+
+[node name="BubbleWorryWoman" type="Sprite2D" parent="3" unique_id=520382250]
+position = Vector2(186, 99)
+texture = ExtResource("6_prix4")
+
+[node name="Clickable2" type="Area2D" parent="3" unique_id=199344290 node_paths=PackedStringArray("nodes_to_show")]
+position = Vector2(91, -164)
+script = ExtResource("2_266s7")
+nodes_to_show = [NodePath("../../4")]
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="3/Clickable2" unique_id=2141012845]
+shape = SubResource("CircleShape2D_xd7ct")
+
+[node name="4" type="Sprite2D" parent="." unique_id=327449269]
+visible = false
+texture = ExtResource("7_wd1uj")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=656986013 node_paths=PackedStringArray("clickables")]
+script = ExtResource("8_266s7")
+clickables = [NodePath("../3/Clickable2")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"
