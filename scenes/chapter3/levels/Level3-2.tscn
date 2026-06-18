@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://2ogwn12qlycr"]
+[gd_scene format=3 uid="uid://bh15fogf83oh7"]
 
 [ext_resource type="PackedScene" uid="uid://dy84a73ucflwu" path="res://components/chapter3/main_characters/zlata.tscn" id="2_xppgi"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="3_38rxf"]
@@ -54,9 +54,9 @@ position = Vector2(2, 59)
 texture = ExtResource("5_0vj6m")
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1221118698]
-position = Vector2(14915, 596)
+position = Vector2(6591, 596)
 script = ExtResource("3_38rxf")
-next_scene = "uid://by2x0js73j5ew"
+next_scene = "uid://d4cccbwuwp1rh"
 
 [node name="Path2D" type="Path2D" parent="." unique_id=1272328632]
 curve = SubResource("Curve2D_wn2jm")

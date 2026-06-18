@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://2ogwn12qlycr"]
+[gd_scene format=3 uid="uid://c7v7368h5n57f"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_jv2u6"]
 [ext_resource type="PackedScene" uid="uid://dy84a73ucflwu" path="res://components/chapter3/main_characters/zlata.tscn" id="2_0xeah"]
@@ -45,7 +45,7 @@ scale = Vector2(0.99999994, 0.99999994)
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1294251435]
 position = Vector2(2665, 596)
 script = ExtResource("3_q0nn3")
-next_scene = "uid://d4cccbwuwp1rh"
+next_scene = "uid://by2x0js73j5ew"
 
 [node name="Puzzles" type="Node2D" parent="." unique_id=1790939761]
 
