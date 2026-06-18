@@ -158,9 +158,8 @@ position = Vector2(1.6254883, 3.3695068)
 rotation = 0.55712956
 shape = SubResource("RectangleShape2D_dx01d")
 
-[node name="PlacementChecker" parent="PuzzlePiece_Phone/Draggable" unique_id=731281300 node_paths=PackedStringArray("receptacles", "receptacle") instance=ExtResource("13_nkld0")]
+[node name="PlacementChecker" parent="PuzzlePiece_Phone/Draggable" unique_id=731281300 node_paths=PackedStringArray("receptacle") instance=ExtResource("13_nkld0")]
 position = Vector2(-216, 354)
-receptacles = [NodePath("../../../Receptacle_Charger")]
 receptacle = NodePath("../../../Receptacle_Charger")
 
 [node name="TriggerSfxOnClick" type="Node" parent="PuzzlePiece_Phone" unique_id=1927995676 node_paths=PackedStringArray("clickables")]
