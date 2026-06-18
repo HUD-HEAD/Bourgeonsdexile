@@ -145,8 +145,6 @@ position = Vector2(335, -1)
 [node name="CompletePuzzle" parent="." index="2" unique_id=1665313748]
 texture = ExtResource("9_hxq4o")
 
-[node name="Camera2D" type="Camera2D" parent="." index="6" unique_id=952810560]
-
 [editable path="BuildingBlocks/FullPieces/PuzzlePiece"]
 [editable path="BuildingBlocks/FullPieces/PuzzlePiece4"]
 [editable path="BuildingBlocks/FullPieces/PuzzlePiece5"]
