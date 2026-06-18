@@ -13,6 +13,7 @@ script = ExtResource("1_jm8a2")
 draggable = NodePath("Draggable")
 placement_checker = NodePath("Draggable/PlacementChecker")
 metadata/_custom_type_script = "uid://dt4apmm1b4e51"
+metadata/_edit_group_ = true
 
 [node name="Draggable" type="Area2D" parent="." unique_id=2116105691]
 editor_description = "Component enabling drag and drop."

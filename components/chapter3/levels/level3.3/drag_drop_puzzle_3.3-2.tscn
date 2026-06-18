@@ -19,7 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://cp5mupiqjfs5d" path="res://graphics/chapter3/levels/CH3_puzzles/9/7-9 copia.png" id="17_ug5up"]
 [ext_resource type="Texture2D" uid="uid://cdlddyg2n42lq" path="res://graphics/chapter3/levels/CH3_puzzles/9/7-9.png" id="18_6vdvj"]
 [ext_resource type="Texture2D" uid="uid://ctjhrav1v2sp4" path="res://graphics/chapter3/levels/CH3_puzzles/9/full9.png" id="19_7nafr"]
-[ext_resource type="Texture2D" uid="uid://bw8joghirmh2v" path="res://graphics/chapter3/levels/CH3_puzzles/9/Capa 16.png" id="20_ogaji"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4p4vi"]
 size = Vector2(71.80437, 193.1553)
@@ -43,7 +42,7 @@ size = Vector2(222.17834, 87.95005)
 size = Vector2(267.26404, 107.13249)
 
 [node name="DragDropPuzzle" unique_id=1767003607 node_paths=PackedStringArray("puzzle_pieces") instance=ExtResource("1_gx6a6")]
-puzzle_pieces = [NodePath("BuildingBlocks/PuzzlePiece"), NodePath("BuildingBlocks/PuzzlePiece2"), NodePath("BuildingBlocks/PuzzlePiece3"), NodePath("BuildingBlocks/PuzzlePiece4"), NodePath("BuildingBlocks/PuzzlePiece5"), NodePath("BuildingBlocks/PuzzlePiece6")]
+puzzle_pieces = [NodePath("BuildingBlocks/PuzzlePiece"), NodePath("BuildingBlocks/PuzzlePiece2"), NodePath("BuildingBlocks/PuzzlePiece3"), NodePath("BuildingBlocks/PuzzlePiece4"), NodePath("BuildingBlocks/PuzzlePiece5"), NodePath("BuildingBlocks/PuzzlePiece6"), NodePath("BuildingBlocks/PuzzlePiece7")]
 
 [node name="OutlinePuzzle" parent="." index="0" unique_id=1513168459]
 texture = ExtResource("2_qykbc")
@@ -202,10 +201,6 @@ position = Vector2(-95, 67)
 [node name="CompletePuzzle" parent="." index="2" unique_id=1933061263]
 position = Vector2(-1, 0)
 texture = ExtResource("19_7nafr")
-
-[node name="Capa16" type="Sprite2D" parent="." index="3" unique_id=1617452957]
-position = Vector2(-1, 2)
-texture = ExtResource("20_ogaji")
 
 [editable path="BuildingBlocks/PuzzlePiece"]
 [editable path="BuildingBlocks/PuzzlePiece2"]

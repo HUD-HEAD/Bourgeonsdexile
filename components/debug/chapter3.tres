@@ -4,4 +4,4 @@
 
 [resource]
 script = ExtResource("1_rj3q7")
-ordered_scene_list = Array[String](["uid://da27n50yts6q2"])
+ordered_scene_list = Array[String](["uid://da27n50yts6q2", "uid://c7v7368h5n57f", "uid://by2x0js73j5ew", "uid://bh15fogf83oh7", "uid://d4cccbwuwp1rh", "uid://bewuaqd6css6q", "uid://bty624uf5tape"])
