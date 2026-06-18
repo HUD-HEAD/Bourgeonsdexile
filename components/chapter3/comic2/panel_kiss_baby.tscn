@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bkss7u1yskc4n"]
+
+[ext_resource type="Texture2D" uid="uid://dx5o1ig7grkki" path="res://graphics/chapter3/comics/comic2/babykiss/1.png" id="1_62ygf"]
+[ext_resource type="Texture2D" uid="uid://dopyb42mrw3on" path="res://graphics/chapter3/comics/comic2/babykiss/2.png" id="2_k1enn"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="3_apwjc"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="4_sjxva"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_gc4cr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qf6w7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_62ygf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_k1enn")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ftx3h"]
+radius = 933.6943
+
+[node name="PanelKissBaby" type="Node2D" unique_id=21961207]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=230616813 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_qf6w7")
+script = ExtResource("3_apwjc")
+clickable = NodePath("../Clickable")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=1079586752]
+script = ExtResource("4_sjxva")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=815413132]
+shape = SubResource("CircleShape2D_ftx3h")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=369801406 node_paths=PackedStringArray("clickables")]
+script = ExtResource("5_gc4cr")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"

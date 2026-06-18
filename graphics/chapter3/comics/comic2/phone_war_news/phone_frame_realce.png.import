@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmolfkt7e0jqt"
-path="res://.godot/imported/phone_frame_realce.png-b7b4198ab485df039381c56ee4c52dc5.ctex"
+path="res://.godot/imported/phone_frame_realce.png-cd6c451c8d2b8449f8ff812b6a135193.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter3/comics/comic3/phone_frames/phone_frame_realce.png"
-dest_files=["res://.godot/imported/phone_frame_realce.png-b7b4198ab485df039381c56ee4c52dc5.ctex"]
+source_file="res://graphics/chapter3/comics/comic2/phone_war_news/phone_frame_realce.png"
+dest_files=["res://.godot/imported/phone_frame_realce.png-cd6c451c8d2b8449f8ff812b6a135193.ctex"]
 
 [params]
 

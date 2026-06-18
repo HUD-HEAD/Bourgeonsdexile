@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kcagyobuie41"
-path="res://.godot/imported/phone_zlata_realce.png-19bc06b0e6caf11ddb2002fd9fc55a72.ctex"
+uid="uid://civbg5lshtqit"
+path="res://.godot/imported/phone_background1_realce.png-4b45ca92a0abc3ae6e91a10af5621ead.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter3/comics/comic3/phone_frames/phone_zlata_realce.png"
-dest_files=["res://.godot/imported/phone_zlata_realce.png-19bc06b0e6caf11ddb2002fd9fc55a72.ctex"]
+source_file="res://graphics/chapter3/comics/comic2/phone_war_news/phone_background1_realce.png"
+dest_files=["res://.godot/imported/phone_background1_realce.png-4b45ca92a0abc3ae6e91a10af5621ead.ctex"]
 
 [params]
 

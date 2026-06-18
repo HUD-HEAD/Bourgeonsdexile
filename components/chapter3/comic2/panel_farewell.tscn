@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://0gf0pu1fqt8d"]
+
+[ext_resource type="Texture2D" uid="uid://ccp15q4c2poto" path="res://graphics/chapter3/comics/comic2/goodbyehug/1.png" id="1_e2uiu"]
+[ext_resource type="Texture2D" uid="uid://46kmrjmdmb3r" path="res://graphics/chapter3/comics/comic2/goodbyehug/2.png" id="2_wqwel"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="3_swwyd"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="4_mwihj"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_mwihj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_swwyd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_e2uiu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_wqwel")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0mi38"]
+radius = 769.1898
+
+[node name="PanelFarewell" type="Node2D" unique_id=1301014579]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1329988174 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_swwyd")
+script = ExtResource("3_swwyd")
+clickable = NodePath("../Clickable")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=118136318]
+script = ExtResource("4_mwihj")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1145282443]
+shape = SubResource("CircleShape2D_0mi38")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=144056682 node_paths=PackedStringArray("clickables")]
+script = ExtResource("5_mwihj")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"
