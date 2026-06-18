@@ -1,28 +1,14 @@
 [gd_scene format=3 uid="uid://cgsvxrtoxhfja"]
 
 [ext_resource type="Texture2D" uid="uid://gevy0733xl07" path="res://graphics/chapter1/comics/comic2/frame11/frame11.png" id="1_6g6ab"]
-[ext_resource type="AudioStream" uid="uid://cmtdjf2ccy6y0" path="res://audio/chapter1/ambient/panel_section_2/panel_2.14_woman_breathing - copia.wav" id="3_m1dd0"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="3_qkc2a"]
 [ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/mechanics/click_enable.gd" id="3_xkunk"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_m1dd0"]
+[ext_resource type="AudioStream" uid="uid://hecegfnk3a28" path="res://audio/chapter1/ambient/panel_section_2/comic_2_jungle_sound.wav" id="4_ojs3b"]
 
 [sub_resource type="Animation" id="Animation_xkunk"]
 resource_name = "breathe_transition"
 length = 4.3
-tracks/0/type = "audio"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AudioStreamPlayer")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("3_m1dd0")
-}],
-"times": PackedFloat32Array(0.33333334)
-}
-tracks/0/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m1dd0"]
 _data = {
@@ -51,6 +37,14 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1222111217]
 position = Vector2(-7, -47)
 shape = SubResource("RectangleShape2D_m1dd0")
+
+[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=189894228 node_paths=PackedStringArray("clickables")]
+script = ExtResource("3_qkc2a")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("4_ojs3b")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=536318758]
 bus = &"Sfx"
