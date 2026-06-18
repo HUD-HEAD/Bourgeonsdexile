@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dqxdlo41aaikh" path="res://graphics/chapter1/comics/comic2/frame12/frame12eyesclosed.png" id="2_2ryll"]
 [ext_resource type="Texture2D" uid="uid://ce458mqe6u8a1" path="res://graphics/chapter1/comics/comic2/frame12/frame12eyesopen.png" id="3_y4tl3"]
 [ext_resource type="Texture2D" uid="uid://bu4hrejmyuupc" path="res://graphics/chapter1/comics/comic2/anim_belly/belly_0001.png" id="4_1k23h"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="4_yj4lj"]
 [ext_resource type="Texture2D" uid="uid://dv6r40bvfvmrx" path="res://graphics/chapter1/comics/comic2/anim_belly/belly_0002.png" id="5_yj4lj"]
 [ext_resource type="Texture2D" uid="uid://dv5y023b7x6t" path="res://graphics/chapter1/comics/comic2/anim_belly/belly_0003.png" id="6_a1fuf"]
 [ext_resource type="Texture2D" uid="uid://bj0eiomruy7n" path="res://graphics/chapter1/comics/comic2/anim_belly/belly_0004.png" id="7_lt2gi"]
@@ -94,8 +95,8 @@
 [ext_resource type="Texture2D" uid="uid://bkmtnhq7fokrd" path="res://graphics/chapter1/comics/comic2/anim_belly/belly_0090.png" id="93_ph8o6"]
 [ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/mechanics/click_enable.gd" id="94_ibni5"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="95_fsc76"]
-[ext_resource type="PackedScene" uid="uid://bhdgu77vude86" path="res://components/utils/audio/PlayOnClick.tscn" id="96_uqd7o"]
 [ext_resource type="AudioStream" uid="uid://defk636bejrmt" path="res://audio/chapter1/ambient/panel_section_2/panel_2.15_heart_sound.wav" id="96_x3fel"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="97_ndumx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8mjma"]
 animations = [{
@@ -166,6 +167,20 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TriggerLoopZone")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"stop_loop"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1k23h"]
@@ -491,10 +506,20 @@ node_to_enable = NodePath("../AnimatedSprite2D")
 position = Vector2(61.5, 145)
 shape = SubResource("CircleShape2D_ed0l4")
 
+[node name="TriggerSfxOnClick" type="Node" parent="PregnancyPanel/Area2D" unique_id=382630670 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_yj4lj")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("96_x3fel")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
 [node name="TransitionTriggerCounter" type="Node" parent="PregnancyPanel" unique_id=1270788183 node_paths=PackedStringArray("clickables")]
 script = ExtResource("95_fsc76")
 clickables = [NodePath("../Area2D")]
 
-[node name="SfxPlayer" parent="PregnancyPanel" unique_id=679183344 node_paths=PackedStringArray("clickables") instance=ExtResource("96_uqd7o")]
-stream = ExtResource("96_x3fel")
-clickables = [NodePath("../Area2D")]
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=171429855]
+rect = Rect2(-10, -10, 51, 41)
+script = ExtResource("97_ndumx")
+loop_name = 1101
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"

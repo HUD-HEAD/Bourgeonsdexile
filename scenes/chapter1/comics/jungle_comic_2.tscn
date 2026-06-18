@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cgsvxrtoxhfja" path="res://components/chapter1/comic_panels/comic_2/panel13.tscn" id="15_xso2w"]
 [ext_resource type="PackedScene" uid="uid://de5wtyfnp5wnc" path="res://components/chapter1/comic_panels/comic_2/panel14.tscn" id="16_js07p"]
 [ext_resource type="PackedScene" uid="uid://43c07utlirv7" path="res://components/chapter1/comic_panels/comic_2/panel11.tscn" id="18_tmikl"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="20_4uixq"]
 [ext_resource type="PackedScene" uid="uid://cnyqkkr7kcq7i" path="res://components/chapter1/comic_panels/comic_2/panel12.tscn" id="20_ox075"]
 [ext_resource type="Script" uid="uid://n4vlynaxxck4" path="res://components/utils/audio/audio_zone_fade.gd" id="20_wj0rq"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="21_4uixq"]
@@ -113,6 +114,14 @@ metadata/_custom_type_script = "uid://n4vlynaxxck4"
 [node name="Ocean" type="AudioStreamPlayer" parent="Audio" unique_id=330211203]
 stream = ExtResource("21_wj0rq")
 bus = &"Sfx"
+
+[node name="TriggerStopSteps" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=1076344863]
+position = Vector2(1779, 728)
+rect = Rect2(-65, -10, 75, 79)
+script = ExtResource("20_4uixq")
+loop_name = 1200
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [node name="CheckpointController" type="Node" parent="." unique_id=120937431]
 script = ExtResource("21_4uixq")

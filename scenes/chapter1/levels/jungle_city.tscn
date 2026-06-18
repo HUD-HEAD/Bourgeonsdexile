@@ -1351,6 +1351,14 @@ loop_name = 1100
 loop_mode = 1
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
+[node name="TriggerStopSteps" type="VisibleOnScreenNotifier2D" parent="." unique_id=1569468604]
+position = Vector2(5802, 638)
+rect = Rect2(-65, -10, 75, 79)
+script = ExtResource("238_48jc3")
+loop_name = 1200
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
 [node name="Audio" type="Node" parent="." unique_id=1708691802]
 
 [node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=762634006]
