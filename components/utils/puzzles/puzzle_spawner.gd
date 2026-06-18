@@ -86,8 +86,8 @@ func autosolve_puzzle():
 		##HACK x2 :
 		## Can fail if two puzzle pieces have the same primary recptacle
 		## Simulates placement checker being validated
-		piece.placement_checker.current_receptacle = piece.placement_checker.receptacles[0]
-		piece.placement_checker.current_receptacle.occupied = true
+		#piece.placement_checker.current_receptacle = piece.placement_checker.receptacles[0]
+		#piece.placement_checker.current_receptacle.occupied = true
 		
 		piece._snap_to_receptacle()
 	
