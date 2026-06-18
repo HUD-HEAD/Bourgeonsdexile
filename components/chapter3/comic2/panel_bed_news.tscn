@@ -29,5 +29,3 @@ texture = ExtResource("3_4x3o0")
 script = ExtResource("4_17yhj")
 clickables = [NodePath("../Clickable")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=975009749]
