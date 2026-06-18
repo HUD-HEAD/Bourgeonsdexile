@@ -7,9 +7,16 @@
 [ext_resource type="PackedScene" uid="uid://cvypmwioryx3k" path="res://components/chapter3/comic2/C3_2_panel5.tscn" id="6_edyyq"]
 [ext_resource type="PackedScene" uid="uid://7wfexl2ikia2" path="res://components/chapter3/comic2/C3_2_panel14.tscn" id="7_edyyq"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="8_x8xde"]
+[ext_resource type="PackedScene" uid="uid://bm6kmynssnmsm" path="res://components/chapter3/comic2/panel_suitcase.tscn" id="10_f4prm"]
+[ext_resource type="PackedScene" uid="uid://d1n22htsm61db" path="res://components/chapter3/comic2/panel_window_swipe.tscn" id="10_lynle"]
+[ext_resource type="PackedScene" uid="uid://c5n0jmsc0e8jc" path="res://components/chapter3/comic2/panel_bus_ticket.tscn" id="10_pi4cn"]
 [ext_resource type="PackedScene" uid="uid://c3taxlnlcerfn" path="res://components/chapter3/comic2/C3_2_panel1.tscn" id="12_f4prm"]
+[ext_resource type="PackedScene" uid="uid://0gf0pu1fqt8d" path="res://components/chapter3/comic2/panel_farewell.tscn" id="13_me2wc"]
 [ext_resource type="PackedScene" uid="uid://dcqf4qiy61c0h" path="res://components/chapter3/comic2/C3_2_panel6.tscn" id="13_pi4cn"]
+[ext_resource type="PackedScene" uid="uid://bkss7u1yskc4n" path="res://components/chapter3/comic2/panel_kiss_baby.tscn" id="14_8adqe"]
 [ext_resource type="PackedScene" uid="uid://b4lixqemjmn7a" path="res://components/chapter3/comic2/C3_2_panel7.tscn" id="14_me2wc"]
+[ext_resource type="PackedScene" uid="uid://bke63vcubnk4i" path="res://components/chapter3/comic2/panel_give_pendant.tscn" id="14_unqgw"]
+[ext_resource type="PackedScene" uid="uid://cx5gbqsvcfe32" path="res://components/chapter3/comic2/panel_husband_pendant.tscn" id="15_8adqe"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="20_8wlj1"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="21_t5b7w"]
 
@@ -62,18 +69,39 @@ position = Vector2(14508, 0)
 [node name="C32Panel3" parent="Panels" unique_id=1513906772 instance=ExtResource("14_me2wc")]
 position = Vector2(16840, 0)
 
+[node name="PanelSuitcase" parent="Panels" unique_id=1710705121 instance=ExtResource("10_f4prm")]
+position = Vector2(19144, 0)
+
+[node name="PanelBusTicket" parent="Panels" unique_id=1868635066 instance=ExtResource("10_pi4cn")]
+position = Vector2(21129, 0)
+
+[node name="PanelFarewell" parent="Panels" unique_id=1301014579 instance=ExtResource("13_me2wc")]
+position = Vector2(23395, 0)
+
+[node name="PanelGivePendant" parent="Panels" unique_id=1091247592 instance=ExtResource("14_unqgw")]
+position = Vector2(25621, 0)
+
+[node name="PanelHusbandPendant" parent="Panels" unique_id=1036734152 instance=ExtResource("15_8adqe")]
+position = Vector2(27986, 0)
+
+[node name="PanelKissBaby" parent="Panels" unique_id=21961207 instance=ExtResource("14_8adqe")]
+position = Vector2(30153, 0)
+
 [node name="C32Panel6" parent="Panels" unique_id=830714939 instance=ExtResource("7_edyyq")]
-position = Vector2(22542, 0)
+position = Vector2(32374, 0)
 scale = Vector2(0.88, 0.88)
 
+[node name="PanelWindowSwipe" parent="Panels" unique_id=968051875 instance=ExtResource("10_lynle")]
+position = Vector2(34501, 0)
+
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=849983846]
-position = Vector2(30056, 596)
+position = Vector2(37155, 596)
 script = ExtResource("20_8wlj1")
 next_scene = "uid://2ogwn12qlycr"
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("21_t5b7w")
-panels = [NodePath("../Panels/C32Panel4"), NodePath("../Panels/PanelBabyPendant"), NodePath("../Panels/PanelFlashback"), NodePath("../Panels/PanelBedNews"), NodePath("../Panels/C32Panel5"), NodePath("../Panels/C32Panel2"), NodePath("../Panels/C32Panel3"), NodePath("../Panels/C32Panel6"), NodePath("../SceneEnder")]
+panels = [NodePath("../Panels/C32Panel4"), NodePath("../Panels/PanelBabyPendant"), NodePath("../Panels/PanelFlashback"), NodePath("../Panels/PanelBedNews"), NodePath("../Panels/C32Panel5"), NodePath("../Panels/C32Panel2"), NodePath("../Panels/C32Panel3"), NodePath("../Panels/PanelSuitcase"), NodePath("../Panels/PanelBusTicket"), NodePath("../Panels/PanelFarewell"), NodePath("../Panels/PanelGivePendant"), NodePath("../Panels/PanelHusbandPendant"), NodePath("../Panels/PanelKissBaby"), NodePath("../Panels/C32Panel6"), NodePath("../Panels/PanelWindowSwipe"), NodePath("../SceneEnder")]
 
 [node name="Audio" type="Node" parent="." unique_id=619569792]
 

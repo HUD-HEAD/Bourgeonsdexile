@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://cx5gbqsvcfe32"]
+
+[ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/mechanics/click_enable.gd" id="1_listy"]
+[ext_resource type="Texture2D" uid="uid://bo0gg4rc8gd2a" path="res://graphics/chapter3/comics/comic2/necklacebf/2.png" id="3_mpm5d"]
+[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="4_listy"]
+[ext_resource type="Texture2D" uid="uid://ded4jmyurd101" path="res://graphics/chapter3/comics/comic2/necklacebf/1.png" id="4_wu0xx"]
+
+[sub_resource type="Animation" id="Animation_listy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("2:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("1:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_wf3w2"]
+resource_name = "default"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("2:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.16666667, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("1:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.16666667, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Clickable")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.06666667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"hide"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ejcdv"]
+_data = {
+&"RESET": SubResource("Animation_listy"),
+&"default": SubResource("Animation_wf3w2")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_listy"]
+radius = 312.01443
+
+[node name="PanelHusbandPendant" type="Node2D" unique_id=1036734152]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1700772240]
+libraries/ = SubResource("AnimationLibrary_ejcdv")
+autoplay = &"default"
+
+[node name="2" type="Sprite2D" parent="." unique_id=409695332]
+self_modulate = Color(1, 1, 1, 0)
+texture = ExtResource("3_mpm5d")
+
+[node name="1" type="Sprite2D" parent="." unique_id=1966923796]
+texture = ExtResource("4_wu0xx")
+
+[node name="TransitionerPassive" type="Node" parent="." unique_id=1784540520 node_paths=PackedStringArray("anim_player")]
+script = ExtResource("4_listy")
+anim_player = NodePath("../AnimationPlayer")
+metadata/_custom_type_script = "uid://u4636s8oa5d0"
+
+[node name="Clickable" type="Area2D" parent="." unique_id=1719095206 node_paths=PackedStringArray("node_to_enable")]
+position = Vector2(-249, 51)
+script = ExtResource("1_listy")
+node_to_enable = NodePath("../AnimationPlayer")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=392219075]
+shape = SubResource("CircleShape2D_listy")

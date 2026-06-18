@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="6_hf4f4"]
 [ext_resource type="Script" uid="uid://dt4apmm1b4e51" path="res://components/utils/puzzles/puzzle_piece.gd" id="7_rcyu6"]
 [ext_resource type="PackedScene" uid="uid://xyq2m2kx86ku" path="res://components/utils/puzzles/placement_checker.tscn" id="9_ovo3p"]
+[ext_resource type="Script" uid="uid://chrql2wwvrdt1" path="res://components/utils/puzzles/drag_drop_puzzle.gd" id="9_uktcc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5a1j8"]
 radius = 118.0
@@ -52,3 +53,10 @@ texture = ExtResource("5_wq72f")
 
 [node name="PlacementChecker" parent="PuzzlePiece/Draggable" unique_id=663138769 node_paths=PackedStringArray("receptacles") instance=ExtResource("9_ovo3p")]
 receptacles = [NodePath("../../../Receptacle")]
+
+[node name="DragDropPuzzle" type="Node2D" parent="." unique_id=2129284455 node_paths=PackedStringArray("puzzle_pieces")]
+script = ExtResource("9_uktcc")
+puzzle_pieces = [NodePath("../PuzzlePiece")]
+play_correct_piece = false
+play_resolve_puzzle = false
+metadata/_custom_type_script = "uid://chrql2wwvrdt1"

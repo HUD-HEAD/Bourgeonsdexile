@@ -19,7 +19,7 @@ texture = ExtResource("1_ikgsg")
 
 [node name="Clickable" type="Area2D" parent="." unique_id=146262214 node_paths=PackedStringArray("nodes_to_show")]
 script = ExtResource("3_ikgsg")
-nodes_to_show = [NodePath("../Bubblequestion")]
+nodes_to_show = [NodePath("../Bubblequestion"), NodePath("../Bubblequestion2")]
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=2033832365]
@@ -36,4 +36,5 @@ texture = ExtResource("4_f0v7s")
 [node name="TransitionerCounter" type="Node" parent="." unique_id=94076523 node_paths=PackedStringArray("clickables")]
 script = ExtResource("4_ikgsg")
 clickables = [NodePath("../Clickable")]
+obstacles_to_clear = 2
 metadata/_custom_type_script = "uid://c44tybeisilbv"

@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://c5n0jmsc0e8jc"]
+
+[ext_resource type="Texture2D" uid="uid://c7b8gev3l4j05" path="res://graphics/chapter3/comics/comic2/pctickets/1.png" id="1_ppajs"]
+[ext_resource type="Texture2D" uid="uid://c1vikr2f2bmca" path="res://graphics/chapter3/comics/comic2/pctickets/2.png" id="2_m4bqj"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="3_bramv"]
+[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/mechanics/click_hide.gd" id="4_4p654"]
+[ext_resource type="Texture2D" uid="uid://cf4su4gv5wd1v" path="res://graphics/chapter3/comics/comic2/pctickets/button1.png" id="5_egm1d"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="6_egm1d"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gbym3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ppajs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_m4bqj")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oe8q3"]
+size = Vector2(160, 58)
+
+[node name="PanelBusTicket" type="Node2D" unique_id=1868635066]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=336969975 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_gbym3")
+script = ExtResource("3_bramv")
+clickable = NodePath("../Clickable")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=271690426]
+position = Vector2(342, -35)
+script = ExtResource("4_4p654")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1646203353]
+position = Vector2(1, -2)
+shape = SubResource("RectangleShape2D_oe8q3")
+
+[node name="Button1" type="Sprite2D" parent="Clickable" unique_id=1659511607]
+texture = ExtResource("5_egm1d")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=1070713960 node_paths=PackedStringArray("clickables")]
+script = ExtResource("6_egm1d")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"

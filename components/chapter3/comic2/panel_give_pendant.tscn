@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bke63vcubnk4i"]
+
+[ext_resource type="Texture2D" uid="uid://cfa7vnbrr10n3" path="res://graphics/chapter3/comics/comic2/zlatacrying/1.png" id="1_dl5sf"]
+[ext_resource type="Texture2D" uid="uid://b1xr07qr01425" path="res://graphics/chapter3/comics/comic2/zlatacrying/2.png" id="2_m6s2v"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="3_5xvri"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="3_kpoqn"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_ktp5l"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5xvri"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dl5sf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_m6s2v")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ktp5l"]
+radius = 933.6943
+
+[node name="PanelGivePendant" type="Node2D" unique_id=1091247592]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=91728883 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_5xvri")
+script = ExtResource("3_5xvri")
+clickable = NodePath("../Clickable")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=601486195]
+script = ExtResource("3_kpoqn")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=830203489]
+shape = SubResource("CircleShape2D_ktp5l")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=1892859595 node_paths=PackedStringArray("clickables")]
+script = ExtResource("5_ktp5l")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"
