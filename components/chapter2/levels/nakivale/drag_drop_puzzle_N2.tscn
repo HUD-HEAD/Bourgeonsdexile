@@ -58,8 +58,7 @@ position = Vector2(267, 36)
 [node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="0" unique_id=1266676352]
 texture = ExtResource("3_cxa7m")
 
-[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacles", "receptacle")]
-receptacles = [NodePath("../../../Receptacle")]
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
 receptacle = NodePath("../../../Receptacle")
 
 [node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="3" unique_id=1105802255]
@@ -76,8 +75,7 @@ position = Vector2(147, -68)
 [node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="0" unique_id=1266676352]
 texture = ExtResource("5_qopf5")
 
-[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacles", "receptacle")]
-receptacles = [NodePath("../../../Receptacle2")]
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
 receptacle = NodePath("../../../Receptacle2")
 
 [node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="3" unique_id=1105802255]
@@ -95,8 +93,7 @@ position = Vector2(24, -129)
 [node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(668270485, 2116105691) index="0" unique_id=1266676352]
 texture = ExtResource("7_k7ai0")
 
-[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(668270485, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacles", "receptacle")]
-receptacles = [NodePath("../../../Receptacle3")]
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(668270485, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
 receptacle = NodePath("../../../Receptacle3")
 
 [node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(668270485, 2116105691) index="3" unique_id=1105802255]
@@ -114,8 +111,7 @@ position = Vector2(-160, -130)
 [node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(1602884939, 2116105691) index="0" unique_id=1266676352]
 texture = ExtResource("8_vlmr2")
 
-[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(1602884939, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacles", "receptacle")]
-receptacles = [NodePath("../../../Receptacle4")]
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(1602884939, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
 receptacle = NodePath("../../../Receptacle4")
 
 [node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(1602884939, 2116105691) index="3" unique_id=1105802255]
@@ -133,8 +129,7 @@ position = Vector2(-283, -41)
 [node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece5/Draggable" parent_id_path=PackedInt32Array(349335265, 2116105691) index="0" unique_id=1266676352]
 texture = ExtResource("9_uol3v")
 
-[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece5/Draggable" parent_id_path=PackedInt32Array(349335265, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacles", "receptacle")]
-receptacles = [NodePath("../../../Receptacle5")]
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece5/Draggable" parent_id_path=PackedInt32Array(349335265, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
 receptacle = NodePath("../../../Receptacle5")
 
 [node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece5/Draggable" parent_id_path=PackedInt32Array(349335265, 2116105691) index="3" unique_id=1105802255]
@@ -152,8 +147,7 @@ position = Vector2(-280, 106)
 [node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece6/Draggable" parent_id_path=PackedInt32Array(1137733623, 2116105691) index="0" unique_id=1266676352]
 texture = ExtResource("10_c74ws")
 
-[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece6/Draggable" parent_id_path=PackedInt32Array(1137733623, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacles", "receptacle")]
-receptacles = [NodePath("../../../Receptacle6")]
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece6/Draggable" parent_id_path=PackedInt32Array(1137733623, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
 receptacle = NodePath("../../../Receptacle6")
 
 [node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece6/Draggable" parent_id_path=PackedInt32Array(1137733623, 2116105691) index="3" unique_id=1105802255]
@@ -170,8 +164,7 @@ position = Vector2(-150, 137)
 [node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece7/Draggable" parent_id_path=PackedInt32Array(1939349516, 2116105691) index="0" unique_id=1266676352]
 texture = ExtResource("11_k7ai0")
 
-[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece7/Draggable" parent_id_path=PackedInt32Array(1939349516, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacles", "receptacle")]
-receptacles = [NodePath("../../../Receptacle7")]
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece7/Draggable" parent_id_path=PackedInt32Array(1939349516, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
 receptacle = NodePath("../../../Receptacle7")
 
 [node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece7/Draggable" parent_id_path=PackedInt32Array(1939349516, 2116105691) index="3" unique_id=1105802255]
@@ -189,8 +182,7 @@ position = Vector2(128, 141)
 [node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece8/Draggable" parent_id_path=PackedInt32Array(1519600768, 2116105691) index="0" unique_id=1266676352]
 texture = ExtResource("12_vlmr2")
 
-[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece8/Draggable" parent_id_path=PackedInt32Array(1519600768, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacles", "receptacle")]
-receptacles = [NodePath("../../../Receptacle8")]
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece8/Draggable" parent_id_path=PackedInt32Array(1519600768, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
 receptacle = NodePath("../../../Receptacle8")
 
 [node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece8/Draggable" parent_id_path=PackedInt32Array(1519600768, 2116105691) index="3" unique_id=1105802255]
@@ -208,8 +200,7 @@ position = Vector2(43, -18)
 [node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece9/Draggable" parent_id_path=PackedInt32Array(754287614, 2116105691) index="0" unique_id=1266676352]
 texture = ExtResource("13_uol3v")
 
-[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece9/Draggable" parent_id_path=PackedInt32Array(754287614, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacles", "receptacle")]
-receptacles = [NodePath("../../../Receptacle9")]
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece9/Draggable" parent_id_path=PackedInt32Array(754287614, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
 receptacle = NodePath("../../../Receptacle9")
 
 [node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece9/Draggable" parent_id_path=PackedInt32Array(754287614, 2116105691) index="3" unique_id=1105802255]
@@ -227,8 +218,7 @@ position = Vector2(86, 81)
 [node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece10/Draggable" parent_id_path=PackedInt32Array(1367771990, 2116105691) index="0" unique_id=1266676352]
 texture = ExtResource("14_c74ws")
 
-[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece10/Draggable" parent_id_path=PackedInt32Array(1367771990, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacles", "receptacle")]
-receptacles = [NodePath("../../../Receptacle10")]
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece10/Draggable" parent_id_path=PackedInt32Array(1367771990, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
 receptacle = NodePath("../../../Receptacle10")
 
 [node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece10/Draggable" parent_id_path=PackedInt32Array(1367771990, 2116105691) index="3" unique_id=1105802255]
