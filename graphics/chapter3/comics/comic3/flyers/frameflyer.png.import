@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bh7k0foeuvcqa"
-path="res://.godot/imported/framereading.png-aca0f2076ed4befadc2f7798b882f158.ctex"
+uid="uid://cxgmspxndooqh"
+path="res://.godot/imported/frameflyer.png-e68233bac4c982722f45088cfba7730a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter3/comics/comic3/framereading.png"
-dest_files=["res://.godot/imported/framereading.png-aca0f2076ed4befadc2f7798b882f158.ctex"]
+source_file="res://graphics/chapter3/comics/comic3/flyers/frameflyer.png"
+dest_files=["res://.godot/imported/frameflyer.png-e68233bac4c982722f45088cfba7730a.ctex"]
 
 [params]
 

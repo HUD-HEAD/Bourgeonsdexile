@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://q56c6qqac8y5"
-path="res://.godot/imported/pierogi.png-558a8ce8a3a35edbe89730d8dad283a4.ctex"
+uid="uid://4pck35w2ueok"
+path="res://.godot/imported/bubble_socialworker.png-069b82fc576e81c6d735b58a5b67ae6e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://components/chapter3/comic3/pierogi/pierogi.png"
-dest_files=["res://.godot/imported/pierogi.png-558a8ce8a3a35edbe89730d8dad283a4.ctex"]
+source_file="res://graphics/chapter3/comics/comic3/social_worker/bubble_socialworker.png"
+dest_files=["res://.godot/imported/bubble_socialworker.png-069b82fc576e81c6d735b58a5b67ae6e.ctex"]
 
 [params]
 

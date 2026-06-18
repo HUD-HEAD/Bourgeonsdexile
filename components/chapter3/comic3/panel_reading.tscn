@@ -1,15 +1,39 @@
 [gd_scene format=3 uid="uid://d1k46kr3djyp"]
 
-[ext_resource type="Texture2D" uid="uid://de1t2jxq50xl" path="res://components/chapter3/comic3/framereading.png" id="1_wi5le"]
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_ny7kf"]
+[ext_resource type="Texture2D" uid="uid://de1t2jxq50xl" path="res://graphics/chapter3/comics/comic3/reading/framereading.png" id="1_wi5le"]
+[ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="2_ny7kf"]
+[ext_resource type="Texture2D" uid="uid://cc81ucbfgefv7" path="res://graphics/chapter3/comics/comic3/reading/bubble_framereading1.png" id="4_ib7qq"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_xl31j"]
+[ext_resource type="Texture2D" uid="uid://px2uvwfpc7wg" path="res://graphics/chapter3/comics/comic3/reading/bubble_framereading2.png" id="5_7q6uf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7fe1j"]
+radius = 525.8945
 
 [node name="PanelReading" type="Node2D" unique_id=652350790]
 
 [node name="Framereading" type="Sprite2D" parent="." unique_id=193292660]
 texture = ExtResource("1_wi5le")
 
-[node name="TransitionerPassive" type="Node" parent="." unique_id=861236887]
-script = ExtResource("2_ny7kf")
-metadata/_custom_type_script = "uid://u4636s8oa5d0"
-
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1084473453]
+
+[node name="Clickable" type="Area2D" parent="." unique_id=364000078 node_paths=PackedStringArray("nodes_to_show")]
+script = ExtResource("2_ny7kf")
+nodes_to_show = [NodePath("../BubbleFramereading1"), NodePath("../BubbleFramereading2")]
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1526372271]
+shape = SubResource("CircleShape2D_7fe1j")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=909468605 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_xl31j")
+clickables = [NodePath("../Clickable")]
+obstacles_to_clear = 2
+metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="BubbleFramereading1" type="Sprite2D" parent="." unique_id=646245362]
+position = Vector2(-243, -381)
+texture = ExtResource("4_ib7qq")
+
+[node name="BubbleFramereading2" type="Sprite2D" parent="." unique_id=801538034]
+position = Vector2(566, -350)
+texture = ExtResource("5_7q6uf")

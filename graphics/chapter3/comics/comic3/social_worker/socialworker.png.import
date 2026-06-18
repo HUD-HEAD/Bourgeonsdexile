@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4pck35w2ueok"
-path="res://.godot/imported/bubble_socialworker.png-24f53b639531332a74e710794bad14d3.ctex"
+uid="uid://cxr3hif05q11c"
+path="res://.godot/imported/socialworker.png-06fb7921e8c91ff05b6ad630a6a6e17c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter3/comics/comic3/bubble_socialworker.png"
-dest_files=["res://.godot/imported/bubble_socialworker.png-24f53b639531332a74e710794bad14d3.ctex"]
+source_file="res://graphics/chapter3/comics/comic3/social_worker/socialworker.png"
+dest_files=["res://.godot/imported/socialworker.png-06fb7921e8c91ff05b6ad630a6a6e17c.ctex"]
 
 [params]
 

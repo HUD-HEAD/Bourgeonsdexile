@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://d1c8ipuillbmb" path="res://components/chapter3/comic3/C3_3_Panel12.tscn" id="13_ej0hg"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="14_1jcxn"]
 [ext_resource type="PackedScene" uid="uid://v70tkjsqc01b" path="res://components/chapter3/comic3/C3_3_Panel5.tscn" id="14_h0n83"]
+[ext_resource type="PackedScene" uid="uid://cy2i6bkp7im25" path="res://components/chapter3/comic3/panel_calendar_2.tscn" id="15_e6yg5"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="15_h0n83"]
 [ext_resource type="PackedScene" uid="uid://ciedovdbed85e" path="res://components/chapter3/comic3/C3_3_Panel6.tscn" id="15_q26rv"]
 [ext_resource type="PackedScene" uid="uid://c8o84ge52r8yp" path="res://components/chapter3/comic3/panel_panning_museum.tscn" id="15_xgelu"]
@@ -87,8 +88,8 @@ position = Vector2(24367, -22)
 position = Vector2(26593, -30)
 scale = Vector2(0.76, 0.76)
 
-[node name="C33Panel13" parent="Panels" unique_id=1882704822 instance=ExtResource("13_1jcxn")]
-position = Vector2(28539, 0)
+[node name="C33Panel14" parent="Panels" unique_id=1833437315 instance=ExtResource("15_e6yg5")]
+position = Vector2(28527, 0)
 
 [node name="PanelPanningMuseum" parent="Panels" unique_id=1673791543 instance=ExtResource("15_xgelu")]
 position = Vector2(35636, 0)
@@ -100,7 +101,7 @@ next_scene = "uid://bewuaqd6css6q"
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("21_2yq1v")
-panels = [NodePath("../Panels/C33Panel8"), NodePath("../Panels/C33Panel9"), NodePath("../Panels/PanelReading"), NodePath("../Panels/C33Panel1"), NodePath("../Panels/C33Panel2"), NodePath("../Panels/C33Panel3"), NodePath("../Panels/C33Panel4"), NodePath("../Panels/C33Panel5"), NodePath("../Panels/C33Panel6"), NodePath("../Panels/C33Panel7"), NodePath("../Panels/C33Panel12"), NodePath("../Panels/C33Panel11"), NodePath("../Panels/C33Panel10"), NodePath("../Panels/C33Panel13"), NodePath("../Panels/PanelPanningMuseum"), NodePath("../Panels/SceneEnder")]
+panels = [NodePath("../Panels/C33Panel8"), NodePath("../Panels/C33Panel9"), NodePath("../Panels/PanelReading"), NodePath("../Panels/C33Panel1"), NodePath("../Panels/C33Panel2"), NodePath("../Panels/C33Panel3"), NodePath("../Panels/C33Panel4"), NodePath("../Panels/C33Panel5"), NodePath("../Panels/C33Panel6"), NodePath("../Panels/C33Panel7"), NodePath("../Panels/C33Panel12"), NodePath("../Panels/C33Panel11"), NodePath("../Panels/C33Panel10"), NodePath("../Panels/C33Panel14"), NodePath("../Panels/PanelPanningMuseum"), NodePath("../Panels/SceneEnder")]
 
 [node name="Audio" type="Node" parent="." unique_id=619569792]
 
