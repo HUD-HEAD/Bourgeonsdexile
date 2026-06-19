@@ -1388,7 +1388,7 @@ position = Vector2(-2.027864, -2.9812365)
 texture = ExtResource("154_qtras")
 
 [node name="PuzzlePiece3" parent="Puzzles/Puzzle6/DragDropPuzzle3/BuildingBlocks" parent_id_path=PackedInt32Array(789965, 1654234455) index="2" unique_id=729525704]
-position = Vector2(-638.4546, -153.05832)
+position = Vector2(-661.7331, -182.84277)
 
 [node name="PuzzlePieceSprite" parent="Puzzles/Puzzle6/DragDropPuzzle3/BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(789965, 729525704, 2116105691) index="0" unique_id=1266676352]
 position = Vector2(11.25734, 134.90099)
@@ -1402,7 +1402,7 @@ texture = ExtResource("156_otj81")
 position = Vector2(10.867874, 98.97006)
 
 [node name="DraggableZone" parent="Puzzles/Puzzle6/DragDropPuzzle3/BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(789965, 729525704, 2116105691) index="3" unique_id=1105802255]
-position = Vector2(-0.3253641, 107.49538)
+position = Vector2(4.1472034, 111.23842)
 
 [node name="PuzzlePiece4" parent="Puzzles/Puzzle6/DragDropPuzzle3/BuildingBlocks" parent_id_path=PackedInt32Array(789965, 1654234455) index="4" unique_id=918960518]
 position = Vector2(-152.91843, -312.5889)
@@ -1434,10 +1434,10 @@ texture = ExtResource("161_igan2")
 texture = ExtResource("162_hhg6g")
 
 [node name="PuzzlePiece6" parent="Puzzles/Puzzle6/DragDropPuzzle3/BuildingBlocks" parent_id_path=PackedInt32Array(789965, 1654234455) index="10" unique_id=652213691]
-position = Vector2(-759.6129, -276.9349)
+position = Vector2(172.25667, -80.60846)
 
 [node name="Draggable" parent="Puzzles/Puzzle6/DragDropPuzzle3/BuildingBlocks/PuzzlePiece6" index="0" unique_id=2116105691]
-position = Vector2(63.686714, 73.40987)
+position = Vector2(-879.5365, -160.81248)
 
 [node name="PuzzlePieceSprite" parent="Puzzles/Puzzle6/DragDropPuzzle3/BuildingBlocks/PuzzlePiece6/Draggable" index="0" unique_id=1266676352]
 position = Vector2(-5.1933784, 61.44489)

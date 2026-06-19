@@ -19,19 +19,18 @@ func _ready() -> void:
 	
 func _deactivate_puzzle():
 	spawn_trigger.disable()
-	puzzle.outline_image.hide()
-	
-	for piece in puzzle.puzzle_pieces:
-		piece.deactivate()
-		piece.draggable.hide()
+	puzzle.deactivate()
 	
 	
-func _on_obstacle_entered(area2d : Area2D):
-	GameManager.current_puzzle_spawner = self
+func _on_obstacle_entered(_area2d : Area2D):
+	GameManager.current_puzzle = puzzle
 	
 	#Signal is one shot
 	obstacle.area_entered.disconnect(_on_obstacle_entered)
 	
+	_activate_spawn_trigger()
+
+func _activate_spawn_trigger():
 	#Might trigger multiple times
 	if !spawn_trigger.clicked.is_connected(_on_spawner_clicked):
 		spawn_trigger.clicked.connect(_on_spawner_clicked)
@@ -43,47 +42,8 @@ func _on_spawner_clicked():
 		#Signal is one shot
 		spawn_trigger.clicked.disconnect(_on_spawner_clicked)
 	spawn_trigger.disable()
-	_spawn_puzzle()
-
-func _spawn_puzzle():
-	#Spawn all pieces
-	var pieces_amount =  puzzle.puzzle_pieces.size()
-	for idx in pieces_amount:
-		_spawn_piece(idx)
-		#Delay spawn next piece
-		await get_tree().create_timer(0.5).timeout
-	
-	#Show outline
-	puzzle.outline_image.show()
-	
-	#Enable interactivity
-	for piece in puzzle.puzzle_pieces:
-		piece.enable_piece()
-
-## Activate given puzzle piece. #NOTICE does NOT check if idx is valid
-func _spawn_piece(piece_idx : int):
-	var piece : PuzzlePiece = puzzle.puzzle_pieces[piece_idx]
-	piece.spawn_piece(piece.global_position)
-
+	puzzle.spawn_puzzle()
 
 func _on_puzzle_complete():
 	obstacle.process_mode = Node.PROCESS_MODE_DISABLED
 	_deactivate_puzzle()
-
-## Debug function
-func autosolve_puzzle():
-	#Spawn all pieces
-	var pieces_amount =  puzzle.puzzle_pieces.size()
-	for idx in pieces_amount:
-		_spawn_piece(idx)
-	
-	#Show outline
-	puzzle.outline_image.show()
-	
-	#Enable interactivity
-	for piece in puzzle.puzzle_pieces:
-		piece.enable_piece()
-		piece._snap_to_receptacle()
-	
-	#HACK : need to delay so _snap is finished and puzzle area overlap is updated by the time we check
-	get_tree().create_timer(0.8).timeout.connect(puzzle._on_correct_piece)

@@ -1,6 +1,6 @@
 extends Node
 
-var current_puzzle_spawner : Node
+var current_puzzle : DragDropPuzzle
 
 # Settings
 

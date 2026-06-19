@@ -34,6 +34,7 @@ func _ready() -> void:
 func deactivate():
 	#draggable.input_pickable = false
 	draggable.process_mode = Node.PROCESS_MODE_DISABLED	
+	draggable.hide()
 
 ## Check placement on piece dropped
 func _on_piece_dropped():
@@ -65,9 +66,8 @@ func _snap_to_receptacle() -> Tween:
 func is_correctly_placed():
 	return placement_checker.is_correctly_placed()
 	
-## Move puzzle piece to target position and show
-func spawn_piece(gpos : Vector2):
-	draggable.global_position = gpos
+## Reveal puzzle piece
+func spawn_piece():
 	draggable.show()
 
 ## Enable interactivity
@@ -78,6 +78,11 @@ func enable_piece():
 ## Returns the *visual* piece dimensions
 func get_dimensions() -> Vector2:
 	return _sprite.texture.get_size()
+
+func autosolve():
+	spawn_piece()
+	enable_piece()
+	_snap_to_receptacle()
 
 #region tooling
 func _init() -> void:
