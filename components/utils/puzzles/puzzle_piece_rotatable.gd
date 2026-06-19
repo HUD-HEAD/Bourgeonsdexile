@@ -47,3 +47,7 @@ func deactivate():
 func enable_piece():
 	super()
 	add_to_group(GROUP_NAME)
+
+func autosolve():
+	super()
+	global_rotation_degrees = correct_rotation

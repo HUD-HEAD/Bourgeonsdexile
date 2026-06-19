@@ -103,17 +103,11 @@ func _spawn_pieces():
 
 ## Debug function
 func autosolve_puzzle():
-	#Spawn all pieces
-	for piece in puzzle_pieces:
-		piece.spawn_piece()
-	
 	#Show outline
 	outline_image.show()
 	
-	#Enable interactivity
 	for piece in puzzle_pieces:
-		piece.enable_piece()
-		piece._snap_to_receptacle()
+		piece.autosolve()
 	
 	#HACK : need to delay so _snap is finished and puzzle area overlap is updated by the time we check
 	get_tree().create_timer(0.8).timeout.connect(_on_correct_piece)

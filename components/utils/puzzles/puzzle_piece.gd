@@ -79,6 +79,11 @@ func enable_piece():
 func get_dimensions() -> Vector2:
 	return _sprite.texture.get_size()
 
+func autosolve():
+	spawn_piece()
+	enable_piece()
+	_snap_to_receptacle()
+
 #region tooling
 func _init() -> void:
 	update_configuration_warnings()
