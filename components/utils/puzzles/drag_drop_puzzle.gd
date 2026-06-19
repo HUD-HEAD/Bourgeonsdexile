@@ -78,6 +78,47 @@ func _check_complete() -> bool:
 	
 	return true
 
+func deactivate():
+	outline_image.hide()
+	for piece in puzzle_pieces:
+		piece.deactivate()
+
+
+func spawn_puzzle():
+	_spawn_pieces()
+	
+	#Show outline
+	outline_image.show()
+	
+	#Enable interactivity
+	for piece in puzzle_pieces:
+		piece.enable_piece()
+
+func _spawn_pieces():
+	#Spawn all pieces
+	for piece in puzzle_pieces:
+		piece.spawn_piece()
+		#Delay spawn next piece
+		await get_tree().create_timer(0.5).timeout
+
+## Debug function
+func autosolve_puzzle():
+	#Spawn all pieces
+	for piece in puzzle_pieces:
+		piece.spawn_piece()
+	
+	#Show outline
+	outline_image.show()
+	
+	#Enable interactivity
+	for piece in puzzle_pieces:
+		piece.enable_piece()
+		piece._snap_to_receptacle()
+	
+	#HACK : need to delay so _snap is finished and puzzle area overlap is updated by the time we check
+	get_tree().create_timer(0.8).timeout.connect(_on_correct_piece)
+
+
 #region tooling
 func _init() -> void:
 	update_configuration_warnings()
