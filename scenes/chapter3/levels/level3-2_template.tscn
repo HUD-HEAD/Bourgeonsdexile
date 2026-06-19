@@ -12,6 +12,21 @@
 [ext_resource type="PackedScene" uid="uid://dy84a73ucflwu" path="res://components/chapter3/main_characters/zlata.tscn" id="10_v6c5n"]
 [ext_resource type="Script" uid="uid://crcrgrn18h2m6" path="res://components/utils/mechanics/face_path.gd" id="11_4tgbk"]
 [ext_resource type="Script" uid="uid://dv0245ypeul1c" path="res://scenes/chapter3/levels/puzzle_complete_pathback.gd" id="12_k783o"]
+[ext_resource type="PackedScene" uid="uid://iu78nj4beigo" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-1.tscn" id="13_hc8pd"]
+[ext_resource type="PackedScene" uid="uid://buwei6igqkc44" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-4.tscn" id="14_a1wxk"]
+[ext_resource type="PackedScene" uid="uid://uksp4g0p3kr4" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-6.tscn" id="15_kkmkf"]
+[ext_resource type="PackedScene" uid="uid://bcftbfgrxxwkc" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-7.tscn" id="16_3k7rb"]
+[ext_resource type="PackedScene" uid="uid://c262lwecjsumn" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-8.tscn" id="17_4urqx"]
+[ext_resource type="PackedScene" uid="uid://bt2jd1cfh1y03" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-9.tscn" id="18_lf4v0"]
+[ext_resource type="PackedScene" uid="uid://qpf3okag24cv" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-10.tscn" id="19_u7bhu"]
+[ext_resource type="PackedScene" uid="uid://cs8rkd02b0ogh" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-11.tscn" id="20_kuwye"]
+[ext_resource type="PackedScene" uid="uid://dgljokfc58cu5" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-12.tscn" id="21_sv6lc"]
+[ext_resource type="PackedScene" uid="uid://cgf7gg2o62a22" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-13.tscn" id="22_fprfh"]
+[ext_resource type="PackedScene" uid="uid://f8u8e4gcddnq" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-14.tscn" id="23_0c4it"]
+[ext_resource type="PackedScene" uid="uid://bj1quvkv1wd5n" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-15.tscn" id="24_hyb7d"]
+[ext_resource type="PackedScene" uid="uid://banhkda0c483g" path="res://components/chapter3/levels/level3.2/thinking_puzzle_3.2-6.tscn" id="25_om0j0"]
+[ext_resource type="PackedScene" uid="uid://ce0jbkcojk3ii" path="res://components/chapter3/levels/level3.2/thinking_puzzle_3.2-7.tscn" id="26_4vbcx"]
+[ext_resource type="PackedScene" uid="uid://c8e6ucedj5thg" path="res://components/chapter3/levels/level3.2/thinking_puzzle_3.2-8.tscn" id="27_kuthn"]
 
 [sub_resource type="Curve2D" id="Curve2D_wn2jm"]
 _data = {
@@ -115,3 +130,55 @@ script = ExtResource("12_k783o")
 woman = NodePath("../Path2D/PathFollow2D/Zlata")
 wayto = NodePath("../WayTo")
 wayback = NodePath("../WayBack")
+
+[node name="PuzzleDummy" type="Node2D" parent="." unique_id=2127431105]
+
+[node name="DragDropPuzzle" parent="PuzzleDummy" unique_id=1767003607 instance=ExtResource("13_hc8pd")]
+visible = false
+position = Vector2(3251, 2879)
+
+[node name="DragDropPuzzle2" parent="PuzzleDummy" unique_id=882413059 instance=ExtResource("14_a1wxk")]
+visible = false
+position = Vector2(1997, 3941)
+
+[node name="DragDropPuzzle3" parent="PuzzleDummy" unique_id=941971900 instance=ExtResource("15_kkmkf")]
+position = Vector2(664, 1603)
+
+[node name="DragDropPuzzle4" parent="PuzzleDummy" unique_id=1528414873 instance=ExtResource("16_3k7rb")]
+position = Vector2(1672, 1676)
+
+[node name="DragDropPuzzle5" parent="PuzzleDummy" unique_id=987880938 instance=ExtResource("17_4urqx")]
+visible = false
+position = Vector2(2853, 1712)
+
+[node name="DragDropPuzzle6" parent="PuzzleDummy" unique_id=1318218526 instance=ExtResource("18_lf4v0")]
+position = Vector2(1930, 2924)
+
+[node name="DragDropPuzzle7" parent="PuzzleDummy" unique_id=1346698792 instance=ExtResource("19_u7bhu")]
+position = Vector2(763, 2862)
+
+[node name="DragDropPuzzle8" parent="PuzzleDummy" unique_id=139453905 instance=ExtResource("20_kuwye")]
+position = Vector2(3237, 3867)
+
+[node name="DragDropPuzzle9" parent="PuzzleDummy" unique_id=1131675776 instance=ExtResource("21_sv6lc")]
+visible = false
+position = Vector2(565, 5008)
+
+[node name="DragDropPuzzle10" parent="PuzzleDummy" unique_id=1677619150 instance=ExtResource("22_fprfh")]
+position = Vector2(2247, 4973)
+
+[node name="DragDropPuzzle11" parent="PuzzleDummy" unique_id=606756654 instance=ExtResource("23_0c4it")]
+position = Vector2(4064, 4891)
+
+[node name="DragDropPuzzle12" parent="PuzzleDummy" unique_id=1051748482 instance=ExtResource("24_hyb7d")]
+position = Vector2(484, 3867)
+
+[node name="Puzzle1" parent="PuzzleDummy" unique_id=1941159865 instance=ExtResource("25_om0j0")]
+visible = false
+position = Vector2(2059, 6276)
+
+[node name="Puzzle2" parent="PuzzleDummy" unique_id=52110897 instance=ExtResource("26_4vbcx")]
+position = Vector2(790, 6347)
+
+[node name="Puzzle3" parent="PuzzleDummy" unique_id=143344798 instance=ExtResource("27_kuthn")]
+position = Vector2(4187, 6243)

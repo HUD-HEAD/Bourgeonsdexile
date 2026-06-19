@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://cafq8mia6v86a"]
 
 [ext_resource type="PackedScene" uid="uid://bh15fogf83oh7" path="res://scenes/chapter3/levels/level3-2_template.tscn" id="1_aicyn"]
+[ext_resource type="PackedScene" uid="uid://c262lwecjsumn" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-8.tscn" id="2_80rf8"]
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="2_hd8xs"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/mechanics/obstacle.tscn" id="3_052ky"]
+[ext_resource type="PackedScene" uid="uid://iu78nj4beigo" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-1.tscn" id="3_t5rg3"]
+[ext_resource type="PackedScene" uid="uid://dgljokfc58cu5" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-12.tscn" id="4_4mioc"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="4_80rf8"]
+[ext_resource type="PackedScene" uid="uid://banhkda0c483g" path="res://components/chapter3/levels/level3.2/thinking_puzzle_3.2-6.tscn" id="5_rj8de"]
 [ext_resource type="Texture2D" uid="uid://cxylr6a40orij" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0001.png" id="5_t5rg3"]
 [ext_resource type="Texture2D" uid="uid://d38pu7t511wt4" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0002.png" id="6_4mioc"]
 [ext_resource type="Texture2D" uid="uid://bx2fsfgwb0g5x" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0003.png" id="7_rj8de"]
@@ -125,6 +129,7 @@
 [ext_resource type="Texture2D" uid="uid://cjd0cved1hco8" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0119.png" id="123_vnquo"]
 [ext_resource type="Texture2D" uid="uid://bg5s78yi6ix11" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0120.png" id="124_4uwuy"]
 [ext_resource type="PackedScene" uid="uid://ds13261ncmyq2" path="res://components/chapter3/levels/level3.3/drag_drop_puzzle_3.3-1.tscn" id="125_ot5ko"]
+[ext_resource type="PackedScene" uid="uid://buwei6igqkc44" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-4.tscn" id="127_t5rg3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7ftg5"]
 animations = [{
@@ -499,6 +504,20 @@ radius = 197.12433
 
 [node name="Level31" unique_id=2125939091 instance=ExtResource("1_aicyn")]
 
+[node name="Puzzles" type="Node2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="1" unique_id=699086476]
+
+[node name="DragDropPuzzle5" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="2" unique_id=1767003607 instance=ExtResource("2_80rf8")]
+position = Vector2(1069, 280)
+
+[node name="DragDropPuzzle" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="1" unique_id=727084058 instance=ExtResource("3_t5rg3")]
+position = Vector2(3745, 490)
+
+[node name="DragDropPuzzle9" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="2" unique_id=832401624 instance=ExtResource("4_4mioc")]
+position = Vector2(959, 883)
+
+[node name="Puzzle1" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="3" unique_id=1941159865 instance=ExtResource("5_rj8de")]
+position = Vector2(1098, -200)
+
 [node name="PuzzleCompletePathBack" parent="." index="7" unique_id=1605263297 node_paths=PackedStringArray("puzzle")]
 puzzle = NodePath("../Puzzle1/DragDropPuzzle")
 
@@ -528,5 +547,8 @@ autoplay = "default"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle1/Clickable" index="1" unique_id=713366460]
 shape = SubResource("CircleShape2D_jrbug")
 
-[node name="DragDropPuzzle" parent="Puzzle1" index="3" unique_id=1767003607 instance=ExtResource("125_ot5ko")]
+[node name="DragDropPuzzle" parent="Puzzle1" index="3" unique_id=1001159731 instance=ExtResource("125_ot5ko")]
 position = Vector2(462, 333)
+
+[node name="DragDropPuzzle2" parent="." index="9" unique_id=1726162827 instance=ExtResource("127_t5rg3")]
+position = Vector2(5066, 489)
