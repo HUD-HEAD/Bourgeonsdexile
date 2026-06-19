@@ -63,6 +63,7 @@
 [ext_resource type="Texture2D" uid="uid://f21oooh0fa2s" path="res://graphics/chapter2/levels/tangrampuzzles/7/6_7.png" id="55_hqomx"]
 [ext_resource type="Script" uid="uid://l4jpb75n4okb" path="res://components/chapter2/levels/goma-nakivale/desert_bus/desert_controller.gd" id="58_eqw4s"]
 [ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="58_k4v74"]
+[ext_resource type="Script" uid="uid://brdld87pattsa" path="res://components/utils/puzzles/puzzle_zoom.gd" id="59_fabr7"]
 [ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="59_l3fw1"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="60_88lvr"]
 [ext_resource type="AudioStream" uid="uid://30npljjgdj2o" path="res://audio/chapter2/ambient/level 2/level_2_frenazo_sound.wav" id="60_hqomx"]
@@ -87,6 +88,7 @@ mouse_filter = 2
 texture = ExtResource("1_swud2")
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
 
 [node name="Cabin" type="Sprite2D" parent="Background" unique_id=1222267897]
 position = Vector2(79251, 835)
@@ -116,13 +118,10 @@ collision_mask = 2
 script = ExtResource("5_e5jvt")
 
 [node name="DragDropPuzzle" parent="Puzzles/Puzzle1" unique_id=1767003607 instance=ExtResource("7_swud2")]
-position = Vector2(-958, 629)
-
-[node name="OutlinePuzzle" parent="Puzzles/Puzzle1/DragDropPuzzle" index="0" unique_id=1513168459]
-position = Vector2(114.5, -99.5)
+position = Vector2(-842, 528)
 
 [node name="PuzzlePiece" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="0" unique_id=1667760579]
-position = Vector2(362, 74)
+position = Vector2(245, 165)
 
 [node name="PuzzlePieceSprite" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1767003607, 1667760579, 2116105691) index="0" unique_id=1266676352]
 position = Vector2(12, 12)
@@ -131,11 +130,8 @@ texture = ExtResource("5_kaq42")
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1767003607, 1667760579, 2116105691) index="1" unique_id=991932022]
 texture = ExtResource("6_i4ccv")
 
-[node name="Receptacle" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="1" unique_id=1559191435]
-position = Vector2(-160.5, -135.5)
-
 [node name="PuzzlePiece2" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="2" unique_id=729525704]
-position = Vector2(-375, 11)
+position = Vector2(-497, 11)
 
 [node name="PuzzlePieceSprite" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(1767003607, 729525704, 2116105691) index="0" unique_id=1266676352]
 position = Vector2(-1, 12)
@@ -144,11 +140,8 @@ texture = ExtResource("7_asllw")
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(1767003607, 729525704, 2116105691) index="1" unique_id=991932022]
 texture = ExtResource("8_fij1a")
 
-[node name="Receptacle2" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="3" unique_id=600273107]
-position = Vector2(-238.5, -112.5)
-
 [node name="PuzzlePiece3" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="4" unique_id=668270485]
-position = Vector2(651, -20)
+position = Vector2(534, 71)
 
 [node name="PuzzlePieceSprite" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(1767003607, 668270485, 2116105691) index="0" unique_id=1266676352]
 position = Vector2(0, 45)
@@ -157,11 +150,8 @@ texture = ExtResource("9_ieouy")
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(1767003607, 668270485, 2116105691) index="1" unique_id=991932022]
 texture = ExtResource("10_r63ar")
 
-[node name="Receptacle3" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="5" unique_id=107165536]
-position = Vector2(-10.5, -177.5)
-
 [node name="PuzzlePiece4" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="6" unique_id=1602884939]
-position = Vector2(-673, -6)
+position = Vector2(-795, -6)
 
 [node name="PuzzlePieceSprite" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(1767003607, 1602884939, 2116105691) index="0" unique_id=1266676352]
 position = Vector2(0, 16)
@@ -170,11 +160,8 @@ texture = ExtResource("11_nwcb7")
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(1767003607, 1602884939, 2116105691) index="1" unique_id=991932022]
 texture = ExtResource("12_r3kqk")
 
-[node name="Receptacle4" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="7" unique_id=586153071]
-position = Vector2(52.5, -35.5)
-
 [node name="PuzzlePiece5" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="8" unique_id=349335265]
-position = Vector2(-655, -212)
+position = Vector2(-777, -212)
 
 [node name="PuzzlePieceSprite" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece5/Draggable" parent_id_path=PackedInt32Array(1767003607, 349335265, 2116105691) index="0" unique_id=1266676352]
 position = Vector2(21, 2)
@@ -183,11 +170,8 @@ texture = ExtResource("13_f73p5")
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece5/Draggable" parent_id_path=PackedInt32Array(1767003607, 349335265, 2116105691) index="1" unique_id=991932022]
 texture = ExtResource("14_bmvit")
 
-[node name="Receptacle5" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="9" unique_id=2039807859]
-position = Vector2(193.5, -157.5)
-
 [node name="PuzzlePiece6" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="10" unique_id=438269538]
-position = Vector2(-410, -201)
+position = Vector2(-532, -201)
 
 [node name="PuzzlePieceSprite" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece6/Draggable" parent_id_path=PackedInt32Array(1767003607, 438269538, 2116105691) index="0" unique_id=1266676352]
 position = Vector2(0, 54)
@@ -196,11 +180,8 @@ texture = ExtResource("15_8aa0l")
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece6/Draggable" parent_id_path=PackedInt32Array(1767003607, 438269538, 2116105691) index="1" unique_id=991932022]
 texture = ExtResource("16_duasu")
 
-[node name="Receptacle6" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="11" unique_id=625976860]
-position = Vector2(388.5, -181.5)
-
 [node name="PuzzlePiece7" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="12" unique_id=1475368154]
-position = Vector2(239, 77)
+position = Vector2(122, 168)
 
 [node name="PuzzlePieceSprite" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece7/Draggable" parent_id_path=PackedInt32Array(1767003607, 1475368154, 2116105691) index="0" unique_id=1266676352]
 position = Vector2(3, 6)
@@ -209,12 +190,8 @@ texture = ExtResource("17_sfols")
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece7/Draggable" parent_id_path=PackedInt32Array(1767003607, 1475368154, 2116105691) index="1" unique_id=991932022]
 texture = ExtResource("18_r65cl")
 
-[node name="Receptacle7" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="13" unique_id=233389274]
-position = Vector2(449.5, -114.5)
-
 [node name="CompletePuzzle" parent="Puzzles/Puzzle1/DragDropPuzzle" index="2" unique_id=1933061263]
 visible = true
-position = Vector2(116, -101)
 
 [node name="Puzzle2" type="Node2D" parent="Puzzles" unique_id=2103807743]
 position = Vector2(41684, 0)
@@ -604,6 +581,11 @@ texture = ExtResource("53_j4odh")
 
 [node name="PuzzlePieceSpriteOnClick" parent="Puzzles/PuzzleWindowBus/DragDropPuzzle4/BuildingBlocks/PuzzlePiece8/Draggable" parent_id_path=PackedInt32Array(2122580379, 379497506, 2116105691) index="1" unique_id=991932022]
 texture = ExtResource("54_owsko")
+
+[node name="PuzzleZoom" type="Node" parent="Puzzles/PuzzleWindowBus" unique_id=2034404489 node_paths=PackedStringArray("puzzle_spawner")]
+script = ExtResource("59_fabr7")
+puzzle_spawner = NodePath("../PuzzleSpawner")
+zoom_in = Vector2(1, 1)
 
 [node name="Bus" parent="." unique_id=1136971117 node_paths=PackedStringArray("desert_controller", "moving_loop", "stop_loop", "people_loop") instance=ExtResource("25_iym2s")]
 position = Vector2(1168, 883)
