@@ -22,13 +22,13 @@ func _ready() -> void:
 
 ##Move PuzzlePiece to front (on top of siblings).
 func _on_piece_clicked():
-	move_to_front()
+	super()
 	get_tree().call_group(GROUP_NAME, "hide_rotation_interface")
 	rotation_interface.show()
 
 ## Check if correctly placed in receptacle
 func is_correctly_placed():
-	return draggable.rotation_degrees == correct_rotation && placement_checker.is_correctly_placed()
+	return draggable.global_rotation_degrees == correct_rotation && placement_checker.is_correctly_placed()
 
 ## Rotate piece and check placement
 func rotate_custom(clockwise : bool):
@@ -45,4 +45,5 @@ func deactivate():
 	remove_from_group(GROUP_NAME)
 	
 func enable_piece():
+	super()
 	add_to_group(GROUP_NAME)
