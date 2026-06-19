@@ -131,54 +131,59 @@ woman = NodePath("../Path2D/PathFollow2D/Zlata")
 wayto = NodePath("../WayTo")
 wayback = NodePath("../WayBack")
 
-[node name="PuzzleDummy" type="Node2D" parent="." unique_id=2127431105]
+[node name="PuzzleDummy" type="Node2D" parent="." unique_id=2143279478]
 
 [node name="DragDropPuzzle" parent="PuzzleDummy" unique_id=1767003607 instance=ExtResource("13_hc8pd")]
 visible = false
 position = Vector2(3251, 2879)
 
-[node name="DragDropPuzzle2" parent="PuzzleDummy" unique_id=882413059 instance=ExtResource("14_a1wxk")]
+[node name="DragDropPuzzle2" parent="PuzzleDummy" unique_id=1005614382 instance=ExtResource("14_a1wxk")]
 visible = false
 position = Vector2(1997, 3941)
 
-[node name="DragDropPuzzle3" parent="PuzzleDummy" unique_id=941971900 instance=ExtResource("15_kkmkf")]
+[node name="DragDropPuzzle3" parent="PuzzleDummy" unique_id=1807975840 instance=ExtResource("15_kkmkf")]
 position = Vector2(664, 1603)
 
-[node name="DragDropPuzzle4" parent="PuzzleDummy" unique_id=1528414873 instance=ExtResource("16_3k7rb")]
+[node name="DragDropPuzzle4" parent="PuzzleDummy" unique_id=1044488542 instance=ExtResource("16_3k7rb")]
+visible = false
 position = Vector2(1672, 1676)
 
-[node name="DragDropPuzzle5" parent="PuzzleDummy" unique_id=987880938 instance=ExtResource("17_4urqx")]
+[node name="DragDropPuzzle5" parent="PuzzleDummy" unique_id=819214762 instance=ExtResource("17_4urqx")]
 visible = false
 position = Vector2(2853, 1712)
 
-[node name="DragDropPuzzle6" parent="PuzzleDummy" unique_id=1318218526 instance=ExtResource("18_lf4v0")]
+[node name="DragDropPuzzle6" parent="PuzzleDummy" unique_id=1251492047 instance=ExtResource("18_lf4v0")]
+visible = false
 position = Vector2(1930, 2924)
 
-[node name="DragDropPuzzle7" parent="PuzzleDummy" unique_id=1346698792 instance=ExtResource("19_u7bhu")]
+[node name="DragDropPuzzle7" parent="PuzzleDummy" unique_id=114605829 instance=ExtResource("19_u7bhu")]
 position = Vector2(763, 2862)
 
-[node name="DragDropPuzzle8" parent="PuzzleDummy" unique_id=139453905 instance=ExtResource("20_kuwye")]
+[node name="DragDropPuzzle8" parent="PuzzleDummy" unique_id=80887275 instance=ExtResource("20_kuwye")]
 position = Vector2(3237, 3867)
 
-[node name="DragDropPuzzle9" parent="PuzzleDummy" unique_id=1131675776 instance=ExtResource("21_sv6lc")]
+[node name="DragDropPuzzle9" parent="PuzzleDummy" unique_id=2044382790 instance=ExtResource("21_sv6lc")]
 visible = false
 position = Vector2(565, 5008)
 
-[node name="DragDropPuzzle10" parent="PuzzleDummy" unique_id=1677619150 instance=ExtResource("22_fprfh")]
+[node name="DragDropPuzzle10" parent="PuzzleDummy" unique_id=810730199 instance=ExtResource("22_fprfh")]
+visible = false
 position = Vector2(2247, 4973)
 
-[node name="DragDropPuzzle11" parent="PuzzleDummy" unique_id=606756654 instance=ExtResource("23_0c4it")]
+[node name="DragDropPuzzle11" parent="PuzzleDummy" unique_id=2025015862 instance=ExtResource("23_0c4it")]
 position = Vector2(4064, 4891)
 
-[node name="DragDropPuzzle12" parent="PuzzleDummy" unique_id=1051748482 instance=ExtResource("24_hyb7d")]
+[node name="DragDropPuzzle12" parent="PuzzleDummy" unique_id=1309924558 instance=ExtResource("24_hyb7d")]
+visible = false
 position = Vector2(484, 3867)
 
 [node name="Puzzle1" parent="PuzzleDummy" unique_id=1941159865 instance=ExtResource("25_om0j0")]
 visible = false
 position = Vector2(2059, 6276)
 
-[node name="Puzzle2" parent="PuzzleDummy" unique_id=52110897 instance=ExtResource("26_4vbcx")]
+[node name="Puzzle2" parent="PuzzleDummy" unique_id=1791486511 instance=ExtResource("26_4vbcx")]
+visible = false
 position = Vector2(790, 6347)
 
-[node name="Puzzle3" parent="PuzzleDummy" unique_id=143344798 instance=ExtResource("27_kuthn")]
+[node name="Puzzle3" parent="PuzzleDummy" unique_id=1178569107 instance=ExtResource("27_kuthn")]
 position = Vector2(4187, 6243)

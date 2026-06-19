@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://da1f6ve0kmn66"]
+
+[ext_resource type="PackedScene" uid="uid://bh15fogf83oh7" path="res://scenes/chapter3/levels/level3-2_template.tscn" id="1_whkl1"]
+[ext_resource type="PackedScene" uid="uid://bcftbfgrxxwkc" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-7.tscn" id="2_0g5ql"]
+[ext_resource type="PackedScene" uid="uid://bt2jd1cfh1y03" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-9.tscn" id="3_dobb3"]
+[ext_resource type="PackedScene" uid="uid://cgf7gg2o62a22" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-13.tscn" id="4_mmuft"]
+[ext_resource type="PackedScene" uid="uid://ce0jbkcojk3ii" path="res://components/chapter3/levels/level3.2/thinking_puzzle_3.2-7.tscn" id="5_7eiwe"]
+[ext_resource type="PackedScene" uid="uid://bj1quvkv1wd5n" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-15.tscn" id="6_37s5b"]
+
+[node name="Level31" unique_id=2125939091 instance=ExtResource("1_whkl1")]
+
+[node name="DragDropPuzzle4" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="1" unique_id=1767003607 instance=ExtResource("2_0g5ql")]
+position = Vector2(1021, 375)
+
+[node name="DragDropPuzzle6" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="2" unique_id=886073334 instance=ExtResource("3_dobb3")]
+position = Vector2(3192, 512)
+
+[node name="DragDropPuzzle10" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="1" unique_id=2020957317 instance=ExtResource("4_mmuft")]
+position = Vector2(831, 902)
+
+[node name="Puzzle2" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="2" unique_id=1941159865 instance=ExtResource("5_7eiwe")]
+position = Vector2(751, 35)
+
+[node name="DragDropPuzzle12" parent="." index="8" unique_id=97964334 instance=ExtResource("6_37s5b")]
+position = Vector2(5611, 405)
+
+[node name="DragDropPuzzle4" parent="PuzzleDummy" parent_id_path=PackedInt32Array(2127431105) index="3" unique_id=1528414873]
+visible = false
+
+[node name="DragDropPuzzle6" parent="PuzzleDummy" parent_id_path=PackedInt32Array(2127431105) index="5" unique_id=1318218526]
+visible = false
+
+[node name="DragDropPuzzle10" parent="PuzzleDummy" parent_id_path=PackedInt32Array(2127431105) index="9" unique_id=1677619150]
+visible = false
+
+[node name="DragDropPuzzle12" parent="PuzzleDummy" parent_id_path=PackedInt32Array(2127431105) index="11" unique_id=1051748482]
+visible = false
+
+[node name="Puzzle2" parent="PuzzleDummy" parent_id_path=PackedInt32Array(2127431105) index="13" unique_id=52110897]
+visible = false
