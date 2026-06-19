@@ -1,14 +1,16 @@
 [gd_scene format=3 uid="uid://bh15fogf83oh7"]
 
-[ext_resource type="PackedScene" uid="uid://dy84a73ucflwu" path="res://components/chapter3/main_characters/zlata.tscn" id="2_xppgi"]
-[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="3_38rxf"]
-[ext_resource type="Texture2D" uid="uid://nt4gnpskq1tn" path="res://graphics/chapter3/levels/bigavenue/pharmacie.png" id="4_0vj6m"]
-[ext_resource type="Texture2D" uid="uid://1rrpcsdgsv8b" path="res://graphics/chapter3/levels/bigavenue/reels.png" id="5_0vj6m"]
-[ext_resource type="Texture2D" uid="uid://bjespq0dbijkq" path="res://graphics/chapter3/levels/bigavenue/squares.png" id="6_5yy0j"]
-[ext_resource type="Texture2D" uid="uid://cppdt16jlkb7i" path="res://graphics/chapter3/levels/bigavenue/bg.png" id="9_lmlo0"]
-[ext_resource type="Script" uid="uid://crcrgrn18h2m6" path="res://components/utils/mechanics/pathfollow_pingpong.gd" id="9_w80ex"]
-[ext_resource type="Texture2D" uid="uid://mpyrv8f4bfkj" path="res://graphics/chapter3/levels/bigavenue/building apt.png" id="10_neqyx"]
-[ext_resource type="Texture2D" uid="uid://b8utg0kolgvhy" path="res://graphics/chapter3/levels/bigavenue/building.png" id="11_3qftp"]
+[ext_resource type="Texture2D" uid="uid://cppdt16jlkb7i" path="res://graphics/chapter3/levels/bigavenue/bg.png" id="1_e3twa"]
+[ext_resource type="Texture2D" uid="uid://nt4gnpskq1tn" path="res://graphics/chapter3/levels/bigavenue/pharmacie.png" id="2_k783o"]
+[ext_resource type="Texture2D" uid="uid://mpyrv8f4bfkj" path="res://graphics/chapter3/levels/bigavenue/building apt.png" id="3_y5mxe"]
+[ext_resource type="Texture2D" uid="uid://bjespq0dbijkq" path="res://graphics/chapter3/levels/bigavenue/squares.png" id="4_yfmg0"]
+[ext_resource type="Texture2D" uid="uid://b8utg0kolgvhy" path="res://graphics/chapter3/levels/bigavenue/building.png" id="5_1dsc3"]
+[ext_resource type="Texture2D" uid="uid://1rrpcsdgsv8b" path="res://graphics/chapter3/levels/bigavenue/reels.png" id="6_ovumn"]
+[ext_resource type="Texture2D" uid="uid://jliii8605sec" path="res://graphics/chapter3/levels/bigavenue/background.png" id="7_ttgo8"]
+[ext_resource type="Texture2D" uid="uid://d2kpc1bbjayup" path="res://graphics/chapter3/levels/bigavenue/mockup_changes.png" id="8_7ktf0"]
+[ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="9_q7qsp"]
+[ext_resource type="PackedScene" uid="uid://dy84a73ucflwu" path="res://components/chapter3/main_characters/zlata.tscn" id="10_v6c5n"]
+[ext_resource type="Script" uid="uid://crcrgrn18h2m6" path="res://components/utils/mechanics/pathfollow_pingpong.gd" id="11_4tgbk"]
 
 [sub_resource type="Curve2D" id="Curve2D_wn2jm"]
 _data = {
@@ -19,20 +21,20 @@ point_count = 5
 [node name="Level31" type="Node2D" unique_id=2125939091]
 
 [node name="Bg2" type="Sprite2D" parent="." unique_id=1307761575]
-texture = ExtResource("9_lmlo0")
+texture = ExtResource("1_e3twa")
 centered = false
 
 [node name="Pharmacie" type="Sprite2D" parent="Bg2" unique_id=1901605799]
 position = Vector2(5431, 880)
-texture = ExtResource("4_0vj6m")
+texture = ExtResource("2_k783o")
 
 [node name="BuildingApt" type="Sprite2D" parent="Bg2" unique_id=639287802]
 position = Vector2(835, 589)
-texture = ExtResource("10_neqyx")
+texture = ExtResource("3_y5mxe")
 
 [node name="Squares" type="Sprite2D" parent="Bg2/BuildingApt" unique_id=1883759949]
 position = Vector2(423, 22)
-texture = ExtResource("6_5yy0j")
+texture = ExtResource("4_yfmg0")
 
 [node name="OnTop" type="Node2D" parent="Bg2" unique_id=879371620]
 visible = false
@@ -43,19 +45,29 @@ scale = Vector2(2.601852, 2.601852)
 [node name="Building" type="Sprite2D" parent="Bg2/OnTop" unique_id=446403469]
 position = Vector2(320.92526, 892.0569)
 scale = Vector2(0.38434163, 0.38434163)
-texture = ExtResource("11_3qftp")
+texture = ExtResource("5_1dsc3")
 
 [node name="Squares" type="Sprite2D" parent="Bg2/OnTop/Building" unique_id=251764111]
 position = Vector2(423, 22)
-texture = ExtResource("6_5yy0j")
+texture = ExtResource("4_yfmg0")
 
 [node name="Reels" type="Sprite2D" parent="Bg2/OnTop/Building" unique_id=177189604]
 position = Vector2(2, 59)
-texture = ExtResource("5_0vj6m")
+texture = ExtResource("6_ovumn")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1868809871]
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("7_ttgo8")
+centered = false
+
+[node name="MockupChanges" type="Sprite2D" parent="." unique_id=816831268]
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("8_7ktf0")
+centered = false
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1221118698]
 position = Vector2(6591, 596)
-script = ExtResource("3_38rxf")
+script = ExtResource("9_q7qsp")
 next_scene = "uid://d4cccbwuwp1rh"
 
 [node name="Path2D" type="Path2D" parent="." unique_id=1272328632]
@@ -66,7 +78,7 @@ position = Vector2(821, 674)
 rotates = false
 loop = false
 
-[node name="Zlata" parent="Path2D/PathFollow2D" unique_id=700974070 node_paths=PackedStringArray("path_follow") instance=ExtResource("2_xppgi")]
+[node name="Zlata" parent="Path2D/PathFollow2D" unique_id=700974070 node_paths=PackedStringArray("path_follow") instance=ExtResource("10_v6c5n")]
 scale = Vector2(0.5, 0.5)
 path_follow = NodePath("..")
 
@@ -81,5 +93,5 @@ limit_bottom = 1080
 position = Vector2(48.147217, -249.4505)
 
 [node name="PathFollowPingPong" type="Node" parent="Path2D/PathFollow2D/Zlata" unique_id=288736946 node_paths=PackedStringArray("char")]
-script = ExtResource("9_w80ex")
+script = ExtResource("11_4tgbk")
 char = NodePath("..")
