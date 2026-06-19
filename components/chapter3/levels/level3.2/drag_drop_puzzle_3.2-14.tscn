@@ -27,7 +27,7 @@ size = Vector2(116.16391, 178.94078)
 size = Vector2(289.97253, 200.37997)
 
 [node name="DragDropPuzzle" unique_id=1767003607 node_paths=PackedStringArray("puzzle_pieces") instance=ExtResource("1_rfmun")]
-puzzle_pieces = [NodePath("BuildingBlocks/PuzzlePiece"), NodePath("BuildingBlocks/PuzzlePiece2"), NodePath("BuildingBlocks/PuzzlePiece3"), NodePath("BuildingBlocks/PuzzlePiece4"), null, null]
+puzzle_pieces = [NodePath("BuildingBlocks/PuzzlePiece"), NodePath("BuildingBlocks/PuzzlePiece2"), NodePath("BuildingBlocks/PuzzlePiece3"), NodePath("BuildingBlocks/PuzzlePiece4")]
 
 [node name="OutlinePuzzle" parent="." index="0" unique_id=1513168459]
 texture = ExtResource("2_dqi31")

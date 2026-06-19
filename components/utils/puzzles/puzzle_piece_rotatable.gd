@@ -6,11 +6,12 @@ extends PuzzlePiece
 ##Rotation in degrees [0,90,180,270], clockwise, for the puzzle piece to be correct
 @export_range(0,270,90) var correct_rotation : int = 0
 
-@onready var rotation_interface : RotationInterface = preload("uid://cv8g3rds0g3a3").instantiate()
+var rotation_interface : RotationInterface
 const GROUP_NAME := "rotatable_pieces"
 
 func _ready() -> void:
 	super()
+	rotation_interface = preload("uid://cv8g3rds0g3a3").instantiate()
 	draggable.add_child(rotation_interface)
 	#rotation_interface.move_to_front()
 	rotation_interface.connect_piece(self)
