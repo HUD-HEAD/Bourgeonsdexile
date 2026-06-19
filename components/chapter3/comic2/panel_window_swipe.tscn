@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d1n22htsm61db"]
 
 [ext_resource type="Texture2D" uid="uid://bfr6c2dj6yv6y" path="res://graphics/chapter3/comics/comic2/window/zlta window copia 2.png" id="1_k672d"]
+[ext_resource type="Texture2D" uid="uid://dts1ctx80r5g5" path="res://graphics/chapter3/comics/comic2/window/zlta window copia_blur.png" id="2_7bqgs"]
 [ext_resource type="PackedScene" uid="uid://cg1eoj5oqtjqa" path="res://scenes/prototyping/swipe_demo/swipe_puzzle.tscn" id="2_yqibj"]
 [ext_resource type="Shader" uid="uid://rnrjeipt84wq" path="res://scenes/prototyping/swipe_demo/alpha_mask.gdshader" id="3_7bqgs"]
 [ext_resource type="Texture2D" uid="uid://ckro532f4usda" path="res://graphics/chapter3/comics/comic2/window/zlta window copia.png" id="4_xnyax"]
@@ -8,13 +9,13 @@
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="6_5ko4s"]
 [ext_resource type="AudioStream" uid="uid://bnyrlxxnr0d2" path="res://audio/chapter2/ambient/comic 3/panel_3.12_window_selection_sound.wav" id="7_64i61"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_k672d"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_xnyax"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_yqibj"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_je7vq"]
 resource_local_to_scene = true
 shader = ExtResource("3_7bqgs")
-shader_parameter/texture_albedo = SubResource("ViewportTexture_k672d")
+shader_parameter/texture_albedo = SubResource("ViewportTexture_xnyax")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kmrf3"]
 size = Vector2(1673, 927)
@@ -28,10 +29,10 @@ position = Vector2(-960, -540)
 completation_percentage = 0.6
 
 [node name="Blur" parent="SwipePuzzle" index="1" unique_id=2009020356]
-texture = null
+texture = ExtResource("2_7bqgs")
 
 [node name="Unblur" parent="SwipePuzzle" index="2" unique_id=1608020792]
-material = SubResource("ShaderMaterial_yqibj")
+material = SubResource("ShaderMaterial_je7vq")
 texture = ExtResource("4_xnyax")
 
 [node name="SubViewport" parent="SwipePuzzle" index="4" unique_id=1098068814]
