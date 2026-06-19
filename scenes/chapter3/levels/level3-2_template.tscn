@@ -10,13 +10,17 @@
 [ext_resource type="Texture2D" uid="uid://d2kpc1bbjayup" path="res://graphics/chapter3/levels/bigavenue/mockup_changes.png" id="8_7ktf0"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="9_q7qsp"]
 [ext_resource type="PackedScene" uid="uid://dy84a73ucflwu" path="res://components/chapter3/main_characters/zlata.tscn" id="10_v6c5n"]
-[ext_resource type="Script" uid="uid://crcrgrn18h2m6" path="res://components/utils/mechanics/pathfollow_pingpong.gd" id="11_4tgbk"]
+[ext_resource type="Script" uid="uid://crcrgrn18h2m6" path="res://components/utils/mechanics/face_path.gd" id="11_4tgbk"]
+[ext_resource type="Script" uid="uid://dv0245ypeul1c" path="res://scenes/chapter3/levels/puzzle_complete_pathback.gd" id="12_k783o"]
 
 [sub_resource type="Curve2D" id="Curve2D_wn2jm"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 821, 674, 0, 0, 0, 0, 1298, 671, 0, 0, 0, 0, 1219, 804, 0, 0, 0, 0, 1293, 916, 0, 0, 0, 0, 5647, 946)
 }
 point_count = 5
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_k783o"]
+size = Vector2(1000, 100)
 
 [node name="Level31" type="Node2D" unique_id=2125939091]
 
@@ -66,7 +70,7 @@ texture = ExtResource("8_7ktf0")
 centered = false
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1221118698]
-position = Vector2(6591, 596)
+position = Vector2(7414, 596)
 script = ExtResource("9_q7qsp")
 next_scene = "uid://d4cccbwuwp1rh"
 
@@ -85,13 +89,29 @@ path_follow = NodePath("..")
 [node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D/Zlata" unique_id=1600606219]
 position = Vector2(0, -233)
 offset = Vector2(500, 0)
-limit_left = -9999959
-limit_right = 10000041
+limit_top = 0
 limit_bottom = 1080
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Path2D/PathFollow2D/Zlata" unique_id=1853851490]
 position = Vector2(48.147217, -249.4505)
 
-[node name="PathFollowPingPong" type="Node" parent="Path2D/PathFollow2D/Zlata" unique_id=288736946 node_paths=PackedStringArray("char")]
+[node name="FacePath" type="Node" parent="Path2D/PathFollow2D/Zlata" unique_id=288736946]
 script = ExtResource("11_4tgbk")
-char = NodePath("..")
+
+[node name="WayTo" type="Node2D" parent="." unique_id=1018273493]
+
+[node name="Sprite2D" type="Sprite2D" parent="WayTo" unique_id=1848681340]
+position = Vector2(3349, 328)
+texture = SubResource("PlaceholderTexture2D_k783o")
+
+[node name="WayBack" type="Node2D" parent="." unique_id=185847338]
+
+[node name="Sprite2D2" type="Sprite2D" parent="WayBack" unique_id=2143200380]
+position = Vector2(3349, 787)
+texture = SubResource("PlaceholderTexture2D_k783o")
+
+[node name="PuzzleCompletePathBack" type="Node" parent="." unique_id=1605263297 node_paths=PackedStringArray("woman", "wayto", "wayback")]
+script = ExtResource("12_k783o")
+woman = NodePath("../Path2D/PathFollow2D/Zlata")
+wayto = NodePath("../WayTo")
+wayback = NodePath("../WayBack")
