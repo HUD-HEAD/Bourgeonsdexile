@@ -776,7 +776,7 @@ loop_name = 2105
 metadata/_custom_type_script = "uid://brda7473wfj1v"
 
 [node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=947001812]
-position = Vector2(134, 752)
+position = Vector2(425, 860)
 rect = Rect2(-6, -10, 254, 175)
 script = ExtResource("65_6oc3f")
 music_name = 2102

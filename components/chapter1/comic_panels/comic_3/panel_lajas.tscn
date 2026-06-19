@@ -26,6 +26,7 @@ texture = ExtResource("2_kbw2m")
 script = ExtResource("9_mouw2")
 puzzle_pieces = [NodePath("PuzzlePiece"), NodePath("PuzzlePiece2")]
 play_correct_piece = false
+play_resolve_puzzle = false
 metadata/_custom_type_script = "uid://chrql2wwvrdt1"
 
 [node name="TriggerSfxOnClick" type="Node" parent="DragDropPuzzle" unique_id=136248402 node_paths=PackedStringArray("clickables")]
