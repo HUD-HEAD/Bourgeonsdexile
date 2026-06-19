@@ -685,17 +685,8 @@ position = Vector2(-756.3313, 126.05552)
 [node name="PuzzlePiece2" parent="Puzzles/Puzzle3/Puzzle1/BuildingBlocks/FullPieces" parent_id_path=PackedInt32Array(1941159865, 1120986992) index="2" unique_id=189334816]
 position = Vector2(-990.98804, -267.62497)
 
-[node name="PuzzlePieceSprite" parent="Puzzles/Puzzle3/Puzzle1/BuildingBlocks/HollowPieces/PuzzlePieceHollow/Draggable" parent_id_path=PackedInt32Array(1941159865, 1809332932, 2116105691) index="0" unique_id=1266676352]
-position = Vector2(-287.87143, 287.92053)
-
-[node name="PuzzlePieceSpriteOnClick" parent="Puzzles/Puzzle3/Puzzle1/BuildingBlocks/HollowPieces/PuzzlePieceHollow/Draggable" parent_id_path=PackedInt32Array(1941159865, 1809332932, 2116105691) index="1" unique_id=991932022]
-position = Vector2(-287.87137, 287.92053)
-
-[node name="PlacementChecker" parent="Puzzles/Puzzle3/Puzzle1/BuildingBlocks/HollowPieces/PuzzlePieceHollow/Draggable" parent_id_path=PackedInt32Array(1941159865, 1809332932, 2116105691) index="2" unique_id=1710133272]
-position = Vector2(-287.87137, 287.92053)
-
-[node name="DraggableZone" parent="Puzzles/Puzzle3/Puzzle1/BuildingBlocks/HollowPieces/PuzzlePieceHollow/Draggable" parent_id_path=PackedInt32Array(1941159865, 1809332932, 2116105691) index="3" unique_id=1105802255]
-position = Vector2(-287.87137, 287.92053)
+[node name="PuzzlePieceHollow" parent="Puzzles/Puzzle3/Puzzle1/BuildingBlocks/HollowPieces" parent_id_path=PackedInt32Array(1941159865, 1500445843) index="0" unique_id=1809332932]
+position = Vector2(-475.13123, 347.13678)
 
 [node name="PuzzlePieceHollow2" parent="Puzzles/Puzzle3/Puzzle1/BuildingBlocks/HollowPieces" parent_id_path=PackedInt32Array(1941159865, 1500445843) index="1" unique_id=450693309]
 position = Vector2(-738.8777, 409.1949)
