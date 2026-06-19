@@ -10,6 +10,7 @@ func _ready() -> void:
 	assert(is_instance_valid(puzzle))
 	puzzle.puzzle_complete.connect(_on_puzzle_complete)
 	
+	wayto.show()
 	wayback.hide()
 	
 func _on_puzzle_complete():
