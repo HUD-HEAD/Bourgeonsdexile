@@ -661,7 +661,7 @@ metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 position = Vector2(1074, 573)
 rect = Rect2(-10, -10, 688, 68)
 script = ExtResource("59_l3fw1")
-music_name = 2103
+music_name = 2202
 metadata/_custom_type_script = "uid://2aadlm17sdsf"
 
 [node name="Bus_moving_loop" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=878252348]
@@ -680,6 +680,13 @@ metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 script = ExtResource("58_k4v74")
 loop_name = 2207
 start_loop_on_enter_screen = false
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="WindLoopZone" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=426765901]
+position = Vector2(89502, 301)
+rect = Rect2(-165, -1166, 859, 1236)
+script = ExtResource("58_k4v74")
+loop_name = 2208
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [node name="Stop_all_loops" type="Node2D" parent="AudioContainer" unique_id=88198687]
@@ -703,6 +710,13 @@ metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 rect = Rect2(-10, -10, 112, 295)
 script = ExtResource("58_k4v74")
 loop_name = 2207
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="wind_stop_loop2" type="VisibleOnScreenNotifier2D" parent="AudioContainer/Stop_all_loops" unique_id=1221870778]
+rect = Rect2(-10, -10, 112, 295)
+script = ExtResource("58_k4v74")
+loop_name = 2208
 loop_mode = 1
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 

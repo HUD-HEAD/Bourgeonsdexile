@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://cnyqkkr7kcq7i" path="res://components/chapter1/comic_panels/comic_2/panel12.tscn" id="20_ox075"]
 [ext_resource type="Script" uid="uid://n4vlynaxxck4" path="res://components/utils/audio/audio_zone_fade.gd" id="20_wj0rq"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="21_4uixq"]
+[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="21_m63vi"]
 [ext_resource type="AudioStream" uid="uid://bdojvuf1xgohw" path="res://audio/chapter1/ambient/panel_section_2/panel_2.1_to_2.12_ocean_sound.wav" id="21_wj0rq"]
 
 [node name="JungleComic2" type="Node2D" unique_id=1529693680]
@@ -122,6 +123,13 @@ script = ExtResource("20_4uixq")
 loop_name = 1200
 loop_mode = 1
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=730042870]
+position = Vector2(1363, 781)
+rect = Rect2(-10, -10, 517, 282)
+script = ExtResource("21_m63vi")
+music_name = 1300
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
 
 [node name="CheckpointController" type="Node" parent="." unique_id=120937431]
 script = ExtResource("21_4uixq")
