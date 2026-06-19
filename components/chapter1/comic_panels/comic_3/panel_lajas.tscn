@@ -53,10 +53,10 @@ texture = ExtResource("4_2bryf")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragDropPuzzle/PuzzlePiece/DraggableRestricted" unique_id=1366299093]
 shape = SubResource("RectangleShape2D_2bryf")
 
-[node name="PlacementChecker" type="Area2D" parent="DragDropPuzzle/PuzzlePiece/DraggableRestricted" unique_id=344214105 node_paths=PackedStringArray("receptacles")]
+[node name="PlacementChecker" type="Area2D" parent="DragDropPuzzle/PuzzlePiece/DraggableRestricted" unique_id=344214105 node_paths=PackedStringArray("receptacle")]
 input_pickable = false
 script = ExtResource("5_mouw2")
-receptacles = [NodePath("../../../Receptacle")]
+receptacle = NodePath("../../../Receptacle")
 metadata/_custom_type_script = "uid://dbrvsujabjlm"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragDropPuzzle/PuzzlePiece/DraggableRestricted/PlacementChecker" unique_id=460567880]
@@ -81,10 +81,10 @@ texture = ExtResource("3_reawd")
 position = Vector2(1, 7)
 shape = SubResource("RectangleShape2D_2bryf")
 
-[node name="PlacementChecker" type="Area2D" parent="DragDropPuzzle/PuzzlePiece2/DraggableRestricted2" unique_id=1056556761 node_paths=PackedStringArray("receptacles")]
+[node name="PlacementChecker" type="Area2D" parent="DragDropPuzzle/PuzzlePiece2/DraggableRestricted2" unique_id=1056556761 node_paths=PackedStringArray("receptacle")]
 input_pickable = false
 script = ExtResource("5_mouw2")
-receptacles = [NodePath("../../../Receptacle2")]
+receptacle = NodePath("../../../Receptacle2")
 metadata/_custom_type_script = "uid://dbrvsujabjlm"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragDropPuzzle/PuzzlePiece2/DraggableRestricted2/PlacementChecker" unique_id=914240384]

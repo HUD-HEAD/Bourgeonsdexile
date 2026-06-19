@@ -50,8 +50,8 @@ texture = ExtResource("5_8bf4l")
 position = Vector2(-1.5, -3.5)
 shape = SubResource("RectangleShape2D_s2m73")
 
-[node name="PlacementChecker" parent="PuzzlePiece/Draggable" unique_id=1205918569 node_paths=PackedStringArray("receptacles") instance=ExtResource("6_s2m73")]
-receptacles = [NodePath("../../../Receptacle")]
+[node name="PlacementChecker" parent="PuzzlePiece/Draggable" unique_id=1205918569 node_paths=PackedStringArray("receptacle") instance=ExtResource("6_s2m73")]
+receptacle = NodePath("../../../Receptacle")
 
 [node name="PuzzlePiece2" type="Node2D" parent="." unique_id=475507319 node_paths=PackedStringArray("draggable", "placement_checker")]
 script = ExtResource("9_hiiw3")
@@ -70,8 +70,8 @@ texture = ExtResource("6_5hfcj")
 position = Vector2(-1, -9.5)
 shape = SubResource("RectangleShape2D_hiiw3")
 
-[node name="PlacementChecker" parent="PuzzlePiece2/Draggable2" unique_id=2071805638 node_paths=PackedStringArray("receptacles") instance=ExtResource("6_s2m73")]
-receptacles = [NodePath("../../../Receptacle2")]
+[node name="PlacementChecker" parent="PuzzlePiece2/Draggable2" unique_id=2071805638 node_paths=PackedStringArray("receptacle") instance=ExtResource("6_s2m73")]
+receptacle = NodePath("../../../Receptacle2")
 
 [node name="Fullsquare" type="Sprite2D" parent="." unique_id=691156988]
 texture = ExtResource("9_uaovy")
