@@ -26,6 +26,12 @@ point_count = 5
 [sub_resource type="CircleShape2D" id="CircleShape2D_y5mxe"]
 radius = 100.42
 
+[sub_resource type="Curve2D" id="Curve2D_y5mxe"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 5647, 946, 0, 0, 0, 0, 1034, 917, 0, 0, 0, 0, 1296, 917, 0, 0, 0, 0, 1220, 802, 0, 0, 0, 0, 1296, 669, 0, 0, 0, 0, 841, 672)
+}
+point_count = 6
+
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_k783o"]
 size = Vector2(1000, 100)
 
@@ -90,35 +96,43 @@ position = Vector2(7414, 596)
 script = ExtResource("9_q7qsp")
 next_scene = "uid://d4cccbwuwp1rh"
 
-[node name="Path2D" type="Path2D" parent="." unique_id=1272328632]
+[node name="PathTo" type="Path2D" parent="." unique_id=1272328632]
 curve = SubResource("Curve2D_wn2jm")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=666369972]
+[node name="PathFollowTo" type="PathFollow2D" parent="PathTo" unique_id=666369972]
 position = Vector2(821, 674)
 rotates = false
 loop = false
 
-[node name="Zlata" parent="Path2D/PathFollow2D" unique_id=700974070 node_paths=PackedStringArray("path_follow") instance=ExtResource("10_v6c5n")]
+[node name="Zlata" parent="PathTo/PathFollowTo" unique_id=700974070 node_paths=PackedStringArray("path_follow") instance=ExtResource("10_v6c5n")]
 scale = Vector2(0.5, 0.5)
 path_follow = NodePath("..")
 
-[node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D/Zlata" unique_id=1600606219]
+[node name="Camera2D" type="Camera2D" parent="PathTo/PathFollowTo/Zlata" unique_id=1600606219]
 position = Vector2(0, -233)
 offset = Vector2(500, 0)
 limit_top = 0
 limit_bottom = 1080
 
-[node name="ZlataClickable" type="Area2D" parent="Path2D/PathFollow2D/Zlata" unique_id=1803429541]
+[node name="ZlataClickable" type="Area2D" parent="PathTo/PathFollowTo/Zlata" unique_id=1803429541]
 position = Vector2(0, -127.40405)
 script = ExtResource("14_fu8h6")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Zlata/ZlataClickable" unique_id=139834032]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathTo/PathFollowTo/Zlata/ZlataClickable" unique_id=139834032]
 position = Vector2(0, 16.346182)
 shape = SubResource("CircleShape2D_y5mxe")
 
-[node name="FacePath" type="Node" parent="Path2D/PathFollow2D/Zlata" unique_id=288736946]
+[node name="FacePath" type="Node" parent="PathTo/PathFollowTo/Zlata" unique_id=288736946]
 script = ExtResource("11_4tgbk")
+
+[node name="PathBack" type="Path2D" parent="." unique_id=2085482473]
+curve = SubResource("Curve2D_y5mxe")
+
+[node name="PathFollowBack" type="PathFollow2D" parent="PathBack" unique_id=1957864083]
+position = Vector2(5647, 946)
+rotates = false
+loop = false
 
 [node name="WayTo" type="Node2D" parent="." unique_id=1018273493]
 
@@ -132,8 +146,9 @@ texture = SubResource("PlaceholderTexture2D_k783o")
 position = Vector2(3349, 787)
 texture = SubResource("PlaceholderTexture2D_k783o")
 
-[node name="PuzzleCompletePathBack" type="Node" parent="." unique_id=1605263297 node_paths=PackedStringArray("woman", "wayto", "wayback")]
+[node name="PuzzleCompletePathBack" type="Node" parent="." unique_id=1605263297 node_paths=PackedStringArray("woman", "wayto", "wayback", "pathfollow_back")]
 script = ExtResource("12_k783o")
-woman = NodePath("../Path2D/PathFollow2D/Zlata")
+woman = NodePath("../PathTo/PathFollowTo/Zlata")
 wayto = NodePath("../WayTo")
 wayback = NodePath("../WayBack")
+pathfollow_back = NodePath("../PathBack/PathFollowBack")

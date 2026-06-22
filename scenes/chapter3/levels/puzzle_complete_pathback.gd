@@ -5,6 +5,8 @@ extends Node
 @export var wayto : CanvasItem
 @export var wayback : CanvasItem
 
+@export var pathfollow_back : PathFollow2D
+
 func _ready() -> void:
 	#return
 	assert(is_instance_valid(puzzle))
@@ -17,4 +19,8 @@ func _on_puzzle_complete():
 	wayto.hide()
 	wayback.show()
 	
-	woman.dir *= -1
+	if pathfollow_back != null :
+		woman.reparent(pathfollow_back, true)
+		woman.path_follow = pathfollow_back
+	else :
+		woman.dir *= -1
