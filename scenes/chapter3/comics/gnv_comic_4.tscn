@@ -74,5 +74,5 @@ metadata/_custom_type_script = "uid://2aadlm17sdsf"
 
 [node name="CheckpointController" type="Node" parent="." unique_id=1956890996]
 script = ExtResource("29_0858f")
-chapter = 3
+chapter = 2
 comic = 17

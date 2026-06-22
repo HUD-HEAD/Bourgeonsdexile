@@ -131,6 +131,7 @@
 [ext_resource type="Texture2D" uid="uid://botlwlbdqi70l" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0118.png" id="124_3y5i7"]
 [ext_resource type="Texture2D" uid="uid://cjd0cved1hco8" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0119.png" id="125_1v4yc"]
 [ext_resource type="Texture2D" uid="uid://bg5s78yi6ix11" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0120.png" id="126_xrnqx"]
+[ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="132_texi6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0s0yi"]
 animations = [{
@@ -729,6 +730,11 @@ next_scene = "uid://bty624uf5tape"
 position = Vector2(-3136, 0)
 texture = ExtResource("4_a5j32")
 centered = false
+
+[node name="CheckpointController" type="Node" parent="." unique_id=249401583]
+script = ExtResource("132_texi6")
+chapter = 2
+comic = 20
 
 [editable path="Puzzles/Puzzle1/DragDropPuzzle"]
 [editable path="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece"]
