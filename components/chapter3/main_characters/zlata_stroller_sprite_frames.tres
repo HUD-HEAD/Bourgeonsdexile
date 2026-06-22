@@ -1,0 +1,155 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dc8towwetalbq"]
+
+[ext_resource type="Texture2D" uid="uid://b47qk0eodiqsw" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_6fps/zlata_idle_baby_0001.png" id="1_7lju1"]
+[ext_resource type="Texture2D" uid="uid://cfgvo8widk0mi" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_6fps/zlata_idle_baby_0002.png" id="2_ibk7k"]
+[ext_resource type="Texture2D" uid="uid://djjr20ojf3s0k" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_6fps/zlata_idle_baby_0003.png" id="3_0u6qt"]
+[ext_resource type="Texture2D" uid="uid://b1qk7bwhd14x8" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_6fps/zlata_idle_baby_0004.png" id="4_3j6jc"]
+[ext_resource type="Texture2D" uid="uid://dy4ikwpvvm1p5" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_6fps/zlata_idle_baby_0005.png" id="5_dmhno"]
+[ext_resource type="Texture2D" uid="uid://d3aedpnc8o0jb" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_6fps/zlata_idle_baby_0006.png" id="6_58njw"]
+[ext_resource type="Texture2D" uid="uid://cqm0wvse2lm47" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_6fps/zlata_idle_baby_0007.png" id="7_brs21"]
+[ext_resource type="Texture2D" uid="uid://bu2rvec7y1mei" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_6fps/zlata_idle_baby_0008.png" id="8_vdx8d"]
+[ext_resource type="Texture2D" uid="uid://w6qjdif05ica" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_6fps/zlata_idle_baby_0009.png" id="9_g650w"]
+[ext_resource type="Texture2D" uid="uid://dwcnji3663wfa" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_6fps/zlata_idle_baby_0010.png" id="10_yt4s6"]
+[ext_resource type="Texture2D" uid="uid://b03uq62vvku0q" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_6fps/zlata_idle_baby_0011.png" id="11_v6aa6"]
+[ext_resource type="Texture2D" uid="uid://cdtxv7p63auoq" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0001.png" id="12_rkouw"]
+[ext_resource type="Texture2D" uid="uid://dmrh3mtmvwc80" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0002.png" id="13_2ufsa"]
+[ext_resource type="Texture2D" uid="uid://jsjw1s7gm75x" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0003.png" id="14_wsos5"]
+[ext_resource type="Texture2D" uid="uid://iirsrnjevr7l" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0004.png" id="15_tbxf5"]
+[ext_resource type="Texture2D" uid="uid://dvwbeo1hmqjmq" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0005.png" id="16_uy4qh"]
+[ext_resource type="Texture2D" uid="uid://drmqw7p3fbydx" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0006.png" id="17_u15mt"]
+[ext_resource type="Texture2D" uid="uid://5fpc84wsix54" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0007.png" id="18_h65ua"]
+[ext_resource type="Texture2D" uid="uid://cuhaj356qr76l" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0008.png" id="19_w5gtc"]
+[ext_resource type="Texture2D" uid="uid://cwn14njsfq4hu" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0009.png" id="20_8jqfv"]
+[ext_resource type="Texture2D" uid="uid://b3tu2nhfm7qav" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0010.png" id="21_k8p8a"]
+[ext_resource type="Texture2D" uid="uid://ciyaq3dsh43xg" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0011.png" id="22_ix7sc"]
+[ext_resource type="Texture2D" uid="uid://b47bvguedpuac" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0012.png" id="23_i8jee"]
+[ext_resource type="Texture2D" uid="uid://ctf77q2q4it74" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0013.png" id="24_b02et"]
+[ext_resource type="Texture2D" uid="uid://bjbc8sffyfhg4" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0014.png" id="25_1qi5e"]
+[ext_resource type="Texture2D" uid="uid://bqqtabnfp3cv8" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0015.png" id="26_3xdu6"]
+[ext_resource type="Texture2D" uid="uid://br2qh5nkwyoe" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0016.png" id="27_g3pk8"]
+[ext_resource type="Texture2D" uid="uid://mxls3a1extx4" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0017.png" id="28_mqtfr"]
+[ext_resource type="Texture2D" uid="uid://ca5lc1k6u8vcf" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0018.png" id="29_2vole"]
+[ext_resource type="Texture2D" uid="uid://wf6dp282e34d" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0019.png" id="30_xjdaf"]
+[ext_resource type="Texture2D" uid="uid://tiyjwve5nixf" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0020.png" id="31_68bfk"]
+[ext_resource type="Texture2D" uid="uid://bjyhceb8yv33m" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0021.png" id="32_hurbw"]
+[ext_resource type="Texture2D" uid="uid://ckl47xr1u6idy" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0022.png" id="33_6hapu"]
+[ext_resource type="Texture2D" uid="uid://tots68j7mwvr" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0023.png" id="34_0ullo"]
+[ext_resource type="Texture2D" uid="uid://cyvryayqg4x2q" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0024.png" id="35_ks2nv"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7lju1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ibk7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0u6qt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3j6jc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dmhno")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_58njw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_brs21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vdx8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_g650w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yt4s6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_v6aa6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_rkouw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_2ufsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_wsos5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_tbxf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_uy4qh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_u15mt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_h65ua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_w5gtc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_8jqfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_k8p8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ix7sc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_i8jee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_b02et")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_1qi5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_3xdu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_g3pk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_mqtfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_2vole")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_xjdaf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_68bfk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_hurbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_6hapu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_0ullo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ks2nv")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 15.0
+}]
