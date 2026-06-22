@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://d38pu7t511wt4" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0002.png" id="6_4mioc"]
 [ext_resource type="Texture2D" uid="uid://bx2fsfgwb0g5x" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0003.png" id="7_rj8de"]
 [ext_resource type="Texture2D" uid="uid://7h021udsedkc" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0004.png" id="8_g33bs"]
+[ext_resource type="Script" uid="uid://ca78ngu4ava5l" path="res://components/utils/mechanics/obstacle_disable_hidden.gd" id="8_yk8n7"]
 [ext_resource type="Texture2D" uid="uid://bw6rmdtow7yad" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0005.png" id="9_y35ng"]
 [ext_resource type="Texture2D" uid="uid://dm48vo3q5sx0y" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0006.png" id="10_03sbm"]
 [ext_resource type="Texture2D" uid="uid://b0d6a1agim7rr" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0007.png" id="11_dhqte"]
@@ -522,19 +523,16 @@ collision_mask = 2
 [node name="DragDropPuzzle5" parent="WayTo/Puzzle1" index="2" unique_id=1767003607 instance=ExtResource("2_80rf8")]
 position = Vector2(210, 280)
 
-[node name="WayBack" parent="." index="5" unique_id=185847338]
-visible = false
-
-[node name="DragDropPuzzle" parent="WayBack" index="1" unique_id=727084058 instance=ExtResource("3_t5rg3")]
+[node name="DragDropPuzzle" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="1" unique_id=727084058 instance=ExtResource("3_t5rg3")]
 position = Vector2(3745, 490)
 
-[node name="DragDropPuzzle9" parent="WayBack" index="2" unique_id=832401624 instance=ExtResource("4_4mioc")]
+[node name="DragDropPuzzle9" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="2" unique_id=832401624 instance=ExtResource("4_4mioc")]
 position = Vector2(959, 883)
 
-[node name="Puzzle1" parent="WayBack" index="3" unique_id=1941159865 instance=ExtResource("5_rj8de")]
+[node name="Puzzle1" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="3" unique_id=1941159865 instance=ExtResource("5_rj8de")]
 position = Vector2(1098, -200)
 
-[node name="Puzzle2" type="Node2D" parent="WayBack" index="4" unique_id=657414073]
+[node name="Puzzle2" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="4" unique_id=657414073]
 position = Vector2(859, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayBack/Puzzle2" index="0" unique_id=1682397855 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
@@ -545,6 +543,7 @@ obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="WayBack/Puzzle2" index="1" unique_id=846932295 instance=ExtResource("3_052ky")]
 collision_mask = 2
+script = ExtResource("8_yk8n7")
 
 [node name="Clickable" type="Area2D" parent="WayBack/Puzzle2" index="2" unique_id=557288057]
 position = Vector2(726, 726)
