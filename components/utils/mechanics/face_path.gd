@@ -6,7 +6,8 @@ func _ready() -> void:
 	prev_pos = woman.global_position
 
 func _process(_delta):
-	_face_path()
+	if woman.walking:
+		_face_path()
 
 #TODO move out / rename node
 func _face_path():
