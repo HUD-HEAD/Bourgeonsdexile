@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://blf0boka8kybx"
+path="res://.godot/imported/panel_2.1_nana_woman_sound.wav-b989ca0ffe99ada5fa75f8b218604c35.sample"
+
+[deps]
+
+source_file="res://audio/chapter3/ambient/comic 2/panel_2.1_nana_woman_sound.wav"
+dest_files=["res://.godot/imported/panel_2.1_nana_woman_sound.wav-b989ca0ffe99ada5fa75f8b218604c35.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

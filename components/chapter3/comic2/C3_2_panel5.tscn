@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://civbg5lshtqit" path="res://graphics/chapter3/comics/comic2/phone_war_news/phone_background1_realce.png" id="2_mw4ar"]
 [ext_resource type="Texture2D" uid="uid://kcagyobuie41" path="res://graphics/chapter3/comics/comic2/phone_war_news/phone_zlata_realce.png" id="3_mjfi8"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="5_55bms"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="5_hfkem"]
+[ext_resource type="AudioStream" uid="uid://dblco11usrij8" path="res://audio/chapter3/ambient/comic 2/panel_2.5_war_sound_interactive.wav" id="6_5226y"]
 [ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/mechanics/click_hide.gd" id="6_o763m"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="7_hfkem"]
 [ext_resource type="Texture2D" uid="uid://dmolfkt7e0jqt" path="res://graphics/chapter3/comics/comic2/phone_war_news/phone_frame_realce.png" id="7_o763m"]
@@ -42,6 +44,14 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Posters/Clickable" unique_id=1578597723]
 shape = SubResource("RectangleShape2D_o763m")
+
+[node name="TriggerSfxOnClick" type="Node" parent="Posters/Clickable" unique_id=323579626 node_paths=PackedStringArray("clickables")]
+script = ExtResource("5_hfkem")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("6_5226y")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="PostersBig" type="Node2D" parent="." unique_id=887023232]
 visible = false

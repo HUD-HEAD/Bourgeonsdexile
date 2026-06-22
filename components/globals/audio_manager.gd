@@ -31,8 +31,11 @@ var last_music_playing: AudioConfiguration.music_type = AudioConfiguration.music
 var last_walking_loop: AudioConfiguration.loop_type = AudioConfiguration.loop_type.none
 
 var last_sfx_id: int
+var tv_loop: AudioStreamPlayer
+var tv_index: int 
 
 const LOOP_POOL_SIZE = 6
+const TV_VOLUMES: Array[float] = [0.7, 1, 1.3, 1.5]
 
 # ── Structure ────────────────────────────────────────
 class loop_pool_item:
@@ -169,7 +172,7 @@ func play_audio_stream(stream: AudioStream, volume: float = 1, min_pitch: float 
 func stop_last_sfx_saved():
 	polyphonic_player.stop_stream(last_sfx_id)
 
-func play_loop(key: AudioConfiguration.loop_type):
+func play_loop(key: AudioConfiguration.loop_type) -> AudioStreamPlayer:
 	var loop: AudioStreamPlayer = _get_free_loop(key)
 	var loop_info: loop_config = _get_loop(key)
 	
@@ -181,13 +184,23 @@ func play_loop(key: AudioConfiguration.loop_type):
 		#loop.play()
 		fade_in(loop, 0, loop_info.volume)
 	
+	return loop
+	
 func stop_loop(key: AudioConfiguration.loop_type, fade_in_enable: bool = true ):
 	_free_loop(key, fade_in_enable)
 
 func free_walking_loop(key: AudioConfiguration.loop_type, fade_in_enable: bool = true ):
 	last_walking_loop = AudioConfiguration.loop_type.none
 	stop_loop(key, fade_in_enable)
-	
+
+func play_tv_loop(key: AudioConfiguration.loop_type):
+	tv_loop = play_loop(key)
+	tv_index = 0
+
+func increase_tv_volume():
+	tv_index += 1
+	if tv_index < TV_VOLUMES.size():
+		tv_loop.volume_linear = TV_VOLUMES[tv_index]
 
 func play_music(key: AudioConfiguration.music_type):
 	if last_music_playing == key && last_music_player > -1:
