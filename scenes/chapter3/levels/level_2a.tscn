@@ -504,13 +504,16 @@ radius = 197.12433
 
 [node name="Level31" unique_id=2125939091 instance=ExtResource("1_aicyn")]
 
+[node name="SceneEnder" parent="." index="1" unique_id=1221118698]
+next_scene = "uid://da1f6ve0kmn66"
+
 [node name="Puzzle1" type="Node2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="1" unique_id=273347506]
 position = Vector2(859, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayTo/Puzzle1" index="0" unique_id=1053797870 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("2_hd8xs")
 puzzle = NodePath("../DragDropPuzzle5")
-spawn_trigger = NodePath("../../../Path2D/PathFollow2D/Zlata/ZlataClickable")
+spawn_trigger = NodePath("../../../PathTo/PathFollowTo/Zlata/ZlataClickable")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="WayTo/Puzzle1" index="1" unique_id=310843140 instance=ExtResource("3_052ky")]
@@ -519,7 +522,7 @@ collision_mask = 2
 [node name="DragDropPuzzle5" parent="WayTo/Puzzle1" index="2" unique_id=1767003607 instance=ExtResource("2_80rf8")]
 position = Vector2(210, 280)
 
-[node name="WayBack" parent="." index="4" unique_id=185847338]
+[node name="WayBack" parent="." index="5" unique_id=185847338]
 visible = false
 
 [node name="DragDropPuzzle" parent="WayBack" index="1" unique_id=727084058 instance=ExtResource("3_t5rg3")]
@@ -559,9 +562,6 @@ shape = SubResource("CircleShape2D_jrbug")
 
 [node name="DragDropPuzzle" parent="WayBack/Puzzle2" index="3" unique_id=809533061 instance=ExtResource("125_ot5ko")]
 position = Vector2(462, 333)
-
-[node name="PuzzleCompletePathBack" parent="." index="5" unique_id=1605263297 node_paths=PackedStringArray("puzzle")]
-puzzle = NodePath("../Puzzle2/DragDropPuzzle2")
 
 [node name="Puzzle1" type="Node2D" parent="." index="6" unique_id=1858996224]
 position = Vector2(4747, 1392)
@@ -606,3 +606,6 @@ collision_mask = 2
 
 [node name="DragDropPuzzle2" parent="Puzzle2" index="2" unique_id=1726162827 instance=ExtResource("127_t5rg3")]
 position = Vector2(-36, 489)
+
+[node name="PuzzleCompletePathBack" parent="." index="8" unique_id=1605263297 node_paths=PackedStringArray("puzzle")]
+puzzle = NodePath("../Puzzle2/DragDropPuzzle2")
