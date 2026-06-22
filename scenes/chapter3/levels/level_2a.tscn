@@ -504,6 +504,9 @@ radius = 197.12433
 
 [node name="Level31" unique_id=2125939091 instance=ExtResource("1_aicyn")]
 
+[node name="SceneEnder" parent="." index="1" unique_id=1221118698]
+next_scene = "uid://da1f6ve0kmn66"
+
 [node name="Puzzle1" type="Node2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="1" unique_id=273347506]
 position = Vector2(859, 0)
 
