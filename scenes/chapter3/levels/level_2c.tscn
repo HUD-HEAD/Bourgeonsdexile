@@ -9,6 +9,10 @@
 
 [node name="Level31" unique_id=2125939091 instance=ExtResource("1_y0jpi")]
 
+[node name="SceneEnder" parent="." index="1" unique_id=1221118698]
+next_scene = "uid://d4cccbwuwp1rh"
+metadata/_edit_pinned_properties_ = [&"next_scene"]
+
 [node name="DragDropPuzzle3" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="1" unique_id=1767003607 instance=ExtResource("2_fu3d2")]
 position = Vector2(900, 344)
 
@@ -21,5 +25,8 @@ position = Vector2(900, 826)
 [node name="Puzzle3" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="2" unique_id=1941159865 instance=ExtResource("5_4b6cm")]
 position = Vector2(1023, -284)
 
-[node name="DragDropPuzzle8" parent="." index="8" unique_id=427741748 instance=ExtResource("6_ioa73")]
+[node name="PuzzleCompletePathBack" parent="." index="6" unique_id=1605263297 node_paths=PackedStringArray("puzzle")]
+puzzle = NodePath("../DragDropPuzzle8")
+
+[node name="DragDropPuzzle8" parent="." index="7" unique_id=427741748 instance=ExtResource("6_ioa73")]
 position = Vector2(5062, 596)

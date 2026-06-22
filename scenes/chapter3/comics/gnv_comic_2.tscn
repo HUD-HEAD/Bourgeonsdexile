@@ -97,7 +97,7 @@ position = Vector2(34501, 0)
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=849983846]
 position = Vector2(37155, 596)
 script = ExtResource("20_8wlj1")
-next_scene = "uid://bh15fogf83oh7"
+next_scene = "uid://cafq8mia6v86a"
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("21_t5b7w")
