@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://p47nn7pwnmxn" path="res://components/chapter3/comic2/panel_bed_news.tscn" id="5_lynle"]
 [ext_resource type="PackedScene" uid="uid://cvypmwioryx3k" path="res://components/chapter3/comic2/C3_2_panel5.tscn" id="6_edyyq"]
 [ext_resource type="PackedScene" uid="uid://7wfexl2ikia2" path="res://components/chapter3/comic2/C3_2_panel14.tscn" id="7_edyyq"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="8_q624s"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="8_x8xde"]
 [ext_resource type="PackedScene" uid="uid://bm6kmynssnmsm" path="res://components/chapter3/comic2/panel_suitcase.tscn" id="10_f4prm"]
 [ext_resource type="PackedScene" uid="uid://d1n22htsm61db" path="res://components/chapter3/comic2/panel_window_swipe.tscn" id="10_lynle"]
@@ -17,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://b4lixqemjmn7a" path="res://components/chapter3/comic2/C3_2_panel7.tscn" id="14_me2wc"]
 [ext_resource type="PackedScene" uid="uid://bke63vcubnk4i" path="res://components/chapter3/comic2/panel_give_pendant.tscn" id="14_unqgw"]
 [ext_resource type="PackedScene" uid="uid://cx5gbqsvcfe32" path="res://components/chapter3/comic2/panel_husband_pendant.tscn" id="15_8adqe"]
+[ext_resource type="Script" uid="uid://cds4grbrek8u8" path="res://components/utils/audio/audio integration nodes/audio_music_timer.gd" id="19_p0dum"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="20_8wlj1"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="21_t5b7w"]
 
@@ -66,6 +68,14 @@ scale = Vector2(0.92, 0.92)
 [node name="C32Panel2" parent="Panels" unique_id=1498799956 instance=ExtResource("13_pi4cn")]
 position = Vector2(14508, 0)
 
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="Panels/C32Panel2" unique_id=354541149]
+position = Vector2(1983.94, -37)
+rect = Rect2(-10, -10, 65, 60)
+script = ExtResource("8_q624s")
+loop_name = 3200
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
 [node name="C32Panel3" parent="Panels" unique_id=1513906772 instance=ExtResource("14_me2wc")]
 position = Vector2(16840, 0)
 
@@ -104,6 +114,15 @@ script = ExtResource("21_t5b7w")
 panels = [NodePath("../Panels/C32Panel4"), NodePath("../Panels/PanelBabyPendant"), NodePath("../Panels/PanelFlashback"), NodePath("../Panels/PanelBedNews"), NodePath("../Panels/C32Panel5"), NodePath("../Panels/C32Panel2"), NodePath("../Panels/C32Panel3"), NodePath("../Panels/PanelSuitcase"), NodePath("../Panels/PanelBusTicket"), NodePath("../Panels/PanelFarewell"), NodePath("../Panels/PanelGivePendant"), NodePath("../Panels/PanelHusbandPendant"), NodePath("../Panels/PanelKissBaby"), NodePath("../Panels/C32Panel6"), NodePath("../Panels/PanelWindowSwipe"), NodePath("../SceneEnder")]
 
 [node name="Audio" type="Node" parent="." unique_id=619569792]
+
+[node name="AudioMusicTimer" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=1062652106]
+position = Vector2(1241, 846)
+rect = Rect2(-348, -40, 491, 126)
+script = ExtResource("19_p0dum")
+first_music_name = 3200
+second_music_name = 3201
+delay_to_play_second_theme = 22.0
+metadata/_custom_type_script = "uid://cds4grbrek8u8"
 
 [node name="CheckpointController" type="Node" parent="." unique_id=1892684394]
 script = ExtResource("8_x8xde")

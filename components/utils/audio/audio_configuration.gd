@@ -84,6 +84,7 @@ enum loop_type{
 	
 	c3_1_Hospital_sound = 3100,
 	c3_1_baby_crying = 3101,
+	c3_2_Tv_loop = 3200,
 	
 	
 }
@@ -105,6 +106,11 @@ enum music_type{
 	c2_4_theme_stress = 2400,
 	c2_4_credits = 2401,
 	c3_1_theme = 3100,
+	c3_2_lonely_theme = 3200,
+	c3_2_war_theme = 3201,
+	c3_2_new_life_theme = 3202,
+	c3_4_museum_theme = 3400,
+	c3_4_emotive_museum_theme = 3401,
 }
 
 @export var sfx_configuration: Array[sfx_config]

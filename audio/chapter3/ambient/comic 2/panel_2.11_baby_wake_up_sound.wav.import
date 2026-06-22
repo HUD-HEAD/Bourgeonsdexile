@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b24o5nnk0yqld"
+path="res://.godot/imported/panel_2.11_baby_wake_up_sound.wav-ed7c480bf791a7e3efdcac9977486c86.sample"
+
+[deps]
+
+source_file="res://audio/chapter3/ambient/comic 2/panel_2.11_baby_wake_up_sound.wav"
+dest_files=["res://.godot/imported/panel_2.11_baby_wake_up_sound.wav-ed7c480bf791a7e3efdcac9977486c86.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

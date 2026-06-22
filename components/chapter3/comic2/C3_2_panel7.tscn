@@ -2,9 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://n6gse867tx5p" path="res://graphics/chapter3/comics/comic2/worry/worry_CON_realce.png" id="1_ikgsg"]
 [ext_resource type="Texture2D" uid="uid://c2w2aodf0xbjp" path="res://graphics/chapter3/comics/comic2/worry/bubble_worry_woman.png" id="3_246ev"]
+[ext_resource type="Script" uid="uid://h8iq0ry15ka8" path="res://components/utils/audio/audio integration nodes/trigger_sfx_list.gd" id="3_df7kq"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="3_ikgsg"]
 [ext_resource type="Texture2D" uid="uid://nwa3havoua8g" path="res://graphics/chapter3/comics/comic2/worry/bubble_worry_man.png" id="4_f0v7s"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_ikgsg"]
+[ext_resource type="AudioStream" uid="uid://cavga3wwcrtf4" path="res://audio/chapter3/ambient/comic 2/panel_2.7_woman_expression_interactive.wav" id="4_s856o"]
+[ext_resource type="AudioStream" uid="uid://vrmenkkhhj3w" path="res://audio/chapter3/ambient/comic 2/panel_2.7_man_expression_interactive.wav" id="5_xr8vm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ikgsg"]
 radius = 367.03406
@@ -24,6 +27,12 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=2033832365]
 shape = SubResource("CircleShape2D_ikgsg")
+
+[node name="TriggerSfxList" type="Node" parent="Clickable" unique_id=281662678 node_paths=PackedStringArray("clickables")]
+script = ExtResource("3_df7kq")
+clickables = [NodePath("..")]
+stream_list = Array[AudioStream]([ExtResource("4_s856o"), ExtResource("5_xr8vm")])
+metadata/_custom_type_script = "uid://h8iq0ry15ka8"
 
 [node name="Bubblequestion" type="Sprite2D" parent="." unique_id=209132459]
 position = Vector2(-452, 191)

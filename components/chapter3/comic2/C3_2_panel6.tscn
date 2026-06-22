@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cify6iotaflyj" path="res://graphics/chapter3/comics/comic2/tv/3.png" id="5_3jmn4"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="8_3frnk"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="8_byrn3"]
+[ext_resource type="Script" uid="uid://c126gwjuspywo" path="res://components/utils/audio/audio integration nodes/audio_tv_loop_controller.gd" id="9_byrn3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3frnk"]
 radius = 47.169907
@@ -63,3 +64,11 @@ script = ExtResource("8_byrn3")
 clickables = [NodePath("../Clickable")]
 obstacles_to_clear = 3
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="TvLoopController" type="VisibleOnScreenNotifier2D" parent="." unique_id=2058448907 node_paths=PackedStringArray("clickables")]
+position = Vector2(76, -3)
+rect = Rect2(-10, -10, 74, 59)
+script = ExtResource("9_byrn3")
+loop_name = 3200
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c126gwjuspywo"

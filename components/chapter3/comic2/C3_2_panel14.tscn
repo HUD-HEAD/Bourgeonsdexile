@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://de5xd6o2b2r4b" path="res://graphics/chapter3/comics/comic3/phone_frames/phone_background2.png" id="2_5s53a"]
 [ext_resource type="Texture2D" uid="uid://d14rpq132g50f" path="res://graphics/chapter3/comics/comic3/phone_frames/phone_zlata.png" id="3_qfgy5"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="4_5s53a"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="5_ocpgl"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_qfgy5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qfgy5"]
@@ -31,6 +32,13 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=343733055]
 position = Vector2(38, -29.5)
 shape = SubResource("RectangleShape2D_qfgy5")
+
+[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=1260651887 node_paths=PackedStringArray("clickables")]
+script = ExtResource("5_ocpgl")
+clickables = [NodePath("..")]
+sfx = 2
+play_sfx_once = true
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="TransitionerCounter" type="Node" parent="." unique_id=1190434831 node_paths=PackedStringArray("clickables")]
 script = ExtResource("5_qfgy5")
