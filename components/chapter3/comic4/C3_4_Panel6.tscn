@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dh64u415002ah" path="res://graphics/chapter3/comics/comic4/museecroixrouge/1.png" id="1_241go"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_3r1gd"]
+[ext_resource type="Script" uid="uid://bvmwxu2au5j5l" path="res://components/utils/audio/audio integration nodes/audio_sfx_zone.gd" id="3_3r1gd"]
+[ext_resource type="AudioStream" uid="uid://235fow1k2tpi" path="res://audio/chapter3/ambient/comic 4/panel_4.7_street_museum_sound.wav" id="4_e3x47"]
 
 [node name="C34Panel6" type="Node2D" unique_id=1800611031]
 
@@ -14,3 +16,10 @@ script = ExtResource("2_3r1gd")
 metadata/_custom_type_script = "uid://u4636s8oa5d0"
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1404595436]
+
+[node name="AudioSfxZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=327676704]
+rect = Rect2(-10, -10, 41, 35)
+script = ExtResource("3_3r1gd")
+use_audio_stream = true
+stream = ExtResource("4_e3x47")
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
