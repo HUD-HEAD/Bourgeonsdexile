@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_m6jpt"]
 [ext_resource type="PackedScene" uid="uid://bj78rc526rh07" path="res://components/chapter3/comic4/C3_4_Panel1.tscn" id="6_ve7nb"]
+[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="8_cs1n5"]
 [ext_resource type="PackedScene" uid="uid://cffb0fkdvdx5x" path="res://components/chapter3/comic4/C3_4_Panel4.tscn" id="9_0nuyj"]
 [ext_resource type="PackedScene" uid="uid://e2glqvk4u04n" path="res://components/chapter3/comic4/C3_4_Panel5.tscn" id="10_8g0td"]
 [ext_resource type="PackedScene" uid="uid://7hhur4kakw2r" path="res://components/chapter3/comic4/C3_4_Panel6.tscn" id="11_djphk"]
@@ -57,7 +58,21 @@ panels = [NodePath("../Panels/C34Panel1"), NodePath("../Panels/C34Panel5"), Node
 
 [node name="Audio" type="Node" parent="." unique_id=339414803]
 
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=647666856]
+position = Vector2(908, 733)
+rect = Rect2(-10, -10, 229, 130)
+script = ExtResource("8_cs1n5")
+music_name = 3400
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="AudioMusicTransition_emotive" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=981989954]
+position = Vector2(5966, 800)
+rect = Rect2(-10, -10, 229, 130)
+script = ExtResource("8_cs1n5")
+music_name = 3401
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
 [node name="CheckpointController" type="Node" parent="." unique_id=1956890996]
 script = ExtResource("29_0858f")
-chapter = 3
+chapter = 2
 comic = 17

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dx5wkph3q4rcx"
+path="res://.godot/imported/panel_4.3_nina_friends_laughs_sound.wav-b677990f0d5dce4764f56edfcee96814.sample"
+
+[deps]
+
+source_file="res://audio/chapter3/ambient/comic 4/panel_4.3_nina_friends_laughs_sound.wav"
+dest_files=["res://.godot/imported/panel_4.3_nina_friends_laughs_sound.wav-b677990f0d5dce4764f56edfcee96814.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

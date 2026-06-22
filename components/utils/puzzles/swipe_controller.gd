@@ -15,6 +15,13 @@ var mask: ViewportTexture
 
 
 @export var checking_time: float = 0.5
+
+@export_group("Sound")
+@export var play_sfx_on_complete: bool = false
+@export var stream: AudioStream
+@export var linear_volume: float = 1
+@export var min_pitch: float = 1
+@export var max_pitch: float = 1
 var timer: float = 0
 var is_enabled:bool = false
 
@@ -36,6 +43,9 @@ func _process(delta: float) -> void:
 func complete_puzzle():
 	if hide_blur_image:
 		blur_image.visible = false
+	
+	if play_sfx_on_complete:
+		AudioManager.play_audio_stream(stream, linear_volume, min_pitch, max_pitch)
 	
 	await get_tree().create_timer(transition_delay).timeout
 	SignalManager.next_panel.emit()

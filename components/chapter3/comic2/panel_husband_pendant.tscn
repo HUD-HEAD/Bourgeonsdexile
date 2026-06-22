@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://bo0gg4rc8gd2a" path="res://graphics/chapter3/comics/comic2/necklacebf/2.png" id="3_mpm5d"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="4_listy"]
 [ext_resource type="Texture2D" uid="uid://ded4jmyurd101" path="res://graphics/chapter3/comics/comic2/necklacebf/1.png" id="4_wu0xx"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="5_mpm5d"]
+[ext_resource type="AudioStream" uid="uid://b24o5nnk0yqld" path="res://audio/chapter3/ambient/comic 2/panel_2.11_baby_wake_up_sound.wav" id="6_wu0xx"]
+[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="7_wu0xx"]
 
 [sub_resource type="Animation" id="Animation_listy"]
 length = 0.001
@@ -73,6 +76,34 @@ tracks/2/keys = {
 "method": &"hide"
 }]
 }
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TriggerSfxOnClick")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_sfx"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioMusicTransition")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"change_music"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ejcdv"]
 _data = {
@@ -109,3 +140,16 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=392219075]
 shape = SubResource("CircleShape2D_listy")
+
+[node name="TriggerSfxOnClick" type="Node" parent="." unique_id=501692521]
+script = ExtResource("5_mpm5d")
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("6_wu0xx")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="." unique_id=2136031868]
+script = ExtResource("7_wu0xx")
+music_name = 3202
+trigger_on_enter_zone = false
+metadata/_custom_type_script = "uid://2aadlm17sdsf"

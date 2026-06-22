@@ -5,6 +5,8 @@
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="3_5xvri"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="3_kpoqn"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_ktp5l"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="5_pbw6t"]
+[ext_resource type="AudioStream" uid="uid://duko7mocf6260" path="res://audio/chapter3/ambient/comic 2/panel_2.10_snifle_woman_sound.wav" id="6_lu5me"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5xvri"]
 animations = [{
@@ -36,6 +38,14 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=830203489]
 shape = SubResource("CircleShape2D_ktp5l")
+
+[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=1327633483 node_paths=PackedStringArray("clickables")]
+script = ExtResource("5_pbw6t")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("6_lu5me")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="TransitionerCounter" type="Node" parent="." unique_id=1892859595 node_paths=PackedStringArray("clickables")]
 script = ExtResource("5_ktp5l")

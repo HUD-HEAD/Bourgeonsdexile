@@ -2,12 +2,17 @@
 
 [ext_resource type="Texture2D" uid="uid://be4w8r6eugper" path="res://graphics/chapter3/comics/comic4/museum_small/1.png" id="1_3gm02"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="3_igktf"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="4_fe7bx"]
 [ext_resource type="Texture2D" uid="uid://cb6x6dpdfrhb8" path="res://graphics/chapter3/comics/comic4/amanidraw/1.png" id="4_n1vjs"]
 [ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/mechanics/click_hide.gd" id="4_x3340"]
 [ext_resource type="Texture2D" uid="uid://c83bvhq35lbnw" path="res://graphics/chapter3/comics/comic4/amanidraw/2.png" id="5_3ckhu"]
+[ext_resource type="AudioStream" uid="uid://ded2qnfjpywah" path="res://audio/chapter3/ambient/comic 4/panel_4.1_amani_sound_interactive.wav" id="5_313m4"]
 [ext_resource type="Texture2D" uid="uid://hcactpwxopde" path="res://graphics/chapter3/comics/comic4/ninababy/1.png" id="5_igktf"]
+[ext_resource type="AudioStream" uid="uid://boonvmqnqabax" path="res://audio/chapter3/ambient/comic 4/panel_4.4_zlata_expression_sound.wav" id="6_2ssnw"]
+[ext_resource type="AudioStream" uid="uid://cc0chqy2dj1xy" path="res://audio/chapter3/ambient/comic 4/panel_4.2_nina_baby_sound_interactive.wav" id="7_313m4"]
 [ext_resource type="Texture2D" uid="uid://dddpuu4s7e772" path="res://graphics/chapter3/comics/comic4/ninababy/2.png" id="7_x3340"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="8_igktf"]
+[ext_resource type="AudioStream" uid="uid://dx5wkph3q4rcx" path="res://audio/chapter3/ambient/comic 4/panel_4.3_nina_friends_laughs_sound.wav" id="10_2dglo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bpavt"]
 size = Vector2(413, 228.5)
@@ -42,6 +47,14 @@ shape = SubResource("RectangleShape2D_bpavt")
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_n1vjs")
 
+[node name="TriggerSfxOnClick" type="Node" parent="Pictures/Clickable" unique_id=1148334498 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_fe7bx")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("5_313m4")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
 [node name="Clickable2" type="Area2D" parent="Pictures" unique_id=1823157514 node_paths=PackedStringArray("nodes_to_show")]
 position = Vector2(10, -304)
 script = ExtResource("3_igktf")
@@ -53,6 +66,14 @@ shape = SubResource("RectangleShape2D_bpavt")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pictures/Clickable2" unique_id=1108256961]
 texture = SubResource("PlaceholderTexture2D_fe7bx")
+
+[node name="TriggerSfxOnClick" type="Node" parent="Pictures/Clickable2" unique_id=626035997 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_fe7bx")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("6_2ssnw")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="Clickable3" type="Area2D" parent="Pictures" unique_id=165268151 node_paths=PackedStringArray("nodes_to_show")]
 position = Vector2(507, -304)
@@ -67,6 +88,14 @@ shape = SubResource("RectangleShape2D_bpavt")
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_igktf")
 
+[node name="TriggerSfxOnClick" type="Node" parent="Pictures/Clickable3" unique_id=1015766323 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_fe7bx")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("7_313m4")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
 [node name="Clickable4" type="Area2D" parent="Pictures" unique_id=352203850 node_paths=PackedStringArray("nodes_to_show")]
 position = Vector2(-489, -8)
 script = ExtResource("3_igktf")
@@ -80,6 +109,14 @@ shape = SubResource("RectangleShape2D_bpavt")
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_3ckhu")
 
+[node name="TriggerSfxOnClick" type="Node" parent="Pictures/Clickable4" unique_id=426161096 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_fe7bx")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("5_313m4")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
 [node name="Clickable5" type="Area2D" parent="Pictures" unique_id=1942476412 node_paths=PackedStringArray("nodes_to_show")]
 position = Vector2(507, -8)
 script = ExtResource("3_igktf")
@@ -92,6 +129,14 @@ shape = SubResource("RectangleShape2D_bpavt")
 [node name="2" type="Sprite2D" parent="Pictures/Clickable5" unique_id=1831327831]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("7_x3340")
+
+[node name="TriggerSfxOnClick" type="Node" parent="Pictures/Clickable5" unique_id=34508597 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_fe7bx")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("10_2dglo")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="PicturesBig" type="Node2D" parent="." unique_id=2060104433]
 

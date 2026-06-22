@@ -35,9 +35,9 @@ func get_scene_path(type: comic_types) -> String:
 	comic_types.chapter_3_comic_2:"res://scenes/chapter3/comics/gnv_comic_2.tscn",
 	comic_types.chapter_3_comic_3:"res://scenes/chapter3/comics/gnv_comic_3.tscn",
 	comic_types.chapter_3_comic_4:"res://scenes/chapter3/comics/gnv_comic_4.tscn",
-	comic_types.chapter_3_puzzle_1:"",
-	comic_types.chapter_3_puzzle_2:"",
-	comic_types.chapter_3_puzzle_3:"",
+	comic_types.chapter_3_puzzle_1:"res://scenes/chapter3/levels/Level3-1.tscn",
+	comic_types.chapter_3_puzzle_2:"res://scenes/chapter3/levels/level_2a.tscn",
+	comic_types.chapter_3_puzzle_3:"res://scenes/chapter3/levels/Level3-3.tscn",
 }
 
 

@@ -8,13 +8,15 @@
 [ext_resource type="Texture2D" uid="uid://cq4oebmiej7bw" path="res://graphics/chapter2/levels/desert/separatedbus/wheel2.png" id="6_ilylu"]
 [ext_resource type="Texture2D" uid="uid://b6rk6np2twi31" path="res://graphics/chapter2/levels/desert/separatedbus/shadow.png" id="7_p4fqx"]
 [ext_resource type="Texture2D" uid="uid://cuf1vofnap5qh" path="res://graphics/chapter2/levels/desert/separatedbus/camion2.png" id="8_m07mj"]
+[ext_resource type="Texture2D" uid="uid://bhrh2sjkcakpu" path="res://graphics/chapter2/levels/desert/separatedbus/busoutside.png" id="8_proip"]
 [ext_resource type="Texture2D" uid="uid://ufxqwa3gorkc" path="res://graphics/chapter2/levels/desert/separatedbus/camion3.png" id="9_proip"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uu4gm"]
 size = Vector2(1545, 367)
 
-[node name="Bus" type="Node2D" unique_id=1136971117 node_paths=PackedStringArray("char_area", "visuals")]
+[node name="Bus" type="Node2D" unique_id=1136971117 node_paths=PackedStringArray("bus_outside_sprite", "char_area", "visuals")]
 script = ExtResource("1_m07mj")
+bus_outside_sprite = NodePath("Visuals/Bus/Sprite2D")
 char_area = NodePath("Area2D")
 move_speed = 800.0
 visuals = NodePath("Visuals")
@@ -51,6 +53,9 @@ script = ExtResource("5_cn30k")
 show_behind_parent = true
 position = Vector2(-46, 215)
 texture = ExtResource("7_p4fqx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals/Bus" unique_id=2102393058]
+texture = ExtResource("8_proip")
 
 [node name="Camion2" type="Sprite2D" parent="Visuals" unique_id=1535899176]
 position = Vector2(956, 439)

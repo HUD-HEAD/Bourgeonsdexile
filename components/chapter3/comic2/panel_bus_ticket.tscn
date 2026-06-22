@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/mechanics/click_hide.gd" id="4_4p654"]
 [ext_resource type="Texture2D" uid="uid://cf4su4gv5wd1v" path="res://graphics/chapter3/comics/comic2/pctickets/button1.png" id="5_egm1d"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="6_egm1d"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="6_oe8q3"]
+[ext_resource type="AudioStream" uid="uid://fu730s1mbtt4" path="res://audio/chapter3/ambient/comic 2/panel_2.8_page_ui_sound_interactive.wav" id="7_twtgq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gbym3"]
 animations = [{
@@ -42,6 +44,14 @@ shape = SubResource("RectangleShape2D_oe8q3")
 
 [node name="Button1" type="Sprite2D" parent="Clickable" unique_id=1659511607]
 texture = ExtResource("5_egm1d")
+
+[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=816696680 node_paths=PackedStringArray("clickables")]
+script = ExtResource("6_oe8q3")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("7_twtgq")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="TransitionerCounter" type="Node" parent="." unique_id=1070713960 node_paths=PackedStringArray("clickables")]
 script = ExtResource("6_egm1d")

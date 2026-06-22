@@ -4,6 +4,10 @@
 [ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/mechanics/click_hide.gd" id="2_hibxk"]
 [ext_resource type="Texture2D" uid="uid://dfbcwt5qdf477" path="res://graphics/chapter3/comics/comic2/morning/0.png" id="3_4x3o0"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_17yhj"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="4_du6w7"]
+[ext_resource type="AudioStream" uid="uid://dr4lbncv3wcoi" path="res://audio/chapter3/ambient/comic 2/panel_2.4_mm_stress_sound_interactive.wav" id="5_0glyf"]
+[ext_resource type="Script" uid="uid://bvmwxu2au5j5l" path="res://components/utils/audio/audio integration nodes/audio_sfx_zone.gd" id="5_dgda3"]
+[ext_resource type="AudioStream" uid="uid://dxn3463nmjybc" path="res://audio/chapter3/ambient/comic 2/panel_2.4_relaxing_sound.wav" id="6_4rdg0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hibxk"]
 radius = 468.96054
@@ -25,7 +29,23 @@ shape = SubResource("CircleShape2D_hibxk")
 position = Vector2(-123, 87)
 texture = ExtResource("3_4x3o0")
 
+[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=158702266 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_du6w7")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("5_0glyf")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
 [node name="TransitionerCounter" type="Node" parent="." unique_id=777541841 node_paths=PackedStringArray("clickables")]
 script = ExtResource("4_17yhj")
 clickables = [NodePath("../Clickable")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="AudioSfxZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=1057903838]
+position = Vector2(461, -2)
+rect = Rect2(-10, -10, 52, 41)
+script = ExtResource("5_dgda3")
+use_audio_stream = true
+stream = ExtResource("6_4rdg0")
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"

@@ -131,6 +131,7 @@
 [ext_resource type="Texture2D" uid="uid://bg5s78yi6ix11" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0120.png" id="124_4uwuy"]
 [ext_resource type="PackedScene" uid="uid://ds13261ncmyq2" path="res://components/chapter3/levels/level3.3/drag_drop_puzzle_3.3-1.tscn" id="125_ot5ko"]
 [ext_resource type="PackedScene" uid="uid://buwei6igqkc44" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-4.tscn" id="127_t5rg3"]
+[ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="131_yk8n7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7ftg5"]
 animations = [{
@@ -608,3 +609,8 @@ position = Vector2(-36, 489)
 
 [node name="PuzzleCompletePathBack" parent="." index="8" unique_id=1605263297 node_paths=PackedStringArray("puzzle")]
 puzzle = NodePath("../Puzzle2/DragDropPuzzle2")
+
+[node name="CheckpointController" type="Node" parent="." index="9" unique_id=534646765]
+script = ExtResource("131_yk8n7")
+chapter = 2
+comic = 19

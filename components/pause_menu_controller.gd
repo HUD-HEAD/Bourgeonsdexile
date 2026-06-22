@@ -42,7 +42,7 @@ func _ready() -> void:
 	is_active = false
 
 func show_pause_menu():
-	if !get_tree().root.get_node("MainMenu"):
+	if !get_tree().root.has_node("MainMenu"):
 		if !is_active:
 			is_active = true
 			show_menu()

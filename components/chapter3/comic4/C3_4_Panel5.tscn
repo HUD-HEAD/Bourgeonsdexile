@@ -3,7 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://bho7qtmlxpooc" path="res://graphics/chapter3/comics/comic4/zlatafrontview/1.png" id="1_r0bun"]
 [ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/mechanics/click_hide.gd" id="3_bt6op"]
 [ext_resource type="Texture2D" uid="uid://b4yhcduby1k1y" path="res://graphics/chapter3/comics/comic4/zlatafrontview/2.png" id="3_v7370"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="4_2byb8"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_bt6op"]
+[ext_resource type="AudioStream" uid="uid://bbyfmtrk0h1d8" path="res://audio/chapter3/ambient/comic 4/panel_4.5_zlata_expression_2_interactive.wav" id="5_n2fjs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yxqj0"]
 radius = 521.0614
@@ -24,6 +26,14 @@ texture = ExtResource("1_r0bun")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=2094484394]
 shape = SubResource("CircleShape2D_yxqj0")
+
+[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=1732037205 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_2byb8")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("5_n2fjs")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="TransitionerCounter" type="Node" parent="." unique_id=186836432 node_paths=PackedStringArray("clickables")]
 script = ExtResource("4_bt6op")
