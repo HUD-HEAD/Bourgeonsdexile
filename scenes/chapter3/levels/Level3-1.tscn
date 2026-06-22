@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="1_jv2u6"]
 [ext_resource type="PackedScene" uid="uid://dy84a73ucflwu" path="res://components/chapter3/main_characters/zlata.tscn" id="2_0xeah"]
-[ext_resource type="Texture2D" uid="uid://su0wmbgxcdvb" path="res://graphics/chapter3/levels/geneve/alzado.png" id="2_5yy0j"]
+[ext_resource type="Texture2D" uid="uid://ko2uf4sgf1y7" path="res://graphics/chapter3/levels/hospital/level.png" id="2_ihdby"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="3_q0nn3"]
 [ext_resource type="PackedScene" uid="uid://vgm33l25gl23" path="res://components/chapter3/levels/level3.1/drag_drop_puzzle_3.1-1.tscn" id="5_ihdby"]
 [ext_resource type="PackedScene" uid="uid://boui2uiurwlf2" path="res://components/chapter3/levels/level3.1/drag_drop_puzzle_3.1-2.tscn" id="6_3oq03"]
@@ -10,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://bquow8shtm7w3" path="res://components/chapter3/levels/level3.1/drag_drop_puzzle_3.1-4.tscn" id="8_q7f5r"]
 [ext_resource type="PackedScene" uid="uid://ct428xm1r3sew" path="res://components/chapter3/levels/level3.1/thinking_puzzle_3.1-5.tscn" id="9_eurov"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="10_ihdby"]
+[ext_resource type="Texture2D" uid="uid://dukbq3bsdjcs1" path="res://graphics/chapter3/levels/hospital/shadow.png" id="10_q7f5r"]
+[ext_resource type="Texture2D" uid="uid://ns6bn2koummc" path="res://graphics/chapter3/levels/hospital/hospital_door.png" id="11_eurov"]
+[ext_resource type="Texture2D" uid="uid://bsqjs3i3voljp" path="res://graphics/chapter3/levels/hospital/trunk.png" id="13_8mrop"]
 
 [node name="Level31" type="Node2D" unique_id=2125939091]
 
@@ -23,12 +26,11 @@ texture = ExtResource("1_jv2u6")
 centered = false
 
 [node name="Alzado" type="Sprite2D" parent="." unique_id=1855264062]
-position = Vector2(-41364.004, -1112)
-scale = Vector2(10.303761, 10.30376)
-texture = ExtResource("2_5yy0j")
+position = Vector2(-11951.5, 543)
+texture = ExtResource("2_ihdby")
 
 [node name="Zlata" parent="." unique_id=700974070 instance=ExtResource("2_0xeah")]
-position = Vector2(467, 970)
+position = Vector2(-5726, 905)
 scale = Vector2(2.0799963, 2.0799963)
 
 [node name="Camera2D" type="Camera2D" parent="Zlata" unique_id=937718987]
@@ -51,21 +53,33 @@ next_scene = "uid://by2x0js73j5ew"
 [node name="Puzzles" type="Node2D" parent="." unique_id=1790939761]
 
 [node name="DragDropPuzzle" parent="Puzzles" unique_id=1767003607 instance=ExtResource("5_ihdby")]
-position = Vector2(-3968, 134)
+position = Vector2(-8274, 358)
 
 [node name="DragDropPuzzle2" parent="Puzzles" unique_id=1776146671 instance=ExtResource("6_3oq03")]
-position = Vector2(-10811, 248)
+position = Vector2(-15197, 466)
 
 [node name="DragDropPuzzle3" parent="Puzzles" unique_id=1283304511 instance=ExtResource("7_unyww")]
-position = Vector2(-19731, 227)
+position = Vector2(-21493, 405)
 
 [node name="DragDropPuzzle4" parent="Puzzles" unique_id=1993253678 instance=ExtResource("8_q7f5r")]
-position = Vector2(-39651, -280)
+position = Vector2(-25220, 536)
 
 [node name="Puzzle1" parent="Puzzles" unique_id=1941159865 instance=ExtResource("9_eurov")]
-position = Vector2(-30540, 378)
+position = Vector2(-23072, 409)
+
+[node name="Shadow" type="Sprite2D" parent="Puzzles" unique_id=1551286064]
+position = Vector2(-15350, 807)
+texture = ExtResource("10_q7f5r")
+
+[node name="HospitalDoor" type="Sprite2D" parent="Puzzles" unique_id=231640699]
+position = Vector2(-1088, 602)
+texture = ExtResource("11_eurov")
 
 [node name="CheckpointController" type="Node" parent="." unique_id=108560523]
 script = ExtResource("10_ihdby")
 chapter = 2
 comic = 18
+
+[node name="Trunk" type="Sprite2D" parent="." unique_id=1869515569]
+position = Vector2(-7093, 659)
+texture = ExtResource("13_8mrop")
