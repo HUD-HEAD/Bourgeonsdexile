@@ -7,6 +7,9 @@ var last_desert_area: DesertArea
 
 @export var delay_on_stop:float = 1
 
+@export var bus_outside_sprite: Sprite2D
+@export var fade_time: float = 0.5
+
 @export_group("Audio Config")
 @export var moving_loop: TriggerLoopZone
 @export var stop_loop: TriggerLoopZone
@@ -34,6 +37,7 @@ func _start_walking():
 		last_desert_area.on_finish_puzzle()
 	
 	if !(was_last_puzzle_desert && last_desert_area.type == DesertArea.puzzle_type.hole_area):
+		hide_bus_inside()
 		walking = true
 		visuals.process_mode = Node.PROCESS_MODE_INHERIT
 		people_loop.stop_loop()
@@ -46,6 +50,7 @@ func _start_walking():
 	was_last_puzzle_desert = false
 
 func _stop_walking():
+	show_bus_inside()
 	if was_last_puzzle_desert:
 		people_loop.play_loop()
 		
@@ -70,3 +75,12 @@ func _stop_walking():
 func _stop_after_delay():
 	await get_tree().create_timer(delay_on_stop).timeout
 	walking = false
+
+
+func show_bus_inside():
+	var tween = create_tween()
+	tween.tween_property(bus_outside_sprite, "modulate:a", 0.0, fade_time)
+
+func hide_bus_inside():
+	var tween = create_tween()
+	tween.tween_property(bus_outside_sprite, "modulate:a", 1.0, fade_time)

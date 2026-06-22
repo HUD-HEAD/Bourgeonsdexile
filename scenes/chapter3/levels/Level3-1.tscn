@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bf4jtrxfhkmon" path="res://components/chapter3/levels/level3.1/drag_drop_puzzle_3.1-3.tscn" id="7_unyww"]
 [ext_resource type="PackedScene" uid="uid://bquow8shtm7w3" path="res://components/chapter3/levels/level3.1/drag_drop_puzzle_3.1-4.tscn" id="8_q7f5r"]
 [ext_resource type="PackedScene" uid="uid://ct428xm1r3sew" path="res://components/chapter3/levels/level3.1/thinking_puzzle_3.1-5.tscn" id="9_eurov"]
+[ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="10_ihdby"]
 
 [node name="Level31" type="Node2D" unique_id=2125939091]
 
@@ -63,3 +64,8 @@ position = Vector2(-39651, -280)
 
 [node name="Puzzle1" parent="Puzzles" unique_id=1941159865 instance=ExtResource("9_eurov")]
 position = Vector2(-30540, 378)
+
+[node name="CheckpointController" type="Node" parent="." unique_id=108560523]
+script = ExtResource("10_ihdby")
+chapter = 2
+comic = 18
