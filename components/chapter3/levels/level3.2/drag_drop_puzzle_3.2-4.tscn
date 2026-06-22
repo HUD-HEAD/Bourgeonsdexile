@@ -229,8 +229,6 @@ position = Vector2(-64, -2)
 scale = Vector2(0.6500708, 0.6500708)
 texture = ExtResource("21_4wwo4")
 
-[node name="Camera2D" type="Camera2D" parent="." index="3" unique_id=1827388185]
-
 [editable path="BuildingBlocks/PuzzlePiece"]
 [editable path="BuildingBlocks/PuzzlePiece2"]
 [editable path="BuildingBlocks/PuzzlePiece3"]
