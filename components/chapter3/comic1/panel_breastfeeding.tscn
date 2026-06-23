@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://bcqv4vcv0bv0k" path="res://graphics/chapter3/comics/comic1/breastfeed/1.png" id="3_ocooj"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="4_ocooj"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_hafim"]
+[ext_resource type="Script" uid="uid://bvmwxu2au5j5l" path="res://components/utils/audio/audio integration nodes/audio_sfx_zone.gd" id="6_21b4k"]
+[ext_resource type="AudioStream" uid="uid://y3jnvx0npjg1" path="res://audio/chapter3/ambient/comic 1/panel_1.6_baby_yawn_sound.wav" id="7_g1uqt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hafim"]
 radius = 626.01276
@@ -41,3 +43,13 @@ clickable = NodePath("../Clickable")
 script = ExtResource("5_hafim")
 clickables = [NodePath("../Clickable")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="AudioSfxZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=421783207]
+position = Vector2(169, -29)
+rect = Rect2(-10, -10, 83, 51)
+script = ExtResource("6_21b4k")
+use_audio_stream = true
+stream = ExtResource("7_g1uqt")
+min_pitch = 1.05
+max_pitch = 1.05
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"

@@ -66,7 +66,7 @@
 [ext_resource type="Script" uid="uid://brdld87pattsa" path="res://components/utils/puzzles/puzzle_zoom.gd" id="59_fabr7"]
 [ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="59_l3fw1"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="60_88lvr"]
-[ext_resource type="AudioStream" uid="uid://30npljjgdj2o" path="res://audio/chapter2/ambient/level 2/level_2_frenazo_sound.wav" id="60_hqomx"]
+[ext_resource type="AudioStream" uid="uid://cwplyl54oxmou" path="res://audio/chapter2/ambient/level 2/levle_2_desert_bus_brake.wav" id="61_fabr7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uu4gm"]
 size = Vector2(1545, 367)
@@ -585,16 +585,19 @@ texture = ExtResource("54_owsko")
 [node name="PuzzleZoom" type="Node" parent="Puzzles/PuzzleWindowBus" unique_id=2034404489 node_paths=PackedStringArray("puzzle_spawner")]
 script = ExtResource("59_fabr7")
 puzzle_spawner = NodePath("../PuzzleSpawner")
-zoom_in = Vector2(1, 1)
+zoom_in = Vector2(3, 3)
 
 [node name="Bus" parent="." unique_id=1136971117 node_paths=PackedStringArray("desert_controller", "moving_loop", "stop_loop", "people_loop") instance=ExtResource("25_iym2s")]
-position = Vector2(1168, 883)
+position = Vector2(1168, 811)
 desert_controller = NodePath("../DesertController")
 delay_on_stop = 0.5
 moving_loop = NodePath("../AudioContainer/Bus_moving_loop")
 stop_loop = NodePath("../AudioContainer/Bus_stop_loop")
 people_loop = NodePath("../AudioContainer/Bus_people_loop")
-stop_stream = ExtResource("60_hqomx")
+stop_stream = ExtResource("61_fabr7")
+linear_volume = 1.5
+min_pitch = 1.1
+max_pitch = 1.1
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Bus" unique_id=218413136]
 position = Vector2(-422, -360)

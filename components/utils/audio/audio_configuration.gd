@@ -85,7 +85,7 @@ enum loop_type{
 	c3_1_Hospital_sound = 3100,
 	c3_1_baby_crying = 3101,
 	c3_2_Tv_loop = 3200,
-	
+	c3_2_Bus_ambient = 3201,
 	
 }
 
