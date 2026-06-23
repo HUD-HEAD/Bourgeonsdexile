@@ -14,9 +14,6 @@
 [ext_resource type="Script" uid="uid://dv0245ypeul1c" path="res://scenes/chapter3/levels/puzzle_complete_pathback.gd" id="12_k783o"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="14_fu8h6"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_yfmg0"]
-radius = 100.42
-
 [sub_resource type="Curve2D" id="Curve2D_wn2jm"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 821, 674, 0, 0, 0, 0, 1298, 671, 0, 0, 0, 0, 1219, 804, 0, 0, 0, 0, 1293, 916, 0, 0, 0, 0, 5647, 946)
@@ -81,15 +78,6 @@ centered = false
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("8_7ktf0")
 centered = false
-
-[node name="DennerClickable" type="Area2D" parent="Bg2" unique_id=1276134016]
-position = Vector2(5127, 826)
-script = ExtResource("14_fu8h6")
-metadata/_custom_type_script = "uid://ba2byqse4kn1f"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/DennerClickable" unique_id=173285044]
-position = Vector2(0, 16.346182)
-shape = SubResource("CircleShape2D_yfmg0")
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1221118698]
 position = Vector2(7414, 596)
