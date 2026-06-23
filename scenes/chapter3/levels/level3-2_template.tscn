@@ -1,11 +1,9 @@
 [gd_scene format=3 uid="uid://bh15fogf83oh7"]
 
-[ext_resource type="Texture2D" uid="uid://cppdt16jlkb7i" path="res://graphics/chapter3/levels/bigavenue/bg.png" id="1_e3twa"]
-[ext_resource type="Texture2D" uid="uid://nt4gnpskq1tn" path="res://graphics/chapter3/levels/bigavenue/pharmacie.png" id="2_k783o"]
-[ext_resource type="Texture2D" uid="uid://mpyrv8f4bfkj" path="res://graphics/chapter3/levels/bigavenue/building apt.png" id="3_y5mxe"]
-[ext_resource type="Texture2D" uid="uid://bjespq0dbijkq" path="res://graphics/chapter3/levels/bigavenue/squares.png" id="4_yfmg0"]
-[ext_resource type="Texture2D" uid="uid://b8utg0kolgvhy" path="res://graphics/chapter3/levels/bigavenue/building.png" id="5_1dsc3"]
-[ext_resource type="Texture2D" uid="uid://1rrpcsdgsv8b" path="res://graphics/chapter3/levels/bigavenue/reels.png" id="6_ovumn"]
+[ext_resource type="Texture2D" uid="uid://mpyrv8f4bfkj" path="res://graphics/chapter3/levels/bigavenue/building/building apt.png" id="3_y5mxe"]
+[ext_resource type="Texture2D" uid="uid://bjespq0dbijkq" path="res://graphics/chapter3/levels/bigavenue/building/squares.png" id="4_yfmg0"]
+[ext_resource type="Texture2D" uid="uid://b8utg0kolgvhy" path="res://graphics/chapter3/levels/bigavenue/building/building.png" id="5_1dsc3"]
+[ext_resource type="Texture2D" uid="uid://1rrpcsdgsv8b" path="res://graphics/chapter3/levels/bigavenue/building/reels.png" id="6_ovumn"]
 [ext_resource type="Texture2D" uid="uid://jliii8605sec" path="res://graphics/chapter3/levels/bigavenue/background.png" id="7_ttgo8"]
 [ext_resource type="Texture2D" uid="uid://d2kpc1bbjayup" path="res://graphics/chapter3/levels/bigavenue/mockup_changes.png" id="8_7ktf0"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="9_q7qsp"]
@@ -13,9 +11,6 @@
 [ext_resource type="Script" uid="uid://crcrgrn18h2m6" path="res://components/utils/mechanics/face_path.gd" id="11_4tgbk"]
 [ext_resource type="Script" uid="uid://dv0245ypeul1c" path="res://scenes/chapter3/levels/puzzle_complete_pathback.gd" id="12_k783o"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="14_fu8h6"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_yfmg0"]
-radius = 100.42
 
 [sub_resource type="Curve2D" id="Curve2D_wn2jm"]
 _data = {
@@ -38,12 +33,8 @@ size = Vector2(1000, 100)
 [node name="Level31" type="Node2D" unique_id=2125939091]
 
 [node name="Bg2" type="Sprite2D" parent="." unique_id=1307761575]
-texture = ExtResource("1_e3twa")
+texture = ExtResource("7_ttgo8")
 centered = false
-
-[node name="Pharmacie" type="Sprite2D" parent="Bg2" unique_id=1901605799]
-position = Vector2(5431, 880)
-texture = ExtResource("2_k783o")
 
 [node name="BuildingApt" type="Sprite2D" parent="Bg2" unique_id=639287802]
 position = Vector2(835, 589)
@@ -72,24 +63,10 @@ texture = ExtResource("4_yfmg0")
 position = Vector2(2, 59)
 texture = ExtResource("6_ovumn")
 
-[node name="Background" type="Sprite2D" parent="Bg2" unique_id=1868809871]
-scale = Vector2(0.35, 0.35)
-texture = ExtResource("7_ttgo8")
-centered = false
-
 [node name="MockupChanges" type="Sprite2D" parent="Bg2" unique_id=816831268]
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("8_7ktf0")
 centered = false
-
-[node name="DennerClickable" type="Area2D" parent="Bg2" unique_id=1276134016]
-position = Vector2(5127, 826)
-script = ExtResource("14_fu8h6")
-metadata/_custom_type_script = "uid://ba2byqse4kn1f"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/DennerClickable" unique_id=173285044]
-position = Vector2(0, 16.346182)
-shape = SubResource("CircleShape2D_yfmg0")
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1221118698]
 position = Vector2(7414, 596)
