@@ -3,18 +3,16 @@
 [ext_resource type="PackedScene" uid="uid://bh15fogf83oh7" path="res://scenes/chapter3/levels/level3-2_template.tscn" id="1_aicyn"]
 [ext_resource type="PackedScene" uid="uid://c262lwecjsumn" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-8.tscn" id="2_80rf8"]
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="2_hd8xs"]
-[ext_resource type="Texture2D" uid="uid://nt4gnpskq1tn" path="res://graphics/chapter3/levels/bigavenue/pharmacie.png" id="2_pfjp3"]
-[ext_resource type="Texture2D" uid="uid://beerdhf5gp0i0" path="res://graphics/chapter3/levels/bigavenue/pharmacy_counter.png" id="3_18lw1"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/mechanics/obstacle.tscn" id="3_052ky"]
 [ext_resource type="PackedScene" uid="uid://iu78nj4beigo" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-1.tscn" id="3_t5rg3"]
 [ext_resource type="PackedScene" uid="uid://dgljokfc58cu5" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-12.tscn" id="4_4mioc"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="4_80rf8"]
-[ext_resource type="Texture2D" uid="uid://dcbh8tasw2ens" path="res://graphics/chapter3/levels/bigavenue/store_bg.png" id="4_p5lly"]
-[ext_resource type="Texture2D" uid="uid://cpguix1gkv66k" path="res://graphics/chapter3/levels/bigavenue/store_wall.png" id="5_gjepm"]
+[ext_resource type="Texture2D" uid="uid://dcbh8tasw2ens" path="res://graphics/chapter3/levels/bigavenue/store/store_bg.png" id="4_p5lly"]
+[ext_resource type="Texture2D" uid="uid://cpguix1gkv66k" path="res://graphics/chapter3/levels/bigavenue/store/store_wall.png" id="5_gjepm"]
 [ext_resource type="PackedScene" uid="uid://banhkda0c483g" path="res://components/chapter3/levels/level3.2/thinking_puzzle_3.2-6.tscn" id="5_rj8de"]
 [ext_resource type="Texture2D" uid="uid://cxylr6a40orij" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0001.png" id="5_t5rg3"]
 [ext_resource type="Texture2D" uid="uid://d38pu7t511wt4" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0002.png" id="6_4mioc"]
-[ext_resource type="Texture2D" uid="uid://bt5nmg7mr62h0" path="res://graphics/chapter3/levels/bigavenue/store_counter.png" id="6_lvjii"]
+[ext_resource type="Texture2D" uid="uid://bt5nmg7mr62h0" path="res://graphics/chapter3/levels/bigavenue/store/store_counter.png" id="6_lvjii"]
 [ext_resource type="Script" uid="uid://qu5hfw1uwm0x" path="res://components/utils/mechanics/area_reveal.gd" id="7_18lw1"]
 [ext_resource type="Texture2D" uid="uid://bx2fsfgwb0g5x" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0003.png" id="7_rj8de"]
 [ext_resource type="Texture2D" uid="uid://7h021udsedkc" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0004.png" id="8_g33bs"]
@@ -138,6 +136,8 @@
 [ext_resource type="PackedScene" uid="uid://ds13261ncmyq2" path="res://components/chapter3/levels/level3.3/drag_drop_puzzle_3.3-1.tscn" id="125_ot5ko"]
 [ext_resource type="PackedScene" uid="uid://buwei6igqkc44" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-4.tscn" id="127_t5rg3"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="131_yk8n7"]
+[ext_resource type="Texture2D" uid="uid://ba7dtg40d3qda" path="res://graphics/chapter3/levels/bigavenue/pharmacy/pharmacy.png" id="138_p5lly"]
+[ext_resource type="Texture2D" uid="uid://dvs07tq3jucx8" path="res://graphics/chapter3/levels/bigavenue/pharmacy/pharmacy_desk.png" id="139_gjepm"]
 [ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/mechanics/area_entered_enable.gd" id="139_p5lly"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18lw1"]
@@ -534,18 +534,10 @@ radius = 48.04165
 
 [node name="Level31" unique_id=2125939091 instance=ExtResource("1_aicyn")]
 
-[node name="MockupChanges" parent="Bg2" parent_id_path=PackedInt32Array(1307761575) index="4" unique_id=816831268]
+[node name="MockupChanges" parent="Bg2" parent_id_path=PackedInt32Array(1307761575) index="2" unique_id=816831268]
 visible = false
 
-[node name="Pharmacie2" type="Sprite2D" parent="Bg2" parent_id_path=PackedInt32Array(1307761575) index="5" unique_id=758286281]
-position = Vector2(6423, 1440)
-texture = ExtResource("2_pfjp3")
-
-[node name="PharmacyCounter" type="Sprite2D" parent="Bg2" parent_id_path=PackedInt32Array(1307761575) index="6" unique_id=523351004]
-position = Vector2(6363, 1470)
-texture = ExtResource("3_18lw1")
-
-[node name="AreaRevealStore" type="Area2D" parent="Bg2" parent_id_path=PackedInt32Array(1307761575) index="7" unique_id=934030736 node_paths=PackedStringArray("nodes_to_reveal")]
+[node name="AreaRevealStore" type="Area2D" parent="Bg2" parent_id_path=PackedInt32Array(1307761575) index="3" unique_id=934030736 node_paths=PackedStringArray("nodes_to_reveal")]
 position = Vector2(5124, 835)
 collision_layer = 0
 collision_mask = 2
@@ -706,3 +698,11 @@ node_to_enable = NodePath("../Puzzle2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaActivateStorePuzzle" index="0" unique_id=1355763298]
 shape = SubResource("CircleShape2D_gjepm")
+
+[node name="Pharmacy" type="Sprite2D" parent="." index="11" unique_id=1490875950]
+position = Vector2(5969, 1275)
+texture = ExtResource("138_p5lly")
+
+[node name="PharmacyDesk" type="Sprite2D" parent="." index="12" unique_id=779139267]
+position = Vector2(6020, 1325)
+texture = ExtResource("139_gjepm")
