@@ -795,9 +795,8 @@ position = Vector2(0, 16.346182)
 shape = SubResource("CircleShape2D_g24i2")
 
 [node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D/Zlata" unique_id=937718987]
-position = Vector2(0, -233)
+position = Vector2(-250, -233)
 scale = Vector2(0.99999994, 0.99999994)
-offset = Vector2(-500, 0)
 limit_left = -22022
 limit_top = 0
 limit_right = 7360
