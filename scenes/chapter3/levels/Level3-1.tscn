@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/mechanics/obstacle.tscn" id="7_q7f5r"]
 [ext_resource type="PackedScene" uid="uid://bf4jtrxfhkmon" path="res://components/chapter3/levels/level3.1/drag_drop_puzzle_3.1-3.tscn" id="7_unyww"]
 [ext_resource type="Texture2D" uid="uid://d38pu7t511wt4" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0002.png" id="8_lu7li"]
-[ext_resource type="PackedScene" uid="uid://bquow8shtm7w3" path="res://components/chapter3/levels/level3.1/drag_drop_puzzle_3.1-4.tscn" id="8_q7f5r"]
 [ext_resource type="Texture2D" uid="uid://bx2fsfgwb0g5x" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0003.png" id="9_aebx7"]
 [ext_resource type="PackedScene" uid="uid://ct428xm1r3sew" path="res://components/chapter3/levels/level3.1/thinking_puzzle_3.1-5.tscn" id="9_eurov"]
 [ext_resource type="Script" uid="uid://crcrgrn18h2m6" path="res://components/utils/mechanics/face_path.gd" id="10_3oq03"]
@@ -144,7 +143,11 @@
 [ext_resource type="Script" uid="uid://bwhw2o2u7v43i" path="res://components/utils/comics/vertical_sine_anim.gd" id="144_b1c3r"]
 [ext_resource type="Texture2D" uid="uid://b2ipjbn25qct0" path="res://graphics/chapter2/levels/desert/separatedbus/wheel1.png" id="145_lbea3"]
 [ext_resource type="Script" uid="uid://cvlenn1q1qyrk" path="res://components/chapter2/characters/rotator.gd" id="146_ibvau"]
+[ext_resource type="Texture2D" uid="uid://pa2qkrrisgqj" path="res://graphics/chapter3/levels/hospital/tickets.png" id="146_v81oq"]
 [ext_resource type="Texture2D" uid="uid://cq4oebmiej7bw" path="res://graphics/chapter2/levels/desert/separatedbus/wheel2.png" id="147_vter2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fbeob"]
+size = Vector2(162, 502)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b5cmm"]
 animations = [{
@@ -585,6 +588,19 @@ position = Vector2(-22033, 0)
 texture = ExtResource("1_5yy0j")
 centered = false
 
+[node name="ClickableTickets" type="Area2D" parent="Level" unique_id=165422128]
+position = Vector2(420, 629)
+script = ExtResource("6_g24i2")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="Tickets" type="Sprite2D" parent="Level/ClickableTickets" unique_id=667212540]
+scale = Vector2(1.19049, 1.19049)
+texture = ExtResource("146_v81oq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/ClickableTickets" unique_id=636768214]
+position = Vector2(4, -99)
+shape = SubResource("RectangleShape2D_fbeob")
+
 [node name="Shadow" type="Sprite2D" parent="Level" unique_id=1211457584]
 position = Vector2(8176, 876)
 texture = ExtResource("136_44fmv")
@@ -705,7 +721,7 @@ position = Vector2(-21449, -3)
 [node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle3" unique_id=311351916 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("6_unyww")
 puzzle = NodePath("../DragDropPuzzle3")
-spawn_trigger = NodePath("../ClickableNpc")
+spawn_trigger = NodePath("../../../Level/ClickableTickets")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Puzzles/Puzzle3" unique_id=536151000 instance=ExtResource("7_q7f5r")]
@@ -716,55 +732,6 @@ position = Vector2(81, 212)
 
 [node name="BuildingBlocks" parent="Puzzles/Puzzle3/DragDropPuzzle3" index="1" unique_id=1654234455]
 z_index = 1
-
-[node name="ClickableNpc" type="Area2D" parent="Puzzles/Puzzle3" unique_id=531486319]
-visible = false
-position = Vector2(-1029, 569)
-script = ExtResource("6_g24i2")
-metadata/_custom_type_script = "uid://ba2byqse4kn1f"
-
-[node name="Npc" type="AnimatedSprite2D" parent="Puzzles/Puzzle3/ClickableNpc" unique_id=1760561788]
-position = Vector2(0, 70)
-scale = Vector2(2.27, 2.27)
-sprite_frames = SubResource("SpriteFrames_b5cmm")
-autoplay = "default"
-flip_h = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzles/Puzzle3/ClickableNpc" unique_id=19314992]
-shape = SubResource("CircleShape2D_e3xgo")
-
-[node name="Puzzle4" type="Node2D" parent="Puzzles" unique_id=1769715402]
-position = Vector2(-15123, -1333)
-
-[node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle4" unique_id=845814483 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
-script = ExtResource("6_unyww")
-puzzle = NodePath("../DragDropPuzzle4")
-spawn_trigger = NodePath("../ClickableNpc")
-obstacle = NodePath("../Obstacle")
-
-[node name="Obstacle" parent="Puzzles/Puzzle4" unique_id=1624754038 instance=ExtResource("7_q7f5r")]
-collision_mask = 2
-
-[node name="DragDropPuzzle4" parent="Puzzles/Puzzle4" unique_id=1993253678 instance=ExtResource("8_q7f5r")]
-position = Vector2(-594, 339)
-
-[node name="BuildingBlocks" parent="Puzzles/Puzzle4/DragDropPuzzle4" index="1" unique_id=1654234455]
-z_index = 1
-
-[node name="ClickableNpc" type="Area2D" parent="Puzzles/Puzzle4" unique_id=180140633]
-position = Vector2(-1264, 569)
-script = ExtResource("6_g24i2")
-metadata/_custom_type_script = "uid://ba2byqse4kn1f"
-
-[node name="Npc" type="AnimatedSprite2D" parent="Puzzles/Puzzle4/ClickableNpc" unique_id=1260286761]
-position = Vector2(0, 70)
-scale = Vector2(2.27, 2.27)
-sprite_frames = SubResource("SpriteFrames_b5cmm")
-autoplay = "default"
-flip_h = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzles/Puzzle4/ClickableNpc" unique_id=543820835]
-shape = SubResource("CircleShape2D_e3xgo")
 
 [node name="Puzzle5" type="Node2D" parent="Puzzles" unique_id=1223379638]
 position = Vector2(-15792, 76)
@@ -805,7 +772,8 @@ position = Vector2(-4853, 0)
 curve = SubResource("Curve2D_5yy0j")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1149074890]
-position = Vector2(915, 970)
+position = Vector2(-15633.948, 922.08984)
+progress = 16548.977
 rotates = false
 loop = false
 
@@ -831,6 +799,7 @@ shape = SubResource("CircleShape2D_g24i2")
 position = Vector2(0, -233)
 scale = Vector2(0.99999994, 0.99999994)
 offset = Vector2(-500, 0)
+limit_left = -22022
 limit_top = 0
 limit_right = 7360
 limit_bottom = 1080
@@ -865,7 +834,7 @@ texture = ExtResource("140_fbeob")
 centered = false
 
 [node name="ObstacleBusTrigger" parent="." unique_id=964497252 node_paths=PackedStringArray("anim_player") instance=ExtResource("7_q7f5r")]
-position = Vector2(-21078, 1)
+position = Vector2(-21470, 1)
 collision_mask = 2
 script = ExtResource("140_v81oq")
 anim_player = NodePath("../BusTransition")
@@ -912,12 +881,6 @@ libraries/ = SubResource("AnimationLibrary_lue18")
 [editable path="Puzzles/Puzzle3/DragDropPuzzle3/BuildingBlocks/PuzzlePiece3"]
 [editable path="Puzzles/Puzzle3/DragDropPuzzle3/BuildingBlocks/PuzzlePiece5"]
 [editable path="Puzzles/Puzzle3/DragDropPuzzle3/BuildingBlocks/PuzzlePiece6"]
-[editable path="Puzzles/Puzzle4/DragDropPuzzle4"]
-[editable path="Puzzles/Puzzle4/DragDropPuzzle4/BuildingBlocks/PuzzlePiece"]
-[editable path="Puzzles/Puzzle4/DragDropPuzzle4/BuildingBlocks/PuzzlePiece2"]
-[editable path="Puzzles/Puzzle4/DragDropPuzzle4/BuildingBlocks/PuzzlePiece3"]
-[editable path="Puzzles/Puzzle4/DragDropPuzzle4/BuildingBlocks/PuzzlePiece4"]
-[editable path="Puzzles/Puzzle4/DragDropPuzzle4/BuildingBlocks/PuzzlePiece5"]
 [editable path="Puzzles/Puzzle5/Puzzle5"]
 [editable path="Puzzles/Puzzle5/Puzzle5/BuildingBlocks/FullPieces/PuzzlePiece"]
 [editable path="Puzzles/Puzzle5/Puzzle5/BuildingBlocks/FullPieces/PuzzlePiece2"]
