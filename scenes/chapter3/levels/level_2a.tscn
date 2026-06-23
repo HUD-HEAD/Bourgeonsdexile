@@ -136,6 +136,7 @@
 [ext_resource type="PackedScene" uid="uid://ds13261ncmyq2" path="res://components/chapter3/levels/level3.3/drag_drop_puzzle_3.3-1.tscn" id="125_ot5ko"]
 [ext_resource type="PackedScene" uid="uid://buwei6igqkc44" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-4.tscn" id="127_t5rg3"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="131_yk8n7"]
+[ext_resource type="Script" uid="uid://4x7opfu2wab4" path="res://components/utils/puzzles/puzzle_complete_trigger_anim.gd" id="134_gjepm"]
 [ext_resource type="Texture2D" uid="uid://ba7dtg40d3qda" path="res://graphics/chapter3/levels/bigavenue/pharmacy/pharmacy.png" id="138_p5lly"]
 [ext_resource type="Texture2D" uid="uid://dvs07tq3jucx8" path="res://graphics/chapter3/levels/bigavenue/pharmacy/pharmacy_desk.png" id="139_gjepm"]
 [ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/mechanics/area_entered_enable.gd" id="139_p5lly"]
@@ -532,6 +533,42 @@ radius = 96.62815
 [sub_resource type="CircleShape2D" id="CircleShape2D_gjepm"]
 radius = 48.04165
 
+[sub_resource type="Animation" id="Animation_p5lly"]
+resource_name = "default"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathTo/PathFollowTo/Zlata")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_stop_walking"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SceneEnder")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_on_screen_entered"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gjepm"]
+_data = {
+&"default": SubResource("Animation_p5lly")
+}
+
 [node name="Level31" unique_id=2125939091 instance=ExtResource("1_aicyn")]
 
 [node name="AreaRevealStore" type="Area2D" parent="Bg2" parent_id_path=PackedInt32Array(1307761575) index="3" unique_id=934030736 node_paths=PackedStringArray("nodes_to_reveal")]
@@ -568,7 +605,7 @@ position = Vector2(0, 16.346182)
 shape = SubResource("CircleShape2D_yfmg0")
 
 [node name="SceneEnder" parent="." index="1" unique_id=1221118698]
-position = Vector2(308, 351)
+position = Vector2(-573, 461)
 next_scene = "uid://da1f6ve0kmn66"
 
 [node name="PathTo" parent="." index="2" unique_id=1272328632]
@@ -659,7 +696,7 @@ position = Vector2(-121, 703)
 scale = Vector2(0.3, 0.3)
 
 [node name="PuzzleThinkHome" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="3" unique_id=1304675676]
-position = Vector2(877, 0)
+position = Vector2(904, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleThinkHome" index="0" unique_id=206345537 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("2_hd8xs")
@@ -748,3 +785,11 @@ texture = ExtResource("138_p5lly")
 [node name="PharmacyDesk" type="Sprite2D" parent="." index="11" unique_id=779139267]
 position = Vector2(6020, 1325)
 texture = ExtResource("139_gjepm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="12" unique_id=1167711698]
+libraries/ = SubResource("AnimationLibrary_gjepm")
+
+[node name="TriggerAnim" type="Node" parent="AnimationPlayer" index="0" unique_id=1527896412 node_paths=PackedStringArray("puzzle", "anim_player")]
+script = ExtResource("134_gjepm")
+puzzle = NodePath("../../WayBack/PuzzleThinkHome/Puzzle1")
+anim_player = NodePath("..")
