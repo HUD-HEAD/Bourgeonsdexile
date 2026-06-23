@@ -70,7 +70,6 @@ position = Vector2(2, 59)
 texture = ExtResource("6_ovumn")
 
 [node name="Background" type="Sprite2D" parent="Bg2" unique_id=1868809871]
-scale = Vector2(0.35, 0.35)
 texture = ExtResource("7_ttgo8")
 centered = false
 

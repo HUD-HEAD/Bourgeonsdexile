@@ -546,7 +546,7 @@ position = Vector2(6363, 1470)
 texture = ExtResource("3_18lw1")
 
 [node name="AreaRevealStore" type="Area2D" parent="Bg2" parent_id_path=PackedInt32Array(1307761575) index="7" unique_id=934030736 node_paths=PackedStringArray("nodes_to_reveal")]
-position = Vector2(5124, 830)
+position = Vector2(5124, 835)
 collision_layer = 0
 collision_mask = 2
 input_pickable = false
@@ -554,11 +554,9 @@ script = ExtResource("7_18lw1")
 nodes_to_reveal = [NodePath("StoreBg")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/AreaRevealStore" index="0" unique_id=1859284361]
-position = Vector2(-3.5, 7.5)
 shape = SubResource("RectangleShape2D_18lw1")
 
 [node name="StoreBg" type="Sprite2D" parent="Bg2/AreaRevealStore" index="1" unique_id=1519401121]
-scale = Vector2(0.34, 0.34)
 texture = ExtResource("4_p5lly")
 
 [node name="StoreWall" type="Sprite2D" parent="Bg2/AreaRevealStore/StoreBg" index="0" unique_id=1095550676]
@@ -566,6 +564,7 @@ z_index = 1
 texture = ExtResource("5_gjepm")
 
 [node name="StoreCounter" type="Sprite2D" parent="Bg2/AreaRevealStore/StoreBg/StoreWall" index="0" unique_id=77554074]
+position = Vector2(0, 44)
 scale = Vector2(0.9999999, 0.9999999)
 texture = ExtResource("6_lvjii")
 
