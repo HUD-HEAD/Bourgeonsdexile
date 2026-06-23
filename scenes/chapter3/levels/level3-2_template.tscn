@@ -82,12 +82,13 @@ rotates = false
 loop = false
 
 [node name="Zlata" parent="PathTo/PathFollowTo" unique_id=700974070 node_paths=PackedStringArray("path_follow") instance=ExtResource("10_v6c5n")]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.4, 0.4)
 path_follow = NodePath("..")
 
 [node name="Camera2D" type="Camera2D" parent="PathTo/PathFollowTo/Zlata" unique_id=1600606219]
 position = Vector2(0, -233)
-offset = Vector2(500, 0)
+offset = Vector2(250, 0)
+zoom = Vector2(2, 2)
 limit_top = 0
 limit_bottom = 1080
 
@@ -114,13 +115,13 @@ loop = false
 [node name="WayTo" type="Node2D" parent="." unique_id=1018273493]
 
 [node name="Sprite2D" type="Sprite2D" parent="WayTo" unique_id=1848681340]
-position = Vector2(3349, 328)
+position = Vector2(3349, 799)
 texture = SubResource("PlaceholderTexture2D_k783o")
 
 [node name="WayBack" type="Node2D" parent="." unique_id=185847338]
 
 [node name="Sprite2D2" type="Sprite2D" parent="WayBack" unique_id=2143200380]
-position = Vector2(3349, 787)
+position = Vector2(3349, 993)
 texture = SubResource("PlaceholderTexture2D_k783o")
 
 [node name="PuzzleCompletePathBack" type="Node" parent="." unique_id=1605263297 node_paths=PackedStringArray("woman", "wayto", "wayback", "pathfollow_back")]

@@ -154,7 +154,7 @@ point_count = 8
 
 [sub_resource type="Curve2D" id="Curve2D_p5lly"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 5192, 914, 0, 0, 0, 0, 4879, 916, 0, 0, 0, 0, 4727, 939, 0, 0, 0, 0, 1034, 917, 0, 0, 0, 0, 1296, 917, 0, 0, 0, 0, 1220, 802, 0, 0, 0, 0, 1296, 669, 0, 0, 0, 0, 841, 672)
+"points": PackedVector2Array(0, 0, 0, 0, 5192, 914, 0, 0, 0, 0, 4879, 916, 0, 0, 0, 0, 4727, 939, 0, 0, 0, 0, 1034, 917, 0, 0, 0, 0, 1296, 917, 0, 0, 0, 0, 1220, 802, 0, 0, 0, 0, 1296, 669, 0, 0, 0, 0, 787, 673)
 }
 point_count = 8
 
@@ -527,15 +527,12 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jrbug"]
-radius = 197.12433
+radius = 96.62815
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gjepm"]
 radius = 48.04165
 
 [node name="Level31" unique_id=2125939091 instance=ExtResource("1_aicyn")]
-
-[node name="MockupChanges" parent="Bg2" parent_id_path=PackedInt32Array(1307761575) index="2" unique_id=816831268]
-visible = false
 
 [node name="AreaRevealStore" type="Area2D" parent="Bg2" parent_id_path=PackedInt32Array(1307761575) index="3" unique_id=934030736 node_paths=PackedStringArray("nodes_to_reveal")]
 position = Vector2(5124, 835)
@@ -560,24 +557,22 @@ position = Vector2(0, 44)
 scale = Vector2(0.9999999, 0.9999999)
 texture = ExtResource("6_lvjii")
 
-[node name="StoreClickable" type="Area2D" parent="Bg2/AreaRevealStore" index="2" unique_id=1421050962]
-position = Vector2(5127, 826)
+[node name="StoreClickable" type="Area2D" parent="Bg2/AreaRevealStore/StoreBg/StoreWall/StoreCounter" index="0" unique_id=1421050962]
+position = Vector2(0, -44)
+scale = Vector2(1.0000001, 1.0000001)
 script = ExtResource("4_80rf8")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/AreaRevealStore/StoreClickable" index="0" unique_id=343900879]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/AreaRevealStore/StoreBg/StoreWall/StoreCounter/StoreClickable" index="0" unique_id=343900879]
 position = Vector2(0, 16.346182)
 shape = SubResource("CircleShape2D_yfmg0")
 
 [node name="SceneEnder" parent="." index="1" unique_id=1221118698]
+position = Vector2(308, 351)
 next_scene = "uid://da1f6ve0kmn66"
 
 [node name="PathTo" parent="." index="2" unique_id=1272328632]
 curve = SubResource("Curve2D_pfjp3")
-
-[node name="Camera2D" parent="PathTo/PathFollowTo/Zlata" parent_id_path=PackedInt32Array(700974070) index="2" unique_id=1600606219]
-offset = Vector2(0, 0)
-zoom = Vector2(2, 2)
 
 [node name="PathBack" parent="." index="3" unique_id=2085482473]
 curve = SubResource("Curve2D_p5lly")
@@ -585,128 +580,171 @@ curve = SubResource("Curve2D_p5lly")
 [node name="PathFollowBack" parent="PathBack" index="0" unique_id=1957864083]
 position = Vector2(5192, 914)
 
-[node name="Puzzle1" type="Node2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="1" unique_id=273347506]
+[node name="PuzzleLullaby" type="Node2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="1" unique_id=273347506]
 position = Vector2(859, 0)
 
-[node name="PuzzleSpawner" type="Node" parent="WayTo/Puzzle1" index="0" unique_id=1053797870 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="WayTo/PuzzleLullaby" index="0" unique_id=1053797870 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("2_hd8xs")
 puzzle = NodePath("../DragDropPuzzle5")
 spawn_trigger = NodePath("../../../PathTo/PathFollowTo/Zlata/ZlataClickable")
 obstacle = NodePath("../Obstacle")
 
-[node name="Obstacle" parent="WayTo/Puzzle1" index="1" unique_id=310843140 instance=ExtResource("3_052ky")]
+[node name="Obstacle" parent="WayTo/PuzzleLullaby" index="1" unique_id=310843140 instance=ExtResource("3_052ky")]
 collision_mask = 2
 
-[node name="DragDropPuzzle5" parent="WayTo/Puzzle1" index="2" unique_id=1767003607 instance=ExtResource("2_80rf8")]
-position = Vector2(210, 280)
+[node name="DragDropPuzzle5" parent="WayTo/PuzzleLullaby" index="2" unique_id=1767003607 instance=ExtResource("2_80rf8")]
+position = Vector2(42, 435)
+scale = Vector2(0.46, 0.46)
 
-[node name="DragDropPuzzle" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="1" unique_id=727084058 instance=ExtResource("3_t5rg3")]
-position = Vector2(3745, 490)
+[node name="PuzzleStreet" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="1" unique_id=201431427]
+position = Vector2(3956, 0)
 
-[node name="DragDropPuzzle9" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="2" unique_id=832401624 instance=ExtResource("4_4mioc")]
-position = Vector2(959, 883)
-
-[node name="Puzzle1" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="3" unique_id=1941159865 instance=ExtResource("5_rj8de")]
-position = Vector2(1098, -200)
-
-[node name="Puzzle2" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="4" unique_id=657414073]
-position = Vector2(859, 0)
-
-[node name="PuzzleSpawner" type="Node" parent="WayBack/Puzzle2" index="0" unique_id=1682397855 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleStreet" index="0" unique_id=957423747 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("2_hd8xs")
 puzzle = NodePath("../DragDropPuzzle")
 spawn_trigger = NodePath("../Clickable")
 obstacle = NodePath("../Obstacle")
 
-[node name="Obstacle" parent="WayBack/Puzzle2" index="1" unique_id=846932295 instance=ExtResource("3_052ky")]
+[node name="Obstacle" parent="WayBack/PuzzleStreet" index="1" unique_id=426308280 instance=ExtResource("3_052ky")]
 collision_mask = 2
 script = ExtResource("8_yk8n7")
 
-[node name="Clickable" type="Area2D" parent="WayBack/Puzzle2" index="2" unique_id=557288057]
-position = Vector2(726, 726)
+[node name="Clickable" type="Area2D" parent="WayBack/PuzzleStreet" index="2" unique_id=457714455]
+position = Vector2(-265, 808.00006)
+scale = Vector2(0.65, 0.65)
 script = ExtResource("4_80rf8")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
-[node name="Npc2" type="AnimatedSprite2D" parent="WayBack/Puzzle2/Clickable" index="0" unique_id=1868518976]
+[node name="Npc2" type="AnimatedSprite2D" parent="WayBack/PuzzleStreet/Clickable" index="0" unique_id=1704780558]
 position = Vector2(0, 70)
-scale = Vector2(2.27, 2.27)
 sprite_frames = SubResource("SpriteFrames_7ftg5")
 autoplay = "default"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WayBack/Puzzle2/Clickable" index="1" unique_id=864410770]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WayBack/PuzzleStreet/Clickable" index="1" unique_id=1234672855]
 shape = SubResource("CircleShape2D_jrbug")
 
-[node name="DragDropPuzzle" parent="WayBack/Puzzle2" index="3" unique_id=809533061 instance=ExtResource("125_ot5ko")]
-position = Vector2(462, 333)
+[node name="DragDropPuzzle" parent="WayBack/PuzzleStreet" index="3" unique_id=727084058 instance=ExtResource("3_t5rg3")]
+position = Vector2(-211, 615)
+scale = Vector2(0.4, 0.4)
 
-[node name="Puzzle1" type="Node2D" parent="." index="6" unique_id=1858996224]
-position = Vector2(4747, 1392)
+[node name="PuzzleStreet2" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="2" unique_id=657414073]
+position = Vector2(2110, 0)
 
-[node name="PuzzleSpawner" type="Node" parent="Puzzle1" index="0" unique_id=2006028759 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleStreet2" index="0" unique_id=1682397855 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("2_hd8xs")
 puzzle = NodePath("../DragDropPuzzle")
 spawn_trigger = NodePath("../Clickable")
 obstacle = NodePath("../Obstacle")
 
-[node name="Obstacle" parent="Puzzle1" index="1" unique_id=2138126350 instance=ExtResource("3_052ky")]
+[node name="Obstacle" parent="WayBack/PuzzleStreet2" index="1" unique_id=846932295 instance=ExtResource("3_052ky")]
 collision_mask = 2
+script = ExtResource("8_yk8n7")
 
-[node name="Clickable" type="Area2D" parent="Puzzle1" index="2" unique_id=1290565709]
-position = Vector2(726, 726)
+[node name="Clickable" type="Area2D" parent="WayBack/PuzzleStreet2" index="2" unique_id=557288057]
+position = Vector2(-265, 808.00006)
+scale = Vector2(0.65, 0.65)
 script = ExtResource("4_80rf8")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
-[node name="Npc2" type="AnimatedSprite2D" parent="Puzzle1/Clickable" index="0" unique_id=1653991808]
+[node name="Npc2" type="AnimatedSprite2D" parent="WayBack/PuzzleStreet2/Clickable" index="0" unique_id=1868518976]
 position = Vector2(0, 70)
-scale = Vector2(2.27, 2.27)
 sprite_frames = SubResource("SpriteFrames_7ftg5")
 autoplay = "default"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle1/Clickable" index="1" unique_id=713366460]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WayBack/PuzzleStreet2/Clickable" index="1" unique_id=864410770]
 shape = SubResource("CircleShape2D_jrbug")
 
-[node name="DragDropPuzzle" parent="Puzzle1" index="3" unique_id=1001159731 instance=ExtResource("125_ot5ko")]
-position = Vector2(462, 333)
+[node name="DragDropPuzzle" parent="WayBack/PuzzleStreet2" index="3" unique_id=809533061 instance=ExtResource("125_ot5ko")]
+position = Vector2(-121, 703)
+scale = Vector2(0.3, 0.3)
 
-[node name="Puzzle2" type="Node2D" parent="." index="7" unique_id=1919502929]
+[node name="PuzzleThinkHome" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="3" unique_id=1304675676]
+position = Vector2(877, 0)
+
+[node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleThinkHome" index="0" unique_id=206345537 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
+script = ExtResource("2_hd8xs")
+puzzle = NodePath("../Puzzle1")
+spawn_trigger = NodePath("../../../PathTo/PathFollowTo/Zlata/ZlataClickable")
+obstacle = NodePath("../Obstacle")
+
+[node name="Obstacle" parent="WayBack/PuzzleThinkHome" index="1" unique_id=114095440 instance=ExtResource("3_052ky")]
+collision_mask = 2
+script = ExtResource("8_yk8n7")
+
+[node name="Puzzle1" parent="WayBack/PuzzleThinkHome" index="2" unique_id=1941159865 instance=ExtResource("5_rj8de")]
+position = Vector2(103, 524)
+scale = Vector2(0.31, 0.31)
+
+[node name="PuzzleSocialWorker" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="4" unique_id=1734062459]
+position = Vector2(1070, 0)
+
+[node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleSocialWorker" index="0" unique_id=68113819 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
+script = ExtResource("2_hd8xs")
+puzzle = NodePath("../DragDropPuzzle9")
+spawn_trigger = NodePath("../Clickable")
+obstacle = NodePath("../Obstacle")
+
+[node name="Obstacle" parent="WayBack/PuzzleSocialWorker" index="1" unique_id=19940888 instance=ExtResource("3_052ky")]
+collision_mask = 2
+script = ExtResource("8_yk8n7")
+
+[node name="Clickable" type="Area2D" parent="WayBack/PuzzleSocialWorker" index="2" unique_id=481723646]
+position = Vector2(-149, 831.00006)
+scale = Vector2(0.65, 0.65)
+script = ExtResource("4_80rf8")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="Npc2" type="AnimatedSprite2D" parent="WayBack/PuzzleSocialWorker/Clickable" index="0" unique_id=1526407663]
+position = Vector2(0, 70)
+sprite_frames = SubResource("SpriteFrames_7ftg5")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WayBack/PuzzleSocialWorker/Clickable" index="1" unique_id=1802513695]
+shape = SubResource("CircleShape2D_jrbug")
+
+[node name="DragDropPuzzle9" parent="WayBack/PuzzleSocialWorker" index="3" unique_id=832401624 instance=ExtResource("4_4mioc")]
+position = Vector2(-111, 762)
+scale = Vector2(0.15, 0.15)
+
+[node name="PuzzleStore" type="Node2D" parent="." index="6" unique_id=1919502929]
 position = Vector2(5102, 0)
 
-[node name="PuzzleSpawner" type="Node" parent="Puzzle2" index="0" unique_id=2112111121 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="PuzzleStore" index="0" unique_id=2112111121 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("2_hd8xs")
 puzzle = NodePath("../DragDropPuzzle2")
-spawn_trigger = NodePath("../../Bg2/AreaRevealStore/StoreClickable")
+spawn_trigger = NodePath("../../Bg2/AreaRevealStore/StoreBg/StoreWall/StoreCounter/StoreClickable")
 obstacle = NodePath("../Obstacle")
 
-[node name="Obstacle" parent="Puzzle2" index="1" unique_id=379691810 instance=ExtResource("3_052ky")]
+[node name="Obstacle" parent="PuzzleStore" index="1" unique_id=379691810 instance=ExtResource("3_052ky")]
 collision_mask = 2
 script = ExtResource("8_yk8n7")
 
-[node name="DragDropPuzzle2" parent="Puzzle2" index="2" unique_id=1726162827 instance=ExtResource("127_t5rg3")]
+[node name="DragDropPuzzle2" parent="PuzzleStore" index="2" unique_id=1726162827 instance=ExtResource("127_t5rg3")]
 position = Vector2(-36, 489)
 
-[node name="PuzzleCompletePathBack" parent="." index="8" unique_id=1605263297 node_paths=PackedStringArray("puzzle")]
-puzzle = NodePath("../Puzzle2/DragDropPuzzle2")
+[node name="PuzzleCompletePathBack" parent="." index="7" unique_id=1605263297 node_paths=PackedStringArray("puzzle")]
+puzzle = NodePath("../PuzzleStore/DragDropPuzzle2")
 
-[node name="CheckpointController" type="Node" parent="." index="9" unique_id=534646765]
+[node name="CheckpointController" type="Node" parent="." index="8" unique_id=534646765]
 script = ExtResource("131_yk8n7")
 chapter = 2
 comic = 19
 
-[node name="AreaActivateStorePuzzle" type="Area2D" parent="." index="10" unique_id=1163643340 node_paths=PackedStringArray("node_to_enable")]
+[node name="AreaActivateStorePuzzle" type="Area2D" parent="." index="9" unique_id=1163643340 node_paths=PackedStringArray("node_to_enable")]
 position = Vector2(5296, 861)
 collision_layer = 0
 collision_mask = 2
 input_pickable = false
 script = ExtResource("139_p5lly")
-node_to_enable = NodePath("../Puzzle2")
+node_to_enable = NodePath("../PuzzleStore")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaActivateStorePuzzle" index="0" unique_id=1355763298]
 shape = SubResource("CircleShape2D_gjepm")
 
-[node name="Pharmacy" type="Sprite2D" parent="." index="11" unique_id=1490875950]
+[node name="Pharmacy" type="Sprite2D" parent="." index="10" unique_id=1490875950]
 position = Vector2(5969, 1275)
 texture = ExtResource("138_p5lly")
 
-[node name="PharmacyDesk" type="Sprite2D" parent="." index="12" unique_id=779139267]
+[node name="PharmacyDesk" type="Sprite2D" parent="." index="11" unique_id=779139267]
 position = Vector2(6020, 1325)
 texture = ExtResource("139_gjepm")
