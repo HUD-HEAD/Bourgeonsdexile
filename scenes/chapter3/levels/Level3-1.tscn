@@ -772,8 +772,7 @@ position = Vector2(-4853, 0)
 curve = SubResource("Curve2D_5yy0j")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1149074890]
-position = Vector2(-15633.948, 922.08984)
-progress = 16548.977
+position = Vector2(915, 970)
 rotates = false
 loop = false
 
