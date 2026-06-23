@@ -539,6 +539,7 @@ next_scene = "uid://by2x0js73j5ew"
 [node name="Puzzles" type="Node2D" parent="." unique_id=1790939761]
 
 [node name="Puzzle1" type="Node2D" parent="Puzzles" unique_id=443296822]
+position = Vector2(-4454, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle1" unique_id=411815603 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("6_unyww")
@@ -571,7 +572,7 @@ flip_h = true
 shape = SubResource("CircleShape2D_e3xgo")
 
 [node name="Puzzle2" type="Node2D" parent="Puzzles" unique_id=1457672785]
-position = Vector2(-5208, 0)
+position = Vector2(-7340, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle2" unique_id=518109771 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("6_unyww")
@@ -694,6 +695,7 @@ chapter = 2
 comic = 18
 
 [node name="Path2D" type="Path2D" parent="." unique_id=198400780]
+position = Vector2(-4853, 0)
 curve = SubResource("Curve2D_5yy0j")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1149074890]
@@ -747,7 +749,7 @@ texture = ExtResource("138_txdgi")
 centered = false
 
 [node name="Trunk" type="Sprite2D" parent="Front" unique_id=1756743079]
-position = Vector2(-4287, 0)
+position = Vector2(-11455, 0)
 texture = ExtResource("139_s5lj1")
 centered = false
 
