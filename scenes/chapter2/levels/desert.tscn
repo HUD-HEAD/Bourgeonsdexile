@@ -585,10 +585,10 @@ texture = ExtResource("54_owsko")
 [node name="PuzzleZoom" type="Node" parent="Puzzles/PuzzleWindowBus" unique_id=2034404489 node_paths=PackedStringArray("puzzle_spawner")]
 script = ExtResource("59_fabr7")
 puzzle_spawner = NodePath("../PuzzleSpawner")
-zoom_in = Vector2(1, 1)
+zoom_in = Vector2(3, 3)
 
 [node name="Bus" parent="." unique_id=1136971117 node_paths=PackedStringArray("desert_controller", "moving_loop", "stop_loop", "people_loop") instance=ExtResource("25_iym2s")]
-position = Vector2(1168, 883)
+position = Vector2(1168, 811)
 desert_controller = NodePath("../DesertController")
 delay_on_stop = 0.5
 moving_loop = NodePath("../AudioContainer/Bus_moving_loop")
