@@ -139,6 +139,12 @@
 [ext_resource type="Texture2D" uid="uid://brud4c52y2pg0" path="res://graphics/chapter3/levels/hospital/traffic_light.png" id="138_txdgi"]
 [ext_resource type="Texture2D" uid="uid://bsqjs3i3voljp" path="res://graphics/chapter3/levels/hospital/trunk.png" id="139_s5lj1"]
 [ext_resource type="Texture2D" uid="uid://bglybld6pys4n" path="res://graphics/chapter3/levels/hospital/columns.png" id="140_fbeob"]
+[ext_resource type="Texture2D" uid="uid://dop5ocoj2o2et" path="res://graphics/chapter3/levels/hospital/bus.png" id="140_hthai"]
+[ext_resource type="Script" uid="uid://bn0sxcor0g10k" path="res://components/utils/mechanics/area_trigger_anim.gd" id="140_v81oq"]
+[ext_resource type="Script" uid="uid://bwhw2o2u7v43i" path="res://components/utils/comics/vertical_sine_anim.gd" id="144_b1c3r"]
+[ext_resource type="Texture2D" uid="uid://b2ipjbn25qct0" path="res://graphics/chapter2/levels/desert/separatedbus/wheel1.png" id="145_lbea3"]
+[ext_resource type="Script" uid="uid://cvlenn1q1qyrk" path="res://components/chapter2/characters/rotator.gd" id="146_ibvau"]
+[ext_resource type="Texture2D" uid="uid://cq4oebmiej7bw" path="res://graphics/chapter2/levels/desert/separatedbus/wheel2.png" id="147_vter2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b5cmm"]
 animations = [{
@@ -513,12 +519,63 @@ radius = 197.12433
 
 [sub_resource type="Curve2D" id="Curve2D_5yy0j"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 915, 970, 0, 0, 0, 0, -21090, 950)
+"points": PackedVector2Array(0, 0, 0, 0, 915, 970, 0, 0, 0, 0, -15665, 922, 0, 0, 0, 0, -17163, 764)
 }
-point_count = 2
+point_count = 3
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g24i2"]
 radius = 100.42
+
+[sub_resource type="Animation" id="Animation_fbeob"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bus:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [-23604.0]
+}
+
+[sub_resource type="Animation" id="Animation_x0jwe"]
+resource_name = "default"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bus:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-23604.0, -21543.0]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SceneEnder")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(4.9666667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_on_screen_entered"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lue18"]
+_data = {
+&"RESET": SubResource("Animation_fbeob"),
+&"default": SubResource("Animation_x0jwe")
+}
 
 [node name="Level31" type="Node2D" unique_id=2125939091]
 
@@ -532,9 +589,9 @@ position = Vector2(8176, 876)
 texture = ExtResource("136_44fmv")
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1294251435]
-position = Vector2(-21862, 596)
+position = Vector2(-23998, 596)
 script = ExtResource("3_q0nn3")
-next_scene = "uid://by2x0js73j5ew"
+next_scene = "uid://db8rj5e11n41j"
 
 [node name="Puzzles" type="Node2D" parent="." unique_id=1790939761]
 
@@ -757,6 +814,36 @@ centered = false
 position = Vector2(-7550, 0)
 texture = ExtResource("140_fbeob")
 centered = false
+
+[node name="ObstacleBusTrigger" parent="." unique_id=964497252 node_paths=PackedStringArray("anim_player") instance=ExtResource("7_q7f5r")]
+position = Vector2(-21078, 1)
+collision_mask = 2
+script = ExtResource("140_v81oq")
+anim_player = NodePath("../BusTransition")
+
+[node name="Bus" type="Sprite2D" parent="." unique_id=1589932159]
+position = Vector2(-23604, 601)
+texture = ExtResource("140_hthai")
+script = ExtResource("144_b1c3r")
+amplitude = 20.0
+speed = 5.0
+
+[node name="Wheel1" type="Sprite2D" parent="Bus" unique_id=1321947491]
+self_modulate = Color(0.41368303, 0.4136831, 0.41368303, 1)
+position = Vector2(-488, 239)
+scale = Vector2(1.57, 1.57)
+texture = ExtResource("145_lbea3")
+script = ExtResource("146_ibvau")
+
+[node name="Wheel2" type="Sprite2D" parent="Bus" unique_id=1030157116]
+self_modulate = Color(0.41368303, 0.4136831, 0.41368303, 1)
+position = Vector2(372, 258)
+scale = Vector2(1.57, 1.57)
+texture = ExtResource("147_vter2")
+script = ExtResource("146_ibvau")
+
+[node name="BusTransition" type="AnimationPlayer" parent="." unique_id=1461867753]
+libraries/ = SubResource("AnimationLibrary_lue18")
 
 [editable path="Puzzles/Puzzle1/DragDropPuzzle"]
 [editable path="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece"]
