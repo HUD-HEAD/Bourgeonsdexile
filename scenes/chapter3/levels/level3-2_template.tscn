@@ -151,9 +151,9 @@ path_follow = NodePath("..")
 position = Vector2(0, -233)
 offset = Vector2(250, 0)
 zoom = Vector2(2, 2)
-limit_left = 125
+limit_left = 250
 limit_top = 0
-limit_right = 5724
+limit_right = 5600
 limit_bottom = 1080
 
 [node name="ZlataClickable" type="Area2D" parent="PathTo/PathFollowTo/Zlata" unique_id=1803429541]

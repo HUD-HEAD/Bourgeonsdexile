@@ -138,7 +138,6 @@
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="131_yk8n7"]
 [ext_resource type="Script" uid="uid://4x7opfu2wab4" path="res://components/utils/puzzles/puzzle_complete_trigger_anim.gd" id="134_gjepm"]
 [ext_resource type="Script" uid="uid://bn0sxcor0g10k" path="res://components/utils/mechanics/area_trigger_anim.gd" id="137_gjepm"]
-[ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="139_p5lly"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18lw1"]
 size = Vector2(501, 165)
@@ -640,20 +639,7 @@ _data = {
 
 [node name="Level31" unique_id=2125939091 instance=ExtResource("1_aicyn")]
 
-[node name="PaperBackground2" type="TextureRect" parent="Bg2" parent_id_path=PackedInt32Array(1307761575) index="3" unique_id=355046567]
-visible = false
-self_modulate = Color(0.29803923, 0.29803923, 0.4117647, 1)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 6.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-texture = ExtResource("139_p5lly")
-stretch_mode = 1
-
-[node name="AreaRevealStore" type="Area2D" parent="Bg2" parent_id_path=PackedInt32Array(1307761575) index="4" unique_id=934030736 node_paths=PackedStringArray("nodes_to_reveal")]
+[node name="AreaRevealStore" type="Area2D" parent="Bg2" parent_id_path=PackedInt32Array(1307761575) index="3" unique_id=934030736 node_paths=PackedStringArray("nodes_to_reveal")]
 position = Vector2(5124, 835)
 collision_layer = 0
 collision_mask = 2
@@ -692,10 +678,6 @@ next_scene = "uid://da1f6ve0kmn66"
 
 [node name="PathTo" parent="." index="2" unique_id=1272328632]
 curve = SubResource("Curve2D_pfjp3")
-
-[node name="Camera2D" parent="PathTo/PathFollowTo/Zlata" parent_id_path=PackedInt32Array(700974070) index="2" unique_id=1600606219]
-limit_left = 250
-limit_right = 5599
 
 [node name="PathBack" parent="." index="3" unique_id=2085482473]
 curve = SubResource("Curve2D_p5lly")
@@ -848,6 +830,7 @@ collision_mask = 2
 script = ExtResource("8_yk8n7")
 
 [node name="DragDropPuzzle2" parent="PuzzleStore" index="2" unique_id=1726162827 instance=ExtResource("127_t5rg3")]
+z_index = 1
 position = Vector2(-36, 632)
 scale = Vector2(0.575, 0.575)
 
