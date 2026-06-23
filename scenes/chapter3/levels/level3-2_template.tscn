@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://3qfrahv5xlyg" path="res://graphics/chapter3/levels/bigavenue/building/social_desk/hall_table.png" id="5_ovumn"]
 [ext_resource type="Texture2D" uid="uid://1rrpcsdgsv8b" path="res://graphics/chapter3/levels/bigavenue/building/reels.png" id="6_ovumn"]
 [ext_resource type="Texture2D" uid="uid://jliii8605sec" path="res://graphics/chapter3/levels/bigavenue/background.png" id="7_ttgo8"]
-[ext_resource type="Texture2D" uid="uid://d2kpc1bbjayup" path="res://graphics/chapter3/levels/bigavenue/mockup_changes.png" id="8_7ktf0"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="9_q7qsp"]
 [ext_resource type="PackedScene" uid="uid://dy84a73ucflwu" path="res://components/chapter3/main_characters/zlata.tscn" id="10_v6c5n"]
 [ext_resource type="Script" uid="uid://crcrgrn18h2m6" path="res://components/utils/mechanics/face_path.gd" id="11_4tgbk"]
@@ -105,31 +104,6 @@ texture = ExtResource("6_ovumn")
 position = Vector2(0, 137)
 texture = ExtResource("6_ovumn")
 
-[node name="OnTop" type="Node2D" parent="Bg2" unique_id=879371620]
-visible = false
-z_index = 1
-position = Vector2(0, -1732)
-scale = Vector2(2.601852, 2.601852)
-
-[node name="Building" type="Sprite2D" parent="Bg2/OnTop" unique_id=446403469]
-position = Vector2(320.92526, 892.0569)
-scale = Vector2(0.38434163, 0.38434163)
-texture = ExtResource("5_1dsc3")
-
-[node name="Squares" type="Sprite2D" parent="Bg2/OnTop/Building" unique_id=251764111]
-position = Vector2(423, 22)
-texture = ExtResource("4_yfmg0")
-
-[node name="Reels" type="Sprite2D" parent="Bg2/OnTop/Building" unique_id=177189604]
-position = Vector2(2, 59)
-texture = ExtResource("6_ovumn")
-
-[node name="MockupChanges" type="Sprite2D" parent="Bg2" unique_id=816831268]
-visible = false
-scale = Vector2(0.35, 0.35)
-texture = ExtResource("8_7ktf0")
-centered = false
-
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1221118698]
 position = Vector2(7414, 596)
 script = ExtResource("9_q7qsp")
@@ -144,6 +118,7 @@ rotates = false
 loop = false
 
 [node name="Zlata" parent="PathTo/PathFollowTo" unique_id=700974070 node_paths=PackedStringArray("path_follow") instance=ExtResource("10_v6c5n")]
+z_index = 1
 scale = Vector2(0.4, 0.4)
 path_follow = NodePath("..")
 

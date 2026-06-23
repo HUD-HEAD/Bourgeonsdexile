@@ -545,7 +545,7 @@ tracks/0/keys = {
 }
 tracks/1/type = "value"
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/path = NodePath("PathTo/PathFollowTo/Zlata:z_index")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
@@ -553,7 +553,19 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0]
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AreaSwitchIndex:monitoring")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_gjepm"]
@@ -628,56 +640,90 @@ tracks/1/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_kuwon"]
+resource_name = "zlata_index_0"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AreaSwitchIndex:monitoring")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PathTo/PathFollowTo/Zlata:z_index")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hxlkc"]
 _data = {
 &"RESET": SubResource("Animation_lvjii"),
 &"activate_store": SubResource("Animation_gjepm"),
-&"chapter_transition": SubResource("Animation_p5lly")
+&"chapter_transition": SubResource("Animation_p5lly"),
+&"zlata_index_0": SubResource("Animation_kuwon")
 }
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kuwon"]
+radius = 129.062
 
 [node name="Level31" unique_id=2125939091 instance=ExtResource("1_y0jpi")]
 
-[node name="AreaRevealStore" type="Area2D" parent="Bg2" parent_id_path=PackedInt32Array(1307761575) index="4" unique_id=1943666368 node_paths=PackedStringArray("nodes_to_reveal")]
+[node name="AreaRevealStore" type="Area2D" parent="." index="1" unique_id=1943666368 node_paths=PackedStringArray("nodes_to_reveal")]
 position = Vector2(5124, 835)
 collision_layer = 0
 collision_mask = 2
 input_pickable = false
 script = ExtResource("2_us6en")
-nodes_to_reveal = [NodePath("StoreBg"), NodePath("../PaperBackground")]
+nodes_to_reveal = [NodePath("StoreBg"), NodePath("../Bg2/PaperBackground")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/AreaRevealStore" index="0" unique_id=2132792132]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaRevealStore" index="0" unique_id=2132792132]
 shape = SubResource("RectangleShape2D_dihh7")
 
-[node name="StoreBg" type="Sprite2D" parent="Bg2/AreaRevealStore" index="1" unique_id=1971257647]
+[node name="StoreBg" type="Sprite2D" parent="AreaRevealStore" index="1" unique_id=1971257647]
 texture = ExtResource("3_kuwon")
 
-[node name="StoreWall" type="Sprite2D" parent="Bg2/AreaRevealStore/StoreBg" index="0" unique_id=638449789]
+[node name="StoreWall" type="Sprite2D" parent="AreaRevealStore/StoreBg" index="0" unique_id=638449789]
 z_index = 1
 texture = ExtResource("4_hxlkc")
 
-[node name="StoreCounter" type="Sprite2D" parent="Bg2/AreaRevealStore/StoreBg/StoreWall" index="0" unique_id=198612600]
+[node name="StoreCounter" type="Sprite2D" parent="AreaRevealStore/StoreBg/StoreWall" index="0" unique_id=198612600]
 position = Vector2(0, 44)
 scale = Vector2(0.9999999, 0.9999999)
 texture = ExtResource("5_0gkm7")
 
-[node name="StoreClickable" type="Area2D" parent="Bg2/AreaRevealStore/StoreBg/StoreWall/StoreCounter" index="0" unique_id=425009634]
+[node name="StoreClickable" type="Area2D" parent="AreaRevealStore/StoreBg/StoreWall/StoreCounter" index="0" unique_id=425009634]
 position = Vector2(0, -44)
 scale = Vector2(1.0000001, 1.0000001)
 script = ExtResource("10_ari2e")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/AreaRevealStore/StoreBg/StoreWall/StoreCounter/StoreClickable" index="0" unique_id=1656225356]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaRevealStore/StoreBg/StoreWall/StoreCounter/StoreClickable" index="0" unique_id=1656225356]
 position = Vector2(0, 16.346182)
 shape = SubResource("CircleShape2D_cse6j")
 
-[node name="SceneEnder" parent="." index="1" unique_id=1221118698]
+[node name="SceneEnder" parent="." index="2" unique_id=1221118698]
 next_scene = "uid://d4cccbwuwp1rh"
 metadata/_edit_pinned_properties_ = [&"next_scene"]
 
-[node name="PathTo" parent="." index="2" unique_id=1272328632]
+[node name="PathTo" parent="." index="3" unique_id=1272328632]
 curve = SubResource("Curve2D_eeffk")
 
-[node name="PathBack" parent="." index="3" unique_id=2085482473]
+[node name="Zlata" parent="PathTo/PathFollowTo" parent_id_path=PackedInt32Array(666369972) index="0" unique_id=700974070]
+z_index = 1
+
+[node name="PathBack" parent="." index="4" unique_id=2085482473]
 curve = SubResource("Curve2D_hts78")
 
 [node name="PathFollowBack" parent="PathBack" index="0" unique_id=1957864083]
@@ -779,11 +825,11 @@ script = ExtResource("9_f1pwt")
 position = Vector2(118, 554)
 scale = Vector2(0.395, 0.395)
 
-[node name="PuzzleCompletePathBack" parent="." index="6" unique_id=1605263297 node_paths=PackedStringArray("puzzle")]
+[node name="PuzzleCompletePathBack" parent="." index="7" unique_id=1605263297 node_paths=PackedStringArray("puzzle")]
 puzzle = NodePath("../PuzzleStore/DragDropPuzzle8")
 adjust_camera = false
 
-[node name="PuzzleStore" type="Node2D" parent="." index="7" unique_id=1817000249]
+[node name="PuzzleStore" type="Node2D" parent="." index="8" unique_id=1817000249]
 visible = false
 z_index = 1
 position = Vector2(5197, 0)
@@ -791,7 +837,7 @@ position = Vector2(5197, 0)
 [node name="PuzzleSpawner" type="Node" parent="PuzzleStore" index="0" unique_id=312219525 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("7_eeffk")
 puzzle = NodePath("../DragDropPuzzle8")
-spawn_trigger = NodePath("../../Bg2/AreaRevealStore/StoreBg/StoreWall/StoreCounter/StoreClickable")
+spawn_trigger = NodePath("../../AreaRevealStore/StoreBg/StoreWall/StoreCounter/StoreClickable")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="PuzzleStore" index="1" unique_id=1937492105 instance=ExtResource("8_hts78")]
@@ -802,7 +848,7 @@ script = ExtResource("9_f1pwt")
 position = Vector2(16, 727)
 scale = Vector2(0.335, 0.335)
 
-[node name="AreaActivateStorePuzzle" type="Area2D" parent="." index="8" unique_id=648755334 node_paths=PackedStringArray("anim_player")]
+[node name="AreaActivateStorePuzzle" type="Area2D" parent="." index="9" unique_id=648755334 node_paths=PackedStringArray("anim_player")]
 position = Vector2(5296, 861)
 collision_layer = 0
 collision_mask = 2
@@ -814,11 +860,23 @@ anim_name = "activate_store"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaActivateStorePuzzle" index="0" unique_id=153407973]
 shape = SubResource("CircleShape2D_f1pwt")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="9" unique_id=1060419534]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="10" unique_id=1060419534]
 libraries/ = SubResource("AnimationLibrary_hxlkc")
 
-[node name="TriggerAnim" type="Node" parent="AnimationPlayer" index="0" unique_id=329006578 node_paths=PackedStringArray("puzzle", "anim_player")]
+[node name="PuzzleTriggerAnim" type="Node" parent="AnimationPlayer" index="0" unique_id=329006578 node_paths=PackedStringArray("puzzle", "anim_player")]
 script = ExtResource("136_kuwon")
 puzzle = NodePath("../../WayBack/PuzzleThinkHome/Puzzle3")
 anim_player = NodePath("..")
 anim_name = "chapter_transition"
+
+[node name="AreaSwitchIndex" type="Area2D" parent="." index="11" unique_id=35093189 node_paths=PackedStringArray("anim_player")]
+position = Vector2(4871, 858)
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+script = ExtResource("131_hts78")
+anim_player = NodePath("../AnimationPlayer")
+anim_name = "zlata_index_0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaSwitchIndex" index="0" unique_id=1051585021]
+shape = SubResource("CircleShape2D_kuwon")
