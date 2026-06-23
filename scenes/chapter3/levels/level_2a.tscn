@@ -575,6 +575,10 @@ next_scene = "uid://da1f6ve0kmn66"
 [node name="PathTo" parent="." index="2" unique_id=1272328632]
 curve = SubResource("Curve2D_pfjp3")
 
+[node name="Camera2D" parent="PathTo/PathFollowTo/Zlata" parent_id_path=PackedInt32Array(700974070) index="2" unique_id=1600606219]
+offset = Vector2(0, 0)
+zoom = Vector2(2, 2)
+
 [node name="PathBack" parent="." index="3" unique_id=2085482473]
 curve = SubResource("Curve2D_p5lly")
 

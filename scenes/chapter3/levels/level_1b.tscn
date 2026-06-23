@@ -130,7 +130,7 @@
 
 [sub_resource type="Curve2D" id="Curve2D_phulo"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1989, 841, 0, 0, 0, 0, 1859, 845, 0, 0, 0, 0, 1710, 937, 0, 0, 0, 0, 1221, 945, 0, 0, 0, 0, 1288, 836, 0, 0, 0, 0, 1210, 793, 0, 0, 0, 0, 1299, 699, 0, 0, 0, 0, 1214, 673, 0, 0, 0, 0, 820, 673)
+"points": PackedVector2Array(0, 0, 0, 0, 2150, 839, 0, 0, 0, 0, 1859, 845, 0, 0, 0, 0, 1710, 937, 0, 0, 0, 0, 1221, 945, 0, 0, 0, 0, 1288, 836, 0, 0, 0, 0, 1210, 793, 0, 0, 0, 0, 1299, 699, 0, 0, 0, 0, 1214, 673, 0, 0, 0, 0, 820, 673)
 }
 point_count = 9
 
@@ -507,18 +507,18 @@ radius = 197.12433
 
 [node name="Level31" unique_id=2125939091 instance=ExtResource("1_atmgq")]
 
-[node name="MockupChanges" parent="Bg2" parent_id_path=PackedInt32Array(1307761575) index="4" unique_id=816831268]
+[node name="MockupChanges" parent="Bg2" parent_id_path=PackedInt32Array(1307761575) index="2" unique_id=816831268]
 visible = false
 
 [node name="SceneEnder" parent="." index="1" unique_id=1221118698]
-position = Vector2(958, 922)
+position = Vector2(1222, 871)
 next_scene = "uid://by2x0js73j5ew"
 
 [node name="PathTo" parent="." index="2" unique_id=1272328632]
 curve = SubResource("Curve2D_phulo")
 
 [node name="PathFollowTo" parent="PathTo" index="0" unique_id=666369972]
-position = Vector2(1989, 841)
+position = Vector2(2150, 839)
 
 [node name="Zlata" parent="PathTo/PathFollowTo" index="0" unique_id=700974070]
 z_index = 1
@@ -526,12 +526,17 @@ z_index = 1
 [node name="AnimSprite" parent="PathTo/PathFollowTo/Zlata" index="0" unique_id=689873547]
 sprite_frames = ExtResource("2_phulo")
 
+[node name="Camera2D" parent="PathTo/PathFollowTo/Zlata" index="2" unique_id=1600606219]
+position = Vector2(0, -212)
+offset = Vector2(0, 0)
+zoom = Vector2(3.36, 3.36)
+
 [node name="PathBack" parent="." index="3" unique_id=2085482473]
 curve = null
 
 [node name="BusFront" type="Sprite2D" parent="." index="4" unique_id=459032295]
 z_index = 1
-position = Vector2(1987, 807)
+position = Vector2(2136, 807)
 scale = Vector2(0.385, 0.385)
 texture = ExtResource("2_fd55t")
 
