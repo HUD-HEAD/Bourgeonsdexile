@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bf4jtrxfhkmon" path="res://components/chapter3/levels/level3.1/drag_drop_puzzle_3.1-3.tscn" id="7_unyww"]
 [ext_resource type="Texture2D" uid="uid://d38pu7t511wt4" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0002.png" id="8_lu7li"]
 [ext_resource type="PackedScene" uid="uid://bquow8shtm7w3" path="res://components/chapter3/levels/level3.1/drag_drop_puzzle_3.1-4.tscn" id="8_q7f5r"]
+[ext_resource type="Texture2D" uid="uid://dvl57mmyxc12m" path="res://graphics/chapter3/levels/bigavenue/husband.png" id="8_x0jwe"]
 [ext_resource type="Texture2D" uid="uid://bx2fsfgwb0g5x" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0003.png" id="9_aebx7"]
 [ext_resource type="PackedScene" uid="uid://ct428xm1r3sew" path="res://components/chapter3/levels/level3.1/thinking_puzzle_3.1-5.tscn" id="9_eurov"]
 [ext_resource type="Script" uid="uid://crcrgrn18h2m6" path="res://components/utils/mechanics/face_path.gd" id="10_3oq03"]
@@ -144,7 +145,11 @@
 [ext_resource type="Script" uid="uid://bwhw2o2u7v43i" path="res://components/utils/comics/vertical_sine_anim.gd" id="144_b1c3r"]
 [ext_resource type="Texture2D" uid="uid://b2ipjbn25qct0" path="res://graphics/chapter2/levels/desert/separatedbus/wheel1.png" id="145_lbea3"]
 [ext_resource type="Script" uid="uid://cvlenn1q1qyrk" path="res://components/chapter2/characters/rotator.gd" id="146_ibvau"]
+[ext_resource type="Texture2D" uid="uid://pa2qkrrisgqj" path="res://graphics/chapter3/levels/hospital/tickets.png" id="147_lue18"]
 [ext_resource type="Texture2D" uid="uid://cq4oebmiej7bw" path="res://graphics/chapter2/levels/desert/separatedbus/wheel2.png" id="147_vter2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e3xgo"]
+radius = 112.00752
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b5cmm"]
 animations = [{
@@ -514,9 +519,6 @@ animations = [{
 "speed": 30.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_e3xgo"]
-radius = 197.12433
-
 [sub_resource type="Curve2D" id="Curve2D_5yy0j"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 915, 970, 0, 0, 0, 0, -15665, 922, 0, 0, 0, 0, -17163, 764)
@@ -640,15 +642,14 @@ scale = Vector2(0.83999026, 0.83999026)
 script = ExtResource("6_g24i2")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
-[node name="Npc" type="AnimatedSprite2D" parent="Puzzles/Puzzle1/ClickableNpc" unique_id=892976051]
-position = Vector2(0, 70)
-scale = Vector2(2.27, 2.27)
-sprite_frames = SubResource("SpriteFrames_b5cmm")
-autoplay = "default"
-flip_h = true
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzles/Puzzle1/ClickableNpc" unique_id=292501732]
+position = Vector2(98.81067, -291.67004)
 shape = SubResource("CircleShape2D_e3xgo")
+
+[node name="Sprite2D" type="Sprite2D" parent="Puzzles/Puzzle1/ClickableNpc" unique_id=2072794844]
+position = Vector2(95.2395, -295.24152)
+scale = Vector2(0.34501216, 0.34501216)
+texture = ExtResource("8_x0jwe")
 
 [node name="Puzzle2" type="Node2D" parent="Puzzles" unique_id=1457672785]
 position = Vector2(-9958, 0)
@@ -709,10 +710,11 @@ spawn_trigger = NodePath("../ClickableNpc")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Puzzles/Puzzle3" unique_id=536151000 instance=ExtResource("7_q7f5r")]
+position = Vector2(-137, 5)
 collision_mask = 2
 
 [node name="DragDropPuzzle3" parent="Puzzles/Puzzle3" unique_id=1283304511 instance=ExtResource("7_unyww")]
-position = Vector2(81, 212)
+position = Vector2(219, 219)
 
 [node name="BuildingBlocks" parent="Puzzles/Puzzle3/DragDropPuzzle3" index="1" unique_id=1654234455]
 z_index = 1
@@ -893,6 +895,10 @@ script = ExtResource("146_ibvau")
 
 [node name="BusTransition" type="AnimationPlayer" parent="." unique_id=1461867753]
 libraries/ = SubResource("AnimationLibrary_lue18")
+
+[node name="Tickets" type="Sprite2D" parent="." unique_id=1340202251]
+position = Vector2(-21602, 753)
+texture = ExtResource("147_lue18")
 
 [editable path="Puzzles/Puzzle1/DragDropPuzzle"]
 [editable path="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece"]
