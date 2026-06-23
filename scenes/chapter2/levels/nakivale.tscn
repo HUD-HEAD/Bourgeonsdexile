@@ -66,6 +66,7 @@
 [ext_resource type="Texture2D" uid="uid://c2xxo5ok547ah" path="res://graphics/background_paperdark.png" id="53_sa0ao"]
 [ext_resource type="Script" uid="uid://qu5hfw1uwm0x" path="res://components/utils/mechanics/area_reveal.gd" id="54_adwnm"]
 [ext_resource type="Script" uid="uid://cwo7l3tuyc7g6" path="res://components/utils/puzzles/puzzle_hide_on_complete.gd" id="60_nm25k"]
+[ext_resource type="Texture2D" uid="uid://dmq8ep724g48y" path="res://graphics/chapter2/levels/nakivale/interior3.png" id="60_ntkgk"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="66_f8hwx"]
 [ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="67_osbl6"]
 [ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="68_7agjy"]
@@ -487,6 +488,7 @@ texture = ExtResource("28_sa0ao")
 position = Vector2(78.27756, 184.22218)
 
 [node name="CompletePuzzle" parent="Puzzles/Puzzle2/DragDropPuzzle2" index="2" unique_id=1933061263]
+visible = true
 position = Vector2(-10.000272, 104.44441)
 
 [node name="HideOnComplete" type="Node" parent="Puzzles/Puzzle2/DragDropPuzzle2" unique_id=2075786087]
@@ -518,6 +520,12 @@ position = Vector2(636, 232)
 
 [node name="PuzzlePiece3" parent="Puzzles/Puzzle3/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1588097281, 1654234455) index="3" unique_id=85319166]
 position = Vector2(464, 340)
+
+[node name="Interior3" type="Sprite2D" parent="Puzzles/Puzzle3/DragDropPuzzle/CompletePuzzle" parent_id_path=PackedInt32Array(1588097281, 1933061263) index="0" unique_id=704013946]
+z_index = -1
+position = Vector2(572.2002, 527.6001)
+scale = Vector2(4, 4)
+texture = ExtResource("60_ntkgk")
 
 [node name="Puzzle4" type="Node2D" parent="Puzzles" unique_id=1867814965]
 position = Vector2(4648, 0)
