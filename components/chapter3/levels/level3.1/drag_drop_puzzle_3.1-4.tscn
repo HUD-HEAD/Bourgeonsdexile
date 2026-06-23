@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://pynpklip7b8n" path="res://graphics/chapter3/levels/CH3_puzzles/4/4_4.png" id="12_dji8x"]
 [ext_resource type="Texture2D" uid="uid://byyveh6otd55m" path="res://graphics/chapter3/levels/CH3_puzzles/4/5_4lline.png" id="13_320hl"]
 [ext_resource type="Texture2D" uid="uid://dbr65suwu5475" path="res://graphics/chapter3/levels/CH3_puzzles/4/5_4.png" id="14_nbkq3"]
+[ext_resource type="Texture2D" uid="uid://dor7qnc00wkmk" path="res://graphics/chapter3/levels/CH3_puzzles/4/full4_complete.png" id="15_0ljkq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4p4vi"]
 size = Vector2(461.61325, 109.19172)
@@ -34,6 +35,7 @@ size = Vector2(227.2663, 398.05292)
 puzzle_pieces = [NodePath("BuildingBlocks/PuzzlePiece"), NodePath("BuildingBlocks/PuzzlePiece2"), NodePath("BuildingBlocks/PuzzlePiece3"), NodePath("BuildingBlocks/PuzzlePiece4"), NodePath("BuildingBlocks/PuzzlePiece5")]
 
 [node name="OutlinePuzzle" parent="." index="0" unique_id=1513168459]
+position = Vector2(0, 34)
 texture = ExtResource("2_m7x7p")
 
 [node name="PuzzlePiece" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="0" unique_id=1667760579]
@@ -146,7 +148,7 @@ shape = SubResource("RectangleShape2D_ow5t7")
 position = Vector2(-260, 58)
 
 [node name="CompletePuzzle" parent="." index="2" unique_id=1933061263]
-texture = ExtResource("2_m7x7p")
+texture = ExtResource("15_0ljkq")
 
 [editable path="BuildingBlocks/PuzzlePiece"]
 [editable path="BuildingBlocks/PuzzlePiece2"]
