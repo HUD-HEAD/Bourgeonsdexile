@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="4_fgowu"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/mechanics/obstacle.tscn" id="5_6mkb4"]
 [ext_resource type="PackedScene" uid="uid://bquow8shtm7w3" path="res://components/chapter3/levels/level3.1/drag_drop_puzzle_3.1-4.tscn" id="6_vqma7"]
+[ext_resource type="Texture2D" uid="uid://dor7qnc00wkmk" path="res://graphics/chapter3/levels/CH3_puzzles/4/full4_complete.png" id="7_6mkb4"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="7_o2xsi"]
 [ext_resource type="Texture2D" uid="uid://cxylr6a40orij" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0001.png" id="8_ujkww"]
 [ext_resource type="Texture2D" uid="uid://d38pu7t511wt4" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0002.png" id="9_u0vif"]
@@ -556,11 +557,48 @@ obstacle = NodePath("../Obstacle")
 collision_mask = 2
 
 [node name="DragDropPuzzle4" parent="Puzzle4" index="2" unique_id=1767003607 instance=ExtResource("6_vqma7")]
-position = Vector2(-11, 587)
-scale = Vector2(0.37, 0.37)
+position = Vector2(-31, 668)
+scale = Vector2(0.21000001, 0.21000001)
+
+[node name="OutlinePuzzle" parent="Puzzle4/DragDropPuzzle4" index="0" unique_id=1513168459]
+position = Vector2(-101.80953, 12.499999)
 
 [node name="BuildingBlocks" parent="Puzzle4/DragDropPuzzle4" index="1" unique_id=1654234455]
 z_index = 1
+
+[node name="PuzzlePiece" parent="Puzzle4/DragDropPuzzle4/BuildingBlocks" index="0" unique_id=1667760579]
+position = Vector2(685.71423, 385.71426)
+
+[node name="Receptacle" parent="Puzzle4/DragDropPuzzle4/BuildingBlocks" index="1" unique_id=1559191435]
+position = Vector2(119.71421, 120.428566)
+
+[node name="PuzzlePiece2" parent="Puzzle4/DragDropPuzzle4/BuildingBlocks" index="2" unique_id=729525704]
+position = Vector2(861.90466, 223.8095)
+
+[node name="Receptacle2" parent="Puzzle4/DragDropPuzzle4/BuildingBlocks" index="3" unique_id=600273107]
+position = Vector2(48.714207, -3.571437)
+
+[node name="PuzzlePiece3" parent="Puzzle4/DragDropPuzzle4/BuildingBlocks" index="4" unique_id=252285571]
+position = Vector2(842.8568, 80.95235)
+
+[node name="Receptacle3" parent="Puzzle4/DragDropPuzzle4/BuildingBlocks" index="5" unique_id=1986111833]
+position = Vector2(-21.285793, -128.57144)
+
+[node name="PuzzlePiece4" parent="Puzzle4/DragDropPuzzle4/BuildingBlocks" index="6" unique_id=1501680743]
+position = Vector2(685.7139, 428.57153)
+
+[node name="Receptacle4" parent="Puzzle4/DragDropPuzzle4/BuildingBlocks" index="7" unique_id=2015453966]
+position = Vector2(-514.28577, -82.57144)
+
+[node name="PuzzlePiece5" parent="Puzzle4/DragDropPuzzle4/BuildingBlocks" index="8" unique_id=1022298336]
+position = Vector2(847.6188, -171.42851)
+
+[node name="Receptacle5" parent="Puzzle4/DragDropPuzzle4/BuildingBlocks" index="9" unique_id=1014273587]
+position = Vector2(-361.2858, 40.428562)
+
+[node name="CompletePuzzle" parent="Puzzle4/DragDropPuzzle4" index="2" unique_id=1933061263]
+position = Vector2(-95.23809, -9.523809)
+texture = ExtResource("7_6mkb4")
 
 [node name="ClickableNpc" type="Area2D" parent="Puzzle4" index="3" unique_id=2122546920]
 position = Vector2(-90, 797)
