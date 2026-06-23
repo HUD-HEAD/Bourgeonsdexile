@@ -137,9 +137,8 @@
 [ext_resource type="PackedScene" uid="uid://buwei6igqkc44" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-4.tscn" id="127_t5rg3"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="131_yk8n7"]
 [ext_resource type="Script" uid="uid://4x7opfu2wab4" path="res://components/utils/puzzles/puzzle_complete_trigger_anim.gd" id="134_gjepm"]
-[ext_resource type="Texture2D" uid="uid://ba7dtg40d3qda" path="res://graphics/chapter3/levels/bigavenue/pharmacy/pharmacy.png" id="138_p5lly"]
-[ext_resource type="Texture2D" uid="uid://dvs07tq3jucx8" path="res://graphics/chapter3/levels/bigavenue/pharmacy/pharmacy_desk.png" id="139_gjepm"]
-[ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/mechanics/area_entered_enable.gd" id="139_p5lly"]
+[ext_resource type="Script" uid="uid://bn0sxcor0g10k" path="res://components/utils/mechanics/area_trigger_anim.gd" id="137_gjepm"]
+[ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="139_p5lly"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18lw1"]
 size = Vector2(501, 165)
@@ -149,15 +148,15 @@ radius = 100.42
 
 [sub_resource type="Curve2D" id="Curve2D_pfjp3"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 821, 674, 0, 0, 0, 0, 1298, 671, 0, 0, 0, 0, 1219, 804, 0, 0, 0, 0, 1293, 916, 0, 0, 0, 0, 4728, 938, 0, 0, 0, 0, 4885, 915, 0, 0, 0, 0, 5312, 912, 0, 0, 0, 0, 4708, 921)
+"points": PackedVector2Array(0, 0, 0, 0, 821, 674, 0, 0, 0, 0, 1298, 671, 0, 0, 0, 0, 1219, 804, 0, 0, 0, 0, 1307, 803, 0, 0, 0, 0, 1212, 922, 0, 0, 0, 0, 3481, 958, 0, 0, 0, 0, 4728, 938, 0, 0, 0, 0, 4885, 915, 0, 0, 0, 0, 5312, 912, 0, 0, 0, 0, 4708, 921)
 }
-point_count = 8
+point_count = 10
 
 [sub_resource type="Curve2D" id="Curve2D_p5lly"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 5192, 914, 0, 0, 0, 0, 4879, 916, 0, 0, 0, 0, 4727, 939, 0, 0, 0, 0, 1034, 917, 0, 0, 0, 0, 1296, 917, 0, 0, 0, 0, 1220, 802, 0, 0, 0, 0, 1296, 669, 0, 0, 0, 0, 787, 673)
+"points": PackedVector2Array(0, 0, 0, 0, 5192, 914, 0, 0, 0, 0, 4879, 916, 0, 0, 0, 0, 4727, 939, 0, 0, 0, 0, 3480, 959, 0, 0, 0, 0, 1034, 917, 0, 0, 0, 0, 1217, 920, 0, 0, 0, 0, 1307, 803, 0, 0, 0, 0, 1220, 802, 0, 0, 0, 0, 1296, 669, 0, 0, 0, 0, 787, 673)
 }
-point_count = 8
+point_count = 10
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7ftg5"]
 animations = [{
@@ -533,8 +532,76 @@ radius = 96.62815
 [sub_resource type="CircleShape2D" id="CircleShape2D_gjepm"]
 radius = 48.04165
 
+[sub_resource type="Animation" id="Animation_lvjii"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PuzzleStore:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PathTo/PathFollowTo/Zlata:z_index")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_gjepm"]
+resource_name = "activate_store"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PuzzleStore:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PathTo/PathFollowTo/Zlata:z_index")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PuzzleCompletePathBack")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_adjust_camera"
+}]
+}
+
 [sub_resource type="Animation" id="Animation_p5lly"]
-resource_name = "default"
+resource_name = "chapter_transition"
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -566,18 +633,33 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gjepm"]
 _data = {
-&"default": SubResource("Animation_p5lly")
+&"RESET": SubResource("Animation_lvjii"),
+&"activate_store": SubResource("Animation_gjepm"),
+&"chapter_transition": SubResource("Animation_p5lly")
 }
 
 [node name="Level31" unique_id=2125939091 instance=ExtResource("1_aicyn")]
 
-[node name="AreaRevealStore" type="Area2D" parent="Bg2" parent_id_path=PackedInt32Array(1307761575) index="3" unique_id=934030736 node_paths=PackedStringArray("nodes_to_reveal")]
+[node name="PaperBackground2" type="TextureRect" parent="Bg2" parent_id_path=PackedInt32Array(1307761575) index="3" unique_id=355046567]
+visible = false
+self_modulate = Color(0.29803923, 0.29803923, 0.4117647, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("139_p5lly")
+stretch_mode = 1
+
+[node name="AreaRevealStore" type="Area2D" parent="Bg2" parent_id_path=PackedInt32Array(1307761575) index="4" unique_id=934030736 node_paths=PackedStringArray("nodes_to_reveal")]
 position = Vector2(5124, 835)
 collision_layer = 0
 collision_mask = 2
 input_pickable = false
 script = ExtResource("7_18lw1")
-nodes_to_reveal = [NodePath("StoreBg")]
+nodes_to_reveal = [NodePath("StoreBg"), NodePath("../PaperBackground")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/AreaRevealStore" index="0" unique_id=1859284361]
 shape = SubResource("RectangleShape2D_18lw1")
@@ -611,6 +693,10 @@ next_scene = "uid://da1f6ve0kmn66"
 [node name="PathTo" parent="." index="2" unique_id=1272328632]
 curve = SubResource("Curve2D_pfjp3")
 
+[node name="Camera2D" parent="PathTo/PathFollowTo/Zlata" parent_id_path=PackedInt32Array(700974070) index="2" unique_id=1600606219]
+limit_left = 250
+limit_right = 5599
+
 [node name="PathBack" parent="." index="3" unique_id=2085482473]
 curve = SubResource("Curve2D_p5lly")
 
@@ -632,6 +718,9 @@ collision_mask = 2
 [node name="DragDropPuzzle5" parent="WayTo/PuzzleLullaby" index="2" unique_id=1767003607 instance=ExtResource("2_80rf8")]
 position = Vector2(42, 435)
 scale = Vector2(0.46, 0.46)
+
+[node name="Sprite2D2" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="0" unique_id=2143200380]
+visible = false
 
 [node name="PuzzleStreet" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="1" unique_id=201431427]
 position = Vector2(3956, 0)
@@ -744,6 +833,7 @@ position = Vector2(-111, 762)
 scale = Vector2(0.15, 0.15)
 
 [node name="PuzzleStore" type="Node2D" parent="." index="6" unique_id=1919502929]
+visible = false
 position = Vector2(5102, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="PuzzleStore" index="0" unique_id=2112111121 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
@@ -753,43 +843,40 @@ spawn_trigger = NodePath("../../Bg2/AreaRevealStore/StoreBg/StoreWall/StoreCount
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="PuzzleStore" index="1" unique_id=379691810 instance=ExtResource("3_052ky")]
+position = Vector2(84, 0)
 collision_mask = 2
 script = ExtResource("8_yk8n7")
 
 [node name="DragDropPuzzle2" parent="PuzzleStore" index="2" unique_id=1726162827 instance=ExtResource("127_t5rg3")]
-position = Vector2(-36, 489)
+position = Vector2(-36, 632)
+scale = Vector2(0.575, 0.575)
 
 [node name="PuzzleCompletePathBack" parent="." index="7" unique_id=1605263297 node_paths=PackedStringArray("puzzle")]
 puzzle = NodePath("../PuzzleStore/DragDropPuzzle2")
+adjust_camera = false
 
 [node name="CheckpointController" type="Node" parent="." index="8" unique_id=534646765]
 script = ExtResource("131_yk8n7")
 chapter = 2
 comic = 19
 
-[node name="AreaActivateStorePuzzle" type="Area2D" parent="." index="9" unique_id=1163643340 node_paths=PackedStringArray("node_to_enable")]
+[node name="AreaActivateStorePuzzle" type="Area2D" parent="." index="9" unique_id=1163643340 node_paths=PackedStringArray("anim_player")]
 position = Vector2(5296, 861)
 collision_layer = 0
 collision_mask = 2
 input_pickable = false
-script = ExtResource("139_p5lly")
-node_to_enable = NodePath("../PuzzleStore")
+script = ExtResource("137_gjepm")
+anim_player = NodePath("../AnimationPlayer")
+anim_name = "activate_store"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaActivateStorePuzzle" index="0" unique_id=1355763298]
 shape = SubResource("CircleShape2D_gjepm")
 
-[node name="Pharmacy" type="Sprite2D" parent="." index="10" unique_id=1490875950]
-position = Vector2(5969, 1275)
-texture = ExtResource("138_p5lly")
-
-[node name="PharmacyDesk" type="Sprite2D" parent="." index="11" unique_id=779139267]
-position = Vector2(6020, 1325)
-texture = ExtResource("139_gjepm")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="12" unique_id=1167711698]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="10" unique_id=1167711698]
 libraries/ = SubResource("AnimationLibrary_gjepm")
 
 [node name="TriggerAnim" type="Node" parent="AnimationPlayer" index="0" unique_id=1527896412 node_paths=PackedStringArray("puzzle", "anim_player")]
 script = ExtResource("134_gjepm")
 puzzle = NodePath("../../WayBack/PuzzleThinkHome/Puzzle1")
 anim_player = NodePath("..")
+anim_name = "chapter_transition"
