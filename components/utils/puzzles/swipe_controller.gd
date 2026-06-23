@@ -71,7 +71,7 @@ func _calculate_progress() -> float:
 			var px = image.get_pixel(i, j)
 			if px.r < 0.1:
 				clean_samples += 1
-	print(float(clean_samples) / float(samples))
+	#print(float(clean_samples) / float(samples))
 	return float(clean_samples) / float(samples)
 
 func on_screen_enter():
