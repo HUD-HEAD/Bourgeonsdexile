@@ -1,19 +1,53 @@
 [gd_scene format=3 uid="uid://bn2kp6x746ehp"]
 
 [ext_resource type="Script" uid="uid://cag8j8gn5a5kn" path="res://components/chapter2/characters/vehicle.gd" id="1_sriwm"]
+[ext_resource type="Texture2D" uid="uid://b7dstqduo0v3c" path="res://components/chapter2/levels/goma-nakivale/desert_bus/cloud_background.png" id="2_k4ncq"]
 [ext_resource type="Texture2D" uid="uid://ia2oeqhw2g7g" path="res://graphics/chapter2/levels/goma/wheel1.png" id="2_n652q"]
 [ext_resource type="Script" uid="uid://bwhw2o2u7v43i" path="res://components/utils/comics/vertical_sine_anim.gd" id="2_nls43"]
 [ext_resource type="Texture2D" uid="uid://dtp24cvyv06sn" path="res://graphics/chapter2/levels/goma/bodabodatogether2.png" id="2_sriwm"]
 [ext_resource type="Texture2D" uid="uid://bt4al565mnwhh" path="res://graphics/chapter2/levels/goma/wheel2.png" id="3_nls43"]
 [ext_resource type="Script" uid="uid://cvlenn1q1qyrk" path="res://components/chapter2/characters/rotator.gd" id="4_nls43"]
+[ext_resource type="Script" uid="uid://7i4w7h6406hp" path="res://components/chapter2/characters/bodaboda_visual_controller.gd" id="7_bwkhw"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="9_b5lhp"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="10_k5hxl"]
+[ext_resource type="AudioStream" uid="uid://cwplyl54oxmou" path="res://audio/chapter2/ambient/level 2/levle_2_desert_bus_brake.wav" id="11_s1sgh"]
+
+[sub_resource type="Curve" id="Curve_aao6k"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_q0fuo"]
+curve = SubResource("Curve_aao6k")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_b5lhp"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(0.1, 0.1, 0.1)
+direction = Vector3(-0.3, -1, 0)
+spread = 20.0
+initial_velocity_min = 373.49
+initial_velocity_max = 373.49
+gravity = Vector3(0, 0, 0)
+scale_min = 0.04
+scale_max = 0.06
+color = Color(0.49600154, 0.49600154, 0.49600154, 1)
+alpha_curve = SubResource("CurveTexture_q0fuo")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sriwm"]
 size = Vector2(544, 495)
 
-[node name="BodaBoda" type="Node2D" unique_id=925815680 node_paths=PackedStringArray("char_area", "visuals")]
+[node name="BodaBoda" type="Node2D" unique_id=925815680 node_paths=PackedStringArray("char_area", "visuals", "bodaboda_visual_controller")]
 script = ExtResource("1_sriwm")
 char_area = NodePath("Area2D")
 visuals = NodePath("Bodabodatogether")
+bodaboda_visual_controller = NodePath("BodaBodaVisualController")
+
+[node name="SmokeParticle" type="GPUParticles2D" parent="." unique_id=1899891644]
+position = Vector2(80, 27)
+amount = 40
+texture = ExtResource("2_k4ncq")
+interp_to_end = 0.01
+speed_scale = 0.5
+process_material = SubResource("ParticleProcessMaterial_b5lhp")
 
 [node name="Bodabodatogether" type="Sprite2D" parent="." unique_id=1160138196]
 texture = ExtResource("2_sriwm")
@@ -42,3 +76,31 @@ input_pickable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=450716263]
 position = Vector2(-33, 161.5)
 shape = SubResource("RectangleShape2D_sriwm")
+
+[node name="BodaBodaVisualController" type="Node2D" parent="." unique_id=232641166 node_paths=PackedStringArray("char_area", "smoke_particles", "running_loop", "not_running_loop", "brake_sfx")]
+script = ExtResource("7_bwkhw")
+char_area = NodePath("../Area2D")
+smoke_particles = NodePath("../SmokeParticle")
+running_loop = NodePath("Audio_running")
+not_running_loop = NodePath("Audio_not_running")
+brake_sfx = NodePath("TriggerSfxOnClick")
+metadata/_custom_type_script = "uid://7i4w7h6406hp"
+
+[node name="Audio_running" type="VisibleOnScreenNotifier2D" parent="BodaBodaVisualController" unique_id=1524950002]
+script = ExtResource("9_b5lhp")
+loop_name = 2105
+start_loop_on_enter_screen = false
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="Audio_not_running" type="VisibleOnScreenNotifier2D" parent="BodaBodaVisualController" unique_id=199027271]
+script = ExtResource("9_b5lhp")
+loop_name = 2107
+start_loop_on_enter_screen = false
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerSfxOnClick" type="Node" parent="BodaBodaVisualController" unique_id=1445631022]
+script = ExtResource("10_k5hxl")
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("11_s1sgh")
+metadata/_custom_type_script = "uid://b7avucygxykbp"

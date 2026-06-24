@@ -10,7 +10,8 @@ extends Node2D
 
 var walking : bool
 
-
+@export_group("BodaBoda")
+@export var bodaboda_visual_controller: BodaBodaVisualController
 
 #TODO cleanup. Should we set a path on all scenes? 
 var walk_along_path = false
@@ -34,6 +35,8 @@ func _on_area_entered(area : Area2D):
 func _start_walking():
 	walking = true
 	visuals.process_mode = Node.PROCESS_MODE_INHERIT
+	if bodaboda_visual_controller != null:
+		bodaboda_visual_controller.on_continue_bodaboda()
 
 func _stop_walking():
 	walking = false
