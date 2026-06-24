@@ -134,6 +134,7 @@
 [ext_resource type="Texture2D" uid="uid://botlwlbdqi70l" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0118.png" id="124_kh1em"]
 [ext_resource type="Texture2D" uid="uid://cjd0cved1hco8" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0119.png" id="125_164h5"]
 [ext_resource type="Texture2D" uid="uid://bg5s78yi6ix11" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0120.png" id="126_43iwu"]
+[ext_resource type="AudioStream" uid="uid://cdpmtaw11xj5r" path="res://audio/chapter2/ambient/comic 2/panel_2.12_bus_sound.wav" id="133_b1c3r"]
 [ext_resource type="SpriteFrames" uid="uid://dc8towwetalbq" path="res://components/chapter3/main_characters/zlata_stroller_sprite_frames.tres" id="133_kervo"]
 [ext_resource type="Texture2D" uid="uid://dukbq3bsdjcs1" path="res://graphics/chapter3/levels/hospital/shadow.png" id="136_44fmv"]
 [ext_resource type="Texture2D" uid="uid://e25bc0tijjd8" path="res://graphics/chapter3/levels/hospital/signal.png" id="137_myods"]
@@ -148,6 +149,8 @@
 [ext_resource type="Texture2D" uid="uid://pa2qkrrisgqj" path="res://graphics/chapter3/levels/hospital/tickets.png" id="146_v81oq"]
 [ext_resource type="Texture2D" uid="uid://dvl57mmyxc12m" path="res://graphics/chapter3/levels/bigavenue/husband.png" id="146_x0jwe"]
 [ext_resource type="Texture2D" uid="uid://cq4oebmiej7bw" path="res://graphics/chapter2/levels/desert/separatedbus/wheel2.png" id="147_vter2"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="149_ru515"]
+[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="150_g4m3t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fbeob"]
 size = Vector2(162, 502)
@@ -744,6 +747,7 @@ collision_mask = 2
 
 [node name="DragDropPuzzle3" parent="Puzzles/Puzzle3" unique_id=1283304511 instance=ExtResource("7_unyww")]
 position = Vector2(175, 195)
+resolve_puzzle_stream = ExtResource("133_b1c3r")
 
 [node name="OutlinePuzzle" parent="Puzzles/Puzzle3/DragDropPuzzle3" index="0" unique_id=1513168459]
 position = Vector2(-48.5, 51)
@@ -831,6 +835,7 @@ loop = false
 [node name="Zlata" parent="Path2D/PathFollow2D" unique_id=700974070 node_paths=PackedStringArray("path_follow") instance=ExtResource("2_0xeah")]
 scale = Vector2(2.0799963, 2.0799963)
 path_follow = NodePath("..")
+play_walking_sfx = true
 
 [node name="AnimSprite" parent="Path2D/PathFollow2D/Zlata" index="0" unique_id=689873547]
 sprite_frames = ExtResource("133_kervo")
@@ -917,6 +922,30 @@ libraries/ = SubResource("AnimationLibrary_lue18")
 position = Vector2(-5224.9995, 333)
 scale = Vector2(0.32264152, 0.32264152)
 texture = ExtResource("146_x0jwe")
+
+[node name="Audio" type="Node" parent="." unique_id=102597753]
+
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=465931473]
+position = Vector2(-3128, 96)
+rect = Rect2(-767, -10, 777, 57)
+script = ExtResource("149_ru515")
+loop_name = 2201
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone2" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=1737840079]
+position = Vector2(-3128, 96)
+rect = Rect2(-767, -10, 777, 57)
+script = ExtResource("149_ru515")
+loop_name = 1200
+loop_mode = 2
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=2020888770]
+position = Vector2(-3500, 312)
+rect = Rect2(-433, -14, 126, 76)
+script = ExtResource("150_g4m3t")
+music_name = 3100
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
 
 [editable path="Puzzles/Puzzle1/DragDropPuzzle"]
 [editable path="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece"]

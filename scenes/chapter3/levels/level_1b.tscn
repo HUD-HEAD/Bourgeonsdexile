@@ -127,6 +127,7 @@
 [ext_resource type="Texture2D" uid="uid://botlwlbdqi70l" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0118.png" id="125_rtkm0"]
 [ext_resource type="Texture2D" uid="uid://cjd0cved1hco8" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0119.png" id="126_8s4ly"]
 [ext_resource type="Texture2D" uid="uid://bg5s78yi6ix11" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0120.png" id="127_fe4du"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="128_6mkb4"]
 
 [sub_resource type="Curve2D" id="Curve2D_phulo"]
 _data = {
@@ -510,21 +511,24 @@ radius = 197.12433
 [node name="Bg2" parent="." index="0" unique_id=1307761575]
 metadata/_edit_lock_ = true
 
-[node name="MockupChanges" parent="Bg2" index="2" unique_id=816831268]
-visible = false
-
 [node name="SceneEnder" parent="." index="1" unique_id=1221118698]
 position = Vector2(1222, 871)
 next_scene = "uid://by2x0js73j5ew"
 
-[node name="PathTo" parent="." index="2" unique_id=1272328632]
+[node name="BusFront" type="Sprite2D" parent="." index="4" unique_id=459032295]
+z_index = 1
+position = Vector2(2136, 807)
+scale = Vector2(0.385, 0.385)
+texture = ExtResource("2_fd55t")
+
+[node name="PathTo" parent="." index="5" unique_id=1272328632]
 curve = SubResource("Curve2D_phulo")
 
 [node name="PathFollowTo" parent="PathTo" index="0" unique_id=666369972]
 position = Vector2(2150, 839)
 
 [node name="Zlata" parent="PathTo/PathFollowTo" index="0" unique_id=700974070]
-z_index = 1
+play_walking_sfx = true
 
 [node name="AnimSprite" parent="PathTo/PathFollowTo/Zlata" index="0" unique_id=689873547]
 sprite_frames = ExtResource("2_phulo")
@@ -534,14 +538,8 @@ position = Vector2(0, -212)
 offset = Vector2(0, 0)
 zoom = Vector2(3.36, 3.36)
 
-[node name="PathBack" parent="." index="3" unique_id=2085482473]
+[node name="PathBack" parent="." index="6" unique_id=2085482473]
 curve = null
-
-[node name="BusFront" type="Sprite2D" parent="." index="4" unique_id=459032295]
-z_index = 1
-position = Vector2(2136, 807)
-scale = Vector2(0.385, 0.385)
-texture = ExtResource("2_fd55t")
 
 [node name="PuzzleCompletePathBack" parent="." index="7" unique_id=1605263297]
 script = null
@@ -595,6 +593,24 @@ flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle4/ClickableNpc" index="1" unique_id=1339633611]
 shape = SubResource("CircleShape2D_cbi4r")
+
+[node name="Audio" type="Node" parent="." index="9" unique_id=1856984558]
+
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="Audio" index="0" unique_id=1818009697]
+position = Vector2(2058, 871)
+rect = Rect2(-767, -10, 196, 57)
+script = ExtResource("128_6mkb4")
+loop_name = 2201
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone2" type="VisibleOnScreenNotifier2D" parent="Audio" index="1" unique_id=439844663]
+position = Vector2(2050, 792)
+rect = Rect2(-767, -10, 207, 68)
+script = ExtResource("128_6mkb4")
+loop_name = 1200
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [editable path="PathTo/PathFollowTo/Zlata"]
 [editable path="Puzzle4/DragDropPuzzle4"]
