@@ -101,18 +101,18 @@ position = Vector2(25593, 0)
 [node name="PanelDoctors9" parent="Panels" unique_id=1445255210 instance=ExtResource("14_1uikj")]
 position = Vector2(28029, 0)
 
-[node name="PanelDoctors10" parent="Panels" unique_id=411523805 instance=ExtResource("15_be7uh")]
-position = Vector2(30428, 0)
-
 [node name="PanelDoctors14" parent="Panels" unique_id=455871575 instance=ExtResource("18_agxqu")]
-position = Vector2(32640, 0)
+position = Vector2(30423, 0)
+
+[node name="PanelDoctors10" parent="Panels" unique_id=411523805 instance=ExtResource("15_be7uh")]
+position = Vector2(32624, 0)
 
 [node name="PanelDoctors11" parent="Panels" unique_id=1284468193 instance=ExtResource("16_xbw0h")]
 position = Vector2(34858, 0)
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("21_rh3md")
-panels = [NodePath("../Panels/PanelVideo"), NodePath("../Panels/PanelDoctors"), NodePath("../Panels/PanelDoctors12"), NodePath("../Panels/PanelDoctors13"), NodePath("../Panels/PanelBreastfeeding"), NodePath("../Panels/PanelDoctors4"), NodePath("../Panels/PanelDoctors2"), NodePath("../Panels/PanelDoctors3"), NodePath("../Panels/PanelDoctors5"), NodePath("../Panels/PanelDoctors6"), NodePath("../Panels/PanelDoctors7"), NodePath("../Panels/PanelDoctors8"), NodePath("../Panels/PanelDoctors9"), NodePath("../Panels/PanelDoctors10"), NodePath("../Panels/PanelDoctors14"), NodePath("../Panels/PanelDoctors11"), NodePath("../SceneEnder")]
+panels = [NodePath("../Panels/PanelVideo"), NodePath("../Panels/PanelDoctors"), NodePath("../Panels/PanelDoctors12"), NodePath("../Panels/PanelDoctors13"), NodePath("../Panels/PanelBreastfeeding"), NodePath("../Panels/PanelDoctors4"), NodePath("../Panels/PanelDoctors2"), NodePath("../Panels/PanelDoctors3"), NodePath("../Panels/PanelDoctors5"), NodePath("../Panels/PanelDoctors6"), NodePath("../Panels/PanelDoctors7"), NodePath("../Panels/PanelDoctors8"), NodePath("../Panels/PanelDoctors9"), NodePath("../Panels/PanelDoctors14"), NodePath("../Panels/PanelDoctors10"), NodePath("../Panels/PanelDoctors11"), NodePath("../SceneEnder")]
 
 [node name="Audio" type="Node" parent="." unique_id=619569792]
 
