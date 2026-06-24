@@ -91,6 +91,7 @@
 [ext_resource type="Texture2D" uid="uid://u3821gox51mn" path="res://graphics/chapter2/levels/goma/bodabodaman.png" id="70_0up0r"]
 [ext_resource type="Script" uid="uid://bwhw2o2u7v43i" path="res://components/utils/comics/vertical_sine_anim.gd" id="71_cw4mc"]
 [ext_resource type="Script" uid="uid://cvlenn1q1qyrk" path="res://components/chapter2/characters/rotator.gd" id="72_5mn6d"]
+[ext_resource type="Script" uid="uid://c8c80cw43axdp" path="res://components/chapter2/levels/goma-nakivale/desert_bus/desert_area.gd" id="72_78vps"]
 [ext_resource type="Script" uid="uid://bn0sxcor0g10k" path="res://components/utils/mechanics/area_trigger_anim.gd" id="73_5mn6d"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3ogmi"]
@@ -703,6 +704,8 @@ obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Puzzles/Puzzle5" unique_id=1611380976 instance=ExtResource("47_e2evj")]
 collision_mask = 2
+script = ExtResource("72_78vps")
+type = 2
 
 [node name="Puzzle2" parent="Puzzles/Puzzle5" unique_id=1189328132 instance=ExtResource("19_egc25")]
 position = Vector2(-70.99999, 771)
@@ -876,12 +879,20 @@ script = ExtResource("64_3d65b")
 loop_name = 2106
 metadata/_custom_type_script = "uid://brda7473wfj1v"
 
-[node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1083261473]
-position = Vector2(6880, 440)
-rect = Rect2(-10, -10, 13883, 183)
-script = ExtResource("64_3d65b")
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=794535861]
+position = Vector2(6892, 281)
+rect = Rect2(-10, -10, 84, 94)
+script = ExtResource("66_idrs3")
 loop_name = 2105
-metadata/_custom_type_script = "uid://brda7473wfj1v"
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoop_stop_bodaboda" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=15385602]
+position = Vector2(19344, 423)
+rect = Rect2(271, -176, 355, 260)
+script = ExtResource("66_idrs3")
+loop_name = 2105
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=947001812]
 position = Vector2(425, 860)
