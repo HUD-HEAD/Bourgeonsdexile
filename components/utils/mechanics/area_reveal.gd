@@ -26,6 +26,7 @@ func _on_area_exited(area2d : Area2D):
 		_transition(node, Color.TRANSPARENT)
 	
 	for node in nodes_to_hide:
+		node.show()
 		_transition(node, Color.WHITE)
 
 func _transition(node : CanvasItem, color : Color):

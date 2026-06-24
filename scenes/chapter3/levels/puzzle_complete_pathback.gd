@@ -43,4 +43,4 @@ func _go_back():
 
 func _adjust_camera():
 	var tween : Tween = get_tree().create_tween()
-	tween.tween_property(camera, "offset:x", -camera.offset.x, 3.0)
+	tween.tween_property(camera, "offset:x", -camera.offset.x, 5.0)

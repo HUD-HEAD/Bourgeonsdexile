@@ -130,7 +130,7 @@
 
 [sub_resource type="Curve2D" id="Curve2D_phulo"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 2150, 839, 0, 0, 0, 0, 1859, 845, 0, 0, 0, 0, 1710, 937, 0, 0, 0, 0, 1221, 945, 0, 0, 0, 0, 1288, 836, 0, 0, 0, 0, 1210, 793, 0, 0, 0, 0, 1299, 699, 0, 0, 0, 0, 1214, 673, 0, 0, 0, 0, 820, 673)
+"points": PackedVector2Array(0, 0, 0, 0, 2150, 839, 0, 0, 0, 0, 1859, 845, 0, 0, 0, 0, 1740, 936, 0, 0, 0, 0, 1211, 936, 0, 0, 0, 0, 1312, 805, 0, 0, 0, 0, 1213, 809, 0, 0, 0, 0, 1312, 673, 0, 0, 0, 0, 1214, 673, 0, 0, 0, 0, 820, 673)
 }
 point_count = 9
 
@@ -507,7 +507,10 @@ radius = 197.12433
 
 [node name="Level31" unique_id=2125939091 instance=ExtResource("1_atmgq")]
 
-[node name="MockupChanges" parent="Bg2" parent_id_path=PackedInt32Array(1307761575) index="2" unique_id=816831268]
+[node name="Bg2" parent="." index="0" unique_id=1307761575]
+metadata/_edit_lock_ = true
+
+[node name="MockupChanges" parent="Bg2" index="2" unique_id=816831268]
 visible = false
 
 [node name="SceneEnder" parent="." index="1" unique_id=1221118698]
@@ -556,11 +559,26 @@ obstacle = NodePath("../Obstacle")
 collision_mask = 2
 
 [node name="DragDropPuzzle4" parent="Puzzle4" index="2" unique_id=1767003607 instance=ExtResource("6_vqma7")]
-position = Vector2(-11, 587)
-scale = Vector2(0.37, 0.37)
+position = Vector2(-50, 668)
+scale = Vector2(0.21000001, 0.21000001)
 
 [node name="BuildingBlocks" parent="Puzzle4/DragDropPuzzle4" index="1" unique_id=1654234455]
 z_index = 1
+
+[node name="PuzzlePiece" parent="Puzzle4/DragDropPuzzle4/BuildingBlocks" index="0" unique_id=1667760579]
+position = Vector2(685.71423, 385.71426)
+
+[node name="PuzzlePiece2" parent="Puzzle4/DragDropPuzzle4/BuildingBlocks" index="2" unique_id=729525704]
+position = Vector2(861.90466, 223.8095)
+
+[node name="PuzzlePiece3" parent="Puzzle4/DragDropPuzzle4/BuildingBlocks" index="4" unique_id=252285571]
+position = Vector2(842.8568, 80.95235)
+
+[node name="PuzzlePiece4" parent="Puzzle4/DragDropPuzzle4/BuildingBlocks" index="6" unique_id=1501680743]
+position = Vector2(685.7139, 428.57153)
+
+[node name="PuzzlePiece5" parent="Puzzle4/DragDropPuzzle4/BuildingBlocks" index="8" unique_id=1022298336]
+position = Vector2(847.6188, -171.42851)
 
 [node name="ClickableNpc" type="Area2D" parent="Puzzle4" index="3" unique_id=2122546920]
 position = Vector2(-90, 797)

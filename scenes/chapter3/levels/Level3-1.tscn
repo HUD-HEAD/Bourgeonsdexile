@@ -144,6 +144,7 @@
 [ext_resource type="Texture2D" uid="uid://b2ipjbn25qct0" path="res://graphics/chapter2/levels/desert/separatedbus/wheel1.png" id="145_lbea3"]
 [ext_resource type="Script" uid="uid://cvlenn1q1qyrk" path="res://components/chapter2/characters/rotator.gd" id="146_ibvau"]
 [ext_resource type="Texture2D" uid="uid://pa2qkrrisgqj" path="res://graphics/chapter3/levels/hospital/tickets.png" id="146_v81oq"]
+[ext_resource type="Texture2D" uid="uid://dvl57mmyxc12m" path="res://graphics/chapter3/levels/bigavenue/husband.png" id="146_x0jwe"]
 [ext_resource type="Texture2D" uid="uid://cq4oebmiej7bw" path="res://graphics/chapter2/levels/desert/separatedbus/wheel2.png" id="147_vter2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fbeob"]
@@ -728,10 +729,47 @@ obstacle = NodePath("../Obstacle")
 collision_mask = 2
 
 [node name="DragDropPuzzle3" parent="Puzzles/Puzzle3" unique_id=1283304511 instance=ExtResource("7_unyww")]
-position = Vector2(81, 212)
+position = Vector2(175, 195)
+
+[node name="OutlinePuzzle" parent="Puzzles/Puzzle3/DragDropPuzzle3" index="0" unique_id=1513168459]
+position = Vector2(-48.5, 51)
 
 [node name="BuildingBlocks" parent="Puzzles/Puzzle3/DragDropPuzzle3" index="1" unique_id=1654234455]
 z_index = 1
+position = Vector2(0.5, 51)
+
+[node name="PuzzlePiece" parent="Puzzles/Puzzle3/DragDropPuzzle3/BuildingBlocks" index="0" unique_id=1667760579]
+position = Vector2(608.5, 210)
+
+[node name="Receptacle" parent="Puzzles/Puzzle3/DragDropPuzzle3/BuildingBlocks" index="1" unique_id=1559191435]
+position = Vector2(-330, -45)
+
+[node name="PuzzlePiece2" parent="Puzzles/Puzzle3/DragDropPuzzle3/BuildingBlocks" index="2" unique_id=729525704]
+position = Vector2(337, 154)
+
+[node name="PuzzlePieceSprite" parent="Puzzles/Puzzle3/DragDropPuzzle3/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(1283304511, 729525704, 2116105691) index="0" unique_id=1266676352]
+position = Vector2(-41.5, 8)
+
+[node name="Receptacle2" parent="Puzzles/Puzzle3/DragDropPuzzle3/BuildingBlocks" index="3" unique_id=600273107]
+position = Vector2(-223, 5)
+
+[node name="PuzzlePiece3" parent="Puzzles/Puzzle3/DragDropPuzzle3/BuildingBlocks" index="4" unique_id=2023952615]
+position = Vector2(-554, 138)
+
+[node name="Receptacle3" parent="Puzzles/Puzzle3/DragDropPuzzle3/BuildingBlocks" index="5" unique_id=2008516326]
+position = Vector2(113, -52)
+
+[node name="PuzzlePiece5" parent="Puzzles/Puzzle3/DragDropPuzzle3/BuildingBlocks" index="6" unique_id=752721607]
+position = Vector2(442.5, -124)
+
+[node name="Receptacle5" parent="Puzzles/Puzzle3/DragDropPuzzle3/BuildingBlocks" index="7" unique_id=1324912109]
+position = Vector2(28, 109)
+
+[node name="PuzzlePiece6" parent="Puzzles/Puzzle3/DragDropPuzzle3/BuildingBlocks" index="8" unique_id=857918950]
+position = Vector2(-504, -121)
+
+[node name="Receptacle6" parent="Puzzles/Puzzle3/DragDropPuzzle3/BuildingBlocks" index="9" unique_id=1995568701]
+position = Vector2(187, 72)
 
 [node name="Puzzle5" type="Node2D" parent="Puzzles" unique_id=1223379638]
 position = Vector2(-15792, 76)
@@ -860,6 +898,11 @@ script = ExtResource("146_ibvau")
 
 [node name="BusTransition" type="AnimationPlayer" parent="." unique_id=1461867753]
 libraries/ = SubResource("AnimationLibrary_lue18")
+
+[node name="Husband" type="Sprite2D" parent="." unique_id=1413426561]
+position = Vector2(-5224.9995, 333)
+scale = Vector2(0.32264152, 0.32264152)
+texture = ExtResource("146_x0jwe")
 
 [editable path="Puzzles/Puzzle1/DragDropPuzzle"]
 [editable path="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece"]

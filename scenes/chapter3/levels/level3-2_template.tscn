@@ -1,34 +1,37 @@
 [gd_scene format=3 uid="uid://bh15fogf83oh7"]
 
+[ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="2_y5mxe"]
 [ext_resource type="Texture2D" uid="uid://mpyrv8f4bfkj" path="res://graphics/chapter3/levels/bigavenue/building/building apt.png" id="3_y5mxe"]
+[ext_resource type="Texture2D" uid="uid://chnhseiisg5tf" path="res://graphics/chapter3/levels/bigavenue/building/social_desk/hall_bg.png" id="4_1dsc3"]
 [ext_resource type="Texture2D" uid="uid://bjespq0dbijkq" path="res://graphics/chapter3/levels/bigavenue/building/squares.png" id="4_yfmg0"]
 [ext_resource type="Texture2D" uid="uid://b8utg0kolgvhy" path="res://graphics/chapter3/levels/bigavenue/building/building.png" id="5_1dsc3"]
+[ext_resource type="Texture2D" uid="uid://3qfrahv5xlyg" path="res://graphics/chapter3/levels/bigavenue/building/social_desk/hall_table.png" id="5_ovumn"]
 [ext_resource type="Texture2D" uid="uid://1rrpcsdgsv8b" path="res://graphics/chapter3/levels/bigavenue/building/reels.png" id="6_ovumn"]
 [ext_resource type="Texture2D" uid="uid://jliii8605sec" path="res://graphics/chapter3/levels/bigavenue/background.png" id="7_ttgo8"]
-[ext_resource type="Texture2D" uid="uid://d2kpc1bbjayup" path="res://graphics/chapter3/levels/bigavenue/mockup_changes.png" id="8_7ktf0"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="9_q7qsp"]
 [ext_resource type="PackedScene" uid="uid://dy84a73ucflwu" path="res://components/chapter3/main_characters/zlata.tscn" id="10_v6c5n"]
 [ext_resource type="Script" uid="uid://crcrgrn18h2m6" path="res://components/utils/mechanics/face_path.gd" id="11_4tgbk"]
 [ext_resource type="Script" uid="uid://dv0245ypeul1c" path="res://scenes/chapter3/levels/puzzle_complete_pathback.gd" id="12_k783o"]
+[ext_resource type="Script" uid="uid://qu5hfw1uwm0x" path="res://components/utils/mechanics/area_reveal.gd" id="12_y5mxe"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="14_fu8h6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yfmg0"]
+size = Vector2(1262, 720)
 
 [sub_resource type="Curve2D" id="Curve2D_wn2jm"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 821, 674, 0, 0, 0, 0, 1298, 671, 0, 0, 0, 0, 1219, 804, 0, 0, 0, 0, 1293, 916, 0, 0, 0, 0, 5647, 946)
+"points": PackedVector2Array(0, 0, 0, 0, 821, 674, 0, 0, 0, 0, 1298, 671, 0, 0, 0, 0, 1219, 804, 0, 0, 0, 0, 1300, 803, 0, 0, 0, 0, 1212, 918, 0, 0, 0, 0, 3224, 965, 0, 0, 0, 0, 5270, 915, 0, 0, 0, 0, 5681, 918)
 }
-point_count = 5
+point_count = 8
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y5mxe"]
 radius = 100.42
 
 [sub_resource type="Curve2D" id="Curve2D_y5mxe"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 5647, 946, 0, 0, 0, 0, 1034, 917, 0, 0, 0, 0, 1296, 917, 0, 0, 0, 0, 1220, 802, 0, 0, 0, 0, 1296, 669, 0, 0, 0, 0, 841, 672)
+"points": PackedVector2Array(0, 0, 0, 0, 5677, 918, 0, 0, 0, 0, 5269, 915, 0, 0, 0, 0, 3323, 969, 0, 0, 0, 0, 1034, 917, 0, 0, 0, 0, 1213, 919, 0, 0, 0, 0, 1299, 802, 0, 0, 0, 0, 1220, 802, 0, 0, 0, 0, 1296, 669, 0, 0, 0, 0, 841, 672)
 }
-point_count = 6
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_k783o"]
-size = Vector2(1000, 100)
+point_count = 9
 
 [node name="Level31" type="Node2D" unique_id=2125939091]
 
@@ -36,42 +39,76 @@ size = Vector2(1000, 100)
 texture = ExtResource("7_ttgo8")
 centered = false
 
+[node name="PaperBackground" type="TextureRect" parent="Bg2" unique_id=2015979137]
+visible = false
+self_modulate = Color(0.29803923, 0.29803923, 0.4117647, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_y5mxe")
+stretch_mode = 1
+
 [node name="BuildingApt" type="Sprite2D" parent="Bg2" unique_id=639287802]
 position = Vector2(835, 589)
 texture = ExtResource("3_y5mxe")
+
+[node name="HallBg" type="Sprite2D" parent="Bg2/BuildingApt" unique_id=643522166]
+position = Vector2(229, 288)
+texture = ExtResource("4_1dsc3")
+
+[node name="HallTable" type="Sprite2D" parent="Bg2/BuildingApt/HallBg" unique_id=972076843]
+position = Vector2(-58, 27)
+texture = ExtResource("5_ovumn")
 
 [node name="Squares" type="Sprite2D" parent="Bg2/BuildingApt" unique_id=1883759949]
 position = Vector2(423, 22)
 texture = ExtResource("4_yfmg0")
 
-[node name="OnTop" type="Node2D" parent="Bg2" unique_id=879371620]
+[node name="BuildingOutside" type="Sprite2D" parent="Bg2/BuildingApt" unique_id=271747770]
 visible = false
 z_index = 1
-position = Vector2(0, -1732)
-scale = Vector2(2.601852, 2.601852)
-
-[node name="Building" type="Sprite2D" parent="Bg2/OnTop" unique_id=446403469]
-position = Vector2(320.92526, 892.0569)
-scale = Vector2(0.38434163, 0.38434163)
 texture = ExtResource("5_1dsc3")
 
-[node name="Squares" type="Sprite2D" parent="Bg2/OnTop/Building" unique_id=251764111]
-position = Vector2(423, 22)
-texture = ExtResource("4_yfmg0")
+[node name="AreaRevealInsideBuilding" type="Area2D" parent="Bg2/BuildingApt/BuildingOutside" unique_id=59500974 node_paths=PackedStringArray("nodes_to_reveal", "nodes_to_hide")]
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+script = ExtResource("12_y5mxe")
+nodes_to_reveal = [NodePath("../../../PaperBackground")]
+nodes_to_hide = [NodePath("..")]
 
-[node name="Reels" type="Sprite2D" parent="Bg2/OnTop/Building" unique_id=177189604]
-position = Vector2(2, 59)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/BuildingApt/BuildingOutside/AreaRevealInsideBuilding" unique_id=1430876339]
+position = Vector2(-126, 26)
+shape = SubResource("RectangleShape2D_yfmg0")
+
+[node name="Reels" type="Sprite2D" parent="Bg2/BuildingApt/BuildingOutside" unique_id=1079789929]
+position = Vector2(6, -208)
 texture = ExtResource("6_ovumn")
 
-[node name="MockupChanges" type="Sprite2D" parent="Bg2" unique_id=816831268]
-scale = Vector2(0.35, 0.35)
-texture = ExtResource("8_7ktf0")
-centered = false
+[node name="Reels2" type="Sprite2D" parent="Bg2/BuildingApt/BuildingOutside/Reels" unique_id=405418698]
+position = Vector2(0, 137)
+texture = ExtResource("6_ovumn")
+
+[node name="Reels2" type="Sprite2D" parent="Bg2/BuildingApt/BuildingOutside/Reels/Reels2" unique_id=1037654019]
+position = Vector2(0, 137)
+texture = ExtResource("6_ovumn")
+
+[node name="Reels2" type="Sprite2D" parent="Bg2/BuildingApt/BuildingOutside/Reels/Reels2/Reels2" unique_id=1715624461]
+position = Vector2(0, 137)
+texture = ExtResource("6_ovumn")
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1221118698]
 position = Vector2(7414, 596)
 script = ExtResource("9_q7qsp")
 next_scene = "uid://d4cccbwuwp1rh"
+
+[node name="WayTo" type="Node2D" parent="." unique_id=1018273493]
+
+[node name="WayBack" type="Node2D" parent="." unique_id=185847338]
 
 [node name="PathTo" type="Path2D" parent="." unique_id=1272328632]
 curve = SubResource("Curve2D_wn2jm")
@@ -82,13 +119,17 @@ rotates = false
 loop = false
 
 [node name="Zlata" parent="PathTo/PathFollowTo" unique_id=700974070 node_paths=PackedStringArray("path_follow") instance=ExtResource("10_v6c5n")]
-scale = Vector2(0.5, 0.5)
+z_index = 1
+scale = Vector2(0.4, 0.4)
 path_follow = NodePath("..")
 
 [node name="Camera2D" type="Camera2D" parent="PathTo/PathFollowTo/Zlata" unique_id=1600606219]
 position = Vector2(0, -233)
-offset = Vector2(500, 0)
+offset = Vector2(250, 0)
+zoom = Vector2(2, 2)
+limit_left = 250
 limit_top = 0
+limit_right = 5600
 limit_bottom = 1080
 
 [node name="ZlataClickable" type="Area2D" parent="PathTo/PathFollowTo/Zlata" unique_id=1803429541]
@@ -107,21 +148,9 @@ script = ExtResource("11_4tgbk")
 curve = SubResource("Curve2D_y5mxe")
 
 [node name="PathFollowBack" type="PathFollow2D" parent="PathBack" unique_id=1957864083]
-position = Vector2(5647, 946)
+position = Vector2(5677, 918)
 rotates = false
 loop = false
-
-[node name="WayTo" type="Node2D" parent="." unique_id=1018273493]
-
-[node name="Sprite2D" type="Sprite2D" parent="WayTo" unique_id=1848681340]
-position = Vector2(3349, 328)
-texture = SubResource("PlaceholderTexture2D_k783o")
-
-[node name="WayBack" type="Node2D" parent="." unique_id=185847338]
-
-[node name="Sprite2D2" type="Sprite2D" parent="WayBack" unique_id=2143200380]
-position = Vector2(3349, 787)
-texture = SubResource("PlaceholderTexture2D_k783o")
 
 [node name="PuzzleCompletePathBack" type="Node" parent="." unique_id=1605263297 node_paths=PackedStringArray("woman", "wayto", "wayback", "pathfollow_back")]
 script = ExtResource("12_k783o")
