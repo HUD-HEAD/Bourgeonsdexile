@@ -20,21 +20,18 @@ size = Vector2(1262, 720)
 
 [sub_resource type="Curve2D" id="Curve2D_wn2jm"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 821, 674, 0, 0, 0, 0, 1298, 671, 0, 0, 0, 0, 1219, 804, 0, 0, 0, 0, 1300, 803, 0, 0, 0, 0, 1212, 918, 0, 0, 0, 0, 5647, 946)
+"points": PackedVector2Array(0, 0, 0, 0, 821, 674, 0, 0, 0, 0, 1298, 671, 0, 0, 0, 0, 1219, 804, 0, 0, 0, 0, 1300, 803, 0, 0, 0, 0, 1212, 918, 0, 0, 0, 0, 3224, 965, 0, 0, 0, 0, 5270, 915, 0, 0, 0, 0, 5681, 918)
 }
-point_count = 6
+point_count = 8
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y5mxe"]
 radius = 100.42
 
 [sub_resource type="Curve2D" id="Curve2D_y5mxe"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 5647, 946, 0, 0, 0, 0, 1034, 917, 0, 0, 0, 0, 1213, 919, 0, 0, 0, 0, 1299, 802, 0, 0, 0, 0, 1220, 802, 0, 0, 0, 0, 1296, 669, 0, 0, 0, 0, 841, 672)
+"points": PackedVector2Array(0, 0, 0, 0, 5677, 918, 0, 0, 0, 0, 5269, 915, 0, 0, 0, 0, 3323, 969, 0, 0, 0, 0, 1034, 917, 0, 0, 0, 0, 1213, 919, 0, 0, 0, 0, 1299, 802, 0, 0, 0, 0, 1220, 802, 0, 0, 0, 0, 1296, 669, 0, 0, 0, 0, 841, 672)
 }
-point_count = 7
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_k783o"]
-size = Vector2(1000, 100)
+point_count = 9
 
 [node name="Level31" type="Node2D" unique_id=2125939091]
 
@@ -109,6 +106,10 @@ position = Vector2(7414, 596)
 script = ExtResource("9_q7qsp")
 next_scene = "uid://d4cccbwuwp1rh"
 
+[node name="WayTo" type="Node2D" parent="." unique_id=1018273493]
+
+[node name="WayBack" type="Node2D" parent="." unique_id=185847338]
+
 [node name="PathTo" type="Path2D" parent="." unique_id=1272328632]
 curve = SubResource("Curve2D_wn2jm")
 
@@ -147,21 +148,9 @@ script = ExtResource("11_4tgbk")
 curve = SubResource("Curve2D_y5mxe")
 
 [node name="PathFollowBack" type="PathFollow2D" parent="PathBack" unique_id=1957864083]
-position = Vector2(5647, 946)
+position = Vector2(5677, 918)
 rotates = false
 loop = false
-
-[node name="WayTo" type="Node2D" parent="." unique_id=1018273493]
-
-[node name="Sprite2D" type="Sprite2D" parent="WayTo" unique_id=1848681340]
-position = Vector2(3349, 799)
-texture = SubResource("PlaceholderTexture2D_k783o")
-
-[node name="WayBack" type="Node2D" parent="." unique_id=185847338]
-
-[node name="Sprite2D2" type="Sprite2D" parent="WayBack" unique_id=2143200380]
-position = Vector2(3349, 993)
-texture = SubResource("PlaceholderTexture2D_k783o")
 
 [node name="PuzzleCompletePathBack" type="Node" parent="." unique_id=1605263297 node_paths=PackedStringArray("woman", "wayto", "wayback", "pathfollow_back")]
 script = ExtResource("12_k783o")

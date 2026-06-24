@@ -19,6 +19,7 @@
 [ext_resource type="Script" uid="uid://ca78ngu4ava5l" path="res://components/utils/mechanics/obstacle_disable_hidden.gd" id="8_yk8n7"]
 [ext_resource type="Texture2D" uid="uid://bw6rmdtow7yad" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0005.png" id="9_y35ng"]
 [ext_resource type="Texture2D" uid="uid://dm48vo3q5sx0y" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0006.png" id="10_03sbm"]
+[ext_resource type="Texture2D" uid="uid://b2ewpt3w26r0s" path="res://graphics/chapter3/levels/bigavenue/road/car1.png" id="10_gjepm"]
 [ext_resource type="Texture2D" uid="uid://b0d6a1agim7rr" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0007.png" id="11_dhqte"]
 [ext_resource type="Texture2D" uid="uid://1d5cgw78yuqi" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0008.png" id="12_4l2on"]
 [ext_resource type="Texture2D" uid="uid://d23ieao6dhvgf" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0009.png" id="13_akmg2"]
@@ -138,24 +139,13 @@
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="131_yk8n7"]
 [ext_resource type="Script" uid="uid://4x7opfu2wab4" path="res://components/utils/puzzles/puzzle_complete_trigger_anim.gd" id="134_gjepm"]
 [ext_resource type="Script" uid="uid://bn0sxcor0g10k" path="res://components/utils/mechanics/area_trigger_anim.gd" id="137_gjepm"]
+[ext_resource type="Texture2D" uid="uid://c5r2ts3n607rg" path="res://graphics/chapter3/levels/bigavenue/road/car4.png" id="140_lvjii"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18lw1"]
 size = Vector2(501, 165)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yfmg0"]
 radius = 100.42
-
-[sub_resource type="Curve2D" id="Curve2D_pfjp3"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 821, 674, 0, 0, 0, 0, 1298, 671, 0, 0, 0, 0, 1219, 804, 0, 0, 0, 0, 1307, 803, 0, 0, 0, 0, 1212, 922, 0, 0, 0, 0, 3481, 958, 0, 0, 0, 0, 4728, 938, 0, 0, 0, 0, 4885, 915, 0, 0, 0, 0, 5312, 912, 0, 0, 0, 0, 4708, 921)
-}
-point_count = 10
-
-[sub_resource type="Curve2D" id="Curve2D_p5lly"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 5192, 914, 0, 0, 0, 0, 4879, 916, 0, 0, 0, 0, 4727, 939, 0, 0, 0, 0, 3480, 959, 0, 0, 0, 0, 1034, 917, 0, 0, 0, 0, 1217, 920, 0, 0, 0, 0, 1307, 803, 0, 0, 0, 0, 1220, 802, 0, 0, 0, 0, 1296, 669, 0, 0, 0, 0, 787, 673)
-}
-point_count = 10
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7ftg5"]
 animations = [{
@@ -528,6 +518,18 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_jrbug"]
 radius = 96.62815
 
+[sub_resource type="Curve2D" id="Curve2D_pfjp3"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 821, 674, 0, 0, 0, 0, 1298, 671, 0, 0, 0, 0, 1219, 804, 0, 0, 0, 0, 1307, 803, 0, 0, 0, 0, 1212, 922, 0, 0, 0, 0, 3481, 958, 0, 0, 0, 0, 4728, 938, 0, 0, 0, 0, 4885, 915, 0, 0, 0, 0, 5312, 912, 0, 0, 0, 0, 4708, 921)
+}
+point_count = 10
+
+[sub_resource type="Curve2D" id="Curve2D_p5lly"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 5192, 914, 0, 0, 0, 0, 4879, 916, 0, 0, 0, 0, 4727, 939, 0, 0, 0, 0, 3480, 959, 0, 0, 0, 0, 1034, 917, 0, 0, 0, 0, 1217, 920, 0, 0, 0, 0, 1307, 803, 0, 0, 0, 0, 1220, 802, 0, 0, 0, 0, 1296, 669, 0, 0, 0, 0, 787, 673)
+}
+point_count = 10
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_gjepm"]
 radius = 48.04165
 
@@ -719,16 +721,7 @@ shape = SubResource("CircleShape2D_yfmg0")
 position = Vector2(-573, 461)
 next_scene = "uid://da1f6ve0kmn66"
 
-[node name="PathTo" parent="." index="3" unique_id=1272328632]
-curve = SubResource("Curve2D_pfjp3")
-
-[node name="PathBack" parent="." index="4" unique_id=2085482473]
-curve = SubResource("Curve2D_p5lly")
-
-[node name="PathFollowBack" parent="PathBack" index="0" unique_id=1957864083]
-position = Vector2(5192, 914)
-
-[node name="PuzzleLullaby" type="Node2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="1" unique_id=273347506]
+[node name="PuzzleLullaby" type="Node2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="0" unique_id=273347506]
 position = Vector2(859, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayTo/PuzzleLullaby" index="0" unique_id=1053797870 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
@@ -739,15 +732,17 @@ obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="WayTo/PuzzleLullaby" index="1" unique_id=310843140 instance=ExtResource("3_052ky")]
 collision_mask = 2
+script = ExtResource("8_yk8n7")
 
 [node name="DragDropPuzzle5" parent="WayTo/PuzzleLullaby" index="2" unique_id=1767003607 instance=ExtResource("2_80rf8")]
 position = Vector2(42, 435)
 scale = Vector2(0.46, 0.46)
 
-[node name="Sprite2D2" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="0" unique_id=2143200380]
-visible = false
+[node name="Car1" type="Sprite2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="1" unique_id=1135503537]
+position = Vector2(2507, 808)
+texture = ExtResource("10_gjepm")
 
-[node name="PuzzleStreet" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="1" unique_id=201431427]
+[node name="PuzzleStreet" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="0" unique_id=201431427]
 position = Vector2(3956, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleStreet" index="0" unique_id=957423747 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
@@ -778,7 +773,7 @@ shape = SubResource("CircleShape2D_jrbug")
 position = Vector2(-211, 615)
 scale = Vector2(0.4, 0.4)
 
-[node name="PuzzleStreet2" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="2" unique_id=657414073]
+[node name="PuzzleStreet2" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="1" unique_id=657414073]
 position = Vector2(2110, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleStreet2" index="0" unique_id=1682397855 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
@@ -809,7 +804,7 @@ shape = SubResource("CircleShape2D_jrbug")
 position = Vector2(-121, 703)
 scale = Vector2(0.3, 0.3)
 
-[node name="PuzzleThinkHome" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="3" unique_id=1304675676]
+[node name="PuzzleThinkHome" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="2" unique_id=1304675676]
 position = Vector2(904, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleThinkHome" index="0" unique_id=206345537 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
@@ -826,7 +821,7 @@ script = ExtResource("8_yk8n7")
 position = Vector2(103, 524)
 scale = Vector2(0.31, 0.31)
 
-[node name="PuzzleSocialWorker" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="4" unique_id=1734062459]
+[node name="PuzzleSocialWorker" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="3" unique_id=1734062459]
 position = Vector2(1070, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleSocialWorker" index="0" unique_id=68113819 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
@@ -856,6 +851,19 @@ shape = SubResource("CircleShape2D_jrbug")
 [node name="DragDropPuzzle9" parent="WayBack/PuzzleSocialWorker" index="3" unique_id=832401624 instance=ExtResource("4_4mioc")]
 position = Vector2(-111, 762)
 scale = Vector2(0.15, 0.15)
+
+[node name="Car4" type="Sprite2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="4" unique_id=1752701603]
+position = Vector2(4070, 859)
+texture = ExtResource("140_lvjii")
+
+[node name="PathTo" parent="." index="5" unique_id=1272328632]
+curve = SubResource("Curve2D_pfjp3")
+
+[node name="PathBack" parent="." index="6" unique_id=2085482473]
+curve = SubResource("Curve2D_p5lly")
+
+[node name="PathFollowBack" parent="PathBack" index="0" unique_id=1957864083]
+position = Vector2(5192, 914)
 
 [node name="PuzzleStore" type="Node2D" parent="." index="7" unique_id=1919502929]
 visible = false
