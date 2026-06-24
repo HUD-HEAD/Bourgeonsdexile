@@ -69,6 +69,7 @@ position = Vector2(423, 22)
 texture = ExtResource("4_yfmg0")
 
 [node name="BuildingOutside" type="Sprite2D" parent="Bg2/BuildingApt" unique_id=271747770]
+visible = false
 z_index = 1
 texture = ExtResource("5_1dsc3")
 
