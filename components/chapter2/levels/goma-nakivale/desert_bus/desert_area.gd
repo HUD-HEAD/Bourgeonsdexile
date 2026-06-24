@@ -7,6 +7,7 @@ extends Area2D
 enum puzzle_type{
 	normal = 0,
 	hole_area = 1,
+	bodaboda_broke = 2,
 }
 
 func on_finish_puzzle():
