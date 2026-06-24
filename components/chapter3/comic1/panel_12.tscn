@@ -19,7 +19,7 @@ metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
 [node name="ScrollingBackground" parent="." unique_id=231777281 instance=ExtResource("3_q8ies")]
 
 [node name="PanNode" parent="ScrollingBackground" index="0" unique_id=379019586]
-final_pos_x = 4572
+final_pos_x = 2610
 
 [node name="Background" parent="ScrollingBackground/PanNode" index="0" unique_id=524227348]
 position = Vector2(-2620, 0)
@@ -40,8 +40,6 @@ flip_h = true
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1851565622]
 rect = Rect2(-904, -429, 1793, 885)
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=123255867]
 
 [editable path="ScrollingBackground"]
 [editable path="ScrollingBackground/Zlata"]
