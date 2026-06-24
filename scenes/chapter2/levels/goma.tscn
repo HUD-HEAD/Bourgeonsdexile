@@ -94,32 +94,6 @@
 [ext_resource type="Script" uid="uid://c8c80cw43axdp" path="res://components/chapter2/levels/goma-nakivale/desert_bus/desert_area.gd" id="72_78vps"]
 [ext_resource type="Script" uid="uid://bn0sxcor0g10k" path="res://components/utils/mechanics/area_trigger_anim.gd" id="73_5mn6d"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_3ogmi"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("57_y6q1w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("58_8oqhf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("59_3d65b")
-}, {
-"duration": 1.0,
-"texture": ExtResource("60_6oc3f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("61_idrs3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("62_7kpd7")
-}],
-"loop": true,
-"name": &"default",
-"speed": 7.0
-}]
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_66aia"]
 animations = [{
 "frames": [{
@@ -184,6 +158,35 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("36_45fiq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_78vps"]
+radius = 107.042046
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3ogmi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("57_y6q1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_8oqhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_3d65b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_6oc3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_idrs3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_7kpd7")
 }],
 "loop": true,
 "name": &"default",
@@ -342,12 +345,6 @@ texture = ExtResource("2_bing5")
 centered = false
 metadata/_edit_lock_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1384241759]
-position = Vector2(4845, 680)
-sprite_frames = SubResource("SpriteFrames_3ogmi")
-autoplay = "default"
-frame_progress = 0.91606015
-
 [node name="Enemiesprite1" type="Sprite2D" parent="." unique_id=821394077]
 position = Vector2(1939.9999, 637)
 rotation = 0.09407341
@@ -486,7 +483,7 @@ position = Vector2(4212, 0)
 [node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle3" unique_id=551550097 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("49_4l7c7")
 puzzle = NodePath("../DragDropPuzzle")
-spawn_trigger = NodePath("../../../CharWalking/Path2D/PathFollow2D/Amani/SpawnTrigger")
+spawn_trigger = NodePath("../ClickableNpc")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Puzzles/Puzzle3" unique_id=574541075 instance=ExtResource("47_e2evj")]
@@ -570,13 +567,26 @@ position = Vector2(-145.09254, 90.43037)
 position = Vector2(-102, -2.000002)
 scale = Vector2(0.85463023, 0.85463023)
 
+[node name="ClickableNpc" type="Area2D" parent="Puzzles/Puzzle3" unique_id=285121942]
+position = Vector2(635, 676)
+script = ExtResource("46_fm2bo")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzles/Puzzle3/ClickableNpc" unique_id=1648711224]
+shape = SubResource("CircleShape2D_78vps")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Puzzles/Puzzle3/ClickableNpc" unique_id=1384241759]
+sprite_frames = SubResource("SpriteFrames_3ogmi")
+autoplay = "default"
+frame_progress = 0.91606015
+
 [node name="Puzzle4" type="Node2D" parent="Puzzles" unique_id=2061981925]
 position = Vector2(5612, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle4" unique_id=2119628063 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("49_4l7c7")
 puzzle = NodePath("../DragDropPuzzle3")
-spawn_trigger = NodePath("../../../CharWalking/Path2D/PathFollow2D/Amani/SpawnTrigger")
+spawn_trigger = NodePath("../../../CharWalking/BodaBodaStopped")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Puzzles/Puzzle4" unique_id=986332597 instance=ExtResource("47_e2evj")]
