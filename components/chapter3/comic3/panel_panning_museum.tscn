@@ -10,19 +10,18 @@
 [node name="ScrollingBackground" parent="." unique_id=231777281 instance=ExtResource("1_ag5sf")]
 
 [node name="PanNode" parent="ScrollingBackground" index="0" unique_id=379019586]
-scale = Vector2(0.265, 0.265)
-final_pos_x = 200
+final_pos_x = 1356
 
 [node name="Background" parent="ScrollingBackground/PanNode" index="0" unique_id=524227348]
-position = Vector2(-456.60376, 0)
+position = Vector2(-789, 0)
 texture = ExtResource("4_53u8b")
 
 [node name="Signals" type="Sprite2D" parent="ScrollingBackground/PanNode/Background" index="0" unique_id=1088341563]
-position = Vector2(-1358.4906, 894.3396)
+position = Vector2(-348, 252)
 texture = ExtResource("4_v4bin")
 
 [node name="Zlata" parent="ScrollingBackground" unique_id=700974070 instance=ExtResource("3_yjq3x")]
-position = Vector2(-184, 285)
+position = Vector2(-184, 307)
 scale = Vector2(0.61, 0.61)
 script = null
 

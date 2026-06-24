@@ -148,15 +148,17 @@ size = Vector2(359.99463, 145.00256)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v48gm"]
 size = Vector2(268.019, 145.00256)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ntkgk"]
+radius = 136.18002
+
 [sub_resource type="Curve2D" id="Curve2D_nm25k"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 576, 777, 0, 0, 0, 0, 1937, 810, -194.87175, 14.030766, 194.87175, -14.030766, 2683, 705, 0, 0, 0, 0, 3144, 697, 0, 0, 0, 0, 6222, 779)
 }
 point_count = 5
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hsmfu"]
-radius = 48.0
-height = 212.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_0tndx"]
+radius = 130.34146
 
 [node name="Nakivale" type="Node2D" unique_id=987125979]
 
@@ -235,7 +237,7 @@ position = Vector2(1014, 0)
 [node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle1" unique_id=261562117 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("11_hsmfu")
 puzzle = NodePath("../DragDropPuzzle")
-spawn_trigger = NodePath("../../../Path2D/PathFollow2D/Amani/SpawnTrigger")
+spawn_trigger = NodePath("../ClickableNpc")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Puzzles/Puzzle1" unique_id=310843140 instance=ExtResource("12_isbuh")]
@@ -337,13 +339,21 @@ position = Vector2(275, -29)
 position = Vector2(36, -158)
 texture = ExtResource("36_0tndx")
 
+[node name="ClickableNpc" type="Area2D" parent="Puzzles/Puzzle1" unique_id=1473088043]
+position = Vector2(434, 650)
+script = ExtResource("6_isbuh")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzles/Puzzle1/ClickableNpc" unique_id=736176060]
+shape = SubResource("CircleShape2D_ntkgk")
+
 [node name="Puzzle2" type="Node2D" parent="Puzzles" unique_id=2004378291]
 position = Vector2(2741, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle2" unique_id=1077710549 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("11_hsmfu")
 puzzle = NodePath("../DragDropPuzzle2")
-spawn_trigger = NodePath("../../../Path2D/PathFollow2D/Amani/SpawnTrigger")
+spawn_trigger = NodePath("../ClickableNpc")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Puzzles/Puzzle2" unique_id=212597287 instance=ExtResource("12_isbuh")]
@@ -494,6 +504,14 @@ position = Vector2(-10.000272, 104.44441)
 [node name="HideOnComplete" type="Node" parent="Puzzles/Puzzle2/DragDropPuzzle2" unique_id=2075786087]
 script = ExtResource("60_nm25k")
 
+[node name="ClickableNpc" type="Area2D" parent="Puzzles/Puzzle2" unique_id=739590394]
+position = Vector2(856, 597)
+script = ExtResource("6_isbuh")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzles/Puzzle2/ClickableNpc" unique_id=1636042743]
+shape = SubResource("CircleShape2D_ntkgk")
+
 [node name="Puzzle3" type="Node2D" parent="Puzzles" unique_id=129801294]
 position = Vector2(4068, 0)
 
@@ -588,7 +606,7 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Amani/SpawnTrigger" unique_id=967471748]
 position = Vector2(0, 37)
-shape = SubResource("CapsuleShape2D_hsmfu")
+shape = SubResource("CircleShape2D_0tndx")
 
 [node name="Companion" parent="Path2D/PathFollow2D" unique_id=1753872610 node_paths=PackedStringArray("model", "path_follow") instance=ExtResource("4_nonyt")]
 position = Vector2(113.017395, -1.4815674)

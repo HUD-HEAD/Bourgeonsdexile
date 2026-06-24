@@ -1,16 +1,45 @@
 [gd_scene format=3 uid="uid://cudd3kgt36aqv"]
 
 [ext_resource type="Texture2D" uid="uid://ddaamgfg2qpfl" path="res://graphics/chapter3/comics/comic3/pierogi/pierogi.png" id="1_dj46o"]
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_rcyhn"]
+[ext_resource type="Texture2D" uid="uid://dw1ffqln4bwi3" path="res://graphics/chapter3/comics/comic3/pierogi/pierogi2.png" id="3_lw44l"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="4_6hu0n"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_gne1w"]
+[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/mechanics/click_hide.gd" id="4_lw44l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6hu0n"]
+radius = 710.2035
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_crxkc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dj46o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lw44l")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="C33Panel1" type="Node2D" unique_id=1800611031]
 
-[node name="Pierogi" type="Sprite2D" parent="." unique_id=549834714]
-position = Vector2(-1, 0)
-texture = ExtResource("1_dj46o")
-
-[node name="TransitionerPassive" type="Node" parent="." unique_id=1732337141]
-script = ExtResource("2_rcyhn")
-metadata/_custom_type_script = "uid://u4636s8oa5d0"
-
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=257576506]
+
+[node name="Clickable" type="Area2D" parent="." unique_id=1140519436]
+script = ExtResource("4_lw44l")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1177053099]
+shape = SubResource("CircleShape2D_6hu0n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1682918539 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_crxkc")
+script = ExtResource("4_6hu0n")
+clickable = NodePath("../Clickable")
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=1283750251 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_gne1w")
+clickables = [NodePath("../Clickable")]
+metadata/_custom_type_script = "uid://c44tybeisilbv"

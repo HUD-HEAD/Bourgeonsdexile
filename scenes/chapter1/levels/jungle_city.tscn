@@ -345,8 +345,8 @@ animations = [{
 "speed": 30.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vdiy3"]
-size = Vector2(102, 102)
+[sub_resource type="CircleShape2D" id="CircleShape2D_sn4xa"]
+radius = 103.05945
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tvwsl"]
 animations = [{
@@ -531,10 +531,6 @@ animations = [{
 "name": &"default",
 "speed": 30.0
 }]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6i01r"]
-radius = 33.0
-height = 194.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dj73k"]
 animations = [{
@@ -904,9 +900,6 @@ animations = [{
 "speed": 30.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6i01r"]
-size = Vector2(140, 155)
-
 [node name="JungleCity" type="Node2D" unique_id=987125979]
 
 [node name="Background" type="CanvasLayer" parent="." unique_id=856416823]
@@ -1028,7 +1021,7 @@ position = Vector2(0, -28)
 script = ExtResource("16_0tvtc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle1/Npc1/Clickable" unique_id=671028984]
-shape = SubResource("RectangleShape2D_vdiy3")
+shape = SubResource("CircleShape2D_sn4xa")
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Puzzle1/Npc1" unique_id=1263751325]
 position = Vector2(-1, -132)
@@ -1092,7 +1085,7 @@ position = Vector2(0, -28)
 script = ExtResource("16_0tvtc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle2/Npc2/Clickable" unique_id=109597285]
-shape = SubResource("RectangleShape2D_vdiy3")
+shape = SubResource("CircleShape2D_sn4xa")
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Puzzle2/Npc2" unique_id=134893488]
 position = Vector2(-3, -122)
@@ -1141,7 +1134,7 @@ position = Vector2(0, -3)
 script = ExtResource("16_0tvtc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle3/Npc2/Clickable" unique_id=82456525]
-shape = SubResource("CapsuleShape2D_6i01r")
+shape = SubResource("CircleShape2D_sn4xa")
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Puzzle3/Npc2" unique_id=1466778928]
 position = Vector2(2, -127)
@@ -1199,7 +1192,7 @@ script = ExtResource("16_0tvtc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle4/Npc1/Clickable" unique_id=938843215]
 position = Vector2(2, -3.5)
-shape = SubResource("RectangleShape2D_6i01r")
+shape = SubResource("CircleShape2D_sn4xa")
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Puzzle4/Npc1" unique_id=790382731]
 position = Vector2(-2, -145)
