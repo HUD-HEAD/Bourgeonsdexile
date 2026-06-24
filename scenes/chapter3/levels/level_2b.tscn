@@ -683,42 +683,11 @@ script = ExtResource("5_kh7pe")
 position = Vector2(-27, 480.00003)
 scale = Vector2(0.37, 0.37)
 
-[node name="PuzzleStreet" type="Node2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="3" unique_id=1010078163]
-position = Vector2(3241, 0)
-
-[node name="PuzzleSpawner" type="Node" parent="WayTo/PuzzleStreet" index="0" unique_id=1956292307 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
-script = ExtResource("3_mmuft")
-puzzle = NodePath("../DragDropPuzzle6")
-spawn_trigger = NodePath("../Clickable")
-obstacle = NodePath("../Obstacle")
-
-[node name="Obstacle" parent="WayTo/PuzzleStreet" index="1" unique_id=1897111441 instance=ExtResource("4_7eiwe")]
-collision_mask = 2
-script = ExtResource("5_kh7pe")
-
-[node name="Clickable" type="Area2D" parent="WayTo/PuzzleStreet" index="2" unique_id=652852650]
-position = Vector2(252, 856.00006)
-scale = Vector2(0.65, 0.65)
-script = ExtResource("6_5a67c")
-metadata/_custom_type_script = "uid://ba2byqse4kn1f"
-
-[node name="Npc2" type="AnimatedSprite2D" parent="WayTo/PuzzleStreet/Clickable" index="0" unique_id=1338612896]
-position = Vector2(0, 70)
-sprite_frames = SubResource("SpriteFrames_yq4k0")
-autoplay = "default"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WayTo/PuzzleStreet/Clickable" index="1" unique_id=2074681823]
-shape = SubResource("CircleShape2D_0e4sh")
-
-[node name="DragDropPuzzle6" parent="WayTo/PuzzleStreet" index="3" unique_id=886073334 instance=ExtResource("3_dobb3")]
-position = Vector2(124, 726)
-scale = Vector2(0.355, 0.355)
-
-[node name="Car3" type="Sprite2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="4" unique_id=1474993109]
+[node name="Car3" type="Sprite2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="3" unique_id=1474993109]
 position = Vector2(2196, 848)
 texture = ExtResource("137_rrnem")
 
-[node name="BusFront" type="Sprite2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="5" unique_id=984176330]
+[node name="BusFront" type="Sprite2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="4" unique_id=984176330]
 position = Vector2(2083, 830)
 texture = ExtResource("136_es0uy")
 
@@ -747,6 +716,37 @@ script = ExtResource("5_kh7pe")
 [node name="DragDropPuzzle4" parent="WayBack/PuzzleLullaby" index="2" unique_id=1767003607 instance=ExtResource("2_0g5ql")]
 position = Vector2(8.999985, 449)
 scale = Vector2(0.425, 0.425)
+
+[node name="PuzzleStreet" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="3" unique_id=1010078163]
+position = Vector2(3531, 0)
+
+[node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleStreet" index="0" unique_id=1956292307 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
+script = ExtResource("3_mmuft")
+puzzle = NodePath("../DragDropPuzzle6")
+spawn_trigger = NodePath("../Clickable")
+obstacle = NodePath("../Obstacle")
+
+[node name="Obstacle" parent="WayBack/PuzzleStreet" index="1" unique_id=1897111441 instance=ExtResource("4_7eiwe")]
+collision_mask = 2
+script = ExtResource("5_kh7pe")
+
+[node name="Clickable" type="Area2D" parent="WayBack/PuzzleStreet" index="2" unique_id=652852650]
+position = Vector2(-294, 856.00006)
+scale = Vector2(0.65, 0.65)
+script = ExtResource("6_5a67c")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="Npc2" type="AnimatedSprite2D" parent="WayBack/PuzzleStreet/Clickable" index="0" unique_id=1338612896]
+position = Vector2(0, 70)
+sprite_frames = SubResource("SpriteFrames_yq4k0")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WayBack/PuzzleStreet/Clickable" index="1" unique_id=2074681823]
+shape = SubResource("CircleShape2D_0e4sh")
+
+[node name="DragDropPuzzle6" parent="WayBack/PuzzleStreet" index="3" unique_id=886073334 instance=ExtResource("3_dobb3")]
+position = Vector2(-175, 726)
+scale = Vector2(0.355, 0.355)
 
 [node name="PathBack" parent="." index="6" unique_id=2085482473]
 curve = SubResource("Curve2D_ahkc3")
