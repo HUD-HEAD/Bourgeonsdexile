@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dqxkmxxrq8tye" path="res://graphics/chapter3/comics/comic2/items/passport.png" id="9_d6rgs"]
 [ext_resource type="Texture2D" uid="uid://c5d8oibv5mjkp" path="res://graphics/chapter3/comics/comic2/items/phone.png" id="10_lbdmw"]
 [ext_resource type="Texture2D" uid="uid://cxxum8e34w37a" path="res://graphics/chapter3/comics/comic2/items/wallet.png" id="11_hi20t"]
+[ext_resource type="Texture2D" uid="uid://r8fpx8u54fps" path="res://graphics/chapter3/comics/comic2/items/suitcaseclose.png" id="13_nfays"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_26mdv"]
 size = Vector2(315, 173)
@@ -170,6 +171,10 @@ position = Vector2(0, -203)
 
 [node name="CollisionShape2D" parent="DragDropPuzzle/BuildingBlocks/Receptacle2" index="0" unique_id=1374156200]
 shape = SubResource("RectangleShape2D_yyo6u")
+
+[node name="CompletePuzzle" parent="DragDropPuzzle" index="2" unique_id=1933061263]
+position = Vector2(-12, -171)
+texture = ExtResource("13_nfays")
 
 [editable path="DragDropPuzzle"]
 [editable path="DragDropPuzzle/BuildingBlocks/PuzzlePiece"]

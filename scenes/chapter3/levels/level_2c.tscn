@@ -719,22 +719,22 @@ shape = SubResource("CircleShape2D_cse6j")
 next_scene = "uid://d4cccbwuwp1rh"
 metadata/_edit_pinned_properties_ = [&"next_scene"]
 
-[node name="PuzzleLullaby" type="Node2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="0" unique_id=13802618]
-position = Vector2(868, 0)
+[node name="PuzzleThinkHome" type="Node2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="0" unique_id=89541105]
+position = Vector2(854, 0)
 
-[node name="PuzzleSpawner" type="Node" parent="WayTo/PuzzleLullaby" index="0" unique_id=1463826562 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="WayTo/PuzzleThinkHome" index="0" unique_id=1714813389 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("7_eeffk")
-puzzle = NodePath("../DragDropPuzzle3")
+puzzle = NodePath("../Puzzle3")
 spawn_trigger = NodePath("../../../PathTo/PathFollowTo/Zlata/ZlataClickable")
 obstacle = NodePath("../Obstacle")
 
-[node name="Obstacle" parent="WayTo/PuzzleLullaby" index="1" unique_id=310843140 instance=ExtResource("8_hts78")]
+[node name="Obstacle" parent="WayTo/PuzzleThinkHome" index="1" unique_id=1643242313 instance=ExtResource("8_hts78")]
 collision_mask = 2
 script = ExtResource("9_f1pwt")
 
-[node name="DragDropPuzzle3" parent="WayTo/PuzzleLullaby" index="2" unique_id=1767003607 instance=ExtResource("2_fu3d2")]
-position = Vector2(-11, 521)
-scale = Vector2(0.375, 0.375)
+[node name="Puzzle3" parent="WayTo/PuzzleThinkHome" index="2" unique_id=1941159865 instance=ExtResource("5_4b6cm")]
+position = Vector2(118, 554)
+scale = Vector2(0.395, 0.395)
 
 [node name="PuzzleStreet" type="Node2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="1" unique_id=976364560]
 position = Vector2(3241, 0)
@@ -802,22 +802,22 @@ shape = SubResource("CircleShape2D_lxjsl")
 position = Vector2(-96, 772.00006)
 scale = Vector2(0.21, 0.21)
 
-[node name="PuzzleThinkHome" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="1" unique_id=89541105]
-position = Vector2(854, 0)
+[node name="PuzzleLullaby" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="1" unique_id=13802618]
+position = Vector2(868, 0)
 
-[node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleThinkHome" index="0" unique_id=1714813389 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleLullaby" index="0" unique_id=1463826562 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("7_eeffk")
-puzzle = NodePath("../Puzzle3")
+puzzle = NodePath("../DragDropPuzzle3")
 spawn_trigger = NodePath("../../../PathTo/PathFollowTo/Zlata/ZlataClickable")
 obstacle = NodePath("../Obstacle")
 
-[node name="Obstacle" parent="WayBack/PuzzleThinkHome" index="1" unique_id=1643242313 instance=ExtResource("8_hts78")]
+[node name="Obstacle" parent="WayBack/PuzzleLullaby" index="1" unique_id=310843140 instance=ExtResource("8_hts78")]
 collision_mask = 2
 script = ExtResource("9_f1pwt")
 
-[node name="Puzzle3" parent="WayBack/PuzzleThinkHome" index="2" unique_id=1941159865 instance=ExtResource("5_4b6cm")]
-position = Vector2(118, 554)
-scale = Vector2(0.395, 0.395)
+[node name="DragDropPuzzle3" parent="WayBack/PuzzleLullaby" index="2" unique_id=1767003607 instance=ExtResource("2_fu3d2")]
+position = Vector2(-11, 521)
+scale = Vector2(0.375, 0.375)
 
 [node name="Car1" type="Sprite2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="2" unique_id=1891267274]
 position = Vector2(4544, 862)
@@ -872,7 +872,7 @@ libraries/ = SubResource("AnimationLibrary_hxlkc")
 
 [node name="PuzzleTriggerAnim" type="Node" parent="AnimationPlayer" index="0" unique_id=329006578 node_paths=PackedStringArray("puzzle", "anim_player")]
 script = ExtResource("136_kuwon")
-puzzle = NodePath("../../WayBack/PuzzleThinkHome/Puzzle3")
+puzzle = NodePath("../../WayBack/PuzzleLullaby/DragDropPuzzle3")
 anim_player = NodePath("..")
 anim_name = "chapter_transition"
 

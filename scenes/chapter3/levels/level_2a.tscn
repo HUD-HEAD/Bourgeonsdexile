@@ -721,26 +721,26 @@ shape = SubResource("CircleShape2D_yfmg0")
 position = Vector2(-573, 461)
 next_scene = "uid://da1f6ve0kmn66"
 
-[node name="PuzzleLullaby" type="Node2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="0" unique_id=273347506]
-position = Vector2(859, 0)
+[node name="Car1" type="Sprite2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="0" unique_id=1135503537]
+position = Vector2(2507, 808)
+texture = ExtResource("10_gjepm")
 
-[node name="PuzzleSpawner" type="Node" parent="WayTo/PuzzleLullaby" index="0" unique_id=1053797870 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
+[node name="PuzzleThinkHome" type="Node2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="1" unique_id=1304675676]
+position = Vector2(904, 0)
+
+[node name="PuzzleSpawner" type="Node" parent="WayTo/PuzzleThinkHome" index="0" unique_id=206345537 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("2_hd8xs")
-puzzle = NodePath("../DragDropPuzzle5")
+puzzle = NodePath("../Puzzle1")
 spawn_trigger = NodePath("../../../PathTo/PathFollowTo/Zlata/ZlataClickable")
 obstacle = NodePath("../Obstacle")
 
-[node name="Obstacle" parent="WayTo/PuzzleLullaby" index="1" unique_id=310843140 instance=ExtResource("3_052ky")]
+[node name="Obstacle" parent="WayTo/PuzzleThinkHome" index="1" unique_id=114095440 instance=ExtResource("3_052ky")]
 collision_mask = 2
 script = ExtResource("8_yk8n7")
 
-[node name="DragDropPuzzle5" parent="WayTo/PuzzleLullaby" index="2" unique_id=1767003607 instance=ExtResource("2_80rf8")]
-position = Vector2(42, 435)
-scale = Vector2(0.46, 0.46)
-
-[node name="Car1" type="Sprite2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="1" unique_id=1135503537]
-position = Vector2(2507, 808)
-texture = ExtResource("10_gjepm")
+[node name="Puzzle1" parent="WayTo/PuzzleThinkHome" index="2" unique_id=1941159865 instance=ExtResource("5_rj8de")]
+position = Vector2(103, 524)
+scale = Vector2(0.31, 0.31)
 
 [node name="PuzzleStreet" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="0" unique_id=201431427]
 position = Vector2(3956, 0)
@@ -804,24 +804,7 @@ shape = SubResource("CircleShape2D_jrbug")
 position = Vector2(-121, 703)
 scale = Vector2(0.3, 0.3)
 
-[node name="PuzzleThinkHome" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="2" unique_id=1304675676]
-position = Vector2(904, 0)
-
-[node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleThinkHome" index="0" unique_id=206345537 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
-script = ExtResource("2_hd8xs")
-puzzle = NodePath("../Puzzle1")
-spawn_trigger = NodePath("../../../PathTo/PathFollowTo/Zlata/ZlataClickable")
-obstacle = NodePath("../Obstacle")
-
-[node name="Obstacle" parent="WayBack/PuzzleThinkHome" index="1" unique_id=114095440 instance=ExtResource("3_052ky")]
-collision_mask = 2
-script = ExtResource("8_yk8n7")
-
-[node name="Puzzle1" parent="WayBack/PuzzleThinkHome" index="2" unique_id=1941159865 instance=ExtResource("5_rj8de")]
-position = Vector2(103, 524)
-scale = Vector2(0.31, 0.31)
-
-[node name="PuzzleSocialWorker" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="3" unique_id=1734062459]
+[node name="PuzzleSocialWorker" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="2" unique_id=1734062459]
 position = Vector2(1070, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleSocialWorker" index="0" unique_id=68113819 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
@@ -852,9 +835,26 @@ shape = SubResource("CircleShape2D_jrbug")
 position = Vector2(-111, 762)
 scale = Vector2(0.15, 0.15)
 
-[node name="Car4" type="Sprite2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="4" unique_id=1752701603]
+[node name="Car4" type="Sprite2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="3" unique_id=1752701603]
 position = Vector2(4070, 859)
 texture = ExtResource("140_lvjii")
+
+[node name="PuzzleLullaby" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="4" unique_id=273347506]
+position = Vector2(859, 0)
+
+[node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleLullaby" index="0" unique_id=1053797870 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
+script = ExtResource("2_hd8xs")
+puzzle = NodePath("../DragDropPuzzle5")
+spawn_trigger = NodePath("../../../PathTo/PathFollowTo/Zlata/ZlataClickable")
+obstacle = NodePath("../Obstacle")
+
+[node name="Obstacle" parent="WayBack/PuzzleLullaby" index="1" unique_id=310843140 instance=ExtResource("3_052ky")]
+collision_mask = 2
+script = ExtResource("8_yk8n7")
+
+[node name="DragDropPuzzle5" parent="WayBack/PuzzleLullaby" index="2" unique_id=1767003607 instance=ExtResource("2_80rf8")]
+position = Vector2(42, 435)
+scale = Vector2(0.46, 0.46)
 
 [node name="PathTo" parent="." index="5" unique_id=1272328632]
 curve = SubResource("Curve2D_pfjp3")
@@ -910,7 +910,7 @@ libraries/ = SubResource("AnimationLibrary_gjepm")
 
 [node name="TriggerAnim" type="Node" parent="AnimationPlayer" index="0" unique_id=1527896412 node_paths=PackedStringArray("puzzle", "anim_player")]
 script = ExtResource("134_gjepm")
-puzzle = NodePath("../../WayBack/PuzzleThinkHome/Puzzle1")
+puzzle = NodePath("../../WayBack/PuzzleLullaby/DragDropPuzzle5")
 anim_player = NodePath("..")
 anim_name = "chapter_transition"
 

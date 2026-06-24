@@ -1,24 +1,45 @@
 [gd_scene format=3 uid="uid://o2lunwmjplwk"]
 
-[ext_resource type="Texture2D" uid="uid://b3ql1et85gcss" path="res://graphics/chapter3/comics/comic1/framehospitaldoor/framehospital1.png" id="1_llcud"]
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_ti4td"]
 [ext_resource type="Script" uid="uid://bvmwxu2au5j5l" path="res://components/utils/audio/audio integration nodes/audio_sfx_zone.gd" id="3_43i6g"]
+[ext_resource type="PackedScene" uid="uid://bomhqj3lxkka3" path="res://components/utils/comics/scrolling_background.tscn" id="3_q8ies"]
 [ext_resource type="AudioStream" uid="uid://bomhmvp1w5rbk" path="res://audio/chapter3/ambient/comic 1/panel_1.16_street_sound.wav" id="4_2i8ul"]
+[ext_resource type="Texture2D" uid="uid://dwmnl17tpggnd" path="res://graphics/chapter3/levels/hospital/background_2.png" id="4_q8ies"]
+[ext_resource type="Texture2D" uid="uid://xul1vrbex2qv" path="res://graphics/chapter3/comics/comic3/museumentrance/signals.png" id="5_fodtb"]
+[ext_resource type="PackedScene" uid="uid://dy84a73ucflwu" path="res://components/chapter3/main_characters/zlata.tscn" id="6_aa60h"]
+[ext_resource type="SpriteFrames" uid="uid://dc8towwetalbq" path="res://components/chapter3/main_characters/zlata_stroller_sprite_frames.tres" id="7_2k1cp"]
 
 [node name="PanelDoctors" type="Node2D" unique_id=162787811]
-
-[node name="Framehospital1" type="Sprite2D" parent="." unique_id=114135818]
-position = Vector2(-1, 0)
-texture = ExtResource("1_llcud")
-
-[node name="TransitionerPassive" type="Node" parent="." unique_id=216011709]
-script = ExtResource("2_ti4td")
-metadata/_custom_type_script = "uid://u4636s8oa5d0"
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1410360656]
 
 [node name="AudioSfxZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=1431334996]
 script = ExtResource("3_43i6g")
 use_audio_stream = true
 stream = ExtResource("4_2i8ul")
 metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
+
+[node name="ScrollingBackground" parent="." unique_id=231777281 instance=ExtResource("3_q8ies")]
+
+[node name="PanNode" parent="ScrollingBackground" index="0" unique_id=379019586]
+final_pos_x = 2610
+
+[node name="Background" parent="ScrollingBackground/PanNode" index="0" unique_id=524227348]
+position = Vector2(-2620, 0)
+texture = ExtResource("4_q8ies")
+
+[node name="Signals" type="Sprite2D" parent="ScrollingBackground/PanNode/Background" index="0" unique_id=223241707]
+position = Vector2(-1358.4906, 894.3396)
+texture = ExtResource("5_fodtb")
+
+[node name="Zlata" parent="ScrollingBackground" unique_id=700974070 instance=ExtResource("6_aa60h")]
+position = Vector2(311, 395)
+script = null
+
+[node name="AnimSprite" parent="ScrollingBackground/Zlata" index="0" unique_id=689873547]
+sprite_frames = ExtResource("7_2k1cp")
+autoplay = "walking"
+flip_h = true
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1851565622]
+rect = Rect2(-904, -429, 1793, 885)
+
+[editable path="ScrollingBackground"]
+[editable path="ScrollingBackground/Zlata"]

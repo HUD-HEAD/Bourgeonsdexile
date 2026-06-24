@@ -86,6 +86,7 @@ position = Vector2(-126, 26)
 shape = SubResource("RectangleShape2D_yfmg0")
 
 [node name="Reels" type="Sprite2D" parent="Bg2/BuildingApt/BuildingOutside" unique_id=1079789929]
+modulate = Color(1.6608336, 1.6608336, 1.6608336, 1)
 position = Vector2(6, -208)
 texture = ExtResource("6_ovumn")
 
