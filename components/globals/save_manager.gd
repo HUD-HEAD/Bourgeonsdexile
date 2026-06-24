@@ -78,9 +78,16 @@ func unlock_chapter(chapter_id: int = -1):
 # ── Menu ───────────────────────────────────
 func update_menu_buttons():
 	#Calls menu component to update each button
-	var main_menu_reference: MainMenu = get_tree().root.get_node("MainMenu") as MainMenu 
-	if main_menu_reference:
-		main_menu_reference.update_chapter_buttons() 
+	if get_tree().root.has_node("MainMenu"):
+		var main_menu_reference: MainMenu = get_tree().root.get_node("MainMenu") as MainMenu 
+		if main_menu_reference:
+			main_menu_reference.update_chapter_buttons() 
+	else:
+		await get_tree().create_timer(0.5).timeout
+		if get_tree().root.has_node("MainMenu"):
+			var main_menu_reference: MainMenu = get_tree().root.get_node("MainMenu") as MainMenu 
+			if main_menu_reference:
+				main_menu_reference.update_chapter_buttons() 
 
 # ── Save file funcs ───────────────────────────────────
 func reset_save_file():
