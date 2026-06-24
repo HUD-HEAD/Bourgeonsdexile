@@ -11,5 +11,7 @@ func _process(_delta):
 
 #TODO move out / rename node
 func _face_path():
+	if woman.global_position.x == prev_pos.x:
+		return
 	woman.anim_sprite.flip_h = woman.global_position.x < prev_pos.x
 	prev_pos = woman.global_position
