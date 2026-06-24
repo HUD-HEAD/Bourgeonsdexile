@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://pvmnc7iirc1n"]
 
-[ext_resource type="Texture2D" uid="uid://coofvgiac5fb3" path="res://graphics/chapter3/comics/comic1/cutting/1.png" id="1_ciefs"]
-[ext_resource type="Texture2D" uid="uid://dean07dndwjam" path="res://graphics/chapter3/comics/comic1/cutting/2.png" id="2_xnpv8"]
+[ext_resource type="Texture2D" uid="uid://hiuugx5x6rtf" path="res://graphics/chapter3/comics/comic1/skintoskin/2.png" id="1_62apk"]
+[ext_resource type="Texture2D" uid="uid://iode1gd3wgfg" path="res://graphics/chapter3/comics/comic1/skintoskin/3.png" id="2_ej67h"]
 [ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="3_2h6xf"]
 [ext_resource type="Texture2D" uid="uid://ca3e1tygpqiwf" path="res://graphics/chapter3/comics/comic1/cutting/tijeras.png" id="3_h3y6k"]
 [ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/mechanics/area_entered_enable.gd" id="5_2h6xf"]
@@ -13,10 +13,10 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_ciefs")
+"texture": ExtResource("1_62apk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_xnpv8")
+"texture": ExtResource("2_ej67h")
 }],
 "loop": false,
 "name": &"default",
@@ -88,7 +88,7 @@ _data = {
 sprite_frames = SubResource("SpriteFrames_f4xom")
 
 [node name="Scissors" type="Area2D" parent="." unique_id=296403946]
-position = Vector2(426, 303.00003)
+position = Vector2(652, 223)
 rotation = -1.8831195
 scale = Vector2(0.99999994, 0.99999994)
 script = ExtResource("3_2h6xf")
@@ -108,7 +108,7 @@ position = Vector2(22.774628, -200.71202)
 shape = SubResource("CircleShape2D_62apk")
 
 [node name="CutArea" type="Area2D" parent="." unique_id=40819733 node_paths=PackedStringArray("node_to_enable")]
-position = Vector2(-34, 133)
+position = Vector2(187, 259)
 collision_layer = 0
 input_pickable = false
 script = ExtResource("5_2h6xf")

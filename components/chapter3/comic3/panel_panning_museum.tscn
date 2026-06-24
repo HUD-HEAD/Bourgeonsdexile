@@ -33,7 +33,5 @@ flip_h = true
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=546815014]
 rect = Rect2(-904, -429, 1793, 885)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1598365616]
-
 [editable path="ScrollingBackground"]
 [editable path="ScrollingBackground/Zlata"]

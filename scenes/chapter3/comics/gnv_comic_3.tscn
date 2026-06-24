@@ -61,44 +61,44 @@ position = Vector2(7258, 0)
 position = Vector2(9609, 0)
 
 [node name="C33Panel2" parent="Panels" unique_id=633067760 instance=ExtResource("14_h0n83")]
-position = Vector2(10920, 0)
+position = Vector2(11857, 0)
 
 [node name="C33Panel3" parent="Panels" unique_id=1326103133 instance=ExtResource("15_q26rv")]
-position = Vector2(13133, 0)
+position = Vector2(14070, 0)
 
 [node name="C33Panel4" parent="Panels" unique_id=2046769291 instance=ExtResource("16_xhsn2")]
-position = Vector2(15281, -11)
+position = Vector2(16218, -11)
 
 [node name="C33Panel5" parent="Panels" unique_id=666202683 instance=ExtResource("17_xhsn2")]
-position = Vector2(17595, 0)
+position = Vector2(18532, 0)
 
 [node name="C33Panel6" parent="Panels" unique_id=903902431 instance=ExtResource("18_ej0hg")]
-position = Vector2(19651, 0)
+position = Vector2(20588, 0)
 
 [node name="C33Panel7" parent="Panels" unique_id=175912677 instance=ExtResource("19_xgelu")]
-position = Vector2(21870, 0)
+position = Vector2(22807, 0)
 
 [node name="C33Panel12" parent="Panels" unique_id=20670636 instance=ExtResource("12_ej0hg")]
-position = Vector2(23779, 0)
+position = Vector2(24716, 0)
 
 [node name="C33Panel11" parent="Panels" unique_id=1156264135 instance=ExtResource("13_ej0hg")]
-position = Vector2(25757, -22)
+position = Vector2(26694, -22)
 
 [node name="C33Panel10" parent="Panels" unique_id=1572821537 instance=ExtResource("12_xhsn2")]
-position = Vector2(27983, -30)
+position = Vector2(28920, -30)
 scale = Vector2(0.76, 0.76)
 
 [node name="C33Panel14" parent="Panels" unique_id=1833437315 instance=ExtResource("15_e6yg5")]
-position = Vector2(29917, 0)
+position = Vector2(30854, 0)
 
 [node name="PanelFriends" parent="Panels" unique_id=897828462 instance=ExtResource("16_e6yg5")]
-position = Vector2(31698, 0)
+position = Vector2(32635, 0)
 
 [node name="PanelPanningMuseum" parent="Panels" unique_id=1673791543 instance=ExtResource("15_xgelu")]
-position = Vector2(34271, 0)
+position = Vector2(35208, 0)
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="Panels" unique_id=1628058061]
-position = Vector2(36248, 56)
+position = Vector2(37185, 56)
 script = ExtResource("15_h0n83")
 next_scene = "uid://bewuaqd6css6q"
 
