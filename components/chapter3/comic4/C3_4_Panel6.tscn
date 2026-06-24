@@ -1,19 +1,108 @@
 [gd_scene format=3 uid="uid://7hhur4kakw2r"]
 
 [ext_resource type="Texture2D" uid="uid://dh64u415002ah" path="res://graphics/chapter3/comics/comic4/museecroixrouge/1.png" id="1_241go"]
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="2_3r1gd"]
 [ext_resource type="Script" uid="uid://bvmwxu2au5j5l" path="res://components/utils/audio/audio integration nodes/audio_sfx_zone.gd" id="3_3r1gd"]
 [ext_resource type="AudioStream" uid="uid://235fow1k2tpi" path="res://audio/chapter3/ambient/comic 4/panel_4.7_street_museum_sound.wav" id="4_e3x47"]
+[ext_resource type="VideoStream" uid="uid://c2vx6xb2yymgr" path="res://video/ch3_video_outro.ogv" id="4_sryqi"]
+[ext_resource type="Script" uid="uid://oqhhwb6aug4h" path="res://components/utils/comics/chapter_ender.gd" id="5_sryqi"]
+[ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/mechanics/click_enable.gd" id="6_sryqi"]
+
+[sub_resource type="Animation" id="Animation_dj4mm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VideoStreamPlayer:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Clickable:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_e3x47"]
+resource_name = "default"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VideoStreamPlayer:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VideoStreamPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ChapterEnder")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(30),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"trigger_scene_transition"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Clickable:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dj4mm"]
+_data = {
+&"RESET": SubResource("Animation_dj4mm"),
+&"default": SubResource("Animation_e3x47")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_466nx"]
+radius = 1061.0018
 
 [node name="C34Panel6" type="Node2D" unique_id=1800611031]
 
 [node name="museum" type="Sprite2D" parent="." unique_id=972873342]
-position = Vector2(2, -2)
 texture = ExtResource("1_241go")
-
-[node name="TransitionerPassive" type="Node" parent="." unique_id=342042615]
-script = ExtResource("2_3r1gd")
-metadata/_custom_type_script = "uid://u4636s8oa5d0"
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1404595436]
 
@@ -23,3 +112,36 @@ script = ExtResource("3_3r1gd")
 use_audio_stream = true
 stream = ExtResource("4_e3x47")
 metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=416025288]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+stream = ExtResource("4_sryqi")
+volume_db = -80.0
+loop = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=434632613]
+libraries/ = SubResource("AnimationLibrary_dj4mm")
+autoplay = &"default"
+
+[node name="ChapterEnder" type="Node" parent="." unique_id=884222374]
+script = ExtResource("5_sryqi")
+chapter_index = 2
+metadata/_custom_type_script = "uid://oqhhwb6aug4h"
+
+[node name="Clickable" type="Area2D" parent="." unique_id=1719990238 node_paths=PackedStringArray("node_to_enable")]
+script = ExtResource("6_sryqi")
+node_to_enable = NodePath("../AnimationPlayer")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=81915500]
+shape = SubResource("CircleShape2D_466nx")
