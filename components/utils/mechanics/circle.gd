@@ -18,4 +18,5 @@ class_name Circle
 		queue_redraw()
 
 func _draw():
-	draw_circle(Vector2(0,0), radius, Color.WHITE, filled, width, true)
+	var _actual_width : float = -1.0 if filled else width
+	draw_circle(Vector2(0,0), radius, Color.WHITE, filled, _actual_width, true)
