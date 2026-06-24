@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://c7v7368h5n57f"]
 
-[ext_resource type="Texture2D" uid="uid://ko2uf4sgf1y7" path="res://graphics/chapter3/levels/hospital/level.png" id="1_5yy0j"]
 [ext_resource type="PackedScene" uid="uid://dy84a73ucflwu" path="res://components/chapter3/main_characters/zlata.tscn" id="2_0xeah"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="3_q0nn3"]
 [ext_resource type="PackedScene" uid="uid://vgm33l25gl23" path="res://components/chapter3/levels/level3.1/drag_drop_puzzle_3.1-1.tscn" id="5_ihdby"]
+[ext_resource type="Texture2D" uid="uid://clvsqmlpe403g" path="res://graphics/chapter3/levels/hospital/background_0.png" id="5_ru515"]
 [ext_resource type="PackedScene" uid="uid://boui2uiurwlf2" path="res://components/chapter3/levels/level3.1/drag_drop_puzzle_3.1-2.tscn" id="6_3oq03"]
+[ext_resource type="Texture2D" uid="uid://cs6f7gng7d1dc" path="res://graphics/chapter3/levels/hospital/background_1.png" id="6_g4m3t"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="6_g24i2"]
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="6_unyww"]
+[ext_resource type="Texture2D" uid="uid://dwmnl17tpggnd" path="res://graphics/chapter3/levels/hospital/background_2.png" id="7_b1c3r"]
 [ext_resource type="Texture2D" uid="uid://cxylr6a40orij" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0001.png" id="7_kervo"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/mechanics/obstacle.tscn" id="7_q7f5r"]
 [ext_resource type="PackedScene" uid="uid://bf4jtrxfhkmon" path="res://components/chapter3/levels/level3.1/drag_drop_puzzle_3.1-3.tscn" id="7_unyww"]
@@ -584,26 +586,38 @@ _data = {
 [node name="Level31" type="Node2D" unique_id=2125939091]
 metadata/_edit_vertical_guides_ = [-21158.0, -4732.0, -15793.0, -10241.0]
 
-[node name="Level" type="Sprite2D" parent="." unique_id=1076385342]
+[node name="Background" type="Node2D" parent="." unique_id=23711024]
+
+[node name="Background0" type="Sprite2D" parent="Background" unique_id=670057730]
 position = Vector2(-22033, 0)
-texture = ExtResource("1_5yy0j")
+texture = ExtResource("5_ru515")
 centered = false
 
-[node name="ClickableTickets" type="Area2D" parent="Level" unique_id=165422128]
-position = Vector2(420, 629)
+[node name="Background1" type="Sprite2D" parent="Background/Background0" unique_id=599916837]
+position = Vector2(7986, 0)
+texture = ExtResource("6_g4m3t")
+centered = false
+
+[node name="Background2" type="Sprite2D" parent="Background/Background0/Background1" unique_id=2127923680]
+position = Vector2(7986, 0)
+texture = ExtResource("7_b1c3r")
+centered = false
+
+[node name="ClickableTickets" type="Area2D" parent="Background" unique_id=165422128]
+position = Vector2(-21613, 629)
 script = ExtResource("6_g24i2")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
-[node name="Tickets" type="Sprite2D" parent="Level/ClickableTickets" unique_id=667212540]
+[node name="Tickets" type="Sprite2D" parent="Background/ClickableTickets" unique_id=667212540]
 scale = Vector2(1.19049, 1.19049)
 texture = ExtResource("146_v81oq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/ClickableTickets" unique_id=636768214]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/ClickableTickets" unique_id=636768214]
 position = Vector2(4, -99)
 shape = SubResource("RectangleShape2D_fbeob")
 
-[node name="Shadow" type="Sprite2D" parent="Level" unique_id=1211457584]
-position = Vector2(8176, 876)
+[node name="Shadow" type="Sprite2D" parent="Background" unique_id=1211457584]
+position = Vector2(-13457, 782)
 texture = ExtResource("136_44fmv")
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1294251435]
@@ -722,7 +736,7 @@ position = Vector2(-21449, -3)
 [node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle3" unique_id=311351916 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("6_unyww")
 puzzle = NodePath("../DragDropPuzzle3")
-spawn_trigger = NodePath("../../../Level/ClickableTickets")
+spawn_trigger = NodePath("../../../Background/ClickableTickets")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Puzzles/Puzzle3" unique_id=536151000 instance=ExtResource("7_q7f5r")]

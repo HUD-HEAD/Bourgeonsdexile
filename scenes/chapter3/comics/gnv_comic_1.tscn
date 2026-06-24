@@ -67,7 +67,7 @@ loop_name = 3101
 metadata/_custom_type_script = "uid://brda7473wfj1v"
 
 [node name="PanelDoctors14" parent="Panels" unique_id=733880654 instance=ExtResource("4_ma0sg")]
-position = Vector2(8865, 0)
+position = Vector2(8865, 2493)
 
 [node name="AudioSfxZone" type="VisibleOnScreenNotifier2D" parent="Panels/PanelDoctors14" unique_id=541950347]
 position = Vector2(13, 26)
@@ -78,10 +78,10 @@ stream = ExtResource("9_e5lk4")
 metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
 
 [node name="PanelBreastfeeding" parent="Panels" unique_id=255172973 instance=ExtResource("20_joktj")]
-position = Vector2(10913, 0)
+position = Vector2(9281, 0)
 
 [node name="PanelDoctors4" parent="Panels" unique_id=1160904745 instance=ExtResource("9_eg8ad")]
-position = Vector2(13636, 0)
+position = Vector2(12004, 0)
 
 [node name="StopSfx" type="VisibleOnScreenNotifier2D" parent="Panels/PanelDoctors4" unique_id=628366612]
 position = Vector2(1540, 26)
@@ -90,35 +90,35 @@ script = ExtResource("6_hqybl")
 metadata/_custom_type_script = "uid://ccgnalbw7s5yu"
 
 [node name="PanelDoctors2" parent="Panels" unique_id=1619880758 instance=ExtResource("7_ra6tx")]
-position = Vector2(16271, 0)
+position = Vector2(14639, 0)
 
 [node name="PanelDoctors3" parent="Panels" unique_id=301524498 instance=ExtResource("8_hh7t8")]
-position = Vector2(18460, 0)
+position = Vector2(16828, 0)
 
 [node name="PanelDoctors5" parent="Panels" unique_id=55042391 instance=ExtResource("10_lrvjo")]
-position = Vector2(20583, 0)
+position = Vector2(18951, 0)
 
 [node name="PanelDoctors6" parent="Panels" unique_id=1389191379 instance=ExtResource("11_hh7t8")]
-position = Vector2(22819, 0)
+position = Vector2(21187, 0)
 
 [node name="PanelDoctors7" parent="Panels" unique_id=1837064499 instance=ExtResource("12_eg8ad")]
-position = Vector2(25003, 0)
+position = Vector2(23371, 0)
 
 [node name="PanelDoctors8" parent="Panels" unique_id=1860716632 instance=ExtResource("13_lrvjo")]
-position = Vector2(27225, 0)
+position = Vector2(25593, 0)
 
 [node name="PanelDoctors9" parent="Panels" unique_id=1445255210 instance=ExtResource("14_1uikj")]
-position = Vector2(29661, 0)
+position = Vector2(28029, 0)
 
 [node name="PanelDoctors10" parent="Panels" unique_id=411523805 instance=ExtResource("15_be7uh")]
-position = Vector2(32060, 0)
+position = Vector2(30428, 0)
 
 [node name="PanelDoctors11" parent="Panels" unique_id=1284468193 instance=ExtResource("16_xbw0h")]
-position = Vector2(34321, 0)
+position = Vector2(32689, 0)
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("21_rh3md")
-panels = [NodePath("../Panels/PanelDoctors"), NodePath("../Panels/PanelDoctors12"), NodePath("../Panels/PanelDoctors13"), NodePath("../Panels/PanelDoctors14"), NodePath("../Panels/PanelBreastfeeding"), NodePath("../Panels/PanelDoctors4"), NodePath("../Panels/PanelDoctors2"), NodePath("../Panels/PanelDoctors3"), NodePath("../Panels/PanelDoctors5"), NodePath("../Panels/PanelDoctors6"), NodePath("../Panels/PanelDoctors7"), NodePath("../Panels/PanelDoctors8"), NodePath("../Panels/PanelDoctors9"), NodePath("../Panels/PanelDoctors10"), NodePath("../Panels/PanelDoctors11"), NodePath("../SceneEnder")]
+panels = [NodePath("../Panels/PanelDoctors"), NodePath("../Panels/PanelDoctors12"), NodePath("../Panels/PanelDoctors13"), NodePath("../Panels/PanelBreastfeeding"), NodePath("../Panels/PanelDoctors4"), NodePath("../Panels/PanelDoctors2"), NodePath("../Panels/PanelDoctors3"), NodePath("../Panels/PanelDoctors5"), NodePath("../Panels/PanelDoctors6"), NodePath("../Panels/PanelDoctors7"), NodePath("../Panels/PanelDoctors8"), NodePath("../Panels/PanelDoctors9"), NodePath("../Panels/PanelDoctors10"), NodePath("../Panels/PanelDoctors11"), NodePath("../SceneEnder")]
 
 [node name="Audio" type="Node" parent="." unique_id=619569792]
 
@@ -130,7 +130,7 @@ music_name = 3100
 metadata/_custom_type_script = "uid://2aadlm17sdsf"
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=849983846]
-position = Vector2(35649, 596)
+position = Vector2(34017, 596)
 script = ExtResource("20_u5654")
 next_scene = "uid://c7v7368h5n57f"
 
