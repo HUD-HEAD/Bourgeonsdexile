@@ -156,6 +156,7 @@ offset_bottom = 941.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("10_b8wrl")
 script = ExtResource("15_8hoqd")
+chapter_scene = "uid://dgdu011yhqlj2"
 chapter_index = 2
 
 [node name="Settings" type="TextureButton" parent="Fullscreen" unique_id=991265530]
