@@ -37,16 +37,16 @@ position = Vector2(-162, -45)
 texture = ExtResource("6_f5drj")
 
 [node name="Hand" type="Sprite2D" parent="." unique_id=1372761838]
-position = Vector2(193, -101)
+position = Vector2(195, -101)
 texture = ExtResource("7_unwt1")
 
 [node name="Clickable" type="Area2D" parent="." unique_id=670093965 node_paths=PackedStringArray("nodes_to_show")]
+position = Vector2(-153, -81)
 script = ExtResource("8_dtkq6")
 nodes_to_show = [NodePath("../Hand")]
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1897844029]
-position = Vector2(-156.5, -50.5)
 shape = SubResource("RectangleShape2D_1nduf")
 
 [node name="TransitionerCounter" type="Node" parent="." unique_id=569320778 node_paths=PackedStringArray("clickables")]

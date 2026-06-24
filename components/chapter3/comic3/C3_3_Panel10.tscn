@@ -2,7 +2,23 @@
 
 [ext_resource type="Texture2D" uid="uid://bv8h3s13wsgfo" path="res://graphics/chapter3/comics/comic3/exam/bg.png" id="1_ah0e4"]
 [ext_resource type="Texture2D" uid="uid://d2pjq4k1saqah" path="res://graphics/chapter3/comics/comic3/exam/pen.png" id="2_sejeo"]
-[ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="3_0c638"]
+[ext_resource type="Texture2D" uid="uid://cc4xght46yqbu" path="res://graphics/chapter3/comics/comic3/exam/text.png" id="4_yfyis"]
+[ext_resource type="PackedScene" uid="uid://cg1eoj5oqtjqa" path="res://scenes/prototyping/swipe_demo/swipe_puzzle.tscn" id="5_heo3p"]
+[ext_resource type="Shader" uid="uid://rnrjeipt84wq" path="res://scenes/prototyping/swipe_demo/alpha_mask.gdshader" id="7_mrlda"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="8_8ek3y"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="9_ncb08"]
+[ext_resource type="AudioStream" uid="uid://bnyrlxxnr0d2" path="res://audio/chapter2/ambient/comic 3/panel_3.12_window_selection_sound.wav" id="10_m3v6a"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_vty67"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q1xts"]
+resource_local_to_scene = true
+shader = ExtResource("7_mrlda")
+shader_parameter/texture_albedo = SubResource("ViewportTexture_vty67")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_363al"]
+size = Vector2(1673, 927)
 
 [node name="C33Panel1" type="Node2D" unique_id=1800611031]
 
@@ -14,8 +30,40 @@ texture = ExtResource("1_ah0e4")
 position = Vector2(537, -53)
 texture = ExtResource("2_sejeo")
 
-[node name="TransitionerPassive" type="Node" parent="." unique_id=1756369501]
-script = ExtResource("3_0c638")
-metadata/_custom_type_script = "uid://u4636s8oa5d0"
+[node name="SwipePuzzle" parent="." unique_id=1530184277 instance=ExtResource("5_heo3p")]
+position = Vector2(-960, -540)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=995982538]
+[node name="SwipeController" parent="SwipePuzzle" index="0" unique_id=2105092970]
+completation_percentage = 0.6
+
+[node name="Blur" parent="SwipePuzzle" index="1" unique_id=2009020356]
+texture = null
+
+[node name="Unblur" parent="SwipePuzzle" index="2" unique_id=1608020792]
+material = SubResource("ShaderMaterial_q1xts")
+position = Vector2(179, -5)
+texture = ExtResource("4_yfyis")
+
+[node name="SubViewport" parent="SwipePuzzle" index="4" unique_id=1098068814]
+size = Vector2i(1518, 995)
+
+[node name="Clickable" type="Area2D" parent="." unique_id=1208534856]
+script = ExtResource("8_8ek3y")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=2098443153]
+position = Vector2(26.5, -34.5)
+shape = SubResource("RectangleShape2D_363al")
+
+[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=1207012408 node_paths=PackedStringArray("clickables")]
+script = ExtResource("9_ncb08")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("10_m3v6a")
+linear_volume = 0.8
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
+[node name="VisibleOnScreenEnabler2D2" type="VisibleOnScreenEnabler2D" parent="." unique_id=1925455850]
+
+[editable path="SwipePuzzle"]

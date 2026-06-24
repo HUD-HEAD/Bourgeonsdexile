@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://dwoq8q1tiux01"]
+
+[ext_resource type="Texture2D" uid="uid://k8qw4703wflm" path="res://graphics/chapter3/comics/comic1/framehospitalpeople/5.png" id="2_nvw4n"]
+[ext_resource type="Texture2D" uid="uid://g8dg7ne65h0w" path="res://graphics/chapter3/comics/comic1/framehospitalpeople/6.png" id="3_4a1r1"]
+[ext_resource type="Texture2D" uid="uid://c1i884iey4ui6" path="res://graphics/chapter3/comics/comic1/framehospitalpeople/4.png" id="4_gw4s6"]
+[ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="5_gymh7"]
+[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="6_avwht"]
+[ext_resource type="Script" uid="uid://h8iq0ry15ka8" path="res://components/utils/audio/audio integration nodes/trigger_sfx_list.gd" id="7_1qhyi"]
+[ext_resource type="AudioStream" uid="uid://832e8bri0o5p" path="res://audio/chapter3/ambient/comic 1/panel_1.15_baby_sleeping_sound.wav" id="10_g6661"]
+[ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="11_pghfi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u1egk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_gw4s6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_nvw4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4a1r1")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wpsl4"]
+size = Vector2(1604, 986)
+
+[node name="PanelDoctors14" type="Node2D" unique_id=455871575]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1601139352 node_paths=PackedStringArray("clickable")]
+sprite_frames = SubResource("SpriteFrames_u1egk")
+script = ExtResource("5_gymh7")
+clickable = NodePath("../Clickable")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=1396753622]
+script = ExtResource("6_avwht")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=598634094]
+position = Vector2(0, 23)
+shape = SubResource("RectangleShape2D_wpsl4")
+
+[node name="TriggerSfxList" type="Node" parent="Clickable" unique_id=1733293900 node_paths=PackedStringArray("clickables")]
+script = ExtResource("7_1qhyi")
+clickables = [NodePath("..")]
+stream_list = Array[AudioStream]([ExtResource("10_g6661")])
+linear_volume = 2.0
+metadata/_custom_type_script = "uid://h8iq0ry15ka8"
+
+[node name="TransitionerCounter" type="Node" parent="." unique_id=1636141532 node_paths=PackedStringArray("clickables")]
+script = ExtResource("11_pghfi")
+clickables = [NodePath("../Clickable")]
+obstacles_to_clear = 2
+transition_delay = 2.0
+metadata/_custom_type_script = "uid://c44tybeisilbv"

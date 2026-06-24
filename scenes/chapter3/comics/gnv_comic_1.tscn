@@ -4,14 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://dqaagocylecdi" path="res://components/chapter3/comic1/panel_1.tscn" id="2_1651i"]
 [ext_resource type="PackedScene" uid="uid://b8jfhwosrc3a0" path="res://components/chapter3/comic1/panel_video.tscn" id="2_bxjnw"]
 [ext_resource type="PackedScene" uid="uid://pvmnc7iirc1n" path="res://components/chapter3/comic1/panel_2a.tscn" id="3_xbw0h"]
-[ext_resource type="PackedScene" uid="uid://dpbamesghexa0" path="res://components/chapter3/comic1/panel_2b.tscn" id="4_ma0sg"]
 [ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="5_agxqu"]
-[ext_resource type="Script" uid="uid://bvmwxu2au5j5l" path="res://components/utils/audio/audio integration nodes/audio_sfx_zone.gd" id="5_t0mb3"]
 [ext_resource type="Script" uid="uid://ccgnalbw7s5yu" path="res://components/utils/audio/audio integration nodes/audio_stop_sfx_zone.gd" id="6_hqybl"]
 [ext_resource type="PackedScene" uid="uid://bg1urpmqlcklp" path="res://components/chapter3/comic1/panel_2.tscn" id="6_ltgbr"]
 [ext_resource type="PackedScene" uid="uid://coloiobyvwn8w" path="res://components/chapter3/comic1/panel_3.tscn" id="7_ra6tx"]
 [ext_resource type="PackedScene" uid="uid://42lqg10uny0b" path="res://components/chapter3/comic1/panel_4.tscn" id="8_hh7t8"]
-[ext_resource type="AudioStream" uid="uid://cxej2q65584rr" path="res://audio/chapter3/ambient/comic 1/panel_1.5_baby_crying_sound_2.wav" id="9_e5lk4"]
 [ext_resource type="PackedScene" uid="uid://6jw5lh0cjet8" path="res://components/chapter3/comic1/panel_5.tscn" id="9_eg8ad"]
 [ext_resource type="PackedScene" uid="uid://d1vflffgbdtux" path="res://components/chapter3/comic1/panel_6.tscn" id="10_lrvjo"]
 [ext_resource type="PackedScene" uid="uid://cs8h12jsglbap" path="res://components/chapter3/comic1/panel_7.tscn" id="11_hh7t8"]
@@ -20,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://cv2n5accwy8jy" path="res://components/chapter3/comic1/panel_10.tscn" id="14_1uikj"]
 [ext_resource type="PackedScene" uid="uid://de2gbwl2xf52m" path="res://components/chapter3/comic1/panel_11.tscn" id="15_be7uh"]
 [ext_resource type="PackedScene" uid="uid://o2lunwmjplwk" path="res://components/chapter3/comic1/panel_12.tscn" id="16_xbw0h"]
+[ext_resource type="PackedScene" uid="uid://dwoq8q1tiux01" path="res://components/chapter3/comic1/panel_eyecontact.tscn" id="18_agxqu"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="19_ma0sg"]
 [ext_resource type="PackedScene" uid="uid://c6rw63pqg0cn6" path="res://components/chapter3/comic1/panel_breastfeeding.tscn" id="20_joktj"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="20_u5654"]
@@ -70,17 +68,6 @@ script = ExtResource("5_agxqu")
 loop_name = 3101
 metadata/_custom_type_script = "uid://brda7473wfj1v"
 
-[node name="PanelDoctors14" parent="Panels" unique_id=733880654 instance=ExtResource("4_ma0sg")]
-position = Vector2(8865, 2493)
-
-[node name="AudioSfxZone" type="VisibleOnScreenNotifier2D" parent="Panels/PanelDoctors14" unique_id=541950347]
-position = Vector2(13, 26)
-rect = Rect2(-72, -75, 136, 114)
-script = ExtResource("5_t0mb3")
-use_audio_stream = true
-stream = ExtResource("9_e5lk4")
-metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
-
 [node name="PanelBreastfeeding" parent="Panels" unique_id=255172973 instance=ExtResource("20_joktj")]
 position = Vector2(9281, 0)
 
@@ -117,12 +104,15 @@ position = Vector2(28029, 0)
 [node name="PanelDoctors10" parent="Panels" unique_id=411523805 instance=ExtResource("15_be7uh")]
 position = Vector2(30428, 0)
 
+[node name="PanelDoctors14" parent="Panels" unique_id=455871575 instance=ExtResource("18_agxqu")]
+position = Vector2(32640, 0)
+
 [node name="PanelDoctors11" parent="Panels" unique_id=1284468193 instance=ExtResource("16_xbw0h")]
-position = Vector2(32689, 0)
+position = Vector2(34858, 0)
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("21_rh3md")
-panels = [NodePath("../Panels/PanelVideo"), NodePath("../Panels/PanelDoctors"), NodePath("../Panels/PanelDoctors12"), NodePath("../Panels/PanelDoctors13"), NodePath("../Panels/PanelBreastfeeding"), NodePath("../Panels/PanelDoctors4"), NodePath("../Panels/PanelDoctors2"), NodePath("../Panels/PanelDoctors3"), NodePath("../Panels/PanelDoctors5"), NodePath("../Panels/PanelDoctors6"), NodePath("../Panels/PanelDoctors7"), NodePath("../Panels/PanelDoctors8"), NodePath("../Panels/PanelDoctors9"), NodePath("../Panels/PanelDoctors10"), NodePath("../Panels/PanelDoctors11"), NodePath("../SceneEnder")]
+panels = [NodePath("../Panels/PanelVideo"), NodePath("../Panels/PanelDoctors"), NodePath("../Panels/PanelDoctors12"), NodePath("../Panels/PanelDoctors13"), NodePath("../Panels/PanelBreastfeeding"), NodePath("../Panels/PanelDoctors4"), NodePath("../Panels/PanelDoctors2"), NodePath("../Panels/PanelDoctors3"), NodePath("../Panels/PanelDoctors5"), NodePath("../Panels/PanelDoctors6"), NodePath("../Panels/PanelDoctors7"), NodePath("../Panels/PanelDoctors8"), NodePath("../Panels/PanelDoctors9"), NodePath("../Panels/PanelDoctors10"), NodePath("../Panels/PanelDoctors14"), NodePath("../Panels/PanelDoctors11"), NodePath("../SceneEnder")]
 
 [node name="Audio" type="Node" parent="." unique_id=619569792]
 
@@ -134,7 +124,7 @@ music_name = 3100
 metadata/_custom_type_script = "uid://2aadlm17sdsf"
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=849983846]
-position = Vector2(34017, 596)
+position = Vector2(37807, 596)
 script = ExtResource("20_u5654")
 next_scene = "uid://c7v7368h5n57f"
 

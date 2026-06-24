@@ -28,14 +28,15 @@ stream = ExtResource("4_wq72f")
 metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
 
 [node name="Receptacle" parent="." unique_id=600273107 instance=ExtResource("5_uktcc")]
-position = Vector2(-717, -263)
+position = Vector2(-639, -254)
 
 [node name="Bed2" type="Sprite2D" parent="Receptacle" unique_id=657632844]
+visible = false
 self_modulate = Color(1, 1, 1, 0.4627451)
 texture = ExtResource("5_wq72f")
 
 [node name="PuzzlePiece" type="Node2D" parent="." unique_id=282936287 node_paths=PackedStringArray("draggable", "placement_checker")]
-position = Vector2(301, -264)
+position = Vector2(301, -252)
 script = ExtResource("7_rcyu6")
 draggable = NodePath("Draggable")
 placement_checker = NodePath("Draggable/PlacementChecker")
