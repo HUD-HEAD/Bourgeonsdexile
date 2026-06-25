@@ -84,5 +84,15 @@ func stop_contraction():
 	#HACK TODO Maybe replace with control overlay disappearing
 	SignalManager.set_cursor_shape.emit(Input.CURSOR_POINTING_HAND)
 	
+#region debug
+func _unhandled_key_input(event: InputEvent) -> void:
+	if OS.has_feature("debug"):
+		if event.is_action_pressed("debug_autosolve_puzzle") || event.is_action_pressed("debug_next"):
+			_autosolve()
 
+func _autosolve():
+	stop_contraction()
+	#HACK
+	SignalManager.obstacle_cleared.emit()
 	
+#endregion
