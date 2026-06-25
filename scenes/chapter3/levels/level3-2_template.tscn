@@ -40,6 +40,7 @@ point_count = 9
 [node name="Bg2" type="Sprite2D" parent="." unique_id=1307761575]
 texture = ExtResource("7_ttgo8")
 centered = false
+metadata/_edit_lock_ = true
 
 [node name="PaperBackground" type="TextureRect" parent="Bg2" unique_id=2015979137]
 visible = false
