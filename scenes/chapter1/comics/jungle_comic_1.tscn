@@ -176,11 +176,13 @@ panels = [NodePath("../Panels/JungleComic1Frame1"), NodePath("../Panels/JungleCo
 
 [node name="ThemeStart" type="AudioStreamPlayer" parent="Audio" unique_id=314277606]
 stream = ExtResource("21_imely")
+volume_db = 5.0
 autoplay = true
 bus = &"Music"
 
 [node name="ThemeMigration" type="AudioStreamPlayer" parent="Audio" unique_id=642829476]
 stream = ExtResource("22_ixmb8")
+volume_db = 5.0
 bus = &"Music"
 
 [node name="Crickets" type="AudioStreamPlayer" parent="Audio" unique_id=1840641282]
