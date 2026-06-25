@@ -28,7 +28,8 @@ func _on_piece_clicked():
 
 ## Check if correctly placed in receptacle
 func is_correctly_placed():
-	return draggable.global_rotation_degrees == correct_rotation && placement_checker.is_correctly_placed()
+	##Need to use is_equal_approx, otherwise imprecision leads to initially rotated pieces not being validated
+	return is_equal_approx(draggable.global_rotation_degrees, correct_rotation) && placement_checker.is_correctly_placed()
 
 ## Rotate piece and check placement
 func rotate_custom(offset_degrees : float):
