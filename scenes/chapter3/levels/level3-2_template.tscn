@@ -1,16 +1,18 @@
 [gd_scene format=3 uid="uid://bh15fogf83oh7"]
 
 [ext_resource type="Texture2D" uid="uid://cgukmhhl7mhbo" path="res://graphics/background_paper.png" id="2_y5mxe"]
-[ext_resource type="Texture2D" uid="uid://mpyrv8f4bfkj" path="res://graphics/chapter3/levels/bigavenue/building/building apt.png" id="3_y5mxe"]
 [ext_resource type="Texture2D" uid="uid://chnhseiisg5tf" path="res://graphics/chapter3/levels/bigavenue/building/social_desk/hall_bg.png" id="4_1dsc3"]
+[ext_resource type="Texture2D" uid="uid://cb7s0emtm0q1y" path="res://graphics/chapter3/levels/bigavenue/building/apartment/apartment.png" id="4_ttgo8"]
 [ext_resource type="Texture2D" uid="uid://bjespq0dbijkq" path="res://graphics/chapter3/levels/bigavenue/building/squares.png" id="4_yfmg0"]
 [ext_resource type="Texture2D" uid="uid://b8utg0kolgvhy" path="res://graphics/chapter3/levels/bigavenue/building/building.png" id="5_1dsc3"]
 [ext_resource type="Texture2D" uid="uid://3qfrahv5xlyg" path="res://graphics/chapter3/levels/bigavenue/building/social_desk/hall_table.png" id="5_ovumn"]
 [ext_resource type="Texture2D" uid="uid://1rrpcsdgsv8b" path="res://graphics/chapter3/levels/bigavenue/building/reels.png" id="6_ovumn"]
 [ext_resource type="Texture2D" uid="uid://jliii8605sec" path="res://graphics/chapter3/levels/bigavenue/background.png" id="7_ttgo8"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="9_q7qsp"]
+[ext_resource type="Texture2D" uid="uid://bnf0c6a1iaqcb" path="res://graphics/chapter3/levels/bigavenue/building/floors.png" id="10_1dsc3"]
 [ext_resource type="PackedScene" uid="uid://dy84a73ucflwu" path="res://components/chapter3/main_characters/zlata.tscn" id="10_v6c5n"]
 [ext_resource type="Script" uid="uid://crcrgrn18h2m6" path="res://components/utils/mechanics/face_path.gd" id="11_4tgbk"]
+[ext_resource type="Texture2D" uid="uid://dd3sq3ob3mvp4" path="res://graphics/chapter3/levels/bigavenue/tree.png" id="11_ovumn"]
 [ext_resource type="Script" uid="uid://dv0245ypeul1c" path="res://scenes/chapter3/levels/puzzle_complete_pathback.gd" id="12_k783o"]
 [ext_resource type="Script" uid="uid://qu5hfw1uwm0x" path="res://components/utils/mechanics/area_reveal.gd" id="12_y5mxe"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="14_fu8h6"]
@@ -52,55 +54,75 @@ mouse_filter = 2
 texture = ExtResource("2_y5mxe")
 stretch_mode = 1
 
-[node name="BuildingApt" type="Sprite2D" parent="Bg2" unique_id=639287802]
+[node name="BuildingInside" type="Sprite2D" parent="Bg2" unique_id=639287802]
 position = Vector2(835, 589)
-texture = ExtResource("3_y5mxe")
+texture = ExtResource("5_1dsc3")
 
-[node name="HallBg" type="Sprite2D" parent="Bg2/BuildingApt" unique_id=643522166]
+[node name="Apartment" type="Sprite2D" parent="Bg2/BuildingInside" unique_id=1159056283]
+position = Vector2(-2, 26)
+texture = ExtResource("4_ttgo8")
+
+[node name="HallBg" type="Sprite2D" parent="Bg2/BuildingInside" unique_id=643522166]
 position = Vector2(229, 288)
 texture = ExtResource("4_1dsc3")
 
-[node name="HallTable" type="Sprite2D" parent="Bg2/BuildingApt/HallBg" unique_id=972076843]
+[node name="HallTable" type="Sprite2D" parent="Bg2/BuildingInside/HallBg" unique_id=972076843]
 position = Vector2(-58, 27)
 texture = ExtResource("5_ovumn")
 
-[node name="Squares" type="Sprite2D" parent="Bg2/BuildingApt" unique_id=1883759949]
+[node name="Squares" type="Sprite2D" parent="Bg2/BuildingInside" unique_id=1883759949]
 position = Vector2(423, 22)
 texture = ExtResource("4_yfmg0")
 
-[node name="BuildingOutside" type="Sprite2D" parent="Bg2/BuildingApt" unique_id=271747770]
+[node name="Floors" type="Sprite2D" parent="Bg2/BuildingInside" unique_id=201401569]
+visible = false
+z_index = 2
+position = Vector2(0, 95)
+texture = ExtResource("10_1dsc3")
+
+[node name="BuildingOutside" type="Sprite2D" parent="Bg2" unique_id=271747770]
 visible = false
 z_index = 1
+position = Vector2(835, 589)
 texture = ExtResource("5_1dsc3")
 
-[node name="AreaRevealInsideBuilding" type="Area2D" parent="Bg2/BuildingApt/BuildingOutside" unique_id=59500974 node_paths=PackedStringArray("nodes_to_reveal", "nodes_to_hide")]
-collision_layer = 0
-collision_mask = 2
-input_pickable = false
-script = ExtResource("12_y5mxe")
-nodes_to_reveal = [NodePath("../../../PaperBackground")]
-nodes_to_hide = [NodePath("..")]
+[node name="Squares" type="Sprite2D" parent="Bg2/BuildingOutside" unique_id=2008682367]
+position = Vector2(423, 22)
+texture = ExtResource("4_yfmg0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/BuildingApt/BuildingOutside/AreaRevealInsideBuilding" unique_id=1430876339]
-position = Vector2(-126, 26)
-shape = SubResource("RectangleShape2D_yfmg0")
-
-[node name="Reels" type="Sprite2D" parent="Bg2/BuildingApt/BuildingOutside" unique_id=1079789929]
+[node name="Reels" type="Sprite2D" parent="Bg2/BuildingOutside" unique_id=1079789929]
 modulate = Color(1.6608336, 1.6608336, 1.6608336, 1)
 position = Vector2(6, -208)
 texture = ExtResource("6_ovumn")
 
-[node name="Reels2" type="Sprite2D" parent="Bg2/BuildingApt/BuildingOutside/Reels" unique_id=405418698]
+[node name="Reels2" type="Sprite2D" parent="Bg2/BuildingOutside/Reels" unique_id=405418698]
 position = Vector2(0, 137)
 texture = ExtResource("6_ovumn")
 
-[node name="Reels2" type="Sprite2D" parent="Bg2/BuildingApt/BuildingOutside/Reels/Reels2" unique_id=1037654019]
+[node name="Reels2" type="Sprite2D" parent="Bg2/BuildingOutside/Reels/Reels2" unique_id=1037654019]
 position = Vector2(0, 137)
 texture = ExtResource("6_ovumn")
 
-[node name="Reels2" type="Sprite2D" parent="Bg2/BuildingApt/BuildingOutside/Reels/Reels2/Reels2" unique_id=1715624461]
+[node name="Reels2" type="Sprite2D" parent="Bg2/BuildingOutside/Reels/Reels2/Reels2" unique_id=1715624461]
 position = Vector2(0, 137)
 texture = ExtResource("6_ovumn")
+
+[node name="Tree" type="Sprite2D" parent="Bg2/BuildingOutside" unique_id=489526297]
+position = Vector2(800, 121)
+texture = ExtResource("11_ovumn")
+
+[node name="AreaRevealInsideBuilding" type="Area2D" parent="Bg2" unique_id=59500974 node_paths=PackedStringArray("nodes_to_reveal", "nodes_to_hide")]
+position = Vector2(835, 589)
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+script = ExtResource("12_y5mxe")
+nodes_to_reveal = [NodePath("../PaperBackground"), NodePath("../BuildingInside")]
+nodes_to_hide = [NodePath("../BuildingOutside")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/AreaRevealInsideBuilding" unique_id=1430876339]
+position = Vector2(-126, 26)
+shape = SubResource("RectangleShape2D_yfmg0")
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1221118698]
 position = Vector2(7414, 596)
