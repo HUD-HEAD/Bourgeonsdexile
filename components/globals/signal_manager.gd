@@ -13,6 +13,9 @@ signal obstacle_cleared
 ## Demand next panel in comic section
 signal next_panel
 
+## Emitted from various nodes, received by ContractionController
+signal trigger_contraction
+
 @warning_ignore_restore("unused_signal")
 
 

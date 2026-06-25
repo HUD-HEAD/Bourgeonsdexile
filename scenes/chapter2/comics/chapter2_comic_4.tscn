@@ -70,9 +70,6 @@ position = Vector2(12362, 0)
 [node name="PanelContraction1" parent="Panels" unique_id=405070053 instance=ExtResource("11_tu2ht")]
 position = Vector2(14405, 0)
 
-[node name="ContractionTrigger" parent="Panels/PanelContraction1" index="0" unique_id=1876947053 node_paths=PackedStringArray("contraction_controller")]
-contraction_controller = NodePath("../../ContractionController")
-
 [node name="TriggerSfxOnClick_pain" type="Node" parent="Panels/PanelContraction1/Clickable" parent_id_path=PackedInt32Array(405070053, 371612507) index="2" unique_id=723601504 node_paths=PackedStringArray("clickables")]
 script = ExtResource("8_r62f8")
 clickables = [NodePath("..")]
@@ -83,9 +80,6 @@ metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="PanelContraction2" parent="Panels" unique_id=1460964746 instance=ExtResource("11_tu2ht")]
 position = Vector2(16440, 0)
-
-[node name="ContractionTrigger" parent="Panels/PanelContraction2" index="0" unique_id=1876947053 node_paths=PackedStringArray("contraction_controller")]
-contraction_controller = NodePath("../../ContractionController")
 
 [node name="3" parent="Panels/PanelContraction2" index="1" unique_id=1488750130]
 texture = ExtResource("11_r62f8")
@@ -101,9 +95,6 @@ metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="PanelContraction3" parent="Panels" unique_id=1675799870 instance=ExtResource("11_tu2ht")]
 position = Vector2(18600, 0)
-
-[node name="ContractionTrigger" parent="Panels/PanelContraction3" index="0" unique_id=1876947053 node_paths=PackedStringArray("contraction_controller")]
-contraction_controller = NodePath("../../ContractionController")
 
 [node name="3" parent="Panels/PanelContraction3" index="1" unique_id=1488750130]
 texture = ExtResource("12_ngmml")
@@ -123,9 +114,6 @@ position = Vector2(20898, 0)
 [node name="PanelContraction4" parent="Panels" unique_id=1447836535 instance=ExtResource("11_tu2ht")]
 position = Vector2(22700, 0)
 
-[node name="ContractionTrigger" parent="Panels/PanelContraction4" index="0" unique_id=1876947053 node_paths=PackedStringArray("contraction_controller")]
-contraction_controller = NodePath("../../ContractionController")
-
 [node name="TriggerSfxOnClick_pain" type="Node" parent="Panels/PanelContraction4/Clickable" parent_id_path=PackedInt32Array(1447836535, 371612507) index="2" unique_id=1040930732 node_paths=PackedStringArray("clickables")]
 script = ExtResource("8_r62f8")
 clickables = [NodePath("..")]
@@ -136,9 +124,6 @@ metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="PanelContraction5" parent="Panels" unique_id=1610494996 instance=ExtResource("11_tu2ht")]
 position = Vector2(24735, 0)
-
-[node name="ContractionTrigger" parent="Panels/PanelContraction5" index="0" unique_id=1876947053 node_paths=PackedStringArray("contraction_controller")]
-contraction_controller = NodePath("../../ContractionController")
 
 [node name="3" parent="Panels/PanelContraction5" index="1" unique_id=1488750130]
 texture = ExtResource("11_r62f8")
@@ -154,9 +139,6 @@ metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="PanelContraction6" parent="Panels" unique_id=676691208 instance=ExtResource("11_tu2ht")]
 position = Vector2(26895, 0)
-
-[node name="ContractionTrigger" parent="Panels/PanelContraction6" index="0" unique_id=1876947053 node_paths=PackedStringArray("contraction_controller")]
-contraction_controller = NodePath("../../ContractionController")
 
 [node name="3" parent="Panels/PanelContraction6" index="1" unique_id=1488750130]
 texture = ExtResource("12_ngmml")

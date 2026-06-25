@@ -8,9 +8,24 @@ class_name ContractionController extends Node
 const SOOTHE_ACCELERATOR : float = 2
 
 func _ready() -> void:
+	SignalManager.trigger_contraction.connect(trigger_contraction)
 	for sp in shader_params:
 		shader_mat.set_shader_parameter(sp.name, sp.curr_val)
-	
+
+func _process(delta: float) -> void:
+	if Input.is_action_pressed("select_element"):
+		self.soothe_contraction(delta*0.1)
+		
+		if self._check_soothed() :
+			#HACK
+			process_mode = Node.PROCESS_MODE_DISABLED
+			self.stop_contraction()
+			SignalManager.next_panel.emit()
+			#HACK
+			SignalManager.obstacle_cleared.emit()
+			
+			AudioManager.stop_last_sfx_saved()
+
 #TODO need to fix in shader Speed adjustment looing like "rewind"
 func soothe_contraction(delta):
 	for sp in shader_params:
@@ -18,24 +33,24 @@ func soothe_contraction(delta):
 		shader_mat.set_shader_parameter(sp.name, new_val)
 		sp.curr_val = new_val
 
-
 func _check_soothed() -> bool:
 	for sp in shader_params:
 		if sp.curr_val <= sp.min_val:
 			return true
 	return false
 
-
 func trigger_contraction():
 	for sp in shader_params:
 		shader_mat.set_shader_parameter(sp.name, sp.max_val)
 		sp.curr_val = sp.max_val
 	
-	var tween_modulate : Tween = self.create_tween()
+	var tween_modulate : Tween = get_tree().create_tween()
 	tween_modulate.tween_property(contraction_overlay, "modulate:a", 1.0, 3.0)
+	process_mode = Node.PROCESS_MODE_INHERIT
 	
 func stop_contraction():
-	var tween_modulate : Tween = self.create_tween()
+	var tween_modulate : Tween = get_tree().create_tween()
 	tween_modulate.tween_property(contraction_overlay, "modulate:a", 0.0, 3.0)
+
 
 	
