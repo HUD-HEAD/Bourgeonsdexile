@@ -2,20 +2,32 @@
 
 [ext_resource type="Texture2D" uid="uid://bv8h3s13wsgfo" path="res://graphics/chapter3/comics/comic3/exam/bg.png" id="1_ah0e4"]
 [ext_resource type="Texture2D" uid="uid://d2pjq4k1saqah" path="res://graphics/chapter3/comics/comic3/exam/pen.png" id="2_sejeo"]
-[ext_resource type="Texture2D" uid="uid://cc4xght46yqbu" path="res://graphics/chapter3/comics/comic3/exam/text.png" id="4_yfyis"]
+[ext_resource type="Texture2D" uid="uid://bjs1q1ojldu0n" path="res://graphics/chapter3/comics/comic3/exam/text_reduced.png" id="5_a04oi"]
 [ext_resource type="PackedScene" uid="uid://cg1eoj5oqtjqa" path="res://scenes/prototyping/swipe_demo/swipe_puzzle.tscn" id="5_heo3p"]
 [ext_resource type="Shader" uid="uid://rnrjeipt84wq" path="res://scenes/prototyping/swipe_demo/alpha_mask.gdshader" id="7_mrlda"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="8_8ek3y"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="9_ncb08"]
 [ext_resource type="AudioStream" uid="uid://bnyrlxxnr0d2" path="res://audio/chapter2/ambient/comic 3/panel_3.12_window_selection_sound.wav" id="10_m3v6a"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_vty67"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_dt6or"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_q1xts"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_heo3p"]
 resource_local_to_scene = true
 shader = ExtResource("7_mrlda")
-shader_parameter/texture_albedo = SubResource("ViewportTexture_vty67")
+shader_parameter/texture_albedo = SubResource("ViewportTexture_dt6or")
+
+[sub_resource type="Gradient" id="Gradient_kd4q4"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.5)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_a04oi"]
+gradient = SubResource("Gradient_kd4q4")
+width = 250
+height = 250
+fill = 1
+fill_from = Vector2(0.5, 0.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_363al"]
 size = Vector2(1673, 927)
@@ -31,7 +43,7 @@ position = Vector2(537, -53)
 texture = ExtResource("2_sejeo")
 
 [node name="SwipePuzzle" parent="." unique_id=1530184277 instance=ExtResource("5_heo3p")]
-position = Vector2(-960, -540)
+position = Vector2(-226, -252)
 
 [node name="SwipeController" parent="SwipePuzzle" index="0" unique_id=2105092970]
 completation_percentage = 0.6
@@ -40,14 +52,17 @@ completation_percentage = 0.6
 texture = null
 
 [node name="Unblur" parent="SwipePuzzle" index="2" unique_id=1608020792]
-material = SubResource("ShaderMaterial_q1xts")
-position = Vector2(179, -5)
-texture = ExtResource("4_yfyis")
+material = SubResource("ShaderMaterial_heo3p")
+texture = ExtResource("5_a04oi")
 
 [node name="SubViewport" parent="SwipePuzzle" index="4" unique_id=1098068814]
-size = Vector2i(1518, 995)
+size = Vector2i(600, 600)
+
+[node name="Brush" parent="SwipePuzzle/SubViewport/Container" parent_id_path=PackedInt32Array(1530184277, 788294040) index="0" unique_id=598870061]
+texture = SubResource("GradientTexture2D_a04oi")
 
 [node name="Clickable" type="Area2D" parent="." unique_id=1208534856]
+visible = false
 script = ExtResource("8_8ek3y")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
