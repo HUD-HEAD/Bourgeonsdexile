@@ -73,6 +73,9 @@
 [ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="69_cbojg"]
 [ext_resource type="Script" uid="uid://bvmwxu2au5j5l" path="res://components/utils/audio/audio integration nodes/audio_sfx_zone.gd" id="69_e28ne"]
 [ext_resource type="AudioStream" uid="uid://yao0gfmlaxh7" path="res://audio/chapter2/ambient/comic 2/panel_2.2_people_sound_loop.wav" id="70_61fec"]
+[ext_resource type="Script" uid="uid://b3txouvcobklf" path="res://components/chapter2/contractions/contraction_wobble/contraction_area.gd" id="74_ss357"]
+[ext_resource type="Script" uid="uid://bf2oac284v575" path="res://components/chapter2/contractions/contraction_wobble/contraction_shader_param.gd" id="75_mwlor"]
+[ext_resource type="PackedScene" uid="uid://xrhjayy04y7b" path="res://components/chapter2/contractions/contraction_wobble/contraction_wobble.tscn" id="76_mwlor"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_61fec"]
 animations = [{
@@ -159,6 +162,21 @@ point_count = 5
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0tndx"]
 radius = 130.34146
+
+[sub_resource type="Resource" id="Resource_mwlor"]
+script = ExtResource("75_mwlor")
+name = "amplitude"
+min_val = 0.1
+max_val = 0.3
+curr_val = 0.3
+metadata/_custom_type_script = "uid://bf2oac284v575"
+
+[sub_resource type="Resource" id="Resource_u7xie"]
+script = ExtResource("75_mwlor")
+name = "offset_intensity"
+max_val = 0.5
+curr_val = 0.5
+metadata/_custom_type_script = "uid://bf2oac284v575"
 
 [node name="Nakivale" type="Node2D" unique_id=987125979]
 
@@ -616,6 +634,9 @@ path_follow = NodePath("..")
 [node name="AnimSprite" parent="Path2D/PathFollow2D/Companion" index="0" unique_id=689873547]
 sprite_frames = ExtResource("5_yuvbc")
 
+[node name="Area2D" parent="Path2D/PathFollow2D/Companion" index="1" unique_id=960188442]
+collision_layer = 0
+
 [node name="CheckpointController" type="Node" parent="." unique_id=1303317184]
 script = ExtResource("66_f8hwx")
 chapter = 1
@@ -676,6 +697,15 @@ rect = Rect2(-10, -10, 670, 61)
 script = ExtResource("69_cbojg")
 loop_name = 1100
 metadata/_custom_type_script = "uid://brda7473wfj1v"
+
+[node name="ObstacleContractionArea" parent="." unique_id=362755817 node_paths=PackedStringArray("woman") instance=ExtResource("12_isbuh")]
+position = Vector2(2369, 0)
+collision_mask = 2
+script = ExtResource("74_ss357")
+shader_params = Array[ExtResource("75_mwlor")]([SubResource("Resource_mwlor"), SubResource("Resource_u7xie")])
+woman = NodePath("../Path2D/PathFollow2D/Amani")
+
+[node name="ContractionController" parent="." unique_id=948422643 instance=ExtResource("76_mwlor")]
 
 [editable path="Puzzles/Puzzle1/DragDropPuzzle"]
 [editable path="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece"]

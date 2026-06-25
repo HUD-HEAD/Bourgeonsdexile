@@ -51,9 +51,15 @@ func trigger_contraction(_shader_params : Array[ShaderParam]):
 	tween_modulate.tween_property(contraction_overlay, "modulate:a", 1.0, 3.0)
 	process_mode = Node.PROCESS_MODE_INHERIT
 	
+	#HACK TODO Maybe replace with control overlay activating
+	SignalManager.set_cursor_shape.emit(Input.CURSOR_POINTING_HAND)
+	
 func stop_contraction():
 	var tween_modulate : Tween = get_tree().create_tween()
 	tween_modulate.tween_property(contraction_overlay, "modulate:a", 0.0, 3.0)
 
+	#HACK TODO Maybe replace with control overlay disappearing
+	SignalManager.set_cursor_shape.emit(Input.CURSOR_POINTING_HAND)
+	
 
 	
