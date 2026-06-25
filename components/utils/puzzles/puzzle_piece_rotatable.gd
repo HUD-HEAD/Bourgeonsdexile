@@ -3,14 +3,22 @@
 class_name PuzzlePieceRotatable
 extends PuzzlePiece
 
+const ROTATION_STEP : int = 90
+
 ##Rotation in degrees [0,90,180,270], clockwise, for the puzzle piece to be correct
-@export_range(0,270,90) var correct_rotation : int = 0
+@export_range(0,270,ROTATION_STEP) var correct_rotation : int = 0
 
 var rotation_interface : RotationInterface
 const GROUP_NAME := "rotatable_pieces"
 
 func _ready() -> void:
 	super()
+	
+	#TODO optimize
+	##Make sure 
+	self.global_rotation_degrees = snappedf(self.global_rotation_degrees, ROTATION_STEP)
+	draggable.rotation_degrees = 0
+	
 	rotation_interface = preload("uid://cv8g3rds0g3a3").instantiate()
 	draggable.add_child(rotation_interface)
 	#rotation_interface.move_to_front()
