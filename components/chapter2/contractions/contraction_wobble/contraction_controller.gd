@@ -17,7 +17,7 @@ class_name ContractionController extends Node
 var _default_params : Array[ShaderParam]
 var _default_mat : ShaderMaterial
 
-const SOOTHE_ACCELERATOR : float = 2
+const SOOTHE_ACCELERATOR : float = 4.0
 
 func _ready() -> void:
 	SignalManager.trigger_contraction.connect(trigger_contraction)
