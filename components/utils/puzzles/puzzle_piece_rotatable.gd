@@ -15,9 +15,8 @@ func _ready() -> void:
 	super()
 	
 	#TODO optimize
-	##Make sure 
-	self.global_rotation_degrees = snappedf(self.global_rotation_degrees, ROTATION_STEP)
-	draggable.rotation_degrees = 0
+	#WARNING if initial rotation < 0 degrees, piece will not validate
+	_initial_snap_rotation()
 	
 	rotation_interface = preload("uid://cv8g3rds0g3a3").instantiate()
 	draggable.add_child(rotation_interface)
@@ -28,6 +27,19 @@ func _ready() -> void:
 	#TODO #TASK optimize so not all pieces in scene are in group
 	add_to_group(GROUP_NAME)
 
+##Make sure initial rotation is an increment of 90
+func _initial_snap_rotation():
+	var _snapped_rotation : float =  snappedf(global_rotation_degrees, ROTATION_STEP)
+
+	#TODO correct modulo
+	#print(self.name)
+	#var _snapped_rotation : float =  fposmod(snappedf(global_rotation_degrees, ROTATION_STEP),360.0)
+	#print(global_rotation_degrees," snapped ", _snapped_rotation)
+	#print(global_rotation," snapped rad ",deg_to_rad(_snapped_rotation))
+	
+	self.global_rotation_degrees = _snapped_rotation
+	draggable.rotation_degrees = 0
+
 ##Move PuzzlePiece to front (on top of siblings).
 func _on_piece_clicked():
 	super()
@@ -36,6 +48,9 @@ func _on_piece_clicked():
 
 ## Check if correctly placed in receptacle
 func is_correctly_placed():
+	#print(is_equal_approx(draggable.global_rotation_degrees, correct_rotation))
+	#print(placement_checker.is_correctly_placed())
+	
 	##Need to use is_equal_approx, otherwise imprecision leads to initially rotated pieces not being validated
 	return is_equal_approx(draggable.global_rotation_degrees, correct_rotation) && placement_checker.is_correctly_placed()
 
