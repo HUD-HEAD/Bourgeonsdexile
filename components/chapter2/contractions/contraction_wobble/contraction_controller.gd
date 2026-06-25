@@ -39,7 +39,10 @@ func _check_soothed() -> bool:
 			return true
 	return false
 
-func trigger_contraction():
+func trigger_contraction(_shader_params : Array[ShaderParam]):
+	if _shader_params.size() == shader_params.size():
+		shader_params = _shader_params
+	
 	for sp in shader_params:
 		shader_mat.set_shader_parameter(sp.name, sp.max_val)
 		sp.curr_val = sp.max_val

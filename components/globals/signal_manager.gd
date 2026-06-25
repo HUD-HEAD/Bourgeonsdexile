@@ -14,7 +14,7 @@ signal obstacle_cleared
 signal next_panel
 
 ## Emitted from various nodes, received by ContractionController
-signal trigger_contraction
+signal trigger_contraction(shader_params : Array[ShaderParam])
 
 @warning_ignore_restore("unused_signal")
 
