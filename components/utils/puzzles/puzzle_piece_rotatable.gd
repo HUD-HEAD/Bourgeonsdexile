@@ -31,8 +31,8 @@ func is_correctly_placed():
 	return draggable.global_rotation_degrees == correct_rotation && placement_checker.is_correctly_placed()
 
 ## Rotate piece and check placement
-func rotate_custom(clockwise : bool):
-	draggable.rotation_degrees = int(draggable.rotation_degrees+90)%360 if clockwise else int(draggable.rotation_degrees-90)%360
+func rotate_custom(offset_degrees : float):
+	draggable.rotation_degrees = int(draggable.rotation_degrees+offset_degrees)%360
 	rotation_interface.global_rotation = 0
 	
 	_check_placement()
