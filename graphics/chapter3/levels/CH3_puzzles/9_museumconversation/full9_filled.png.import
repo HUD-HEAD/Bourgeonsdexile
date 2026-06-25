@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5vajmdfhe3b2"
-path="res://.godot/imported/full9_filled.png-161204a6431d29e02337e5b13463cf24.ctex"
+path="res://.godot/imported/full9_filled.png-6c71ec7df81dabd0d04d00644b889f82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter3/levels/CH3_puzzles/9/full9_filled.png"
-dest_files=["res://.godot/imported/full9_filled.png-161204a6431d29e02337e5b13463cf24.ctex"]
+source_file="res://graphics/chapter3/levels/CH3_puzzles/9_museumconversation/full9_filled.png"
+dest_files=["res://.godot/imported/full9_filled.png-6c71ec7df81dabd0d04d00644b889f82.ctex"]
 
 [params]
 

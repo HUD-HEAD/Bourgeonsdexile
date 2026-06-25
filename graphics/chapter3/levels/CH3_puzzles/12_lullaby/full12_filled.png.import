@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dehacwdplh44r"
-path="res://.godot/imported/full12_filled.png-240be2b980b91dbd02a5cd6ec95a027e.ctex"
+path="res://.godot/imported/full12_filled.png-3c24e8e0f7c68e428b0fe24d86b7e0f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter3/levels/CH3_puzzles/12/full12_filled.png"
-dest_files=["res://.godot/imported/full12_filled.png-240be2b980b91dbd02a5cd6ec95a027e.ctex"]
+source_file="res://graphics/chapter3/levels/CH3_puzzles/12_lullaby/full12_filled.png"
+dest_files=["res://.godot/imported/full12_filled.png-3c24e8e0f7c68e428b0fe24d86b7e0f5.ctex"]
 
 [params]
 
