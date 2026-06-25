@@ -2,8 +2,6 @@
 
 shader_type canvas_item;
 
-#define USE_TEXTURE true
-
 #define TWOPI 6.28318530718f
 
 uniform float circleRadius : hint_range(0.0, 1.0, 0.1) = 0.5f;
@@ -13,21 +11,10 @@ uniform float amplitude : hint_range(0.0, 1.0, 0.01) = 0.1f;
 uniform float speed : hint_range(0.0, 100.0, 0.1) = 0.4f;
 uniform float offset_intensity : hint_range(0.0, 3.0, 0.1) = 1.0f;
 uniform float blur_amount : hint_range(0, 5) = 5.0; // Strength of the blur effect
+uniform bool keep_centered = true;
 
 //Blur parameters
 uniform sampler2D screen_texture: hint_screen_texture, repeat_disable, filter_linear_mipmap;
-
-varying vec2 coord;
-
-#if USE_TEXTURE
-render_mode skip_vertex_transform;
-
-void vertex() {
-    //coord = (SCREEN_MATRIX * inverse(CANVAS_MATRIX) * vec4(VERTEX, 0.0, 1.0)).xy;
-    coord = (MODEL_MATRIX * vec4(VERTEX, 0.0, 1.0)).xy;
-    VERTEX = (MODEL_MATRIX * vec4(VERTEX, 0.0, 1.0)).xy;
-}
-#endif
 
 
 vec4 blur(vec2 screen_uv){
@@ -71,35 +58,16 @@ void fragment() {
 	float time = TIME;
 	float waviness = amplitude * circleRadius;
 	
-	#if !USE_TEXTURE
-		//Make circle display at constant size on screen
-		vec2 resolution = 1.0/SCREEN_PIXEL_SIZE.xy;
-	 	vec2 uv = FRAGCOORD.xy/resolution.xy;
-	    float aspectRatio = resolution.x / resolution.y;
-	    uv.x += ((.5 / aspectRatio) - .5);
-	    uv.x *= aspectRatio;
-		//Consistent across screen resolutions
-		float AA = 2.0/resolution.y;
-	#else
-		//Make circle display relative to texture
-		vec2 resolution = 1.0/SCREEN_PIXEL_SIZE.xy;
-	    float aspectRatio = resolution.x / resolution.y;
-		vec2 uv = FRAGCOORD.xy/resolution.xy;
-		
-		//float aspectRatio_texture = TEXTURE_PIXEL_SIZE.y / TEXTURE_PIXEL_SIZE.x;
-		//vec2 resolution_texture = 1.0/TEXTURE_PIXEL_SIZE.xy;
-	    //float aspectRatio_texture = resolution_texture.x / resolution_texture.y;
-		
-		
-		//TODO main offender. Should be added only when circle needs to be centered on screen
-		//uv.x += ((.5 / aspectRatio) - .5);
-		
-	    uv.x *= aspectRatio;
-		float AA = 2.0/resolution.y;
-	#endif
-
-
-
+	//Make circle display at constant size on screen
+	vec2 resolution = 1.0/SCREEN_PIXEL_SIZE.xy;
+ 	vec2 uv = FRAGCOORD.xy/resolution.xy;
+    float aspectRatio = resolution.x / resolution.y;
+	if(keep_centered){
+    	uv.x += ((.5 / aspectRatio) - .5);
+	}
+    uv.x *= aspectRatio;
+	//Consistent across screen resolutions
+	float AA = 2.0/resolution.y;
 	
     vec2 center  = vec2(.5);
     float distFromCenter = distance(uv, center);
