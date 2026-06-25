@@ -7,6 +7,7 @@ editor_description = "Receptacle marking correct end position for puzzle piece.
 Do not modify."
 input_pickable = false
 metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1374156200]
 shape = ExtResource("1_w28kf")

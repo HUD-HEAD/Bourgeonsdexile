@@ -5,8 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://xyq2m2kx86ku" path="res://components/utils/puzzles/placement_checker.tscn" id="3_f1kk3"]
 [ext_resource type="Script" uid="uid://dbi6reje46na3" path="res://components/utils/puzzles/swap_sprite_on_click.gd" id="3_fv06a"]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_jm8a2"]
-
 [node name="PuzzlePiece" type="Node2D" unique_id=729525704 node_paths=PackedStringArray("draggable", "placement_checker")]
 editor_description = "Template for a puzzle piece. Add to scene then Right click -> Editable children, then customize."
 script = ExtResource("1_jm8a2")
@@ -19,8 +17,10 @@ metadata/_edit_group_ = true
 editor_description = "Component enabling drag and drop."
 script = ExtResource("2_fv06a")
 metadata/_custom_type_script = "uid://cxam1cepgkl3s"
+metadata/_edit_lock_ = true
 
 [node name="PuzzlePieceSprite" type="Sprite2D" parent="Draggable" unique_id=1266676352]
+metadata/_edit_lock_ = true
 
 [node name="PuzzlePieceSpriteOnClick" type="Sprite2D" parent="Draggable" unique_id=991932022 node_paths=PackedStringArray("clickable", "old_sprite")]
 script = ExtResource("3_fv06a")
@@ -28,9 +28,10 @@ clickable = NodePath("..")
 old_sprite = NodePath("../PuzzlePieceSprite")
 
 [node name="PlacementChecker" parent="Draggable" unique_id=1710133272 instance=ExtResource("3_f1kk3")]
+metadata/_edit_lock_ = true
 
 [node name="DraggableZone" type="CollisionShape2D" parent="Draggable" unique_id=1105802255]
 editor_description = "Defines boundaries on which user can click and drag.
 TODO : Add and customize shape property.
 Beware, duplicated nodes will share the same Shape. Either assign a new shape or Right click -> Make unique"
-shape = SubResource("SegmentShape2D_jm8a2")
+metadata/_edit_lock_ = true
