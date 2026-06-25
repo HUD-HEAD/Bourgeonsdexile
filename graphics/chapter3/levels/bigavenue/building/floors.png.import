@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj1ov568palyc"
-path="res://.godot/imported/mockupinteriors.png-6040e9e403638224f32afb00011d563b.ctex"
+uid="uid://bnf0c6a1iaqcb"
+path="res://.godot/imported/floors.png-140163e82c81ed044ff7a422fe47a35a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/chapter3/levels/bigavenue/mockupinteriors.png"
-dest_files=["res://.godot/imported/mockupinteriors.png-6040e9e403638224f32afb00011d563b.ctex"]
+source_file="res://graphics/chapter3/levels/bigavenue/building/floors.png"
+dest_files=["res://.godot/imported/floors.png-140163e82c81ed044ff7a422fe47a35a.ctex"]
 
 [params]
 
