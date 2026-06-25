@@ -328,55 +328,28 @@ scale = Vector2(0.22469065, 0.22469065)
 texture = ExtResource("17_kq1o5")
 
 [node name="DragDropPuzzle" parent="WayBack/PuzzleStreet" index="3" unique_id=727084058 instance=ExtResource("3_t5rg3")]
-position = Vector2(0, 729.99994)
+position = Vector2(-147, 729.99994)
 rotation = 1.5707964
 scale = Vector2(0.28765005, 0.28765005)
 
-[node name="OutlinePuzzle" parent="WayBack/PuzzleStreet/DragDropPuzzle" index="0" unique_id=1513168459]
-position = Vector2(121.83733, 511.6065)
-
 [node name="PuzzlePiece" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="0" unique_id=1667760579]
-position = Vector2(-260.73297, 799.5829)
-
-[node name="Receptacle" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="1" unique_id=1559191435]
-position = Vector2(332.83734, 419.60648)
+position = Vector2(-260.733, 326.78616)
 
 [node name="PuzzlePiece2" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="2" unique_id=729525704]
-position = Vector2(337.2155, 132.10492)
-
-[node name="PuzzlePieceSprite" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(727084058, 729525704, 2116105691) index="0" unique_id=1266676352]
-position = Vector2(0, 0)
-
-[node name="PuzzlePieceSpriteOnClick" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(727084058, 729525704, 2116105691) index="1" unique_id=991932022]
-position = Vector2(-66.05227, -34.76446)
-
-[node name="PlacementChecker" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(727084058, 729525704, 2116105691) index="2" unique_id=1710133272]
-position = Vector2(-86.91095, -45.193798)
-
-[node name="DraggableZone" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(727084058, 729525704, 2116105691) index="3" unique_id=1105802255]
-position = Vector2(-86.9109, -48.669968)
-
-[node name="Receptacle2" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="3" unique_id=600273107]
-position = Vector2(-135.5812, 567.0847)
+position = Vector2(278.1159, -354.5976)
 
 [node name="PuzzlePiece3" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="4" unique_id=1334418623]
-position = Vector2(-337.21512, 1015.12256)
+position = Vector2(-337.21515, 542.32587)
 rotation = -0.009472954
 
-[node name="Receptacle3" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="5" unique_id=1839851310]
-position = Vector2(125.83733, 503.6065)
-
 [node name="PuzzlePiece4" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="6" unique_id=1795176319]
-position = Vector2(-48.669975, 180.77553)
+position = Vector2(-48.669994, -292.02118)
 
 [node name="PuzzlePieceSpriteOnClick" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(727084058, 1795176319, 2116105691) index="1" unique_id=991932022]
 position = Vector2(1.0413881e-07, 17.382418)
 
-[node name="Receptacle4" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="7" unique_id=1455510048]
-position = Vector2(-55.162666, 687.6065)
-
 [node name="PuzzlePiece5" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="8" unique_id=1711508116]
-position = Vector2(-177.29842, 1157.6569)
+position = Vector2(-177.29843, 684.8601)
 
 [node name="PuzzlePieceSpriteOnClick" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece5/Draggable" parent_id_path=PackedInt32Array(727084058, 1711508116, 2116105691) index="1" unique_id=991932022]
 position = Vector2(-48.67025, 17.38242)
@@ -384,17 +357,8 @@ position = Vector2(-48.67025, 17.38242)
 [node name="DraggableZone" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece5/Draggable" parent_id_path=PackedInt32Array(727084058, 1711508116, 2116105691) index="3" unique_id=1105802255]
 position = Vector2(-13.905811, 38.240547)
 
-[node name="Receptacle5" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="9" unique_id=902464490]
-position = Vector2(156.44043, 643.14264)
-
 [node name="PuzzlePiece6" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="10" unique_id=148742606]
-position = Vector2(590.9961, 93.86424)
-
-[node name="Receptacle6" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="11" unique_id=618732814]
-position = Vector2(346.83734, 639.6065)
-
-[node name="CompletePuzzle" parent="WayBack/PuzzleStreet/DragDropPuzzle" index="2" unique_id=1933061263]
-position = Vector2(111.24658, 511.03763)
+position = Vector2(590.9961, -378.9325)
 
 [node name="PuzzleSocialWorker" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="1" unique_id=1734062459]
 position = Vector2(1070, 0)
