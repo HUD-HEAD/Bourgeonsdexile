@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://crcegtlclps7m"]
 
 [ext_resource type="PackedScene" uid="uid://dlfijrweysiiw" path="res://components/utils/puzzles/puzzle_masking_template.tscn" id="1_pyss3"]
-[ext_resource type="Texture2D" uid="uid://dmst3lmoeuu82" path="res://graphics/chapter3/levels/CH3_puzzles/11/empty11.png" id="2_k1l5f"]
+[ext_resource type="Texture2D" uid="uid://dmst3lmoeuu82" path="res://graphics/chapter3/levels/CH3_puzzles/11_museumthinking2/empty11.png" id="2_k1l5f"]
 [ext_resource type="Texture2D" uid="uid://d0rqmnaqdjkhh" path="res://graphics/chapter2/levels/goma/puzzles/1/full1.png" id="3_arcwb"]
 [ext_resource type="PackedScene" uid="uid://b15l0pq6dea3h" path="res://components/utils/puzzles/puzzle_piece_template.tscn" id="4_psrur"]
 [ext_resource type="Texture2D" uid="uid://bf7sr156q0s5n" path="res://graphics/chapter2/levels/goma/puzzles/1/circle1_1.png" id="5_muxsr"]
 [ext_resource type="Texture2D" uid="uid://dd0lgcvmblwit" path="res://graphics/chapter2/levels/goma/puzzles/1/voidcircle1_1.png" id="6_rcww3"]
 [ext_resource type="PackedScene" uid="uid://b7gtx3ymyamky" path="res://components/utils/puzzles/mask_out/puzzle_piece_hollow.tscn" id="7_b7v6w"]
 [ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="8_nvx6q"]
-[ext_resource type="Texture2D" uid="uid://bybvem4gu1scm" path="res://graphics/chapter3/levels/CH3_puzzles/11/full11.png" id="9_hxq4o"]
+[ext_resource type="Texture2D" uid="uid://bybvem4gu1scm" path="res://graphics/chapter3/levels/CH3_puzzles/11_museumthinking2/full11.png" id="9_hxq4o"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ijig0"]
 radius = 206.08736
