@@ -1,25 +1,10 @@
 extends VisibleOnScreenNotifier2D
 
-@export var contraction_controller : ContractionController
-@export_group("Sound")
-@export var stop_contraction_sfx: bool = true
+@export var shader_params : Array[ShaderParam]
+@export var shader_material : ShaderMaterial
 
 func _ready() -> void:
 	screen_entered.connect(_on_screen_entered)
 
-
-func _process(delta: float) -> void:
-	if Input.is_action_pressed("select_element"):
-		contraction_controller.soothe_contraction(delta*0.1)
-		
-		if contraction_controller._check_soothed() :
-			#HACK
-			process_mode = Node.PROCESS_MODE_DISABLED
-			contraction_controller.stop_contraction()
-			SignalManager.next_panel.emit()
-			
-			if stop_contraction_sfx:
-				AudioManager.stop_last_sfx_saved()
-
 func _on_screen_entered():
-	contraction_controller.trigger_contraction()	
+	SignalManager.trigger_contraction.emit(shader_params, shader_material)

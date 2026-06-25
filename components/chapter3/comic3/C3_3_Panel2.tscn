@@ -18,30 +18,36 @@ size = Vector2(477, 689)
 
 [node name="2" type="Sprite2D" parent="." unique_id=1744822837]
 position = Vector2(-646, -143)
+rotation = -0.429351
 texture = ExtResource("2_bltkj")
 
 [node name="3" type="Sprite2D" parent="." unique_id=811247651]
 position = Vector2(358, -102)
+rotation = 0.17278759
 texture = ExtResource("3_dtkq6")
 
 [node name="4" type="Sprite2D" parent="." unique_id=1932635277]
 position = Vector2(-366, 247.5)
+rotation = -0.13439035
 texture = ExtResource("4_1nduf")
 
 [node name="5" type="Sprite2D" parent="." unique_id=1595831020]
 position = Vector2(637, 123)
+rotation = 0.038397245
 texture = ExtResource("5_rkjik")
 
 [node name="1" type="Sprite2D" parent="." unique_id=436426605]
-position = Vector2(-162, -45)
+position = Vector2(-162, 217)
+rotation = -0.09599311
 texture = ExtResource("6_f5drj")
 
 [node name="Hand" type="Sprite2D" parent="." unique_id=1372761838]
-position = Vector2(195, -101)
+position = Vector2(193, 394)
 texture = ExtResource("7_unwt1")
+flip_v = true
 
 [node name="Clickable" type="Area2D" parent="." unique_id=670093965 node_paths=PackedStringArray("nodes_to_show")]
-position = Vector2(-153, -81)
+position = Vector2(-153, 181)
 script = ExtResource("8_dtkq6")
 nodes_to_show = [NodePath("../Hand")]
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"

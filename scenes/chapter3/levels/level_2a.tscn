@@ -10,131 +10,16 @@
 [ext_resource type="Texture2D" uid="uid://dcbh8tasw2ens" path="res://graphics/chapter3/levels/bigavenue/store/store_bg.png" id="4_p5lly"]
 [ext_resource type="Texture2D" uid="uid://cpguix1gkv66k" path="res://graphics/chapter3/levels/bigavenue/store/store_wall.png" id="5_gjepm"]
 [ext_resource type="PackedScene" uid="uid://banhkda0c483g" path="res://components/chapter3/levels/level3.2/thinking_puzzle_3.2-6.tscn" id="5_rj8de"]
-[ext_resource type="Texture2D" uid="uid://cxylr6a40orij" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0001.png" id="5_t5rg3"]
-[ext_resource type="Texture2D" uid="uid://d38pu7t511wt4" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0002.png" id="6_4mioc"]
 [ext_resource type="Texture2D" uid="uid://bt5nmg7mr62h0" path="res://graphics/chapter3/levels/bigavenue/store/store_counter.png" id="6_lvjii"]
 [ext_resource type="Script" uid="uid://qu5hfw1uwm0x" path="res://components/utils/mechanics/area_reveal.gd" id="7_18lw1"]
-[ext_resource type="Texture2D" uid="uid://bx2fsfgwb0g5x" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0003.png" id="7_rj8de"]
-[ext_resource type="Texture2D" uid="uid://7h021udsedkc" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0004.png" id="8_g33bs"]
 [ext_resource type="Script" uid="uid://ca78ngu4ava5l" path="res://components/utils/mechanics/obstacle_disable_hidden.gd" id="8_yk8n7"]
-[ext_resource type="Texture2D" uid="uid://bw6rmdtow7yad" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0005.png" id="9_y35ng"]
-[ext_resource type="Texture2D" uid="uid://dm48vo3q5sx0y" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0006.png" id="10_03sbm"]
 [ext_resource type="Texture2D" uid="uid://b2ewpt3w26r0s" path="res://graphics/chapter3/levels/bigavenue/road/car1.png" id="10_gjepm"]
-[ext_resource type="Texture2D" uid="uid://b0d6a1agim7rr" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0007.png" id="11_dhqte"]
-[ext_resource type="Texture2D" uid="uid://1d5cgw78yuqi" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0008.png" id="12_4l2on"]
-[ext_resource type="Texture2D" uid="uid://d23ieao6dhvgf" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0009.png" id="13_akmg2"]
-[ext_resource type="Texture2D" uid="uid://dga5up2jric8i" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0010.png" id="14_8spjo"]
-[ext_resource type="Texture2D" uid="uid://y8tt1fp6wspi" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0011.png" id="15_f0ayb"]
-[ext_resource type="Texture2D" uid="uid://btjyg4kxj4wy4" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0012.png" id="16_khbli"]
-[ext_resource type="Texture2D" uid="uid://dflx0gfbxasxw" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0013.png" id="17_o0kx2"]
-[ext_resource type="Texture2D" uid="uid://cr5ljrkbchno7" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0014.png" id="18_3lxc3"]
-[ext_resource type="Texture2D" uid="uid://cjdmiqwervttc" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0015.png" id="19_xuqju"]
-[ext_resource type="Texture2D" uid="uid://csy03x3ynhmiq" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0016.png" id="20_kwnh3"]
-[ext_resource type="Texture2D" uid="uid://b75ws2ajynfao" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0017.png" id="21_hqsnb"]
-[ext_resource type="Texture2D" uid="uid://c2hejyiermupb" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0018.png" id="22_gcyc3"]
-[ext_resource type="Texture2D" uid="uid://b22578xesoma5" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0019.png" id="23_crr4c"]
-[ext_resource type="Texture2D" uid="uid://ugdxi3nsc6n" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0020.png" id="24_pqxn1"]
-[ext_resource type="Texture2D" uid="uid://1m5jc1j0k52j" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0021.png" id="25_ueg4e"]
-[ext_resource type="Texture2D" uid="uid://dnv62ot2sgaop" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0022.png" id="26_j5ugd"]
-[ext_resource type="Texture2D" uid="uid://y6i8b7eivwgk" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0023.png" id="27_thp0m"]
-[ext_resource type="Texture2D" uid="uid://x637sgkcv0w4" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0024.png" id="28_vnku6"]
-[ext_resource type="Texture2D" uid="uid://bswf88vfhysyg" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0025.png" id="29_8xasa"]
-[ext_resource type="Texture2D" uid="uid://ce0bwui2xy6pl" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0026.png" id="30_yhxv0"]
-[ext_resource type="Texture2D" uid="uid://sdcpx0l7triu" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0027.png" id="31_r68wx"]
-[ext_resource type="Texture2D" uid="uid://dw3dotiemyv4h" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0028.png" id="32_xdrff"]
-[ext_resource type="Texture2D" uid="uid://cdxsjtxxtfp8l" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0029.png" id="33_fnm72"]
-[ext_resource type="Texture2D" uid="uid://dhscva06cs0wg" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0030.png" id="34_jsef7"]
-[ext_resource type="Texture2D" uid="uid://cc3xwhr1illbw" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0031.png" id="35_r1lh6"]
-[ext_resource type="Texture2D" uid="uid://chfe3mn6xke2u" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0032.png" id="36_0diyu"]
-[ext_resource type="Texture2D" uid="uid://b4t5r45x33ytj" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0033.png" id="37_swjgb"]
-[ext_resource type="Texture2D" uid="uid://b0eki26b0r53u" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0034.png" id="38_vlnis"]
-[ext_resource type="Texture2D" uid="uid://cpfatgdk66ga" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0035.png" id="39_76rmc"]
-[ext_resource type="Texture2D" uid="uid://dxs0228qf470u" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0036.png" id="40_i1tkb"]
-[ext_resource type="Texture2D" uid="uid://dup5qafsjp1vv" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0037.png" id="41_l3aqp"]
-[ext_resource type="Texture2D" uid="uid://sof52i07sjwx" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0038.png" id="42_u50p3"]
-[ext_resource type="Texture2D" uid="uid://dduk72qabjlnf" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0039.png" id="43_mowrb"]
-[ext_resource type="Texture2D" uid="uid://bx2atyfdkce5w" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0040.png" id="44_vx12a"]
-[ext_resource type="Texture2D" uid="uid://d6pqby7g4sf4" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0041.png" id="45_ncotj"]
-[ext_resource type="Texture2D" uid="uid://bkcc3av75o5c" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0042.png" id="46_6cns1"]
-[ext_resource type="Texture2D" uid="uid://cwobnxj406pnd" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0043.png" id="47_pqhi1"]
-[ext_resource type="Texture2D" uid="uid://52vi2hf2sl4g" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0044.png" id="48_s5ph4"]
-[ext_resource type="Texture2D" uid="uid://tngq7b3iblyo" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0045.png" id="49_sl6mo"]
-[ext_resource type="Texture2D" uid="uid://dt1i2l5yn2mdw" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0046.png" id="50_2etw7"]
-[ext_resource type="Texture2D" uid="uid://dbhniswf64gvy" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0047.png" id="51_kpq2w"]
-[ext_resource type="Texture2D" uid="uid://bid8xf1i0l5pa" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0048.png" id="52_q3eco"]
-[ext_resource type="Texture2D" uid="uid://chkgpqisrw28f" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0049.png" id="53_joigq"]
-[ext_resource type="Texture2D" uid="uid://83ubrpdf18lj" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0050.png" id="54_rbx3l"]
-[ext_resource type="Texture2D" uid="uid://cwxe1v2sqpgm0" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0051.png" id="55_sbqwl"]
-[ext_resource type="Texture2D" uid="uid://dq37d5e1rwcxp" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0052.png" id="56_ffs4t"]
-[ext_resource type="Texture2D" uid="uid://dhc66llqpyb6j" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0053.png" id="57_p1g3u"]
-[ext_resource type="Texture2D" uid="uid://wddvtabg63gx" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0054.png" id="58_3p476"]
-[ext_resource type="Texture2D" uid="uid://coj36xhaqvb1b" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0055.png" id="59_i6qqx"]
-[ext_resource type="Texture2D" uid="uid://vkkvy5b08043" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0056.png" id="60_4cvkc"]
-[ext_resource type="Texture2D" uid="uid://b6fa6nhrenmej" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0057.png" id="61_kq2lt"]
-[ext_resource type="Texture2D" uid="uid://bnrkugwl55i7a" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0058.png" id="62_mmdjl"]
-[ext_resource type="Texture2D" uid="uid://5macest61beh" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0059.png" id="63_pc2qi"]
-[ext_resource type="Texture2D" uid="uid://c8n7300imqcou" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0060.png" id="64_yldt7"]
-[ext_resource type="Texture2D" uid="uid://c23r58ae7aav8" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0061.png" id="65_v4tms"]
-[ext_resource type="Texture2D" uid="uid://cms3qiuychwqp" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0062.png" id="66_wre8c"]
-[ext_resource type="Texture2D" uid="uid://bk21mtm5bhqbt" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0063.png" id="67_8gjo1"]
-[ext_resource type="Texture2D" uid="uid://gkw3xpv41kku" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0064.png" id="68_layre"]
-[ext_resource type="Texture2D" uid="uid://fh50yhhp5n3y" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0065.png" id="69_rc61j"]
-[ext_resource type="Texture2D" uid="uid://c7s5127mfwm26" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0066.png" id="70_anr7g"]
-[ext_resource type="Texture2D" uid="uid://bmipowsh5ehkd" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0067.png" id="71_skiki"]
-[ext_resource type="Texture2D" uid="uid://brx6aa7f637nq" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0068.png" id="72_hrams"]
-[ext_resource type="Texture2D" uid="uid://cxtpqjgqiqcjd" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0069.png" id="73_fj6c0"]
-[ext_resource type="Texture2D" uid="uid://tvs0d455vmf3" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0070.png" id="74_edua6"]
-[ext_resource type="Texture2D" uid="uid://p7kjsrk8ytol" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0071.png" id="75_ehpo3"]
-[ext_resource type="Texture2D" uid="uid://dxn1w1cguyuo2" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0072.png" id="76_h5igv"]
-[ext_resource type="Texture2D" uid="uid://cxaaawq2bdtug" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0073.png" id="77_1xft5"]
-[ext_resource type="Texture2D" uid="uid://bbum5iew6r0ru" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0074.png" id="78_ca80u"]
-[ext_resource type="Texture2D" uid="uid://xafr35f7r0c5" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0075.png" id="79_8dfhd"]
-[ext_resource type="Texture2D" uid="uid://de4br0dlio0qb" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0076.png" id="80_vk51p"]
-[ext_resource type="Texture2D" uid="uid://o5nmfgdtgcru" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0077.png" id="81_1n35o"]
-[ext_resource type="Texture2D" uid="uid://242pjsjnf8d8" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0078.png" id="82_hchk8"]
-[ext_resource type="Texture2D" uid="uid://cgn0r5n3mw5tg" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0079.png" id="83_yb7hs"]
-[ext_resource type="Texture2D" uid="uid://b1svushqt58uf" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0080.png" id="84_7q8fe"]
-[ext_resource type="Texture2D" uid="uid://ee86lgjd8bt6" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0081.png" id="85_sv2cg"]
-[ext_resource type="Texture2D" uid="uid://0bmk35xhjtpx" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0082.png" id="86_t4qda"]
-[ext_resource type="Texture2D" uid="uid://fpkm16wtyim0" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0083.png" id="87_8vlb0"]
-[ext_resource type="Texture2D" uid="uid://deqc0p58uhwkr" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0084.png" id="88_rcd8k"]
-[ext_resource type="Texture2D" uid="uid://0k6q8kmibtwu" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0085.png" id="89_nfvx8"]
-[ext_resource type="Texture2D" uid="uid://b43iflagmhu1u" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0086.png" id="90_acrvr"]
-[ext_resource type="Texture2D" uid="uid://dk580qtwv6ypg" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0087.png" id="91_7k322"]
-[ext_resource type="Texture2D" uid="uid://cu6a32xpv7r0d" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0088.png" id="92_o0xb2"]
-[ext_resource type="Texture2D" uid="uid://cuwkiis5lgl7" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0089.png" id="93_3g08e"]
-[ext_resource type="Texture2D" uid="uid://gmljx4tjro2n" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0090.png" id="94_3lrjp"]
-[ext_resource type="Texture2D" uid="uid://b6n6mmvo1ghjj" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0091.png" id="95_c48wt"]
-[ext_resource type="Texture2D" uid="uid://bog0eluhj55pv" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0092.png" id="96_guvuv"]
-[ext_resource type="Texture2D" uid="uid://swm8aod51icx" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0093.png" id="97_cnguq"]
-[ext_resource type="Texture2D" uid="uid://c5v7ky1qg0tbu" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0094.png" id="98_fdx2j"]
-[ext_resource type="Texture2D" uid="uid://blqenalbxglbt" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0095.png" id="99_udetr"]
-[ext_resource type="Texture2D" uid="uid://dnwyufpo28h7w" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0096.png" id="100_ot2e4"]
-[ext_resource type="Texture2D" uid="uid://fsdl3uevq0vi" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0097.png" id="101_otk8t"]
-[ext_resource type="Texture2D" uid="uid://6gdwg2v2tl6p" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0098.png" id="102_68i1e"]
-[ext_resource type="Texture2D" uid="uid://dk0sftb00131x" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0099.png" id="103_qg4m0"]
-[ext_resource type="Texture2D" uid="uid://but2ylkhxi7a6" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0100.png" id="104_kbkcc"]
-[ext_resource type="Texture2D" uid="uid://85wvbehtbwys" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0101.png" id="105_wydv4"]
-[ext_resource type="Texture2D" uid="uid://1xuhwduxwon6" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0102.png" id="106_n8t7a"]
-[ext_resource type="Texture2D" uid="uid://c2wous5d4uhk2" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0103.png" id="107_g7lrd"]
-[ext_resource type="Texture2D" uid="uid://vroy3hntsqba" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0104.png" id="108_sx4bh"]
-[ext_resource type="Texture2D" uid="uid://bq6vt6vxkcvm0" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0105.png" id="109_u13jt"]
-[ext_resource type="Texture2D" uid="uid://fossaeb0m41q" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0106.png" id="110_jo26l"]
-[ext_resource type="Texture2D" uid="uid://b8w3fopglj522" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0107.png" id="111_yecyg"]
-[ext_resource type="Texture2D" uid="uid://de7vsg64u1asn" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0108.png" id="112_uqkkl"]
-[ext_resource type="Texture2D" uid="uid://bme2ei0rqdhri" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0109.png" id="113_nehd3"]
-[ext_resource type="Texture2D" uid="uid://b8lnh53m528pa" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0110.png" id="114_buqsm"]
-[ext_resource type="Texture2D" uid="uid://pu1aljyohc5j" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0111.png" id="115_7wf6a"]
-[ext_resource type="Texture2D" uid="uid://cfeshxkvjp2wy" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0112.png" id="116_dxjd4"]
-[ext_resource type="Texture2D" uid="uid://d0vxpicilvnl1" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0113.png" id="117_a7cic"]
-[ext_resource type="Texture2D" uid="uid://rywbcf4k2vo7" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0114.png" id="118_0n5oe"]
-[ext_resource type="Texture2D" uid="uid://bi53u3ryiyok1" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0115.png" id="119_13277"]
-[ext_resource type="Texture2D" uid="uid://cdbuujmthwftb" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0116.png" id="120_pc4tt"]
-[ext_resource type="Texture2D" uid="uid://rijxgdv4fj3k" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0117.png" id="121_3pjm8"]
-[ext_resource type="Texture2D" uid="uid://botlwlbdqi70l" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0118.png" id="122_7eeya"]
-[ext_resource type="Texture2D" uid="uid://cjd0cved1hco8" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0119.png" id="123_vnquo"]
-[ext_resource type="Texture2D" uid="uid://bg5s78yi6ix11" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0120.png" id="124_4uwuy"]
-[ext_resource type="PackedScene" uid="uid://ds13261ncmyq2" path="res://components/chapter3/levels/level3.3/drag_drop_puzzle_3.3-1.tscn" id="125_ot5ko"]
+[ext_resource type="Texture2D" uid="uid://bvvfqeq70yfsh" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_idle_5fps/woman_blueskirt_idle_0001.png" id="12_k0kvr"]
+[ext_resource type="Texture2D" uid="uid://bfcvyqvn2ju6a" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_idle_5fps/woman_blueskirt_idle_0002.png" id="13_kq1o5"]
+[ext_resource type="Texture2D" uid="uid://doinblhviy3kx" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_idle_5fps/woman_blueskirt_idle_0003.png" id="14_se5nk"]
+[ext_resource type="Texture2D" uid="uid://coief4apjqcj0" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_idle_5fps/woman_blueskirt_idle_0004.png" id="15_7l2cm"]
+[ext_resource type="Texture2D" uid="uid://dx7b8lhaekogt" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_idle_5fps/woman_blueskirt_idle_0005.png" id="16_sffv2"]
+[ext_resource type="Texture2D" uid="uid://dvl57mmyxc12m" path="res://graphics/chapter3/levels/bigavenue/husband.png" id="17_kq1o5"]
 [ext_resource type="PackedScene" uid="uid://buwei6igqkc44" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-4.tscn" id="127_t5rg3"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="131_yk8n7"]
 [ext_resource type="Script" uid="uid://4x7opfu2wab4" path="res://components/utils/puzzles/puzzle_complete_trigger_anim.gd" id="134_gjepm"]
@@ -151,364 +36,19 @@ radius = 100.42
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_t5rg3")
+"texture": ExtResource("12_k0kvr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_4mioc")
+"texture": ExtResource("13_kq1o5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_rj8de")
+"texture": ExtResource("14_se5nk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_g33bs")
+"texture": ExtResource("15_7l2cm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_y35ng")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_03sbm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_dhqte")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_4l2on")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_akmg2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_8spjo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_f0ayb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_khbli")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_o0kx2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_3lxc3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_xuqju")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_kwnh3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_hqsnb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_gcyc3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_crr4c")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_pqxn1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_ueg4e")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_j5ugd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_thp0m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_vnku6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_8xasa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_yhxv0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_r68wx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("32_xdrff")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_fnm72")
-}, {
-"duration": 1.0,
-"texture": ExtResource("34_jsef7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_r1lh6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("36_0diyu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("37_swjgb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("38_vlnis")
-}, {
-"duration": 1.0,
-"texture": ExtResource("39_76rmc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("40_i1tkb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("41_l3aqp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("42_u50p3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("43_mowrb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("44_vx12a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("45_ncotj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("46_6cns1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("47_pqhi1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("48_s5ph4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("49_sl6mo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("50_2etw7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("51_kpq2w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("52_q3eco")
-}, {
-"duration": 1.0,
-"texture": ExtResource("53_joigq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("54_rbx3l")
-}, {
-"duration": 1.0,
-"texture": ExtResource("55_sbqwl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("56_ffs4t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("57_p1g3u")
-}, {
-"duration": 1.0,
-"texture": ExtResource("58_3p476")
-}, {
-"duration": 1.0,
-"texture": ExtResource("59_i6qqx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("60_4cvkc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("61_kq2lt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("62_mmdjl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("63_pc2qi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("64_yldt7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("65_v4tms")
-}, {
-"duration": 1.0,
-"texture": ExtResource("66_wre8c")
-}, {
-"duration": 1.0,
-"texture": ExtResource("67_8gjo1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("68_layre")
-}, {
-"duration": 1.0,
-"texture": ExtResource("69_rc61j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("70_anr7g")
-}, {
-"duration": 1.0,
-"texture": ExtResource("71_skiki")
-}, {
-"duration": 1.0,
-"texture": ExtResource("72_hrams")
-}, {
-"duration": 1.0,
-"texture": ExtResource("73_fj6c0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("74_edua6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("75_ehpo3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("76_h5igv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("77_1xft5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("78_ca80u")
-}, {
-"duration": 1.0,
-"texture": ExtResource("79_8dfhd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("80_vk51p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("81_1n35o")
-}, {
-"duration": 1.0,
-"texture": ExtResource("82_hchk8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("83_yb7hs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("84_7q8fe")
-}, {
-"duration": 1.0,
-"texture": ExtResource("85_sv2cg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("86_t4qda")
-}, {
-"duration": 1.0,
-"texture": ExtResource("87_8vlb0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("88_rcd8k")
-}, {
-"duration": 1.0,
-"texture": ExtResource("89_nfvx8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("90_acrvr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("91_7k322")
-}, {
-"duration": 1.0,
-"texture": ExtResource("92_o0xb2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("93_3g08e")
-}, {
-"duration": 1.0,
-"texture": ExtResource("94_3lrjp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("95_c48wt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("96_guvuv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("97_cnguq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("98_fdx2j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("99_udetr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("100_ot2e4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("101_otk8t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("102_68i1e")
-}, {
-"duration": 1.0,
-"texture": ExtResource("103_qg4m0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("104_kbkcc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("105_wydv4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("106_n8t7a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("107_g7lrd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("108_sx4bh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("109_u13jt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("110_jo26l")
-}, {
-"duration": 1.0,
-"texture": ExtResource("111_yecyg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("112_uqkkl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("113_nehd3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("114_buqsm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("115_7wf6a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("116_dxjd4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("117_a7cic")
-}, {
-"duration": 1.0,
-"texture": ExtResource("118_0n5oe")
-}, {
-"duration": 1.0,
-"texture": ExtResource("119_13277")
-}, {
-"duration": 1.0,
-"texture": ExtResource("120_pc4tt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("121_3pjm8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("122_7eeya")
-}, {
-"duration": 1.0,
-"texture": ExtResource("123_vnquo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("124_4uwuy")
+"texture": ExtResource("16_sffv2")
 }],
 "loop": true,
 "name": &"default",
@@ -516,7 +56,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jrbug"]
-radius = 96.62815
+radius = 61.538452
 
 [sub_resource type="Curve2D" id="Curve2D_pfjp3"]
 _data = {
@@ -739,11 +279,21 @@ collision_mask = 2
 script = ExtResource("8_yk8n7")
 
 [node name="Puzzle1" parent="WayTo/PuzzleThinkHome" index="2" unique_id=1941159865 instance=ExtResource("5_rj8de")]
-position = Vector2(103, 524)
-scale = Vector2(0.31, 0.31)
+position = Vector2(-7.9999924, 630)
+rotation = 0.7402364
+scale = Vector2(0.20303711, 0.20303711)
+
+[node name="PuzzlePiece" parent="WayTo/PuzzleThinkHome/Puzzle1/BuildingBlocks/FullPieces" parent_id_path=PackedInt32Array(1941159865, 1120986992) index="0" unique_id=729525704]
+position = Vector2(-217.88834, -501.4016)
+
+[node name="PuzzlePieceHollow" parent="WayTo/PuzzleThinkHome/Puzzle1/BuildingBlocks/HollowPieces" parent_id_path=PackedInt32Array(1941159865, 1500445843) index="0" unique_id=1809332932]
+position = Vector2(-242.31897, -192.23355)
+
+[node name="PuzzlePieceHollow2" parent="WayTo/PuzzleThinkHome/Puzzle1/BuildingBlocks/HollowPieces" parent_id_path=PackedInt32Array(1941159865, 1500445843) index="1" unique_id=450693309]
+position = Vector2(-240.5294, -0.41152954)
 
 [node name="PuzzleStreet" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="0" unique_id=201431427]
-position = Vector2(3956, 0)
+position = Vector2(3032, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleStreet" index="0" unique_id=957423747 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("2_hd8xs")
@@ -752,59 +302,101 @@ spawn_trigger = NodePath("../Clickable")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="WayBack/PuzzleStreet" index="1" unique_id=426308280 instance=ExtResource("3_052ky")]
+position = Vector2(-121, 0)
 collision_mask = 2
 script = ExtResource("8_yk8n7")
 
 [node name="Clickable" type="Area2D" parent="WayBack/PuzzleStreet" index="2" unique_id=457714455]
-position = Vector2(-265, 808.00006)
-scale = Vector2(0.65, 0.65)
+position = Vector2(-220, 851.00006)
+scale = Vector2(0.40999997, 0.40999997)
 script = ExtResource("4_80rf8")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="Npc2" type="AnimatedSprite2D" parent="WayBack/PuzzleStreet/Clickable" index="0" unique_id=1704780558]
-position = Vector2(0, 70)
+position = Vector2(7.3154755, 58.535645)
 sprite_frames = SubResource("SpriteFrames_7ftg5")
 autoplay = "default"
+frame_progress = 0.5191904
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WayBack/PuzzleStreet/Clickable" index="1" unique_id=1234672855]
+position = Vector2(-104.87806, -243.90262)
 shape = SubResource("CircleShape2D_jrbug")
+
+[node name="Husband" type="Sprite2D" parent="WayBack/PuzzleStreet/Clickable" index="2" unique_id=636334883]
+position = Vector2(-104.877914, -243.9027)
+scale = Vector2(0.22469065, 0.22469065)
+texture = ExtResource("17_kq1o5")
 
 [node name="DragDropPuzzle" parent="WayBack/PuzzleStreet" index="3" unique_id=727084058 instance=ExtResource("3_t5rg3")]
-position = Vector2(-211, 615)
-scale = Vector2(0.4, 0.4)
+position = Vector2(0, 729.99994)
+rotation = 1.5707964
+scale = Vector2(0.28765005, 0.28765005)
 
-[node name="PuzzleStreet2" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="1" unique_id=657414073]
-position = Vector2(2110, 0)
+[node name="OutlinePuzzle" parent="WayBack/PuzzleStreet/DragDropPuzzle" index="0" unique_id=1513168459]
+position = Vector2(121.83733, 511.6065)
 
-[node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleStreet2" index="0" unique_id=1682397855 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
-script = ExtResource("2_hd8xs")
-puzzle = NodePath("../DragDropPuzzle")
-spawn_trigger = NodePath("../Clickable")
-obstacle = NodePath("../Obstacle")
+[node name="PuzzlePiece" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="0" unique_id=1667760579]
+position = Vector2(-260.73297, 799.5829)
 
-[node name="Obstacle" parent="WayBack/PuzzleStreet2" index="1" unique_id=846932295 instance=ExtResource("3_052ky")]
-collision_mask = 2
-script = ExtResource("8_yk8n7")
+[node name="Receptacle" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="1" unique_id=1559191435]
+position = Vector2(332.83734, 419.60648)
 
-[node name="Clickable" type="Area2D" parent="WayBack/PuzzleStreet2" index="2" unique_id=557288057]
-position = Vector2(-265, 808.00006)
-scale = Vector2(0.65, 0.65)
-script = ExtResource("4_80rf8")
-metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+[node name="PuzzlePiece2" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="2" unique_id=729525704]
+position = Vector2(337.2155, 132.10492)
 
-[node name="Npc2" type="AnimatedSprite2D" parent="WayBack/PuzzleStreet2/Clickable" index="0" unique_id=1868518976]
-position = Vector2(0, 70)
-sprite_frames = SubResource("SpriteFrames_7ftg5")
-autoplay = "default"
+[node name="PuzzlePieceSprite" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(727084058, 729525704, 2116105691) index="0" unique_id=1266676352]
+position = Vector2(0, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WayBack/PuzzleStreet2/Clickable" index="1" unique_id=864410770]
-shape = SubResource("CircleShape2D_jrbug")
+[node name="PuzzlePieceSpriteOnClick" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(727084058, 729525704, 2116105691) index="1" unique_id=991932022]
+position = Vector2(-66.05227, -34.76446)
 
-[node name="DragDropPuzzle" parent="WayBack/PuzzleStreet2" index="3" unique_id=809533061 instance=ExtResource("125_ot5ko")]
-position = Vector2(-121, 703)
-scale = Vector2(0.3, 0.3)
+[node name="PlacementChecker" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(727084058, 729525704, 2116105691) index="2" unique_id=1710133272]
+position = Vector2(-86.91095, -45.193798)
 
-[node name="PuzzleSocialWorker" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="2" unique_id=1734062459]
+[node name="DraggableZone" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(727084058, 729525704, 2116105691) index="3" unique_id=1105802255]
+position = Vector2(-86.9109, -48.669968)
+
+[node name="Receptacle2" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="3" unique_id=600273107]
+position = Vector2(-135.5812, 567.0847)
+
+[node name="PuzzlePiece3" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="4" unique_id=1334418623]
+position = Vector2(-337.21512, 1015.12256)
+rotation = -0.009472954
+
+[node name="Receptacle3" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="5" unique_id=1839851310]
+position = Vector2(125.83733, 503.6065)
+
+[node name="PuzzlePiece4" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="6" unique_id=1795176319]
+position = Vector2(-48.669975, 180.77553)
+
+[node name="PuzzlePieceSpriteOnClick" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(727084058, 1795176319, 2116105691) index="1" unique_id=991932022]
+position = Vector2(1.0413881e-07, 17.382418)
+
+[node name="Receptacle4" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="7" unique_id=1455510048]
+position = Vector2(-55.162666, 687.6065)
+
+[node name="PuzzlePiece5" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="8" unique_id=1711508116]
+position = Vector2(-177.29842, 1157.6569)
+
+[node name="PuzzlePieceSpriteOnClick" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece5/Draggable" parent_id_path=PackedInt32Array(727084058, 1711508116, 2116105691) index="1" unique_id=991932022]
+position = Vector2(-48.67025, 17.38242)
+
+[node name="DraggableZone" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece5/Draggable" parent_id_path=PackedInt32Array(727084058, 1711508116, 2116105691) index="3" unique_id=1105802255]
+position = Vector2(-13.905811, 38.240547)
+
+[node name="Receptacle5" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="9" unique_id=902464490]
+position = Vector2(156.44043, 643.14264)
+
+[node name="PuzzlePiece6" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="10" unique_id=148742606]
+position = Vector2(590.9961, 93.86424)
+
+[node name="Receptacle6" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="11" unique_id=618732814]
+position = Vector2(346.83734, 639.6065)
+
+[node name="CompletePuzzle" parent="WayBack/PuzzleStreet/DragDropPuzzle" index="2" unique_id=1933061263]
+position = Vector2(111.24658, 511.03763)
+
+[node name="PuzzleSocialWorker" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="1" unique_id=1734062459]
 position = Vector2(1070, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleSocialWorker" index="0" unique_id=68113819 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
@@ -824,22 +416,68 @@ script = ExtResource("4_80rf8")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="Npc2" type="AnimatedSprite2D" parent="WayBack/PuzzleSocialWorker/Clickable" index="0" unique_id=1526407663]
-position = Vector2(0, 70)
+position = Vector2(70.76924, 72.3076)
+scale = Vector2(0.6923077, 0.6923077)
 sprite_frames = SubResource("SpriteFrames_7ftg5")
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WayBack/PuzzleSocialWorker/Clickable" index="1" unique_id=1802513695]
+position = Vector2(70.76924, 81.538376)
 shape = SubResource("CircleShape2D_jrbug")
 
 [node name="DragDropPuzzle9" parent="WayBack/PuzzleSocialWorker" index="3" unique_id=832401624 instance=ExtResource("4_4mioc")]
-position = Vector2(-111, 762)
+position = Vector2(-84, 755)
 scale = Vector2(0.15, 0.15)
 
-[node name="Car4" type="Sprite2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="3" unique_id=1752701603]
+[node name="OutlinePuzzle" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9" index="0" unique_id=1513168459]
+position = Vector2(-853.9998, 219.83357)
+
+[node name="PuzzlePiece" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="0" unique_id=1667760579]
+position = Vector2(73.33301, 13.333313)
+rotation = 1.5707964
+
+[node name="Receptacle" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="1" unique_id=1559191435]
+position = Vector2(-545.9996, 38.00006)
+
+[node name="PuzzlePiece2" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="2" unique_id=729525704]
+position = Vector2(-0.00012207031, -413.3335)
+
+[node name="Receptacle2" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="3" unique_id=600273107]
+position = Vector2(-841.99963, -10.999924)
+
+[node name="PuzzlePiece3" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="4" unique_id=1334418623]
+position = Vector2(0, 306.66675)
+
+[node name="Receptacle3" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="5" unique_id=1839851310]
+position = Vector2(-1062.9996, -39.999924)
+
+[node name="PuzzlePiece4" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="6" unique_id=1795176319]
+position = Vector2(179.99994, 480)
+rotation = -3.1415927
+
+[node name="Receptacle4" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="7" unique_id=1455510048]
+position = Vector2(-1194.9996, 8.000076)
+
+[node name="PuzzlePiece5" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="8" unique_id=1711508116]
+position = Vector2(353.3333, 193.33319)
+
+[node name="Receptacle5" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="9" unique_id=902464490]
+position = Vector2(-1259.9998, 154.00009)
+
+[node name="PuzzlePiece6" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="10" unique_id=1437281790]
+position = Vector2(180.00012, -226.66638)
+
+[node name="Receptacle6" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="11" unique_id=694002424]
+position = Vector2(-1240.9996, 235.00006)
+
+[node name="CompletePuzzle" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9" index="2" unique_id=1933061263]
+position = Vector2(-846.6666, 40)
+
+[node name="Car4" type="Sprite2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="2" unique_id=1752701603]
 position = Vector2(4070, 859)
 texture = ExtResource("140_lvjii")
 
-[node name="PuzzleLullaby" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="4" unique_id=273347506]
+[node name="PuzzleLullaby" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="3" unique_id=273347506]
 position = Vector2(859, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleLullaby" index="0" unique_id=1053797870 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
@@ -849,15 +487,41 @@ spawn_trigger = NodePath("../../../PathTo/PathFollowTo/Zlata/ZlataClickable")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="WayBack/PuzzleLullaby" index="1" unique_id=310843140 instance=ExtResource("3_052ky")]
+position = Vector2(-54, 0)
 collision_mask = 2
 script = ExtResource("8_yk8n7")
 
 [node name="DragDropPuzzle5" parent="WayBack/PuzzleLullaby" index="2" unique_id=1767003607 instance=ExtResource("2_80rf8")]
-position = Vector2(42, 435)
-scale = Vector2(0.46, 0.46)
+position = Vector2(-5.999996, 545)
+scale = Vector2(0.22, 0.22)
+
+[node name="PuzzlePiece" parent="WayBack/PuzzleLullaby/DragDropPuzzle5/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="0" unique_id=1667760579]
+position = Vector2(90.90913, 295.45462)
+
+[node name="PuzzlePiece2" parent="WayBack/PuzzleLullaby/DragDropPuzzle5/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="2" unique_id=729525704]
+position = Vector2(-113.636475, -309.09082)
+
+[node name="PuzzlePiece3" parent="WayBack/PuzzleLullaby/DragDropPuzzle5/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="4" unique_id=1334418623]
+position = Vector2(-277.27274, -227.27274)
+
+[node name="PuzzlePiece4" parent="WayBack/PuzzleLullaby/DragDropPuzzle5/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="6" unique_id=1795176319]
+position = Vector2(-413.63632, -122.72721)
+
+[node name="PuzzlePiece5" parent="WayBack/PuzzleLullaby/DragDropPuzzle5/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="8" unique_id=1711508116]
+position = Vector2(-154.54529, -454.54544)
+
+[node name="PuzzlePiece7" parent="WayBack/PuzzleLullaby/DragDropPuzzle5/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="10" unique_id=918731768]
+position = Vector2(-477.2728, 13.636314)
 
 [node name="PathTo" parent="." index="5" unique_id=1272328632]
 curve = SubResource("Curve2D_pfjp3")
+
+[node name="Zlata" parent="PathTo/PathFollowTo" parent_id_path=PackedInt32Array(666369972) index="0" unique_id=700974070]
+position = Vector2(-14.000002, 1.0000077)
+
+[node name="Camera2D" parent="PathTo/PathFollowTo/Zlata" index="2" unique_id=1600606219]
+limit_left = 249
+limit_right = 5599
 
 [node name="PathBack" parent="." index="6" unique_id=2085482473]
 curve = SubResource("Curve2D_p5lly")
@@ -881,8 +545,32 @@ script = ExtResource("8_yk8n7")
 
 [node name="DragDropPuzzle2" parent="PuzzleStore" index="2" unique_id=1726162827 instance=ExtResource("127_t5rg3")]
 z_index = 1
-position = Vector2(-36, 632)
-scale = Vector2(0.575, 0.575)
+position = Vector2(-1, 754.99994)
+scale = Vector2(0.33499998, 0.33499998)
+
+[node name="PuzzlePiece" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="0" unique_id=1667760579]
+position = Vector2(-269.4317, 108.41803)
+rotation = -3.1415927
+
+[node name="PuzzlePiece2" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="2" unique_id=729525704]
+position = Vector2(-206.74515, 275.58243)
+
+[node name="PuzzlePiece3" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="4" unique_id=2075337317]
+position = Vector2(-239.58182, 499.463)
+
+[node name="PuzzlePiece4" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="6" unique_id=1470086235]
+position = Vector2(426.09048, 583.04504)
+
+[node name="PuzzlePiece5" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="8" unique_id=82169937]
+position = Vector2(882.8069, 463.6421)
+
+[node name="PuzzlePiece6" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="10" unique_id=535439245]
+position = Vector2(760.4193, 583.04504)
+rotation = 6.2831855
+
+[node name="PuzzlePiece7" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="12" unique_id=1738010806]
+position = Vector2(596.23895, 439.76144)
+rotation = 1.5707964
 
 [node name="PuzzleCompletePathBack" parent="." index="8" unique_id=1605263297 node_paths=PackedStringArray("puzzle")]
 puzzle = NodePath("../PuzzleStore/DragDropPuzzle2")
@@ -925,3 +613,37 @@ anim_name = "zlata_index_0"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaSwitchIndex" index="0" unique_id=1799030851]
 shape = SubResource("CircleShape2D_18lw1")
+
+[editable path="WayTo/PuzzleThinkHome/Puzzle1"]
+[editable path="WayTo/PuzzleThinkHome/Puzzle1/BuildingBlocks/FullPieces/PuzzlePiece"]
+[editable path="WayTo/PuzzleThinkHome/Puzzle1/BuildingBlocks/HollowPieces/PuzzlePieceHollow"]
+[editable path="WayTo/PuzzleThinkHome/Puzzle1/BuildingBlocks/HollowPieces/PuzzlePieceHollow2"]
+[editable path="WayBack/PuzzleStreet/DragDropPuzzle"]
+[editable path="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece"]
+[editable path="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece2"]
+[editable path="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece3"]
+[editable path="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece4"]
+[editable path="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece5"]
+[editable path="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece6"]
+[editable path="WayBack/PuzzleSocialWorker/DragDropPuzzle9"]
+[editable path="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks/PuzzlePiece"]
+[editable path="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks/PuzzlePiece2"]
+[editable path="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks/PuzzlePiece3"]
+[editable path="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks/PuzzlePiece4"]
+[editable path="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks/PuzzlePiece5"]
+[editable path="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks/PuzzlePiece6"]
+[editable path="WayBack/PuzzleLullaby/DragDropPuzzle5"]
+[editable path="WayBack/PuzzleLullaby/DragDropPuzzle5/BuildingBlocks/PuzzlePiece"]
+[editable path="WayBack/PuzzleLullaby/DragDropPuzzle5/BuildingBlocks/PuzzlePiece2"]
+[editable path="WayBack/PuzzleLullaby/DragDropPuzzle5/BuildingBlocks/PuzzlePiece3"]
+[editable path="WayBack/PuzzleLullaby/DragDropPuzzle5/BuildingBlocks/PuzzlePiece4"]
+[editable path="WayBack/PuzzleLullaby/DragDropPuzzle5/BuildingBlocks/PuzzlePiece5"]
+[editable path="WayBack/PuzzleLullaby/DragDropPuzzle5/BuildingBlocks/PuzzlePiece7"]
+[editable path="PuzzleStore/DragDropPuzzle2"]
+[editable path="PuzzleStore/DragDropPuzzle2/BuildingBlocks/PuzzlePiece"]
+[editable path="PuzzleStore/DragDropPuzzle2/BuildingBlocks/PuzzlePiece2"]
+[editable path="PuzzleStore/DragDropPuzzle2/BuildingBlocks/PuzzlePiece3"]
+[editable path="PuzzleStore/DragDropPuzzle2/BuildingBlocks/PuzzlePiece4"]
+[editable path="PuzzleStore/DragDropPuzzle2/BuildingBlocks/PuzzlePiece5"]
+[editable path="PuzzleStore/DragDropPuzzle2/BuildingBlocks/PuzzlePiece6"]
+[editable path="PuzzleStore/DragDropPuzzle2/BuildingBlocks/PuzzlePiece7"]
