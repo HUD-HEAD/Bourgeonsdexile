@@ -39,7 +39,7 @@ func _set_custom_mouse_cursor():
 	Input.set_custom_mouse_cursor(t_arrow_scale)
 
 	# Changes a specific shape of the cursor
-	Input.set_custom_mouse_cursor(t_pointing_hand_scale, Input.CURSOR_POINTING_HAND)
+	Input.set_custom_mouse_cursor(t_pointing_hand_scale, Input.CURSOR_POINTING_HAND, Vector2(20,0))
 	Input.set_custom_mouse_cursor(t_drag_scale, Input.CURSOR_DRAG)
 	Input.set_custom_mouse_cursor(t_drag_scale, Input.CURSOR_MOVE)
 
