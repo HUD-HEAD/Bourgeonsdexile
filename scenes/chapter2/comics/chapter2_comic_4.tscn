@@ -21,7 +21,6 @@
 [ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="16_nrvn0"]
 [ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="17_cxg14"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="17_vuetd"]
-[ext_resource type="Resource" uid="uid://bwwtdgrxlqw54" path="res://components/chapter2/contractions/contraction_wobble/contraction_shader_config.tres" id="18_kiieq"]
 [ext_resource type="PackedScene" uid="uid://xrhjayy04y7b" path="res://components/chapter2/contractions/contraction_wobble/contraction_wobble.tscn" id="18_ngmml"]
 
 [node name="ChapterIIComic1" type="Node2D" unique_id=150562309]
@@ -163,7 +162,6 @@ position = Vector2(32569, 16)
 position = Vector2(34771, 0)
 
 [node name="ContractionController" parent="Panels" unique_id=948422643 instance=ExtResource("18_ngmml")]
-shader_config = ExtResource("18_kiieq")
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("2_cxg14")
