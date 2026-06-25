@@ -15,6 +15,9 @@ func _init_params() -> void:
 	
 	var uniform_list : Array = shader.get_shader_uniform_list()
 	for sp : Dictionary in uniform_list:
-		shader_params[sp["name"]] = null
+		var param_name : String = sp["name"]
+		var new_param : ShaderParam = ShaderParam.new()
+		new_param.name = param_name
+		shader_params[param_name] = new_param
 	
 	print_debug("init config")

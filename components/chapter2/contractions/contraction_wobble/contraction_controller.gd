@@ -11,8 +11,17 @@ const SOOTHE_ACCELERATOR : float = 2
 
 func _ready() -> void:
 	SignalManager.trigger_contraction.connect(trigger_contraction)
+	
+	for key in shader_config.shader_params:
+		var sp : ShaderParam = shader_config.shader_params[key]
+		if sp != null:
+			shader_mat.set_shader_parameter(sp.name, sp.curr_val)
+			
+	
 	for sp in shader_params:
 		shader_mat.set_shader_parameter(sp.name, sp.curr_val)
+		
+
 
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("select_element"):
