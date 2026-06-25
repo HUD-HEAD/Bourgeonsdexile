@@ -82,7 +82,7 @@ func stop_contraction():
 	tween_modulate.tween_property(contraction_overlay, "modulate:a", 0.0, 3.0)
 
 	#HACK TODO Maybe replace with control overlay disappearing
-	SignalManager.set_cursor_shape.emit(Input.CURSOR_POINTING_HAND)
+	SignalManager.set_cursor_shape.emit(Input.CURSOR_ARROW)
 	
 #region debug
 func _unhandled_key_input(event: InputEvent) -> void:
