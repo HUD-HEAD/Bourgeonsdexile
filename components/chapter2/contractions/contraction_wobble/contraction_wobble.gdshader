@@ -2,6 +2,8 @@
 
 shader_type canvas_item;
 
+#define USE_TEXTURE false
+
 #define TWOPI 6.28318530718f
 
 uniform float circleRadius : hint_range(0.0, 1.0, 0.1) = 0.5f;
@@ -56,15 +58,28 @@ void fragment() {
 	float time = TIME;
 	float waviness = amplitude * circleRadius;
 	
-	//Make circle display at constant size on screen
-	vec2 resolution = 1.0/SCREEN_PIXEL_SIZE.xy;
- 	vec2 uv = FRAGCOORD.xy/resolution.xy;
-    float aspectRatio = resolution.x / resolution.y;
-    uv.x += ((.5 / aspectRatio) - .5);
-    uv.x *= aspectRatio;
+	#if !USE_TEXTURE
+		//Make circle display at constant size on screen
+		vec2 resolution = 1.0/SCREEN_PIXEL_SIZE.xy;
+	 	vec2 uv = FRAGCOORD.xy/resolution.xy;
+	    float aspectRatio = resolution.x / resolution.y;
+	    uv.x += ((.5 / aspectRatio) - .5);
+	    uv.x *= aspectRatio;
+		//Consistent across screen resolutions
+		//float AA = 2.0/resolution.y;
+	#else
+		//Make circle display relative to texture
+		vec2 resolution = 1.0/TEXTURE_PIXEL_SIZE.xy;
+	 	vec2 uv = UV;
+	    float aspectRatio = TEXTURE_PIXEL_SIZE.y / TEXTURE_PIXEL_SIZE.x;
+	    uv.x += ((.5 / aspectRatio) - .5);
+	    uv.x *= aspectRatio;
+		//TODO restore
+		float AA = 0.0;
+	#endif
 
-	//Consistent across screen resolutions
-	float AA = 2.0/resolution.y;
+
+
 	
     vec2 center  = vec2(.5);
     float distFromCenter = distance(uv, center);
