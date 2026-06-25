@@ -733,8 +733,8 @@ collision_mask = 2
 script = ExtResource("9_f1pwt")
 
 [node name="Puzzle3" parent="WayTo/PuzzleThinkHome" index="2" unique_id=1941159865 instance=ExtResource("5_4b6cm")]
-position = Vector2(118, 554)
-scale = Vector2(0.395, 0.395)
+position = Vector2(29, 630)
+scale = Vector2(0.15, 0.15)
 
 [node name="PuzzleStreet" type="Node2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="1" unique_id=976364560]
 position = Vector2(3241, 0)
@@ -816,8 +816,8 @@ collision_mask = 2
 script = ExtResource("9_f1pwt")
 
 [node name="DragDropPuzzle3" parent="WayBack/PuzzleLullaby" index="2" unique_id=1767003607 instance=ExtResource("2_fu3d2")]
-position = Vector2(-11, 521)
-scale = Vector2(0.375, 0.375)
+position = Vector2(-5.999996, 545)
+scale = Vector2(0.22, 0.22)
 
 [node name="Car1" type="Sprite2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="2" unique_id=1891267274]
 position = Vector2(4544, 862)
