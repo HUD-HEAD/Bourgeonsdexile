@@ -4,18 +4,16 @@ shader_type canvas_item;
 
 #define TWOPI 6.28318530718f
 
-group_uniforms Wave;
 uniform float circleRadius : hint_range(0.0, 1.0, 0.1) = 0.5f;
 uniform float lineWidth : hint_range(0.0, 0.1, 0.001) = 0.01f;
 uniform float waves : hint_range(0.0, 10, 1) = 5.0f;
 uniform float amplitude : hint_range(0.0, 1.0, 0.01) = 0.1f;
 uniform float speed : hint_range(0.0, 100.0, 0.1) = 0.4f;
 uniform float offset_intensity : hint_range(0.0, 3.0, 0.1) = 1.0f;
-group_uniforms;
+uniform float blur_amount : hint_range(0, 5) = 5.0; // Strength of the blur effect
 
 //Blur parameters
 uniform sampler2D screen_texture: hint_screen_texture, repeat_disable, filter_linear_mipmap;
-uniform float blur_amount : hint_range(0, 5) = 5.0; // Strength of the blur effect
 
 vec4 blur(vec2 screen_uv){
     // Color with blur effect from the screen
@@ -120,5 +118,3 @@ void fragment() {
     }
     COLOR.rgb = new_color.rgb;
 }
-
-

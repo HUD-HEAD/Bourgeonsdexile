@@ -3,6 +3,8 @@ class_name ContractionController extends Node
 @export var shader_mat : ShaderMaterial
 @export var shader_params : Array[ShaderParam]
 
+@export var shader_config : ShaderConfig
+
 @export var contraction_overlay : CanvasItem
 
 const SOOTHE_ACCELERATOR : float = 2
