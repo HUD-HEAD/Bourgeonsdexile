@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bcftbfgrxxwkc"]
 
 [ext_resource type="PackedScene" uid="uid://8imm2g6332ef" path="res://components/utils/puzzles/dragdrop_puzzle_template.tscn" id="1_i8vvd"]
-[ext_resource type="Texture2D" uid="uid://drg7e5hd5cr3f" path="res://graphics/chapter3/levels/CH3_puzzles/12/empty12.png" id="2_mx44j"]
+[ext_resource type="Texture2D" uid="uid://drg7e5hd5cr3f" path="res://graphics/chapter3/levels/CH3_puzzles/12_lullaby/empty12.png" id="2_mx44j"]
 [ext_resource type="Texture2D" uid="uid://dgh6bee8qa6jn" path="res://graphics/chapter3/levels/CH3_puzzles/13/2_13 copia.png" id="3_i8vvd"]
 [ext_resource type="Texture2D" uid="uid://cqkb3g3aihvbd" path="res://graphics/chapter3/levels/CH3_puzzles/13/2_13.png" id="4_mx44j"]
 [ext_resource type="PackedScene" uid="uid://b15l0pq6dea3h" path="res://components/utils/puzzles/puzzle_piece_template.tscn" id="5_hux0v"]
@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dqiofs5o4rlmo" path="res://graphics/chapter3/levels/CH3_puzzles/13/7_13.png" id="18_5o6bf"]
 [ext_resource type="Texture2D" uid="uid://dw1nakvgjmkdg" path="res://graphics/chapter3/levels/CH3_puzzles/13/8_13 copia.png" id="19_fgf1b"]
 [ext_resource type="Texture2D" uid="uid://c8jbuvok665vr" path="res://graphics/chapter3/levels/CH3_puzzles/13/8_13.png" id="20_dlfkh"]
-[ext_resource type="Texture2D" uid="uid://drbddsq14bijo" path="res://graphics/chapter3/levels/CH3_puzzles/12/full12.png" id="21_c6no6"]
+[ext_resource type="Texture2D" uid="uid://drbddsq14bijo" path="res://graphics/chapter3/levels/CH3_puzzles/12_lullaby/full12.png" id="21_c6no6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4p4vi"]
 size = Vector2(127.551926, 258.37952)
