@@ -727,7 +727,15 @@ loop_name = 1100
 metadata/_custom_type_script = "uid://brda7473wfj1v"
 
 [node name="ObstacleContractionArea" parent="." unique_id=362755817 node_paths=PackedStringArray("woman") instance=ExtResource("12_isbuh")]
-position = Vector2(784, 0)
+position = Vector2(2369, 0)
+collision_mask = 2
+script = ExtResource("74_ss357")
+shader_params = Array[ExtResource("75_mwlor")]([SubResource("Resource_mwlor"), SubResource("Resource_u7xie")])
+shader_material = SubResource("ShaderMaterial_v48gm")
+woman = NodePath("../Path2D/PathFollow2D/Amani")
+
+[node name="ObstacleContractionArea2" parent="." unique_id=735797609 node_paths=PackedStringArray("woman") instance=ExtResource("12_isbuh")]
+position = Vector2(4303, 0)
 collision_mask = 2
 script = ExtResource("74_ss357")
 shader_params = Array[ExtResource("75_mwlor")]([SubResource("Resource_mwlor"), SubResource("Resource_u7xie")])
