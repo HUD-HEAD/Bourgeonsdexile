@@ -35,8 +35,8 @@
 [ext_resource type="Script" uid="uid://xdn3efreavgm" path="res://components/utils/mechanics/click_enable.gd" id="30_khho4"]
 [ext_resource type="AudioStream" uid="uid://bahokpj1lihaw" path="res://audio/chapter1/soundtrack/TENSE-MOMENT.wav" id="32_bosar"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="35_oi3xf"]
-[ext_resource type="AudioStream" uid="uid://dvpbva7420tgc" path="res://audio/chapter1/ambient/comic_1_discussion_v4.wav" id="36_oi3xf"]
-[ext_resource type="AudioStream" uid="uid://cspu0thnyn6n3" path="res://audio/chapter1/ambient/comic_1_door_close.wav" id="37_6mmal"]
+[ext_resource type="AudioStream" uid="uid://wda5ujyx3yi1" path="res://audio/chapter1/ambient/panel_1.9_discussion_2_short.wav" id="36_6mmal"]
+[ext_resource type="AudioStream" uid="uid://y0qsgdkcy0ut" path="res://audio/chapter1/ambient/panel_1.9_discussion_dishes_sound.wav" id="37_4omvd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_37uka"]
 animations = [{
@@ -274,7 +274,7 @@ tracks/2/path = NodePath("Destruction:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(2.9333355, 3.0666668, 3.200002, 3.3333333, 3.4666684, 3.6000016, 3.7333348, 3.866668, 4.000001, 4.133334),
+"times": PackedFloat32Array(4.5, 4.666666, 4.800001, 4.9333324, 5.0666676, 5.200001, 5.333334, 5.466667, 5.6, 5.8),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -286,7 +286,7 @@ tracks/3/path = NodePath("Background:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(2.8666685, 2.933335, 3.0000017, 3.0666683, 3.1333349, 3.2000015, 3.266668, 3.3333347, 3.4000022, 3.4666688, 3.5333352),
+"times": PackedFloat32Array(3.9999998, 4.0666666, 4.133333, 4.2, 4.2666664, 4.333333, 4.3999996, 4.466666, 4.533334, 4.6000004, 4.6666665),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -339,7 +339,7 @@ tracks/7/path = NodePath("Door_Slam")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(4.4333334),
+"times": PackedFloat32Array(5),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -403,12 +403,14 @@ script = ExtResource("35_oi3xf")
 clickables = [NodePath("../TriggerAnimation")]
 play_sfx_once = true
 use_audio_stream = true
-stream = ExtResource("36_oi3xf")
+stream = ExtResource("36_6mmal")
+linear_volume = 0.8
 metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="Door_Slam" type="Node" parent="." unique_id=138989260]
 script = ExtResource("35_oi3xf")
 play_sfx_once = true
 use_audio_stream = true
-stream = ExtResource("37_6mmal")
+stream = ExtResource("37_4omvd")
+linear_volume = 1.3
 metadata/_custom_type_script = "uid://b7avucygxykbp"
