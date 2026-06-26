@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 		super(delta)
 
 func rejoin_model() -> Signal:
-	var time_to_walk : float = (offset_from_model - _compute_offset())/float(WALK_SPEED)
+	var time_to_walk : float = (offset_from_model - _compute_offset())/float(walk_speed)
 	#print_debug(time_to_walk)
 	_start_walking()
 	return get_tree().create_timer(time_to_walk).timeout
