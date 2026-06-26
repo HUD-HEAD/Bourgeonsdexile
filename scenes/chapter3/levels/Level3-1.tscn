@@ -158,6 +158,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fbeob"]
 size = Vector2(162, 502)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_e3xgo"]
+radius = 251.07089
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_b5cmm"]
 animations = [{
 "frames": [{
@@ -526,9 +529,6 @@ animations = [{
 "speed": 30.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_e3xgo"]
-radius = 197.12433
-
 [sub_resource type="Curve2D" id="Curve2D_5yy0j"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 915, 970, 0, 0, 0, 0, -15665, 922, 0, 0, 0, 0, -17163, 764)
@@ -589,6 +589,56 @@ _data = {
 &"default": SubResource("Animation_x0jwe")
 }
 
+[sub_resource type="Animation" id="Animation_l8mmb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Puzzles/Puzzle1/Husband:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_vter2"]
+resource_name = "default"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Puzzles/Puzzle1/Husband:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Path2D/PathFollow2D/Zlata/AnimSprite")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"idle_phone", 1.0, false],
+"method": &"play"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l8mmb"]
+_data = {
+&"RESET": SubResource("Animation_l8mmb"),
+&"default": SubResource("Animation_vter2")
+}
+
 [node name="Level31" type="Node2D" unique_id=2125939091]
 metadata/_edit_vertical_guides_ = [-21158.0, -4732.0, -15793.0, -10241.0]
 
@@ -639,12 +689,17 @@ position = Vector2(-4454, 0)
 [node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle1" unique_id=411815603 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("6_unyww")
 puzzle = NodePath("../DragDropPuzzle")
-spawn_trigger = NodePath("../ClickableNpc")
+spawn_trigger = NodePath("../Husband/ClickableNpc")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="Puzzles/Puzzle1" unique_id=310843140 instance=ExtResource("7_q7f5r")]
 position = Vector2(-290, 0)
 collision_mask = 2
+
+[node name="TriggerPhoneAnim" type="Node" parent="Puzzles/Puzzle1/Obstacle" unique_id=13144506 node_paths=PackedStringArray("area2d", "anim_player")]
+script = ExtResource("140_v81oq")
+area2d = NodePath("..")
+anim_player = NodePath("../../../../AnimationPhone")
 
 [node name="DragDropPuzzle" parent="Puzzles/Puzzle1" unique_id=1767003607 instance=ExtResource("5_ihdby")]
 position = Vector2(-506.00003, 335.99997)
@@ -674,20 +729,17 @@ position = Vector2(359.72205, -213.88882)
 [node name="CompletePuzzle" parent="Puzzles/Puzzle1/DragDropPuzzle" index="2" unique_id=1933061263]
 texture = ExtResource("11_vter2")
 
-[node name="ClickableNpc" type="Area2D" parent="Puzzles/Puzzle1" unique_id=1597007466]
-position = Vector2(-859, 572)
-scale = Vector2(0.83999026, 0.83999026)
+[node name="Husband" type="Sprite2D" parent="Puzzles/Puzzle1" unique_id=1413426561]
+visible = false
+position = Vector2(-770.9995, 333)
+scale = Vector2(0.32264152, 0.32264152)
+texture = ExtResource("146_x0jwe")
+
+[node name="ClickableNpc" type="Area2D" parent="Puzzles/Puzzle1/Husband" unique_id=1597007466]
 script = ExtResource("6_g24i2")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
-[node name="Npc" type="AnimatedSprite2D" parent="Puzzles/Puzzle1/ClickableNpc" unique_id=892976051]
-position = Vector2(0, 70)
-scale = Vector2(2.27, 2.27)
-sprite_frames = SubResource("SpriteFrames_b5cmm")
-autoplay = "default"
-flip_h = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzles/Puzzle1/ClickableNpc" unique_id=292501732]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzles/Puzzle1/Husband/ClickableNpc" unique_id=292501732]
 shape = SubResource("CircleShape2D_e3xgo")
 
 [node name="Puzzle2" type="Node2D" parent="Puzzles" unique_id=1457672785]
@@ -933,11 +985,6 @@ script = ExtResource("146_ibvau")
 [node name="BusTransition" type="AnimationPlayer" parent="." unique_id=1461867753]
 libraries/ = SubResource("AnimationLibrary_lue18")
 
-[node name="Husband" type="Sprite2D" parent="." unique_id=1413426561]
-position = Vector2(-5224.9995, 333)
-scale = Vector2(0.32264152, 0.32264152)
-texture = ExtResource("146_x0jwe")
-
 [node name="Audio" type="Node" parent="." unique_id=102597753]
 
 [node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=465931473]
@@ -961,6 +1008,9 @@ rect = Rect2(-433, -14, 126, 76)
 script = ExtResource("150_g4m3t")
 music_name = 3100
 metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="AnimationPhone" type="AnimationPlayer" parent="." unique_id=1055162789]
+libraries/ = SubResource("AnimationLibrary_l8mmb")
 
 [editable path="Puzzles/Puzzle1/DragDropPuzzle"]
 [editable path="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece"]
