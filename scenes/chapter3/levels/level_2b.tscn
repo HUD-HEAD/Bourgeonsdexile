@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="6_5a67c"]
 [ext_resource type="PackedScene" uid="uid://bj1quvkv1wd5n" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-15.tscn" id="6_37s5b"]
 [ext_resource type="Texture2D" uid="uid://brsmaqdk6hriy" path="res://graphics/chapter3/levels/CH3_puzzles/23/full23_filled.png" id="10_nnusv"]
+[ext_resource type="Script" uid="uid://nw1du1rkgxpn" path="res://scenes/chapter3/levels/area_entered_flip.gd" id="20_m0ijv"]
 [ext_resource type="Texture2D" uid="uid://dehacwdplh44r" path="res://graphics/chapter3/levels/CH3_puzzles/12_lullaby/full12_filled.png" id="21_vfllm"]
 [ext_resource type="SpriteFrames" uid="uid://do7dsfuo5fhg2" path="res://components/chapter3/main_characters/woman_blueskirt.tres" id="22_rfd6j"]
 [ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/mechanics/area_entered_enable.gd" id="130_ahkc3"]
@@ -146,7 +147,7 @@ position = Vector2(-822.2224, -325.92606)
 
 [node name="PuzzlePiece3" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="4" unique_id=1334418623]
 position = Vector2(-659.2593, 644.44446)
-rotation = 3.1415925
+rotation = -3.1415925
 
 [node name="PuzzlePiece4" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="6" unique_id=1795176319]
 position = Vector2(-622.22235, 325.92603)
@@ -266,6 +267,11 @@ obstacle = NodePath("../Obstacle")
 position = Vector2(-54, 0)
 collision_mask = 2
 script = ExtResource("5_kh7pe")
+
+[node name="FlipWoman" type="Node" parent="WayBack/PuzzleLullaby/Obstacle" index="1" unique_id=702005481 node_paths=PackedStringArray("area2d", "woman")]
+script = ExtResource("20_m0ijv")
+area2d = NodePath("..")
+woman = NodePath("../../../../PathTo/PathFollowTo/Zlata")
 
 [node name="DragDropPuzzle4" parent="WayBack/PuzzleLullaby" index="2" unique_id=1767003607 instance=ExtResource("2_0g5ql")]
 position = Vector2(15.000004, 522)

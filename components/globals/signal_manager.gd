@@ -16,6 +16,8 @@ signal next_panel
 ## Emitted from various nodes, received by ContractionController
 signal trigger_contraction(shader_params : Array[ShaderParam], shader_material : ShaderMaterial)
 
+signal adjust_camera(offset_x : float)
+
 @warning_ignore_restore("unused_signal")
 
 

@@ -22,8 +22,10 @@
 [ext_resource type="Texture2D" uid="uid://dvl57mmyxc12m" path="res://graphics/chapter3/levels/bigavenue/husband.png" id="17_kq1o5"]
 [ext_resource type="Texture2D" uid="uid://dabxmhi50p8ad" path="res://graphics/chapter3/levels/CH3_puzzles/7_conversation/full7_filled.png" id="19_5msxn"]
 [ext_resource type="Texture2D" uid="uid://bkn0ffs7kumwf" path="res://graphics/chapter3/levels/CH3_puzzles/21/full21_filled.png" id="22_i0iuy"]
+[ext_resource type="Script" uid="uid://nw1du1rkgxpn" path="res://scenes/chapter3/levels/area_entered_flip.gd" id="24_rtu30"]
 [ext_resource type="Texture2D" uid="uid://dehacwdplh44r" path="res://graphics/chapter3/levels/CH3_puzzles/12_lullaby/full12_filled.png" id="25_rtu30"]
 [ext_resource type="Texture2D" uid="uid://c04goqkta7ikm" path="res://graphics/chapter3/levels/CH3_puzzles/6_shop/full6_filled.png" id="27_qnuec"]
+[ext_resource type="Script" uid="uid://do4qlmbenh0hg" path="res://scenes/chapter3/levels/camera_adjust.gd" id="30_i0iuy"]
 [ext_resource type="PackedScene" uid="uid://buwei6igqkc44" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-4.tscn" id="127_t5rg3"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="131_yk8n7"]
 [ext_resource type="Script" uid="uid://4x7opfu2wab4" path="res://components/utils/puzzles/puzzle_complete_trigger_anim.gd" id="134_gjepm"]
@@ -195,15 +197,15 @@ tracks/1/keys = {
 tracks/2/type = "method"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("PuzzleCompletePathBack")
+tracks/2/path = NodePath("AdjustCamera")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
-"args": [],
-"method": &"_adjust_camera"
+"args": [0.0],
+"method": &"adjust_camera"
 }]
 }
 
@@ -459,7 +461,7 @@ position = Vector2(1046.6666, 306.66675)
 
 [node name="PuzzlePiece4" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="6" unique_id=1795176319]
 position = Vector2(1226.6665, 480)
-rotation = 3.1415925
+rotation = -3.1415925
 
 [node name="PuzzlePiece5" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="8" unique_id=1711508116]
 position = Vector2(1400, 193.33319)
@@ -487,6 +489,11 @@ obstacle = NodePath("../Obstacle")
 position = Vector2(-54, 0)
 collision_mask = 2
 script = ExtResource("8_yk8n7")
+
+[node name="FlipWoman" type="Node" parent="WayBack/PuzzleLullaby/Obstacle" index="1" unique_id=44930049 node_paths=PackedStringArray("area2d", "woman")]
+script = ExtResource("24_rtu30")
+area2d = NodePath("..")
+woman = NodePath("../../../../PathTo/PathFollowTo/Zlata")
 
 [node name="DragDropPuzzle5" parent="WayBack/PuzzleLullaby" index="2" unique_id=1767003607 instance=ExtResource("2_80rf8")]
 position = Vector2(-5.999996, 545)
@@ -553,7 +560,6 @@ scale = Vector2(0.33499998, 0.33499998)
 
 [node name="PuzzlePiece" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="0" unique_id=1667760579]
 position = Vector2(-269.4317, 108.41803)
-rotation = -3.1415925
 
 [node name="PuzzlePiece2" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="2" unique_id=729525704]
 position = Vector2(-206.74515, 275.58243)
@@ -582,7 +588,6 @@ texture = ExtResource("27_qnuec")
 
 [node name="PuzzleCompletePathBack" parent="." index="8" unique_id=1605263297 node_paths=PackedStringArray("puzzle")]
 puzzle = NodePath("../PuzzleStore/DragDropPuzzle2")
-adjust_camera = false
 
 [node name="CheckpointController" type="Node" parent="." index="9" unique_id=534646765]
 script = ExtResource("131_yk8n7")
@@ -623,6 +628,9 @@ anim_name = "zlata_index_0"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaSwitchIndex" index="0" unique_id=1799030851]
 shape = SubResource("CircleShape2D_18lw1")
+
+[node name="AdjustCamera" type="Node" parent="." index="13" unique_id=1123527535]
+script = ExtResource("30_i0iuy")
 
 [editable path="WayTo/PuzzleThinkHome/Puzzle1"]
 [editable path="WayTo/PuzzleThinkHome/Puzzle1/BuildingBlocks/FullPieces/PuzzlePiece"]

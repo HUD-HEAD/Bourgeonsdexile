@@ -9,13 +9,13 @@ extends Node
 ##On way back, offsets camera x so it "looks ahead"
 @export var adjust_camera : bool = true
 
-var camera : Camera2D
+var camera_initial_offset : float
 
 func _ready() -> void:
 	#return
 	assert(is_instance_valid(puzzle))
 	puzzle.puzzle_complete.connect(_on_puzzle_complete)
-	camera = get_viewport().get_camera_2d()
+	camera_initial_offset = get_viewport().get_camera_2d().offset.x
 	
 	
 	wayto.show()
@@ -26,7 +26,7 @@ func _on_puzzle_complete():
 	wayback.show()
 	_go_back()
 	if adjust_camera:
-		_adjust_camera()
+		SignalManager.adjust_camera.emit(-camera_initial_offset)
 
 ## Transition to path back if defined, or turn around on current path
 func _go_back():
@@ -40,7 +40,3 @@ func _go_back():
 		woman.reparent(pathfollow_back, true)	
 	else :
 		woman.dir *= -1
-
-func _adjust_camera():
-	var tween : Tween = get_tree().create_tween()
-	tween.tween_property(camera, "offset:x", -camera.offset.x, 5.0)

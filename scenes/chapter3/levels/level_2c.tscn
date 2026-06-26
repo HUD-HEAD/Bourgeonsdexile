@@ -139,9 +139,11 @@
 [ext_resource type="Texture2D" uid="uid://66vdhk0xnmxe" path="res://graphics/chapter3/levels/CH3_puzzles/16/full16_filled.png" id="132_cse6j"]
 [ext_resource type="Texture2D" uid="uid://dkdhcmfsu1u2k" path="res://graphics/chapter3/levels/CH3_puzzles/22/full22_filled.png" id="135_1uodi"]
 [ext_resource type="Texture2D" uid="uid://b2ewpt3w26r0s" path="res://graphics/chapter3/levels/bigavenue/road/car1.png" id="135_dihh7"]
+[ext_resource type="Script" uid="uid://nw1du1rkgxpn" path="res://scenes/chapter3/levels/area_entered_flip.gd" id="136_e6bwg"]
 [ext_resource type="Script" uid="uid://4x7opfu2wab4" path="res://components/utils/puzzles/puzzle_complete_trigger_anim.gd" id="136_kuwon"]
 [ext_resource type="Texture2D" uid="uid://dehacwdplh44r" path="res://graphics/chapter3/levels/CH3_puzzles/12_lullaby/full12_filled.png" id="137_jhdp3"]
 [ext_resource type="Texture2D" uid="uid://dhq7irmqj6688" path="res://graphics/chapter3/levels/CH3_puzzles/17/full17_filled.png" id="139_1uodi"]
+[ext_resource type="Script" uid="uid://do4qlmbenh0hg" path="res://scenes/chapter3/levels/camera_adjust.gd" id="143_l2jfe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dihh7"]
 size = Vector2(501, 165)
@@ -603,15 +605,15 @@ tracks/1/keys = {
 tracks/2/type = "method"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("PuzzleCompletePathBack")
+tracks/2/path = NodePath("AdjustCamera")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
-"args": [],
-"method": &"_adjust_camera"
+"args": [0.0],
+"method": &"adjust_camera"
 }]
 }
 
@@ -895,6 +897,11 @@ position = Vector2(-81, 2)
 collision_mask = 2
 script = ExtResource("9_f1pwt")
 
+[node name="FlipWoman" type="Node" parent="WayBack/PuzzleLullaby/Obstacle" index="1" unique_id=2030515709 node_paths=PackedStringArray("area2d", "woman")]
+script = ExtResource("136_e6bwg")
+area2d = NodePath("..")
+woman = NodePath("../../../../PathTo/PathFollowTo/Zlata")
+
 [node name="DragDropPuzzle3" parent="WayBack/PuzzleLullaby" index="2" unique_id=1767003607 instance=ExtResource("2_fu3d2")]
 position = Vector2(-5.999996, 545)
 scale = Vector2(0.22, 0.22)
@@ -944,7 +951,6 @@ position = Vector2(5192, 914)
 
 [node name="PuzzleCompletePathBack" parent="." index="7" unique_id=1605263297 node_paths=PackedStringArray("puzzle")]
 puzzle = NodePath("../PuzzleStore/DragDropPuzzle8")
-adjust_camera = false
 
 [node name="PuzzleStore" type="Node2D" parent="." index="8" unique_id=1817000249]
 visible = false
@@ -1025,6 +1031,9 @@ anim_name = "zlata_index_0"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaSwitchIndex" index="0" unique_id=1051585021]
 shape = SubResource("CircleShape2D_kuwon")
+
+[node name="AdjustCamera" type="Node" parent="." index="12" unique_id=2103204904]
+script = ExtResource("143_l2jfe")
 
 [editable path="WayTo/PuzzleThinkHome/Puzzle3"]
 [editable path="WayTo/PuzzleThinkHome/Puzzle3/BuildingBlocks/FullPieces/PuzzlePiece"]
