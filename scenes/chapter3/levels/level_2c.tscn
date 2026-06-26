@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cpguix1gkv66k" path="res://graphics/chapter3/levels/bigavenue/store/store_wall.png" id="4_hxlkc"]
 [ext_resource type="Texture2D" uid="uid://bt5nmg7mr62h0" path="res://graphics/chapter3/levels/bigavenue/store/store_counter.png" id="5_0gkm7"]
 [ext_resource type="PackedScene" uid="uid://c8e6ucedj5thg" path="res://components/chapter3/levels/level3.2/thinking_puzzle_3.2-8.tscn" id="5_4b6cm"]
+[ext_resource type="SpriteFrames" uid="uid://bws4idigr1jip" path="res://components/chapter3/main_characters/store_npc.tres" id="6_8ekd6"]
 [ext_resource type="PackedScene" uid="uid://cs8rkd02b0ogh" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-11.tscn" id="6_ioa73"]
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="7_eeffk"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/mechanics/obstacle.tscn" id="8_hts78"]
@@ -576,6 +577,23 @@ tracks/2/keys = {
 "values": [true]
 }
 
+[sub_resource type="Animation" id="Animation_8ekd6"]
+resource_name = "activate_scan"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AreaRevealStore/StoreBg/StoreWall/StoreClickable/StoreNPC")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"scan", 1.0, false],
+"method": &"play"
+}]
+}
+
 [sub_resource type="Animation" id="Animation_gjepm"]
 resource_name = "activate_store"
 tracks/0/type = "value"
@@ -648,6 +666,23 @@ tracks/1/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_j56uu"]
+resource_name = "deactivate_scan"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AreaRevealStore/StoreBg/StoreWall/StoreClickable/StoreNPC")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"idle", 1.0, false],
+"method": &"play"
+}]
+}
+
 [sub_resource type="Animation" id="Animation_kuwon"]
 resource_name = "zlata_index_0"
 tracks/0/type = "value"
@@ -678,8 +713,10 @@ tracks/1/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hxlkc"]
 _data = {
 &"RESET": SubResource("Animation_lvjii"),
+&"activate_scan": SubResource("Animation_8ekd6"),
 &"activate_store": SubResource("Animation_gjepm"),
 &"chapter_transition": SubResource("Animation_p5lly"),
+&"deactivate_scan": SubResource("Animation_j56uu"),
 &"zlata_index_0": SubResource("Animation_kuwon")
 }
 
@@ -706,20 +743,25 @@ texture = ExtResource("3_kuwon")
 z_index = 1
 texture = ExtResource("4_hxlkc")
 
-[node name="StoreCounter" type="Sprite2D" parent="AreaRevealStore/StoreBg/StoreWall" index="0" unique_id=198612600]
-position = Vector2(0, 44)
-scale = Vector2(0.9999999, 0.9999999)
-texture = ExtResource("5_0gkm7")
-
-[node name="StoreClickable" type="Area2D" parent="AreaRevealStore/StoreBg/StoreWall/StoreCounter" index="0" unique_id=425009634]
-position = Vector2(0, -44)
-scale = Vector2(1.0000001, 1.0000001)
+[node name="StoreClickable" type="Area2D" parent="AreaRevealStore/StoreBg/StoreWall" index="0" unique_id=425009634]
 script = ExtResource("10_ari2e")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaRevealStore/StoreBg/StoreWall/StoreCounter/StoreClickable" index="0" unique_id=1656225356]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaRevealStore/StoreBg/StoreWall/StoreClickable" index="0" unique_id=1656225356]
 position = Vector2(0, 16.346182)
 shape = SubResource("CircleShape2D_cse6j")
+
+[node name="StoreNPC" type="AnimatedSprite2D" parent="AreaRevealStore/StoreBg/StoreWall/StoreClickable" index="1" unique_id=169760504]
+position = Vector2(-26.999996, 19)
+scale = Vector2(0.48, 0.48)
+sprite_frames = ExtResource("6_8ekd6")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="StoreCounter" type="Sprite2D" parent="AreaRevealStore/StoreBg/StoreWall" index="1" unique_id=198612600]
+position = Vector2(0, 44)
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("5_0gkm7")
 
 [node name="SceneEnder" parent="." index="2" unique_id=1221118698]
 next_scene = "uid://d4cccbwuwp1rh"
@@ -960,7 +1002,7 @@ position = Vector2(5197, 0)
 [node name="PuzzleSpawner" type="Node" parent="PuzzleStore" index="0" unique_id=312219525 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("7_eeffk")
 puzzle = NodePath("../DragDropPuzzle8")
-spawn_trigger = NodePath("../../AreaRevealStore/StoreBg/StoreWall/StoreCounter/StoreClickable")
+spawn_trigger = NodePath("../../AreaRevealStore/StoreBg/StoreWall/StoreClickable")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="PuzzleStore" index="1" unique_id=1937492105 instance=ExtResource("8_hts78")]
@@ -968,7 +1010,25 @@ position = Vector2(-19, 0)
 collision_mask = 2
 script = ExtResource("9_f1pwt")
 
-[node name="DragDropPuzzle8" parent="PuzzleStore" index="2" unique_id=427741748 instance=ExtResource("6_ioa73")]
+[node name="TriggerAnimScan" type="Node" parent="PuzzleStore/Obstacle" index="1" unique_id=1942874133 node_paths=PackedStringArray("area2d", "anim_player")]
+script = ExtResource("131_hts78")
+area2d = NodePath("..")
+anim_player = NodePath("../../../AnimationPlayer")
+anim_name = "activate_scan"
+
+[node name="Obstacle2" parent="PuzzleStore" index="2" unique_id=1391882919 instance=ExtResource("8_hts78")]
+position = Vector2(-109, 0)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("9_f1pwt")
+
+[node name="TriggerAnimDeactivateScan" type="Node" parent="PuzzleStore/Obstacle2" index="1" unique_id=1931910371 node_paths=PackedStringArray("area2d", "anim_player")]
+script = ExtResource("131_hts78")
+area2d = NodePath("..")
+anim_player = NodePath("../../../AnimationPlayer")
+anim_name = "deactivate_scan"
+
+[node name="DragDropPuzzle8" parent="PuzzleStore" index="3" unique_id=427741748 instance=ExtResource("6_ioa73")]
 position = Vector2(-61, 753)
 scale = Vector2(0.25, 0.25)
 
