@@ -902,6 +902,7 @@ loop = false
 scale = Vector2(2.0799963, 2.0799963)
 path_follow = NodePath("..")
 play_walking_sfx = true
+walk_speed = 120
 
 [node name="AnimSprite" parent="Path2D/PathFollow2D/Zlata" index="0" unique_id=689873547]
 sprite_frames = ExtResource("133_kervo")

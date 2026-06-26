@@ -712,6 +712,7 @@ position = Vector2(-1021, 463)
 [node name="Zlata" parent="." unique_id=826116100 instance=ExtResource("3_sb6ig")]
 position = Vector2(-2689, 1029.0001)
 scale = Vector2(2.0799963, 2.0799963)
+walk_speed = 120
 
 [node name="Camera2D" type="Camera2D" parent="Zlata" unique_id=2072470020]
 position = Vector2(0, -233)
