@@ -65,6 +65,9 @@ shape = SubResource("CircleShape2D_gh77q")
 [node name="PuzzlePieceSprite" parent="BuildingBlocks/HollowPieces/PuzzlePieceHollow3/Draggable/Visuals" parent_id_path=PackedInt32Array(1052747192, 710902977) index="0" unique_id=1266676352]
 texture = ExtResource("9_1wub3")
 
+[node name="PuzzleMaskout" parent="BuildingBlocks/HollowPieces/PuzzlePieceHollow3/Draggable/Visuals/PuzzlePieceSprite" index="0" unique_id=1415682081]
+scale = Vector2(0.58, 0.58)
+
 [node name="PlacementChecker" parent="BuildingBlocks/HollowPieces/PuzzlePieceHollow3/Draggable" parent_id_path=PackedInt32Array(1052747192, 2116105691) index="1" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
 receptacle = NodePath("../../../../Receptacle4")
 
