@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://banhkda0c483g" path="res://components/chapter3/levels/level3.2/thinking_puzzle_3.2-6.tscn" id="5_rj8de"]
 [ext_resource type="Texture2D" uid="uid://bt5nmg7mr62h0" path="res://graphics/chapter3/levels/bigavenue/store/store_counter.png" id="6_lvjii"]
 [ext_resource type="Script" uid="uid://qu5hfw1uwm0x" path="res://components/utils/mechanics/area_reveal.gd" id="7_18lw1"]
-[ext_resource type="SpriteFrames" uid="uid://bws4idigr1jip" path="res://components/chapter3/main_characters/store_npc.tres" id="7_qnuec"]
+[ext_resource type="SpriteFrames" uid="uid://bws4idigr1jip" path="res://components/chapter3/main_characters/supermarket_npc.tres" id="7_qnuec"]
 [ext_resource type="Script" uid="uid://ca78ngu4ava5l" path="res://components/utils/mechanics/obstacle_disable_hidden.gd" id="8_yk8n7"]
 [ext_resource type="Texture2D" uid="uid://b2ewpt3w26r0s" path="res://graphics/chapter3/levels/bigavenue/road/car1.png" id="10_gjepm"]
 [ext_resource type="Texture2D" uid="uid://bvvfqeq70yfsh" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_idle_5fps/woman_blueskirt_idle_0001.png" id="12_k0kvr"]
@@ -347,7 +347,7 @@ shape = SubResource("CircleShape2D_yfmg0")
 position = Vector2(-26.999996, 19)
 scale = Vector2(0.48, 0.48)
 sprite_frames = ExtResource("7_qnuec")
-animation = &"idle"
+animation = &"scan"
 autoplay = "idle"
 
 [node name="StoreCounter" type="Sprite2D" parent="AreaRevealStore/StoreBg/StoreWall" index="1" unique_id=77554074]

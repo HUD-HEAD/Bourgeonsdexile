@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cpguix1gkv66k" path="res://graphics/chapter3/levels/bigavenue/store/store_wall.png" id="4_hxlkc"]
 [ext_resource type="Texture2D" uid="uid://bt5nmg7mr62h0" path="res://graphics/chapter3/levels/bigavenue/store/store_counter.png" id="5_0gkm7"]
 [ext_resource type="PackedScene" uid="uid://c8e6ucedj5thg" path="res://components/chapter3/levels/level3.2/thinking_puzzle_3.2-8.tscn" id="5_4b6cm"]
-[ext_resource type="SpriteFrames" uid="uid://bws4idigr1jip" path="res://components/chapter3/main_characters/store_npc.tres" id="6_8ekd6"]
+[ext_resource type="SpriteFrames" uid="uid://bws4idigr1jip" path="res://components/chapter3/main_characters/supermarket_npc.tres" id="6_8ekd6"]
 [ext_resource type="PackedScene" uid="uid://cs8rkd02b0ogh" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-11.tscn" id="6_ioa73"]
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="7_eeffk"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/mechanics/obstacle.tscn" id="8_hts78"]

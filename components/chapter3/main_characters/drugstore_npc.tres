@@ -1,0 +1,123 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://62xe6mfte7jj"]
+
+[ext_resource type="Texture2D" uid="uid://dd4q5wmppys8j" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_idle_5fps/npc_drugstore_idle_0001.png" id="1_jxqys"]
+[ext_resource type="Texture2D" uid="uid://bawt2hc6cut05" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_idle_5fps/npc_drugstore_idle_0002.png" id="2_tcel6"]
+[ext_resource type="Texture2D" uid="uid://k8223ia68jff" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_idle_5fps/npc_drugstore_idle_0003.png" id="3_bi505"]
+[ext_resource type="Texture2D" uid="uid://cab25lnalhuw" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_idle_5fps/npc_drugstore_idle_0004.png" id="4_2xk8u"]
+[ext_resource type="Texture2D" uid="uid://c7wjiikcqb3ko" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_idle_5fps/npc_drugstore_idle_0005.png" id="5_kybbx"]
+[ext_resource type="Texture2D" uid="uid://d4l1b4fwye2k1" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_idle_5fps/npc_drugstore_idle_0006.png" id="6_ldiff"]
+[ext_resource type="Texture2D" uid="uid://3goulb6pfpl6" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_idle_5fps/npc_drugstore_idle_0007.png" id="7_5namh"]
+[ext_resource type="Texture2D" uid="uid://hnns0po12k1d" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_idle_5fps/npc_drugstore_idle_0008.png" id="8_xvos1"]
+[ext_resource type="Texture2D" uid="uid://dyvks5kveq7ny" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_idle_5fps/npc_drugstore_idle_0009.png" id="9_fdh5d"]
+[ext_resource type="Texture2D" uid="uid://cjcv3xuvs36bs" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_scan_6fps/nps_drugstore_scan_0001.png" id="10_ofxsq"]
+[ext_resource type="Texture2D" uid="uid://bhudw76sinc4x" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_scan_6fps/nps_drugstore_scan_0002.png" id="11_h2jf8"]
+[ext_resource type="Texture2D" uid="uid://bl3gaxfs2eown" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_scan_6fps/nps_drugstore_scan_0003.png" id="12_o05nh"]
+[ext_resource type="Texture2D" uid="uid://cqxd5aimvypl0" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_scan_6fps/nps_drugstore_scan_0004.png" id="13_n7b83"]
+[ext_resource type="Texture2D" uid="uid://dadw6qfg4lwj3" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_scan_6fps/nps_drugstore_scan_0005.png" id="14_88n3d"]
+[ext_resource type="Texture2D" uid="uid://dsuvybcd2hv3q" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_scan_6fps/nps_drugstore_scan_0006.png" id="15_iotkl"]
+[ext_resource type="Texture2D" uid="uid://cus7bfw57dt10" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_scan_6fps/nps_drugstore_scan_0007.png" id="16_xs340"]
+[ext_resource type="Texture2D" uid="uid://b8wuyreskeu7q" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_scan_6fps/nps_drugstore_scan_0008.png" id="17_2gdyw"]
+[ext_resource type="Texture2D" uid="uid://c6dumgvweatnv" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_scan_6fps/nps_drugstore_scan_0009.png" id="18_g2yd1"]
+[ext_resource type="Texture2D" uid="uid://cdlnpx5ffb1m2" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_scan_6fps/nps_drugstore_scan_0010.png" id="19_y6w0y"]
+[ext_resource type="Texture2D" uid="uid://bqsbx1ill1jy5" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_scan_6fps/nps_drugstore_scan_0011.png" id="20_1scbp"]
+[ext_resource type="Texture2D" uid="uid://yk7hallytcg4" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_scan_6fps/nps_drugstore_scan_0012.png" id="21_qj7bk"]
+[ext_resource type="Texture2D" uid="uid://8bnnfyvjvxpv" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_scan_6fps/nps_drugstore_scan_0013.png" id="22_0f4iy"]
+[ext_resource type="Texture2D" uid="uid://08bnbo63wpm4" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_scan_6fps/nps_drugstore_scan_0014.png" id="23_77k7f"]
+[ext_resource type="Texture2D" uid="uid://d2njgqekrjqt1" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_scan_6fps/nps_drugstore_scan_0015.png" id="24_ugy1d"]
+[ext_resource type="Texture2D" uid="uid://rjfslxcs5oxf" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_scan_6fps/nps_drugstore_scan_0016.png" id="25_dn1pq"]
+[ext_resource type="Texture2D" uid="uid://bodyipfq6okou" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_scan_6fps/nps_drugstore_scan_0017.png" id="26_5eek4"]
+[ext_resource type="Texture2D" uid="uid://dxrfglu40jqlt" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_drugstore_scan_6fps/nps_drugstore_scan_0018.png" id="27_ypy2k"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jxqys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_tcel6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bi505")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2xk8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kybbx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ldiff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5namh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xvos1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_fdh5d")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_ofxsq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_h2jf8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_o05nh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_n7b83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_88n3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_iotkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_xs340")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_2gdyw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_g2yd1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_y6w0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_1scbp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_qj7bk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_0f4iy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_77k7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ugy1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_dn1pq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_5eek4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ypy2k")
+}],
+"loop": true,
+"name": &"scan",
+"speed": 6.0
+}]

@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://ce0jbkcojk3ii" path="res://components/chapter3/levels/level3.2/thinking_puzzle_3.2-7.tscn" id="5_7eiwe"]
 [ext_resource type="Texture2D" uid="uid://dvs07tq3jucx8" path="res://graphics/chapter3/levels/bigavenue/pharmacy/pharmacy_desk.png" id="5_a11uh"]
 [ext_resource type="Script" uid="uid://ca78ngu4ava5l" path="res://components/utils/mechanics/obstacle_disable_hidden.gd" id="5_kh7pe"]
+[ext_resource type="SpriteFrames" uid="uid://62xe6mfte7jj" path="res://components/chapter3/main_characters/drugstore_npc.tres" id="5_o43pv"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="6_5a67c"]
 [ext_resource type="PackedScene" uid="uid://bj1quvkv1wd5n" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-15.tscn" id="6_37s5b"]
 [ext_resource type="Texture2D" uid="uid://brsmaqdk6hriy" path="res://graphics/chapter3/levels/CH3_puzzles/23/full23_filled.png" id="10_nnusv"]
@@ -98,17 +99,23 @@ shape = SubResource("RectangleShape2D_6i3hu")
 position = Vector2(-22, -2)
 texture = ExtResource("4_gus1e")
 
-[node name="PharmacyDesk" type="Sprite2D" parent="AreaRevealPharmacy/Pharmacy" index="0" unique_id=1238267494]
-position = Vector2(135, 46)
-texture = ExtResource("5_a11uh")
-
-[node name="PharmacyClickable" type="Area2D" parent="AreaRevealPharmacy" index="2" unique_id=1777436622]
-position = Vector2(145, 0)
+[node name="PharmacyClickable" type="Area2D" parent="AreaRevealPharmacy/Pharmacy" index="0" unique_id=1777436622]
+position = Vector2(181, 15)
 script = ExtResource("6_5a67c")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaRevealPharmacy/PharmacyClickable" index="0" unique_id=1609343820]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaRevealPharmacy/Pharmacy/PharmacyClickable" index="0" unique_id=1609343820]
 shape = SubResource("CircleShape2D_es0uy")
+
+[node name="StoreNPC" type="AnimatedSprite2D" parent="AreaRevealPharmacy/Pharmacy/PharmacyClickable" index="1" unique_id=2063966682]
+scale = Vector2(0.48, 0.48)
+sprite_frames = ExtResource("5_o43pv")
+animation = &"scan"
+autoplay = "idle"
+
+[node name="PharmacyDesk" type="Sprite2D" parent="AreaRevealPharmacy/Pharmacy" index="1" unique_id=1238267494]
+position = Vector2(135, 46)
+texture = ExtResource("5_a11uh")
 
 [node name="SceneEnder" parent="." index="2" unique_id=1221118698]
 next_scene = "uid://7dsm4ukvk2by"
@@ -147,7 +154,7 @@ position = Vector2(-822.2224, -325.92606)
 
 [node name="PuzzlePiece3" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="4" unique_id=1334418623]
 position = Vector2(-659.2593, 644.44446)
-rotation = -3.1415925
+rotation = 3.1415925
 
 [node name="PuzzlePiece4" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="6" unique_id=1795176319]
 position = Vector2(-622.22235, 325.92603)
@@ -375,7 +382,7 @@ position = Vector2(5607, 0)
 [node name="PuzzleSpawner" type="Node" parent="PuzzlePharmacy" index="0" unique_id=375282667 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("3_mmuft")
 puzzle = NodePath("../DragDropPuzzle")
-spawn_trigger = NodePath("../../AreaRevealPharmacy/PharmacyClickable")
+spawn_trigger = NodePath("../../AreaRevealPharmacy/Pharmacy/PharmacyClickable")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="PuzzlePharmacy" index="1" unique_id=1593287931 instance=ExtResource("4_7eiwe")]
