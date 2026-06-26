@@ -21,6 +21,7 @@ metadata/_custom_type_script = "uid://cxam1cepgkl3s"
 metadata/_edit_lock_ = true
 
 [node name="Visuals" type="Node2D" parent="Draggable" unique_id=710902977]
+metadata/_edit_lock_ = true
 
 [node name="PuzzlePieceSprite" type="Sprite2D" parent="Draggable/Visuals" unique_id=1266676352]
 metadata/_edit_lock_ = true
