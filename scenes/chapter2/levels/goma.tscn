@@ -93,76 +93,7 @@
 [ext_resource type="Script" uid="uid://cvlenn1q1qyrk" path="res://components/chapter2/characters/rotator.gd" id="72_5mn6d"]
 [ext_resource type="Script" uid="uid://c8c80cw43axdp" path="res://components/chapter2/levels/goma-nakivale/desert_bus/desert_area.gd" id="72_78vps"]
 [ext_resource type="Script" uid="uid://bn0sxcor0g10k" path="res://components/utils/mechanics/area_trigger_anim.gd" id="73_5mn6d"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_66aia"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("19_lqjj3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_day0f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_rwg7t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_grmlx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_yscqn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_uwxct")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_klfkb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_nnxv8")
-}],
-"loop": true,
-"name": &"default",
-"speed": 7.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_jycj1"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("27_iafi0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_6i68w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_yd5hk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_x2a6l")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_ck6ev")
-}, {
-"duration": 1.0,
-"texture": ExtResource("32_4eobu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_xb1l4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("34_uiyp2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_cb6m0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("36_45fiq")
-}],
-"loop": true,
-"name": &"default",
-"speed": 7.0
-}]
+[ext_resource type="Script" uid="uid://lo74qr7kgl3x" path="res://scenes/chapter2/levels/npc_walk.gd" id="84_2iaxq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_78vps"]
 radius = 107.042046
@@ -324,6 +255,76 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cw4mc"]
 size = Vector2(211, 823)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_66aia"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_lqjj3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_day0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_rwg7t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_grmlx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_yscqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_uwxct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_klfkb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_nnxv8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jycj1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_iafi0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_6i68w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_yd5hk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_x2a6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_ck6ev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_4eobu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_xb1l4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_uiyp2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_cb6m0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_45fiq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Goma" type="Node2D" unique_id=987125979]
 
 [node name="Background" type="CanvasLayer" parent="." unique_id=856416823]
@@ -356,19 +357,6 @@ position = Vector2(2369, 635)
 scale = Vector2(0.47635135, 0.47635135)
 texture = ExtResource("9_ge572")
 flip_h = true
-
-[node name="womananimated2" type="AnimatedSprite2D" parent="." unique_id=1789892867]
-position = Vector2(3114, 1202)
-sprite_frames = SubResource("SpriteFrames_66aia")
-autoplay = "default"
-frame_progress = 0.5290757
-flip_h = true
-
-[node name="mananimated" type="AnimatedSprite2D" parent="." unique_id=1803438277]
-position = Vector2(3286, 1206)
-sprite_frames = SubResource("SpriteFrames_jycj1")
-autoplay = "default"
-frame_progress = 0.43088508
 
 [node name="Theme" type="AudioStreamPlayer" parent="." unique_id=67967600]
 autoplay = true
@@ -1011,6 +999,33 @@ anim_player = NodePath("../BodaManArrive")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2001870416]
 position = Vector2(9.5, -80.5)
 shape = SubResource("RectangleShape2D_cw4mc")
+
+[node name="NPCWalking" type="Node2D" parent="." unique_id=2031316032]
+metadata/_edit_lock_ = true
+
+[node name="womanreddress" type="AnimatedSprite2D" parent="NPCWalking" unique_id=1789892867]
+position = Vector2(2295, 908)
+sprite_frames = SubResource("SpriteFrames_66aia")
+autoplay = "default"
+flip_h = true
+script = ExtResource("84_2iaxq")
+walk_speed = -75.0
+go_left = true
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="NPCWalking/womanreddress" unique_id=417851393]
+rect = Rect2(-55, -92, 110, 207)
+
+[node name="mananimated" type="AnimatedSprite2D" parent="NPCWalking" unique_id=1803438277]
+position = Vector2(3995, 908)
+sprite_frames = SubResource("SpriteFrames_jycj1")
+autoplay = "default"
+flip_h = true
+script = ExtResource("84_2iaxq")
+walk_speed = -75.0
+go_left = true
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="NPCWalking/mananimated" unique_id=780744410]
+rect = Rect2(-55, -92, 110, 207)
 
 [editable path="Puzzles/Puzzle1/DragDropPuzzle2"]
 [editable path="Puzzles/Puzzle1/DragDropPuzzle2/BuildingBlocks/PuzzlePiece"]
