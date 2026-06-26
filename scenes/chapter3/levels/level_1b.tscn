@@ -508,12 +508,23 @@ radius = 197.12433
 
 [node name="Level31" unique_id=2125939091 instance=ExtResource("1_atmgq")]
 
+[node name="BuildingInside" parent="Bg2" parent_id_path=PackedInt32Array(1307761575) index="1" unique_id=639287802]
+z_index = -1
+
+[node name="Floors" parent="Bg2/BuildingInside" index="3" unique_id=201401569]
+visible = true
+z_index = 1
+
+[node name="BuildingOutside" parent="Bg2" parent_id_path=PackedInt32Array(1307761575) index="2" unique_id=271747770]
+visible = true
+z_index = 0
+
 [node name="SceneEnder" parent="." index="1" unique_id=1221118698]
 position = Vector2(1222, 871)
 next_scene = "uid://by2x0js73j5ew"
 
 [node name="BusFront" type="Sprite2D" parent="." index="4" unique_id=459032295]
-z_index = 1
+z_index = 2
 position = Vector2(2136, 807)
 scale = Vector2(0.385, 0.385)
 texture = ExtResource("2_fd55t")
