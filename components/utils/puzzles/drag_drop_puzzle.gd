@@ -101,6 +101,13 @@ func _spawn_pieces():
 		#Delay spawn next piece
 		await get_tree().create_timer(0.5).timeout
 
+
+
+func hide_pieces():
+	for piece in puzzle_pieces:
+		piece.hide()
+
+
 ## Debug function
 func autosolve_puzzle():
 	#Show outline

@@ -20,6 +20,7 @@ func _ready() -> void:
 func _deactivate_puzzle():
 	spawn_trigger.disable()
 	puzzle.deactivate()
+	puzzle.hide_pieces()
 	
 	
 func _on_obstacle_entered(_area2d : Area2D):
