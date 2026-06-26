@@ -36,6 +36,59 @@ size = Vector2(501, 165)
 [sub_resource type="CircleShape2D" id="CircleShape2D_yfmg0"]
 radius = 100.42
 
+[sub_resource type="Animation" id="Animation_5msxn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Husband:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_kq1o5"]
+resource_name = "default"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Husband:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../PathBack/PathFollowBack/Zlata/AnimSprite")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"idle_phone", 1.0, false],
+"method": &"play"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_se5nk"]
+_data = {
+&"RESET": SubResource("Animation_5msxn"),
+&"default": SubResource("Animation_kq1o5")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jrbug"]
+radius = 61.538452
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_7ftg5"]
 animations = [{
 "frames": [{
@@ -58,17 +111,6 @@ animations = [{
 "name": &"default",
 "speed": 30.0
 }]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_jrbug"]
-radius = 61.538452
-
-[sub_resource type="Animation" id="Animation_kq1o5"]
-resource_name = "default"
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_se5nk"]
-_data = {
-&"default": SubResource("Animation_kq1o5")
-}
 
 [sub_resource type="Curve2D" id="Curve2D_pfjp3"]
 _data = {
@@ -310,7 +352,7 @@ position = Vector2(3032, 0)
 [node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzlePhone" index="0" unique_id=957423747 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("2_hd8xs")
 puzzle = NodePath("../DragDropPuzzle")
-spawn_trigger = NodePath("../Clickable")
+spawn_trigger = NodePath("../Husband/Clickable")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="WayBack/PuzzlePhone" index="1" unique_id=426308280 instance=ExtResource("3_052ky")]
@@ -318,28 +360,12 @@ position = Vector2(-121, 0)
 collision_mask = 2
 script = ExtResource("8_yk8n7")
 
-[node name="Clickable" type="Area2D" parent="WayBack/PuzzlePhone" index="2" unique_id=457714455]
-position = Vector2(-220, 851.00006)
-scale = Vector2(0.40999997, 0.40999997)
-script = ExtResource("4_80rf8")
-metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+[node name="TriggerPhoneAnim" type="Node" parent="WayBack/PuzzlePhone/Obstacle" index="1" unique_id=841623103 node_paths=PackedStringArray("area2d", "anim_player")]
+script = ExtResource("137_gjepm")
+area2d = NodePath("..")
+anim_player = NodePath("../../AnimationPlayerPhone")
 
-[node name="Npc2" type="AnimatedSprite2D" parent="WayBack/PuzzlePhone/Clickable" index="0" unique_id=1704780558]
-position = Vector2(7.3154755, 58.535645)
-sprite_frames = SubResource("SpriteFrames_7ftg5")
-autoplay = "default"
-frame_progress = 0.5191904
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WayBack/PuzzlePhone/Clickable" index="1" unique_id=1234672855]
-position = Vector2(-104.87806, -243.90262)
-shape = SubResource("CircleShape2D_jrbug")
-
-[node name="Husband" type="Sprite2D" parent="WayBack/PuzzlePhone/Clickable" index="2" unique_id=636334883]
-position = Vector2(-104.877914, -243.9027)
-scale = Vector2(0.22469065, 0.22469065)
-texture = ExtResource("17_kq1o5")
-
-[node name="DragDropPuzzle" parent="WayBack/PuzzlePhone" index="3" unique_id=727084058 instance=ExtResource("3_t5rg3")]
+[node name="DragDropPuzzle" parent="WayBack/PuzzlePhone" index="2" unique_id=727084058 instance=ExtResource("3_t5rg3")]
 position = Vector2(-147, 729.99994)
 rotation = 1.5707964
 scale = Vector2(0.28765005, 0.28765005)
@@ -369,11 +395,23 @@ position = Vector2(590.9961, -378.9325)
 [node name="CompletePuzzle" parent="WayBack/PuzzlePhone/DragDropPuzzle" index="2" unique_id=1933061263]
 texture = ExtResource("19_5msxn")
 
-[node name="AnimationPlayerPhone" type="AnimationPlayer" parent="WayBack/PuzzlePhone" index="4" unique_id=294162819]
+[node name="AnimationPlayerPhone" type="AnimationPlayer" parent="WayBack/PuzzlePhone" index="3" unique_id=294162819]
+editor_description = "#HACK : used hardcoded path workaround in AnimPlayer to avoid losing node while reparenting on pathfollow"
 libraries/ = SubResource("AnimationLibrary_se5nk")
 
-[node name="Area2D" type="Area2D" parent="WayBack/PuzzlePhone" index="5" unique_id=404976994]
-script = ExtResource("137_gjepm")
+[node name="Husband" type="Sprite2D" parent="WayBack/PuzzlePhone" index="4" unique_id=636334883]
+visible = false
+position = Vector2(-263, 750.99994)
+scale = Vector2(0.09212317, 0.09212317)
+texture = ExtResource("17_kq1o5")
+
+[node name="Clickable" type="Area2D" parent="WayBack/PuzzlePhone/Husband" index="0" unique_id=457714455]
+scale = Vector2(4.450563, 4.450563)
+script = ExtResource("4_80rf8")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WayBack/PuzzlePhone/Husband/Clickable" index="0" unique_id=1234672855]
+shape = SubResource("CircleShape2D_jrbug")
 
 [node name="PuzzleSocialWorker" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="1" unique_id=1734062459]
 position = Vector2(1070, 0)
@@ -479,8 +517,10 @@ texture = ExtResource("25_rtu30")
 curve = SubResource("Curve2D_pfjp3")
 
 [node name="Zlata" parent="PathTo/PathFollowTo" parent_id_path=PackedInt32Array(666369972) index="0" unique_id=700974070]
-z_index = 0
 position = Vector2(-14.000002, 1.0000077)
+
+[node name="AnimSprite" parent="PathTo/PathFollowTo/Zlata" index="0" unique_id=689873547]
+animation = &"idle"
 
 [node name="Camera2D" parent="PathTo/PathFollowTo/Zlata" index="2" unique_id=1600606219]
 limit_left = 249
@@ -549,12 +589,13 @@ script = ExtResource("131_yk8n7")
 chapter = 2
 comic = 19
 
-[node name="AreaActivateStorePuzzle" type="Area2D" parent="." index="10" unique_id=1163643340 node_paths=PackedStringArray("anim_player")]
+[node name="AreaActivateStorePuzzle" type="Area2D" parent="." index="10" unique_id=1163643340 node_paths=PackedStringArray("area2d", "anim_player")]
 position = Vector2(5296, 861)
 collision_layer = 0
 collision_mask = 2
 input_pickable = false
 script = ExtResource("137_gjepm")
+area2d = NodePath(".")
 anim_player = NodePath("../AnimationPlayer")
 anim_name = "activate_store"
 
@@ -570,12 +611,13 @@ puzzle = NodePath("../../WayBack/PuzzleLullaby/DragDropPuzzle5")
 anim_player = NodePath("..")
 anim_name = "chapter_transition"
 
-[node name="AreaSwitchIndex" type="Area2D" parent="." index="12" unique_id=441254206 node_paths=PackedStringArray("anim_player")]
+[node name="AreaSwitchIndex" type="Area2D" parent="." index="12" unique_id=441254206 node_paths=PackedStringArray("area2d", "anim_player")]
 position = Vector2(4871, 858)
 collision_layer = 0
 collision_mask = 2
 input_pickable = false
 script = ExtResource("137_gjepm")
+area2d = NodePath(".")
 anim_player = NodePath("../AnimationPlayer")
 anim_name = "zlata_index_0"
 
@@ -607,6 +649,7 @@ shape = SubResource("CircleShape2D_18lw1")
 [editable path="WayBack/PuzzleLullaby/DragDropPuzzle5/BuildingBlocks/PuzzlePiece4"]
 [editable path="WayBack/PuzzleLullaby/DragDropPuzzle5/BuildingBlocks/PuzzlePiece5"]
 [editable path="WayBack/PuzzleLullaby/DragDropPuzzle5/BuildingBlocks/PuzzlePiece7"]
+[editable path="PathTo/PathFollowTo/Zlata"]
 [editable path="PuzzleStore/DragDropPuzzle2"]
 [editable path="PuzzleStore/DragDropPuzzle2/BuildingBlocks/PuzzlePiece"]
 [editable path="PuzzleStore/DragDropPuzzle2/BuildingBlocks/PuzzlePiece2"]

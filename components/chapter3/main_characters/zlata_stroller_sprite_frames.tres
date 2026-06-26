@@ -1,20 +1,25 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://dc8towwetalbq"]
 
-[ext_resource type="Texture2D" uid="uid://b47qk0eodiqsw" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_6fps/zlata_idle_baby_0001.png" id="1_7lju1"]
-[ext_resource type="Texture2D" uid="uid://cfgvo8widk0mi" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_6fps/zlata_idle_baby_0002.png" id="2_ibk7k"]
-[ext_resource type="Texture2D" uid="uid://djjr20ojf3s0k" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_6fps/zlata_idle_baby_0003.png" id="3_0u6qt"]
-[ext_resource type="Texture2D" uid="uid://b1qk7bwhd14x8" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_6fps/zlata_idle_baby_0004.png" id="4_3j6jc"]
-[ext_resource type="Texture2D" uid="uid://dy4ikwpvvm1p5" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_6fps/zlata_idle_baby_0005.png" id="5_dmhno"]
-[ext_resource type="Texture2D" uid="uid://d3aedpnc8o0jb" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_6fps/zlata_idle_baby_0006.png" id="6_58njw"]
-[ext_resource type="Texture2D" uid="uid://cqm0wvse2lm47" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_6fps/zlata_idle_baby_0007.png" id="7_brs21"]
-[ext_resource type="Texture2D" uid="uid://bu2rvec7y1mei" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_6fps/zlata_idle_baby_0008.png" id="8_vdx8d"]
-[ext_resource type="Texture2D" uid="uid://w6qjdif05ica" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_6fps/zlata_idle_baby_0009.png" id="9_g650w"]
-[ext_resource type="Texture2D" uid="uid://dwcnji3663wfa" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_6fps/zlata_idle_baby_0010.png" id="10_yt4s6"]
-[ext_resource type="Texture2D" uid="uid://b03uq62vvku0q" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_6fps/zlata_idle_baby_0011.png" id="11_v6aa6"]
+[ext_resource type="Texture2D" uid="uid://cjw4yv6lcwooe" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_stroller_5fps/zlata_idle_stroller_0001.png" id="1_b75wh"]
+[ext_resource type="Texture2D" uid="uid://bilj40445el4v" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_stroller_5fps/zlata_idle_stroller_0002.png" id="2_qdr18"]
+[ext_resource type="Texture2D" uid="uid://gtkvblk8lumg" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_stroller_5fps/zlata_idle_stroller_0003.png" id="3_6pes7"]
+[ext_resource type="Texture2D" uid="uid://c8lgtdsagr8e4" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_stroller_5fps/zlata_idle_stroller_0004.png" id="4_7lju1"]
+[ext_resource type="Texture2D" uid="uid://buc12mmh7o10m" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_stroller_5fps/zlata_idle_stroller_0005.png" id="5_ibk7k"]
+[ext_resource type="Texture2D" uid="uid://bvxl8r7sftjgh" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_stroller_5fps/zlata_idle_stroller_0006.png" id="6_0u6qt"]
+[ext_resource type="Texture2D" uid="uid://bwy0ygoyxilvc" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_stroller_5fps/zlata_idle_stroller_0007.png" id="7_3j6jc"]
+[ext_resource type="Texture2D" uid="uid://dcy5gffmqxusq" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_stroller_5fps/zlata_idle_stroller_0008.png" id="8_dmhno"]
+[ext_resource type="Texture2D" uid="uid://7fdnk5wa3tif" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_stroller_phone_5fps/zlata_idle_stroller_phone_0001.png" id="9_58njw"]
+[ext_resource type="Texture2D" uid="uid://csixkd3djg30s" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_stroller_phone_5fps/zlata_idle_stroller_phone_0002.png" id="10_brs21"]
+[ext_resource type="Texture2D" uid="uid://befbc0an1kj6h" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_stroller_phone_5fps/zlata_idle_stroller_phone_0003.png" id="11_vdx8d"]
+[ext_resource type="Texture2D" uid="uid://cbexda7s6g2hj" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_stroller_phone_5fps/zlata_idle_stroller_phone_0004.png" id="12_g650w"]
 [ext_resource type="Texture2D" uid="uid://cdtxv7p63auoq" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0001.png" id="12_rkouw"]
 [ext_resource type="Texture2D" uid="uid://dmrh3mtmvwc80" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0002.png" id="13_2ufsa"]
+[ext_resource type="Texture2D" uid="uid://cbj8lmy5760wr" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_stroller_phone_5fps/zlata_idle_stroller_phone_0005.png" id="13_yt4s6"]
+[ext_resource type="Texture2D" uid="uid://bohw3ax27hnfm" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_stroller_phone_5fps/zlata_idle_stroller_phone_0006.png" id="14_v6aa6"]
 [ext_resource type="Texture2D" uid="uid://jsjw1s7gm75x" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0003.png" id="14_wsos5"]
+[ext_resource type="Texture2D" uid="uid://cxsvve5q0i8l3" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_stroller_phone_5fps/zlata_idle_stroller_phone_0007.png" id="15_rkouw"]
 [ext_resource type="Texture2D" uid="uid://iirsrnjevr7l" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0004.png" id="15_tbxf5"]
+[ext_resource type="Texture2D" uid="uid://pvti88tyf3yq" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_stroller_phone_5fps/zlata_idle_stroller_phone_0008.png" id="16_2ufsa"]
 [ext_resource type="Texture2D" uid="uid://dvwbeo1hmqjmq" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0005.png" id="16_uy4qh"]
 [ext_resource type="Texture2D" uid="uid://drmqw7p3fbydx" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0006.png" id="17_u15mt"]
 [ext_resource type="Texture2D" uid="uid://5fpc84wsix54" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_stroller_15fps/zlata_walk_stroller_0007.png" id="18_h65ua"]
@@ -40,41 +45,61 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_7lju1")
+"texture": ExtResource("1_b75wh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_ibk7k")
+"texture": ExtResource("2_qdr18")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_0u6qt")
+"texture": ExtResource("3_6pes7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_3j6jc")
+"texture": ExtResource("4_7lju1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_dmhno")
+"texture": ExtResource("5_ibk7k")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_58njw")
+"texture": ExtResource("6_0u6qt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_brs21")
+"texture": ExtResource("7_3j6jc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_vdx8d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_g650w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_yt4s6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_v6aa6")
+"texture": ExtResource("8_dmhno")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 6.0
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_58njw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_brs21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vdx8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_g650w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yt4s6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_v6aa6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_rkouw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2ufsa")
+}],
+"loop": true,
+"name": &"idle_phone",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
