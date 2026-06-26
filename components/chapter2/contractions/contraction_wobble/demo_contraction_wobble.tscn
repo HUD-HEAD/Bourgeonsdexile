@@ -13,9 +13,8 @@ size = Vector2(1920, 1080)
 
 [node name="Panel1" type="Node2D" unique_id=690781203]
 
-[node name="ContractionTrigger" type="VisibleOnScreenNotifier2D" parent="." unique_id=1876947053 node_paths=PackedStringArray("contraction_controller")]
+[node name="ContractionTrigger" type="VisibleOnScreenNotifier2D" parent="." unique_id=1876947053]
 script = ExtResource("1_8w7nq")
-contraction_controller = NodePath("../ContractionController")
 
 [node name="3" type="Sprite2D" parent="." unique_id=1488750130]
 texture = ExtResource("2_bip3j")

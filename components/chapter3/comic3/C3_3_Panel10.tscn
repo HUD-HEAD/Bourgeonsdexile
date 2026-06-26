@@ -9,13 +9,13 @@
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="9_ncb08"]
 [ext_resource type="AudioStream" uid="uid://bnyrlxxnr0d2" path="res://audio/chapter2/ambient/comic 3/panel_3.12_window_selection_sound.wav" id="10_m3v6a"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_dt6or"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_a04oi"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_heo3p"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dt6or"]
 resource_local_to_scene = true
 shader = ExtResource("7_mrlda")
-shader_parameter/texture_albedo = SubResource("ViewportTexture_dt6or")
+shader_parameter/texture_albedo = SubResource("ViewportTexture_a04oi")
 
 [sub_resource type="Gradient" id="Gradient_kd4q4"]
 interpolation_mode = 1
@@ -52,7 +52,7 @@ completation_percentage = 0.6
 texture = null
 
 [node name="Unblur" parent="SwipePuzzle" index="2" unique_id=1608020792]
-material = SubResource("ShaderMaterial_heo3p")
+material = SubResource("ShaderMaterial_dt6or")
 texture = ExtResource("5_a04oi")
 
 [node name="SubViewport" parent="SwipePuzzle" index="4" unique_id=1098068814]

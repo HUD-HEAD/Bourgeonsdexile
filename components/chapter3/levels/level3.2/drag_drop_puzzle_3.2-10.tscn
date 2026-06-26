@@ -62,18 +62,18 @@ texture = ExtResource("2_pf1f2")
 [node name="PuzzlePiece" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="0" unique_id=1667760579]
 position = Vector2(297, 53)
 
-[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="0" unique_id=1266676352]
+[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece/Draggable/Visuals" parent_id_path=PackedInt32Array(1667760579, 710902977) index="0" unique_id=1266676352]
 position = Vector2(5, 45)
 texture = ExtResource("3_uefhh")
 
-[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="1" unique_id=991932022]
+[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece/Draggable/Visuals" parent_id_path=PackedInt32Array(1667760579, 710902977) index="1" unique_id=991932022]
 position = Vector2(4, 44.999985)
 texture = ExtResource("4_xxy1l")
 
-[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="1" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
 receptacle = NodePath("../../../Receptacle")
 
-[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="3" unique_id=1105802255]
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1667760579, 2116105691) index="2" unique_id=1105802255]
 position = Vector2(-13.992065, 41.707397)
 rotation = -3.024707
 scale = Vector2(0.99999976, 0.99999976)
@@ -86,18 +86,18 @@ rotation = 1.8646604
 [node name="PuzzlePiece2" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="2" unique_id=729525704 instance=ExtResource("5_fa6hn")]
 position = Vector2(333, -125)
 
-[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="0" unique_id=1266676352]
+[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece2/Draggable/Visuals" parent_id_path=PackedInt32Array(729525704, 710902977) index="0" unique_id=1266676352]
 position = Vector2(-27, 14)
 texture = ExtResource("6_skp6b")
 
-[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="1" unique_id=991932022]
+[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece2/Draggable/Visuals" parent_id_path=PackedInt32Array(729525704, 710902977) index="1" unique_id=991932022]
 position = Vector2(0, 15)
 texture = ExtResource("7_wbop8")
 
-[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="1" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
 receptacle = NodePath("../../../Receptacle2")
 
-[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="3" unique_id=1105802255]
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece2/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="2" unique_id=1105802255]
 position = Vector2(-7.181282, 20.70459)
 rotation = -3.0880558
 scale = Vector2(0.9999998, 0.9999998)
@@ -109,18 +109,18 @@ position = Vector2(332, -125)
 [node name="PuzzlePiece3" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="4" unique_id=1334418623 instance=ExtResource("5_fa6hn")]
 position = Vector2(-342, -82)
 
-[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(1334418623, 2116105691) index="0" unique_id=1266676352]
+[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece3/Draggable/Visuals" parent_id_path=PackedInt32Array(1334418623, 710902977) index="0" unique_id=1266676352]
 position = Vector2(-39, 45)
 texture = ExtResource("9_3kdor")
 
-[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(1334418623, 2116105691) index="1" unique_id=991932022]
+[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece3/Draggable/Visuals" parent_id_path=PackedInt32Array(1334418623, 710902977) index="1" unique_id=991932022]
 position = Vector2(-1, 19)
 texture = ExtResource("10_d562j")
 
-[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(1334418623, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(1334418623, 2116105691) index="1" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
 receptacle = NodePath("../../../Receptacle3")
 
-[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(1334418623, 2116105691) index="3" unique_id=1105802255]
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece3/Draggable" parent_id_path=PackedInt32Array(1334418623, 2116105691) index="2" unique_id=1105802255]
 position = Vector2(10.990845, 17.617157)
 rotation = -1.5618558
 scale = Vector2(0.9999997, 0.9999997)
@@ -132,18 +132,18 @@ position = Vector2(-342, -81)
 [node name="PuzzlePiece4" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="6" unique_id=1795176319 instance=ExtResource("5_fa6hn")]
 position = Vector2(-201, -146)
 
-[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(1795176319, 2116105691) index="0" unique_id=1266676352]
+[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece4/Draggable/Visuals" parent_id_path=PackedInt32Array(1795176319, 710902977) index="0" unique_id=1266676352]
 position = Vector2(22, 48)
 texture = ExtResource("11_5iyja")
 
-[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(1795176319, 2116105691) index="1" unique_id=991932022]
+[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece4/Draggable/Visuals" parent_id_path=PackedInt32Array(1795176319, 710902977) index="1" unique_id=991932022]
 position = Vector2(0, 15)
 texture = ExtResource("12_74a64")
 
-[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(1795176319, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(1795176319, 2116105691) index="1" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
 receptacle = NodePath("../../../Receptacle4")
 
-[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(1795176319, 2116105691) index="3" unique_id=1105802255]
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece4/Draggable" parent_id_path=PackedInt32Array(1795176319, 2116105691) index="2" unique_id=1105802255]
 position = Vector2(-1.6159058, 12.597595)
 rotation = 1.6832238
 scale = Vector2(0.9999997, 0.9999997)
@@ -155,18 +155,18 @@ position = Vector2(-201, -145)
 [node name="PuzzlePiece5" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="8" unique_id=1711508116 instance=ExtResource("5_fa6hn")]
 position = Vector2(-20, -120)
 
-[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece5/Draggable" parent_id_path=PackedInt32Array(1711508116, 2116105691) index="0" unique_id=1266676352]
+[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece5/Draggable/Visuals" parent_id_path=PackedInt32Array(1711508116, 710902977) index="0" unique_id=1266676352]
 position = Vector2(-1, 42)
 texture = ExtResource("13_pk2he")
 
-[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece5/Draggable" parent_id_path=PackedInt32Array(1711508116, 2116105691) index="1" unique_id=991932022]
+[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece5/Draggable/Visuals" parent_id_path=PackedInt32Array(1711508116, 710902977) index="1" unique_id=991932022]
 position = Vector2(0, 15)
 texture = ExtResource("14_aqmaw")
 
-[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece5/Draggable" parent_id_path=PackedInt32Array(1711508116, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece5/Draggable" parent_id_path=PackedInt32Array(1711508116, 2116105691) index="1" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
 receptacle = NodePath("../../../Receptacle5")
 
-[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece5/Draggable" parent_id_path=PackedInt32Array(1711508116, 2116105691) index="3" unique_id=1105802255]
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece5/Draggable" parent_id_path=PackedInt32Array(1711508116, 2116105691) index="2" unique_id=1105802255]
 position = Vector2(-4.6281433, 13.885559)
 rotation = -1.4191558
 shape = SubResource("RectangleShape2D_32eoh")
@@ -177,18 +177,18 @@ position = Vector2(-20, -119)
 [node name="PuzzlePiece6" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="10" unique_id=1437281790 instance=ExtResource("5_fa6hn")]
 position = Vector2(126, -106)
 
-[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece6/Draggable" parent_id_path=PackedInt32Array(1437281790, 2116105691) index="0" unique_id=1266676352]
+[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece6/Draggable/Visuals" parent_id_path=PackedInt32Array(1437281790, 710902977) index="0" unique_id=1266676352]
 position = Vector2(23, 16)
 texture = ExtResource("15_5mvg0")
 
-[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece6/Draggable" parent_id_path=PackedInt32Array(1437281790, 2116105691) index="1" unique_id=991932022]
+[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece6/Draggable/Visuals" parent_id_path=PackedInt32Array(1437281790, 710902977) index="1" unique_id=991932022]
 position = Vector2(0, 15)
 texture = ExtResource("16_jy28l")
 
-[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece6/Draggable" parent_id_path=PackedInt32Array(1437281790, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece6/Draggable" parent_id_path=PackedInt32Array(1437281790, 2116105691) index="1" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
 receptacle = NodePath("../../../Receptacle6")
 
-[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece6/Draggable" parent_id_path=PackedInt32Array(1437281790, 2116105691) index="3" unique_id=1105802255]
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece6/Draggable" parent_id_path=PackedInt32Array(1437281790, 2116105691) index="2" unique_id=1105802255]
 position = Vector2(1.493515, 9.037933)
 rotation = -3.1006181
 shape = SubResource("RectangleShape2D_32eoh")
@@ -199,18 +199,18 @@ position = Vector2(126, -106)
 [node name="PuzzlePiece7" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="12" unique_id=918731768 instance=ExtResource("5_fa6hn")]
 position = Vector2(-230, 14)
 
-[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece7/Draggable" parent_id_path=PackedInt32Array(918731768, 2116105691) index="0" unique_id=1266676352]
+[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece7/Draggable/Visuals" parent_id_path=PackedInt32Array(918731768, 710902977) index="0" unique_id=1266676352]
 position = Vector2(-1, 42)
 texture = ExtResource("17_f6ywi")
 
-[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece7/Draggable" parent_id_path=PackedInt32Array(918731768, 2116105691) index="1" unique_id=991932022]
+[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece7/Draggable/Visuals" parent_id_path=PackedInt32Array(918731768, 710902977) index="1" unique_id=991932022]
 position = Vector2(0, 15)
 texture = ExtResource("18_7syff")
 
-[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece7/Draggable" parent_id_path=PackedInt32Array(918731768, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece7/Draggable" parent_id_path=PackedInt32Array(918731768, 2116105691) index="1" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
 receptacle = NodePath("../../../Receptacle7")
 
-[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece7/Draggable" parent_id_path=PackedInt32Array(918731768, 2116105691) index="3" unique_id=1105802255]
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece7/Draggable" parent_id_path=PackedInt32Array(918731768, 2116105691) index="2" unique_id=1105802255]
 position = Vector2(-5.1531982, 15.484535)
 rotation = 0.08919444
 scale = Vector2(12.075746, 12.075746)
@@ -222,18 +222,18 @@ position = Vector2(-230, 14)
 [node name="PuzzlePiece8" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="14" unique_id=289742389 instance=ExtResource("5_fa6hn")]
 position = Vector2(-91, 42)
 
-[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece8/Draggable" parent_id_path=PackedInt32Array(289742389, 2116105691) index="0" unique_id=1266676352]
+[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece8/Draggable/Visuals" parent_id_path=PackedInt32Array(289742389, 710902977) index="0" unique_id=1266676352]
 position = Vector2(-28, 15)
 texture = ExtResource("19_7pmj4")
 
-[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece8/Draggable" parent_id_path=PackedInt32Array(289742389, 2116105691) index="1" unique_id=991932022]
+[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece8/Draggable/Visuals" parent_id_path=PackedInt32Array(289742389, 710902977) index="1" unique_id=991932022]
 position = Vector2(0, 15)
 texture = ExtResource("20_f1wne")
 
-[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece8/Draggable" parent_id_path=PackedInt32Array(289742389, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece8/Draggable" parent_id_path=PackedInt32Array(289742389, 2116105691) index="1" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
 receptacle = NodePath("../../../Receptacle8")
 
-[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece8/Draggable" parent_id_path=PackedInt32Array(289742389, 2116105691) index="3" unique_id=1105802255]
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece8/Draggable" parent_id_path=PackedInt32Array(289742389, 2116105691) index="2" unique_id=1105802255]
 position = Vector2(2.0000002, 12.000001)
 rotation = 0.08919444
 scale = Vector2(12.075746, 12.075746)
@@ -245,18 +245,18 @@ position = Vector2(-91, 42)
 [node name="PuzzlePiece9" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="16" unique_id=1231689547 instance=ExtResource("5_fa6hn")]
 position = Vector2(121, 8)
 
-[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece9/Draggable" parent_id_path=PackedInt32Array(1231689547, 2116105691) index="0" unique_id=1266676352]
+[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece9/Draggable/Visuals" parent_id_path=PackedInt32Array(1231689547, 710902977) index="0" unique_id=1266676352]
 position = Vector2(0, 40)
 texture = ExtResource("21_onn1r")
 
-[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece9/Draggable" parent_id_path=PackedInt32Array(1231689547, 2116105691) index="1" unique_id=991932022]
+[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece9/Draggable/Visuals" parent_id_path=PackedInt32Array(1231689547, 710902977) index="1" unique_id=991932022]
 position = Vector2(0, 15)
 texture = ExtResource("22_x3dqe")
 
-[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece9/Draggable" parent_id_path=PackedInt32Array(1231689547, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece9/Draggable" parent_id_path=PackedInt32Array(1231689547, 2116105691) index="1" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
 receptacle = NodePath("../../../Receptacle9")
 
-[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece9/Draggable" parent_id_path=PackedInt32Array(1231689547, 2116105691) index="3" unique_id=1105802255]
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece9/Draggable" parent_id_path=PackedInt32Array(1231689547, 2116105691) index="2" unique_id=1105802255]
 position = Vector2(2.614891, 30.487915)
 rotation = 0.08919444
 scale = Vector2(12.075746, 12.075746)
@@ -268,18 +268,18 @@ position = Vector2(121, 8)
 [node name="PuzzlePiece10" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="18" unique_id=1129174615 instance=ExtResource("5_fa6hn")]
 position = Vector2(120, 130)
 
-[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece10/Draggable" parent_id_path=PackedInt32Array(1129174615, 2116105691) index="0" unique_id=1266676352]
+[node name="PuzzlePieceSprite" parent="BuildingBlocks/PuzzlePiece10/Draggable/Visuals" parent_id_path=PackedInt32Array(1129174615, 710902977) index="0" unique_id=1266676352]
 position = Vector2(1, 22)
 texture = ExtResource("23_y53nb")
 
-[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece10/Draggable" parent_id_path=PackedInt32Array(1129174615, 2116105691) index="1" unique_id=991932022]
+[node name="PuzzlePieceSpriteOnClick" parent="BuildingBlocks/PuzzlePiece10/Draggable/Visuals" parent_id_path=PackedInt32Array(1129174615, 710902977) index="1" unique_id=991932022]
 position = Vector2(0, 15)
 texture = ExtResource("24_kmw0e")
 
-[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece10/Draggable" parent_id_path=PackedInt32Array(1129174615, 2116105691) index="2" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
+[node name="PlacementChecker" parent="BuildingBlocks/PuzzlePiece10/Draggable" parent_id_path=PackedInt32Array(1129174615, 2116105691) index="1" unique_id=1710133272 node_paths=PackedStringArray("receptacle")]
 receptacle = NodePath("../../../Receptacle10")
 
-[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece10/Draggable" parent_id_path=PackedInt32Array(1129174615, 2116105691) index="3" unique_id=1105802255]
+[node name="DraggableZone" parent="BuildingBlocks/PuzzlePiece10/Draggable" parent_id_path=PackedInt32Array(1129174615, 2116105691) index="2" unique_id=1105802255]
 position = Vector2(3.3315735, -0.5038452)
 rotation = 0.023119867
 scale = Vector2(12.075746, 12.075746)
