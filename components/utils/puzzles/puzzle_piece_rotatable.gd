@@ -51,9 +51,15 @@ func is_correctly_placed():
 	#print(is_equal_approx(draggable.global_rotation_degrees, correct_rotation))
 	#print(placement_checker.is_correctly_placed())
 	
+		
+	var curr_rot = fposmod(draggable.global_rotation, TAU)
+	var target_rot = fposmod(deg_to_rad(correct_rotation),TAU)
+	print(curr_rot, " correct ", target_rot)
+	print(is_equal_approx(draggable.global_rotation_degrees, target_rot))
+	
 	##Need to use is_equal_approx, otherwise imprecision leads to initially rotated pieces not being validated
-	return is_equal_approx(draggable.global_rotation_degrees, correct_rotation) && placement_checker.is_correctly_placed()
-
+	return is_equal_approx(curr_rot, target_rot) && placement_checker.is_correctly_placed()
+	
 ## Rotate piece and check placement
 func rotate_custom(offset_degrees : float):
 	draggable.rotation_degrees = int(draggable.rotation_degrees+offset_degrees)%360
