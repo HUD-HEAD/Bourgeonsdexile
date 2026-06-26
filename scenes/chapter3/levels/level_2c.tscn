@@ -725,13 +725,14 @@ radius = 129.062
 
 [node name="Level31" unique_id=2125939091 instance=ExtResource("1_y0jpi")]
 
-[node name="AreaRevealStore" type="Area2D" parent="." index="1" unique_id=1943666368 node_paths=PackedStringArray("nodes_to_reveal")]
+[node name="AreaRevealStore" type="Area2D" parent="." index="1" unique_id=1943666368 node_paths=PackedStringArray("nodes_to_reveal", "nodes_to_hide")]
 position = Vector2(5124, 835)
 collision_layer = 0
 collision_mask = 2
 input_pickable = false
 script = ExtResource("2_us6en")
 nodes_to_reveal = [NodePath("StoreBg"), NodePath("../Bg2/PaperBackground")]
+nodes_to_hide = [NodePath("../WayBack/Car1")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaRevealStore" index="0" unique_id=2132792132]
 shape = SubResource("RectangleShape2D_dihh7")

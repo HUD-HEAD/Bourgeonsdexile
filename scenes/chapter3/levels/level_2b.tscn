@@ -45,9 +45,9 @@ radius = 45.024994
 
 [sub_resource type="Curve2D" id="Curve2D_ylhv4"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 2098.8284, 869.80896, 0, 0, 0, 0, 1786.4294, 930.05286, 0, 0, 0, 0, 1185.9059, 920.0122, 0, 0, 0, 0, 1275.615, 802.5366, 0, 0, 0, 0, 1191.1829, 805.5488, 0, 0, 0, 0, 1278.7813, 667.9919, 0, 0, 0, 0, 843.95575, 668.996)
+"points": PackedVector2Array(0, 0, 0, 0, -141.78946, 917.00006, 0, 0, 0, 0, 1185.9059, 920.0122, 0, 0, 0, 0, 1275.615, 802.5366, 0, 0, 0, 0, 1191.1829, 805.5488, 0, 0, 0, 0, 1278.7813, 667.9919, 0, 0, 0, 0, 843.95575, 668.996)
 }
-point_count = 7
+point_count = 6
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y5mxe"]
 radius = 100.42
@@ -120,6 +120,9 @@ _data = {
 }
 
 [node name="Level31" unique_id=2125939091 instance=ExtResource("1_whkl1")]
+
+[node name="AreaRevealInsideBuilding" parent="Bg2" parent_id_path=PackedInt32Array(1307761575) index="3" unique_id=59500974 node_paths=PackedStringArray("nodes_to_hide")]
+nodes_to_hide = [NodePath("../BuildingOutside"), NodePath("../../WayTo/BusFront")]
 
 [node name="AreaRevealPharmacy" type="Area2D" parent="." index="1" unique_id=1154529771 node_paths=PackedStringArray("nodes_to_reveal")]
 position = Vector2(5552, 835)
@@ -216,8 +219,8 @@ scale = Vector2(0.94750655, 0.9959514)
 curve = SubResource("Curve2D_ylhv4")
 
 [node name="MidwifePathFollow" type="PathFollow2D" parent="WayTo/PathMidwife" index="0" unique_id=942165211]
-position = Vector2(1624.0953, 927.3387)
-progress = 480.5136
+position = Vector2(1169.4277, 919.97485)
+progress = 1311.1683
 rotates = false
 loop = false
 
