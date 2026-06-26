@@ -16,8 +16,8 @@ signal piece_correctly_placed
 	set(_placement_checker):
 		placement_checker = _placement_checker
 		update_configuration_warnings()
-
-var _sprite : Sprite2D
+		
+@export var visuals : CanvasItem
 
 func _ready() -> void:
 	#Prevent some errors from tool running in editor
@@ -27,8 +27,8 @@ func _ready() -> void:
 	draggable.dropped.connect(_on_piece_dropped)
 	draggable.clicked.connect(_on_piece_clicked)
 	
-	#HACK #WARNING dirty implementation
-	_sprite = draggable.find_child("PuzzlePieceSprite", false)
+	draggable.mouse_entered.connect(_on_mouse_entered)
+	draggable.mouse_exited.connect(_on_mouse_exited)
 	
 ##Deactivates functionality, but does not hide piece. This should be done in caller
 func deactivate():
@@ -75,14 +75,17 @@ func enable_piece():
 	#draggable.input_pickable = true
 	draggable.process_mode = Node.PROCESS_MODE_INHERIT
 
-## Returns the *visual* piece dimensions
-func get_dimensions() -> Vector2:
-	return _sprite.texture.get_size()
-
 func autosolve():
 	spawn_piece()
 	enable_piece()
 	_snap_to_receptacle()
+
+func _on_mouse_entered():
+	visuals.scale *= 1.05
+
+func _on_mouse_exited():
+	visuals.scale /= 1.05
+	
 
 #region tooling
 func _init() -> void:
