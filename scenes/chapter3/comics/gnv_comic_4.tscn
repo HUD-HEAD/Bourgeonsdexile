@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bj78rc526rh07" path="res://components/chapter3/comic4/C3_4_Panel1.tscn" id="6_ve7nb"]
 [ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="8_cs1n5"]
 [ext_resource type="PackedScene" uid="uid://cffb0fkdvdx5x" path="res://components/chapter3/comic4/C3_4_Panel4.tscn" id="9_0nuyj"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="9_khno2"]
 [ext_resource type="PackedScene" uid="uid://e2glqvk4u04n" path="res://components/chapter3/comic4/C3_4_Panel5.tscn" id="10_8g0td"]
 [ext_resource type="PackedScene" uid="uid://7hhur4kakw2r" path="res://components/chapter3/comic4/C3_4_Panel6.tscn" id="11_djphk"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="20_ql82s"]
@@ -71,6 +72,22 @@ rect = Rect2(-10, -10, 229, 130)
 script = ExtResource("8_cs1n5")
 music_name = 3401
 metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="Stop_people_loop" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=719779012]
+position = Vector2(1476, 760)
+rect = Rect2(-767, -10, 777, 57)
+script = ExtResource("9_khno2")
+loop_name = 2201
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="Stop_steps" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=1718536243]
+position = Vector2(1483, 829)
+rect = Rect2(-767, -10, 777, 57)
+script = ExtResource("9_khno2")
+loop_name = 1303
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [node name="CheckpointController" type="Node" parent="." unique_id=1956890996]
 script = ExtResource("29_0858f")

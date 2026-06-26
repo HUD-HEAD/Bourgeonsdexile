@@ -124,6 +124,24 @@ second_music_name = 3201
 delay_to_play_second_theme = 22.0
 metadata/_custom_type_script = "uid://cds4grbrek8u8"
 
+[node name="StopLoops" type="Node" parent="Audio" unique_id=1154825485]
+
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="Audio/StopLoops" unique_id=882951519]
+position = Vector2(2058, 871)
+rect = Rect2(-767, -10, 196, 57)
+script = ExtResource("8_q624s")
+loop_name = 2201
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone2" type="VisibleOnScreenNotifier2D" parent="Audio/StopLoops" unique_id=757570061]
+position = Vector2(2050, 792)
+rect = Rect2(-767, -10, 207, 68)
+script = ExtResource("8_q624s")
+loop_name = 1303
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
 [node name="CheckpointController" type="Node" parent="." unique_id=1892684394]
 script = ExtResource("8_x8xde")
 chapter = 2
