@@ -41,7 +41,6 @@ points = PackedVector2Array(3.8043613, -12.486975, 8.772736, 7.2639046, -11.3938
 puzzle_pieces = [NodePath("BuildingBlocks/PuzzlePiece"), NodePath("BuildingBlocks/PuzzlePiece2"), NodePath("BuildingBlocks/PuzzlePiece3"), NodePath("BuildingBlocks/PuzzlePiece4"), NodePath("BuildingBlocks/PuzzlePiece5"), NodePath("BuildingBlocks/PuzzlePiece6"), NodePath("BuildingBlocks/PuzzlePiece7")]
 
 [node name="OutlinePuzzle" parent="." index="0" unique_id=1513168459]
-modulate = Color(0.41215247, 0.41215247, 0.41215247, 1)
 texture = ExtResource("2_xqmb1")
 
 [node name="PuzzlePiece" parent="BuildingBlocks" parent_id_path=PackedInt32Array(1654234455) index="0" unique_id=1667760579]
