@@ -541,7 +541,7 @@ radius = 96.62815
 
 [sub_resource type="Curve2D" id="Curve2D_ahkc3"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 5677, 918, 0, 0, 0, 0, 5269, 915, 0, 0, 0, 0, 3323, 969, 0, 0, 0, 0, 1213, 919, 0, 0, 0, 0, 1299, 802, 0, 0, 0, 0, 1220, 802, 0, 0, 0, 0, 1296, 669, 0, 0, 0, 0, 841, 672)
+"points": PackedVector2Array(0, 0, 0, 0, 5677, 918, 0, 0, 0, 0, 5269, 915, 0, 0, 0, 0, 3323, 969, 0, 0, 0, 0, 1213, 919, 0, 0, 0, 0, 1299, 802, 0, 0, 0, 0, 1220, 802, 0, 0, 0, 0, 1296, 669, 0, 0, 0, 0, 766, 672)
 }
 point_count = 8
 
@@ -599,7 +599,10 @@ shape = SubResource("CircleShape2D_es0uy")
 [node name="SceneEnder" parent="." index="2" unique_id=1221118698]
 next_scene = "uid://7dsm4ukvk2by"
 
-[node name="PuzzleMidwife" type="Node2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="0" unique_id=1334316482]
+[node name="WayTo" parent="." index="3" unique_id=1018273493]
+visible = false
+
+[node name="PuzzleMidwife" type="Node2D" parent="WayTo" index="0" unique_id=1334316482]
 position = Vector2(894, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayTo/PuzzleMidwife" index="0" unique_id=1482656984 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
@@ -630,7 +633,7 @@ position = Vector2(-822.2224, -325.92606)
 
 [node name="PuzzlePiece3" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="4" unique_id=1334418623]
 position = Vector2(-659.2593, 644.44446)
-rotation = -3.1415925
+rotation = 3.1415925
 
 [node name="PuzzlePiece4" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="6" unique_id=1795176319]
 position = Vector2(-622.22235, 325.92603)
@@ -652,7 +655,7 @@ node_to_enable = NodePath("../../PathMidwife/MidwifePathFollow/Midwife/MidwifeCl
 position = Vector2(-59, -14.5)
 shape = SubResource("CircleShape2D_ik6v4")
 
-[node name="PathMidwife" type="Path2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="1" unique_id=28493034]
+[node name="PathMidwife" type="Path2D" parent="WayTo" index="1" unique_id=28493034]
 position = Vector2(88.346436, 3.7125244)
 scale = Vector2(0.94750655, 0.9959514)
 curve = SubResource("Curve2D_ylhv4")
@@ -690,7 +693,7 @@ wayto = NodePath("../../BusFront")
 wayback = NodePath("../../BusFront")
 adjust_camera = false
 
-[node name="PuzzleThinkHome" type="Node2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="2" unique_id=856576195]
+[node name="PuzzleThinkHome" type="Node2D" parent="WayTo" index="2" unique_id=856576195]
 position = Vector2(924, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayTo/PuzzleThinkHome" index="0" unique_id=808814210 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
@@ -720,11 +723,11 @@ position = Vector2(-17.450262, -540.9614)
 [node name="PuzzlePieceHollow" parent="WayTo/PuzzleThinkHome/Puzzle2/BuildingBlocks/HollowPieces" parent_id_path=PackedInt32Array(1941159865, 1500445843) index="0" unique_id=1809332932]
 position = Vector2(-122.15261, -366.45795)
 
-[node name="Car3" type="Sprite2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="3" unique_id=1474993109]
+[node name="Car3" type="Sprite2D" parent="WayTo" index="3" unique_id=1474993109]
 position = Vector2(2196, 848)
 texture = ExtResource("137_rrnem")
 
-[node name="BusFront" type="Sprite2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="4" unique_id=984176330]
+[node name="BusFront" type="Sprite2D" parent="WayTo" index="4" unique_id=984176330]
 position = Vector2(2083, 830)
 texture = ExtResource("136_es0uy")
 
