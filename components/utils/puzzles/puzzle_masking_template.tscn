@@ -29,9 +29,6 @@ Needed so they always appear masked out (behind Hollow pieces), even when dragge
 
 [node name="PuzzlePiece" parent="BuildingBlocks/FullPieces" unique_id=729525704 instance=ExtResource("9_xasnt")]
 
-[node name="DraggableZone" parent="BuildingBlocks/FullPieces/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(729525704, 2116105691) index="3" unique_id=1105802255]
-shape = null
-
 [node name="HollowPieces" type="Node2D" parent="BuildingBlocks" unique_id=1500445843]
 editor_description = "Holder for Hollow pieces.
 Needed so full pieces always appear behind (masked out), even when dragged"

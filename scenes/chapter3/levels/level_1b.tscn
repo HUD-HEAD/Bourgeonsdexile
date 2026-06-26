@@ -508,9 +508,6 @@ radius = 197.12433
 
 [node name="Level31" unique_id=2125939091 instance=ExtResource("1_atmgq")]
 
-[node name="Bg2" parent="." index="0" unique_id=1307761575]
-metadata/_edit_lock_ = true
-
 [node name="SceneEnder" parent="." index="1" unique_id=1221118698]
 position = Vector2(1222, 871)
 next_scene = "uid://by2x0js73j5ew"

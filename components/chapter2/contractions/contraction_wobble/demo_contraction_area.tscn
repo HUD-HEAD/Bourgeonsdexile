@@ -19,6 +19,7 @@ shader_parameter/amplitude = 0.1
 shader_parameter/speed = 0.0
 shader_parameter/offset_intensity = 1.0
 shader_parameter/blur_amount = 1.0
+shader_parameter/keep_centered = true
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_tex5i"]
 size = Vector2(500, 500)

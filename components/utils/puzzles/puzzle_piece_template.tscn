@@ -5,11 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://xyq2m2kx86ku" path="res://components/utils/puzzles/placement_checker.tscn" id="3_f1kk3"]
 [ext_resource type="Script" uid="uid://dbi6reje46na3" path="res://components/utils/puzzles/swap_sprite_on_click.gd" id="3_fv06a"]
 
-[node name="PuzzlePiece" type="Node2D" unique_id=729525704 node_paths=PackedStringArray("draggable", "placement_checker")]
+[node name="PuzzlePiece" type="Node2D" unique_id=729525704 node_paths=PackedStringArray("draggable", "placement_checker", "visuals")]
 editor_description = "Template for a puzzle piece. Add to scene then Right click -> Editable children, then customize."
 script = ExtResource("1_jm8a2")
 draggable = NodePath("Draggable")
 placement_checker = NodePath("Draggable/PlacementChecker")
+visuals = NodePath("Draggable/Visuals")
 metadata/_custom_type_script = "uid://dt4apmm1b4e51"
 metadata/_edit_group_ = true
 
@@ -19,12 +20,15 @@ script = ExtResource("2_fv06a")
 metadata/_custom_type_script = "uid://cxam1cepgkl3s"
 metadata/_edit_lock_ = true
 
-[node name="PuzzlePieceSprite" type="Sprite2D" parent="Draggable" unique_id=1266676352]
+[node name="Visuals" type="Node2D" parent="Draggable" unique_id=710902977]
 metadata/_edit_lock_ = true
 
-[node name="PuzzlePieceSpriteOnClick" type="Sprite2D" parent="Draggable" unique_id=991932022 node_paths=PackedStringArray("clickable", "old_sprite")]
+[node name="PuzzlePieceSprite" type="Sprite2D" parent="Draggable/Visuals" unique_id=1266676352]
+metadata/_edit_lock_ = true
+
+[node name="PuzzlePieceSpriteOnClick" type="Sprite2D" parent="Draggable/Visuals" unique_id=991932022 node_paths=PackedStringArray("clickable", "old_sprite")]
 script = ExtResource("3_fv06a")
-clickable = NodePath("..")
+clickable = NodePath("../..")
 old_sprite = NodePath("../PuzzlePieceSprite")
 
 [node name="PlacementChecker" parent="Draggable" unique_id=1710133272 instance=ExtResource("3_f1kk3")]

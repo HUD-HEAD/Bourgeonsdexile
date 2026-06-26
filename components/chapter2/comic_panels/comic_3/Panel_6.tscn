@@ -556,7 +556,6 @@ metadata/_custom_type_script = "uid://2aadlm17sdsf"
 
 [node name="ContractionController" parent="." unique_id=948422643 instance=ExtResource("20_2love")]
 
-[node name="ContractionTrigger" type="VisibleOnScreenNotifier2D" parent="." unique_id=985540832 node_paths=PackedStringArray("contraction_controller")]
+[node name="ContractionTrigger" type="VisibleOnScreenNotifier2D" parent="." unique_id=985540832]
 visible = false
 script = ExtResource("21_vperd")
-contraction_controller = NodePath("../ContractionController")

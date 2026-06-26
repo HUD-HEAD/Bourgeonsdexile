@@ -23,6 +23,7 @@ metadata/_custom_type_script = "uid://bf2oac284v575"
 size = Vector2(1920, 1080)
 
 [node name="ContractionController" type="Node" unique_id=948422643 node_paths=PackedStringArray("contraction_overlay")]
+process_mode = 4
 script = ExtResource("4_tdq0w")
 shader_mat = ExtResource("5_3t5g8")
 shader_params = Array[ExtResource("6_mu5no")]([SubResource("Resource_p5e6y"), SubResource("Resource_lkgd8")])

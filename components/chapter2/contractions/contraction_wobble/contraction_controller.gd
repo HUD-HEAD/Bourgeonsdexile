@@ -84,6 +84,8 @@ func stop_contraction():
 	#HACK TODO Maybe replace with control overlay disappearing
 	SignalManager.set_cursor_shape.emit(Input.CURSOR_ARROW)
 	
+	process_mode = Node.PROCESS_MODE_DISABLED
+	
 #region debug
 func _unhandled_key_input(event: InputEvent) -> void:
 	if OS.has_feature("debug"):
