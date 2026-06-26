@@ -15,7 +15,6 @@ func _ready() -> void:
 	super()
 	
 	#TODO optimize
-	#WARNING if initial rotation < 0 degrees, piece will not validate
 	_initial_snap_rotation()
 	
 	rotation_interface = preload("uid://cv8g3rds0g3a3").instantiate()
@@ -46,23 +45,28 @@ func _on_piece_clicked():
 	get_tree().call_group(GROUP_NAME, "hide_rotation_interface")
 	rotation_interface.show()
 
+
 ## Check if correctly placed in receptacle
 func is_correctly_placed():
-	#print(is_equal_approx(draggable.global_rotation_degrees, correct_rotation))
-	#print(placement_checker.is_correctly_placed())
+	return _is_correct_rotation() && placement_checker.is_correctly_placed()
+
+#NOTICE tried using is_equal_approx with rotation float values (both degrees and radians), did not yield consitent results
+## Check if current rotation is equal to correct rotation
+func _is_correct_rotation() -> bool:
+	##Convert current rotation to integer in range [0;360[
+	var curr_rot : int = posmod(roundi(draggable.global_rotation_degrees),360)
+	var equal_rotation : bool = curr_rot == correct_rotation
 	
-		
-	var curr_rot = fposmod(draggable.global_rotation, TAU)
-	var target_rot = fposmod(deg_to_rad(correct_rotation),TAU)
-	print(curr_rot, " correct ", target_rot)
-	print(is_equal_approx(draggable.global_rotation_degrees, target_rot))
+	#print(curr_rot, " int ", correct_rotation)
+	#print(equal_rotation)
 	
-	##Need to use is_equal_approx, otherwise imprecision leads to initially rotated pieces not being validated
-	return is_equal_approx(curr_rot, target_rot) && placement_checker.is_correctly_placed()
+	return equal_rotation
 	
 ## Rotate piece and check placement
 func rotate_custom(offset_degrees : float):
-	draggable.rotation_degrees = int(draggable.rotation_degrees+offset_degrees)%360
+	#Using rotate func keeps value wrapped
+	draggable.rotate(deg_to_rad(offset_degrees))
+	
 	rotation_interface.global_rotation = 0
 	
 	_check_placement()
