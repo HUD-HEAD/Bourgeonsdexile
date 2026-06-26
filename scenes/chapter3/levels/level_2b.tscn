@@ -614,38 +614,23 @@ position = Vector2(-20, -14.5)
 shape = SubResource("RectangleShape2D_ik6v4")
 
 [node name="DragDropPuzzle10" parent="WayTo/PuzzleMidwife" index="2" unique_id=2020957317 instance=ExtResource("4_mmuft")]
-position = Vector2(-59, 486)
+position = Vector2(-59, 503.00003)
 scale = Vector2(0.135, 0.135)
 
-[node name="OutlinePuzzle" parent="WayTo/PuzzleMidwife/DragDropPuzzle10" index="0" unique_id=1513168459]
-position = Vector2(60.92575, 188.96295)
-
 [node name="PuzzlePiece" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="0" unique_id=1667760579]
-position = Vector2(-933.3335, 466.6668)
+position = Vector2(-933.3335, 96.2962)
 rotation = 1.5707964
 
-[node name="Receptacle" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="1" unique_id=1559191435]
-position = Vector2(201.92578, 42.962967)
-
 [node name="PuzzlePiece2" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="2" unique_id=729525704]
-position = Vector2(-822.2224, 44.444542)
-
-[node name="Receptacle2" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="3" unique_id=600273107]
-position = Vector2(519.9258, 471.9629)
+position = Vector2(-822.2224, -325.92606)
 
 [node name="PuzzlePiece3" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="4" unique_id=1334418623]
-position = Vector2(-659.2593, 1014.81506)
-rotation = 3.1415927
-
-[node name="Receptacle3" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="5" unique_id=1839851310]
-position = Vector2(368.92578, -99.03699)
+position = Vector2(-659.2593, 644.44446)
+rotation = 3.1415925
 
 [node name="PuzzlePiece4" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="6" unique_id=1795176319]
-position = Vector2(-622.22235, 696.29663)
+position = Vector2(-622.22235, 325.92603)
 rotation = -1.5707964
-
-[node name="Receptacle4" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="7" unique_id=1455510048]
-position = Vector2(-318.07422, 75.96297)
 
 [node name="EnableMidwife" type="Area2D" parent="WayTo/PuzzleMidwife" index="3" unique_id=310843140 node_paths=PackedStringArray("node_to_enable")]
 position = Vector2(136, 631)
@@ -890,7 +875,7 @@ position = Vector2(-362.9994, -656.25)
 
 [node name="PuzzlePiece4" parent="PuzzlePharmacy/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(97964334, 1654234455) index="6" unique_id=1795176319]
 position = Vector2(-872.25024, -886.00006)
-rotation = 6.2831855
+rotation = 0.0
 
 [node name="Receptacle4" parent="PuzzlePharmacy/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(97964334, 1654234455) index="7" unique_id=1455510048]
 position = Vector2(-162.99939, -826.2501)
