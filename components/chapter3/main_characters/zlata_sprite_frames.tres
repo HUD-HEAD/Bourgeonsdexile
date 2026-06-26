@@ -12,13 +12,23 @@
 [ext_resource type="Texture2D" uid="uid://dwcnji3663wfa" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_6fps/zlata_idle_baby_0010.png" id="10_lu35k"]
 [ext_resource type="Texture2D" uid="uid://b03uq62vvku0q" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_6fps/zlata_idle_baby_0011.png" id="11_yvgq2"]
 [ext_resource type="Texture2D" uid="uid://bjrvpcirp2kv2" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_baby_5fps/zlata_walk_baby_0001.png" id="12_138a2"]
+[ext_resource type="Texture2D" uid="uid://ry36j3wvcrew" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_phone_6fps/zlata_idle_phone_0001.png" id="12_tqdm4"]
 [ext_resource type="Texture2D" uid="uid://c7imt88vx7gu8" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_baby_5fps/zlata_walk_baby_0002.png" id="13_etle7"]
+[ext_resource type="Texture2D" uid="uid://tawpisofpxvj" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_phone_6fps/zlata_idle_phone_0002.png" id="13_wi7ry"]
+[ext_resource type="Texture2D" uid="uid://oyr2kqgyyvu" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_phone_6fps/zlata_idle_phone_0003.png" id="14_7uclu"]
 [ext_resource type="Texture2D" uid="uid://dqp47txl0e7po" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_baby_5fps/zlata_walk_baby_0003.png" id="14_d623h"]
 [ext_resource type="Texture2D" uid="uid://dibl5es4eppo3" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_baby_5fps/zlata_walk_baby_0004.png" id="15_dywiy"]
+[ext_resource type="Texture2D" uid="uid://bccbemul2aypb" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_phone_6fps/zlata_idle_phone_0004.png" id="15_ne7vm"]
+[ext_resource type="Texture2D" uid="uid://g14fdypu1mix" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_phone_6fps/zlata_idle_phone_0005.png" id="16_7ydgy"]
 [ext_resource type="Texture2D" uid="uid://dh687073d47vb" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_baby_5fps/zlata_walk_baby_0005.png" id="16_ygm5j"]
+[ext_resource type="Texture2D" uid="uid://cn2m8o62a6glr" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_phone_6fps/zlata_idle_phone_0006.png" id="17_lejiq"]
 [ext_resource type="Texture2D" uid="uid://cl0f1kqsxua32" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_baby_5fps/zlata_walk_baby_0006.png" id="17_sq812"]
+[ext_resource type="Texture2D" uid="uid://dm0wq53e10cyb" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_phone_6fps/zlata_idle_phone_0007.png" id="18_cdrr4"]
 [ext_resource type="Texture2D" uid="uid://bds10xrw4jp0q" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_baby_5fps/zlata_walk_baby_0007.png" id="18_qf26r"]
 [ext_resource type="Texture2D" uid="uid://bxve2rucp882h" path="res://graphics/chapter3/main_characters/main_character/zlata_walk_baby_5fps/zlata_walk_baby_0008.png" id="19_c0ic0"]
+[ext_resource type="Texture2D" uid="uid://dp11khup11hf" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_phone_6fps/zlata_idle_phone_0008.png" id="19_rfwc3"]
+[ext_resource type="Texture2D" uid="uid://8v6y3787dcql" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_phone_6fps/zlata_idle_phone_0009.png" id="20_nhled"]
+[ext_resource type="Texture2D" uid="uid://doquf4qxtmri7" path="res://graphics/chapter3/main_characters/main_character/zlata_idle_baby_phone_6fps/zlata_idle_phone_0010.png" id="21_sdvho"]
 
 [resource]
 animations = [{
@@ -58,6 +68,41 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_tqdm4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_wi7ry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_7uclu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ne7vm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7ydgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_lejiq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_cdrr4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_rfwc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_nhled")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_sdvho")
+}],
+"loop": true,
+"name": &"idle_phone",
 "speed": 6.0
 }, {
 "frames": [{
