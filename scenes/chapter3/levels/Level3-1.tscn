@@ -19,6 +19,7 @@
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="10_ihdby"]
 [ext_resource type="Texture2D" uid="uid://7h021udsedkc" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0004.png" id="10_uxdx2"]
 [ext_resource type="Texture2D" uid="uid://bw6rmdtow7yad" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0005.png" id="11_o1afj"]
+[ext_resource type="Texture2D" uid="uid://cege631bopr3d" path="res://graphics/chapter3/levels/CH3_puzzles/1/full1_filled.png" id="11_vter2"]
 [ext_resource type="Texture2D" uid="uid://dm48vo3q5sx0y" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0006.png" id="12_j4f1f"]
 [ext_resource type="Texture2D" uid="uid://b0d6a1agim7rr" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0007.png" id="13_hthai"]
 [ext_resource type="Texture2D" uid="uid://1d5cgw78yuqi" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0008.png" id="14_44fmv"]
@@ -136,6 +137,8 @@
 [ext_resource type="Texture2D" uid="uid://bg5s78yi6ix11" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0120.png" id="126_43iwu"]
 [ext_resource type="AudioStream" uid="uid://cdpmtaw11xj5r" path="res://audio/chapter2/ambient/comic 2/panel_2.12_bus_sound.wav" id="133_b1c3r"]
 [ext_resource type="SpriteFrames" uid="uid://dc8towwetalbq" path="res://components/chapter3/main_characters/zlata_stroller_sprite_frames.tres" id="133_kervo"]
+[ext_resource type="Texture2D" uid="uid://cnxhik4hi0cur" path="res://graphics/chapter3/levels/CH3_puzzles/2/full_filled.png" id="133_l8mmb"]
+[ext_resource type="Texture2D" uid="uid://d3qffacb4dcwg" path="res://graphics/chapter3/levels/CH3_puzzles/3/full3_filled.png" id="136_8vc46"]
 [ext_resource type="Texture2D" uid="uid://dukbq3bsdjcs1" path="res://graphics/chapter3/levels/hospital/shadow.png" id="136_44fmv"]
 [ext_resource type="Texture2D" uid="uid://e25bc0tijjd8" path="res://graphics/chapter3/levels/hospital/signal.png" id="137_myods"]
 [ext_resource type="Texture2D" uid="uid://brud4c52y2pg0" path="res://graphics/chapter3/levels/hospital/traffic_light.png" id="138_txdgi"]
@@ -668,6 +671,9 @@ position = Vector2(-322.22195, -256.9444)
 [node name="PuzzlePiece6" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" index="10" unique_id=148742606]
 position = Vector2(359.72205, -213.88882)
 
+[node name="CompletePuzzle" parent="Puzzles/Puzzle1/DragDropPuzzle" index="2" unique_id=1933061263]
+texture = ExtResource("11_vter2")
+
 [node name="ClickableNpc" type="Area2D" parent="Puzzles/Puzzle1" unique_id=1597007466]
 position = Vector2(-859, 572)
 scale = Vector2(0.83999026, 0.83999026)
@@ -717,6 +723,11 @@ position = Vector2(-385, 72)
 
 [node name="PuzzlePiece4" parent="Puzzles/Puzzle2/DragDropPuzzle2/BuildingBlocks" index="6" unique_id=1470086235]
 position = Vector2(-445, -102)
+
+[node name="CompletePuzzle" parent="Puzzles/Puzzle2/DragDropPuzzle2" index="2" unique_id=1933061263]
+position = Vector2(174, -6)
+scale = Vector2(-1.085, -1.043)
+texture = ExtResource("133_l8mmb")
 
 [node name="ClickableNpc" type="Area2D" parent="Puzzles/Puzzle2" unique_id=1330283989]
 position = Vector2(-713, 569)
@@ -788,6 +799,9 @@ position = Vector2(-504, -121)
 
 [node name="Receptacle6" parent="Puzzles/Puzzle3/DragDropPuzzle3/BuildingBlocks" index="9" unique_id=1995568701]
 position = Vector2(187, 72)
+
+[node name="CompletePuzzle" parent="Puzzles/Puzzle3/DragDropPuzzle3" index="2" unique_id=1933061263]
+texture = ExtResource("136_8vc46")
 
 [node name="Puzzle5" type="Node2D" parent="Puzzles" unique_id=1223379638]
 position = Vector2(-15792, 76)
@@ -888,10 +902,11 @@ position = Vector2(-7550, 0)
 texture = ExtResource("140_fbeob")
 centered = false
 
-[node name="ObstacleBusTrigger" parent="." unique_id=964497252 node_paths=PackedStringArray("anim_player") instance=ExtResource("7_q7f5r")]
+[node name="ObstacleBusTrigger" parent="." unique_id=964497252 node_paths=PackedStringArray("area2d", "anim_player") instance=ExtResource("7_q7f5r")]
 position = Vector2(-21470, 1)
 collision_mask = 2
 script = ExtResource("140_v81oq")
+area2d = NodePath(".")
 anim_player = NodePath("../BusTransition")
 
 [node name="Bus" type="Sprite2D" parent="." unique_id=1589932159]

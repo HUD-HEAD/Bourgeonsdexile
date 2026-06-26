@@ -991,12 +991,13 @@ rotation = 1.5707964
 [node name="CompletePuzzle" parent="PuzzleStore/DragDropPuzzle8" index="2" unique_id=1933061263]
 texture = ExtResource("139_1uodi")
 
-[node name="AreaActivateStorePuzzle" type="Area2D" parent="." index="9" unique_id=648755334 node_paths=PackedStringArray("anim_player")]
+[node name="AreaActivateStorePuzzle" type="Area2D" parent="." index="9" unique_id=648755334 node_paths=PackedStringArray("area2d", "anim_player")]
 position = Vector2(5296, 861)
 collision_layer = 0
 collision_mask = 2
 input_pickable = false
 script = ExtResource("131_hts78")
+area2d = NodePath(".")
 anim_player = NodePath("../AnimationPlayer")
 anim_name = "activate_store"
 
@@ -1012,12 +1013,13 @@ puzzle = NodePath("../../WayBack/PuzzleLullaby/DragDropPuzzle3")
 anim_player = NodePath("..")
 anim_name = "chapter_transition"
 
-[node name="AreaSwitchIndex" type="Area2D" parent="." index="11" unique_id=35093189 node_paths=PackedStringArray("anim_player")]
+[node name="AreaSwitchIndex" type="Area2D" parent="." index="11" unique_id=35093189 node_paths=PackedStringArray("area2d", "anim_player")]
 position = Vector2(4871, 858)
 collision_layer = 0
 collision_mask = 2
 input_pickable = false
 script = ExtResource("131_hts78")
+area2d = NodePath(".")
 anim_player = NodePath("../AnimationPlayer")
 anim_name = "zlata_index_0"
 
