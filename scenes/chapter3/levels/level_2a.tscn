@@ -335,6 +335,7 @@ position = Vector2(2507, 808)
 texture = ExtResource("10_gjepm")
 
 [node name="PuzzleThinkHome" type="Node2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="1" unique_id=1304675676]
+z_index = 1
 position = Vector2(904, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayTo/PuzzleThinkHome" index="0" unique_id=206345537 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
