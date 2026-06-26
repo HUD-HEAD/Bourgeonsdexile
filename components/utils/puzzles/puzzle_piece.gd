@@ -33,8 +33,7 @@ func _ready() -> void:
 ##Deactivates functionality, but does not hide piece. This should be done in caller
 func deactivate():
 	#draggable.input_pickable = false
-	draggable.process_mode = Node.PROCESS_MODE_DISABLED	
-	draggable.hide()
+	draggable.process_mode = Node.PROCESS_MODE_DISABLED
 
 ## Check placement on piece dropped
 func _on_piece_dropped():
@@ -68,7 +67,7 @@ func is_correctly_placed():
 	
 ## Reveal puzzle piece
 func spawn_piece():
-	draggable.show()
+	show()
 
 ## Enable interactivity
 func enable_piece():
