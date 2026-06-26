@@ -1,0 +1,67 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://do7dsfuo5fhg2"]
+
+[ext_resource type="Texture2D" uid="uid://bvvfqeq70yfsh" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_idle_5fps/woman_blueskirt_idle_0001.png" id="1_pil7x"]
+[ext_resource type="Texture2D" uid="uid://bfcvyqvn2ju6a" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_idle_5fps/woman_blueskirt_idle_0002.png" id="2_8plvj"]
+[ext_resource type="Texture2D" uid="uid://doinblhviy3kx" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_idle_5fps/woman_blueskirt_idle_0003.png" id="3_7mk06"]
+[ext_resource type="Texture2D" uid="uid://coief4apjqcj0" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_idle_5fps/woman_blueskirt_idle_0004.png" id="4_ulif5"]
+[ext_resource type="Texture2D" uid="uid://dx7b8lhaekogt" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_idle_5fps/woman_blueskirt_idle_0005.png" id="5_hkjdx"]
+[ext_resource type="Texture2D" uid="uid://qiokde2t6mp5" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_walk_6fps/woman_blueskirt_walk_0001.png" id="6_ooo1c"]
+[ext_resource type="Texture2D" uid="uid://gwsau48b02w2" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_walk_6fps/woman_blueskirt_walk_0002.png" id="7_hx5ay"]
+[ext_resource type="Texture2D" uid="uid://c50hg4p6av84m" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_walk_6fps/woman_blueskirt_walk_0003.png" id="8_paks2"]
+[ext_resource type="Texture2D" uid="uid://bem0fc6u84tcw" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_walk_6fps/woman_blueskirt_walk_0004.png" id="9_5nahb"]
+[ext_resource type="Texture2D" uid="uid://yd8q7q6mca32" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_walk_6fps/woman_blueskirt_walk_0005.png" id="10_d7hex"]
+[ext_resource type="Texture2D" uid="uid://bwluy52afpdq4" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_walk_6fps/woman_blueskirt_walk_0006.png" id="11_aoqds"]
+[ext_resource type="Texture2D" uid="uid://c02c3x83wgnnd" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_walk_6fps/woman_blueskirt_walk_0007.png" id="12_mm5g4"]
+[ext_resource type="Texture2D" uid="uid://d1olcfimvcf1i" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_walk_6fps/woman_blueskirt_walk_0008.png" id="13_j4w3t"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pil7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8plvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7mk06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ulif5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hkjdx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ooo1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hx5ay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_paks2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5nahb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_d7hex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_aoqds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_mm5g4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_j4w3t")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 6.0
+}]

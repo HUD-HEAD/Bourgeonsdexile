@@ -84,4 +84,4 @@ func enable_piece():
 
 func autosolve():
 	super()
-	global_rotation_degrees = correct_rotation
+	draggable.global_rotation_degrees = correct_rotation

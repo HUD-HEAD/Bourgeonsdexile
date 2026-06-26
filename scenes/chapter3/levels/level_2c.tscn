@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cpguix1gkv66k" path="res://graphics/chapter3/levels/bigavenue/store/store_wall.png" id="4_hxlkc"]
 [ext_resource type="Texture2D" uid="uid://bt5nmg7mr62h0" path="res://graphics/chapter3/levels/bigavenue/store/store_counter.png" id="5_0gkm7"]
 [ext_resource type="PackedScene" uid="uid://c8e6ucedj5thg" path="res://components/chapter3/levels/level3.2/thinking_puzzle_3.2-8.tscn" id="5_4b6cm"]
+[ext_resource type="SpriteFrames" uid="uid://bws4idigr1jip" path="res://components/chapter3/main_characters/supermarket_npc.tres" id="6_8ekd6"]
 [ext_resource type="PackedScene" uid="uid://cs8rkd02b0ogh" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-11.tscn" id="6_ioa73"]
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="7_eeffk"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/mechanics/obstacle.tscn" id="8_hts78"]
@@ -139,9 +140,11 @@
 [ext_resource type="Texture2D" uid="uid://66vdhk0xnmxe" path="res://graphics/chapter3/levels/CH3_puzzles/16/full16_filled.png" id="132_cse6j"]
 [ext_resource type="Texture2D" uid="uid://dkdhcmfsu1u2k" path="res://graphics/chapter3/levels/CH3_puzzles/22/full22_filled.png" id="135_1uodi"]
 [ext_resource type="Texture2D" uid="uid://b2ewpt3w26r0s" path="res://graphics/chapter3/levels/bigavenue/road/car1.png" id="135_dihh7"]
+[ext_resource type="Script" uid="uid://nw1du1rkgxpn" path="res://scenes/chapter3/levels/area_entered_flip.gd" id="136_e6bwg"]
 [ext_resource type="Script" uid="uid://4x7opfu2wab4" path="res://components/utils/puzzles/puzzle_complete_trigger_anim.gd" id="136_kuwon"]
 [ext_resource type="Texture2D" uid="uid://dehacwdplh44r" path="res://graphics/chapter3/levels/CH3_puzzles/12_lullaby/full12_filled.png" id="137_jhdp3"]
 [ext_resource type="Texture2D" uid="uid://dhq7irmqj6688" path="res://graphics/chapter3/levels/CH3_puzzles/17/full17_filled.png" id="139_1uodi"]
+[ext_resource type="Script" uid="uid://do4qlmbenh0hg" path="res://scenes/chapter3/levels/camera_adjust.gd" id="143_l2jfe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dihh7"]
 size = Vector2(501, 165)
@@ -528,7 +531,7 @@ point_count = 10
 
 [sub_resource type="Curve2D" id="Curve2D_hts78"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 5192, 914, 0, 0, 0, 0, 4879, 916, 0, 0, 0, 0, 4727, 939, 0, 0, 0, 0, 3480, 959, 0, 0, 0, 0, 1034, 917, 0, 0, 0, 0, 1217, 920, 0, 0, 0, 0, 1307, 803, 0, 0, 0, 0, 1220, 802, 0, 0, 0, 0, 1296, 669, 0, 0, 0, 0, 787, 673)
+"points": PackedVector2Array(0, 0, 0, 0, 5192, 914, 0, 0, 0, 0, 4879, 916, 0, 0, 0, 0, 4727, 939, 0, 0, 0, 0, 3480, 959, 0, 0, 0, 0, 1034, 922, 0, 0, 0, 0, 1214, 925, 0, 0, 0, 0, 1307, 803, 0, 0, 0, 0, 1220, 802, 0, 0, 0, 0, 1296, 669, 0, 0, 0, 0, 787, 673)
 }
 point_count = 10
 
@@ -574,6 +577,23 @@ tracks/2/keys = {
 "values": [true]
 }
 
+[sub_resource type="Animation" id="Animation_8ekd6"]
+resource_name = "activate_scan"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AreaRevealStore/StoreBg/StoreWall/StoreClickable/StoreNPC")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"scan", 1.0, false],
+"method": &"play"
+}]
+}
+
 [sub_resource type="Animation" id="Animation_gjepm"]
 resource_name = "activate_store"
 tracks/0/type = "value"
@@ -603,15 +623,15 @@ tracks/1/keys = {
 tracks/2/type = "method"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("PuzzleCompletePathBack")
+tracks/2/path = NodePath("AdjustCamera")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
-"args": [],
-"method": &"_adjust_camera"
+"args": [0.0],
+"method": &"adjust_camera"
 }]
 }
 
@@ -646,6 +666,23 @@ tracks/1/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_j56uu"]
+resource_name = "deactivate_scan"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AreaRevealStore/StoreBg/StoreWall/StoreClickable/StoreNPC")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"idle", 1.0, false],
+"method": &"play"
+}]
+}
+
 [sub_resource type="Animation" id="Animation_kuwon"]
 resource_name = "zlata_index_0"
 tracks/0/type = "value"
@@ -676,8 +713,10 @@ tracks/1/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hxlkc"]
 _data = {
 &"RESET": SubResource("Animation_lvjii"),
+&"activate_scan": SubResource("Animation_8ekd6"),
 &"activate_store": SubResource("Animation_gjepm"),
 &"chapter_transition": SubResource("Animation_p5lly"),
+&"deactivate_scan": SubResource("Animation_j56uu"),
 &"zlata_index_0": SubResource("Animation_kuwon")
 }
 
@@ -686,13 +725,14 @@ radius = 129.062
 
 [node name="Level31" unique_id=2125939091 instance=ExtResource("1_y0jpi")]
 
-[node name="AreaRevealStore" type="Area2D" parent="." index="1" unique_id=1943666368 node_paths=PackedStringArray("nodes_to_reveal")]
+[node name="AreaRevealStore" type="Area2D" parent="." index="1" unique_id=1943666368 node_paths=PackedStringArray("nodes_to_reveal", "nodes_to_hide")]
 position = Vector2(5124, 835)
 collision_layer = 0
 collision_mask = 2
 input_pickable = false
 script = ExtResource("2_us6en")
 nodes_to_reveal = [NodePath("StoreBg"), NodePath("../Bg2/PaperBackground")]
+nodes_to_hide = [NodePath("../WayBack/Car1")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaRevealStore" index="0" unique_id=2132792132]
 shape = SubResource("RectangleShape2D_dihh7")
@@ -704,26 +744,32 @@ texture = ExtResource("3_kuwon")
 z_index = 1
 texture = ExtResource("4_hxlkc")
 
-[node name="StoreCounter" type="Sprite2D" parent="AreaRevealStore/StoreBg/StoreWall" index="0" unique_id=198612600]
-position = Vector2(0, 44)
-scale = Vector2(0.9999999, 0.9999999)
-texture = ExtResource("5_0gkm7")
-
-[node name="StoreClickable" type="Area2D" parent="AreaRevealStore/StoreBg/StoreWall/StoreCounter" index="0" unique_id=425009634]
-position = Vector2(0, -44)
-scale = Vector2(1.0000001, 1.0000001)
+[node name="StoreClickable" type="Area2D" parent="AreaRevealStore/StoreBg/StoreWall" index="0" unique_id=425009634]
 script = ExtResource("10_ari2e")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaRevealStore/StoreBg/StoreWall/StoreCounter/StoreClickable" index="0" unique_id=1656225356]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaRevealStore/StoreBg/StoreWall/StoreClickable" index="0" unique_id=1656225356]
 position = Vector2(0, 16.346182)
 shape = SubResource("CircleShape2D_cse6j")
+
+[node name="StoreNPC" type="AnimatedSprite2D" parent="AreaRevealStore/StoreBg/StoreWall/StoreClickable" index="1" unique_id=169760504]
+position = Vector2(-26.999996, 19)
+scale = Vector2(0.48, 0.48)
+sprite_frames = ExtResource("6_8ekd6")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="StoreCounter" type="Sprite2D" parent="AreaRevealStore/StoreBg/StoreWall" index="1" unique_id=198612600]
+position = Vector2(0, 44)
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("5_0gkm7")
 
 [node name="SceneEnder" parent="." index="2" unique_id=1221118698]
 next_scene = "uid://d4cccbwuwp1rh"
 metadata/_edit_pinned_properties_ = [&"next_scene"]
 
 [node name="PuzzleThinkHome" type="Node2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="0" unique_id=89541105]
+z_index = 1
 position = Vector2(854, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayTo/PuzzleThinkHome" index="0" unique_id=1714813389 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
@@ -895,6 +941,11 @@ position = Vector2(-81, 2)
 collision_mask = 2
 script = ExtResource("9_f1pwt")
 
+[node name="FlipWoman" type="Node" parent="WayBack/PuzzleLullaby/Obstacle" index="1" unique_id=2030515709 node_paths=PackedStringArray("area2d", "woman")]
+script = ExtResource("136_e6bwg")
+area2d = NodePath("..")
+woman = NodePath("../../../../PathTo/PathFollowTo/Zlata")
+
 [node name="DragDropPuzzle3" parent="WayBack/PuzzleLullaby" index="2" unique_id=1767003607 instance=ExtResource("2_fu3d2")]
 position = Vector2(-5.999996, 545)
 scale = Vector2(0.22, 0.22)
@@ -944,7 +995,6 @@ position = Vector2(5192, 914)
 
 [node name="PuzzleCompletePathBack" parent="." index="7" unique_id=1605263297 node_paths=PackedStringArray("puzzle")]
 puzzle = NodePath("../PuzzleStore/DragDropPuzzle8")
-adjust_camera = false
 
 [node name="PuzzleStore" type="Node2D" parent="." index="8" unique_id=1817000249]
 visible = false
@@ -954,7 +1004,7 @@ position = Vector2(5197, 0)
 [node name="PuzzleSpawner" type="Node" parent="PuzzleStore" index="0" unique_id=312219525 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("7_eeffk")
 puzzle = NodePath("../DragDropPuzzle8")
-spawn_trigger = NodePath("../../AreaRevealStore/StoreBg/StoreWall/StoreCounter/StoreClickable")
+spawn_trigger = NodePath("../../AreaRevealStore/StoreBg/StoreWall/StoreClickable")
 obstacle = NodePath("../Obstacle")
 
 [node name="Obstacle" parent="PuzzleStore" index="1" unique_id=1937492105 instance=ExtResource("8_hts78")]
@@ -962,7 +1012,25 @@ position = Vector2(-19, 0)
 collision_mask = 2
 script = ExtResource("9_f1pwt")
 
-[node name="DragDropPuzzle8" parent="PuzzleStore" index="2" unique_id=427741748 instance=ExtResource("6_ioa73")]
+[node name="TriggerAnimScan" type="Node" parent="PuzzleStore/Obstacle" index="1" unique_id=1942874133 node_paths=PackedStringArray("area2d", "anim_player")]
+script = ExtResource("131_hts78")
+area2d = NodePath("..")
+anim_player = NodePath("../../../AnimationPlayer")
+anim_name = "activate_scan"
+
+[node name="Obstacle2" parent="PuzzleStore" index="2" unique_id=1391882919 instance=ExtResource("8_hts78")]
+position = Vector2(-109, 0)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("9_f1pwt")
+
+[node name="TriggerAnimDeactivateScan" type="Node" parent="PuzzleStore/Obstacle2" index="1" unique_id=1931910371 node_paths=PackedStringArray("area2d", "anim_player")]
+script = ExtResource("131_hts78")
+area2d = NodePath("..")
+anim_player = NodePath("../../../AnimationPlayer")
+anim_name = "deactivate_scan"
+
+[node name="DragDropPuzzle8" parent="PuzzleStore" index="3" unique_id=427741748 instance=ExtResource("6_ioa73")]
 position = Vector2(-61, 753)
 scale = Vector2(0.25, 0.25)
 
@@ -1025,6 +1093,9 @@ anim_name = "zlata_index_0"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaSwitchIndex" index="0" unique_id=1051585021]
 shape = SubResource("CircleShape2D_kuwon")
+
+[node name="AdjustCamera" type="Node" parent="." index="12" unique_id=2103204904]
+script = ExtResource("143_l2jfe")
 
 [editable path="WayTo/PuzzleThinkHome/Puzzle3"]
 [editable path="WayTo/PuzzleThinkHome/Puzzle3/BuildingBlocks/FullPieces/PuzzlePiece"]

@@ -8,7 +8,7 @@ extends Node2D
 
 @export var play_walking_sfx: bool = false
 
-const WALK_SPEED = 75
+@export var walk_speed : int = 75
 
 var walking : bool
 
@@ -29,9 +29,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if walking:
 		if walk_along_path:
-			path_follow.progress += WALK_SPEED*delta*dir
+			path_follow.progress += walk_speed*delta*dir
 		else:
-			self.global_position.x += WALK_SPEED*delta
+			self.global_position.x += walk_speed*delta
 
 
 func switch_animation(anim_name : String):
