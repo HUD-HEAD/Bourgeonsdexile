@@ -134,6 +134,8 @@
 [ext_resource type="Texture2D" uid="uid://bg5s78yi6ix11" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0120.png" id="126_xrnqx"]
 [ext_resource type="Texture2D" uid="uid://b5vajmdfhe3b2" path="res://graphics/chapter3/levels/CH3_puzzles/9_museumconversation/full9_filled.png" id="128_rcnf5"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="132_texi6"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="135_rcnf5"]
+[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="136_8xjft"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0s0yi"]
 animations = [{
@@ -712,6 +714,7 @@ position = Vector2(-1021, 463)
 [node name="Zlata" parent="." unique_id=826116100 instance=ExtResource("3_sb6ig")]
 position = Vector2(-2689, 1029.0001)
 scale = Vector2(2.0799963, 2.0799963)
+play_walking_sfx = true
 walk_speed = 120
 
 [node name="Camera2D" type="Camera2D" parent="Zlata" unique_id=2072470020]
@@ -744,6 +747,46 @@ centered = false
 script = ExtResource("132_texi6")
 chapter = 2
 comic = 20
+
+[node name="Audio" type="Node" parent="." unique_id=1707098790]
+
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=1995490177]
+position = Vector2(-2241, 113)
+rect = Rect2(-767, -10, 777, 57)
+script = ExtResource("135_rcnf5")
+loop_name = 2201
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone2" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=689776476]
+position = Vector2(-2234, 182)
+rect = Rect2(-767, -10, 777, 57)
+script = ExtResource("135_rcnf5")
+loop_name = 1303
+loop_mode = 2
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="Stop_people_loop" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=1092199033]
+position = Vector2(11076, 760)
+rect = Rect2(-767, -10, 777, 57)
+script = ExtResource("135_rcnf5")
+loop_name = 2201
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="Stop_steps" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=1725470523]
+position = Vector2(11083, 829)
+rect = Rect2(-767, -10, 777, 57)
+script = ExtResource("135_rcnf5")
+loop_name = 1303
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=1310494145]
+position = Vector2(-2329, 343)
+rect = Rect2(-433, -14, 126, 76)
+script = ExtResource("136_8xjft")
+music_name = 3400
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
 
 [editable path="Puzzles/Puzzle1/DragDropPuzzle"]
 [editable path="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks/PuzzlePiece"]

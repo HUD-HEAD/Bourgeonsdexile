@@ -986,6 +986,7 @@ curve = SubResource("Curve2D_eeffk")
 
 [node name="Zlata" parent="PathTo/PathFollowTo" parent_id_path=PackedInt32Array(666369972) index="0" unique_id=700974070]
 position = Vector2(-45.999996, -0.99999994)
+play_walking_sfx = true
 
 [node name="PathBack" parent="." index="6" unique_id=2085482473]
 curve = SubResource("Curve2D_hts78")

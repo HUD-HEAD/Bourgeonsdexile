@@ -15,12 +15,16 @@
 [ext_resource type="SpriteFrames" uid="uid://bws4idigr1jip" path="res://components/chapter3/main_characters/supermarket_npc.tres" id="7_qnuec"]
 [ext_resource type="Script" uid="uid://ca78ngu4ava5l" path="res://components/utils/mechanics/obstacle_disable_hidden.gd" id="8_yk8n7"]
 [ext_resource type="Texture2D" uid="uid://b2ewpt3w26r0s" path="res://graphics/chapter3/levels/bigavenue/road/car1.png" id="10_gjepm"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="16_rtu30"]
 [ext_resource type="Texture2D" uid="uid://dvl57mmyxc12m" path="res://graphics/chapter3/levels/bigavenue/husband.png" id="17_kq1o5"]
+[ext_resource type="AudioStream" uid="uid://c6pl2n2j6x47l" path="res://audio/chapter2/sfx/resolve_puzzle_UI_circle_bubble_sound.wav" id="17_qnuec"]
 [ext_resource type="Texture2D" uid="uid://dabxmhi50p8ad" path="res://graphics/chapter3/levels/CH3_puzzles/7_conversation/full7_filled.png" id="19_5msxn"]
 [ext_resource type="Texture2D" uid="uid://bkn0ffs7kumwf" path="res://graphics/chapter3/levels/CH3_puzzles/21/full21_filled.png" id="22_i0iuy"]
 [ext_resource type="Script" uid="uid://nw1du1rkgxpn" path="res://scenes/chapter3/levels/area_entered_flip.gd" id="24_rtu30"]
 [ext_resource type="Texture2D" uid="uid://dehacwdplh44r" path="res://graphics/chapter3/levels/CH3_puzzles/12_lullaby/full12_filled.png" id="25_rtu30"]
 [ext_resource type="Texture2D" uid="uid://c04goqkta7ikm" path="res://graphics/chapter3/levels/CH3_puzzles/6_shop/full6_filled.png" id="27_qnuec"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="28_sffv2"]
+[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="29_5msxn"]
 [ext_resource type="Script" uid="uid://do4qlmbenh0hg" path="res://scenes/chapter3/levels/camera_adjust.gd" id="30_i0iuy"]
 [ext_resource type="PackedScene" uid="uid://buwei6igqkc44" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-4.tscn" id="127_t5rg3"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="131_yk8n7"]
@@ -75,6 +79,20 @@ tracks/1/keys = {
 "values": [{
 "args": [&"idle_phone", 1.0, false],
 "method": &"play"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayerPhone/TriggerSfx")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_sfx"
 }]
 }
 
@@ -415,6 +433,13 @@ texture = ExtResource("19_5msxn")
 editor_description = "#HACK : used hardcoded path workaround in AnimPlayer to avoid losing node while reparenting on pathfollow"
 libraries/ = SubResource("AnimationLibrary_se5nk")
 
+[node name="TriggerSfx" type="Node" parent="WayBack/PuzzlePhone/AnimationPlayerPhone" index="0" unique_id=687303224]
+script = ExtResource("16_rtu30")
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("17_qnuec")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
 [node name="Husband" type="Sprite2D" parent="WayBack/PuzzlePhone" index="4" unique_id=636334883]
 visible = false
 position = Vector2(-263, 750.99994)
@@ -469,7 +494,7 @@ position = Vector2(1046.6666, 306.66675)
 
 [node name="PuzzlePiece4" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="6" unique_id=1795176319]
 position = Vector2(1226.6665, 480)
-rotation = -3.1415925
+rotation = 3.1415925
 
 [node name="PuzzlePiece5" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="8" unique_id=1711508116]
 position = Vector2(1400, 193.33319)
@@ -533,6 +558,7 @@ curve = SubResource("Curve2D_pfjp3")
 
 [node name="Zlata" parent="PathTo/PathFollowTo" parent_id_path=PackedInt32Array(666369972) index="0" unique_id=700974070]
 position = Vector2(-14.000002, 1.0000077)
+play_walking_sfx = true
 
 [node name="AnimSprite" parent="PathTo/PathFollowTo/Zlata" index="0" unique_id=689873547]
 animation = &"idle"
@@ -586,6 +612,7 @@ scale = Vector2(0.33499998, 0.33499998)
 
 [node name="PuzzlePiece" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="0" unique_id=1667760579]
 position = Vector2(-269.4317, 108.41803)
+rotation = -3.1415925
 
 [node name="PuzzlePiece2" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="2" unique_id=729525704]
 position = Vector2(-206.74515, 275.58243)
@@ -657,6 +684,30 @@ shape = SubResource("CircleShape2D_18lw1")
 
 [node name="AdjustCamera" type="Node" parent="." index="13" unique_id=1123527535]
 script = ExtResource("30_i0iuy")
+
+[node name="Audio" type="Node" parent="." index="14" unique_id=1331676922]
+
+[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="Audio" index="0" unique_id=618999784]
+position = Vector2(2369, 905)
+rect = Rect2(-767, -10, 777, 57)
+script = ExtResource("28_sffv2")
+loop_name = 2201
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoopZone2" type="VisibleOnScreenNotifier2D" parent="Audio" index="1" unique_id=2116133068]
+position = Vector2(1601, 866)
+rect = Rect2(-767, -10, 777, 57)
+script = ExtResource("28_sffv2")
+loop_name = 1303
+loop_mode = 2
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="Audio" index="2" unique_id=2040706002]
+position = Vector2(1333, 595)
+rect = Rect2(-433, -14, 126, 76)
+script = ExtResource("29_5msxn")
+music_name = 3202
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
 
 [editable path="WayTo/PuzzleThinkHome/Puzzle1"]
 [editable path="WayTo/PuzzleThinkHome/Puzzle1/BuildingBlocks/FullPieces/PuzzlePiece"]

@@ -19,7 +19,9 @@
 [ext_resource type="PackedScene" uid="uid://cudd3kgt36aqv" path="res://components/chapter3/comic3/C3_3_Panel8.tscn" id="17_xhsn2"]
 [ext_resource type="PackedScene" uid="uid://b2oq2eui2qotl" path="res://components/chapter3/comic3/C3_3_Panel9.tscn" id="18_ej0hg"]
 [ext_resource type="PackedScene" uid="uid://ktkvuk38rind" path="res://components/chapter3/comic3/C3_3_Panel10.tscn" id="19_xgelu"]
+[ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="20_m317j"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="21_2yq1v"]
+[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="21_wf2wo"]
 
 [node name="JungleComic1" type="Node2D" unique_id=150562309]
 
@@ -107,6 +109,29 @@ script = ExtResource("21_2yq1v")
 panels = [NodePath("../Panels/C33Panel8"), NodePath("../Panels/C33Panel9"), NodePath("../Panels/PanelReading"), NodePath("../Panels/C33Panel1"), NodePath("../Panels/C33Panel2"), NodePath("../Panels/C33Panel3"), NodePath("../Panels/C33Panel4"), NodePath("../Panels/C33Panel5"), NodePath("../Panels/C33Panel6"), NodePath("../Panels/C33Panel7"), NodePath("../Panels/C33Panel12"), NodePath("../Panels/C33Panel11"), NodePath("../Panels/C33Panel10"), NodePath("../Panels/C33Panel14"), NodePath("../Panels/PanelFriends"), NodePath("../Panels/PanelPanningMuseum"), NodePath("../Panels/SceneEnder")]
 
 [node name="Audio" type="Node" parent="." unique_id=619569792]
+
+[node name="Stop_people_loop" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=1732542885]
+position = Vector2(1796, 708)
+rect = Rect2(-767, -10, 777, 57)
+script = ExtResource("20_m317j")
+loop_name = 2201
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="Stop_steps" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=874406392]
+position = Vector2(1803, 777)
+rect = Rect2(-767, -10, 777, 57)
+script = ExtResource("20_m317j")
+loop_name = 1303
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=604014698]
+position = Vector2(1665, 594)
+rect = Rect2(-433, -14, 126, 76)
+script = ExtResource("21_wf2wo")
+music_name = 3100
+metadata/_custom_type_script = "uid://2aadlm17sdsf"
 
 [node name="CheckpointController" type="Node" parent="." unique_id=1768502718]
 script = ExtResource("14_1jcxn")
