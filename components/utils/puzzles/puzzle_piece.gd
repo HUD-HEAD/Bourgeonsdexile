@@ -81,10 +81,14 @@ func autosolve():
 	_snap_to_receptacle()
 
 func _on_mouse_entered():
+	if !is_instance_valid(visuals):
+		return
 	visuals.scale *= 1.05
 	visuals.modulate.a *= 0.8
 
 func _on_mouse_exited():
+	if !is_instance_valid(visuals):
+		return
 	visuals.scale /= 1.05
 	visuals.modulate.a /= 0.8
 	
