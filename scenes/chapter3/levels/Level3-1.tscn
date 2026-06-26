@@ -888,10 +888,11 @@ position = Vector2(-7550, 0)
 texture = ExtResource("140_fbeob")
 centered = false
 
-[node name="ObstacleBusTrigger" parent="." unique_id=964497252 node_paths=PackedStringArray("anim_player") instance=ExtResource("7_q7f5r")]
+[node name="ObstacleBusTrigger" parent="." unique_id=964497252 node_paths=PackedStringArray("area2d", "anim_player") instance=ExtResource("7_q7f5r")]
 position = Vector2(-21470, 1)
 collision_mask = 2
 script = ExtResource("140_v81oq")
+area2d = NodePath(".")
 anim_player = NodePath("../BusTransition")
 
 [node name="Bus" type="Sprite2D" parent="." unique_id=1589932159]

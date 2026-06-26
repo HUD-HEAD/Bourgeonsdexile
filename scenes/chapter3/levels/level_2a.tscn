@@ -58,6 +58,14 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_jrbug"]
 radius = 61.538452
 
+[sub_resource type="Animation" id="Animation_kq1o5"]
+resource_name = "default"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_se5nk"]
+_data = {
+&"default": SubResource("Animation_kq1o5")
+}
+
 [sub_resource type="Curve2D" id="Curve2D_pfjp3"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 821, 674, 0, 0, 0, 0, 1298, 671, 0, 0, 0, 0, 1219, 804, 0, 0, 0, 0, 1307, 803, 0, 0, 0, 0, 1212, 922, 0, 0, 0, 0, 3481, 958, 0, 0, 0, 0, 4728, 938, 0, 0, 0, 0, 4885, 915, 0, 0, 0, 0, 5312, 912, 0, 0, 0, 0, 4708, 921)
@@ -292,67 +300,73 @@ position = Vector2(-242.31897, -192.23355)
 [node name="PuzzlePieceHollow2" parent="WayTo/PuzzleThinkHome/Puzzle1/BuildingBlocks/HollowPieces" parent_id_path=PackedInt32Array(1941159865, 1500445843) index="1" unique_id=450693309]
 position = Vector2(-240.5294, -0.41152954)
 
-[node name="PuzzleStreet" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="0" unique_id=201431427]
+[node name="PuzzlePhone" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="0" unique_id=201431427]
 position = Vector2(3032, 0)
 
-[node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleStreet" index="0" unique_id=957423747 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
+[node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzlePhone" index="0" unique_id=957423747 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
 script = ExtResource("2_hd8xs")
 puzzle = NodePath("../DragDropPuzzle")
 spawn_trigger = NodePath("../Clickable")
 obstacle = NodePath("../Obstacle")
 
-[node name="Obstacle" parent="WayBack/PuzzleStreet" index="1" unique_id=426308280 instance=ExtResource("3_052ky")]
+[node name="Obstacle" parent="WayBack/PuzzlePhone" index="1" unique_id=426308280 instance=ExtResource("3_052ky")]
 position = Vector2(-121, 0)
 collision_mask = 2
 script = ExtResource("8_yk8n7")
 
-[node name="Clickable" type="Area2D" parent="WayBack/PuzzleStreet" index="2" unique_id=457714455]
+[node name="Clickable" type="Area2D" parent="WayBack/PuzzlePhone" index="2" unique_id=457714455]
 position = Vector2(-220, 851.00006)
 scale = Vector2(0.40999997, 0.40999997)
 script = ExtResource("4_80rf8")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
-[node name="Npc2" type="AnimatedSprite2D" parent="WayBack/PuzzleStreet/Clickable" index="0" unique_id=1704780558]
+[node name="Npc2" type="AnimatedSprite2D" parent="WayBack/PuzzlePhone/Clickable" index="0" unique_id=1704780558]
 position = Vector2(7.3154755, 58.535645)
 sprite_frames = SubResource("SpriteFrames_7ftg5")
 autoplay = "default"
 frame_progress = 0.5191904
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WayBack/PuzzleStreet/Clickable" index="1" unique_id=1234672855]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WayBack/PuzzlePhone/Clickable" index="1" unique_id=1234672855]
 position = Vector2(-104.87806, -243.90262)
 shape = SubResource("CircleShape2D_jrbug")
 
-[node name="Husband" type="Sprite2D" parent="WayBack/PuzzleStreet/Clickable" index="2" unique_id=636334883]
+[node name="Husband" type="Sprite2D" parent="WayBack/PuzzlePhone/Clickable" index="2" unique_id=636334883]
 position = Vector2(-104.877914, -243.9027)
 scale = Vector2(0.22469065, 0.22469065)
 texture = ExtResource("17_kq1o5")
 
-[node name="DragDropPuzzle" parent="WayBack/PuzzleStreet" index="3" unique_id=727084058 instance=ExtResource("3_t5rg3")]
+[node name="DragDropPuzzle" parent="WayBack/PuzzlePhone" index="3" unique_id=727084058 instance=ExtResource("3_t5rg3")]
 position = Vector2(-147, 729.99994)
 rotation = 1.5707964
 scale = Vector2(0.28765005, 0.28765005)
 
-[node name="PuzzlePiece" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="0" unique_id=1667760579]
+[node name="PuzzlePiece" parent="WayBack/PuzzlePhone/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="0" unique_id=1667760579]
 position = Vector2(-260.733, 326.78616)
 
-[node name="PuzzlePiece2" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="2" unique_id=729525704]
+[node name="PuzzlePiece2" parent="WayBack/PuzzlePhone/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="2" unique_id=729525704]
 position = Vector2(278.1159, -354.5976)
 
-[node name="PuzzlePiece3" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="4" unique_id=1334418623]
+[node name="PuzzlePiece3" parent="WayBack/PuzzlePhone/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="4" unique_id=1334418623]
 position = Vector2(-337.21515, 542.32587)
 rotation = -0.009472954
 
-[node name="PuzzlePiece4" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="6" unique_id=1795176319]
+[node name="PuzzlePiece4" parent="WayBack/PuzzlePhone/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="6" unique_id=1795176319]
 position = Vector2(-48.669994, -292.02118)
 
-[node name="PuzzlePieceSpriteOnClick" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece4/Draggable/Visuals" parent_id_path=PackedInt32Array(727084058, 1795176319, 710902977) index="1" unique_id=991932022]
+[node name="PuzzlePieceSpriteOnClick" parent="WayBack/PuzzlePhone/DragDropPuzzle/BuildingBlocks/PuzzlePiece4/Draggable/Visuals" parent_id_path=PackedInt32Array(727084058, 1795176319, 710902977) index="1" unique_id=991932022]
 position = Vector2(1.0413881e-07, 17.382418)
 
-[node name="PuzzlePiece5" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="8" unique_id=1711508116]
+[node name="PuzzlePiece5" parent="WayBack/PuzzlePhone/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="8" unique_id=1711508116]
 position = Vector2(-177.29843, 684.8601)
 
-[node name="PuzzlePiece6" parent="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="10" unique_id=148742606]
+[node name="PuzzlePiece6" parent="WayBack/PuzzlePhone/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="10" unique_id=148742606]
 position = Vector2(590.9961, -378.9325)
+
+[node name="AnimationPlayerPhone" type="AnimationPlayer" parent="WayBack/PuzzlePhone" index="4" unique_id=294162819]
+libraries/ = SubResource("AnimationLibrary_se5nk")
+
+[node name="Area2D" type="Area2D" parent="WayBack/PuzzlePhone" index="5" unique_id=404976994]
+script = ExtResource("137_gjepm")
 
 [node name="PuzzleSocialWorker" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="1" unique_id=1734062459]
 position = Vector2(1070, 0)
@@ -400,7 +414,7 @@ position = Vector2(1046.6666, 306.66675)
 
 [node name="PuzzlePiece4" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="6" unique_id=1795176319]
 position = Vector2(1226.6665, 480)
-rotation = 3.1415925
+rotation = -3.1415925
 
 [node name="PuzzlePiece5" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="8" unique_id=1711508116]
 position = Vector2(1400, 193.33319)
@@ -452,6 +466,7 @@ position = Vector2(-477.2728, 13.636314)
 curve = SubResource("Curve2D_pfjp3")
 
 [node name="Zlata" parent="PathTo/PathFollowTo" parent_id_path=PackedInt32Array(666369972) index="0" unique_id=700974070]
+z_index = 0
 position = Vector2(-14.000002, 1.0000077)
 
 [node name="Camera2D" parent="PathTo/PathFollowTo/Zlata" index="2" unique_id=1600606219]
@@ -485,7 +500,6 @@ scale = Vector2(0.33499998, 0.33499998)
 
 [node name="PuzzlePiece" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="0" unique_id=1667760579]
 position = Vector2(-269.4317, 108.41803)
-rotation = -3.1415925
 
 [node name="PuzzlePiece2" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="2" unique_id=729525704]
 position = Vector2(-206.74515, 275.58243)
@@ -553,13 +567,13 @@ shape = SubResource("CircleShape2D_18lw1")
 [editable path="WayTo/PuzzleThinkHome/Puzzle1/BuildingBlocks/FullPieces/PuzzlePiece"]
 [editable path="WayTo/PuzzleThinkHome/Puzzle1/BuildingBlocks/HollowPieces/PuzzlePieceHollow"]
 [editable path="WayTo/PuzzleThinkHome/Puzzle1/BuildingBlocks/HollowPieces/PuzzlePieceHollow2"]
-[editable path="WayBack/PuzzleStreet/DragDropPuzzle"]
-[editable path="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece"]
-[editable path="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece2"]
-[editable path="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece3"]
-[editable path="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece4"]
-[editable path="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece5"]
-[editable path="WayBack/PuzzleStreet/DragDropPuzzle/BuildingBlocks/PuzzlePiece6"]
+[editable path="WayBack/PuzzlePhone/DragDropPuzzle"]
+[editable path="WayBack/PuzzlePhone/DragDropPuzzle/BuildingBlocks/PuzzlePiece"]
+[editable path="WayBack/PuzzlePhone/DragDropPuzzle/BuildingBlocks/PuzzlePiece2"]
+[editable path="WayBack/PuzzlePhone/DragDropPuzzle/BuildingBlocks/PuzzlePiece3"]
+[editable path="WayBack/PuzzlePhone/DragDropPuzzle/BuildingBlocks/PuzzlePiece4"]
+[editable path="WayBack/PuzzlePhone/DragDropPuzzle/BuildingBlocks/PuzzlePiece5"]
+[editable path="WayBack/PuzzlePhone/DragDropPuzzle/BuildingBlocks/PuzzlePiece6"]
 [editable path="WayBack/PuzzleSocialWorker/DragDropPuzzle9"]
 [editable path="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks/PuzzlePiece"]
 [editable path="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks/PuzzlePiece2"]

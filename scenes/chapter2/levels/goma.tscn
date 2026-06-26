@@ -1000,11 +1000,12 @@ comic = 11
 [node name="BodaManArrive" type="AnimationPlayer" parent="." unique_id=1020808909]
 libraries/ = SubResource("AnimationLibrary_0up0r")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1980686204 node_paths=PackedStringArray("anim_player")]
+[node name="Area2D" type="Area2D" parent="." unique_id=1980686204 node_paths=PackedStringArray("area2d", "anim_player")]
 position = Vector2(5227, 725)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("73_5mn6d")
+area2d = NodePath(".")
 anim_player = NodePath("../BodaManArrive")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2001870416]
