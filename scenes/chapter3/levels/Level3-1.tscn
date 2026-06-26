@@ -908,6 +908,9 @@ walk_speed = 120
 sprite_frames = ExtResource("133_kervo")
 animation = &"idle"
 
+[node name="Shadow" parent="Path2D/PathFollow2D/Zlata/AnimSprite" index="0" unique_id=1632501669]
+scale = Vector2(1.675, 1)
+
 [node name="ZlataClickable" type="Area2D" parent="Path2D/PathFollow2D/Zlata" unique_id=776341110]
 position = Vector2(0, -127.40408)
 scale = Vector2(0.99999994, 0.99999994)
