@@ -24,7 +24,6 @@
 [ext_resource type="Texture2D" uid="uid://dwjsv7uvm7e1u" path="res://graphics/chapter1/levels/city/npcs/NPC_apron/NPC_apron_0006.png" id="17_umov5"]
 [ext_resource type="Texture2D" uid="uid://bujoq40kpdymp" path="res://graphics/chapter1/levels/city/npcs/NPC_wave_hand/NPC_wave_hand_0002.png" id="18_1ef0d"]
 [ext_resource type="Texture2D" uid="uid://rkuf6karasmr" path="res://graphics/chapter1/levels/city/npcs/NPC_apron/NPC_apron_0007.png" id="18_uqsyn"]
-[ext_resource type="PackedScene" uid="uid://ckdsg3rpi65te" path="res://components/chapter1/levels/city/puzzle2.tscn" id="19_4dc1s"]
 [ext_resource type="Texture2D" uid="uid://cbtvmy4w5fvlj" path="res://graphics/chapter1/levels/city/npcs/NPC_wave_hand/NPC_wave_hand_0003.png" id="19_7vmws"]
 [ext_resource type="Texture2D" uid="uid://hx1vd7i7a543" path="res://graphics/chapter1/levels/city/npcs/NPC_apron/NPC_apron_0008.png" id="19_glm23"]
 [ext_resource type="Texture2D" uid="uid://byfpvtgx8gmkl" path="res://graphics/chapter1/levels/city/environment/market1.png" id="20_832n5"]
@@ -97,6 +96,7 @@
 [ext_resource type="Texture2D" uid="uid://dshbskbmrw8ps" path="res://graphics/chapter1/levels/city/npcs/NPC_wave_hand/NPC_wave_hand_0038.png" id="54_1stae"]
 [ext_resource type="Texture2D" uid="uid://b88y6a4mfw45a" path="res://graphics/chapter1/levels/city/npcs/NPC_wave_hand/NPC_wave_hand_0039.png" id="55_ivtva"]
 [ext_resource type="Texture2D" uid="uid://bececty2m32aw" path="res://graphics/chapter1/levels/city/npcs/NPC_wave_hand/NPC_wave_hand_0040.png" id="56_3pi56"]
+[ext_resource type="PackedScene" uid="uid://6dbpib5tego7" path="res://components/chapter1/levels/city/puzzle2.tscn" id="90_sn4xa"]
 [ext_resource type="Texture2D" uid="uid://dybv6dxdpjkya" path="res://graphics/chapter1/levels/city/npcs/NPC_scratch/NPC_scratch_0001.png" id="92_6i01r"]
 [ext_resource type="PackedScene" uid="uid://c57ylw3q4gnr4" path="res://components/chapter1/levels/city/puzzle4.tscn" id="92_glm23"]
 [ext_resource type="Texture2D" uid="uid://dpfg3agtveh17" path="res://graphics/chapter1/levels/city/npcs/NPC_scratch/NPC_scratch_0002.png" id="93_6a1y3"]
@@ -1074,6 +1074,12 @@ obstacle = NodePath("../../Obstacle")
 [node name="Puzzle2" type="Node2D" parent="." unique_id=664229715]
 position = Vector2(1294, 0)
 
+[node name="PuzzleSpawner" type="Node" parent="Puzzle2" unique_id=1363570419 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
+script = ExtResource("17_4dc1s")
+puzzle = NodePath("../DragDropPuzzle")
+spawn_trigger = NodePath("../Npc2/Clickable")
+obstacle = NodePath("../Obstacle")
+
 [node name="Npc2" type="AnimatedSprite2D" parent="Puzzle2" unique_id=1108595039]
 position = Vector2(311, 818)
 sprite_frames = SubResource("SpriteFrames_tvwsl")
@@ -1093,33 +1099,14 @@ position = Vector2(-3, -122)
 [node name="Obstacle" parent="Puzzle2" unique_id=1985664101 instance=ExtResource("13_8tq2l")]
 collision_mask = 2
 
-[node name="CityPuzzle2" parent="Puzzle2" unique_id=22391943 instance=ExtResource("19_4dc1s")]
-position = Vector2(196, 529)
+[node name="DragDropPuzzle" parent="Puzzle2" unique_id=1889271473 instance=ExtResource("90_sn4xa")]
+position = Vector2(140, 540)
 
-[node name="Emptysquare" parent="Puzzle2/CityPuzzle2" index="0" unique_id=378736329]
-position = Vector2(-56.5, 12.5)
+[node name="PuzzlePiece" parent="Puzzle2/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1889271473, 1654234455) index="0" unique_id=1667760579]
+position = Vector2(-274, 33)
 
-[node name="Receptacle" parent="Puzzle2/CityPuzzle2" index="1" unique_id=1753590750]
-position = Vector2(-128.5, 16.5)
-
-[node name="Receptacle2" parent="Puzzle2/CityPuzzle2" index="2" unique_id=800679547]
-position = Vector2(11.5, 20.5)
-
-[node name="PuzzlePiece" parent="Puzzle2/CityPuzzle2" index="3" unique_id=107123918]
-position = Vector2(-259, 39)
-
-[node name="PuzzlePiece2" parent="Puzzle2/CityPuzzle2" index="4" unique_id=475507319]
-position = Vector2(163, 117)
-
-[node name="Fullsquare" parent="Puzzle2/CityPuzzle2" index="5" unique_id=691156988]
-visible = false
-position = Vector2(-54, 19)
-
-[node name="PuzzleSpawner" type="Node" parent="Puzzle2/CityPuzzle2" unique_id=1363570419 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
-script = ExtResource("17_4dc1s")
-puzzle = NodePath("..")
-spawn_trigger = NodePath("../../Npc2/Clickable")
-obstacle = NodePath("../../Obstacle")
+[node name="PuzzlePiece2" parent="Puzzle2/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1889271473, 1654234455) index="2" unique_id=729525704]
+position = Vector2(288, 113)
 
 [node name="Puzzle3" type="Node2D" parent="." unique_id=1755578293]
 position = Vector2(2466, 0)
@@ -1363,7 +1350,9 @@ loop_mode = 2
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [editable path="Puzzle1/CityPuzzle1"]
-[editable path="Puzzle2/CityPuzzle2"]
+[editable path="Puzzle2/DragDropPuzzle"]
+[editable path="Puzzle2/DragDropPuzzle/BuildingBlocks/PuzzlePiece"]
+[editable path="Puzzle2/DragDropPuzzle/BuildingBlocks/PuzzlePiece2"]
 [editable path="Puzzle3/DragDropPuzzle"]
 [editable path="Puzzle3/DragDropPuzzle/BuildingBlocks/PuzzlePiece"]
 [editable path="Puzzle3/DragDropPuzzle/BuildingBlocks/PuzzlePiece2"]
