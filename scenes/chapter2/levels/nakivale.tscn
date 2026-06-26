@@ -234,6 +234,7 @@ texture = ExtResource("4_fklnn")
 [node name="Nakivalelonglowerhouses" type="Sprite2D" parent="Background" unique_id=545118904]
 position = Vector2(3106, 540)
 texture = ExtResource("3_e65kt")
+metadata/_edit_lock_ = true
 
 [node name="Tentin" type="Sprite2D" parent="Background" unique_id=176712022]
 position = Vector2(1376, 620)
@@ -655,6 +656,7 @@ limit_bottom = 1080
 [node name="ContractionOverlay" type="Sprite2D" parent="Path2D/PathFollow2D/Amani/Camera2D" unique_id=1339554297]
 modulate = Color(1, 1, 1, 0)
 texture = SubResource("PlaceholderTexture2D_u7xie")
+metadata/_edit_lock_ = true
 
 [node name="SpawnTrigger" type="Area2D" parent="Path2D/PathFollow2D/Amani" unique_id=718918311]
 position = Vector2(5, -142)
