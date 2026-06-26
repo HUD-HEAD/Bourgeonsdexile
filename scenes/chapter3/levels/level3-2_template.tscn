@@ -58,6 +58,8 @@ stretch_mode = 1
 [node name="BuildingInside" type="Sprite2D" parent="Bg2" unique_id=639287802]
 position = Vector2(835, 589)
 texture = ExtResource("5_1dsc3")
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="Apartment" type="Sprite2D" parent="Bg2/BuildingInside" unique_id=1159056283]
 position = Vector2(-2, 26)
@@ -120,6 +122,8 @@ input_pickable = false
 script = ExtResource("12_y5mxe")
 nodes_to_reveal = [NodePath("../PaperBackground"), NodePath("../BuildingInside")]
 nodes_to_hide = [NodePath("../BuildingOutside")]
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/AreaRevealInsideBuilding" unique_id=1430876339]
 position = Vector2(-126, 26)
