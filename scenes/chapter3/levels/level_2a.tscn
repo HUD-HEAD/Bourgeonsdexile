@@ -15,11 +15,6 @@
 [ext_resource type="SpriteFrames" uid="uid://bws4idigr1jip" path="res://components/chapter3/main_characters/supermarket_npc.tres" id="7_qnuec"]
 [ext_resource type="Script" uid="uid://ca78ngu4ava5l" path="res://components/utils/mechanics/obstacle_disable_hidden.gd" id="8_yk8n7"]
 [ext_resource type="Texture2D" uid="uid://b2ewpt3w26r0s" path="res://graphics/chapter3/levels/bigavenue/road/car1.png" id="10_gjepm"]
-[ext_resource type="Texture2D" uid="uid://bvvfqeq70yfsh" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_idle_5fps/woman_blueskirt_idle_0001.png" id="12_k0kvr"]
-[ext_resource type="Texture2D" uid="uid://bfcvyqvn2ju6a" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_idle_5fps/woman_blueskirt_idle_0002.png" id="13_kq1o5"]
-[ext_resource type="Texture2D" uid="uid://doinblhviy3kx" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_idle_5fps/woman_blueskirt_idle_0003.png" id="14_se5nk"]
-[ext_resource type="Texture2D" uid="uid://coief4apjqcj0" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_idle_5fps/woman_blueskirt_idle_0004.png" id="15_7l2cm"]
-[ext_resource type="Texture2D" uid="uid://dx7b8lhaekogt" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_idle_5fps/woman_blueskirt_idle_0005.png" id="16_sffv2"]
 [ext_resource type="Texture2D" uid="uid://dvl57mmyxc12m" path="res://graphics/chapter3/levels/bigavenue/husband.png" id="17_kq1o5"]
 [ext_resource type="Texture2D" uid="uid://dabxmhi50p8ad" path="res://graphics/chapter3/levels/CH3_puzzles/7_conversation/full7_filled.png" id="19_5msxn"]
 [ext_resource type="Texture2D" uid="uid://bkn0ffs7kumwf" path="res://graphics/chapter3/levels/CH3_puzzles/21/full21_filled.png" id="22_i0iuy"]
@@ -91,29 +86,6 @@ _data = {
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jrbug"]
 radius = 61.538452
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_7ftg5"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("12_k0kvr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_kq1o5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_se5nk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_7l2cm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_sffv2")
-}],
-"loop": true,
-"name": &"default",
-"speed": 30.0
-}]
 
 [sub_resource type="Curve2D" id="Curve2D_pfjp3"]
 _data = {
@@ -476,13 +448,7 @@ scale = Vector2(0.65, 0.65)
 script = ExtResource("4_80rf8")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
-[node name="Npc2" type="AnimatedSprite2D" parent="WayBack/PuzzleSocialWorker/Clickable" index="0" unique_id=1526407663]
-position = Vector2(70.76924, 72.3076)
-scale = Vector2(0.6923077, 0.6923077)
-sprite_frames = SubResource("SpriteFrames_7ftg5")
-autoplay = "default"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WayBack/PuzzleSocialWorker/Clickable" index="1" unique_id=1802513695]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WayBack/PuzzleSocialWorker/Clickable" index="0" unique_id=1802513695]
 position = Vector2(70.76924, 81.538376)
 shape = SubResource("CircleShape2D_jrbug")
 

@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://g2j5wogi1q1b"]
+
+[ext_resource type="Texture2D" uid="uid://cpwp37dlmv2w7" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_socialworker_idle_5fps/npc_socialworker_idle_0001.png" id="1_vyvms"]
+[ext_resource type="Texture2D" uid="uid://dpxdrthigbgbb" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_socialworker_idle_5fps/npc_socialworker_idle_0002.png" id="2_mktbn"]
+[ext_resource type="Texture2D" uid="uid://xakl76fqbqwd" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_socialworker_idle_5fps/npc_socialworker_idle_0003.png" id="3_6bw6e"]
+[ext_resource type="Texture2D" uid="uid://4g0i8wcs6dkp" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_socialworker_idle_5fps/npc_socialworker_idle_0004.png" id="4_yck4m"]
+[ext_resource type="Texture2D" uid="uid://cpo6mxlr5thef" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_socialworker_idle_5fps/npc_socialworker_idle_0005.png" id="5_s638k"]
+[ext_resource type="Texture2D" uid="uid://d4i4y7agocmwi" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_socialworker_idle_5fps/npc_socialworker_idle_0006.png" id="6_t16bk"]
+[ext_resource type="Texture2D" uid="uid://bg3y7ungs8orf" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_socialworker_idle_5fps/npc_socialworker_idle_0007.png" id="7_rvse6"]
+[ext_resource type="Texture2D" uid="uid://bgysyfxygh0lv" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_socialworker_idle_5fps/npc_socialworker_idle_0008.png" id="8_bl6ue"]
+[ext_resource type="Texture2D" uid="uid://cqr3c6rudca5v" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_socialworker_idle_5fps/npc_socialworker_idle_0009.png" id="9_10ypw"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vyvms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mktbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6bw6e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_yck4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_s638k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_t16bk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rvse6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bl6ue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_10ypw")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]

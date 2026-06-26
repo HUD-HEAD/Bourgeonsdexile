@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://1rrpcsdgsv8b" path="res://graphics/chapter3/levels/bigavenue/building/reels.png" id="6_ovumn"]
 [ext_resource type="Texture2D" uid="uid://jliii8605sec" path="res://graphics/chapter3/levels/bigavenue/background.png" id="7_ttgo8"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="9_q7qsp"]
+[ext_resource type="SpriteFrames" uid="uid://g2j5wogi1q1b" path="res://components/chapter3/main_characters/socialworker_npc.tres" id="9_ttgo8"]
 [ext_resource type="Texture2D" uid="uid://bnf0c6a1iaqcb" path="res://graphics/chapter3/levels/bigavenue/building/floors.png" id="10_1dsc3"]
 [ext_resource type="PackedScene" uid="uid://dy84a73ucflwu" path="res://components/chapter3/main_characters/zlata.tscn" id="10_v6c5n"]
 [ext_resource type="Script" uid="uid://crcrgrn18h2m6" path="res://components/utils/mechanics/face_path.gd" id="11_4tgbk"]
@@ -68,6 +69,13 @@ texture = ExtResource("4_ttgo8")
 [node name="HallBg" type="Sprite2D" parent="Bg2/BuildingInside" unique_id=643522166]
 position = Vector2(229, 288)
 texture = ExtResource("4_1dsc3")
+
+[node name="NpcSocialWorker" type="AnimatedSprite2D" parent="Bg2/BuildingInside/HallBg" unique_id=175185564]
+position = Vector2(-91, 3)
+scale = Vector2(0.375, 0.375)
+sprite_frames = ExtResource("9_ttgo8")
+animation = &"idle"
+autoplay = "idle"
 
 [node name="HallTable" type="Sprite2D" parent="Bg2/BuildingInside/HallBg" unique_id=972076843]
 position = Vector2(-58, 27)
