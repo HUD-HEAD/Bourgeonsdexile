@@ -20,6 +20,10 @@
 [ext_resource type="Texture2D" uid="uid://coief4apjqcj0" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_idle_5fps/woman_blueskirt_idle_0004.png" id="15_7l2cm"]
 [ext_resource type="Texture2D" uid="uid://dx7b8lhaekogt" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_idle_5fps/woman_blueskirt_idle_0005.png" id="16_sffv2"]
 [ext_resource type="Texture2D" uid="uid://dvl57mmyxc12m" path="res://graphics/chapter3/levels/bigavenue/husband.png" id="17_kq1o5"]
+[ext_resource type="Texture2D" uid="uid://dabxmhi50p8ad" path="res://graphics/chapter3/levels/CH3_puzzles/7_conversation/full7_filled.png" id="19_5msxn"]
+[ext_resource type="Texture2D" uid="uid://bkn0ffs7kumwf" path="res://graphics/chapter3/levels/CH3_puzzles/21/full21_filled.png" id="22_i0iuy"]
+[ext_resource type="Texture2D" uid="uid://dehacwdplh44r" path="res://graphics/chapter3/levels/CH3_puzzles/12_lullaby/full12_filled.png" id="25_rtu30"]
+[ext_resource type="Texture2D" uid="uid://c04goqkta7ikm" path="res://graphics/chapter3/levels/CH3_puzzles/6_shop/full6_filled.png" id="27_qnuec"]
 [ext_resource type="PackedScene" uid="uid://buwei6igqkc44" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-4.tscn" id="127_t5rg3"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="131_yk8n7"]
 [ext_resource type="Script" uid="uid://4x7opfu2wab4" path="res://components/utils/puzzles/puzzle_complete_trigger_anim.gd" id="134_gjepm"]
@@ -362,6 +366,9 @@ position = Vector2(-177.29843, 684.8601)
 [node name="PuzzlePiece6" parent="WayBack/PuzzlePhone/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(727084058, 1654234455) index="10" unique_id=148742606]
 position = Vector2(590.9961, -378.9325)
 
+[node name="CompletePuzzle" parent="WayBack/PuzzlePhone/DragDropPuzzle" index="2" unique_id=1933061263]
+texture = ExtResource("19_5msxn")
+
 [node name="AnimationPlayerPhone" type="AnimationPlayer" parent="WayBack/PuzzlePhone" index="4" unique_id=294162819]
 libraries/ = SubResource("AnimationLibrary_se5nk")
 
@@ -414,13 +421,16 @@ position = Vector2(1046.6666, 306.66675)
 
 [node name="PuzzlePiece4" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="6" unique_id=1795176319]
 position = Vector2(1226.6665, 480)
-rotation = -3.1415925
+rotation = 3.1415925
 
 [node name="PuzzlePiece5" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="8" unique_id=1711508116]
 position = Vector2(1400, 193.33319)
 
 [node name="PuzzlePiece6" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="10" unique_id=1437281790]
 position = Vector2(1226.6667, -226.66638)
+
+[node name="CompletePuzzle" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9" index="2" unique_id=1933061263]
+texture = ExtResource("22_i0iuy")
 
 [node name="Car4" type="Sprite2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="2" unique_id=1752701603]
 position = Vector2(4070, 859)
@@ -462,6 +472,9 @@ position = Vector2(-154.54529, -454.54544)
 [node name="PuzzlePiece7" parent="WayBack/PuzzleLullaby/DragDropPuzzle5/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="10" unique_id=918731768]
 position = Vector2(-477.2728, 13.636314)
 
+[node name="CompletePuzzle" parent="WayBack/PuzzleLullaby/DragDropPuzzle5" index="2" unique_id=1933061263]
+texture = ExtResource("25_rtu30")
+
 [node name="PathTo" parent="." index="5" unique_id=1272328632]
 curve = SubResource("Curve2D_pfjp3")
 
@@ -500,6 +513,7 @@ scale = Vector2(0.33499998, 0.33499998)
 
 [node name="PuzzlePiece" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="0" unique_id=1667760579]
 position = Vector2(-269.4317, 108.41803)
+rotation = -3.1415925
 
 [node name="PuzzlePiece2" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="2" unique_id=729525704]
 position = Vector2(-206.74515, 275.58243)
@@ -520,6 +534,11 @@ rotation = 0.0
 [node name="PuzzlePiece7" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="12" unique_id=1738010806]
 position = Vector2(596.23895, 439.76144)
 rotation = 1.5707964
+
+[node name="CompletePuzzle" parent="PuzzleStore/DragDropPuzzle2" index="2" unique_id=1933061263]
+position = Vector2(-6, -2)
+scale = Vector2(1, 1)
+texture = ExtResource("27_qnuec")
 
 [node name="PuzzleCompletePathBack" parent="." index="8" unique_id=1605263297 node_paths=PackedStringArray("puzzle")]
 puzzle = NodePath("../PuzzleStore/DragDropPuzzle2")

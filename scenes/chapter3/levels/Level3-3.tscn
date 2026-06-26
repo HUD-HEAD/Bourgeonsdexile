@@ -130,7 +130,9 @@
 [ext_resource type="Texture2D" uid="uid://rijxgdv4fj3k" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0117.png" id="123_303ko"]
 [ext_resource type="Texture2D" uid="uid://botlwlbdqi70l" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0118.png" id="124_3y5i7"]
 [ext_resource type="Texture2D" uid="uid://cjd0cved1hco8" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0119.png" id="125_1v4yc"]
+[ext_resource type="Texture2D" uid="uid://busd5tbxrs6kt" path="res://graphics/chapter3/levels/CH3_puzzles/8_museumasking/full8_filled.png" id="126_der5b"]
 [ext_resource type="Texture2D" uid="uid://bg5s78yi6ix11" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0120.png" id="126_xrnqx"]
+[ext_resource type="Texture2D" uid="uid://b5vajmdfhe3b2" path="res://graphics/chapter3/levels/CH3_puzzles/9_museumconversation/full9_filled.png" id="128_rcnf5"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="132_texi6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0s0yi"]
@@ -576,6 +578,9 @@ rotation = 1.5707964
 [node name="PuzzlePiece8" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="14" unique_id=1931119986]
 position = Vector2(-529.7627, -174.95233)
 
+[node name="CompletePuzzle" parent="Puzzles/Puzzle1/DragDropPuzzle" index="2" unique_id=1933061263]
+texture = ExtResource("126_der5b")
+
 [node name="Node2D" type="Node2D" parent="Puzzles/Puzzle1" unique_id=1692781264]
 
 [node name="Puzzle2" type="Node2D" parent="Puzzles" unique_id=1592024859]
@@ -628,6 +633,9 @@ position = Vector2(-723, 182)
 
 [node name="PuzzlePiece7" parent="Puzzles/Puzzle2/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1829428137, 1654234455) index="12" unique_id=607370480]
 position = Vector2(517, 108)
+
+[node name="CompletePuzzle" parent="Puzzles/Puzzle2/DragDropPuzzle2" index="2" unique_id=1933061263]
+texture = ExtResource("128_rcnf5")
 
 [node name="Puzzle3" type="Node2D" parent="Puzzles" unique_id=368534655]
 position = Vector2(2306, 0)
