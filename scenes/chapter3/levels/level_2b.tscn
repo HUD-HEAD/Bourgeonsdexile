@@ -18,6 +18,7 @@
 [ext_resource type="Script" uid="uid://nw1du1rkgxpn" path="res://scenes/chapter3/levels/area_entered_flip.gd" id="20_m0ijv"]
 [ext_resource type="Texture2D" uid="uid://dehacwdplh44r" path="res://graphics/chapter3/levels/CH3_puzzles/12_lullaby/full12_filled.png" id="21_vfllm"]
 [ext_resource type="SpriteFrames" uid="uid://do7dsfuo5fhg2" path="res://components/chapter3/main_characters/woman_blueskirt.tres" id="22_rfd6j"]
+[ext_resource type="Script" uid="uid://bn0sxcor0g10k" path="res://components/utils/mechanics/area_trigger_anim.gd" id="27_83a51"]
 [ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/mechanics/area_entered_enable.gd" id="130_ahkc3"]
 [ext_resource type="Texture2D" uid="uid://dkg5g27c3g6fd" path="res://graphics/chapter3/levels/bigavenue/road/train_new.png" id="133_gus1e"]
 [ext_resource type="Texture2D" uid="uid://d32grdjnvrlcq" path="res://graphics/chapter3/levels/bigavenue/road/car2.png" id="134_a11uh"]
@@ -60,6 +61,23 @@ _data = {
 }
 point_count = 8
 
+[sub_resource type="Animation" id="Animation_o43pv"]
+resource_name = "activate_scan"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AreaRevealPharmacy/Pharmacy/PharmacyClickable/StoreNPC")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"scan", 1.0, false],
+"method": &"play"
+}]
+}
+
 [sub_resource type="Animation" id="Animation_rrnem"]
 resource_name = "chapter_transition"
 tracks/0/type = "method"
@@ -77,9 +95,28 @@ tracks/0/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_83a51"]
+resource_name = "deactivate_scan"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AreaRevealPharmacy/Pharmacy/PharmacyClickable/StoreNPC")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"idle", 1.0, false],
+"method": &"play"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_41b52"]
 _data = {
-&"chapter_transition": SubResource("Animation_rrnem")
+&"activate_scan": SubResource("Animation_o43pv"),
+&"chapter_transition": SubResource("Animation_rrnem"),
+&"deactivate_scan": SubResource("Animation_83a51")
 }
 
 [node name="Level31" unique_id=2125939091 instance=ExtResource("1_whkl1")]
@@ -389,7 +426,25 @@ obstacle = NodePath("../Obstacle")
 collision_mask = 2
 script = ExtResource("5_kh7pe")
 
-[node name="DragDropPuzzle" parent="PuzzlePharmacy" index="2" unique_id=97964334 instance=ExtResource("6_37s5b")]
+[node name="TriggerAnimScan" type="Node" parent="PuzzlePharmacy/Obstacle" index="1" unique_id=1795018531 node_paths=PackedStringArray("area2d", "anim_player")]
+script = ExtResource("27_83a51")
+area2d = NodePath("..")
+anim_player = NodePath("../../../AnimationPlayer")
+anim_name = "activate_scan"
+
+[node name="Obstacle2" parent="PuzzlePharmacy" index="2" unique_id=1214868031 instance=ExtResource("4_7eiwe")]
+position = Vector2(-45, 0)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("5_kh7pe")
+
+[node name="TriggerAnimDeactivateScan" type="Node" parent="PuzzlePharmacy/Obstacle2" index="1" unique_id=882501711 node_paths=PackedStringArray("area2d", "anim_player")]
+script = ExtResource("27_83a51")
+area2d = NodePath("..")
+anim_player = NodePath("../../../AnimationPlayer")
+anim_name = "deactivate_scan"
+
+[node name="DragDropPuzzle" parent="PuzzlePharmacy" index="3" unique_id=97964334 instance=ExtResource("6_37s5b")]
 position = Vector2(19.999996, 822)
 scale = Vector2(0.16, 0.16)
 
