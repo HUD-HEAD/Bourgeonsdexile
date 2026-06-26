@@ -82,9 +82,11 @@ func autosolve():
 
 func _on_mouse_entered():
 	visuals.scale *= 1.05
+	visuals.modulate.a *= 0.8
 
 func _on_mouse_exited():
 	visuals.scale /= 1.05
+	visuals.modulate.a /= 0.8
 	
 
 #region tooling
