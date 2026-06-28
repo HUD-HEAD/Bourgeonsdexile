@@ -894,13 +894,7 @@ scale = Vector2(0.32999998, 0.32999998)
 script = ExtResource("10_ari2e")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
-[node name="Npc2" type="AnimatedSprite2D" parent="WayBack/PuzzleSocialWorker/Clickable" index="0" unique_id=2135020425]
-position = Vector2(0, 70)
-sprite_frames = SubResource("SpriteFrames_hvm84")
-autoplay = "default"
-flip_h = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WayBack/PuzzleSocialWorker/Clickable" index="1" unique_id=932951873]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WayBack/PuzzleSocialWorker/Clickable" index="0" unique_id=932951873]
 position = Vector2(0, 15.151516)
 shape = SubResource("CircleShape2D_lxjsl")
 

@@ -572,19 +572,19 @@ scale = Vector2(0.21000001, 0.21000001)
 z_index = 1
 
 [node name="PuzzlePiece" parent="Puzzle4/DragDropPuzzle4/BuildingBlocks" index="0" unique_id=1667760579]
-position = Vector2(685.71423, 385.71426)
+position = Vector2(733.33386, 385.71426)
 
 [node name="PuzzlePiece2" parent="Puzzle4/DragDropPuzzle4/BuildingBlocks" index="2" unique_id=729525704]
-position = Vector2(861.90466, 223.8095)
+position = Vector2(909.5243, 223.8095)
 
 [node name="PuzzlePiece3" parent="Puzzle4/DragDropPuzzle4/BuildingBlocks" index="4" unique_id=252285571]
-position = Vector2(842.8568, 80.95235)
+position = Vector2(890.47644, 80.95235)
 
 [node name="PuzzlePiece4" parent="Puzzle4/DragDropPuzzle4/BuildingBlocks" index="6" unique_id=1501680743]
-position = Vector2(685.7139, 428.57153)
+position = Vector2(733.33356, 428.57153)
 
 [node name="PuzzlePiece5" parent="Puzzle4/DragDropPuzzle4/BuildingBlocks" index="8" unique_id=1022298336]
-position = Vector2(847.6188, -171.42851)
+position = Vector2(895.2384, -171.42851)
 
 [node name="ClickableNpc" type="Area2D" parent="Puzzle4" index="3" unique_id=2122546920]
 position = Vector2(-90, 797)

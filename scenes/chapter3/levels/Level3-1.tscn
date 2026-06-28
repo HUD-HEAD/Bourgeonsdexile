@@ -781,10 +781,19 @@ z_index = 1
 position = Vector2(90, 1)
 
 [node name="PuzzlePiece" parent="Puzzles/Puzzle2/DragDropPuzzle2/BuildingBlocks" index="0" unique_id=1667760579]
-position = Vector2(600, 7)
+position = Vector2(602, -3)
+
+[node name="DraggableZone" parent="Puzzles/Puzzle2/DragDropPuzzle2/BuildingBlocks/PuzzlePiece/Draggable" parent_id_path=PackedInt32Array(1776146671, 1667760579, 2116105691) index="2" unique_id=1105802255]
+position = Vector2(1.6181641, 28.140778)
+
+[node name="Receptacle" parent="Puzzles/Puzzle2/DragDropPuzzle2/BuildingBlocks" index="1" unique_id=1559191435]
+position = Vector2(242.115, 8.61)
 
 [node name="PuzzlePiece2" parent="Puzzles/Puzzle2/DragDropPuzzle2/BuildingBlocks" index="2" unique_id=729525704]
-position = Vector2(706, 208)
+position = Vector2(703, 214)
+
+[node name="Receptacle2" parent="Puzzles/Puzzle2/DragDropPuzzle2/BuildingBlocks" index="3" unique_id=600273107]
+position = Vector2(45.355, 4.58)
 
 [node name="PuzzlePiece3" parent="Puzzles/Puzzle2/DragDropPuzzle2/BuildingBlocks" index="4" unique_id=2075337317]
 position = Vector2(-385, 72)
