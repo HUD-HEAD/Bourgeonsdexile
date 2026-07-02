@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dlf27ti3uqkxw" path="res://components/chapter3/comic3/panel_friends.tscn" id="16_e6yg5"]
 [ext_resource type="PackedScene" uid="uid://bjpisg46n2tpb" path="res://components/chapter3/comic3/C3_3_Panel7.tscn" id="16_xhsn2"]
 [ext_resource type="PackedScene" uid="uid://cudd3kgt36aqv" path="res://components/chapter3/comic3/C3_3_Panel8.tscn" id="17_xhsn2"]
+[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="18_eapqx"]
 [ext_resource type="PackedScene" uid="uid://b2oq2eui2qotl" path="res://components/chapter3/comic3/C3_3_Panel9.tscn" id="18_ej0hg"]
 [ext_resource type="PackedScene" uid="uid://ktkvuk38rind" path="res://components/chapter3/comic3/C3_3_Panel10.tscn" id="19_xgelu"]
 [ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="20_m317j"]
@@ -99,6 +100,12 @@ position = Vector2(32635, 0)
 [node name="PanelPanningMuseum" parent="Panels" unique_id=1673791543 instance=ExtResource("15_xgelu")]
 position = Vector2(35208, 0)
 
+[node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="Panels/PanelPanningMuseum" unique_id=981966347]
+rect = Rect2(-250, -66, 344, 262)
+script = ExtResource("18_eapqx")
+loop_name = 3300
+metadata/_custom_type_script = "uid://brda7473wfj1v"
+
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="Panels" unique_id=1628058061]
 position = Vector2(37185, 56)
 script = ExtResource("15_h0n83")
@@ -130,7 +137,7 @@ metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 position = Vector2(1665, 594)
 rect = Rect2(-433, -14, 126, 76)
 script = ExtResource("21_wf2wo")
-music_name = 3100
+music_name = 3300
 metadata/_custom_type_script = "uid://2aadlm17sdsf"
 
 [node name="CheckpointController" type="Node" parent="." unique_id=1768502718]

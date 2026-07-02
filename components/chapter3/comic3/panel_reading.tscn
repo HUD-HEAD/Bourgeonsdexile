@@ -2,9 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://bh7k0foeuvcqa" path="res://graphics/chapter3/comics/comic3/reading/framereading.png" id="1_wi5le"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="2_ny7kf"]
+[ext_resource type="Script" uid="uid://h8iq0ry15ka8" path="res://components/utils/audio/audio integration nodes/trigger_sfx_list.gd" id="3_iqfit"]
 [ext_resource type="Texture2D" uid="uid://cc81ucbfgefv7" path="res://graphics/chapter3/comics/comic3/reading/bubble_framereading1.png" id="4_ib7qq"]
+[ext_resource type="AudioStream" uid="uid://bwy14c0hfy558" path="res://audio/chapter3/ambient/comic 3/panel_3.3_sound_1_interactive.wav" id="4_kncbe"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_xl31j"]
 [ext_resource type="Texture2D" uid="uid://px2uvwfpc7wg" path="res://graphics/chapter3/comics/comic3/reading/bubble_framereading2.png" id="5_7q6uf"]
+[ext_resource type="AudioStream" uid="uid://b0iexhiaeits1" path="res://audio/chapter3/ambient/comic 3/panel_3.3_sound_2_interactive.wav" id="5_qrux8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7fe1j"]
 radius = 525.8945
@@ -23,6 +26,13 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1526372271]
 shape = SubResource("CircleShape2D_7fe1j")
+
+[node name="TriggerSfxList" type="Node" parent="Clickable" unique_id=1004206438 node_paths=PackedStringArray("clickables")]
+script = ExtResource("3_iqfit")
+clickables = [NodePath("..")]
+stream_list = Array[AudioStream]([ExtResource("4_kncbe"), ExtResource("5_qrux8")])
+linear_volume = 1.5
+metadata/_custom_type_script = "uid://h8iq0ry15ka8"
 
 [node name="TransitionerCounter" type="Node" parent="." unique_id=909468605 node_paths=PackedStringArray("clickables")]
 script = ExtResource("4_xl31j")

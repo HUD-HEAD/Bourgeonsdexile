@@ -110,7 +110,7 @@ metadata/_custom_type_script = "uid://c44tybeisilbv"
 
 [node name="TriggerSfxOnClick" type="Node" parent="." unique_id=622213735 node_paths=PackedStringArray("clickables")]
 script = ExtResource("12_yadpj")
-clickables = [NodePath("../Mask/NodeZoom/DraggableRestricted"), NodePath("../PhoneZlata/Sprite2D/ZoomIn"), NodePath("../PhoneZlata/Sprite2D/ZoomOut")]
+clickables = [NodePath("../Mask/NodeZoom/DraggableRestricted"), NodePath("../PhoneZlata/Sprite2D/ZoomIn"), NodePath("../PhoneZlata/Sprite2D/ZoomOut"), NodePath("../Mask/NodeZoom/DraggableRestricted/MapGeneve/PicturePoint1"), NodePath("../Mask/NodeZoom/DraggableRestricted/MapGeneve/PicturePoint2")]
 sfx = 2
 metadata/_custom_type_script = "uid://b7avucygxykbp"
 

@@ -30,7 +30,7 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_363al"]
-size = Vector2(1673, 927)
+size = Vector2(574, 720)
 
 [node name="C33Panel1" type="Node2D" unique_id=1800611031]
 
@@ -62,13 +62,14 @@ size = Vector2i(600, 600)
 texture = SubResource("GradientTexture2D_a04oi")
 
 [node name="Clickable" type="Area2D" parent="." unique_id=1208534856]
-visible = false
 script = ExtResource("8_8ek3y")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=2098443153]
-position = Vector2(26.5, -34.5)
+position = Vector2(48, -31.000004)
+rotation = -0.21816616
 shape = SubResource("RectangleShape2D_363al")
+debug_color = Color(0, 0.5950001, 0.7, 0.44705883)
 
 [node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=1207012408 node_paths=PackedStringArray("clickables")]
 script = ExtResource("9_ncb08")
@@ -76,7 +77,9 @@ clickables = [NodePath("..")]
 play_sfx_once = true
 use_audio_stream = true
 stream = ExtResource("10_m3v6a")
-linear_volume = 0.8
+linear_volume = 0.4
+min_pitch = 1.2
+max_pitch = 1.2
 metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="VisibleOnScreenEnabler2D2" type="VisibleOnScreenEnabler2D" parent="." unique_id=1925455850]

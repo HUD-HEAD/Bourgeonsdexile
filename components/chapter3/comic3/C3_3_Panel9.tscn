@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://8imm2g6332ef" path="res://components/utils/puzzles/dragdrop_puzzle_template.tscn" id="2_63t7p"]
 [ext_resource type="PackedScene" uid="uid://b15l0pq6dea3h" path="res://components/utils/puzzles/puzzle_piece_template.tscn" id="3_0iml0"]
 [ext_resource type="Texture2D" uid="uid://bwdiw6optqqu2" path="res://graphics/chapter3/comics/comic3/class/bubbles_class_position2.png" id="3_1ube7"]
+[ext_resource type="AudioStream" uid="uid://c1tyfifupiy51" path="res://audio/chapter3/ambient/comic 3/panel_3.8_sound_1_bonjour_complete.wav" id="4_h1od5"]
 [ext_resource type="Texture2D" uid="uid://wgqib4hgj3wm" path="res://graphics/chapter3/comics/comic3/class/bubble_class1.png" id="4_hpyqk"]
 [ext_resource type="Texture2D" uid="uid://cohjibtyvkmvv" path="res://graphics/chapter3/comics/comic3/class/bubble_class3.png" id="6_m6eus"]
 [ext_resource type="Texture2D" uid="uid://by6m5xjwvb1hb" path="res://graphics/chapter3/comics/comic3/class/bubble_class4.png" id="7_gxvu3"]
@@ -32,8 +33,7 @@ texture = ExtResource("3_1ube7")
 
 [node name="DragDropPuzzle" parent="." unique_id=1889271473 node_paths=PackedStringArray("puzzle_pieces") instance=ExtResource("2_63t7p")]
 puzzle_pieces = [NodePath("BuildingBlocks/PuzzlePiece"), NodePath("BuildingBlocks/PuzzlePiece2"), NodePath("BuildingBlocks/PuzzlePiece3")]
-play_correct_piece = false
-play_resolve_puzzle = false
+resolve_puzzle_stream = ExtResource("4_h1od5")
 
 [node name="PuzzlePiece" parent="DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1889271473, 1654234455) index="0" unique_id=1667760579]
 position = Vector2(522, -341)

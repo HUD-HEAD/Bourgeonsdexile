@@ -87,7 +87,7 @@ enum loop_type{
 	c3_1_baby_crying = 3101,
 	c3_2_Tv_loop = 3200,
 	c3_2_Bus_ambient = 3201,
-	
+	c3_3_street_loop = 3300,
 }
 
 enum music_type{
@@ -110,6 +110,7 @@ enum music_type{
 	c3_2_lonely_theme = 3200,
 	c3_2_war_theme = 3201,
 	c3_2_new_life_theme = 3202,
+	c3_3_theme = 3300,
 	c3_4_museum_theme = 3400,
 	c3_4_emotive_museum_theme = 3401,
 }
