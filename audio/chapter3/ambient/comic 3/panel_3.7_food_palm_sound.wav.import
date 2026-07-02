@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bday8i3lu88k5"
+path="res://.godot/imported/panel_3.7_food_palm_sound.wav-caa7353c19a1c230ad699d67e6a336fb.sample"
+
+[deps]
+
+source_file="res://audio/chapter3/ambient/comic 3/panel_3.7_food_palm_sound.wav"
+dest_files=["res://.godot/imported/panel_3.7_food_palm_sound.wav-caa7353c19a1c230ad699d67e6a336fb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

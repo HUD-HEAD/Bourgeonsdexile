@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c42wd22i4m314"
+path="res://.godot/imported/panel_3.1_woman_voice.wav-f28c3c5d651b2a076424b27235f9ed12.sample"
+
+[deps]
+
+source_file="res://audio/chapter3/ambient/comic 3/panel_3.1_woman_voice.wav"
+dest_files=["res://.godot/imported/panel_3.1_woman_voice.wav-f28c3c5d651b2a076424b27235f9ed12.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

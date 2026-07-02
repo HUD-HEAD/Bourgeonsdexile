@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bghbygx1kpu3"
+path="res://.godot/imported/level_1_2_3_voices_interaction_people.wav-5a3fb9234a793551594dded8b0321bae.sample"
+
+[deps]
+
+source_file="res://audio/chapter3/ambient/levels ambience/level_1_2_3_voices_interaction_people.wav"
+dest_files=["res://.godot/imported/level_1_2_3_voices_interaction_people.wav-5a3fb9234a793551594dded8b0321bae.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

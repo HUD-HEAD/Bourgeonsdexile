@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cirl8hqw3xs73"
+path="res://.godot/imported/levels_walking_loop.wav-9d476711780229568f3daa40228d12eb.sample"
+
+[deps]
+
+source_file="res://audio/chapter3/ambient/levels ambience/levels_walking_loop.wav"
+dest_files=["res://.godot/imported/levels_walking_loop.wav-9d476711780229568f3daa40228d12eb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
