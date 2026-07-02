@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="2_g7nyj"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="3_vaiks"]
 [ext_resource type="AudioStream" uid="uid://byu0bot182re3" path="res://audio/chapter3/ambient/comic 1/panel_1.7_baby_yawn_sound_2.wav" id="4_b27t0"]
-[ext_resource type="Texture2D" uid="uid://du3j5pfkgkkrj" path="res://graphics/chapter3/comics/comic1/framebaby/bubble_baby.png" id="4_myj6h"]
+[ext_resource type="Texture2D" uid="uid://t7pbs5yuo13a" path="res://graphics/chapter3/comics/comic1/framebaby/bubble_baby_filled.png" id="4_myj6h"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_yj5ch"]
 [ext_resource type="Texture2D" uid="uid://du2s0t041ogf6" path="res://graphics/chapter3/comics/comic1/framebaby/2.png" id="5_hxa8n"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="8_myj6h"]

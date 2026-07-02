@@ -34,6 +34,8 @@
 [ext_resource type="Script" uid="uid://bn0sxcor0g10k" path="res://components/utils/mechanics/area_trigger_anim.gd" id="27_83a51"]
 [ext_resource type="Texture2D" uid="uid://6jwjj3qhuopd" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_walk_5fps/npc_nurse_walk_0009.png" id="27_bw7j5"]
 [ext_resource type="Texture2D" uid="uid://cngkckfwwfrtc" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_walk_5fps/npc_nurse_walk_0010.png" id="28_hcd0i"]
+[ext_resource type="Texture2D" uid="uid://1rrpcsdgsv8b" path="res://graphics/chapter3/levels/bigavenue/building/reels.png" id="46_43j51"]
+[ext_resource type="Texture2D" uid="uid://bnf0c6a1iaqcb" path="res://graphics/chapter3/levels/bigavenue/building/floors.png" id="47_4uaxx"]
 [ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/mechanics/area_entered_enable.gd" id="130_ahkc3"]
 [ext_resource type="Texture2D" uid="uid://dkg5g27c3g6fd" path="res://graphics/chapter3/levels/bigavenue/road/train_new.png" id="133_gus1e"]
 [ext_resource type="Texture2D" uid="uid://d32grdjnvrlcq" path="res://graphics/chapter3/levels/bigavenue/road/car2.png" id="134_a11uh"]
@@ -264,7 +266,7 @@ position = Vector2(-822.2224, -325.92606)
 
 [node name="PuzzlePiece3" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="4" unique_id=1334418623]
 position = Vector2(-659.2593, 644.44446)
-rotation = 3.1415925
+rotation = -3.1415925
 
 [node name="PuzzlePiece4" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="6" unique_id=1795176319]
 position = Vector2(-622.22235, 325.92603)
@@ -578,6 +580,24 @@ script = ExtResource("138_rrnem")
 puzzle = NodePath("../../WayBack/PuzzleLullaby/DragDropPuzzle4")
 anim_player = NodePath("..")
 anim_name = "chapter_transition"
+
+[node name="Reels" type="Sprite2D" parent="." index="10" unique_id=1795354505]
+position = Vector2(841, 775)
+texture = ExtResource("46_43j51")
+
+[node name="Reels2" type="Sprite2D" parent="." index="11" unique_id=1698563066]
+z_index = 5
+position = Vector2(841, 504)
+texture = ExtResource("46_43j51")
+
+[node name="Reels3" type="Sprite2D" parent="." index="12" unique_id=293667619]
+position = Vector2(836, 374)
+texture = ExtResource("46_43j51")
+
+[node name="Floors" type="Sprite2D" parent="." index="13" unique_id=236710702]
+z_index = 5
+position = Vector2(835, 682)
+texture = ExtResource("47_4uaxx")
 
 [editable path="WayTo/PuzzleMidwife/ObstacleZlataMidwife"]
 [editable path="WayTo/PuzzleMidwife/DragDropPuzzle10"]

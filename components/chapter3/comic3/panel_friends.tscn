@@ -30,7 +30,7 @@ shape = SubResource("CircleShape2D_xd7ct")
 texture = ExtResource("3_xuq5g")
 
 [node name="BubbleWorryMan" type="Sprite2D" parent="2" unique_id=1111931835]
-position = Vector2(-179, 151)
+position = Vector2(-179, 732)
 texture = ExtResource("4_ww2wl")
 
 [node name="Clickable2" type="Area2D" parent="2" unique_id=355641743 node_paths=PackedStringArray("nodes_to_show")]
@@ -46,7 +46,7 @@ shape = SubResource("CircleShape2D_xd7ct")
 texture = ExtResource("5_bcnda")
 
 [node name="BubbleWorryWoman" type="Sprite2D" parent="3" unique_id=520382250]
-position = Vector2(186, 99)
+position = Vector2(431, 706)
 texture = ExtResource("6_prix4")
 
 [node name="Clickable2" type="Area2D" parent="3" unique_id=199344290 node_paths=PackedStringArray("nodes_to_show")]
@@ -66,3 +66,5 @@ texture = ExtResource("7_wd1uj")
 script = ExtResource("8_266s7")
 clickables = [NodePath("../3/Clickable2")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=540875948]

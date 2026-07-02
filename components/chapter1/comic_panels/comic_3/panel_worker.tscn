@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://b6wnjm88x58xc"]
 
 [ext_resource type="Texture2D" uid="uid://cpicmlu85xmie" path="res://graphics/chapter1/comics/comic3/frame13/frame13_background.png" id="1_oqgrn"]
-[ext_resource type="Texture2D" uid="uid://ce2jeafy8bs6f" path="res://graphics/chapter1/comics/comic3/frame13/frame13_bubble.png" id="3_iy8q5"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="3_qmq6x"]
 [ext_resource type="AudioStream" uid="uid://bdpdf67mkqr5u" path="res://audio/chapter1/ambient/panel_section_3/panel_3.14_mm_woman.wav" id="4_fbv2f"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_nupu0"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="4_ppkfs"]
+[ext_resource type="Texture2D" uid="uid://cn85fles7n7qw" path="res://graphics/chapter1/comics/comic3/frame13/frame13_bubble_filled.png" id="5_qmq6x"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nupu0"]
 radius = 239.0
@@ -35,7 +35,7 @@ metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="Frame13Bubble" type="Sprite2D" parent="." unique_id=1105608301]
 position = Vector2(-259, -246)
-texture = ExtResource("3_iy8q5")
+texture = ExtResource("5_qmq6x")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=522860450]
 enable_node_path = NodePath("../Comic3Panel13")

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://sbxyhht7jrs1" path="res://graphics/chapter3/comics/comic3/coffee/coffee.png" id="1_bjs7r"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="2_gvalb"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="3_gvalb"]
-[ext_resource type="Texture2D" uid="uid://coxo66kpavanv" path="res://graphics/chapter3/comics/comic3/coffee/bubble_coffee.png" id="4_gvalb"]
+[ext_resource type="Texture2D" uid="uid://cdvy0pxrtt41" path="res://graphics/chapter3/comics/comic3/coffee/bubble_coffee_filled.png" id="4_gvalb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gvalb"]
 radius = 410.011

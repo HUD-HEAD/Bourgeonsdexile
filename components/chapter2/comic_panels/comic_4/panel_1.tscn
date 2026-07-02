@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://t5vptpn877fw"]
 
 [ext_resource type="Texture2D" uid="uid://cnai0435h5wp4" path="res://graphics/chapter2/comics/comic4/framwaitingroom/bg.png" id="1_ewafh"]
-[ext_resource type="Texture2D" uid="uid://b5rxn5bio63jp" path="res://graphics/chapter2/comics/comic4/framwaitingroom/bubbl21.png" id="2_rbuwj"]
-[ext_resource type="Texture2D" uid="uid://btvhmvhx64dkr" path="res://graphics/chapter2/comics/comic4/framwaitingroom/bubble2.png" id="3_5awcb"]
+[ext_resource type="Texture2D" uid="uid://2h5821glnle8" path="res://graphics/chapter2/comics/comic4/framwaitingroom/bubbl21_filled.png" id="2_dhjhq"]
+[ext_resource type="Texture2D" uid="uid://bogfguyqhnpyh" path="res://graphics/chapter2/comics/comic4/framwaitingroom/bubble2_filled.png" id="3_a0gvl"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="4_5awcb"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_2hoat"]
 [ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="6_dhjhq"]
@@ -18,11 +18,11 @@ texture = ExtResource("1_ewafh")
 
 [node name="Bubbl21" type="Sprite2D" parent="." unique_id=1827105272]
 position = Vector2(-265, -406)
-texture = ExtResource("2_rbuwj")
+texture = ExtResource("2_dhjhq")
 
 [node name="Bubble2" type="Sprite2D" parent="." unique_id=217500239]
 position = Vector2(194, -419)
-texture = ExtResource("3_5awcb")
+texture = ExtResource("3_a0gvl")
 
 [node name="Clickable" type="Area2D" parent="." unique_id=1753569426 node_paths=PackedStringArray("nodes_to_show")]
 position = Vector2(-87, -185)

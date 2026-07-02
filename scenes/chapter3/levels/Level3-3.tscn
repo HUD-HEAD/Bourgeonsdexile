@@ -289,12 +289,20 @@ position = Vector2(-529.7627, 167.90532)
 position = Vector2(578.8097, -105.952576)
 
 [node name="PuzzlePiece5" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="8" unique_id=82169937]
-position = Vector2(400.23807, -15.476257)
+position = Vector2(411.90536, -20.23816)
 rotation = -1.5707964
+correct_rotation = 270
+
+[node name="Receptacle5" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="9" unique_id=1568642939]
+position = Vector2(95.235, 7.75)
 
 [node name="PuzzlePiece6" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="10" unique_id=535439245]
-position = Vector2(-794.0488, 167.90532)
-rotation = 1.5707964
+position = Vector2(-795.23926, 194.04788)
+rotation = -4.712389
+correct_rotation = 270
+
+[node name="Receptacle6" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="11" unique_id=486694985]
+position = Vector2(220.39, 8.71)
 
 [node name="PuzzlePiece7" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="12" unique_id=1738010806]
 position = Vector2(376.42853, -290.47662)
