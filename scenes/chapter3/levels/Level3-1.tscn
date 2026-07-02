@@ -155,7 +155,7 @@
 [ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="149_ru515"]
 [ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="150_g4m3t"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="155_8vc46"]
-[ext_resource type="AudioStream" uid="uid://c6pl2n2j6x47l" path="res://audio/chapter2/sfx/resolve_puzzle_UI_circle_bubble_sound.wav" id="156_uxv1h"]
+[ext_resource type="AudioStream" uid="uid://d120cejyuktti" path="res://audio/chapter3/ambient/levels ambience/ringtone_sound.wav" id="156_8vc46"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fbeob"]
 size = Vector2(162, 502)
@@ -1011,14 +1011,14 @@ libraries/ = SubResource("AnimationLibrary_lue18")
 position = Vector2(-3128, 96)
 rect = Rect2(-767, -10, 777, 57)
 script = ExtResource("149_ru515")
-loop_name = 2201
+loop_name = 3503
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [node name="TriggerLoopZone2" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=1737840079]
 position = Vector2(-3128, 96)
 rect = Rect2(-767, -10, 777, 57)
 script = ExtResource("149_ru515")
-loop_name = 1303
+loop_name = 3500
 loop_mode = 2
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
@@ -1026,7 +1026,7 @@ metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 position = Vector2(-3500, 312)
 rect = Rect2(-433, -14, 126, 76)
 script = ExtResource("150_g4m3t")
-music_name = 3100
+music_name = 3500
 metadata/_custom_type_script = "uid://2aadlm17sdsf"
 
 [node name="AnimationPhone" type="AnimationPlayer" parent="." unique_id=1055162789]
@@ -1036,7 +1036,7 @@ libraries/ = SubResource("AnimationLibrary_l8mmb")
 script = ExtResource("155_8vc46")
 play_sfx_once = true
 use_audio_stream = true
-stream = ExtResource("156_uxv1h")
+stream = ExtResource("156_8vc46")
 metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [editable path="Puzzles/Puzzle1/DragDropPuzzle"]

@@ -22,7 +22,6 @@
 [ext_resource type="PackedScene" uid="uid://c6rw63pqg0cn6" path="res://components/chapter3/comic1/panel_breastfeeding.tscn" id="20_joktj"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="20_u5654"]
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="21_rh3md"]
-[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="22_joktj"]
 
 [node name="JungleComic1" type="Node2D" unique_id=150562309]
 
@@ -115,13 +114,6 @@ script = ExtResource("21_rh3md")
 panels = [NodePath("../Panels/PanelVideo"), NodePath("../Panels/PanelDoctors"), NodePath("../Panels/PanelDoctors12"), NodePath("../Panels/PanelDoctors13"), NodePath("../Panels/PanelBreastfeeding"), NodePath("../Panels/PanelDoctors4"), NodePath("../Panels/PanelDoctors2"), NodePath("../Panels/PanelDoctors3"), NodePath("../Panels/PanelDoctors5"), NodePath("../Panels/PanelDoctors6"), NodePath("../Panels/PanelDoctors7"), NodePath("../Panels/PanelDoctors8"), NodePath("../Panels/PanelDoctors9"), NodePath("../Panels/PanelDoctors14"), NodePath("../Panels/PanelDoctors10"), NodePath("../Panels/PanelDoctors11"), NodePath("../SceneEnder")]
 
 [node name="Audio" type="Node" parent="." unique_id=619569792]
-
-[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=512639020]
-position = Vector2(980, 829)
-rect = Rect2(-10, -10, 130, 82)
-script = ExtResource("22_joktj")
-music_name = 3100
-metadata/_custom_type_script = "uid://2aadlm17sdsf"
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=849983846]
 position = Vector2(37807, 596)

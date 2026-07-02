@@ -754,14 +754,14 @@ comic = 20
 position = Vector2(-2241, 113)
 rect = Rect2(-767, -10, 777, 57)
 script = ExtResource("135_rcnf5")
-loop_name = 2201
+loop_name = 3507
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [node name="TriggerLoopZone2" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=689776476]
 position = Vector2(-2234, 182)
 rect = Rect2(-767, -10, 777, 57)
 script = ExtResource("135_rcnf5")
-loop_name = 1303
+loop_name = 3500
 loop_mode = 2
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
@@ -769,7 +769,7 @@ metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 position = Vector2(11076, 760)
 rect = Rect2(-767, -10, 777, 57)
 script = ExtResource("135_rcnf5")
-loop_name = 2201
+loop_name = 3507
 loop_mode = 1
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
@@ -777,7 +777,7 @@ metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 position = Vector2(11083, 829)
 rect = Rect2(-767, -10, 777, 57)
 script = ExtResource("135_rcnf5")
-loop_name = 1303
+loop_name = 3500
 loop_mode = 1
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 

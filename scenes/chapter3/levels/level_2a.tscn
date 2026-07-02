@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://b2ewpt3w26r0s" path="res://graphics/chapter3/levels/bigavenue/road/car1.png" id="10_gjepm"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="16_rtu30"]
 [ext_resource type="Texture2D" uid="uid://dvl57mmyxc12m" path="res://graphics/chapter3/levels/bigavenue/husband.png" id="17_kq1o5"]
-[ext_resource type="AudioStream" uid="uid://c6pl2n2j6x47l" path="res://audio/chapter2/sfx/resolve_puzzle_UI_circle_bubble_sound.wav" id="17_qnuec"]
+[ext_resource type="AudioStream" uid="uid://d120cejyuktti" path="res://audio/chapter3/ambient/levels ambience/ringtone_sound.wav" id="17_rtu30"]
 [ext_resource type="Texture2D" uid="uid://dabxmhi50p8ad" path="res://graphics/chapter3/levels/CH3_puzzles/7_conversation/full7_filled.png" id="19_5msxn"]
 [ext_resource type="Texture2D" uid="uid://bkn0ffs7kumwf" path="res://graphics/chapter3/levels/CH3_puzzles/21/full21_filled.png" id="22_i0iuy"]
 [ext_resource type="Script" uid="uid://nw1du1rkgxpn" path="res://scenes/chapter3/levels/area_entered_flip.gd" id="24_rtu30"]
@@ -437,7 +437,7 @@ libraries/ = SubResource("AnimationLibrary_se5nk")
 script = ExtResource("16_rtu30")
 play_sfx_once = true
 use_audio_stream = true
-stream = ExtResource("17_qnuec")
+stream = ExtResource("17_rtu30")
 metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="Husband" type="Sprite2D" parent="WayBack/PuzzlePhone" index="4" unique_id=636334883]
@@ -698,7 +698,7 @@ metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 position = Vector2(1601, 866)
 rect = Rect2(-767, -10, 777, 57)
 script = ExtResource("28_sffv2")
-loop_name = 1303
+loop_name = 3500
 loop_mode = 2
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
@@ -706,7 +706,7 @@ metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 position = Vector2(1333, 595)
 rect = Rect2(-433, -14, 126, 76)
 script = ExtResource("29_5msxn")
-music_name = 3202
+music_name = 3500
 metadata/_custom_type_script = "uid://2aadlm17sdsf"
 
 [editable path="WayTo/PuzzleThinkHome/Puzzle1"]

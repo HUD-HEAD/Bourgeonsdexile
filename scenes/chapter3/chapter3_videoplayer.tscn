@@ -4,7 +4,6 @@
 [ext_resource type="VideoStream" uid="uid://b3ljb0k8bg0me" path="res://video/ch3_video_intro_loop.ogv" id="2_vrcxk"]
 [ext_resource type="VideoStream" uid="uid://bdfd3o81lf1mo" path="res://video/ch3_video_intro_zoom.ogv" id="3_de22p"]
 [ext_resource type="Texture2D" uid="uid://dbmuid0d22x60" path="res://graphics/chapter3/comics/comic1/framevideo/hugmaternite.png" id="4_de22p"]
-[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="5_1qkwl"]
 
 [node name="Videoplayer" unique_id=1489886936 instance=ExtResource("1_o8x41")]
 
@@ -20,13 +19,6 @@ audio_transition = null
 
 [node name="Frame11" parent="TextureRect" parent_id_path=PackedInt32Array(1934943305) index="0" unique_id=1039724458]
 texture = ExtResource("4_de22p")
-
-[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="TextureRect/Frame11" index="0" unique_id=1076703827]
-position = Vector2(20, 289)
-rect = Rect2(-10, -10, 130, 82)
-script = ExtResource("5_1qkwl")
-music_name = 3100
-metadata/_custom_type_script = "uid://2aadlm17sdsf"
 
 [node name="AudioStreamPlayer" parent="." index="4" unique_id=1448924273]
 stream = null

@@ -6,7 +6,8 @@
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="4_a5n4l"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_0gufp"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="5_brvls"]
-[ext_resource type="AudioStream" uid="uid://dt1o78l6ddw5t" path="res://audio/chapter3/ambient/comic 1/panel_1.1_open_eyes_sound.wav" id="6_d8hbt"]
+[ext_resource type="AudioStream" uid="uid://caxg33babas04" path="res://audio/chapter3/ambient/comic 1/breathing_sound.wav" id="6_brvls"]
+[ext_resource type="Script" uid="uid://7li3hk5ohcss" path="res://components/utils/audio/audio integration nodes/trigger_music_on_click.gd" id="7_d8hbt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2it3g"]
 animations = [{
@@ -44,11 +45,19 @@ script = ExtResource("5_brvls")
 clickables = [NodePath("..")]
 play_sfx_once = true
 use_audio_stream = true
-stream = ExtResource("6_d8hbt")
+stream = ExtResource("6_brvls")
 linear_volume = 1.7
 metadata/_custom_type_script = "uid://b7avucygxykbp"
+
+[node name="TriggerMusicOnClick" type="Node" parent="Clickable" unique_id=215955694 node_paths=PackedStringArray("clickables")]
+script = ExtResource("7_d8hbt")
+clickables = [NodePath("..")]
+music = 3100
+delay = 2.0
+metadata/_custom_type_script = "uid://7li3hk5ohcss"
 
 [node name="TransitionerCounter" type="Node" parent="." unique_id=1341546010 node_paths=PackedStringArray("clickables")]
 script = ExtResource("5_0gufp")
 clickables = [NodePath("../Clickable")]
+transition_delay = 3.0
 metadata/_custom_type_script = "uid://c44tybeisilbv"

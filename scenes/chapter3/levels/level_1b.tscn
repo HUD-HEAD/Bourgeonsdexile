@@ -608,7 +608,7 @@ shape = SubResource("CircleShape2D_cbi4r")
 position = Vector2(2058, 871)
 rect = Rect2(-767, -10, 196, 57)
 script = ExtResource("128_6mkb4")
-loop_name = 2201
+loop_name = 3503
 loop_mode = 1
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
@@ -616,7 +616,7 @@ metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 position = Vector2(2050, 792)
 rect = Rect2(-767, -10, 207, 68)
 script = ExtResource("128_6mkb4")
-loop_name = 1303
+loop_name = 3500
 loop_mode = 1
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
