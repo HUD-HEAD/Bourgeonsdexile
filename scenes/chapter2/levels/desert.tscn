@@ -224,7 +224,7 @@ position = Vector2(-125.5, 8.5)
 position = Vector2(-382, -349)
 
 [node name="PuzzlePiece2" parent="Puzzles/Puzzle2/Puzzle2/BuildingBlocks/FullPieces" parent_id_path=PackedInt32Array(422744521, 1120986992) index="1" unique_id=729525704]
-position = Vector2(-594.9999, 141.00003)
+position = Vector2(-611.9999, 179.00003)
 
 [node name="Draggable" parent="Puzzles/Puzzle2/Puzzle2/BuildingBlocks/FullPieces/PuzzlePiece2" index="0" unique_id=2116105691]
 position = Vector2(0, 3.5714302)
@@ -242,10 +242,12 @@ position = Vector2(0.003703542, -1.9073486e-05)
 position = Vector2(-674, -261)
 
 [node name="PuzzlePieceHollow4" parent="Puzzles/Puzzle2/Puzzle2/BuildingBlocks/HollowPieces" parent_id_path=PackedInt32Array(422744521, 1500445843) index="1" unique_id=1095215697]
-position = Vector2(-514.9999, -42.999985)
+position = Vector2(-502.9999, -26)
+scale = Vector2(1.6800019, 1.6800019)
 
 [node name="PuzzlePieceHollow2" parent="Puzzles/Puzzle2/Puzzle2/BuildingBlocks/HollowPieces" parent_id_path=PackedInt32Array(422744521, 1500445843) index="2" unique_id=327511535]
-position = Vector2(-776.9999, -59.000004)
+position = Vector2(-819.99994, -47.000015)
+scale = Vector2(1.314148, 1.314148)
 
 [node name="PuzzlePieceHollow3" parent="Puzzles/Puzzle2/Puzzle2/BuildingBlocks/HollowPieces" parent_id_path=PackedInt32Array(422744521, 1500445843) index="3" unique_id=1052747192]
 position = Vector2(-494, 169)
@@ -260,10 +262,10 @@ position = Vector2(-125, 173)
 position = Vector2(-238.5, 123.50001)
 
 [node name="Receptacle6" parent="Puzzles/Puzzle2/Puzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(422744521, 245013489) index="5" unique_id=1520553304]
-position = Vector2(-129.5, 123.5)
+position = Vector2(-115.785, 149.255)
 
 [node name="Receptacle3" parent="Puzzles/Puzzle2/Puzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(422744521, 245013489) index="6" unique_id=1884478486]
-position = Vector2(-15.5, 122.5)
+position = Vector2(62.935, 96.63)
 
 [node name="Receptacle4" parent="Puzzles/Puzzle2/Puzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(422744521, 245013489) index="7" unique_id=1316857249]
 position = Vector2(-127.5, -5.5)
@@ -395,7 +397,8 @@ position = Vector2(5.7142854, -550)
 position = Vector2(0, 138.57143)
 
 [node name="PuzzlePieceHollow" parent="Puzzles/Puzzle4/Puzzle3/BuildingBlocks/HollowPieces" index="0" unique_id=1809332932]
-position = Vector2(-31.427465, -1132.8572)
+position = Vector2(-52.856033, -1110)
+scale = Vector2(0.9314289, 0.9314289)
 
 [node name="PuzzlePieceHollow2" parent="Puzzles/Puzzle4/Puzzle3/BuildingBlocks/HollowPieces" index="1" unique_id=1168879070]
 position = Vector2(-242.85713, -1011.4286)
