@@ -186,8 +186,8 @@ func play_loop(key: AudioConfiguration.loop_type) -> AudioStreamPlayer:
 	
 	return loop
 	
-func stop_loop(key: AudioConfiguration.loop_type, fade_in_enable: bool = true ):
-	_free_loop(key, fade_in_enable)
+func stop_loop(key: AudioConfiguration.loop_type, fade_in_enable: bool = true, fade_out_volume: float = 0):
+	_free_loop(key, fade_in_enable, fade_out_volume)
 
 func free_walking_loop(key: AudioConfiguration.loop_type, fade_in_enable: bool = true ):
 	last_walking_loop = AudioConfiguration.loop_type.none
@@ -295,14 +295,14 @@ func _get_free_loop(key: AudioConfiguration.loop_type) -> AudioStreamPlayer:
 	assert("No free loops available in the pool.")
 	return null
 
-func _free_loop(key: AudioConfiguration.loop_type, fade_in_enable: bool = true):
+func _free_loop(key: AudioConfiguration.loop_type, fade_in_enable: bool = true, fade_out_volume: float = 0):
 	for item in loop_pool:
 		if item.is_playing && item.loop_type == key:
 			if fade_in_enable:
 				var lambda = func():
 					item.is_playing = false
 					item.player_reference.stop()
-				fade_out(item.player_reference, 0, lambda)
+				fade_out(item.player_reference, fade_out_volume, lambda)
 			else:
 				item.is_playing = false
 				item.player_reference.stop()
