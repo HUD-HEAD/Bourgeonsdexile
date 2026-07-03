@@ -2,11 +2,24 @@
 
 [ext_resource type="Texture2D" uid="uid://g2sjy4ja5r4n" path="res://graphics/chapter3/comics/comic4/museum_big/1.png" id="1_sjjn3"]
 [ext_resource type="Texture2D" uid="uid://be4w8r6eugper" path="res://graphics/chapter3/comics/comic4/museum_small/1.png" id="3_2kj5e"]
+[ext_resource type="Texture2D" uid="uid://cb6x6dpdfrhb8" path="res://graphics/chapter3/comics/comic4/amanidraw/1.png" id="3_gdrgo"]
+[ext_resource type="Texture2D" uid="uid://c83bvhq35lbnw" path="res://graphics/chapter3/comics/comic4/amanidraw/2.png" id="4_2tcdn"]
 [ext_resource type="Texture2D" uid="uid://dibw8y2gf6qi4" path="res://graphics/chapter3/comics/comic4/museum_big/2.png" id="4_dxkuf"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="5_dxkuf"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="5_gn420"]
+[ext_resource type="Texture2D" uid="uid://b40ygic7wpys0" path="res://graphics/chapter3/comics/comic4/museum_big/rio.jpg" id="5_gqthc"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_p4wsx"]
+[ext_resource type="Texture2D" uid="uid://hcactpwxopde" path="res://graphics/chapter3/comics/comic4/ninababy/1.png" id="6_31m4e"]
 [ext_resource type="AudioStream" uid="uid://clpbowvu5u2xu" path="res://audio/chapter3/ambient/comic 4/panel_4.6_expo_museum_sound_interactive.wav" id="6_b0ip4"]
+[ext_resource type="Texture2D" uid="uid://dddpuu4s7e772" path="res://graphics/chapter3/comics/comic4/ninababy/2.png" id="7_3nyfl"]
+[ext_resource type="Texture2D" uid="uid://blgv58b45m4e6" path="res://graphics/chapter3/comics/comic4/museum_big/desert.png" id="8_e4x5d"]
+[ext_resource type="Texture2D" uid="uid://c0pyo4dd5jrna" path="res://graphics/chapter3/comics/comic4/museum_big/fondodarien.jpg" id="9_q8myw"]
+[ext_resource type="Texture2D" uid="uid://c5suot2weqyyo" path="res://graphics/chapter3/comics/comic4/museum_big/naki1.png" id="10_tpwa6"]
+[ext_resource type="Texture2D" uid="uid://cctdt86q6tk74" path="res://graphics/chapter3/comics/comic4/museum_big/naki2.png" id="11_jn222"]
+[ext_resource type="Texture2D" uid="uid://dggwpqfblsico" path="res://graphics/chapter3/comics/comic4/museum_big/naki3.png" id="12_5072t"]
+[ext_resource type="Texture2D" uid="uid://ciemwm4djb0i2" path="res://graphics/chapter3/comics/comic4/museum_big/nakivale2.png" id="13_xagr8"]
+[ext_resource type="Texture2D" uid="uid://dn57jr4lfxngk" path="res://graphics/chapter3/comics/comic4/museum_big/naki4.png" id="14_jabfn"]
+[ext_resource type="Texture2D" uid="uid://km0nys01liep" path="res://graphics/chapter3/comics/comic4/museum_big/desierto.png" id="15_20i1s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dxkuf"]
 size = Vector2(1565, 1050)
@@ -18,9 +31,99 @@ size = Vector2(1565, 1050)
 [node name="1" type="Sprite2D" parent="." unique_id=616982721]
 texture = ExtResource("3_2kj5e")
 
+[node name="1" type="Sprite2D" parent="1" unique_id=1217565713]
+position = Vector2(-493.99997, -296.99997)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_gdrgo")
+
+[node name="Sprite2D" type="Sprite2D" parent="1" unique_id=1883618881]
+position = Vector2(11, -297)
+scale = Vector2(0.18888889, 0.18888888)
+texture = ExtResource("5_gqthc")
+
+[node name="2" type="Sprite2D" parent="1" unique_id=1012836696]
+position = Vector2(503.99997, -299.99997)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_31m4e")
+
+[node name="3" type="Sprite2D" parent="1" unique_id=1523302667]
+position = Vector2(-470.99997, 0)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_2tcdn")
+
+[node name="4" type="Sprite2D" parent="1" unique_id=1038989951]
+position = Vector2(516.99994, 0)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_3nyfl")
+
 [node name="museuminside2" type="Sprite2D" parent="." unique_id=972873342]
 visible = false
 texture = ExtResource("1_sjjn3")
+
+[node name="photo1" type="Sprite2D" parent="museuminside2" unique_id=1075671117]
+position = Vector2(-339, 8)
+scale = Vector2(0.14000909, 0.14000909)
+texture = ExtResource("3_gdrgo")
+
+[node name="photo2" type="Sprite2D" parent="museuminside2" unique_id=1994283062]
+position = Vector2(-327, 209)
+scale = Vector2(0.14000909, 0.14000909)
+texture = ExtResource("4_2tcdn")
+
+[node name="photo3" type="Sprite2D" parent="museuminside2" unique_id=1589558396]
+position = Vector2(0.9999995, 12)
+scale = Vector2(0.12221162, 0.122327365)
+texture = ExtResource("5_gqthc")
+
+[node name="photo4" type="Sprite2D" parent="museuminside2" unique_id=1590407167]
+position = Vector2(338.00003, 9.999999)
+scale = Vector2(0.14010416, 0.13611111)
+texture = ExtResource("6_31m4e")
+
+[node name="photo5" type="Sprite2D" parent="museuminside2" unique_id=917287829]
+position = Vector2(344, 212)
+scale = Vector2(0.14270835, 0.1388889)
+texture = ExtResource("7_3nyfl")
+
+[node name="photo6" type="Sprite2D" parent="museuminside2" unique_id=1918317007]
+position = Vector2(659, -382)
+scale = Vector2(0.050345387, 0.050187733)
+texture = ExtResource("8_e4x5d")
+
+[node name="photo7" type="Sprite2D" parent="museuminside2" unique_id=37976372]
+position = Vector2(340.00003, -380)
+scale = Vector2(0.13404907, 0.12707376)
+texture = ExtResource("9_q8myw")
+
+[node name="photo8" type="Sprite2D" parent="museuminside2" unique_id=745816679]
+position = Vector2(657, -188)
+scale = Vector2(0.09997559, 0.09555012)
+texture = ExtResource("10_tpwa6")
+
+[node name="photo9" type="Sprite2D" parent="museuminside2" unique_id=192500006]
+position = Vector2(-715, 211.00002)
+scale = Vector2(0.059975594, 0.05732074)
+texture = ExtResource("11_jn222")
+
+[node name="photo10" type="Sprite2D" parent="museuminside2" unique_id=538731261]
+position = Vector2(-682, 9)
+scale = Vector2(0.09997559, 0.09555012)
+texture = ExtResource("12_5072t")
+
+[node name="photo11" type="Sprite2D" parent="museuminside2" unique_id=1790843726]
+position = Vector2(-690.00006, -190.00002)
+scale = Vector2(0.053715218, 0.049660813)
+texture = ExtResource("13_xagr8")
+
+[node name="photo12" type="Sprite2D" parent="museuminside2" unique_id=1519178418]
+position = Vector2(-679, -387)
+scale = Vector2(0.059975594, 0.05732074)
+texture = ExtResource("14_jabfn")
+
+[node name="photo13" type="Sprite2D" parent="museuminside2" unique_id=1861648889]
+position = Vector2(-1, -380)
+scale = Vector2(0.051664528, 0.049277537)
+texture = ExtResource("15_20i1s")
 
 [node name="2" type="Sprite2D" parent="museuminside2" unique_id=473665319]
 position = Vector2(0, 64)
@@ -32,7 +135,7 @@ nodes_to_show = [NodePath("../museuminside2")]
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=789128376]
-position = Vector2(8.5, 25)
+position = Vector2(8, 43)
 shape = SubResource("RectangleShape2D_dxkuf")
 
 [node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=1128709980 node_paths=PackedStringArray("clickables")]

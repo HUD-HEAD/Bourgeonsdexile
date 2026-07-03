@@ -6,6 +6,9 @@
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="4_81317"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_jsy1g"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="5_btgtg"]
+[ext_resource type="Script" uid="uid://h8iq0ry15ka8" path="res://components/utils/audio/audio integration nodes/trigger_sfx_list.gd" id="7_bcp5n"]
+[ext_resource type="AudioStream" uid="uid://02x5f7bg02rb" path="res://audio/chapter3/ambient/comic 3/panel_3.9_baby_sound_1_interactive.wav" id="8_cu255"]
+[ext_resource type="AudioStream" uid="uid://crhdh0rhw68py" path="res://audio/chapter3/ambient/comic 3/panel_3.9_baby_sound_2_interactive.wav" id="9_hry3t"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_eppqv"]
 animations = [{
@@ -49,3 +52,9 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=2043369512]
 shape = SubResource("CircleShape2D_81317")
+
+[node name="TriggerSfxList" type="Node" parent="Clickable" unique_id=31090678 node_paths=PackedStringArray("clickables")]
+script = ExtResource("7_bcp5n")
+clickables = [NodePath("..")]
+stream_list = Array[AudioStream]([ExtResource("8_cu255"), ExtResource("9_hry3t")])
+metadata/_custom_type_script = "uid://h8iq0ry15ka8"

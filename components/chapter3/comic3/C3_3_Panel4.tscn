@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://mb83pink5ebt" path="res://graphics/chapter3/comics/comic3/calendar/7.png" id="3_p5had"]
 [ext_resource type="Texture2D" uid="uid://bdjba4q5iybrh" path="res://graphics/chapter3/comics/comic3/calendar/9.png" id="4_yghun"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="6_7bv1c"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="7_tkglb"]
+[ext_resource type="AudioStream" uid="uid://bj4mdd43hn0ny" path="res://audio/chapter3/ambient/comic 3/panel_3.4_calendar_sound_interactive.wav" id="8_v8i0i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tkglb"]
 size = Vector2(392, 463)
@@ -56,3 +58,12 @@ script = ExtResource("6_7bv1c")
 clickables = [NodePath("../Draggable9")]
 transition_delay = 2.0
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="TriggerSfxOnClick" type="Node" parent="." unique_id=1451715583 node_paths=PackedStringArray("clickables")]
+script = ExtResource("7_tkglb")
+clickables = [NodePath("../Draggable9"), NodePath("../Draggable8"), NodePath("../Draggable7")]
+use_audio_stream = true
+stream = ExtResource("8_v8i0i")
+min_pitch = 0.9
+max_pitch = 1.1
+metadata/_custom_type_script = "uid://b7avucygxykbp"

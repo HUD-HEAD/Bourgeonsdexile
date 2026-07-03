@@ -138,7 +138,7 @@ metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 position = Vector2(2050, 792)
 rect = Rect2(-767, -10, 207, 68)
 script = ExtResource("8_q624s")
-loop_name = 1303
+loop_name = 3500
 loop_mode = 1
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 

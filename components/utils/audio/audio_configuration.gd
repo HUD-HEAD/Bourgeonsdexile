@@ -87,6 +87,17 @@ enum loop_type{
 	c3_1_baby_crying = 3101,
 	c3_2_Tv_loop = 3200,
 	c3_2_Bus_ambient = 3201,
+	c3_3_street_loop = 3300,
+	
+	c3_l_walking = 3500,
+	c3_l_voices = 3501,
+	c3_l_baby_sounds = 3502,
+	c3_l_street_sounds = 3503,
+	c3_l_house_sounds = 3504,
+	c3_l_pharmacy_sound = 3505,
+	c3_l_supermarket_sound = 3506,
+	c3_l_museum_ambience = 3507,
+	c3_l_nana = 3508,
 	
 }
 
@@ -110,8 +121,10 @@ enum music_type{
 	c3_2_lonely_theme = 3200,
 	c3_2_war_theme = 3201,
 	c3_2_new_life_theme = 3202,
+	c3_3_theme = 3300,
 	c3_4_museum_theme = 3400,
 	c3_4_emotive_museum_theme = 3401,
+	c3_l_levels_theme = 3500,
 }
 
 @export var sfx_configuration: Array[sfx_config]

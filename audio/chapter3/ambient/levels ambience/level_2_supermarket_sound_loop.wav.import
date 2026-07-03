@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c6g8a2k0g5bcq"
+path="res://.godot/imported/level_2_supermarket_sound_loop.wav-ebf8b194e01c142a7ea6b94663e9eab5.sample"
+
+[deps]
+
+source_file="res://audio/chapter3/ambient/levels ambience/level_2_supermarket_sound_loop.wav"
+dest_files=["res://.godot/imported/level_2_supermarket_sound_loop.wav-ebf8b194e01c142a7ea6b94663e9eab5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

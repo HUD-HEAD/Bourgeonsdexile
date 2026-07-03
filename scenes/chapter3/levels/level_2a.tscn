@@ -17,8 +17,9 @@
 [ext_resource type="Texture2D" uid="uid://b2ewpt3w26r0s" path="res://graphics/chapter3/levels/bigavenue/road/car1.png" id="10_gjepm"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="16_rtu30"]
 [ext_resource type="Texture2D" uid="uid://dvl57mmyxc12m" path="res://graphics/chapter3/levels/bigavenue/husband.png" id="17_kq1o5"]
-[ext_resource type="AudioStream" uid="uid://c6pl2n2j6x47l" path="res://audio/chapter2/sfx/resolve_puzzle_UI_circle_bubble_sound.wav" id="17_qnuec"]
+[ext_resource type="AudioStream" uid="uid://d120cejyuktti" path="res://audio/chapter3/ambient/levels ambience/ringtone_sound.wav" id="17_rtu30"]
 [ext_resource type="Texture2D" uid="uid://dabxmhi50p8ad" path="res://graphics/chapter3/levels/CH3_puzzles/7_conversation/full7_filled.png" id="19_5msxn"]
+[ext_resource type="Script" uid="uid://d2wk8l6f6idvx" path="res://components/utils/audio/audio integration nodes/audio_puzzle_controller.gd" id="21_qnuec"]
 [ext_resource type="Texture2D" uid="uid://bkn0ffs7kumwf" path="res://graphics/chapter3/levels/CH3_puzzles/21/full21_filled.png" id="22_i0iuy"]
 [ext_resource type="Script" uid="uid://nw1du1rkgxpn" path="res://scenes/chapter3/levels/area_entered_flip.gd" id="24_rtu30"]
 [ext_resource type="Texture2D" uid="uid://dehacwdplh44r" path="res://graphics/chapter3/levels/CH3_puzzles/12_lullaby/full12_filled.png" id="25_rtu30"]
@@ -26,6 +27,7 @@
 [ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="28_sffv2"]
 [ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="29_5msxn"]
 [ext_resource type="Script" uid="uid://do4qlmbenh0hg" path="res://scenes/chapter3/levels/camera_adjust.gd" id="30_i0iuy"]
+[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="33_ues6k"]
 [ext_resource type="PackedScene" uid="uid://buwei6igqkc44" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-4.tscn" id="127_t5rg3"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="131_yk8n7"]
 [ext_resource type="Script" uid="uid://4x7opfu2wab4" path="res://components/utils/puzzles/puzzle_complete_trigger_anim.gd" id="134_gjepm"]
@@ -437,7 +439,7 @@ libraries/ = SubResource("AnimationLibrary_se5nk")
 script = ExtResource("16_rtu30")
 play_sfx_once = true
 use_audio_stream = true
-stream = ExtResource("17_qnuec")
+stream = ExtResource("17_rtu30")
 metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="Husband" type="Sprite2D" parent="WayBack/PuzzlePhone" index="4" unique_id=636334883]
@@ -494,7 +496,7 @@ position = Vector2(1046.6666, 306.66675)
 
 [node name="PuzzlePiece4" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="6" unique_id=1795176319]
 position = Vector2(1226.6665, 480)
-rotation = 3.1415925
+rotation = -3.1415925
 
 [node name="PuzzlePiece5" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="8" unique_id=1711508116]
 position = Vector2(1400, 193.33319)
@@ -504,6 +506,12 @@ position = Vector2(1226.6667, -226.66638)
 
 [node name="CompletePuzzle" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9" index="2" unique_id=1933061263]
 texture = ExtResource("22_i0iuy")
+
+[node name="PuzzleDecoratorController" type="Node" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9" index="3" unique_id=572955375]
+script = ExtResource("21_qnuec")
+trigger_loop = true
+loop_name = 3501
+metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
 
 [node name="Car4" type="Sprite2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="2" unique_id=1752701603]
 position = Vector2(4070, 859)
@@ -552,6 +560,12 @@ position = Vector2(-477.2728, 13.636314)
 
 [node name="CompletePuzzle" parent="WayBack/PuzzleLullaby/DragDropPuzzle5" index="2" unique_id=1933061263]
 texture = ExtResource("25_rtu30")
+
+[node name="PuzzleDecoratorController" type="Node" parent="WayBack/PuzzleLullaby/DragDropPuzzle5" index="3" unique_id=51552140]
+script = ExtResource("21_qnuec")
+trigger_loop = true
+loop_name = 3508
+metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
 
 [node name="PathTo" parent="." index="5" unique_id=1272328632]
 curve = SubResource("Curve2D_pfjp3")
@@ -612,7 +626,6 @@ scale = Vector2(0.33499998, 0.33499998)
 
 [node name="PuzzlePiece" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="0" unique_id=1667760579]
 position = Vector2(-269.4317, 108.41803)
-rotation = -3.1415925
 
 [node name="PuzzlePiece2" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="2" unique_id=729525704]
 position = Vector2(-206.74515, 275.58243)
@@ -621,23 +634,45 @@ position = Vector2(-206.74515, 275.58243)
 position = Vector2(-239.58182, 499.463)
 
 [node name="PuzzlePiece4" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="6" unique_id=1470086235]
-position = Vector2(426.09048, 583.04504)
+position = Vector2(479.82184, 580.05994)
+correct_rotation = 270
+
+[node name="Receptacle4" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="7" unique_id=126137542]
+position = Vector2(150.945, 513.575)
 
 [node name="PuzzlePiece5" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="8" unique_id=82169937]
-position = Vector2(882.8069, 463.6421)
+position = Vector2(903.70233, 466.62714)
+correct_rotation = 0
+
+[node name="Receptacle5" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="9" unique_id=1568642939]
+position = Vector2(41.18, 518.05)
 
 [node name="PuzzlePiece6" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="10" unique_id=535439245]
-position = Vector2(760.4193, 583.04504)
+position = Vector2(763.4043, 589.01526)
 rotation = 0.0
+correct_rotation = 270
+
+[node name="Receptacle6" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="11" unique_id=486694985]
+position = Vector2(436.005, 290.97)
 
 [node name="PuzzlePiece7" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="12" unique_id=1738010806]
-position = Vector2(596.23895, 439.76144)
+position = Vector2(623.1046, 439.76147)
 rotation = 1.5707964
+correct_rotation = 0
+
+[node name="Receptacle7" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="13" unique_id=1478348281]
+position = Vector2(317.42, 302)
 
 [node name="CompletePuzzle" parent="PuzzleStore/DragDropPuzzle2" index="2" unique_id=1933061263]
 position = Vector2(-6, -2)
 scale = Vector2(1, 1)
 texture = ExtResource("27_qnuec")
+
+[node name="PuzzleDecoratorController" type="Node" parent="PuzzleStore/DragDropPuzzle2" index="3" unique_id=943339764]
+script = ExtResource("21_qnuec")
+trigger_loop = true
+loop_name = 3501
+metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
 
 [node name="PuzzleCompletePathBack" parent="." index="8" unique_id=1605263297 node_paths=PackedStringArray("puzzle")]
 puzzle = NodePath("../PuzzleStore/DragDropPuzzle2")
@@ -687,27 +722,34 @@ script = ExtResource("30_i0iuy")
 
 [node name="Audio" type="Node" parent="." index="14" unique_id=1331676922]
 
-[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="Audio" index="0" unique_id=618999784]
-position = Vector2(2369, 905)
-rect = Rect2(-767, -10, 777, 57)
-script = ExtResource("28_sffv2")
-loop_name = 2201
-metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
-
-[node name="TriggerLoopZone2" type="VisibleOnScreenNotifier2D" parent="Audio" index="1" unique_id=2116133068]
+[node name="TriggerLoopZone2" type="VisibleOnScreenNotifier2D" parent="Audio" index="0" unique_id=2116133068]
 position = Vector2(1601, 866)
-rect = Rect2(-767, -10, 777, 57)
+rect = Rect2(-650, -214, 660, 261)
 script = ExtResource("28_sffv2")
-loop_name = 1303
+loop_name = 3500
 loop_mode = 2
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
-[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="Audio" index="2" unique_id=2040706002]
+[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="Audio" index="1" unique_id=2040706002]
 position = Vector2(1333, 595)
 rect = Rect2(-433, -14, 126, 76)
 script = ExtResource("29_5msxn")
-music_name = 3202
+music_name = 3500
 metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="LoopZone_street" type="VisibleOnScreenNotifier2D" parent="Audio" index="2" unique_id=1301609218]
+position = Vector2(1402, 829)
+rect = Rect2(756, 44, 2426, 59)
+script = ExtResource("33_ues6k")
+loop_name = 3503
+metadata/_custom_type_script = "uid://brda7473wfj1v"
+
+[node name="LoopZone_store" type="VisibleOnScreenNotifier2D" parent="Audio" index="3" unique_id=1233436297]
+position = Vector2(5392, 840)
+rect = Rect2(-10, -10, 72, 54)
+script = ExtResource("33_ues6k")
+loop_name = 3506
+metadata/_custom_type_script = "uid://brda7473wfj1v"
 
 [editable path="WayTo/PuzzleThinkHome/Puzzle1"]
 [editable path="WayTo/PuzzleThinkHome/Puzzle1/BuildingBlocks/FullPieces/PuzzlePiece"]

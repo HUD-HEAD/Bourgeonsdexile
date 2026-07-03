@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://cudd3kgt36aqv"]
 
 [ext_resource type="Texture2D" uid="uid://ddaamgfg2qpfl" path="res://graphics/chapter3/comics/comic3/pierogi/pierogi.png" id="1_dj46o"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="2_ypota"]
+[ext_resource type="AudioStream" uid="uid://bday8i3lu88k5" path="res://audio/chapter3/ambient/comic 3/panel_3.7_food_palm_sound.wav" id="3_45epb"]
 [ext_resource type="Texture2D" uid="uid://dw1ffqln4bwi3" path="res://graphics/chapter3/comics/comic3/pierogi/pierogi2.png" id="3_lw44l"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="4_6hu0n"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_gne1w"]
@@ -33,6 +35,14 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1177053099]
 shape = SubResource("CircleShape2D_6hu0n")
+
+[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=1896805946 node_paths=PackedStringArray("clickables")]
+script = ExtResource("2_ypota")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("3_45epb")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1682918539 node_paths=PackedStringArray("clickable")]
 sprite_frames = SubResource("SpriteFrames_crxkc")

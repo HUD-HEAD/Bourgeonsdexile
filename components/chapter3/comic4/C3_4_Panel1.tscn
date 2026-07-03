@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://ded2qnfjpywah" path="res://audio/chapter3/ambient/comic 4/panel_4.1_amani_sound_interactive.wav" id="5_313m4"]
 [ext_resource type="Texture2D" uid="uid://hcactpwxopde" path="res://graphics/chapter3/comics/comic4/ninababy/1.png" id="5_igktf"]
 [ext_resource type="AudioStream" uid="uid://boonvmqnqabax" path="res://audio/chapter3/ambient/comic 4/panel_4.4_zlata_expression_sound.wav" id="6_2ssnw"]
+[ext_resource type="Texture2D" uid="uid://b40ygic7wpys0" path="res://graphics/chapter3/comics/comic4/museum_big/rio.jpg" id="6_bpavt"]
 [ext_resource type="AudioStream" uid="uid://cc0chqy2dj1xy" path="res://audio/chapter3/ambient/comic 4/panel_4.2_nina_baby_sound_interactive.wav" id="7_313m4"]
 [ext_resource type="Texture2D" uid="uid://dddpuu4s7e772" path="res://graphics/chapter3/comics/comic4/ninababy/2.png" id="7_x3340"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="8_igktf"]
@@ -17,11 +18,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bpavt"]
 size = Vector2(413, 228.5)
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_fe7bx"]
-size = Vector2(50, 50)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aucby"]
 size = Vector2(1920, 1080)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_fe7bx"]
+size = Vector2(50, 50)
 
 [node name="C34Panel1" type="Node2D" unique_id=1800611031]
 
@@ -44,6 +45,7 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 shape = SubResource("RectangleShape2D_bpavt")
 
 [node name="1" type="Sprite2D" parent="Pictures/Clickable" unique_id=244539392]
+position = Vector2(0.99999994, -0.99999994)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_n1vjs")
 
@@ -65,7 +67,9 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 shape = SubResource("RectangleShape2D_bpavt")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pictures/Clickable2" unique_id=1108256961]
-texture = SubResource("PlaceholderTexture2D_fe7bx")
+position = Vector2(-7.1109314, 2)
+scale = Vector2(0.18888889, 0.18888888)
+texture = ExtResource("6_bpavt")
 
 [node name="TriggerSfxOnClick" type="Node" parent="Pictures/Clickable2" unique_id=626035997 node_paths=PackedStringArray("clickables")]
 script = ExtResource("4_fe7bx")

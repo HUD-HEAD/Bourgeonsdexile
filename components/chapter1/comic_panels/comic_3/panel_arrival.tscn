@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ho5wjpeqrptp"]
 
+[ext_resource type="Texture2D" uid="uid://fpqit37tutf7" path="res://graphics/chapter1/comics/comic3/frame3/frame3.png" id="2_jfo1i"]
 [ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/chapter1/main_characters/jungle_woman.tscn" id="3_jfo1i"]
-[ext_resource type="Texture2D" uid="uid://c72wdkrer4pyq" path="res://graphics/chapter1/comics/comic3/frame3/long bckground.png" id="3_rofvx"]
 [ext_resource type="SpriteFrames" uid="uid://bmcc5l21n4h6s" path="res://components/chapter1/main_characters/companion_1_sprite_frames.tres" id="4_rofvx"]
 [ext_resource type="SpriteFrames" uid="uid://dqrsyjauj12el" path="res://components/chapter1/main_characters/companion_2_sprite_frames.tres" id="5_7itc7"]
 [ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="6_jfo1i"]
@@ -15,7 +15,9 @@
 final_pos_x = -1684
 
 [node name="Background" parent="ScrollingBackground/PanNode" index="0" unique_id=524227348]
-texture = ExtResource("3_rofvx")
+position = Vector2(704, -12)
+scale = Vector2(0.31772518, 0.31772515)
+texture = ExtResource("2_jfo1i")
 
 [node name="JungleWoman2" parent="ScrollingBackground" unique_id=582263270 instance=ExtResource("3_jfo1i")]
 position = Vector2(-397, 290)

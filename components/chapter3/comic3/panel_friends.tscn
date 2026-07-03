@@ -2,12 +2,16 @@
 
 [ext_resource type="Texture2D" uid="uid://br6onvdt7l7s8" path="res://graphics/chapter3/comics/comic3/friends/1.png" id="1_lmjog"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="2_266s7"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="3_ww2wl"]
 [ext_resource type="Texture2D" uid="uid://dfvgwhfpfhjd1" path="res://graphics/chapter3/comics/comic3/friends/2.png" id="3_xuq5g"]
+[ext_resource type="AudioStream" uid="uid://d4mtnjjcrc1m1" path="res://audio/chapter3/ambient/comic 3/panel_3.13_woman_sound_1_interactive.wav" id="4_bcnda"]
 [ext_resource type="Texture2D" uid="uid://nwa3havoua8g" path="res://graphics/chapter3/comics/comic2/worry/bubble_worry_man.png" id="4_ww2wl"]
 [ext_resource type="Texture2D" uid="uid://csy0f3uonw46p" path="res://graphics/chapter3/comics/comic3/friends/3.png" id="5_bcnda"]
 [ext_resource type="Texture2D" uid="uid://c2w2aodf0xbjp" path="res://graphics/chapter3/comics/comic2/worry/bubble_worry_woman.png" id="6_prix4"]
+[ext_resource type="AudioStream" uid="uid://dqqgtohy8oc63" path="res://audio/chapter3/ambient/comic 3/panel_3.13_woman_sound_3_interactive.wav" id="7_prix4"]
 [ext_resource type="Texture2D" uid="uid://dl2md531s5p85" path="res://graphics/chapter3/comics/comic3/friends/4.png" id="7_wd1uj"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="8_266s7"]
+[ext_resource type="AudioStream" uid="uid://r0awbodloaf5" path="res://audio/chapter3/ambient/comic 3/panel_3.13_woman_sound_2_interactive.wav" id="9_bcnda"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xd7ct"]
 radius = 160.25293
@@ -26,11 +30,19 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1002383222]
 shape = SubResource("CircleShape2D_xd7ct")
 
+[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=1125234367 node_paths=PackedStringArray("clickables")]
+script = ExtResource("3_ww2wl")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("4_bcnda")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
 [node name="2" type="Sprite2D" parent="." unique_id=604848694]
 texture = ExtResource("3_xuq5g")
 
 [node name="BubbleWorryMan" type="Sprite2D" parent="2" unique_id=1111931835]
-position = Vector2(-179, 151)
+position = Vector2(-179, 732)
 texture = ExtResource("4_ww2wl")
 
 [node name="Clickable2" type="Area2D" parent="2" unique_id=355641743 node_paths=PackedStringArray("nodes_to_show")]
@@ -42,11 +54,19 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="2/Clickable2" unique_id=1584390578]
 shape = SubResource("CircleShape2D_xd7ct")
 
+[node name="TriggerSfxOnClick" type="Node" parent="2/Clickable2" unique_id=1657381310 node_paths=PackedStringArray("clickables")]
+script = ExtResource("3_ww2wl")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("7_prix4")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
 [node name="3" type="Sprite2D" parent="." unique_id=307987514]
 texture = ExtResource("5_bcnda")
 
 [node name="BubbleWorryWoman" type="Sprite2D" parent="3" unique_id=520382250]
-position = Vector2(186, 99)
+position = Vector2(431, 706)
 texture = ExtResource("6_prix4")
 
 [node name="Clickable2" type="Area2D" parent="3" unique_id=199344290 node_paths=PackedStringArray("nodes_to_show")]
@@ -58,6 +78,14 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="3/Clickable2" unique_id=2141012845]
 shape = SubResource("CircleShape2D_xd7ct")
 
+[node name="TriggerSfxOnClick" type="Node" parent="3/Clickable2" unique_id=1956296158 node_paths=PackedStringArray("clickables")]
+script = ExtResource("3_ww2wl")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("9_bcnda")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
 [node name="4" type="Sprite2D" parent="." unique_id=327449269]
 visible = false
 texture = ExtResource("7_wd1uj")
@@ -66,3 +94,5 @@ texture = ExtResource("7_wd1uj")
 script = ExtResource("8_266s7")
 clickables = [NodePath("../3/Clickable2")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=540875948]

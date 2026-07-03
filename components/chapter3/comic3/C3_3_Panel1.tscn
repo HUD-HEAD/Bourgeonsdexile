@@ -2,8 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://cxr3hif05q11c" path="res://graphics/chapter3/comics/comic3/social_worker/socialworker.png" id="1_sj8qh"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="2_ivn45"]
-[ext_resource type="Texture2D" uid="uid://4pck35w2ueok" path="res://graphics/chapter3/comics/comic3/social_worker/bubble_socialworker.png" id="2_ntq2j"]
+[ext_resource type="Texture2D" uid="uid://cgnn6byfp3ye2" path="res://graphics/chapter3/comics/comic3/social_worker/bubble_socialworker_filled.png" id="2_ntq2j"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="3_ntq2j"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="4_cx1cy"]
+[ext_resource type="AudioStream" uid="uid://c42wd22i4m314" path="res://audio/chapter3/ambient/comic 3/panel_3.1_woman_voice.wav" id="5_ny6dp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ivn45"]
 radius = 344.0
@@ -28,6 +30,15 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=848582220]
 shape = SubResource("CircleShape2D_ivn45")
+
+[node name="TriggerSfxOnClick" type="Node" parent="Clickable" unique_id=1220266334 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_cx1cy")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("5_ny6dp")
+linear_volume = 1.3
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="TransitionerCounter" type="Node" parent="." unique_id=1459421772 node_paths=PackedStringArray("clickables")]
 script = ExtResource("3_ntq2j")

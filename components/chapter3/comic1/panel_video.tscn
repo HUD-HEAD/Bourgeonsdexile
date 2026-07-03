@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://dbmuid0d22x60" path="res://graphics/chapter3/comics/comic1/framevideo/hugmaternite.png" id="1_gwx2b"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="4_dpprm"]
-[ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="5_r1c2e"]
 
 [node name="PanelVideo" type="Node2D" unique_id=538357649]
 
@@ -12,10 +11,3 @@ texture = ExtResource("1_gwx2b")
 [node name="TransitionerPassive" type="Node" parent="." unique_id=1735867431]
 script = ExtResource("4_dpprm")
 metadata/_custom_type_script = "uid://u4636s8oa5d0"
-
-[node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="." unique_id=628534424]
-position = Vector2(109, 241)
-rect = Rect2(-12, -10, 22, 20)
-script = ExtResource("5_r1c2e")
-music_name = 3100
-metadata/_custom_type_script = "uid://2aadlm17sdsf"

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d120cejyuktti"
+path="res://.godot/imported/ringtone_sound.wav-dc3c6c73cf018ffd3c7418406e397f9d.sample"
+
+[deps]
+
+source_file="res://audio/chapter3/ambient/levels ambience/ringtone_sound.wav"
+dest_files=["res://.godot/imported/ringtone_sound.wav-dc3c6c73cf018ffd3c7418406e397f9d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

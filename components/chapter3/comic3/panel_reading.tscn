@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://bh7k0foeuvcqa" path="res://graphics/chapter3/comics/comic3/reading/framereading.png" id="1_wi5le"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="2_ny7kf"]
-[ext_resource type="Texture2D" uid="uid://cc81ucbfgefv7" path="res://graphics/chapter3/comics/comic3/reading/bubble_framereading1.png" id="4_ib7qq"]
+[ext_resource type="Texture2D" uid="uid://oyab7rk5qoki" path="res://graphics/chapter3/comics/comic3/reading/bubble_framereading1_filled.png" id="4_ib7qq"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_xl31j"]
-[ext_resource type="Texture2D" uid="uid://px2uvwfpc7wg" path="res://graphics/chapter3/comics/comic3/reading/bubble_framereading2.png" id="5_7q6uf"]
+[ext_resource type="Texture2D" uid="uid://cl4kfohrcv3es" path="res://graphics/chapter3/comics/comic3/reading/bubble_framereading2_filled.png" id="5_7q6uf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7fe1j"]
 radius = 525.8945

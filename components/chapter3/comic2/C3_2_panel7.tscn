@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://b4lixqemjmn7a"]
 
 [ext_resource type="Texture2D" uid="uid://n6gse867tx5p" path="res://graphics/chapter3/comics/comic2/worry/worry_CON_realce.png" id="1_ikgsg"]
-[ext_resource type="Texture2D" uid="uid://c2w2aodf0xbjp" path="res://graphics/chapter3/comics/comic2/worry/bubble_worry_woman.png" id="3_246ev"]
 [ext_resource type="Script" uid="uid://h8iq0ry15ka8" path="res://components/utils/audio/audio integration nodes/trigger_sfx_list.gd" id="3_df7kq"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="3_ikgsg"]
-[ext_resource type="Texture2D" uid="uid://nwa3havoua8g" path="res://graphics/chapter3/comics/comic2/worry/bubble_worry_man.png" id="4_f0v7s"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_ikgsg"]
 [ext_resource type="AudioStream" uid="uid://cavga3wwcrtf4" path="res://audio/chapter3/ambient/comic 2/panel_2.7_woman_expression_interactive.wav" id="4_s856o"]
 [ext_resource type="AudioStream" uid="uid://vrmenkkhhj3w" path="res://audio/chapter3/ambient/comic 2/panel_2.7_man_expression_interactive.wav" id="5_xr8vm"]
+[ext_resource type="Texture2D" uid="uid://bndfesqf8mldv" path="res://graphics/chapter3/comics/comic2/worry/bubble_worry_woman_filled.png" id="6_df7kq"]
+[ext_resource type="Texture2D" uid="uid://wjap8d21172m" path="res://graphics/chapter3/comics/comic2/worry/bubble_worry_man_filled.png" id="7_s856o"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ikgsg"]
 radius = 367.03406
@@ -36,11 +36,11 @@ metadata/_custom_type_script = "uid://h8iq0ry15ka8"
 
 [node name="Bubblequestion" type="Sprite2D" parent="." unique_id=209132459]
 position = Vector2(-452, 191)
-texture = ExtResource("3_246ev")
+texture = ExtResource("6_df7kq")
 
 [node name="Bubblequestion2" type="Sprite2D" parent="." unique_id=1919182759]
 position = Vector2(524, 115)
-texture = ExtResource("4_f0v7s")
+texture = ExtResource("7_s856o")
 
 [node name="TransitionerCounter" type="Node" parent="." unique_id=94076523 node_paths=PackedStringArray("clickables")]
 script = ExtResource("4_ikgsg")
