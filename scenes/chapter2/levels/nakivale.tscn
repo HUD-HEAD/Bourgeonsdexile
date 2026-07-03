@@ -404,6 +404,7 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 shape = SubResource("CircleShape2D_ntkgk")
 
 [node name="Puzzle2" type="Node2D" parent="Puzzles" unique_id=2004378291]
+visible = false
 position = Vector2(2741, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="Puzzles/Puzzle2" unique_id=1077710549 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
@@ -590,7 +591,8 @@ scale = Vector2(0.25, 0.25)
 position = Vector2(396, 32)
 
 [node name="PuzzlePiece2" parent="Puzzles/Puzzle3/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1588097281, 1654234455) index="2" unique_id=729525704]
-position = Vector2(636, 232)
+position = Vector2(655.99994, 235.99998)
+scale = Vector2(1.159961, 1.159961)
 
 [node name="PuzzlePiece3" parent="Puzzles/Puzzle3/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1588097281, 1654234455) index="3" unique_id=85319166]
 position = Vector2(464, 340)

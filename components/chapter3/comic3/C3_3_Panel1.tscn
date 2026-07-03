@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cxr3hif05q11c" path="res://graphics/chapter3/comics/comic3/social_worker/socialworker.png" id="1_sj8qh"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="2_ivn45"]
-[ext_resource type="Texture2D" uid="uid://4pck35w2ueok" path="res://graphics/chapter3/comics/comic3/social_worker/bubble_socialworker.png" id="2_ntq2j"]
+[ext_resource type="Texture2D" uid="uid://cgnn6byfp3ye2" path="res://graphics/chapter3/comics/comic3/social_worker/bubble_socialworker_filled.png" id="2_ntq2j"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="3_ntq2j"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="4_cx1cy"]
 [ext_resource type="AudioStream" uid="uid://c42wd22i4m314" path="res://audio/chapter3/ambient/comic 3/panel_3.1_woman_voice.wav" id="5_ny6dp"]

@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="3_w7uun"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_juyfp"]
 [ext_resource type="AudioStream" uid="uid://cfqx7imwxcfse" path="res://audio/chapter1/ambient/panel_section_3/panel_3.12__voice_woman.wav" id="4_navo1"]
-[ext_resource type="Texture2D" uid="uid://837goyeopecx" path="res://graphics/chapter1/comics/comic3/frame11/bubble_frame11.png" id="5_w7uun"]
+[ext_resource type="Texture2D" uid="uid://chxd3e05jjou2" path="res://graphics/chapter1/comics/comic3/frame11/bubble_frame11_filled.png" id="5_w7uun"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rqo8u"]
 radius = 239.0

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c3taxlnlcerfn"]
 
 [ext_resource type="Texture2D" uid="uid://dajl08puwm1iy" path="res://graphics/chapter3/comics/comic2/C2.1.png" id="1_me57d"]
-[ext_resource type="Texture2D" uid="uid://bof1j07ia7a1d" path="res://graphics/chapter3/comics/comic2/bubble_C2.1.png" id="2_raabg"]
+[ext_resource type="Texture2D" uid="uid://ntbfmfaxbbky" path="res://graphics/chapter3/comics/comic2/bubble_C2.1_filled.png" id="2_rkc3c"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="3_lab4b"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_3jpgc"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="4_rkc3c"]
@@ -18,7 +18,7 @@ texture = ExtResource("1_me57d")
 
 [node name="BubbleC2_1" type="Sprite2D" parent="." unique_id=1955380109]
 position = Vector2(491, -223)
-texture = ExtResource("2_raabg")
+texture = ExtResource("2_rkc3c")
 
 [node name="Clickable" type="Area2D" parent="." unique_id=62670517 node_paths=PackedStringArray("nodes_to_show")]
 position = Vector2(0, -75)

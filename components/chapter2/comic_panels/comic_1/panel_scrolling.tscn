@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dxh5iuy02vrda"]
 
 [ext_resource type="PackedScene" uid="uid://bomhqj3lxkka3" path="res://components/utils/comics/scrolling_background.tscn" id="1_yo06y"]
-[ext_resource type="Texture2D" uid="uid://plrun2uek2mj" path="res://graphics/chapter2/comics/comic1/framelateralscroll/framelateralscroll.png" id="2_l5hv5"]
+[ext_resource type="Texture2D" uid="uid://ce0m1wv2yqj27" path="res://graphics/chapter2/comics/comic1/framelateralscroll/framelateralscroll-1.png" id="2_wdx3e"]
 [ext_resource type="SpriteFrames" uid="uid://cteyh286rov0u" path="res://components/chapter2/characters/amani_sprite_frames.tres" id="4_rbhmf"]
 [ext_resource type="Texture2D" uid="uid://bqmwvwxnvy503" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow1.png" id="5_wdx3e"]
 [ext_resource type="Texture2D" uid="uid://dnon84uyke6c4" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow2.png" id="6_auyp5"]
@@ -38,8 +38,9 @@ rect = Rect2(-728, -460, 1539, 965)
 final_pos_x = -1077
 
 [node name="Background" parent="ScrollingBackground/PanNode" index="0" unique_id=524227348]
-position = Vector2(503, 0)
-texture = ExtResource("2_l5hv5")
+position = Vector2(1361, 24.00003)
+scale = Vector2(2.3804185, 2.3804185)
+texture = ExtResource("2_wdx3e")
 
 [node name="Amani" type="Node2D" parent="ScrollingBackground" unique_id=700974070]
 position = Vector2(-169, 197)

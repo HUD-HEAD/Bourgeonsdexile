@@ -8,506 +8,222 @@
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/mechanics/obstacle.tscn" id="4_rf4sk"]
 [ext_resource type="PackedScene" uid="uid://ds13261ncmyq2" path="res://components/chapter3/levels/level3.3/drag_drop_puzzle_3.3-1.tscn" id="5_4gg6y"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="5_apl6i"]
+[ext_resource type="Texture2D" uid="uid://bqmwvwxnvy503" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow1.png" id="5_oxnk5"]
+[ext_resource type="Texture2D" uid="uid://db24o2ykt2loh" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_museum_worker_idle_5fps/npc_museum_worker_idle_0001.png" id="5_pbhbj"]
 [ext_resource type="PackedScene" uid="uid://bftts86syqkvg" path="res://components/chapter3/levels/level3.3/drag_drop_puzzle_3.3-2.tscn" id="6_5sp7s"]
+[ext_resource type="Texture2D" uid="uid://dnon84uyke6c4" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow2.png" id="6_apkoo"]
+[ext_resource type="Texture2D" uid="uid://42uw73gvbla6" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_museum_worker_idle_5fps/npc_museum_worker_idle_0002.png" id="6_e477y"]
+[ext_resource type="Texture2D" uid="uid://dkm7pj8kxf23p" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow3.png" id="7_ps2io"]
 [ext_resource type="PackedScene" uid="uid://bxup6ytcbadyv" path="res://components/chapter3/levels/level3.3/thinking_puzzle_3.3-3.tscn" id="7_sst3i"]
-[ext_resource type="Texture2D" uid="uid://cxylr6a40orij" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0001.png" id="7_texi6"]
+[ext_resource type="Texture2D" uid="uid://cdutgrs847urr" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_museum_worker_idle_5fps/npc_museum_worker_idle_0003.png" id="7_wvnkf"]
 [ext_resource type="PackedScene" uid="uid://crcegtlclps7m" path="res://components/chapter3/levels/level3.3/thinking_puzzle_3.3-4.tscn" id="8_bryjj"]
-[ext_resource type="Texture2D" uid="uid://d38pu7t511wt4" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0002.png" id="8_sgnui"]
-[ext_resource type="Texture2D" uid="uid://bx2fsfgwb0g5x" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0003.png" id="9_der5b"]
-[ext_resource type="Texture2D" uid="uid://7h021udsedkc" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0004.png" id="10_rcnf5"]
-[ext_resource type="Texture2D" uid="uid://bw6rmdtow7yad" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0005.png" id="11_8xjft"]
-[ext_resource type="Texture2D" uid="uid://dm48vo3q5sx0y" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0006.png" id="12_klklb"]
-[ext_resource type="Texture2D" uid="uid://b0d6a1agim7rr" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0007.png" id="13_dyrcv"]
-[ext_resource type="Texture2D" uid="uid://1d5cgw78yuqi" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0008.png" id="14_lsjvn"]
-[ext_resource type="Texture2D" uid="uid://d23ieao6dhvgf" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0009.png" id="15_oxe7h"]
-[ext_resource type="Texture2D" uid="uid://dga5up2jric8i" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0010.png" id="16_2n7sg"]
-[ext_resource type="Texture2D" uid="uid://y8tt1fp6wspi" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0011.png" id="17_0o7sv"]
-[ext_resource type="Texture2D" uid="uid://btjyg4kxj4wy4" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0012.png" id="18_pn1mt"]
-[ext_resource type="Texture2D" uid="uid://dflx0gfbxasxw" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0013.png" id="19_7fauu"]
-[ext_resource type="Texture2D" uid="uid://cr5ljrkbchno7" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0014.png" id="20_il8t1"]
-[ext_resource type="Texture2D" uid="uid://cjdmiqwervttc" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0015.png" id="21_fbwfr"]
-[ext_resource type="Texture2D" uid="uid://csy03x3ynhmiq" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0016.png" id="22_5a271"]
-[ext_resource type="Texture2D" uid="uid://b75ws2ajynfao" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0017.png" id="23_s26jy"]
-[ext_resource type="Texture2D" uid="uid://c2hejyiermupb" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0018.png" id="24_lmgvn"]
-[ext_resource type="Texture2D" uid="uid://b22578xesoma5" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0019.png" id="25_bkin1"]
-[ext_resource type="Texture2D" uid="uid://ugdxi3nsc6n" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0020.png" id="26_8lwtb"]
-[ext_resource type="Texture2D" uid="uid://1m5jc1j0k52j" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0021.png" id="27_y63u7"]
-[ext_resource type="Texture2D" uid="uid://dnv62ot2sgaop" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0022.png" id="28_qshdh"]
-[ext_resource type="Texture2D" uid="uid://y6i8b7eivwgk" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0023.png" id="29_7f6qc"]
-[ext_resource type="Texture2D" uid="uid://x637sgkcv0w4" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0024.png" id="30_wvuv3"]
-[ext_resource type="Texture2D" uid="uid://bswf88vfhysyg" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0025.png" id="31_8b8ru"]
-[ext_resource type="Texture2D" uid="uid://ce0bwui2xy6pl" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0026.png" id="32_gfyc2"]
-[ext_resource type="Texture2D" uid="uid://sdcpx0l7triu" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0027.png" id="33_d4f3b"]
-[ext_resource type="Texture2D" uid="uid://dw3dotiemyv4h" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0028.png" id="34_tgkcp"]
-[ext_resource type="Texture2D" uid="uid://cdxsjtxxtfp8l" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0029.png" id="35_j8xuu"]
-[ext_resource type="Texture2D" uid="uid://dhscva06cs0wg" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0030.png" id="36_ayxb5"]
-[ext_resource type="Texture2D" uid="uid://cc3xwhr1illbw" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0031.png" id="37_xbfh1"]
-[ext_resource type="Texture2D" uid="uid://chfe3mn6xke2u" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0032.png" id="38_46cqq"]
-[ext_resource type="Texture2D" uid="uid://b4t5r45x33ytj" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0033.png" id="39_vglsm"]
-[ext_resource type="Texture2D" uid="uid://b0eki26b0r53u" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0034.png" id="40_g2ho4"]
-[ext_resource type="Texture2D" uid="uid://cpfatgdk66ga" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0035.png" id="41_fp2kw"]
-[ext_resource type="Texture2D" uid="uid://dxs0228qf470u" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0036.png" id="42_d3k8e"]
-[ext_resource type="Texture2D" uid="uid://dup5qafsjp1vv" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0037.png" id="43_l6io7"]
-[ext_resource type="Texture2D" uid="uid://sof52i07sjwx" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0038.png" id="44_a64vg"]
-[ext_resource type="Texture2D" uid="uid://dduk72qabjlnf" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0039.png" id="45_8epnv"]
-[ext_resource type="Texture2D" uid="uid://bx2atyfdkce5w" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0040.png" id="46_6yvpd"]
-[ext_resource type="Texture2D" uid="uid://d6pqby7g4sf4" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0041.png" id="47_tbasq"]
-[ext_resource type="Texture2D" uid="uid://bkcc3av75o5c" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0042.png" id="48_mefyg"]
-[ext_resource type="Texture2D" uid="uid://cwobnxj406pnd" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0043.png" id="49_ifdk8"]
-[ext_resource type="Texture2D" uid="uid://52vi2hf2sl4g" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0044.png" id="50_yelo8"]
-[ext_resource type="Texture2D" uid="uid://tngq7b3iblyo" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0045.png" id="51_jifbn"]
-[ext_resource type="Texture2D" uid="uid://dt1i2l5yn2mdw" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0046.png" id="52_uyoag"]
-[ext_resource type="Texture2D" uid="uid://dbhniswf64gvy" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0047.png" id="53_eybte"]
-[ext_resource type="Texture2D" uid="uid://bid8xf1i0l5pa" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0048.png" id="54_njfir"]
-[ext_resource type="Texture2D" uid="uid://chkgpqisrw28f" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0049.png" id="55_0jxne"]
-[ext_resource type="Texture2D" uid="uid://83ubrpdf18lj" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0050.png" id="56_w2lck"]
-[ext_resource type="Texture2D" uid="uid://cwxe1v2sqpgm0" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0051.png" id="57_rw1os"]
-[ext_resource type="Texture2D" uid="uid://dq37d5e1rwcxp" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0052.png" id="58_e23qq"]
-[ext_resource type="Texture2D" uid="uid://dhc66llqpyb6j" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0053.png" id="59_n67ks"]
-[ext_resource type="Texture2D" uid="uid://wddvtabg63gx" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0054.png" id="60_c2vif"]
-[ext_resource type="Texture2D" uid="uid://coj36xhaqvb1b" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0055.png" id="61_qqb4m"]
-[ext_resource type="Texture2D" uid="uid://vkkvy5b08043" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0056.png" id="62_pehhx"]
-[ext_resource type="Texture2D" uid="uid://b6fa6nhrenmej" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0057.png" id="63_i02tk"]
-[ext_resource type="Texture2D" uid="uid://bnrkugwl55i7a" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0058.png" id="64_dtjfb"]
-[ext_resource type="Texture2D" uid="uid://5macest61beh" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0059.png" id="65_uakrh"]
-[ext_resource type="Texture2D" uid="uid://c8n7300imqcou" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0060.png" id="66_gbtip"]
-[ext_resource type="Texture2D" uid="uid://c23r58ae7aav8" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0061.png" id="67_4gvci"]
-[ext_resource type="Texture2D" uid="uid://cms3qiuychwqp" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0062.png" id="68_5feb3"]
-[ext_resource type="Texture2D" uid="uid://bk21mtm5bhqbt" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0063.png" id="69_f5ypx"]
-[ext_resource type="Texture2D" uid="uid://gkw3xpv41kku" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0064.png" id="70_82awn"]
-[ext_resource type="Texture2D" uid="uid://fh50yhhp5n3y" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0065.png" id="71_ejcwf"]
-[ext_resource type="Texture2D" uid="uid://c7s5127mfwm26" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0066.png" id="72_7s03o"]
-[ext_resource type="Texture2D" uid="uid://bmipowsh5ehkd" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0067.png" id="73_efm55"]
-[ext_resource type="Texture2D" uid="uid://brx6aa7f637nq" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0068.png" id="74_tcot8"]
-[ext_resource type="Texture2D" uid="uid://cxtpqjgqiqcjd" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0069.png" id="75_tl2up"]
-[ext_resource type="Texture2D" uid="uid://tvs0d455vmf3" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0070.png" id="76_wmn54"]
-[ext_resource type="Texture2D" uid="uid://p7kjsrk8ytol" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0071.png" id="77_phqsb"]
-[ext_resource type="Texture2D" uid="uid://dxn1w1cguyuo2" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0072.png" id="78_luw1j"]
-[ext_resource type="Texture2D" uid="uid://cxaaawq2bdtug" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0073.png" id="79_7uv3j"]
-[ext_resource type="Texture2D" uid="uid://bbum5iew6r0ru" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0074.png" id="80_2d5ev"]
-[ext_resource type="Texture2D" uid="uid://xafr35f7r0c5" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0075.png" id="81_0c57e"]
-[ext_resource type="Texture2D" uid="uid://de4br0dlio0qb" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0076.png" id="82_gd80b"]
-[ext_resource type="Texture2D" uid="uid://o5nmfgdtgcru" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0077.png" id="83_bo7m1"]
-[ext_resource type="Texture2D" uid="uid://242pjsjnf8d8" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0078.png" id="84_dpa1f"]
-[ext_resource type="Texture2D" uid="uid://cgn0r5n3mw5tg" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0079.png" id="85_2x0gv"]
-[ext_resource type="Texture2D" uid="uid://b1svushqt58uf" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0080.png" id="86_fcdua"]
-[ext_resource type="Texture2D" uid="uid://ee86lgjd8bt6" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0081.png" id="87_2bejr"]
-[ext_resource type="Texture2D" uid="uid://0bmk35xhjtpx" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0082.png" id="88_m1xdf"]
-[ext_resource type="Texture2D" uid="uid://fpkm16wtyim0" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0083.png" id="89_he8cl"]
-[ext_resource type="Texture2D" uid="uid://deqc0p58uhwkr" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0084.png" id="90_ey7k0"]
-[ext_resource type="Texture2D" uid="uid://0k6q8kmibtwu" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0085.png" id="91_pjx17"]
-[ext_resource type="Texture2D" uid="uid://b43iflagmhu1u" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0086.png" id="92_5c2t1"]
-[ext_resource type="Texture2D" uid="uid://dk580qtwv6ypg" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0087.png" id="93_0i2ve"]
-[ext_resource type="Texture2D" uid="uid://cu6a32xpv7r0d" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0088.png" id="94_lirwo"]
-[ext_resource type="Texture2D" uid="uid://cuwkiis5lgl7" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0089.png" id="95_pt2i1"]
-[ext_resource type="Texture2D" uid="uid://gmljx4tjro2n" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0090.png" id="96_ttnl6"]
-[ext_resource type="Texture2D" uid="uid://b6n6mmvo1ghjj" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0091.png" id="97_cgdao"]
-[ext_resource type="Texture2D" uid="uid://bog0eluhj55pv" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0092.png" id="98_eonj2"]
-[ext_resource type="Texture2D" uid="uid://swm8aod51icx" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0093.png" id="99_lpaia"]
-[ext_resource type="Texture2D" uid="uid://c5v7ky1qg0tbu" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0094.png" id="100_bwxqc"]
-[ext_resource type="Texture2D" uid="uid://blqenalbxglbt" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0095.png" id="101_evdpi"]
-[ext_resource type="Texture2D" uid="uid://dnwyufpo28h7w" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0096.png" id="102_0ltvw"]
-[ext_resource type="Texture2D" uid="uid://fsdl3uevq0vi" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0097.png" id="103_giodb"]
-[ext_resource type="Texture2D" uid="uid://6gdwg2v2tl6p" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0098.png" id="104_l5hy6"]
-[ext_resource type="Texture2D" uid="uid://dk0sftb00131x" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0099.png" id="105_orpkr"]
-[ext_resource type="Texture2D" uid="uid://but2ylkhxi7a6" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0100.png" id="106_mluen"]
-[ext_resource type="Texture2D" uid="uid://85wvbehtbwys" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0101.png" id="107_a00hj"]
-[ext_resource type="Texture2D" uid="uid://1xuhwduxwon6" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0102.png" id="108_u1yr2"]
-[ext_resource type="Texture2D" uid="uid://c2wous5d4uhk2" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0103.png" id="109_k0s1x"]
-[ext_resource type="Texture2D" uid="uid://vroy3hntsqba" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0104.png" id="110_ar5b6"]
-[ext_resource type="Texture2D" uid="uid://bq6vt6vxkcvm0" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0105.png" id="111_pfjr1"]
-[ext_resource type="Texture2D" uid="uid://fossaeb0m41q" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0106.png" id="112_o06mg"]
-[ext_resource type="Texture2D" uid="uid://b8w3fopglj522" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0107.png" id="113_jgajo"]
-[ext_resource type="Texture2D" uid="uid://de7vsg64u1asn" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0108.png" id="114_hkv8f"]
-[ext_resource type="Texture2D" uid="uid://bme2ei0rqdhri" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0109.png" id="115_5vpf5"]
-[ext_resource type="Texture2D" uid="uid://b8lnh53m528pa" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0110.png" id="116_a25qq"]
-[ext_resource type="Texture2D" uid="uid://pu1aljyohc5j" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0111.png" id="117_8f1xr"]
-[ext_resource type="Texture2D" uid="uid://cfeshxkvjp2wy" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0112.png" id="118_e26b2"]
-[ext_resource type="Texture2D" uid="uid://d0vxpicilvnl1" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0113.png" id="119_755te"]
-[ext_resource type="Texture2D" uid="uid://rywbcf4k2vo7" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0114.png" id="120_qwqiu"]
-[ext_resource type="Texture2D" uid="uid://bi53u3ryiyok1" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0115.png" id="121_bbgte"]
-[ext_resource type="Texture2D" uid="uid://cdbuujmthwftb" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0116.png" id="122_wly0x"]
-[ext_resource type="Texture2D" uid="uid://rijxgdv4fj3k" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0117.png" id="123_303ko"]
-[ext_resource type="Texture2D" uid="uid://botlwlbdqi70l" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0118.png" id="124_3y5i7"]
-[ext_resource type="Texture2D" uid="uid://cjd0cved1hco8" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0119.png" id="125_1v4yc"]
+[ext_resource type="Texture2D" uid="uid://k7yunbyjy8lg" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_museum_worker_idle_5fps/npc_museum_worker_idle_0004.png" id="8_oxnk5"]
+[ext_resource type="Texture2D" uid="uid://cncmg0otmcsu1" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_museum_worker_idle_5fps/npc_museum_worker_idle_0005.png" id="9_apkoo"]
+[ext_resource type="Texture2D" uid="uid://6ao8aa0snl36" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_museum_worker_idle_5fps/npc_museum_worker_idle_0006.png" id="10_ps2io"]
+[ext_resource type="Texture2D" uid="uid://cco0haoisjru5" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_museum_worker_idle_5fps/npc_museum_worker_idle_0007.png" id="11_w15sc"]
+[ext_resource type="Texture2D" uid="uid://boqfybgdpvmjx" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_museum_worker_idle_5fps/npc_museum_worker_idle_0008.png" id="12_ik4fk"]
+[ext_resource type="Texture2D" uid="uid://cqmqg842ta53k" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0001.png" id="15_jpu0j"]
+[ext_resource type="Texture2D" uid="uid://5eu3p4caav7c" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0002.png" id="16_m51qe"]
+[ext_resource type="Texture2D" uid="uid://cj6wy0iwdxpdk" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0003.png" id="17_61asc"]
+[ext_resource type="Texture2D" uid="uid://bo0cliuciufff" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0004.png" id="18_vg2mg"]
+[ext_resource type="Texture2D" uid="uid://caiiooxa137b0" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0005.png" id="19_ybqbt"]
+[ext_resource type="Texture2D" uid="uid://dtam0t5vjmorh" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0006.png" id="20_f4o71"]
+[ext_resource type="Texture2D" uid="uid://w1s3ew36iqf3" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0007.png" id="21_mf8yo"]
+[ext_resource type="Texture2D" uid="uid://cteudehor6sd" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0008.png" id="22_iq043"]
+[ext_resource type="Texture2D" uid="uid://cv2bnakuvmd1" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0009.png" id="23_qgnt0"]
+[ext_resource type="Texture2D" uid="uid://8b16ln38co8i" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0010.png" id="24_5dcce"]
+[ext_resource type="Texture2D" uid="uid://bp7pu5kvx6er2" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0011.png" id="25_2vnva"]
+[ext_resource type="Texture2D" uid="uid://bise5dot2gxbc" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0012.png" id="26_0v8nl"]
+[ext_resource type="Texture2D" uid="uid://d1eae70f01l8h" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0013.png" id="27_1himy"]
+[ext_resource type="Texture2D" uid="uid://cj1leeu1alu55" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0014.png" id="28_i8bdt"]
+[ext_resource type="Texture2D" uid="uid://c13l0dfwerxff" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0015.png" id="29_bu7af"]
+[ext_resource type="Texture2D" uid="uid://7mi1vppblemb" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0016.png" id="30_dhoec"]
+[ext_resource type="Texture2D" uid="uid://dkkbrrni1mn1y" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0017.png" id="31_yoait"]
+[ext_resource type="Texture2D" uid="uid://c3ypd2j0amuhm" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0018.png" id="32_k8p26"]
+[ext_resource type="Texture2D" uid="uid://b0web54e4l1et" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0019.png" id="33_yjtvf"]
+[ext_resource type="Texture2D" uid="uid://dagy5scfcdu0d" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0020.png" id="34_fkt27"]
+[ext_resource type="Texture2D" uid="uid://d4nk48rv4p21b" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0021.png" id="35_4vrxj"]
+[ext_resource type="Texture2D" uid="uid://2xgqbsqyhw8m" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0022.png" id="36_6a877"]
+[ext_resource type="Texture2D" uid="uid://m68tmo8cwyes" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0023.png" id="37_8c6fq"]
+[ext_resource type="Texture2D" uid="uid://knsawdawgyrp" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0024.png" id="38_1qxfy"]
+[ext_resource type="Texture2D" uid="uid://o7brs1rjf23k" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0025.png" id="39_eyqk7"]
+[ext_resource type="Texture2D" uid="uid://dfh28wtqqoauc" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0026.png" id="40_c3f77"]
+[ext_resource type="Texture2D" uid="uid://dfmfraadt0fpq" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0027.png" id="41_kcx17"]
+[ext_resource type="Texture2D" uid="uid://1i0u8t3miyni" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0028.png" id="42_60edg"]
+[ext_resource type="Texture2D" uid="uid://b0hiv21o1ua55" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0029.png" id="43_xx78f"]
+[ext_resource type="Texture2D" uid="uid://dij5juv3xb542" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0030.png" id="44_taisy"]
 [ext_resource type="Texture2D" uid="uid://busd5tbxrs6kt" path="res://graphics/chapter3/levels/CH3_puzzles/8_museumasking/full8_filled.png" id="126_der5b"]
-[ext_resource type="Texture2D" uid="uid://bg5s78yi6ix11" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0120.png" id="126_xrnqx"]
-[ext_resource type="Script" uid="uid://d2wk8l6f6idvx" path="res://components/utils/audio/audio integration nodes/audio_puzzle_controller.gd" id="127_klklb"]
 [ext_resource type="Texture2D" uid="uid://b5vajmdfhe3b2" path="res://graphics/chapter3/levels/CH3_puzzles/9_museumconversation/full9_filled.png" id="128_rcnf5"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="132_texi6"]
 [ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="135_rcnf5"]
 [ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="136_8xjft"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_w15sc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_oxnk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_apkoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ps2io")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_0s0yi"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_texi6")
+"texture": ExtResource("5_pbhbj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_sgnui")
+"texture": ExtResource("6_e477y")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_der5b")
+"texture": ExtResource("7_wvnkf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_rcnf5")
+"texture": ExtResource("8_oxnk5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_8xjft")
+"texture": ExtResource("9_apkoo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_klklb")
+"texture": ExtResource("10_ps2io")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_dyrcv")
+"texture": ExtResource("11_w15sc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_lsjvn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_oxe7h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_2n7sg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_0o7sv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_pn1mt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_7fauu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_il8t1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_fbwfr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_5a271")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_s26jy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_lmgvn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_bkin1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_8lwtb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_y63u7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_qshdh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_7f6qc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_wvuv3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_8b8ru")
-}, {
-"duration": 1.0,
-"texture": ExtResource("32_gfyc2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_d4f3b")
-}, {
-"duration": 1.0,
-"texture": ExtResource("34_tgkcp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_j8xuu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("36_ayxb5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("37_xbfh1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("38_46cqq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("39_vglsm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("40_g2ho4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("41_fp2kw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("42_d3k8e")
-}, {
-"duration": 1.0,
-"texture": ExtResource("43_l6io7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("44_a64vg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("45_8epnv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("46_6yvpd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("47_tbasq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("48_mefyg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("49_ifdk8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("50_yelo8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("51_jifbn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("52_uyoag")
-}, {
-"duration": 1.0,
-"texture": ExtResource("53_eybte")
-}, {
-"duration": 1.0,
-"texture": ExtResource("54_njfir")
-}, {
-"duration": 1.0,
-"texture": ExtResource("55_0jxne")
-}, {
-"duration": 1.0,
-"texture": ExtResource("56_w2lck")
-}, {
-"duration": 1.0,
-"texture": ExtResource("57_rw1os")
-}, {
-"duration": 1.0,
-"texture": ExtResource("58_e23qq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("59_n67ks")
-}, {
-"duration": 1.0,
-"texture": ExtResource("60_c2vif")
-}, {
-"duration": 1.0,
-"texture": ExtResource("61_qqb4m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("62_pehhx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("63_i02tk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("64_dtjfb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("65_uakrh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("66_gbtip")
-}, {
-"duration": 1.0,
-"texture": ExtResource("67_4gvci")
-}, {
-"duration": 1.0,
-"texture": ExtResource("68_5feb3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("69_f5ypx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("70_82awn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("71_ejcwf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("72_7s03o")
-}, {
-"duration": 1.0,
-"texture": ExtResource("73_efm55")
-}, {
-"duration": 1.0,
-"texture": ExtResource("74_tcot8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("75_tl2up")
-}, {
-"duration": 1.0,
-"texture": ExtResource("76_wmn54")
-}, {
-"duration": 1.0,
-"texture": ExtResource("77_phqsb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("78_luw1j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("79_7uv3j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("80_2d5ev")
-}, {
-"duration": 1.0,
-"texture": ExtResource("81_0c57e")
-}, {
-"duration": 1.0,
-"texture": ExtResource("82_gd80b")
-}, {
-"duration": 1.0,
-"texture": ExtResource("83_bo7m1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("84_dpa1f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("85_2x0gv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("86_fcdua")
-}, {
-"duration": 1.0,
-"texture": ExtResource("87_2bejr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("88_m1xdf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("89_he8cl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("90_ey7k0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("91_pjx17")
-}, {
+"texture": ExtResource("12_ik4fk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_texi6"]
+radius = 197.12433
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ik4fk"]
+animations = [{
+"frames": [{
 "duration": 1.0,
-"texture": ExtResource("92_5c2t1")
+"texture": ExtResource("5_oxnk5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("93_0i2ve")
+"texture": ExtResource("6_apkoo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("94_lirwo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("95_pt2i1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("96_ttnl6")
-}, {
+"texture": ExtResource("7_ps2io")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1wcu2"]
+animations = [{
+"frames": [{
 "duration": 1.0,
-"texture": ExtResource("97_cgdao")
+"texture": ExtResource("15_jpu0j")
 }, {
 "duration": 1.0,
-"texture": ExtResource("98_eonj2")
+"texture": ExtResource("16_m51qe")
 }, {
 "duration": 1.0,
-"texture": ExtResource("99_lpaia")
+"texture": ExtResource("17_61asc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("100_bwxqc")
+"texture": ExtResource("18_vg2mg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("101_evdpi")
+"texture": ExtResource("19_ybqbt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("102_0ltvw")
+"texture": ExtResource("20_f4o71")
 }, {
 "duration": 1.0,
-"texture": ExtResource("103_giodb")
+"texture": ExtResource("21_mf8yo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("104_l5hy6")
+"texture": ExtResource("22_iq043")
 }, {
 "duration": 1.0,
-"texture": ExtResource("105_orpkr")
+"texture": ExtResource("23_qgnt0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("106_mluen")
+"texture": ExtResource("24_5dcce")
 }, {
 "duration": 1.0,
-"texture": ExtResource("107_a00hj")
+"texture": ExtResource("25_2vnva")
 }, {
 "duration": 1.0,
-"texture": ExtResource("108_u1yr2")
+"texture": ExtResource("26_0v8nl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("109_k0s1x")
+"texture": ExtResource("27_1himy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("110_ar5b6")
+"texture": ExtResource("28_i8bdt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("111_pfjr1")
+"texture": ExtResource("29_bu7af")
 }, {
 "duration": 1.0,
-"texture": ExtResource("112_o06mg")
+"texture": ExtResource("30_dhoec")
 }, {
 "duration": 1.0,
-"texture": ExtResource("113_jgajo")
+"texture": ExtResource("31_yoait")
 }, {
 "duration": 1.0,
-"texture": ExtResource("114_hkv8f")
+"texture": ExtResource("32_k8p26")
 }, {
 "duration": 1.0,
-"texture": ExtResource("115_5vpf5")
+"texture": ExtResource("33_yjtvf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("116_a25qq")
+"texture": ExtResource("34_fkt27")
 }, {
 "duration": 1.0,
-"texture": ExtResource("117_8f1xr")
+"texture": ExtResource("35_4vrxj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("118_e26b2")
+"texture": ExtResource("36_6a877")
 }, {
 "duration": 1.0,
-"texture": ExtResource("119_755te")
+"texture": ExtResource("37_8c6fq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("120_qwqiu")
+"texture": ExtResource("38_1qxfy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("121_bbgte")
+"texture": ExtResource("39_eyqk7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("122_wly0x")
+"texture": ExtResource("40_c3f77")
 }, {
 "duration": 1.0,
-"texture": ExtResource("123_303ko")
+"texture": ExtResource("41_kcx17")
 }, {
 "duration": 1.0,
-"texture": ExtResource("124_3y5i7")
+"texture": ExtResource("42_60edg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("125_1v4yc")
+"texture": ExtResource("43_xx78f")
 }, {
 "duration": 1.0,
-"texture": ExtResource("126_xrnqx")
+"texture": ExtResource("44_taisy")
 }],
 "loop": true,
 "name": &"default",
 "speed": 30.0
 }]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_texi6"]
-radius = 197.12433
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lwr0c"]
 radius = 100.42
@@ -539,9 +255,15 @@ position = Vector2(726, 726)
 script = ExtResource("5_apl6i")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
+[node name="Npc3" type="AnimatedSprite2D" parent="Puzzles/Puzzle1/Clickable" unique_id=111467042]
+position = Vector2(16, 302)
+scale = Vector2(2.09, 2.09)
+sprite_frames = SubResource("SpriteFrames_w15sc")
+autoplay = "default"
+
 [node name="Npc2" type="AnimatedSprite2D" parent="Puzzles/Puzzle1/Clickable" unique_id=142909613]
-position = Vector2(0, 70)
-scale = Vector2(2.27, 2.27)
+position = Vector2(15.999987, 88.999985)
+scale = Vector2(2.09, 2.09)
 sprite_frames = SubResource("SpriteFrames_0s0yi")
 autoplay = "default"
 
@@ -567,12 +289,20 @@ position = Vector2(-529.7627, 167.90532)
 position = Vector2(578.8097, -105.952576)
 
 [node name="PuzzlePiece5" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="8" unique_id=82169937]
-position = Vector2(400.23807, -15.476257)
+position = Vector2(411.90536, -20.23816)
 rotation = -1.5707964
+correct_rotation = 270
+
+[node name="Receptacle5" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="9" unique_id=1568642939]
+position = Vector2(95.235, 7.75)
 
 [node name="PuzzlePiece6" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="10" unique_id=535439245]
-position = Vector2(-794.0488, 167.90532)
+position = Vector2(-795.23926, 194.04788)
 rotation = 1.5707964
+correct_rotation = 270
+
+[node name="Receptacle6" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="11" unique_id=486694985]
+position = Vector2(220.39, 8.71)
 
 [node name="PuzzlePiece7" parent="Puzzles/Puzzle1/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1767003607, 1654234455) index="12" unique_id=1738010806]
 position = Vector2(376.42853, -290.47662)
@@ -583,12 +313,6 @@ position = Vector2(-529.7627, -174.95233)
 
 [node name="CompletePuzzle" parent="Puzzles/Puzzle1/DragDropPuzzle" index="2" unique_id=1933061263]
 texture = ExtResource("126_der5b")
-
-[node name="PuzzleDecoratorController" type="Node" parent="Puzzles/Puzzle1/DragDropPuzzle" unique_id=631894312]
-script = ExtResource("127_klklb")
-trigger_loop = true
-loop_name = 3501
-metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
 
 [node name="Node2D" type="Node2D" parent="Puzzles/Puzzle1" unique_id=1692781264]
 
@@ -610,10 +334,16 @@ position = Vector2(1049, 726)
 script = ExtResource("5_apl6i")
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
+[node name="Npc3" type="AnimatedSprite2D" parent="Puzzles/Puzzle2/Clickable" unique_id=728214797]
+position = Vector2(2, 306)
+scale = Vector2(3.13, 2.27)
+sprite_frames = SubResource("SpriteFrames_ik4fk")
+autoplay = "default"
+
 [node name="Npc2" type="AnimatedSprite2D" parent="Puzzles/Puzzle2/Clickable" unique_id=96267093]
 position = Vector2(0, 70)
 scale = Vector2(2.27, 2.27)
-sprite_frames = SubResource("SpriteFrames_0s0yi")
+sprite_frames = SubResource("SpriteFrames_1wcu2")
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzles/Puzzle2/Clickable" unique_id=1733870140]
@@ -646,12 +376,6 @@ position = Vector2(517, 108)
 [node name="CompletePuzzle" parent="Puzzles/Puzzle2/DragDropPuzzle2" index="2" unique_id=1933061263]
 texture = ExtResource("128_rcnf5")
 
-[node name="PuzzleDecoratorController" type="Node" parent="Puzzles/Puzzle2/DragDropPuzzle2" unique_id=1418081900]
-script = ExtResource("127_klklb")
-trigger_loop = true
-loop_name = 3501
-metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
-
 [node name="Puzzle3" type="Node2D" parent="Puzzles" unique_id=368534655]
 position = Vector2(2306, 0)
 
@@ -673,7 +397,8 @@ scale = Vector2(0.51564693, 0.51564693)
 position = Vector2(-1091.8322, 203.62793)
 
 [node name="PuzzlePiece3" parent="Puzzles/Puzzle3/Puzzle1/BuildingBlocks/FullPieces" parent_id_path=PackedInt32Array(1941159865, 1120986992) index="1" unique_id=722341534]
-position = Vector2(-756.3313, 126.05552)
+position = Vector2(-789.2996, 116.358955)
+scale = Vector2(0.7, 0.7)
 
 [node name="PuzzlePiece2" parent="Puzzles/Puzzle3/Puzzle1/BuildingBlocks/FullPieces" parent_id_path=PackedInt32Array(1941159865, 1120986992) index="2" unique_id=189334816]
 position = Vector2(-990.98804, -267.62497)
@@ -683,6 +408,9 @@ position = Vector2(-475.13123, 347.13678)
 
 [node name="PuzzlePieceHollow2" parent="Puzzles/Puzzle3/Puzzle1/BuildingBlocks/HollowPieces" parent_id_path=PackedInt32Array(1941159865, 1500445843) index="1" unique_id=450693309]
 position = Vector2(-738.8777, 409.1949)
+
+[node name="Receptacle3" parent="Puzzles/Puzzle3/Puzzle1/BuildingBlocks" parent_id_path=PackedInt32Array(1941159865, 245013489) index="3" unique_id=1650063040]
+position = Vector2(-143.1, 140.89)
 
 [node name="Puzzle4" type="Node2D" parent="Puzzles" unique_id=802455452]
 position = Vector2(9124, 0)
@@ -767,14 +495,14 @@ comic = 20
 position = Vector2(-2241, 113)
 rect = Rect2(-767, -10, 777, 57)
 script = ExtResource("135_rcnf5")
-loop_name = 3507
+loop_name = 2201
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [node name="TriggerLoopZone2" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=689776476]
 position = Vector2(-2234, 182)
 rect = Rect2(-767, -10, 777, 57)
 script = ExtResource("135_rcnf5")
-loop_name = 3500
+loop_name = 1303
 loop_mode = 2
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
@@ -782,7 +510,7 @@ metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 position = Vector2(11076, 760)
 rect = Rect2(-767, -10, 777, 57)
 script = ExtResource("135_rcnf5")
-loop_name = 3507
+loop_name = 2201
 loop_mode = 1
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
@@ -790,7 +518,7 @@ metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 position = Vector2(11083, 829)
 rect = Rect2(-767, -10, 777, 57)
 script = ExtResource("135_rcnf5")
-loop_name = 3500
+loop_name = 1303
 loop_mode = 1
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 

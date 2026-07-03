@@ -627,18 +627,34 @@ position = Vector2(-206.74515, 275.58243)
 position = Vector2(-239.58182, 499.463)
 
 [node name="PuzzlePiece4" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="6" unique_id=1470086235]
-position = Vector2(426.09048, 583.04504)
+position = Vector2(479.82184, 580.05994)
+correct_rotation = 270
+
+[node name="Receptacle4" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="7" unique_id=126137542]
+position = Vector2(150.945, 513.575)
 
 [node name="PuzzlePiece5" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="8" unique_id=82169937]
-position = Vector2(882.8069, 463.6421)
+position = Vector2(903.70233, 466.62714)
+correct_rotation = 0
+
+[node name="Receptacle5" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="9" unique_id=1568642939]
+position = Vector2(41.18, 518.05)
 
 [node name="PuzzlePiece6" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="10" unique_id=535439245]
-position = Vector2(760.4193, 583.04504)
+position = Vector2(763.4043, 589.01526)
 rotation = 0.0
+correct_rotation = 270
+
+[node name="Receptacle6" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="11" unique_id=486694985]
+position = Vector2(436.005, 290.97)
 
 [node name="PuzzlePiece7" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="12" unique_id=1738010806]
-position = Vector2(596.23895, 439.76144)
-rotation = 1.5707964
+position = Vector2(623.1046, 439.76147)
+rotation = -4.712389
+correct_rotation = 0
+
+[node name="Receptacle7" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="13" unique_id=1478348281]
+position = Vector2(317.42, 302)
 
 [node name="CompletePuzzle" parent="PuzzleStore/DragDropPuzzle2" index="2" unique_id=1933061263]
 position = Vector2(-6, -2)
