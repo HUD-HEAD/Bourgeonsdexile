@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/mechanics/obstacle.tscn" id="5_6mkb4"]
 [ext_resource type="PackedScene" uid="uid://bquow8shtm7w3" path="res://components/chapter3/levels/level3.1/drag_drop_puzzle_3.1-4.tscn" id="6_vqma7"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="7_o2xsi"]
+[ext_resource type="Script" uid="uid://d2wk8l6f6idvx" path="res://components/utils/audio/audio integration nodes/audio_puzzle_controller.gd" id="7_vqma7"]
 [ext_resource type="Texture2D" uid="uid://cxylr6a40orij" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0001.png" id="8_ujkww"]
 [ext_resource type="Texture2D" uid="uid://d38pu7t511wt4" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0002.png" id="9_u0vif"]
 [ext_resource type="Texture2D" uid="uid://bx2fsfgwb0g5x" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0003.png" id="10_g5uet"]
@@ -585,6 +586,12 @@ position = Vector2(685.7139, 428.57153)
 
 [node name="PuzzlePiece5" parent="Puzzle4/DragDropPuzzle4/BuildingBlocks" index="8" unique_id=1022298336]
 position = Vector2(847.6188, -171.42851)
+
+[node name="PuzzleDecoratorController" type="Node" parent="Puzzle4/DragDropPuzzle4" index="3" unique_id=274531208]
+script = ExtResource("7_vqma7")
+trigger_loop = true
+loop_name = 3501
+metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
 
 [node name="ClickableNpc" type="Area2D" parent="Puzzle4" index="3" unique_id=2122546920]
 position = Vector2(-90, 797)

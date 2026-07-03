@@ -18,6 +18,7 @@
 [ext_resource type="Script" uid="uid://nw1du1rkgxpn" path="res://scenes/chapter3/levels/area_entered_flip.gd" id="20_m0ijv"]
 [ext_resource type="Texture2D" uid="uid://dehacwdplh44r" path="res://graphics/chapter3/levels/CH3_puzzles/12_lullaby/full12_filled.png" id="21_vfllm"]
 [ext_resource type="SpriteFrames" uid="uid://do7dsfuo5fhg2" path="res://components/chapter3/main_characters/woman_blueskirt.tres" id="22_rfd6j"]
+[ext_resource type="Script" uid="uid://d2wk8l6f6idvx" path="res://components/utils/audio/audio integration nodes/audio_puzzle_controller.gd" id="25_kn0im"]
 [ext_resource type="Script" uid="uid://bn0sxcor0g10k" path="res://components/utils/mechanics/area_trigger_anim.gd" id="27_83a51"]
 [ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/mechanics/area_entered_enable.gd" id="130_ahkc3"]
 [ext_resource type="Texture2D" uid="uid://dkg5g27c3g6fd" path="res://graphics/chapter3/levels/bigavenue/road/train_new.png" id="133_gus1e"]
@@ -191,7 +192,7 @@ position = Vector2(-822.2224, -325.92606)
 
 [node name="PuzzlePiece3" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="4" unique_id=1334418623]
 position = Vector2(-659.2593, 644.44446)
-rotation = -3.1415925
+rotation = 3.1415925
 
 [node name="PuzzlePiece4" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="6" unique_id=1795176319]
 position = Vector2(-622.22235, 325.92603)
@@ -201,6 +202,12 @@ rotation = -1.5707964
 visible = false
 scale = Vector2(1.4, 1.4)
 texture = ExtResource("10_nnusv")
+
+[node name="PuzzleDecoratorController" type="Node" parent="WayTo/PuzzleMidwife/DragDropPuzzle10" index="3" unique_id=1522717427]
+script = ExtResource("25_kn0im")
+trigger_loop = true
+loop_name = 3501
+metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
 
 [node name="EnableMidwife" type="Area2D" parent="WayTo/PuzzleMidwife" index="3" unique_id=310843140 node_paths=PackedStringArray("node_to_enable")]
 position = Vector2(24, 631)
@@ -411,6 +418,12 @@ position = Vector2(700.00006, 327.27264)
 [node name="CompletePuzzle" parent="WayBack/PuzzleStreet/DragDropPuzzle6" index="2" unique_id=1933061263]
 texture = ExtResource("143_6h5r6")
 
+[node name="PuzzleDecoratorController" type="Node" parent="WayBack/PuzzleStreet/DragDropPuzzle6" index="3" unique_id=1964389589]
+script = ExtResource("25_kn0im")
+trigger_loop = true
+loop_name = 3501
+metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
+
 [node name="Zlata" parent="PathTo/PathFollowTo" parent_id_path=PackedInt32Array(666369972) index="0" unique_id=700974070]
 play_walking_sfx = true
 
@@ -496,6 +509,12 @@ position = Vector2(-400.9994, -773.2501)
 [node name="CompletePuzzle" parent="PuzzlePharmacy/DragDropPuzzle" index="2" unique_id=1933061263]
 position = Vector2(156.24878, -187.5)
 texture = ExtResource("145_2e6vs")
+
+[node name="PuzzleDecoratorController" type="Node" parent="PuzzlePharmacy/DragDropPuzzle" index="3" unique_id=1046877945]
+script = ExtResource("25_kn0im")
+trigger_loop = true
+loop_name = 3501
+metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="9" unique_id=1869949079]
 libraries/ = SubResource("AnimationLibrary_41b52")

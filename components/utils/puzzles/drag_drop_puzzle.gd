@@ -3,6 +3,7 @@
 class_name DragDropPuzzle
 extends Node2D
 
+signal puzzle_spawn
 signal puzzle_complete
 
 ## All puzzle pieces and their corresponding receptacle
@@ -86,6 +87,7 @@ func deactivate():
 
 func spawn_puzzle():
 	_spawn_pieces()
+	puzzle_spawn.emit()
 	
 	#Show outline
 	outline_image.show()

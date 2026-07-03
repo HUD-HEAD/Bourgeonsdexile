@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://1d5cgw78yuqi" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0008.png" id="14_44fmv"]
 [ext_resource type="Texture2D" uid="uid://d23ieao6dhvgf" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0009.png" id="15_myods"]
 [ext_resource type="Texture2D" uid="uid://dga5up2jric8i" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0010.png" id="16_txdgi"]
+[ext_resource type="Script" uid="uid://d2wk8l6f6idvx" path="res://components/utils/audio/audio integration nodes/audio_puzzle_controller.gd" id="16_uxv1h"]
 [ext_resource type="Texture2D" uid="uid://y8tt1fp6wspi" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0011.png" id="17_s5lj1"]
 [ext_resource type="Texture2D" uid="uid://btjyg4kxj4wy4" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0012.png" id="18_fbeob"]
 [ext_resource type="Texture2D" uid="uid://dflx0gfbxasxw" path="res://graphics/chapter1/levels/city/npcs/NPC_talk/NPC_talk_0013.png" id="19_v81oq"]
@@ -796,6 +797,12 @@ position = Vector2(-445, -102)
 position = Vector2(174, -6)
 scale = Vector2(-1.085, -1.043)
 texture = ExtResource("133_l8mmb")
+
+[node name="PuzzleDecoratorController" type="Node" parent="Puzzles/Puzzle2/DragDropPuzzle2" unique_id=442799192]
+script = ExtResource("16_uxv1h")
+trigger_loop = true
+loop_name = 3501
+metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
 
 [node name="ClickableNpc" type="Area2D" parent="Puzzles/Puzzle2" unique_id=1330283989]
 position = Vector2(-713, 569)
