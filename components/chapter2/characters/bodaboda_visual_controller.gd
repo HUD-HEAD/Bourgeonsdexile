@@ -3,6 +3,7 @@ extends Node2D
 
 @export var char_area : Area2D
 @export var smoke_particles :GPUParticles2D 
+@export var bodaboda_stop_sprite: Sprite2D
 
 @export_group("Audio")
 @export var running_loop: TriggerLoopZone
@@ -27,11 +28,12 @@ func on_continue_bodaboda():
 		smoke_particles.emitting = false
 		running_loop.play_loop()
 		not_running_loop.stop_loop()
+		bodaboda_stop_sprite.hide()
 
 
 func _show_boda_broke():
 	_initialized = true
-	
+	bodaboda_stop_sprite.show()
 	smoke_particles.emitting = true
 	brake_sfx.play_sfx()
 	not_running_loop.play_loop()

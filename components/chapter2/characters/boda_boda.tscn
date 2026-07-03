@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="9_b5lhp"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="10_k5hxl"]
 [ext_resource type="AudioStream" uid="uid://cwplyl54oxmou" path="res://audio/chapter2/ambient/level 2/levle_2_desert_bus_brake.wav" id="11_s1sgh"]
+[ext_resource type="Texture2D" uid="uid://k71sv00c7sc2" path="res://graphics/chapter2/levels/goma/bodabodamanfeetground_2.png" id="12_k5hxl"]
 
 [sub_resource type="Curve" id="Curve_aao6k"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -76,11 +77,13 @@ input_pickable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=450716263]
 position = Vector2(-33, 161.5)
 shape = SubResource("RectangleShape2D_sriwm")
+debug_color = Color(0, 0.5950001, 0.7, 0.03137255)
 
-[node name="BodaBodaVisualController" type="Node2D" parent="." unique_id=232641166 node_paths=PackedStringArray("char_area", "smoke_particles", "running_loop", "not_running_loop", "brake_sfx")]
+[node name="BodaBodaVisualController" type="Node2D" parent="." unique_id=232641166 node_paths=PackedStringArray("char_area", "smoke_particles", "bodaboda_stop_sprite", "running_loop", "not_running_loop", "brake_sfx")]
 script = ExtResource("7_bwkhw")
 char_area = NodePath("../Area2D")
 smoke_particles = NodePath("../SmokeParticle")
+bodaboda_stop_sprite = NodePath("../bodaboda_stop_sprite")
 running_loop = NodePath("Audio_running")
 not_running_loop = NodePath("Audio_not_running")
 brake_sfx = NodePath("TriggerSfxOnClick")
@@ -104,3 +107,8 @@ play_sfx_once = true
 use_audio_stream = true
 stream = ExtResource("11_s1sgh")
 metadata/_custom_type_script = "uid://b7avucygxykbp"
+
+[node name="bodaboda_stop_sprite" type="Sprite2D" parent="." unique_id=1092380718]
+visible = false
+position = Vector2(-23, 40.98)
+texture = ExtResource("12_k5hxl")
