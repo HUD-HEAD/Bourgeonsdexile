@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://dvl57mmyxc12m" path="res://graphics/chapter3/levels/bigavenue/husband.png" id="17_kq1o5"]
 [ext_resource type="AudioStream" uid="uid://d120cejyuktti" path="res://audio/chapter3/ambient/levels ambience/ringtone_sound.wav" id="17_rtu30"]
 [ext_resource type="Texture2D" uid="uid://dabxmhi50p8ad" path="res://graphics/chapter3/levels/CH3_puzzles/7_conversation/full7_filled.png" id="19_5msxn"]
+[ext_resource type="Script" uid="uid://cwo7l3tuyc7g6" path="res://components/utils/puzzles/puzzle_hide_on_complete.gd" id="21_q4aky"]
 [ext_resource type="Script" uid="uid://d2wk8l6f6idvx" path="res://components/utils/audio/audio integration nodes/audio_puzzle_controller.gd" id="21_qnuec"]
 [ext_resource type="Texture2D" uid="uid://bkn0ffs7kumwf" path="res://graphics/chapter3/levels/CH3_puzzles/21/full21_filled.png" id="22_i0iuy"]
 [ext_resource type="Script" uid="uid://nw1du1rkgxpn" path="res://scenes/chapter3/levels/area_entered_flip.gd" id="24_rtu30"]
@@ -431,6 +432,12 @@ position = Vector2(590.9961, -378.9325)
 [node name="CompletePuzzle" parent="WayBack/PuzzlePhone/DragDropPuzzle" index="2" unique_id=1933061263]
 texture = ExtResource("19_5msxn")
 
+[node name="HidePuzzleOnComplete" type="Node" parent="WayBack/PuzzlePhone/DragDropPuzzle" index="3" unique_id=221128776 node_paths=PackedStringArray("extra_elements_to_hide")]
+script = ExtResource("21_q4aky")
+transition_enabled = true
+extra_elements_to_hide = [NodePath("../../Husband")]
+metadata/_custom_type_script = "uid://cwo7l3tuyc7g6"
+
 [node name="AnimationPlayerPhone" type="AnimationPlayer" parent="WayBack/PuzzlePhone" index="3" unique_id=294162819]
 editor_description = "#HACK : used hardcoded path workaround in AnimPlayer to avoid losing node while reparenting on pathfollow"
 libraries/ = SubResource("AnimationLibrary_se5nk")
@@ -512,6 +519,11 @@ script = ExtResource("21_qnuec")
 trigger_loop = true
 loop_name = 3501
 metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
+
+[node name="HidePuzzleOnComplete" type="Node" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9" index="4" unique_id=1415319545]
+script = ExtResource("21_q4aky")
+transition_enabled = true
+metadata/_custom_type_script = "uid://cwo7l3tuyc7g6"
 
 [node name="Car4" type="Sprite2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="2" unique_id=1752701603]
 position = Vector2(4070, 859)
