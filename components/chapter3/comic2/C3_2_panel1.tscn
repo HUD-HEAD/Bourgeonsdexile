@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="3_lab4b"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_3jpgc"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="4_rkc3c"]
-[ext_resource type="AudioStream" uid="uid://blf0boka8kybx" path="res://audio/chapter3/ambient/comic 2/panel_2.1_nana_woman_sound.wav" id="5_l08if"]
+[ext_resource type="AudioStream" uid="uid://di40m3ndxlon4" path="res://audio/chapter3/ambient/levels ambience/nana_short.wav" id="5_rkc3c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3jpgc"]
 radius = 361.08862
@@ -34,10 +34,12 @@ script = ExtResource("4_rkc3c")
 clickables = [NodePath("..")]
 play_sfx_once = true
 use_audio_stream = true
-stream = ExtResource("5_l08if")
+stream = ExtResource("5_rkc3c")
+linear_volume = 1.5
 metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="TransitionerCounter" type="Node" parent="." unique_id=293320336 node_paths=PackedStringArray("clickables")]
 script = ExtResource("4_3jpgc")
 clickables = [NodePath("../Clickable")]
+transition_delay = 4.0
 metadata/_custom_type_script = "uid://c44tybeisilbv"

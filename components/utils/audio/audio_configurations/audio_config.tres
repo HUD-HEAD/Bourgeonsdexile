@@ -365,6 +365,7 @@ metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
 script = ExtResource("1_0736c")
 type = 3508
 stream = ExtResource("54_ll2y0")
+volume = 1.3
 metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
 
 [sub_resource type="Resource" id="Resource_gxtfj"]

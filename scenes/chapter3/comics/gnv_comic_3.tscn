@@ -117,14 +117,6 @@ panels = [NodePath("../Panels/C33Panel8"), NodePath("../Panels/C33Panel9"), Node
 
 [node name="Audio" type="Node" parent="." unique_id=619569792]
 
-[node name="Stop_people_loop" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=1732542885]
-position = Vector2(1796, 708)
-rect = Rect2(-767, -10, 777, 57)
-script = ExtResource("20_m317j")
-loop_name = 2201
-loop_mode = 1
-metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
-
 [node name="Stop_steps" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=874406392]
 position = Vector2(1803, 777)
 rect = Rect2(-767, -10, 777, 57)

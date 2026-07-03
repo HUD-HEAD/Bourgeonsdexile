@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://crcrgrn18h2m6" path="res://components/utils/mechanics/face_path.gd" id="10_3oq03"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="10_ihdby"]
 [ext_resource type="Texture2D" uid="uid://cege631bopr3d" path="res://graphics/chapter3/levels/CH3_puzzles/1/full1_filled.png" id="11_vter2"]
+[ext_resource type="Script" uid="uid://d2wk8l6f6idvx" path="res://components/utils/audio/audio integration nodes/audio_puzzle_controller.gd" id="16_0ryu3"]
 [ext_resource type="Texture2D" uid="uid://bqmwvwxnvy503" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow1.png" id="16_fso6c"]
 [ext_resource type="Texture2D" uid="uid://dnon84uyke6c4" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow2.png" id="17_5iseg"]
 [ext_resource type="Texture2D" uid="uid://dkm7pj8kxf23p" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow3.png" id="18_3nv1h"]
@@ -23,7 +24,8 @@
 [ext_resource type="Texture2D" uid="uid://cyianhvqod18h" path="res://graphics/chapter2/levels/goma/npcs/woman_redbag_idle_5fps/woman_redbag_idle_0003.png" id="21_5pair"]
 [ext_resource type="Texture2D" uid="uid://mv3s6yrm3deh" path="res://graphics/chapter2/levels/goma/npcs/woman_redbag_idle_5fps/woman_redbag_idle_0004.png" id="22_dq4ev"]
 [ext_resource type="Texture2D" uid="uid://b2wrvijumdbv0" path="res://graphics/chapter2/levels/goma/npcs/woman_redbag_idle_5fps/woman_redbag_idle_0005.png" id="23_qeyy0"]
-[ext_resource type="AudioStream" uid="uid://cdpmtaw11xj5r" path="res://audio/chapter2/ambient/comic 2/panel_2.12_bus_sound.wav" id="133_b1c3r"]
+[ext_resource type="AudioStream" uid="uid://bakfc3llhg682" path="res://audio/chapter3/ambient/levels ambience/level_1_bus_sound.wav" id="26_0ryu3"]
+[ext_resource type="AudioStream" uid="uid://d120cejyuktti" path="res://audio/chapter3/ambient/levels ambience/ringtone_sound.wav" id="45_0ryu3"]
 [ext_resource type="SpriteFrames" uid="uid://dc8towwetalbq" path="res://components/chapter3/main_characters/zlata_stroller_sprite_frames.tres" id="133_kervo"]
 [ext_resource type="Texture2D" uid="uid://cnxhik4hi0cur" path="res://graphics/chapter3/levels/CH3_puzzles/2/full_filled.png" id="133_l8mmb"]
 [ext_resource type="Texture2D" uid="uid://d3qffacb4dcwg" path="res://graphics/chapter3/levels/CH3_puzzles/3/full3_filled.png" id="136_8vc46"]
@@ -43,7 +45,6 @@
 [ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="149_ru515"]
 [ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="150_g4m3t"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="155_8vc46"]
-[ext_resource type="AudioStream" uid="uid://c6pl2n2j6x47l" path="res://audio/chapter2/sfx/resolve_puzzle_UI_circle_bubble_sound.wav" id="156_uxv1h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fbeob"]
 size = Vector2(162, 502)
@@ -368,6 +369,12 @@ position = Vector2(174, -6)
 scale = Vector2(-1.085, -1.043)
 texture = ExtResource("133_l8mmb")
 
+[node name="PuzzleDecoratorController" type="Node" parent="Puzzles/Puzzle2/DragDropPuzzle2" unique_id=687619605]
+script = ExtResource("16_0ryu3")
+trigger_loop = true
+loop_name = 3501
+metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
+
 [node name="ClickableNpc" type="Area2D" parent="Puzzles/Puzzle2" unique_id=1330283989]
 position = Vector2(-713, 569)
 script = ExtResource("6_g24i2")
@@ -403,7 +410,7 @@ collision_mask = 2
 
 [node name="DragDropPuzzle3" parent="Puzzles/Puzzle3" unique_id=1283304511 instance=ExtResource("7_unyww")]
 position = Vector2(175, 195)
-resolve_puzzle_stream = ExtResource("133_b1c3r")
+resolve_puzzle_stream = ExtResource("26_0ryu3")
 
 [node name="OutlinePuzzle" parent="Puzzles/Puzzle3/DragDropPuzzle3" index="0" unique_id=1513168459]
 position = Vector2(-48.5, 51)
@@ -588,14 +595,14 @@ libraries/ = SubResource("AnimationLibrary_lue18")
 position = Vector2(-3128, 96)
 rect = Rect2(-767, -10, 777, 57)
 script = ExtResource("149_ru515")
-loop_name = 2201
+loop_name = 3503
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [node name="TriggerLoopZone2" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=1737840079]
 position = Vector2(-3128, 96)
 rect = Rect2(-767, -10, 777, 57)
 script = ExtResource("149_ru515")
-loop_name = 1303
+loop_name = 3500
 loop_mode = 2
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
@@ -603,7 +610,7 @@ metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 position = Vector2(-3500, 312)
 rect = Rect2(-433, -14, 126, 76)
 script = ExtResource("150_g4m3t")
-music_name = 3100
+music_name = 3500
 metadata/_custom_type_script = "uid://2aadlm17sdsf"
 
 [node name="AnimationPhone" type="AnimationPlayer" parent="." unique_id=1055162789]
@@ -613,7 +620,7 @@ libraries/ = SubResource("AnimationLibrary_l8mmb")
 script = ExtResource("155_8vc46")
 play_sfx_once = true
 use_audio_stream = true
-stream = ExtResource("156_uxv1h")
+stream = ExtResource("45_0ryu3")
 metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [editable path="Puzzles/Puzzle1/DragDropPuzzle"]

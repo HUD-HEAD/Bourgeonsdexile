@@ -52,6 +52,7 @@
 [ext_resource type="Texture2D" uid="uid://1i0u8t3miyni" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0028.png" id="42_60edg"]
 [ext_resource type="Texture2D" uid="uid://b0hiv21o1ua55" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0029.png" id="43_xx78f"]
 [ext_resource type="Texture2D" uid="uid://dij5juv3xb542" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0030.png" id="44_taisy"]
+[ext_resource type="Script" uid="uid://d2wk8l6f6idvx" path="res://components/utils/audio/audio integration nodes/audio_puzzle_controller.gd" id="50_apkoo"]
 [ext_resource type="Texture2D" uid="uid://busd5tbxrs6kt" path="res://graphics/chapter3/levels/CH3_puzzles/8_museumasking/full8_filled.png" id="126_der5b"]
 [ext_resource type="Texture2D" uid="uid://b5vajmdfhe3b2" path="res://graphics/chapter3/levels/CH3_puzzles/9_museumconversation/full9_filled.png" id="128_rcnf5"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="132_texi6"]
@@ -314,6 +315,12 @@ position = Vector2(-529.7627, -174.95233)
 [node name="CompletePuzzle" parent="Puzzles/Puzzle1/DragDropPuzzle" index="2" unique_id=1933061263]
 texture = ExtResource("126_der5b")
 
+[node name="PuzzleDecoratorController" type="Node" parent="Puzzles/Puzzle1/DragDropPuzzle" unique_id=1116821053]
+script = ExtResource("50_apkoo")
+trigger_loop = true
+loop_name = 3501
+metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
+
 [node name="Node2D" type="Node2D" parent="Puzzles/Puzzle1" unique_id=1692781264]
 
 [node name="Puzzle2" type="Node2D" parent="Puzzles" unique_id=1592024859]
@@ -375,6 +382,12 @@ position = Vector2(517, 108)
 
 [node name="CompletePuzzle" parent="Puzzles/Puzzle2/DragDropPuzzle2" index="2" unique_id=1933061263]
 texture = ExtResource("128_rcnf5")
+
+[node name="PuzzleDecoratorController" type="Node" parent="Puzzles/Puzzle2/DragDropPuzzle2" unique_id=182362445]
+script = ExtResource("50_apkoo")
+trigger_loop = true
+loop_name = 3501
+metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
 
 [node name="Puzzle3" type="Node2D" parent="Puzzles" unique_id=368534655]
 position = Vector2(2306, 0)

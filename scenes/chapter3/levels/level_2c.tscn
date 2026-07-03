@@ -39,6 +39,7 @@
 [ext_resource type="Texture2D" uid="uid://dehacwdplh44r" path="res://graphics/chapter3/levels/CH3_puzzles/12_lullaby/full12_filled.png" id="137_jhdp3"]
 [ext_resource type="Texture2D" uid="uid://dhq7irmqj6688" path="res://graphics/chapter3/levels/CH3_puzzles/17/full17_filled.png" id="139_1uodi"]
 [ext_resource type="Script" uid="uid://do4qlmbenh0hg" path="res://scenes/chapter3/levels/camera_adjust.gd" id="143_l2jfe"]
+[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="147_xm5eh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dihh7"]
 size = Vector2(501, 165)
@@ -572,6 +573,12 @@ position = Vector2(-363.63647, -4.5453186)
 [node name="CompletePuzzle" parent="WayBack/PuzzleLullaby/DragDropPuzzle3" index="2" unique_id=1933061263]
 texture = ExtResource("137_jhdp3")
 
+[node name="PuzzleDecoratorController" type="Node" parent="WayBack/PuzzleLullaby/DragDropPuzzle3" index="3" unique_id=643082704]
+script = ExtResource("137_j56uu")
+trigger_loop = true
+loop_name = 3508
+metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
+
 [node name="Car1" type="Sprite2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="2" unique_id=1891267274]
 position = Vector2(4544, 862)
 texture = ExtResource("135_dihh7")
@@ -698,6 +705,22 @@ shape = SubResource("CircleShape2D_kuwon")
 
 [node name="AdjustCamera" type="Node" parent="." index="12" unique_id=2103204904]
 script = ExtResource("143_l2jfe")
+
+[node name="Audio" type="Node" parent="." index="13" unique_id=55955162]
+
+[node name="LoopZone_street" type="VisibleOnScreenNotifier2D" parent="Audio" index="0" unique_id=215151188]
+position = Vector2(1402, 829)
+rect = Rect2(754, 30, 2439, 73)
+script = ExtResource("147_xm5eh")
+loop_name = 3503
+metadata/_custom_type_script = "uid://brda7473wfj1v"
+
+[node name="LoopZone_store" type="VisibleOnScreenNotifier2D" parent="Audio" index="1" unique_id=1120390473]
+position = Vector2(5379, 845)
+rect = Rect2(-10, -10, 72, 54)
+script = ExtResource("147_xm5eh")
+loop_name = 3506
+metadata/_custom_type_script = "uid://brda7473wfj1v"
 
 [editable path="WayTo/PuzzleThinkHome/Puzzle3"]
 [editable path="WayTo/PuzzleThinkHome/Puzzle3/BuildingBlocks/FullPieces/PuzzlePiece"]

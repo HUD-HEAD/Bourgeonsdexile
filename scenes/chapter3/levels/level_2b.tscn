@@ -34,8 +34,10 @@
 [ext_resource type="Script" uid="uid://bn0sxcor0g10k" path="res://components/utils/mechanics/area_trigger_anim.gd" id="27_83a51"]
 [ext_resource type="Texture2D" uid="uid://6jwjj3qhuopd" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_walk_5fps/npc_nurse_walk_0009.png" id="27_bw7j5"]
 [ext_resource type="Texture2D" uid="uid://cngkckfwwfrtc" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_walk_5fps/npc_nurse_walk_0010.png" id="28_hcd0i"]
+[ext_resource type="Script" uid="uid://d2wk8l6f6idvx" path="res://components/utils/audio/audio integration nodes/audio_puzzle_controller.gd" id="42_he26o"]
 [ext_resource type="Texture2D" uid="uid://1rrpcsdgsv8b" path="res://graphics/chapter3/levels/bigavenue/building/reels.png" id="46_43j51"]
 [ext_resource type="Texture2D" uid="uid://bnf0c6a1iaqcb" path="res://graphics/chapter3/levels/bigavenue/building/floors.png" id="47_4uaxx"]
+[ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="48_4uaxx"]
 [ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/mechanics/area_entered_enable.gd" id="130_ahkc3"]
 [ext_resource type="Texture2D" uid="uid://dkg5g27c3g6fd" path="res://graphics/chapter3/levels/bigavenue/road/train_new.png" id="133_gus1e"]
 [ext_resource type="Texture2D" uid="uid://d32grdjnvrlcq" path="res://graphics/chapter3/levels/bigavenue/road/car2.png" id="134_a11uh"]
@@ -266,7 +268,7 @@ position = Vector2(-822.2224, -325.92606)
 
 [node name="PuzzlePiece3" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="4" unique_id=1334418623]
 position = Vector2(-659.2593, 644.44446)
-rotation = 3.1415925
+rotation = -3.1415925
 
 [node name="PuzzlePiece4" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="6" unique_id=1795176319]
 position = Vector2(-622.22235, 325.92603)
@@ -276,6 +278,12 @@ rotation = -1.5707964
 visible = false
 scale = Vector2(1.4, 1.4)
 texture = ExtResource("10_nnusv")
+
+[node name="PuzzleDecoratorController" type="Node" parent="WayTo/PuzzleMidwife/DragDropPuzzle10" index="3" unique_id=1546946184]
+script = ExtResource("42_he26o")
+trigger_loop = true
+loop_name = 3501
+metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
 
 [node name="EnableMidwife" type="Area2D" parent="WayTo/PuzzleMidwife" index="3" unique_id=310843140 node_paths=PackedStringArray("node_to_enable")]
 position = Vector2(24, 631)
@@ -427,6 +435,12 @@ position = Vector2(-395.45453, 322.727)
 [node name="CompletePuzzle" parent="WayBack/PuzzleLullaby/DragDropPuzzle4" index="2" unique_id=1933061263]
 texture = ExtResource("21_vfllm")
 
+[node name="PuzzleDecoratorController" type="Node" parent="WayBack/PuzzleLullaby/DragDropPuzzle4" index="3" unique_id=2053323264]
+script = ExtResource("42_he26o")
+trigger_loop = true
+loop_name = 3508
+metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
+
 [node name="PuzzleStreet" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="3" unique_id=1010078163]
 position = Vector2(3531, 0)
 
@@ -485,6 +499,12 @@ position = Vector2(700.00006, 327.27264)
 
 [node name="CompletePuzzle" parent="WayBack/PuzzleStreet/DragDropPuzzle6" index="2" unique_id=1933061263]
 texture = ExtResource("143_6h5r6")
+
+[node name="PuzzleDecoratorController" type="Node" parent="WayBack/PuzzleStreet/DragDropPuzzle6" index="3" unique_id=1216820412]
+script = ExtResource("42_he26o")
+trigger_loop = true
+loop_name = 3501
+metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
 
 [node name="Zlata" parent="PathTo/PathFollowTo" parent_id_path=PackedInt32Array(666369972) index="0" unique_id=700974070]
 play_walking_sfx = true
@@ -572,6 +592,12 @@ position = Vector2(-400.9994, -773.2501)
 position = Vector2(156.24878, -187.5)
 texture = ExtResource("145_2e6vs")
 
+[node name="PuzzleDecoratorController" type="Node" parent="PuzzlePharmacy/DragDropPuzzle" index="3" unique_id=93341776]
+script = ExtResource("42_he26o")
+trigger_loop = true
+loop_name = 3505
+metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="9" unique_id=1869949079]
 libraries/ = SubResource("AnimationLibrary_41b52")
 
@@ -598,6 +624,15 @@ texture = ExtResource("46_43j51")
 z_index = 5
 position = Vector2(835, 682)
 texture = ExtResource("47_4uaxx")
+
+[node name="Audio" type="Node" parent="." index="14" unique_id=113284162]
+
+[node name="LoopZone_street" type="VisibleOnScreenNotifier2D" parent="Audio" index="0" unique_id=522685406]
+position = Vector2(1402, 829)
+rect = Rect2(751, 30, 2644, 73)
+script = ExtResource("48_4uaxx")
+loop_name = 3503
+metadata/_custom_type_script = "uid://brda7473wfj1v"
 
 [editable path="WayTo/PuzzleMidwife/ObstacleZlataMidwife"]
 [editable path="WayTo/PuzzleMidwife/DragDropPuzzle10"]
