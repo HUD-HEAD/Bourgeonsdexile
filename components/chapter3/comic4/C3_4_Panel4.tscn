@@ -31,28 +31,31 @@ size = Vector2(1565, 1050)
 [node name="1" type="Sprite2D" parent="." unique_id=616982721]
 texture = ExtResource("3_2kj5e")
 
-[node name="1" type="Sprite2D" parent="1" unique_id=1217565713]
-position = Vector2(-493.99997, -296.99997)
+[node name="TransparencyEffect" type="Node2D" parent="1" unique_id=2028929713]
+modulate = Color(1, 1, 1, 0.8745098)
+
+[node name="1" type="Sprite2D" parent="1/TransparencyEffect" unique_id=1217565713]
+position = Vector2(-493.9999, -296.99997)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_gdrgo")
 
-[node name="Sprite2D" type="Sprite2D" parent="1" unique_id=1883618881]
-position = Vector2(11, -297)
+[node name="Sprite2D" type="Sprite2D" parent="1/TransparencyEffect" unique_id=1883618881]
+position = Vector2(11.000061, -297)
 scale = Vector2(0.18888889, 0.18888888)
 texture = ExtResource("5_gqthc")
 
-[node name="2" type="Sprite2D" parent="1" unique_id=1012836696]
-position = Vector2(503.99997, -299.99997)
+[node name="2" type="Sprite2D" parent="1/TransparencyEffect" unique_id=1012836696]
+position = Vector2(504.00003, -299.99997)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("6_31m4e")
 
-[node name="3" type="Sprite2D" parent="1" unique_id=1523302667]
-position = Vector2(-470.99997, 0)
+[node name="3" type="Sprite2D" parent="1/TransparencyEffect" unique_id=1523302667]
+position = Vector2(-470.9999, 0)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_2tcdn")
 
-[node name="4" type="Sprite2D" parent="1" unique_id=1038989951]
-position = Vector2(516.99994, 0)
+[node name="4" type="Sprite2D" parent="1/TransparencyEffect" unique_id=1038989951]
+position = Vector2(517, 0)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("7_3nyfl")
 
@@ -60,67 +63,70 @@ texture = ExtResource("7_3nyfl")
 visible = false
 texture = ExtResource("1_sjjn3")
 
-[node name="photo1" type="Sprite2D" parent="museuminside2" unique_id=1075671117]
+[node name="TransparencyEffect" type="Node2D" parent="museuminside2" unique_id=180028923]
+modulate = Color(1, 1, 1, 0.8745098)
+
+[node name="photo1" type="Sprite2D" parent="museuminside2/TransparencyEffect" unique_id=1075671117]
 position = Vector2(-339, 8)
 scale = Vector2(0.14000909, 0.14000909)
 texture = ExtResource("3_gdrgo")
 
-[node name="photo2" type="Sprite2D" parent="museuminside2" unique_id=1994283062]
+[node name="photo2" type="Sprite2D" parent="museuminside2/TransparencyEffect" unique_id=1994283062]
 position = Vector2(-327, 209)
 scale = Vector2(0.14000909, 0.14000909)
 texture = ExtResource("4_2tcdn")
 
-[node name="photo3" type="Sprite2D" parent="museuminside2" unique_id=1589558396]
+[node name="photo3" type="Sprite2D" parent="museuminside2/TransparencyEffect" unique_id=1589558396]
 position = Vector2(0.9999995, 12)
 scale = Vector2(0.12221162, 0.122327365)
 texture = ExtResource("5_gqthc")
 
-[node name="photo4" type="Sprite2D" parent="museuminside2" unique_id=1590407167]
+[node name="photo4" type="Sprite2D" parent="museuminside2/TransparencyEffect" unique_id=1590407167]
 position = Vector2(338.00003, 9.999999)
 scale = Vector2(0.14010416, 0.13611111)
 texture = ExtResource("6_31m4e")
 
-[node name="photo5" type="Sprite2D" parent="museuminside2" unique_id=917287829]
+[node name="photo5" type="Sprite2D" parent="museuminside2/TransparencyEffect" unique_id=917287829]
 position = Vector2(344, 212)
 scale = Vector2(0.14270835, 0.1388889)
 texture = ExtResource("7_3nyfl")
 
-[node name="photo6" type="Sprite2D" parent="museuminside2" unique_id=1918317007]
+[node name="photo6" type="Sprite2D" parent="museuminside2/TransparencyEffect" unique_id=1918317007]
 position = Vector2(659, -382)
 scale = Vector2(0.050345387, 0.050187733)
 texture = ExtResource("8_e4x5d")
 
-[node name="photo7" type="Sprite2D" parent="museuminside2" unique_id=37976372]
+[node name="photo7" type="Sprite2D" parent="museuminside2/TransparencyEffect" unique_id=37976372]
 position = Vector2(340.00003, -380)
 scale = Vector2(0.13404907, 0.12707376)
 texture = ExtResource("9_q8myw")
 
-[node name="photo8" type="Sprite2D" parent="museuminside2" unique_id=745816679]
+[node name="photo8" type="Sprite2D" parent="museuminside2/TransparencyEffect" unique_id=745816679]
 position = Vector2(657, -188)
 scale = Vector2(0.09997559, 0.09555012)
 texture = ExtResource("10_tpwa6")
 
-[node name="photo9" type="Sprite2D" parent="museuminside2" unique_id=192500006]
+[node name="photo9" type="Sprite2D" parent="museuminside2/TransparencyEffect" unique_id=192500006]
 position = Vector2(-715, 211.00002)
 scale = Vector2(0.059975594, 0.05732074)
 texture = ExtResource("11_jn222")
 
-[node name="photo10" type="Sprite2D" parent="museuminside2" unique_id=538731261]
+[node name="photo10" type="Sprite2D" parent="museuminside2/TransparencyEffect" unique_id=538731261]
 position = Vector2(-682, 9)
 scale = Vector2(0.09997559, 0.09555012)
 texture = ExtResource("12_5072t")
 
-[node name="photo11" type="Sprite2D" parent="museuminside2" unique_id=1790843726]
+[node name="photo11" type="Sprite2D" parent="museuminside2/TransparencyEffect" unique_id=1790843726]
 position = Vector2(-690.00006, -190.00002)
 scale = Vector2(0.053715218, 0.049660813)
 texture = ExtResource("13_xagr8")
 
-[node name="photo12" type="Sprite2D" parent="museuminside2" unique_id=1519178418]
+[node name="photo12" type="Sprite2D" parent="museuminside2/TransparencyEffect" unique_id=1519178418]
 position = Vector2(-679, -387)
 scale = Vector2(0.059975594, 0.05732074)
 texture = ExtResource("14_jabfn")
 
-[node name="photo13" type="Sprite2D" parent="museuminside2" unique_id=1861648889]
+[node name="photo13" type="Sprite2D" parent="museuminside2/TransparencyEffect" unique_id=1861648889]
 position = Vector2(-1, -380)
 scale = Vector2(0.051664528, 0.049277537)
 texture = ExtResource("15_20i1s")
