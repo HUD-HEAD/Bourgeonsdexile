@@ -1,0 +1,95 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://c21s13svmcg4k"]
+
+[ext_resource type="Texture2D" uid="uid://bgex50tysl2n1" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_idle_5fps/npc_nurse_idle_0001.png" id="1_knec1"]
+[ext_resource type="Texture2D" uid="uid://bjoab2me1xdq7" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_idle_5fps/npc_nurse_idle_0002.png" id="2_n4di3"]
+[ext_resource type="Texture2D" uid="uid://rghms203abmv" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_idle_5fps/npc_nurse_idle_0003.png" id="3_qy5vi"]
+[ext_resource type="Texture2D" uid="uid://cmf77hh2n17df" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_idle_5fps/npc_nurse_idle_0004.png" id="4_6u3bi"]
+[ext_resource type="Texture2D" uid="uid://cjqomratl00dc" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_idle_5fps/npc_nurse_idle_0005.png" id="5_u7yx6"]
+[ext_resource type="Texture2D" uid="uid://dq8fwwiw755k7" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_idle_5fps/npc_nurse_idle_0006.png" id="6_bip1v"]
+[ext_resource type="Texture2D" uid="uid://diwalfb0ko65g" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_idle_5fps/npc_nurse_idle_0007.png" id="7_pl6jw"]
+[ext_resource type="Texture2D" uid="uid://dyddq168umyfu" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_idle_5fps/npc_nurse_idle_0008.png" id="8_i6njb"]
+[ext_resource type="Texture2D" uid="uid://20hbw85gqm8m" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_idle_5fps/npc_nurse_idle_0009.png" id="9_nmj0w"]
+[ext_resource type="Texture2D" uid="uid://c2kle1cxtbeer" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_idle_5fps/npc_nurse_idle_0010.png" id="10_ejdmt"]
+[ext_resource type="Texture2D" uid="uid://bqa4ddi0cg1or" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_walk_5fps/npc_nurse_walk_0001.png" id="11_y4ceq"]
+[ext_resource type="Texture2D" uid="uid://ccoqnduhw0nkt" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_walk_5fps/npc_nurse_walk_0002.png" id="12_6qgcw"]
+[ext_resource type="Texture2D" uid="uid://b3my74jy1dtkj" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_walk_5fps/npc_nurse_walk_0003.png" id="13_2s0gu"]
+[ext_resource type="Texture2D" uid="uid://bpkx6cja455sb" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_walk_5fps/npc_nurse_walk_0004.png" id="14_2hcbc"]
+[ext_resource type="Texture2D" uid="uid://dy4luky0eghoo" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_walk_5fps/npc_nurse_walk_0005.png" id="15_hewyl"]
+[ext_resource type="Texture2D" uid="uid://dr4ckdmwxunt6" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_walk_5fps/npc_nurse_walk_0006.png" id="16_0vyk7"]
+[ext_resource type="Texture2D" uid="uid://67ttfnsxfgqo" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_walk_5fps/npc_nurse_walk_0007.png" id="17_7gk1a"]
+[ext_resource type="Texture2D" uid="uid://dhji7h381rue6" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_walk_5fps/npc_nurse_walk_0008.png" id="18_n2wrs"]
+[ext_resource type="Texture2D" uid="uid://6jwjj3qhuopd" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_walk_5fps/npc_nurse_walk_0009.png" id="19_nespn"]
+[ext_resource type="Texture2D" uid="uid://cngkckfwwfrtc" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_walk_5fps/npc_nurse_walk_0010.png" id="20_dotkt"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_knec1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_n4di3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qy5vi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6u3bi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_u7yx6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bip1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pl6jw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_i6njb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_nmj0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ejdmt")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_y4ceq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6qgcw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_2s0gu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_2hcbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_hewyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_0vyk7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_7gk1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_n2wrs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_nespn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_dotkt")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
