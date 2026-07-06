@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://p1f7u8j8auub" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_ lady_idle_5fps/lady_idle_0008.png" id="22_ehm2r"]
 [ext_resource type="Texture2D" uid="uid://drddrpxngja71" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_ lady_idle_5fps/lady_idle_0009.png" id="23_sdnlw"]
 [ext_resource type="Texture2D" uid="uid://384ad48v5iqw" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_ lady_idle_5fps/lady_idle_0010.png" id="24_lk2nr"]
+[ext_resource type="Script" uid="uid://cwo7l3tuyc7g6" path="res://components/utils/puzzles/puzzle_hide_on_complete.gd" id="38_pukob"]
 [ext_resource type="Script" uid="uid://bn0sxcor0g10k" path="res://components/utils/mechanics/area_trigger_anim.gd" id="131_hts78"]
 [ext_resource type="Texture2D" uid="uid://c5r2ts3n607rg" path="res://graphics/chapter3/levels/bigavenue/road/car4.png" id="132_0gkm7"]
 [ext_resource type="Texture2D" uid="uid://66vdhk0xnmxe" path="res://graphics/chapter3/levels/CH3_puzzles/16/full16_filled.png" id="132_cse6j"]
@@ -523,6 +524,11 @@ trigger_loop = true
 loop_name = 3501
 metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
 
+[node name="HidePuzzleOnComplete" type="Node" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle11" index="4" unique_id=1384468016]
+script = ExtResource("38_pukob")
+transition_enabled = true
+metadata/_custom_type_script = "uid://cwo7l3tuyc7g6"
+
 [node name="PuzzleLullaby" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="1" unique_id=13802618]
 position = Vector2(868, 0)
 
@@ -668,6 +674,11 @@ trigger_loop = true
 loop_name = 3501
 metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
 
+[node name="HidePuzzleOnComplete" type="Node" parent="PuzzleStore/DragDropPuzzle8" index="4" unique_id=1439615472]
+script = ExtResource("38_pukob")
+transition_enabled = true
+metadata/_custom_type_script = "uid://cwo7l3tuyc7g6"
+
 [node name="AreaActivateStorePuzzle" type="Area2D" parent="." index="9" unique_id=648755334 node_paths=PackedStringArray("area2d", "anim_player")]
 position = Vector2(5296, 861)
 collision_layer = 0
@@ -710,7 +721,7 @@ script = ExtResource("143_l2jfe")
 
 [node name="LoopZone_street" type="VisibleOnScreenNotifier2D" parent="Audio" index="0" unique_id=215151188]
 position = Vector2(1402, 829)
-rect = Rect2(754, 30, 2439, 73)
+rect = Rect2(754, 30, 2484, 73)
 script = ExtResource("147_xm5eh")
 loop_name = 3503
 metadata/_custom_type_script = "uid://brda7473wfj1v"

@@ -951,6 +951,21 @@ loop_name = 2103
 loop_mode = 3
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
+[node name="TriggerLoop_DesperateSound" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=351895412]
+position = Vector2(692, 856)
+rect = Rect2(-10, -10, 77, 87)
+script = ExtResource("66_idrs3")
+loop_name = 2108
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TriggerLoop_DesperateSound2" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1699447227]
+position = Vector2(6509, 715)
+rect = Rect2(-10, -10, 77, 87)
+script = ExtResource("66_idrs3")
+loop_name = 2108
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
 [node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="." unique_id=734422288]
 position = Vector2(6861, 522)
 rect = Rect2(-126, -10, 136, 157)

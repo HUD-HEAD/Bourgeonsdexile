@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://d2wk8l6f6idvx" path="res://components/utils/audio/audio integration nodes/audio_puzzle_controller.gd" id="7_mpuaf"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="7_o2xsi"]
 [ext_resource type="Texture2D" uid="uid://bbxtb156x038j" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_socialworker_stand_5fps/npc_socialworker_stand_0001.png" id="8_to45k"]
+[ext_resource type="Script" uid="uid://cwo7l3tuyc7g6" path="res://components/utils/puzzles/puzzle_hide_on_complete.gd" id="8_ty7ov"]
 [ext_resource type="Texture2D" uid="uid://cd7btjky75hdb" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_socialworker_stand_5fps/npc_socialworker_stand_0002.png" id="9_pqp2s"]
 [ext_resource type="Texture2D" uid="uid://duqgrhvyasha0" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_socialworker_stand_5fps/npc_socialworker_stand_0003.png" id="10_7ulj3"]
 [ext_resource type="Texture2D" uid="uid://djli3xykoqoe8" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_socialworker_stand_5fps/npc_socialworker_stand_0004.png" id="11_3l2h0"]
@@ -172,6 +173,11 @@ script = ExtResource("7_mpuaf")
 trigger_loop = true
 loop_name = 3501
 metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
+
+[node name="HidePuzzleOnComplete" type="Node" parent="Puzzle4/DragDropPuzzle4" index="4" unique_id=479719654]
+script = ExtResource("8_ty7ov")
+transition_enabled = true
+metadata/_custom_type_script = "uid://cwo7l3tuyc7g6"
 
 [node name="ClickableNpc" type="Area2D" parent="Puzzle4" index="3" unique_id=2122546920]
 position = Vector2(-90, 797)

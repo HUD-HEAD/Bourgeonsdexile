@@ -192,6 +192,7 @@
 [ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="191_yplh0"]
 [ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="192_b8fep"]
 [ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="192_j6pee"]
+[ext_resource type="Script" uid="uid://bkcmxvmjtvkng" path="res://components/chapter1/levels/jungle/animation_changer.gd" id="193_j6pee"]
 
 [sub_resource type="Curve2D" id="Curve2D_8pokd"]
 _data = {
@@ -735,7 +736,8 @@ follow_model = true
 path_follow = NodePath("..")
 
 [node name="AnimSprite" parent="Path2D/PathFollowCompanion1/Companion1" index="0" unique_id=689873547]
-frame_progress = 0.0
+animation = &"limp"
+frame_progress = 0.7372597
 
 [node name="MarkerBubbleSpawn" type="Marker2D" parent="Path2D/PathFollowCompanion1/Companion1" unique_id=1125285841]
 position = Vector2(-25.351257, -257.48834)
@@ -1667,6 +1669,13 @@ loop_name = 1203
 loop_mode = 1
 start_loop_on_enter_screen = false
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="AnimationChanger" type="VisibleOnScreenNotifier2D" parent="." unique_id=148448751 node_paths=PackedStringArray("women_reference")]
+position = Vector2(19120, 547)
+rect = Rect2(-10, -10, 247, 272)
+script = ExtResource("193_j6pee")
+women_reference = [NodePath("../Path2D/PathFollowCompanion1/Companion1"), NodePath("../Path2D/PathFollowCompanion2/Companion2"), NodePath("../Path2D/PathFollow2D/Leader")]
+metadata/_custom_type_script = "uid://bkcmxvmjtvkng"
 
 [editable path="Path2D/PathFollow2D/Leader"]
 [editable path="Path2D/PathFollowCompanion1/Companion1"]

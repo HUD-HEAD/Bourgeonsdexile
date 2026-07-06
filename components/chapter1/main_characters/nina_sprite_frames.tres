@@ -51,12 +51,20 @@
 [ext_resource type="Texture2D" uid="uid://c8jp5stfdpfa8" path="res://graphics/chapter1/main_characters/nina/MC_idle/MC_idle_0049.png" id="49_e1mv0"]
 [ext_resource type="Texture2D" uid="uid://1pdt08tkeobj" path="res://graphics/chapter1/main_characters/nina/MC_idle/MC_idle_0050.png" id="50_n51s7"]
 [ext_resource type="Texture2D" uid="uid://dpk87vjfsc2ov" path="res://graphics/chapter1/main_characters/nina/MC_walk/MC_walk_0001.png" id="51_gark8"]
+[ext_resource type="Texture2D" uid="uid://cmwf4cpk784a3" path="res://graphics/chapter1/main_characters/nina/Nina_limp_5fps/Nina_limp_0001.png" id="51_nnhcd"]
 [ext_resource type="Texture2D" uid="uid://c1tv61bofinah" path="res://graphics/chapter1/main_characters/nina/MC_walk/MC_walk_0002.png" id="52_kaktj"]
+[ext_resource type="Texture2D" uid="uid://dp8eeweri8gwk" path="res://graphics/chapter1/main_characters/nina/Nina_limp_5fps/Nina_limp_0002.png" id="52_lbu7l"]
+[ext_resource type="Texture2D" uid="uid://c8i07bj1df0ea" path="res://graphics/chapter1/main_characters/nina/Nina_limp_5fps/Nina_limp_0003.png" id="53_3k68e"]
 [ext_resource type="Texture2D" uid="uid://cps85gwwmty1d" path="res://graphics/chapter1/main_characters/nina/MC_walk/MC_walk_0003.png" id="53_d78br"]
+[ext_resource type="Texture2D" uid="uid://d2wcvoreosn53" path="res://graphics/chapter1/main_characters/nina/Nina_limp_5fps/Nina_limp_0004.png" id="54_2mxtq"]
 [ext_resource type="Texture2D" uid="uid://bbg1t2upuqy3" path="res://graphics/chapter1/main_characters/nina/MC_walk/MC_walk_0004.png" id="54_yw2a8"]
+[ext_resource type="Texture2D" uid="uid://w5vdj04e3730" path="res://graphics/chapter1/main_characters/nina/Nina_limp_5fps/Nina_limp_0005.png" id="55_1nlq2"]
 [ext_resource type="Texture2D" uid="uid://u2aor16kvif7" path="res://graphics/chapter1/main_characters/nina/MC_walk/MC_walk_0005.png" id="55_yilh2"]
 [ext_resource type="Texture2D" uid="uid://dn102or88qu40" path="res://graphics/chapter1/main_characters/nina/MC_walk/MC_walk_0006.png" id="56_igkk6"]
+[ext_resource type="Texture2D" uid="uid://bdy7fdjl3dfkn" path="res://graphics/chapter1/main_characters/nina/Nina_limp_5fps/Nina_limp_0006.png" id="56_iqeoe"]
+[ext_resource type="Texture2D" uid="uid://bgg28n1ja3qmn" path="res://graphics/chapter1/main_characters/nina/Nina_limp_5fps/Nina_limp_0007.png" id="57_dje7l"]
 [ext_resource type="Texture2D" uid="uid://cxirh3sxpp6jp" path="res://graphics/chapter1/main_characters/nina/MC_walk/MC_walk_0007.png" id="57_syflp"]
+[ext_resource type="Texture2D" uid="uid://0max2mfgq6fa" path="res://graphics/chapter1/main_characters/nina/Nina_limp_5fps/Nina_limp_0008.png" id="58_vtam3"]
 [ext_resource type="Texture2D" uid="uid://dpanx5efohr80" path="res://graphics/chapter1/main_characters/nina/MC_walk/MC_walk_0008.png" id="58_y7vbl"]
 [ext_resource type="Texture2D" uid="uid://diwqdg6f62rl5" path="res://graphics/chapter1/main_characters/nina/MC_walk/MC_walk_0009.png" id="59_uhwx6"]
 [ext_resource type="Texture2D" uid="uid://bnbxagkv8itha" path="res://graphics/chapter1/main_characters/nina/MC_walk/MC_walk_0010.png" id="60_s2ibr"]
@@ -257,6 +265,35 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("51_nnhcd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_lbu7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_3k68e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_2mxtq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_1nlq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_iqeoe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_dje7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_vtam3")
+}],
+"loop": true,
+"name": &"limp",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
