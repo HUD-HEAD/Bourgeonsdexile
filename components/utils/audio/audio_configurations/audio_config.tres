@@ -96,7 +96,6 @@
 [ext_resource type="AudioStream" uid="uid://dfwmbks2sonxo" path="res://audio/chapter3/ambient/levels ambience/level_3_museum.wav" id="53_sce7s"]
 [ext_resource type="AudioStream" uid="uid://df2rs52kcf4xd" path="res://audio/chapter2/ambient/comic 3/panel_3.4_sound_water_drink_1_sound.wav" id="54_hqvqq"]
 [ext_resource type="AudioStream" uid="uid://phmf3d1aoyig" path="res://audio/chapter3/ambient/levels ambience/nana_loop.wav" id="54_ll2y0"]
-[ext_resource type="AudioStream" uid="uid://ctyhrg3d6ji85" path="res://audio/chapter2/ambient/level 1/panel_1.0_people_desperate_sound.wav" id="55_a2w20"]
 [ext_resource type="AudioStream" uid="uid://daernt6524t73" path="res://audio/chapter2/ambient/comic 3/panel_3.4_sound_water_drink_2_sound.wav" id="55_b0xf2"]
 [ext_resource type="AudioStream" uid="uid://8cxsnhecgtwj" path="res://audio/chapter2/soundtrack/level_1_part2_level_2_transportation_theme.wav" id="58_csuln"]
 [ext_resource type="AudioStream" uid="uid://b24ayplejmi5m" path="res://audio/chapter3/soundtrack/comic_2_lonely_theme.wav" id="59_s5pht"]
@@ -369,10 +368,13 @@ stream = ExtResource("54_ll2y0")
 volume = 1.3
 metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
 
+[sub_resource type="Resource" id="Resource_shm0v"]
+metadata/__load_path__ = "res://audio/chapter1/ambient/panel_1.0_people_desperate_sound.wav"
+
 [sub_resource type="Resource" id="Resource_3h1o5"]
 script = ExtResource("1_0736c")
 type = 2108
-stream = ExtResource("55_a2w20")
+stream = SubResource("Resource_shm0v")
 metadata/_custom_type_script = "uid://dojbh2mbjt6sh"
 
 [sub_resource type="Resource" id="Resource_gxtfj"]
