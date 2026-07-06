@@ -11,7 +11,7 @@ extends Node2D
 @export var walk_speed : int = 75
 
 var walking : bool
-
+var walking_key_anim: String = "walking"
 
 var walk_along_path = false
 ## Used to go backwards on Path2D
@@ -44,7 +44,7 @@ func _on_area_entered(area : Area2D):
 	
 func _start_walking():
 	walking = true
-	anim_sprite.play("walking")
+	anim_sprite.play(walking_key_anim)
 	if play_walking_sfx:
 		AudioManager.play_walking_loop()
 
