@@ -15,26 +15,11 @@
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="6_5a67c"]
 [ext_resource type="PackedScene" uid="uid://bj1quvkv1wd5n" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-15.tscn" id="6_37s5b"]
 [ext_resource type="Texture2D" uid="uid://brsmaqdk6hriy" path="res://graphics/chapter3/levels/CH3_puzzles/23/full23_filled.png" id="10_nnusv"]
-[ext_resource type="Script" uid="uid://cwo7l3tuyc7g6" path="res://components/utils/puzzles/puzzle_hide_on_complete.gd" id="13_0g1iq"]
-[ext_resource type="Texture2D" uid="uid://bvvfqeq70yfsh" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_idle_5fps/woman_blueskirt_idle_0001.png" id="14_8c8kx"]
-[ext_resource type="Texture2D" uid="uid://bfcvyqvn2ju6a" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_idle_5fps/woman_blueskirt_idle_0002.png" id="15_ivkke"]
-[ext_resource type="Texture2D" uid="uid://doinblhviy3kx" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_idle_5fps/woman_blueskirt_idle_0003.png" id="16_43j51"]
-[ext_resource type="Texture2D" uid="uid://coief4apjqcj0" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_idle_5fps/woman_blueskirt_idle_0004.png" id="17_4uaxx"]
-[ext_resource type="Texture2D" uid="uid://dx7b8lhaekogt" path="res://graphics/chapter2/levels/goma/npcs/woman_blueskirt_idle_5fps/woman_blueskirt_idle_0005.png" id="18_he26o"]
-[ext_resource type="Texture2D" uid="uid://bqa4ddi0cg1or" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_walk_5fps/npc_nurse_walk_0001.png" id="19_0g1iq"]
-[ext_resource type="Texture2D" uid="uid://ccoqnduhw0nkt" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_walk_5fps/npc_nurse_walk_0002.png" id="20_4bgii"]
+[ext_resource type="SpriteFrames" uid="uid://c21s13svmcg4k" path="res://components/chapter3/main_characters/nurse_sprite_frames.tres" id="15_iq0rp"]
 [ext_resource type="Script" uid="uid://nw1du1rkgxpn" path="res://scenes/chapter3/levels/area_entered_flip.gd" id="20_m0ijv"]
-[ext_resource type="Texture2D" uid="uid://b3my74jy1dtkj" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_walk_5fps/npc_nurse_walk_0003.png" id="21_5psdx"]
 [ext_resource type="Texture2D" uid="uid://dehacwdplh44r" path="res://graphics/chapter3/levels/CH3_puzzles/12_lullaby/full12_filled.png" id="21_vfllm"]
-[ext_resource type="Texture2D" uid="uid://bpkx6cja455sb" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_walk_5fps/npc_nurse_walk_0004.png" id="22_2qj7w"]
 [ext_resource type="SpriteFrames" uid="uid://do7dsfuo5fhg2" path="res://components/chapter3/main_characters/woman_blueskirt.tres" id="22_rfd6j"]
-[ext_resource type="Texture2D" uid="uid://dy4luky0eghoo" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_walk_5fps/npc_nurse_walk_0005.png" id="23_wmvyn"]
-[ext_resource type="Texture2D" uid="uid://dr4ckdmwxunt6" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_walk_5fps/npc_nurse_walk_0006.png" id="24_tgb71"]
-[ext_resource type="Texture2D" uid="uid://67ttfnsxfgqo" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_walk_5fps/npc_nurse_walk_0007.png" id="25_6irfs"]
-[ext_resource type="Texture2D" uid="uid://dhji7h381rue6" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_walk_5fps/npc_nurse_walk_0008.png" id="26_54upl"]
 [ext_resource type="Script" uid="uid://bn0sxcor0g10k" path="res://components/utils/mechanics/area_trigger_anim.gd" id="27_83a51"]
-[ext_resource type="Texture2D" uid="uid://6jwjj3qhuopd" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_walk_5fps/npc_nurse_walk_0009.png" id="27_bw7j5"]
-[ext_resource type="Texture2D" uid="uid://cngkckfwwfrtc" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_nurse_walk_5fps/npc_nurse_walk_0010.png" id="28_hcd0i"]
 [ext_resource type="Script" uid="uid://d2wk8l6f6idvx" path="res://components/utils/audio/audio integration nodes/audio_puzzle_controller.gd" id="42_he26o"]
 [ext_resource type="Texture2D" uid="uid://1rrpcsdgsv8b" path="res://graphics/chapter3/levels/bigavenue/building/reels.png" id="46_43j51"]
 [ext_resource type="Texture2D" uid="uid://bnf0c6a1iaqcb" path="res://graphics/chapter3/levels/bigavenue/building/floors.png" id="47_4uaxx"]
@@ -68,64 +53,6 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -141.78946, 917.00006, 0, 0, 0, 0, 1185.9059, 920.0122, 0, 0, 0, 0, 1275.615, 802.5366, 0, 0, 0, 0, 1191.1829, 805.5488, 0, 0, 0, 0, 1278.7813, 667.9919, 0, 0, 0, 0, 843.95575, 668.996)
 }
 point_count = 6
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_15l6h"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("14_8c8kx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_ivkke")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_43j51")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_4uaxx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_he26o")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("19_0g1iq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_4bgii")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_5psdx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_2qj7w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_wmvyn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_tgb71")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_6irfs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_54upl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_bw7j5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_hcd0i")
-}],
-"loop": true,
-"name": &"walking",
-"speed": 6.0
-}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y5mxe"]
 radius = 100.42
@@ -269,7 +196,7 @@ position = Vector2(-822.2224, -325.92606)
 
 [node name="PuzzlePiece3" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="4" unique_id=1334418623]
 position = Vector2(-659.2593, 644.44446)
-rotation = -3.1415925
+rotation = 3.1415925
 
 [node name="PuzzlePiece4" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="6" unique_id=1795176319]
 position = Vector2(-622.22235, 325.92603)
@@ -285,11 +212,6 @@ script = ExtResource("42_he26o")
 trigger_loop = true
 loop_name = 3501
 metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
-
-[node name="HidePuzzleOnComplete" type="Node" parent="WayTo/PuzzleMidwife/DragDropPuzzle10" index="4" unique_id=415150296]
-script = ExtResource("13_0g1iq")
-transition_enabled = true
-metadata/_custom_type_script = "uid://cwo7l3tuyc7g6"
 
 [node name="EnableMidwife" type="Area2D" parent="WayTo/PuzzleMidwife" index="3" unique_id=310843140 node_paths=PackedStringArray("node_to_enable")]
 position = Vector2(24, 631)
@@ -318,7 +240,8 @@ scale = Vector2(0.4, 0.4)
 path_follow = NodePath("..")
 
 [node name="AnimSprite" parent="WayTo/PathMidwife/MidwifePathFollow/Midwife" index="0" unique_id=689873547]
-sprite_frames = SubResource("SpriteFrames_15l6h")
+sprite_frames = ExtResource("15_iq0rp")
+animation = &"idle"
 
 [node name="Area2D" parent="WayTo/PathMidwife/MidwifePathFollow/Midwife" index="1" unique_id=960188442]
 collision_layer = 8
