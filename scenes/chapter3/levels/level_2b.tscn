@@ -19,6 +19,7 @@
 [ext_resource type="Script" uid="uid://nw1du1rkgxpn" path="res://scenes/chapter3/levels/area_entered_flip.gd" id="20_m0ijv"]
 [ext_resource type="Texture2D" uid="uid://dehacwdplh44r" path="res://graphics/chapter3/levels/CH3_puzzles/12_lullaby/full12_filled.png" id="21_vfllm"]
 [ext_resource type="SpriteFrames" uid="uid://do7dsfuo5fhg2" path="res://components/chapter3/main_characters/woman_blueskirt.tres" id="22_rfd6j"]
+[ext_resource type="Script" uid="uid://slvf74h0laob" path="res://components/utils/comics/npc_movement_controller.gd" id="27_8mq57"]
 [ext_resource type="Script" uid="uid://bn0sxcor0g10k" path="res://components/utils/mechanics/area_trigger_anim.gd" id="27_83a51"]
 [ext_resource type="Script" uid="uid://cwo7l3tuyc7g6" path="res://components/utils/puzzles/puzzle_hide_on_complete.gd" id="32_bglj4"]
 [ext_resource type="Script" uid="uid://d2wk8l6f6idvx" path="res://components/utils/audio/audio integration nodes/audio_puzzle_controller.gd" id="42_he26o"]
@@ -197,7 +198,7 @@ position = Vector2(-822.2224, -325.92606)
 
 [node name="PuzzlePiece3" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="4" unique_id=1334418623]
 position = Vector2(-659.2593, 644.44446)
-rotation = -3.1415925
+rotation = 3.1415925
 
 [node name="PuzzlePiece4" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="6" unique_id=1795176319]
 position = Vector2(-622.22235, 325.92603)
@@ -390,7 +391,19 @@ position = Vector2(-54, 0)
 collision_mask = 2
 script = ExtResource("5_kh7pe")
 
-[node name="Clickable" type="Area2D" parent="WayBack/PuzzleStreet" index="2" unique_id=652852650]
+[node name="NpcMovementController" type="VisibleOnScreenNotifier2D" parent="WayBack/PuzzleStreet" index="2" unique_id=1475706199 node_paths=PackedStringArray("char_area", "puzzle", "anim_sprite", "npc")]
+position = Vector2(-31, 666)
+script = ExtResource("27_8mq57")
+char_area = NodePath("../Obstacle")
+puzzle = NodePath("../DragDropPuzzle6")
+anim_sprite = NodePath("../Clickable/Npc2")
+npc = NodePath("../Clickable")
+pre_puzzle_distance = -100.0
+post_puzzle_distance = 700.0
+movement_speed = 40.0
+metadata/_custom_type_script = "uid://slvf74h0laob"
+
+[node name="Clickable" type="Area2D" parent="WayBack/PuzzleStreet" index="3" unique_id=652852650]
 position = Vector2(-211, 854.00006)
 scale = Vector2(0.65, 0.65)
 script = ExtResource("6_5a67c")
@@ -407,7 +420,7 @@ autoplay = "idle"
 position = Vector2(63.076927, 53.846066)
 shape = SubResource("CircleShape2D_0e4sh")
 
-[node name="DragDropPuzzle6" parent="WayBack/PuzzleStreet" index="3" unique_id=886073334 instance=ExtResource("3_dobb3")]
+[node name="DragDropPuzzle6" parent="WayBack/PuzzleStreet" index="4" unique_id=886073334 instance=ExtResource("3_dobb3")]
 position = Vector2(-143, 770)
 scale = Vector2(0.22, 0.22)
 

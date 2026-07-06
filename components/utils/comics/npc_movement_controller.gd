@@ -23,7 +23,7 @@ const walking_key: String = "walking"
 func _ready() -> void:
 	is_moving = false
 	if start_walking:
-		npc.global_position.x += pre_puzzle_distance
+		npc.position.x += pre_puzzle_distance
 	
 	self.screen_entered.connect(_start_movement)
 	char_area.area_entered.connect(_stop_movement)
@@ -33,7 +33,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if is_moving:
-		npc.global_position.x += movement_speed * delta
+		npc.position.x += movement_speed * delta
 		next_distance -= movement_speed * delta
 		if next_distance <= 0:
 			_stop_movement(null)
