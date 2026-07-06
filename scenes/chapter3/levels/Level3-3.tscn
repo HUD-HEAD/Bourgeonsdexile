@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://5eu3p4caav7c" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0002.png" id="16_m51qe"]
 [ext_resource type="Texture2D" uid="uid://cj6wy0iwdxpdk" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0003.png" id="17_61asc"]
 [ext_resource type="Texture2D" uid="uid://bo0cliuciufff" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0004.png" id="18_vg2mg"]
+[ext_resource type="Script" uid="uid://cwo7l3tuyc7g6" path="res://components/utils/puzzles/puzzle_hide_on_complete.gd" id="19_ps2io"]
 [ext_resource type="Texture2D" uid="uid://caiiooxa137b0" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0005.png" id="19_ybqbt"]
 [ext_resource type="Texture2D" uid="uid://dtam0t5vjmorh" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0006.png" id="20_f4o71"]
 [ext_resource type="Texture2D" uid="uid://w1s3ew36iqf3" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_friends_talking_6fps/npc_friends_talking_0007.png" id="21_mf8yo"]
@@ -321,6 +322,11 @@ trigger_loop = true
 loop_name = 3501
 metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
 
+[node name="HidePuzzleOnComplete" type="Node" parent="Puzzles/Puzzle1/DragDropPuzzle" unique_id=20921476]
+script = ExtResource("19_ps2io")
+transition_enabled = true
+metadata/_custom_type_script = "uid://cwo7l3tuyc7g6"
+
 [node name="Node2D" type="Node2D" parent="Puzzles/Puzzle1" unique_id=1692781264]
 
 [node name="Puzzle2" type="Node2D" parent="Puzzles" unique_id=1592024859]
@@ -515,7 +521,7 @@ metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 position = Vector2(-2234, 182)
 rect = Rect2(-767, -10, 777, 57)
 script = ExtResource("135_rcnf5")
-loop_name = 1303
+loop_name = 3500
 loop_mode = 2
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
@@ -531,7 +537,7 @@ metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 position = Vector2(11083, 829)
 rect = Rect2(-767, -10, 777, 57)
 script = ExtResource("135_rcnf5")
-loop_name = 1303
+loop_name = 3500
 loop_mode = 1
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 

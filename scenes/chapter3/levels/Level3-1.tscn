@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://crcrgrn18h2m6" path="res://components/utils/mechanics/face_path.gd" id="10_3oq03"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="10_ihdby"]
 [ext_resource type="Texture2D" uid="uid://cege631bopr3d" path="res://graphics/chapter3/levels/CH3_puzzles/1/full1_filled.png" id="11_vter2"]
+[ext_resource type="Script" uid="uid://cwo7l3tuyc7g6" path="res://components/utils/puzzles/puzzle_hide_on_complete.gd" id="13_5pair"]
 [ext_resource type="Script" uid="uid://d2wk8l6f6idvx" path="res://components/utils/audio/audio integration nodes/audio_puzzle_controller.gd" id="16_0ryu3"]
 [ext_resource type="Texture2D" uid="uid://bqmwvwxnvy503" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow1.png" id="16_fso6c"]
 [ext_resource type="Texture2D" uid="uid://dnon84uyke6c4" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow2.png" id="17_5iseg"]
@@ -306,6 +307,12 @@ position = Vector2(359.72205, -213.88882)
 [node name="CompletePuzzle" parent="Puzzles/Puzzle1/DragDropPuzzle" index="2" unique_id=1933061263]
 texture = ExtResource("11_vter2")
 
+[node name="HidePuzzleOnComplete" type="Node" parent="Puzzles/Puzzle1/DragDropPuzzle" unique_id=852849683 node_paths=PackedStringArray("extra_elements_to_hide")]
+script = ExtResource("13_5pair")
+transition_enabled = true
+extra_elements_to_hide = [NodePath("../../Husband")]
+metadata/_custom_type_script = "uid://cwo7l3tuyc7g6"
+
 [node name="Husband" type="Sprite2D" parent="Puzzles/Puzzle1" unique_id=1413426561]
 visible = false
 position = Vector2(-770.9995, 333)
@@ -454,6 +461,11 @@ position = Vector2(187, 72)
 
 [node name="CompletePuzzle" parent="Puzzles/Puzzle3/DragDropPuzzle3" index="2" unique_id=1933061263]
 texture = ExtResource("136_8vc46")
+
+[node name="HidePuzzleOnComplete" type="Node" parent="Puzzles/Puzzle3/DragDropPuzzle3" unique_id=168512400]
+script = ExtResource("13_5pair")
+transition_enabled = true
+metadata/_custom_type_script = "uid://cwo7l3tuyc7g6"
 
 [node name="Puzzle5" type="Node2D" parent="Puzzles" unique_id=1223379638]
 position = Vector2(-15792, 76)

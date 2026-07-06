@@ -5,8 +5,8 @@ extends Node
 
 @export var transition_enabled: bool = false
 @export var extra_elements_to_hide: Array[CanvasItem]
-var delay: float = 2
-var transition_time: float = 1
+const delay: float = 2
+const transition_time: float = 1
 
 func _ready() -> void:
 	assert(is_instance_valid(puzzle))

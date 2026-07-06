@@ -503,7 +503,7 @@ position = Vector2(1046.6666, 306.66675)
 
 [node name="PuzzlePiece4" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="6" unique_id=1795176319]
 position = Vector2(1226.6665, 480)
-rotation = -3.1415925
+rotation = 3.1415925
 
 [node name="PuzzlePiece5" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="8" unique_id=1711508116]
 position = Vector2(1400, 193.33319)
@@ -638,6 +638,7 @@ scale = Vector2(0.33499998, 0.33499998)
 
 [node name="PuzzlePiece" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="0" unique_id=1667760579]
 position = Vector2(-269.4317, 108.41803)
+rotation = -3.1415925
 
 [node name="PuzzlePiece2" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="2" unique_id=729525704]
 position = Vector2(-206.74515, 275.58243)
@@ -685,6 +686,11 @@ script = ExtResource("21_qnuec")
 trigger_loop = true
 loop_name = 3501
 metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
+
+[node name="HidePuzzleOnComplete" type="Node" parent="PuzzleStore/DragDropPuzzle2" index="4" unique_id=1047437482]
+script = ExtResource("21_q4aky")
+transition_enabled = true
+metadata/_custom_type_script = "uid://cwo7l3tuyc7g6"
 
 [node name="PuzzleCompletePathBack" parent="." index="8" unique_id=1605263297 node_paths=PackedStringArray("puzzle")]
 puzzle = NodePath("../PuzzleStore/DragDropPuzzle2")
