@@ -61,6 +61,7 @@ enum loop_type{
 	c2_1_motocycle_running_sound_loop_20_and_23 = 2105,
 	c2_1_motocycle_not_running = 2106,
 	c2_1_motocycle_broke = 2107,
+	c2_1_desperate_sound_goma = 2108,
 	
 	c2_2_day_night_sound = 2200,
 	c2_2_people_sound = 2201,
