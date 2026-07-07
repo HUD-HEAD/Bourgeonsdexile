@@ -312,20 +312,21 @@ radius = 129.062
 
 [node name="Level31" unique_id=2125939091 instance=ExtResource("1_aicyn")]
 
-[node name="Reels2_inside" type="Sprite2D" parent="Bg2/BuildingInside" parent_id_path=PackedInt32Array(639287802) index="4" unique_id=1496320154]
+[node name="Floors2" type="Sprite2D" parent="Bg2/BuildingInside" parent_id_path=PackedInt32Array(639287802) index="4" unique_id=783101172]
+z_index = 5
+position = Vector2(0, 93)
+texture = ExtResource("3_3tes0")
+
+[node name="Reels2_inside" type="Sprite2D" parent="Bg2/BuildingInside" parent_id_path=PackedInt32Array(639287802) index="5" unique_id=1496320154]
+visible = false
 position = Vector2(6, 186)
 texture = ExtResource("2_8rl55")
 
-[node name="Floors2" type="Sprite2D" parent="Bg2/BuildingInside/Reels2_inside" index="0" unique_id=783101172]
-z_index = 5
-position = Vector2(-6, -93)
-texture = ExtResource("3_3tes0")
-
-[node name="Reels4" type="Sprite2D" parent="Bg2/BuildingInside/Reels2_inside" index="1" unique_id=1862030008]
+[node name="Reels4" type="Sprite2D" parent="Bg2/BuildingInside/Reels2_inside" index="0" unique_id=1862030008]
 position = Vector2(-5, -401)
 texture = ExtResource("2_8rl55")
 
-[node name="Reels3" type="Sprite2D" parent="Bg2/BuildingInside/Reels2_inside" index="2" unique_id=105633880]
+[node name="Reels3" type="Sprite2D" parent="Bg2/BuildingInside/Reels2_inside" index="1" unique_id=105633880]
 z_index = 5
 position = Vector2(0, -271)
 texture = ExtResource("2_8rl55")
@@ -524,7 +525,7 @@ position = Vector2(1046.6666, 306.66675)
 
 [node name="PuzzlePiece4" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="6" unique_id=1795176319]
 position = Vector2(1226.6665, 480)
-rotation = 3.1415925
+rotation = -3.1415925
 
 [node name="PuzzlePiece5" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="8" unique_id=1711508116]
 position = Vector2(1400, 193.33319)
@@ -663,7 +664,6 @@ position = Vector2(64.22394, -257.03702)
 
 [node name="PuzzlePiece" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="0" unique_id=1667760579]
 position = Vector2(-269.4317, 108.41803)
-rotation = -3.1415925
 
 [node name="Receptacle" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="1" unique_id=1559191435]
 position = Vector2(296.22394, 191.96298)

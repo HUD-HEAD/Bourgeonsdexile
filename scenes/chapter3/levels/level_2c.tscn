@@ -356,20 +356,21 @@ radius = 129.062
 
 [node name="Level31" unique_id=2125939091 instance=ExtResource("1_y0jpi")]
 
-[node name="Reels2_inside" type="Sprite2D" parent="Bg2/BuildingInside" parent_id_path=PackedInt32Array(639287802) index="4" unique_id=1012021247]
+[node name="Floors2" type="Sprite2D" parent="Bg2/BuildingInside" parent_id_path=PackedInt32Array(639287802) index="4" unique_id=1845231287]
+z_index = 5
+position = Vector2(0, 93)
+texture = ExtResource("3_hwiuf")
+
+[node name="Reels2_inside" type="Sprite2D" parent="Bg2/BuildingInside" parent_id_path=PackedInt32Array(639287802) index="5" unique_id=1012021247]
+visible = false
 position = Vector2(6, 186)
 texture = ExtResource("2_s57i1")
 
-[node name="Floors2" type="Sprite2D" parent="Bg2/BuildingInside/Reels2_inside" index="0" unique_id=1845231287]
-z_index = 5
-position = Vector2(-6, -93)
-texture = ExtResource("3_hwiuf")
-
-[node name="Reels4" type="Sprite2D" parent="Bg2/BuildingInside/Reels2_inside" index="1" unique_id=429318899]
+[node name="Reels4" type="Sprite2D" parent="Bg2/BuildingInside/Reels2_inside" index="0" unique_id=429318899]
 position = Vector2(-5, -401)
 texture = ExtResource("2_s57i1")
 
-[node name="Reels3" type="Sprite2D" parent="Bg2/BuildingInside/Reels2_inside" index="2" unique_id=1425244667]
+[node name="Reels3" type="Sprite2D" parent="Bg2/BuildingInside/Reels2_inside" index="1" unique_id=1425244667]
 z_index = 5
 position = Vector2(0, -271)
 texture = ExtResource("2_s57i1")
