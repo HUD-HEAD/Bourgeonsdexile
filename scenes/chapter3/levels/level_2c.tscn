@@ -2,7 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://bh15fogf83oh7" path="res://scenes/chapter3/levels/level3-2_template.tscn" id="1_y0jpi"]
 [ext_resource type="PackedScene" uid="uid://uksp4g0p3kr4" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-6.tscn" id="2_fu3d2"]
+[ext_resource type="Texture2D" uid="uid://1rrpcsdgsv8b" path="res://graphics/chapter3/levels/bigavenue/building/reels.png" id="2_s57i1"]
 [ext_resource type="Script" uid="uid://qu5hfw1uwm0x" path="res://components/utils/mechanics/area_reveal.gd" id="2_us6en"]
+[ext_resource type="Texture2D" uid="uid://bnf0c6a1iaqcb" path="res://graphics/chapter3/levels/bigavenue/building/floors.png" id="3_hwiuf"]
 [ext_resource type="Texture2D" uid="uid://dcbh8tasw2ens" path="res://graphics/chapter3/levels/bigavenue/store/store_bg.png" id="3_kuwon"]
 [ext_resource type="PackedScene" uid="uid://qpf3okag24cv" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-10.tscn" id="3_p8t2n"]
 [ext_resource type="PackedScene" uid="uid://f8u8e4gcddnq" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-14.tscn" id="4_3fi5r"]
@@ -15,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/mechanics/obstacle.tscn" id="8_hts78"]
 [ext_resource type="Script" uid="uid://ca78ngu4ava5l" path="res://components/utils/mechanics/obstacle_disable_hidden.gd" id="9_f1pwt"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="10_ari2e"]
+[ext_resource type="Script" uid="uid://slvf74h0laob" path="res://components/utils/comics/npc_movement_controller.gd" id="12_0s464"]
 [ext_resource type="Texture2D" uid="uid://bqmwvwxnvy503" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow1.png" id="12_4lm07"]
 [ext_resource type="Texture2D" uid="uid://dnon84uyke6c4" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow2.png" id="13_ylkpq"]
 [ext_resource type="Texture2D" uid="uid://dkm7pj8kxf23p" path="res://graphics/chapter1/main_characters/nina/animations/FloorShadow/shadow3.png" id="14_rotb8"]
@@ -28,6 +31,16 @@
 [ext_resource type="Texture2D" uid="uid://p1f7u8j8auub" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_ lady_idle_5fps/lady_idle_0008.png" id="22_ehm2r"]
 [ext_resource type="Texture2D" uid="uid://drddrpxngja71" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_ lady_idle_5fps/lady_idle_0009.png" id="23_sdnlw"]
 [ext_resource type="Texture2D" uid="uid://384ad48v5iqw" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_ lady_idle_5fps/lady_idle_0010.png" id="24_lk2nr"]
+[ext_resource type="Texture2D" uid="uid://x711pbhmw0bp" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_lady_walk_6fps/npc_lady_walk_0001.png" id="26_h3qrv"]
+[ext_resource type="Texture2D" uid="uid://coppwqoqghb6e" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_lady_walk_6fps/npc_lady_walk_0002.png" id="27_18tsm"]
+[ext_resource type="Texture2D" uid="uid://blp3bl4xxm8it" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_lady_walk_6fps/npc_lady_walk_0003.png" id="28_s57i1"]
+[ext_resource type="Texture2D" uid="uid://do5fx0tg5oajh" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_lady_walk_6fps/npc_lady_walk_0004.png" id="29_hwiuf"]
+[ext_resource type="Texture2D" uid="uid://dfv8ao4ap7u4" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_lady_walk_6fps/npc_lady_walk_0005.png" id="30_pdtdh"]
+[ext_resource type="Texture2D" uid="uid://cut2es8hxwf54" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_lady_walk_6fps/npc_lady_walk_0006.png" id="31_4ek2k"]
+[ext_resource type="Texture2D" uid="uid://b3vn4rlq7vfhl" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_lady_walk_6fps/npc_lady_walk_0007.png" id="32_e5g3e"]
+[ext_resource type="Texture2D" uid="uid://dcv6tau6tn65d" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_lady_walk_6fps/npc_lady_walk_0008.png" id="33_x3rxk"]
+[ext_resource type="Texture2D" uid="uid://cn2o4epghs8c6" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_lady_walk_6fps/npc_lady_walk_0009.png" id="34_hx8o7"]
+[ext_resource type="Texture2D" uid="uid://dqq2x27efvls5" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_lady_walk_6fps/npc_lady_walk_0010.png" id="35_dqsf7"]
 [ext_resource type="Script" uid="uid://cwo7l3tuyc7g6" path="res://components/utils/puzzles/puzzle_hide_on_complete.gd" id="38_pukob"]
 [ext_resource type="Script" uid="uid://bn0sxcor0g10k" path="res://components/utils/mechanics/area_trigger_anim.gd" id="131_hts78"]
 [ext_resource type="Texture2D" uid="uid://c5r2ts3n607rg" path="res://graphics/chapter3/levels/bigavenue/road/car4.png" id="132_0gkm7"]
@@ -99,8 +112,43 @@ animations = [{
 "texture": ExtResource("24_lk2nr")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
 "speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_h3qrv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_18tsm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_s57i1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_hwiuf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_pdtdh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_4ek2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_e5g3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_x3rxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_hx8o7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_dqsf7")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lxjsl"]
@@ -308,6 +356,25 @@ radius = 129.062
 
 [node name="Level31" unique_id=2125939091 instance=ExtResource("1_y0jpi")]
 
+[node name="Floors2" type="Sprite2D" parent="Bg2/BuildingInside" parent_id_path=PackedInt32Array(639287802) index="4" unique_id=1845231287]
+z_index = 5
+position = Vector2(0, 93)
+texture = ExtResource("3_hwiuf")
+
+[node name="Reels2_inside" type="Sprite2D" parent="Bg2/BuildingInside" parent_id_path=PackedInt32Array(639287802) index="5" unique_id=1012021247]
+visible = false
+position = Vector2(6, 186)
+texture = ExtResource("2_s57i1")
+
+[node name="Reels4" type="Sprite2D" parent="Bg2/BuildingInside/Reels2_inside" index="0" unique_id=429318899]
+position = Vector2(-5, -401)
+texture = ExtResource("2_s57i1")
+
+[node name="Reels3" type="Sprite2D" parent="Bg2/BuildingInside/Reels2_inside" index="1" unique_id=1425244667]
+z_index = 5
+position = Vector2(0, -271)
+texture = ExtResource("2_s57i1")
+
 [node name="AreaRevealStore" type="Area2D" parent="." index="1" unique_id=1943666368 node_paths=PackedStringArray("nodes_to_reveal", "nodes_to_hide")]
 position = Vector2(5124, 835)
 collision_layer = 0
@@ -352,7 +419,7 @@ next_scene = "uid://d4cccbwuwp1rh"
 metadata/_edit_pinned_properties_ = [&"next_scene"]
 
 [node name="PuzzleThinkHome" type="Node2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="0" unique_id=89541105]
-z_index = 1
+z_index = 10
 position = Vector2(854, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayTo/PuzzleThinkHome" index="0" unique_id=1714813389 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
@@ -401,7 +468,19 @@ position = Vector2(21, 0)
 collision_mask = 2
 script = ExtResource("9_f1pwt")
 
-[node name="Clickable" type="Area2D" parent="WayTo/PuzzleStreet" index="2" unique_id=739755710]
+[node name="NpcMovementController" type="VisibleOnScreenNotifier2D" parent="WayTo/PuzzleStreet" index="2" unique_id=1473517732 node_paths=PackedStringArray("char_area", "puzzle", "anim_sprite", "npc")]
+position = Vector2(-158, 834)
+script = ExtResource("12_0s464")
+char_area = NodePath("../Obstacle")
+puzzle = NodePath("../DragDropPuzzle7")
+anim_sprite = NodePath("../Clickable/Npc2")
+npc = NodePath("../Clickable")
+pre_puzzle_distance = 400.0
+post_puzzle_distance = -700.0
+movement_speed = -40.0
+metadata/_custom_type_script = "uid://slvf74h0laob"
+
+[node name="Clickable" type="Area2D" parent="WayTo/PuzzleStreet" index="3" unique_id=739755710]
 position = Vector2(130, 880.00006)
 scale = Vector2(0.39432567, 0.39432567)
 script = ExtResource("10_ari2e")
@@ -416,14 +495,15 @@ flip_h = true
 [node name="Npc2" type="AnimatedSprite2D" parent="WayTo/PuzzleStreet/Clickable" index="1" unique_id=1628709431]
 position = Vector2(38.039623, 68.4712)
 sprite_frames = SubResource("SpriteFrames_hvm84")
-autoplay = "default"
+animation = &"walking"
+autoplay = "idle"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WayTo/PuzzleStreet/Clickable" index="2" unique_id=627855458]
 position = Vector2(27.895725, 25.359594)
 shape = SubResource("CircleShape2D_lxjsl")
 
-[node name="DragDropPuzzle7" parent="WayTo/PuzzleStreet" index="3" unique_id=1550335163 instance=ExtResource("3_p8t2n")]
+[node name="DragDropPuzzle7" parent="WayTo/PuzzleStreet" index="4" unique_id=1550335163 instance=ExtResource("3_p8t2n")]
 position = Vector2(82, 804)
 rotation = 0.056675434
 scale = Vector2(0.22, 0.22)
@@ -472,6 +552,7 @@ position = Vector2(2199, 863)
 texture = ExtResource("132_0gkm7")
 
 [node name="PuzzleSocialWorker" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="0" unique_id=383437575]
+z_index = 10
 position = Vector2(1198, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleSocialWorker" index="0" unique_id=1424549490 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
@@ -530,6 +611,7 @@ transition_enabled = true
 metadata/_custom_type_script = "uid://cwo7l3tuyc7g6"
 
 [node name="PuzzleLullaby" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="1" unique_id=13802618]
+z_index = 10
 position = Vector2(868, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleLullaby" index="0" unique_id=1463826562 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]

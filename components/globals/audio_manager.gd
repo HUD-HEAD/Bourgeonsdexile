@@ -1,5 +1,5 @@
-extends Node
 
+extends Node
 
 ## Used for sounds that need to persist through scene transitions
 var audio_ambient : AudioStreamPlayer
@@ -176,6 +176,8 @@ func play_loop(key: AudioConfiguration.loop_type) -> AudioStreamPlayer:
 	var loop: AudioStreamPlayer = _get_free_loop(key)
 	var loop_info: loop_config = _get_loop(key)
 	
+	_check_lullaby(key, true)
+	
 	if loop != null:
 		loop.volume_linear = loop_info.volume
 		loop.pitch_scale = loop_info.pitch
@@ -188,6 +190,7 @@ func play_loop(key: AudioConfiguration.loop_type) -> AudioStreamPlayer:
 	
 func stop_loop(key: AudioConfiguration.loop_type, fade_in_enable: bool = true, fade_out_volume: float = 0):
 	_free_loop(key, fade_in_enable, fade_out_volume)
+	_check_lullaby(key, false)
 
 func free_walking_loop(key: AudioConfiguration.loop_type, fade_in_enable: bool = true ):
 	last_walking_loop = AudioConfiguration.loop_type.none
@@ -352,4 +355,40 @@ func fade_in(fade_in_player : AudioStreamPlayer, start_volume = 0.0, end_volume 
 	var tween : Tween = fade_in_player.create_tween()
 	tween.set_ease(Tween.EASE_OUT)
 	tween.tween_property(fade_in_player, "volume_linear", end_volume, TRANS_TIME)
+#endregion
+
+#region lullaby
+func _check_lullaby(key: AudioConfiguration.loop_type, is_playing: bool):
+	if key == AudioConfiguration.loop_type.c3_l_nana:
+		if is_playing:
+			decrease_music_volume()
+		else:
+			increase_music_volume()
+
+const reduced_music_volume:float = 0.5
+
+func decrease_music_volume():
+	var current_music_player: AudioStreamPlayer = get_current_music_player()
+	
+	var tween : Tween = current_music_player.create_tween()
+	tween.set_ease(Tween.EASE_IN)
+	tween.tween_property(current_music_player, "volume_linear", reduced_music_volume, TRANS_TIME)
+
+func increase_music_volume():
+	var current_music_player: AudioStreamPlayer = get_current_music_player()
+	
+	var tween : Tween = current_music_player.create_tween()
+	tween.set_ease(Tween.EASE_IN)
+	tween.tween_property(current_music_player, "volume_linear", 1, TRANS_TIME)
+
+func get_current_music_player() -> AudioStreamPlayer:
+		var current_music_player: AudioStreamPlayer
+		
+		if last_music_player <= 0:
+			current_music_player = music_2_player
+		else:
+			current_music_player = music_1_player
+		
+		return current_music_player
+
 #endregion

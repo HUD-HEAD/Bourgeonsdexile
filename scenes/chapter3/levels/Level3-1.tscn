@@ -26,7 +26,21 @@
 [ext_resource type="Texture2D" uid="uid://mv3s6yrm3deh" path="res://graphics/chapter2/levels/goma/npcs/woman_redbag_idle_5fps/woman_redbag_idle_0004.png" id="22_dq4ev"]
 [ext_resource type="Texture2D" uid="uid://b2wrvijumdbv0" path="res://graphics/chapter2/levels/goma/npcs/woman_redbag_idle_5fps/woman_redbag_idle_0005.png" id="23_qeyy0"]
 [ext_resource type="AudioStream" uid="uid://bakfc3llhg682" path="res://audio/chapter3/ambient/levels ambience/level_1_bus_sound.wav" id="26_0ryu3"]
+[ext_resource type="Texture2D" uid="uid://80lf7te52fx4" path="res://graphics/chapter2/levels/goma/npcs/woman_redbag_walk_6fps/woman_redbag_walk_0001.png" id="26_6bct4"]
+[ext_resource type="Texture2D" uid="uid://be3c1dht1xxrd" path="res://graphics/chapter2/levels/goma/npcs/woman_redbag_walk_6fps/woman_redbag_walk_0002.png" id="27_uv8gv"]
+[ext_resource type="Texture2D" uid="uid://rythehywo81a" path="res://graphics/chapter2/levels/goma/npcs/woman_redbag_walk_6fps/woman_redbag_walk_0003.png" id="28_dq5ld"]
+[ext_resource type="Texture2D" uid="uid://cqo73uusfr87r" path="res://graphics/chapter2/levels/goma/npcs/woman_redbag_walk_6fps/woman_redbag_walk_0004.png" id="29_lqkoh"]
+[ext_resource type="Texture2D" uid="uid://cjlbk58sgee1e" path="res://graphics/chapter2/levels/goma/npcs/woman_redbag_walk_6fps/woman_redbag_walk_0005.png" id="30_5nc6t"]
+[ext_resource type="Texture2D" uid="uid://dnogp1hqsnjk2" path="res://graphics/chapter2/levels/goma/npcs/woman_redbag_walk_6fps/woman_redbag_walk_0006.png" id="31_fr66y"]
+[ext_resource type="Texture2D" uid="uid://b00vlavg5msia" path="res://graphics/chapter2/levels/goma/npcs/woman_redbag_walk_6fps/woman_redbag_walk_0007.png" id="32_qw6ka"]
+[ext_resource type="Texture2D" uid="uid://pfdn3wsguv3x" path="res://graphics/chapter2/levels/goma/npcs/woman_redbag_walk_6fps/woman_redbag_walk_0008.png" id="33_kkyug"]
+[ext_resource type="Script" uid="uid://slvf74h0laob" path="res://components/utils/comics/npc_movement_controller.gd" id="34_uv8gv"]
 [ext_resource type="AudioStream" uid="uid://d120cejyuktti" path="res://audio/chapter3/ambient/levels ambience/ringtone_sound.wav" id="45_0ryu3"]
+[ext_resource type="Script" uid="uid://vb2r60a4n4tt" path="res://components/utils/audio/audio integration nodes/trigger_sound_consecutive.gd" id="54_dq5ld"]
+[ext_resource type="AudioStream" uid="uid://dg5l75klvhc8m" path="res://audio/chapter3/ambient/levels ambience/baby_loop_1.wav" id="55_fr66y"]
+[ext_resource type="AudioStream" uid="uid://bjwoknlukegbl" path="res://audio/chapter3/ambient/levels ambience/baby_loop_3.wav" id="57_kkyug"]
+[ext_resource type="AudioStream" uid="uid://bvnni7me7e8rg" path="res://audio/chapter3/ambient/levels ambience/baby_loop_2_1.wav" id="57_qw6ka"]
+[ext_resource type="AudioStream" uid="uid://c5alawlvnue1a" path="res://audio/chapter3/ambient/levels ambience/baby_loop_2_2.wav" id="58_kkyug"]
 [ext_resource type="SpriteFrames" uid="uid://dc8towwetalbq" path="res://components/chapter3/main_characters/zlata_stroller_sprite_frames.tres" id="133_kervo"]
 [ext_resource type="Texture2D" uid="uid://cnxhik4hi0cur" path="res://graphics/chapter3/levels/CH3_puzzles/2/full_filled.png" id="133_l8mmb"]
 [ext_resource type="Texture2D" uid="uid://d3qffacb4dcwg" path="res://graphics/chapter3/levels/CH3_puzzles/3/full3_filled.png" id="136_8vc46"]
@@ -89,8 +103,37 @@ animations = [{
 "texture": ExtResource("23_qeyy0")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
 "speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_6bct4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_uv8gv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_dq5ld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_lqkoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_5nc6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_fr66y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_qw6ka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_kkyug")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
 }]
 
 [sub_resource type="Curve2D" id="Curve2D_5yy0j"]
@@ -382,6 +425,18 @@ trigger_loop = true
 loop_name = 3501
 metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
 
+[node name="NpcMovementController" type="VisibleOnScreenNotifier2D" parent="Puzzles/Puzzle2" unique_id=770387407 node_paths=PackedStringArray("char_area", "puzzle", "anim_sprite", "npc")]
+position = Vector2(0, 569)
+script = ExtResource("34_uv8gv")
+char_area = NodePath("../Obstacle")
+puzzle = NodePath("../DragDropPuzzle2")
+anim_sprite = NodePath("../ClickableNpc/Npc")
+npc = NodePath("../ClickableNpc")
+pre_puzzle_distance = -2000.0
+post_puzzle_distance = 2000.0
+movement_speed = 200.0
+metadata/_custom_type_script = "uid://slvf74h0laob"
+
 [node name="ClickableNpc" type="Area2D" parent="Puzzles/Puzzle2" unique_id=1330283989]
 position = Vector2(-713, 569)
 script = ExtResource("6_g24i2")
@@ -397,7 +452,8 @@ autoplay = "default"
 position = Vector2(-15.000259, 135.99998)
 scale = Vector2(2.2749958, 2.2749958)
 sprite_frames = SubResource("SpriteFrames_b5cmm")
-autoplay = "default"
+animation = &"walking"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzles/Puzzle2/ClickableNpc" unique_id=1543576712]
 position = Vector2(0, 25)
@@ -624,6 +680,16 @@ rect = Rect2(-433, -14, 126, 76)
 script = ExtResource("150_g4m3t")
 music_name = 3500
 metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="TriggerSoundConsecutive" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=749450298]
+position = Vector2(-4026, 353)
+rect = Rect2(-146, -10, 156, 125)
+script = ExtResource("54_dq5ld")
+delay_time = 15.0
+sfx_list = Array[AudioStream]([ExtResource("55_fr66y"), ExtResource("57_kkyug"), ExtResource("57_qw6ka"), ExtResource("58_kkyug")])
+min_pitch = 0.95
+max_pitch = 1.05
+metadata/_custom_type_script = "uid://vb2r60a4n4tt"
 
 [node name="AnimationPhone" type="AnimationPlayer" parent="." unique_id=1055162789]
 libraries/ = SubResource("AnimationLibrary_l8mmb")

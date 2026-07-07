@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="3_lab4b"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_3jpgc"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="4_rkc3c"]
-[ext_resource type="AudioStream" uid="uid://di40m3ndxlon4" path="res://audio/chapter3/ambient/levels ambience/nana_short.wav" id="5_rkc3c"]
+[ext_resource type="AudioStream" uid="uid://dr75qq3dvieae" path="res://audio/chapter3/ambient/levels ambience/nana_vocal_short.wav" id="5_rkc3c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3jpgc"]
 radius = 361.08862
