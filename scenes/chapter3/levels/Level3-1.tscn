@@ -36,6 +36,11 @@
 [ext_resource type="Texture2D" uid="uid://pfdn3wsguv3x" path="res://graphics/chapter2/levels/goma/npcs/woman_redbag_walk_6fps/woman_redbag_walk_0008.png" id="33_kkyug"]
 [ext_resource type="Script" uid="uid://slvf74h0laob" path="res://components/utils/comics/npc_movement_controller.gd" id="34_uv8gv"]
 [ext_resource type="AudioStream" uid="uid://d120cejyuktti" path="res://audio/chapter3/ambient/levels ambience/ringtone_sound.wav" id="45_0ryu3"]
+[ext_resource type="Script" uid="uid://vb2r60a4n4tt" path="res://components/utils/audio/audio integration nodes/trigger_sound_consecutive.gd" id="54_dq5ld"]
+[ext_resource type="AudioStream" uid="uid://dg5l75klvhc8m" path="res://audio/chapter3/ambient/levels ambience/baby_loop_1.wav" id="55_fr66y"]
+[ext_resource type="AudioStream" uid="uid://bjwoknlukegbl" path="res://audio/chapter3/ambient/levels ambience/baby_loop_3.wav" id="57_kkyug"]
+[ext_resource type="AudioStream" uid="uid://bvnni7me7e8rg" path="res://audio/chapter3/ambient/levels ambience/baby_loop_2_1.wav" id="57_qw6ka"]
+[ext_resource type="AudioStream" uid="uid://c5alawlvnue1a" path="res://audio/chapter3/ambient/levels ambience/baby_loop_2_2.wav" id="58_kkyug"]
 [ext_resource type="SpriteFrames" uid="uid://dc8towwetalbq" path="res://components/chapter3/main_characters/zlata_stroller_sprite_frames.tres" id="133_kervo"]
 [ext_resource type="Texture2D" uid="uid://cnxhik4hi0cur" path="res://graphics/chapter3/levels/CH3_puzzles/2/full_filled.png" id="133_l8mmb"]
 [ext_resource type="Texture2D" uid="uid://d3qffacb4dcwg" path="res://graphics/chapter3/levels/CH3_puzzles/3/full3_filled.png" id="136_8vc46"]
@@ -675,6 +680,16 @@ rect = Rect2(-433, -14, 126, 76)
 script = ExtResource("150_g4m3t")
 music_name = 3500
 metadata/_custom_type_script = "uid://2aadlm17sdsf"
+
+[node name="TriggerSoundConsecutive" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=749450298]
+position = Vector2(-4026, 353)
+rect = Rect2(-146, -10, 156, 125)
+script = ExtResource("54_dq5ld")
+delay_time = 15.0
+sfx_list = Array[AudioStream]([ExtResource("55_fr66y"), ExtResource("57_kkyug"), ExtResource("57_qw6ka"), ExtResource("58_kkyug")])
+min_pitch = 0.95
+max_pitch = 1.05
+metadata/_custom_type_script = "uid://vb2r60a4n4tt"
 
 [node name="AnimationPhone" type="AnimationPlayer" parent="." unique_id=1055162789]
 libraries/ = SubResource("AnimationLibrary_l8mmb")
