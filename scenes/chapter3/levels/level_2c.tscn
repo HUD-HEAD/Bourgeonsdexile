@@ -2,7 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://bh15fogf83oh7" path="res://scenes/chapter3/levels/level3-2_template.tscn" id="1_y0jpi"]
 [ext_resource type="PackedScene" uid="uid://uksp4g0p3kr4" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-6.tscn" id="2_fu3d2"]
+[ext_resource type="Texture2D" uid="uid://1rrpcsdgsv8b" path="res://graphics/chapter3/levels/bigavenue/building/reels.png" id="2_s57i1"]
 [ext_resource type="Script" uid="uid://qu5hfw1uwm0x" path="res://components/utils/mechanics/area_reveal.gd" id="2_us6en"]
+[ext_resource type="Texture2D" uid="uid://bnf0c6a1iaqcb" path="res://graphics/chapter3/levels/bigavenue/building/floors.png" id="3_hwiuf"]
 [ext_resource type="Texture2D" uid="uid://dcbh8tasw2ens" path="res://graphics/chapter3/levels/bigavenue/store/store_bg.png" id="3_kuwon"]
 [ext_resource type="PackedScene" uid="uid://qpf3okag24cv" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-10.tscn" id="3_p8t2n"]
 [ext_resource type="PackedScene" uid="uid://f8u8e4gcddnq" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-14.tscn" id="4_3fi5r"]
@@ -354,6 +356,24 @@ radius = 129.062
 
 [node name="Level31" unique_id=2125939091 instance=ExtResource("1_y0jpi")]
 
+[node name="Reels2_inside" type="Sprite2D" parent="Bg2/BuildingInside" parent_id_path=PackedInt32Array(639287802) index="4" unique_id=1012021247]
+position = Vector2(6, 186)
+texture = ExtResource("2_s57i1")
+
+[node name="Floors2" type="Sprite2D" parent="Bg2/BuildingInside/Reels2_inside" index="0" unique_id=1845231287]
+z_index = 5
+position = Vector2(-6, -93)
+texture = ExtResource("3_hwiuf")
+
+[node name="Reels4" type="Sprite2D" parent="Bg2/BuildingInside/Reels2_inside" index="1" unique_id=429318899]
+position = Vector2(-5, -401)
+texture = ExtResource("2_s57i1")
+
+[node name="Reels3" type="Sprite2D" parent="Bg2/BuildingInside/Reels2_inside" index="2" unique_id=1425244667]
+z_index = 5
+position = Vector2(0, -271)
+texture = ExtResource("2_s57i1")
+
 [node name="AreaRevealStore" type="Area2D" parent="." index="1" unique_id=1943666368 node_paths=PackedStringArray("nodes_to_reveal", "nodes_to_hide")]
 position = Vector2(5124, 835)
 collision_layer = 0
@@ -398,7 +418,7 @@ next_scene = "uid://d4cccbwuwp1rh"
 metadata/_edit_pinned_properties_ = [&"next_scene"]
 
 [node name="PuzzleThinkHome" type="Node2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="0" unique_id=89541105]
-z_index = 1
+z_index = 10
 position = Vector2(854, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayTo/PuzzleThinkHome" index="0" unique_id=1714813389 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
@@ -531,6 +551,7 @@ position = Vector2(2199, 863)
 texture = ExtResource("132_0gkm7")
 
 [node name="PuzzleSocialWorker" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="0" unique_id=383437575]
+z_index = 10
 position = Vector2(1198, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleSocialWorker" index="0" unique_id=1424549490 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
@@ -589,6 +610,7 @@ transition_enabled = true
 metadata/_custom_type_script = "uid://cwo7l3tuyc7g6"
 
 [node name="PuzzleLullaby" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="1" unique_id=13802618]
+z_index = 10
 position = Vector2(868, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleLullaby" index="0" unique_id=1463826562 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]

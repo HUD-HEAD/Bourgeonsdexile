@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://cafq8mia6v86a"]
 
 [ext_resource type="PackedScene" uid="uid://bh15fogf83oh7" path="res://scenes/chapter3/levels/level3-2_template.tscn" id="1_aicyn"]
+[ext_resource type="Texture2D" uid="uid://1rrpcsdgsv8b" path="res://graphics/chapter3/levels/bigavenue/building/reels.png" id="2_8rl55"]
 [ext_resource type="PackedScene" uid="uid://c262lwecjsumn" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-8.tscn" id="2_80rf8"]
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="2_hd8xs"]
+[ext_resource type="Texture2D" uid="uid://bnf0c6a1iaqcb" path="res://graphics/chapter3/levels/bigavenue/building/floors.png" id="3_3tes0"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/mechanics/obstacle.tscn" id="3_052ky"]
 [ext_resource type="PackedScene" uid="uid://iu78nj4beigo" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-1.tscn" id="3_t5rg3"]
 [ext_resource type="PackedScene" uid="uid://dgljokfc58cu5" path="res://components/chapter3/levels/level3.2/drag_drop_puzzle_3.2-12.tscn" id="4_4mioc"]
@@ -310,6 +312,24 @@ radius = 129.062
 
 [node name="Level31" unique_id=2125939091 instance=ExtResource("1_aicyn")]
 
+[node name="Reels2_inside" type="Sprite2D" parent="Bg2/BuildingInside" parent_id_path=PackedInt32Array(639287802) index="4" unique_id=1496320154]
+position = Vector2(6, 186)
+texture = ExtResource("2_8rl55")
+
+[node name="Floors2" type="Sprite2D" parent="Bg2/BuildingInside/Reels2_inside" index="0" unique_id=783101172]
+z_index = 5
+position = Vector2(-6, -93)
+texture = ExtResource("3_3tes0")
+
+[node name="Reels4" type="Sprite2D" parent="Bg2/BuildingInside/Reels2_inside" index="1" unique_id=1862030008]
+position = Vector2(-5, -401)
+texture = ExtResource("2_8rl55")
+
+[node name="Reels3" type="Sprite2D" parent="Bg2/BuildingInside/Reels2_inside" index="2" unique_id=105633880]
+z_index = 5
+position = Vector2(0, -271)
+texture = ExtResource("2_8rl55")
+
 [node name="AreaRevealStore" type="Area2D" parent="." index="1" unique_id=934030736 node_paths=PackedStringArray("nodes_to_reveal")]
 position = Vector2(5124, 835)
 collision_layer = 0
@@ -356,7 +376,7 @@ position = Vector2(2507, 808)
 texture = ExtResource("10_gjepm")
 
 [node name="PuzzleThinkHome" type="Node2D" parent="WayTo" parent_id_path=PackedInt32Array(1018273493) index="1" unique_id=1304675676]
-z_index = 1
+z_index = 10
 position = Vector2(904, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayTo/PuzzleThinkHome" index="0" unique_id=206345537 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
@@ -464,6 +484,7 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 shape = SubResource("CircleShape2D_jrbug")
 
 [node name="PuzzleSocialWorker" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="1" unique_id=1734062459]
+z_index = 10
 position = Vector2(1070, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleSocialWorker" index="0" unique_id=68113819 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
@@ -503,7 +524,7 @@ position = Vector2(1046.6666, 306.66675)
 
 [node name="PuzzlePiece4" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="6" unique_id=1795176319]
 position = Vector2(1226.6665, 480)
-rotation = -3.1415925
+rotation = 3.1415925
 
 [node name="PuzzlePiece5" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="8" unique_id=1711508116]
 position = Vector2(1400, 193.33319)
@@ -530,6 +551,7 @@ position = Vector2(4070, 859)
 texture = ExtResource("140_lvjii")
 
 [node name="PuzzleLullaby" type="Node2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="3" unique_id=273347506]
+z_index = 10
 position = Vector2(859, 0)
 
 [node name="PuzzleSpawner" type="Node" parent="WayBack/PuzzleLullaby" index="0" unique_id=1053797870 node_paths=PackedStringArray("puzzle", "spawn_trigger", "obstacle")]
@@ -641,6 +663,7 @@ position = Vector2(64.22394, -257.03702)
 
 [node name="PuzzlePiece" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="0" unique_id=1667760579]
 position = Vector2(-269.4317, 108.41803)
+rotation = -3.1415925
 
 [node name="Receptacle" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="1" unique_id=1559191435]
 position = Vector2(296.22394, 191.96298)
@@ -774,7 +797,7 @@ loop_name = 3503
 metadata/_custom_type_script = "uid://brda7473wfj1v"
 
 [node name="LoopZone_store" type="VisibleOnScreenNotifier2D" parent="Audio" index="3" unique_id=1233436297]
-position = Vector2(5392, 840)
+position = Vector2(5472, 839)
 rect = Rect2(-10, -10, 72, 54)
 script = ExtResource("33_ues6k")
 loop_name = 3506

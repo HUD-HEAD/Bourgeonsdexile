@@ -6,9 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://b47g2vhtrpue1" path="res://components/utils/puzzles/receptacle.tscn" id="5_uktcc"]
 [ext_resource type="Texture2D" uid="uid://bkcmknovdaxvg" path="res://graphics/chapter3/comics/comic1/framehospitalsection/bed.png" id="5_wq72f"]
 [ext_resource type="Script" uid="uid://cxam1cepgkl3s" path="res://components/utils/puzzles/draggable.gd" id="6_hf4f4"]
+[ext_resource type="Texture2D" uid="uid://mp3si05kqhnc" path="res://graphics/chapter3/comics/comic1/framehospitalsection/bed_line.png" id="6_ovo3p"]
 [ext_resource type="Script" uid="uid://dt4apmm1b4e51" path="res://components/utils/puzzles/puzzle_piece.gd" id="7_rcyu6"]
 [ext_resource type="PackedScene" uid="uid://xyq2m2kx86ku" path="res://components/utils/puzzles/placement_checker.tscn" id="9_ovo3p"]
 [ext_resource type="Script" uid="uid://chrql2wwvrdt1" path="res://components/utils/puzzles/drag_drop_puzzle.gd" id="9_uktcc"]
+[ext_resource type="Script" uid="uid://dgqel76047kdi" path="res://components/chapter3/comic1/framehospitalsection/hospital_bed_visual_controller.gd" id="11_1d5fw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5a1j8"]
 radius = 118.0
@@ -30,9 +32,13 @@ metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
 [node name="Receptacle" parent="." unique_id=600273107 instance=ExtResource("5_uktcc")]
 position = Vector2(-639, -254)
 
-[node name="Bed2" type="Sprite2D" parent="Receptacle" unique_id=657632844]
-visible = false
-self_modulate = Color(1, 1, 1, 0.4627451)
+[node name="Bed_helper" type="Sprite2D" parent="Receptacle" unique_id=357669080]
+z_index = 2
+texture = ExtResource("6_ovo3p")
+
+[node name="Bed2" type="Sprite2D" parent="Receptacle/Bed_helper" unique_id=657632844]
+modulate = Color(18.892157, 18.892157, 18.892157, 0.3372549)
+z_index = 1
 texture = ExtResource("5_wq72f")
 
 [node name="PuzzlePiece" type="Node2D" parent="." unique_id=282936287 node_paths=PackedStringArray("draggable", "placement_checker")]
@@ -50,6 +56,7 @@ metadata/_custom_type_script = "uid://cxam1cepgkl3s"
 shape = SubResource("CircleShape2D_5a1j8")
 
 [node name="Bed" type="Sprite2D" parent="PuzzlePiece/Draggable" unique_id=1265519807]
+z_index = 3
 texture = ExtResource("5_wq72f")
 
 [node name="PlacementChecker" parent="PuzzlePiece/Draggable" unique_id=663138769 node_paths=PackedStringArray("receptacle") instance=ExtResource("9_ovo3p")]
@@ -59,5 +66,14 @@ receptacle = NodePath("../../../Receptacle")
 script = ExtResource("9_uktcc")
 puzzle_pieces = [NodePath("../PuzzlePiece")]
 play_correct_piece = false
-play_resolve_puzzle = false
 metadata/_custom_type_script = "uid://chrql2wwvrdt1"
+
+[node name="HospitalBedVisualController" type="Node" parent="." unique_id=1732819765 node_paths=PackedStringArray("puzzle_piece_ref", "drag_drop_puzzle_ref", "helper_sprite")]
+script = ExtResource("11_1d5fw")
+puzzle_piece_ref = NodePath("../PuzzlePiece/Draggable")
+drag_drop_puzzle_ref = NodePath("../DragDropPuzzle")
+helper_sprite = NodePath("../Receptacle/Bed_helper")
+speed = 2.0
+metadata/_custom_type_script = "uid://dgqel76047kdi"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=509326630]
