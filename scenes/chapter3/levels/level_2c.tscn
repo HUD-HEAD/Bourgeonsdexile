@@ -722,6 +722,7 @@ anim_player = NodePath("../../../AnimationPlayer")
 anim_name = "deactivate_scan"
 
 [node name="DragDropPuzzle8" parent="PuzzleStore" index="3" unique_id=427741748 instance=ExtResource("6_ioa73")]
+visible = false
 position = Vector2(-61, 753)
 scale = Vector2(0.25, 0.25)
 
@@ -769,6 +770,7 @@ rotation = 1.5707964
 position = Vector2(-107.5, -212)
 
 [node name="CompletePuzzle" parent="PuzzleStore/DragDropPuzzle8" index="2" unique_id=1933061263]
+position = Vector2(86.91, -201.93)
 texture = ExtResource("139_1uodi")
 
 [node name="PuzzleDecoratorController" type="Node" parent="PuzzleStore/DragDropPuzzle8" index="3" unique_id=1214915912]

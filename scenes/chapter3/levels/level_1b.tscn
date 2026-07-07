@@ -102,6 +102,9 @@ z_index = 1
 visible = true
 z_index = 0
 
+[node name="Squares" parent="Bg2/BuildingOutside" index="0" unique_id=2008682367]
+position = Vector2(421.655, 22.565)
+
 [node name="SceneEnder" parent="." index="1" unique_id=1221118698]
 position = Vector2(1222, 871)
 next_scene = "uid://by2x0js73j5ew"

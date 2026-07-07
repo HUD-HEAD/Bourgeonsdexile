@@ -525,7 +525,7 @@ position = Vector2(1046.6666, 306.66675)
 
 [node name="PuzzlePiece4" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="6" unique_id=1795176319]
 position = Vector2(1226.6665, 480)
-rotation = -3.1415925
+rotation = 3.1415925
 
 [node name="PuzzlePiece5" parent="WayBack/PuzzleSocialWorker/DragDropPuzzle9/BuildingBlocks" parent_id_path=PackedInt32Array(832401624, 1654234455) index="8" unique_id=1711508116]
 position = Vector2(1400, 193.33319)
@@ -664,6 +664,7 @@ position = Vector2(64.22394, -257.03702)
 
 [node name="PuzzlePiece" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="0" unique_id=1667760579]
 position = Vector2(-269.4317, 108.41803)
+rotation = -3.1415925
 
 [node name="Receptacle" parent="PuzzleStore/DragDropPuzzle2/BuildingBlocks" parent_id_path=PackedInt32Array(1726162827, 1654234455) index="1" unique_id=1559191435]
 position = Vector2(296.22394, 191.96298)
@@ -711,7 +712,7 @@ correct_rotation = 0
 position = Vector2(384.64398, 48.962975)
 
 [node name="CompletePuzzle" parent="PuzzleStore/DragDropPuzzle2" index="2" unique_id=1933061263]
-position = Vector2(-6, -2)
+position = Vector2(63.575, -252.465)
 scale = Vector2(1, 1)
 texture = ExtResource("27_qnuec")
 
