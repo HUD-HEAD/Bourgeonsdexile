@@ -22,6 +22,7 @@
 [ext_resource type="Script" uid="uid://slvf74h0laob" path="res://components/utils/comics/npc_movement_controller.gd" id="27_8mq57"]
 [ext_resource type="Script" uid="uid://bn0sxcor0g10k" path="res://components/utils/mechanics/area_trigger_anim.gd" id="27_83a51"]
 [ext_resource type="Script" uid="uid://cwo7l3tuyc7g6" path="res://components/utils/puzzles/puzzle_hide_on_complete.gd" id="32_bglj4"]
+[ext_resource type="Script" uid="uid://bp3msuyxiiotn" path="res://components/utils/comics/camera_movement_node.gd" id="33_4fhla"]
 [ext_resource type="Script" uid="uid://d2wk8l6f6idvx" path="res://components/utils/audio/audio integration nodes/audio_puzzle_controller.gd" id="42_he26o"]
 [ext_resource type="Texture2D" uid="uid://1rrpcsdgsv8b" path="res://graphics/chapter3/levels/bigavenue/building/reels.png" id="46_43j51"]
 [ext_resource type="Texture2D" uid="uid://bnf0c6a1iaqcb" path="res://graphics/chapter3/levels/bigavenue/building/floors.png" id="47_4uaxx"]
@@ -128,20 +129,21 @@ _data = {
 
 [node name="Level31" unique_id=2125939091 instance=ExtResource("1_whkl1")]
 
-[node name="Reels2_inside" type="Sprite2D" parent="Bg2/BuildingInside" parent_id_path=PackedInt32Array(639287802) index="4" unique_id=1795354505]
+[node name="Floors2" type="Sprite2D" parent="Bg2/BuildingInside" parent_id_path=PackedInt32Array(639287802) index="4" unique_id=236710702]
+z_index = 5
+position = Vector2(0, 93)
+texture = ExtResource("47_4uaxx")
+
+[node name="Reels2_inside" type="Sprite2D" parent="Bg2/BuildingInside" parent_id_path=PackedInt32Array(639287802) index="5" unique_id=1795354505]
+visible = false
 position = Vector2(6, 186)
 texture = ExtResource("46_43j51")
 
-[node name="Floors2" type="Sprite2D" parent="Bg2/BuildingInside/Reels2_inside" index="0" unique_id=236710702]
-z_index = 5
-position = Vector2(-6, -93)
-texture = ExtResource("47_4uaxx")
-
-[node name="Reels4" type="Sprite2D" parent="Bg2/BuildingInside/Reels2_inside" index="1" unique_id=293667619]
+[node name="Reels4" type="Sprite2D" parent="Bg2/BuildingInside/Reels2_inside" index="0" unique_id=293667619]
 position = Vector2(-5, -401)
 texture = ExtResource("46_43j51")
 
-[node name="Reels3" type="Sprite2D" parent="Bg2/BuildingInside/Reels2_inside" index="2" unique_id=1698563066]
+[node name="Reels3" type="Sprite2D" parent="Bg2/BuildingInside/Reels2_inside" index="1" unique_id=1698563066]
 z_index = 5
 position = Vector2(0, -271)
 texture = ExtResource("46_43j51")
@@ -217,7 +219,7 @@ position = Vector2(-822.2224, -325.92606)
 
 [node name="PuzzlePiece3" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="4" unique_id=1334418623]
 position = Vector2(-659.2593, 644.44446)
-rotation = 3.1415925
+rotation = -3.1415925
 
 [node name="PuzzlePiece4" parent="WayTo/PuzzleMidwife/DragDropPuzzle10/BuildingBlocks" parent_id_path=PackedInt32Array(2020957317, 1654234455) index="6" unique_id=1795176319]
 position = Vector2(-622.22235, 325.92603)
@@ -418,7 +420,7 @@ char_area = NodePath("../Obstacle")
 puzzle = NodePath("../DragDropPuzzle6")
 anim_sprite = NodePath("../Clickable/Npc2")
 npc = NodePath("../Clickable")
-pre_puzzle_distance = -200.0
+pre_puzzle_distance = -300.0
 post_puzzle_distance = 700.0
 movement_speed = 40.0
 metadata/_custom_type_script = "uid://slvf74h0laob"
@@ -473,6 +475,14 @@ script = ExtResource("42_he26o")
 trigger_loop = true
 loop_name = 3501
 metadata/_custom_type_script = "uid://d2wk8l6f6idvx"
+
+[node name="CameraMovement" type="VisibleOnScreenNotifier2D" parent="WayBack" parent_id_path=PackedInt32Array(185847338) index="4" unique_id=501566706 node_paths=PackedStringArray("camera_ref")]
+position = Vector2(4329, 785)
+rect = Rect2(-10, -10, 91, 77)
+script = ExtResource("33_4fhla")
+camera_ref = NodePath("../../PathTo/PathFollowTo/Zlata/Camera2D")
+transition_time = 5.0
+metadata/_custom_type_script = "uid://bp3msuyxiiotn"
 
 [node name="Zlata" parent="PathTo/PathFollowTo" parent_id_path=PackedInt32Array(666369972) index="0" unique_id=700974070]
 play_walking_sfx = true
