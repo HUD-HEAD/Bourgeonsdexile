@@ -1,5 +1,5 @@
-extends Node
 
+extends Node
 
 ## Used for sounds that need to persist through scene transitions
 var audio_ambient : AudioStreamPlayer
