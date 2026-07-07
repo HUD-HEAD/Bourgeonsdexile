@@ -702,27 +702,48 @@ anim_name = "deactivate_scan"
 position = Vector2(-61, 753)
 scale = Vector2(0.25, 0.25)
 
+[node name="OutlinePuzzle" parent="PuzzleStore/DragDropPuzzle8" index="0" unique_id=1513168459]
+position = Vector2(90.5, -203)
+
 [node name="PuzzlePiece" parent="PuzzleStore/DragDropPuzzle8/BuildingBlocks" parent_id_path=PackedInt32Array(427741748, 1654234455) index="0" unique_id=1667760579]
 position = Vector2(-535.99994, 40)
 rotation = 1.5707964
+
+[node name="Receptacle" parent="PuzzleStore/DragDropPuzzle8/BuildingBlocks" parent_id_path=PackedInt32Array(427741748, 1654234455) index="1" unique_id=1559191435]
+position = Vector2(79.50001, -242)
 
 [node name="PuzzlePiece2" parent="PuzzleStore/DragDropPuzzle8/BuildingBlocks" parent_id_path=PackedInt32Array(427741748, 1654234455) index="2" unique_id=729525704]
 position = Vector2(588, 140)
 rotation = -1.5707964
 
+[node name="Receptacle2" parent="PuzzleStore/DragDropPuzzle8/BuildingBlocks" parent_id_path=PackedInt32Array(427741748, 1654234455) index="3" unique_id=600273107]
+position = Vector2(415.5, -217)
+
 [node name="PuzzlePiece3" parent="PuzzleStore/DragDropPuzzle8/BuildingBlocks" parent_id_path=PackedInt32Array(427741748, 1654234455) index="4" unique_id=1334418623]
 position = Vector2(724, 392)
 
+[node name="Receptacle3" parent="PuzzleStore/DragDropPuzzle8/BuildingBlocks" parent_id_path=PackedInt32Array(427741748, 1654234455) index="5" unique_id=1839851310]
+position = Vector2(-279.5, -220)
+
 [node name="PuzzlePiece4" parent="PuzzleStore/DragDropPuzzle8/BuildingBlocks" parent_id_path=PackedInt32Array(427741748, 1654234455) index="6" unique_id=1795176319]
 position = Vector2(-592, -448)
+
+[node name="Receptacle4" parent="PuzzleStore/DragDropPuzzle8/BuildingBlocks" parent_id_path=PackedInt32Array(427741748, 1654234455) index="7" unique_id=1455510048]
+position = Vector2(199.5, -392)
 
 [node name="PuzzlePiece5" parent="PuzzleStore/DragDropPuzzle8/BuildingBlocks" parent_id_path=PackedInt32Array(427741748, 1654234455) index="8" unique_id=1711508116]
 position = Vector2(436, 384)
 rotation = -1.5707964
 
+[node name="Receptacle5" parent="PuzzleStore/DragDropPuzzle8/BuildingBlocks" parent_id_path=PackedInt32Array(427741748, 1654234455) index="9" unique_id=902464490]
+position = Vector2(199.5, -137)
+
 [node name="PuzzlePiece6" parent="PuzzleStore/DragDropPuzzle8/BuildingBlocks" parent_id_path=PackedInt32Array(427741748, 1654234455) index="10" unique_id=1437281790]
 position = Vector2(-476, -240)
 rotation = 1.5707964
+
+[node name="Receptacle6" parent="PuzzleStore/DragDropPuzzle8/BuildingBlocks" parent_id_path=PackedInt32Array(427741748, 1654234455) index="11" unique_id=694002424]
+position = Vector2(-107.5, -212)
 
 [node name="CompletePuzzle" parent="PuzzleStore/DragDropPuzzle8" index="2" unique_id=1933061263]
 texture = ExtResource("139_1uodi")

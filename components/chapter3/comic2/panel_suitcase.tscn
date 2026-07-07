@@ -173,8 +173,10 @@ position = Vector2(0, -203)
 shape = SubResource("RectangleShape2D_yyo6u")
 
 [node name="CompletePuzzle" parent="DragDropPuzzle" index="2" unique_id=1933061263]
-position = Vector2(-12, -171)
+position = Vector2(-12, 205)
 texture = ExtResource("13_nfays")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1769011691]
 
 [editable path="DragDropPuzzle"]
 [editable path="DragDropPuzzle/BuildingBlocks/PuzzlePiece"]
