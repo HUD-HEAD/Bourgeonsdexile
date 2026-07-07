@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c2ca42kklg5c3"
+path="res://.godot/imported/nana_vocal.wav-99b3ad31f25c396c6b90b09ddbf3089d.sample"
+
+[deps]
+
+source_file="res://audio/chapter3/ambient/levels ambience/nana_vocal.wav"
+dest_files=["res://.godot/imported/nana_vocal.wav-99b3ad31f25c396c6b90b09ddbf3089d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

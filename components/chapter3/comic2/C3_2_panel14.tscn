@@ -3,12 +3,17 @@
 [ext_resource type="Texture2D" uid="uid://dwi8td06o7chk" path="res://graphics/chapter3/comics/comic3/phone_frames/phone_background_full.png" id="1_cfebf"]
 [ext_resource type="Texture2D" uid="uid://de5xd6o2b2r4b" path="res://graphics/chapter3/comics/comic3/phone_frames/phone_background2.png" id="2_5s53a"]
 [ext_resource type="Texture2D" uid="uid://d14rpq132g50f" path="res://graphics/chapter3/comics/comic3/phone_frames/phone_zlata.png" id="3_qfgy5"]
-[ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="4_5s53a"]
+[ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="4_qarnj"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="5_ocpgl"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_qfgy5"]
+[ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/mechanics/click_hide.gd" id="6_qarnj"]
+[ext_resource type="Texture2D" uid="uid://t0ib6aso4f7i" path="res://graphics/chapter3/comics/comic3/phone_frames/hospitalleaving.png" id="7_20tbr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qfgy5"]
 size = Vector2(218, 259)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_68cv5"]
+radius = 858.4923
 
 [node name="C32Panel1" type="Node2D" unique_id=942978313]
 
@@ -25,8 +30,9 @@ texture = ExtResource("2_5s53a")
 position = Vector2(116, 101)
 texture = ExtResource("3_qfgy5")
 
-[node name="Clickable" type="Area2D" parent="." unique_id=1876399927]
-script = ExtResource("4_5s53a")
+[node name="Clickable" type="Area2D" parent="." unique_id=1876399927 node_paths=PackedStringArray("nodes_to_show")]
+script = ExtResource("4_qarnj")
+nodes_to_show = [NodePath("../PostersBig")]
 metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=343733055]
@@ -40,7 +46,22 @@ sfx = 2
 play_sfx_once = true
 metadata/_custom_type_script = "uid://b7avucygxykbp"
 
+[node name="PostersBig" type="Node2D" parent="." unique_id=1159945693]
+visible = false
+
+[node name="Area2D" type="Area2D" parent="PostersBig" unique_id=337566578]
+script = ExtResource("6_qarnj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PostersBig/Area2D" unique_id=1142951442]
+shape = SubResource("CircleShape2D_68cv5")
+
+[node name="PhoneFrameRealce" type="Sprite2D" parent="PostersBig/Area2D" unique_id=1046945248]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("7_20tbr")
+
 [node name="TransitionerCounter" type="Node" parent="." unique_id=1190434831 node_paths=PackedStringArray("clickables")]
 script = ExtResource("5_qfgy5")
-clickables = [NodePath("../Clickable")]
+clickables = [NodePath("../PostersBig/Area2D")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=918649996]

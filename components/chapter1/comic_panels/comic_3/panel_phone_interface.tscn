@@ -41,7 +41,7 @@ down = 150.0
 metadata/_custom_type_script = "uid://001fo68fi8nn"
 
 [node name="Map" type="Sprite2D" parent="Mask/Node2D/DraggableRestricted" unique_id=1509479915]
-position = Vector2(-115, 22)
+position = Vector2(-108, -3)
 texture = ExtResource("3_18wv5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mask/Node2D/DraggableRestricted" unique_id=1611333971]
@@ -87,3 +87,5 @@ script = ExtResource("10_nvgmp")
 clickables = [NodePath("../Mask/Node2D/DraggableRestricted"), NodePath("../Phone/Sprite2D/ZoomIn"), NodePath("../Phone/Sprite2D/ZoomOut")]
 sfx = 2
 metadata/_custom_type_script = "uid://b7avucygxykbp"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=411346399]
