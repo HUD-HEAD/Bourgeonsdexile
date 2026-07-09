@@ -19,7 +19,11 @@
 [ext_resource type="Texture2D" uid="uid://dggwpqfblsico" path="res://graphics/chapter3/comics/comic4/museum_big/naki3.png" id="12_5072t"]
 [ext_resource type="Texture2D" uid="uid://ciemwm4djb0i2" path="res://graphics/chapter3/comics/comic4/museum_big/nakivale2.png" id="13_xagr8"]
 [ext_resource type="Texture2D" uid="uid://dn57jr4lfxngk" path="res://graphics/chapter3/comics/comic4/museum_big/naki4.png" id="14_jabfn"]
+[ext_resource type="Texture2D" uid="uid://c3ky5ftb6on5a" path="res://graphics/chapter1/comics/comic3/panel_kid_lajas/frame_kidlajas.png" id="15_3nyfl"]
 [ext_resource type="Texture2D" uid="uid://km0nys01liep" path="res://graphics/chapter3/comics/comic4/museum_big/desierto.png" id="15_20i1s"]
+[ext_resource type="Texture2D" uid="uid://0qyoh0oivc1a" path="res://graphics/chapter1/comics/comic2/frame10/frame10.png" id="17_e4x5d"]
+[ext_resource type="Texture2D" uid="uid://ct7wa6r8necfw" path="res://graphics/chapter1/comics/comic2/jungle_entry.png" id="18_q8myw"]
+[ext_resource type="Texture2D" uid="uid://biujhqctc6dit" path="res://graphics/chapter1/comics/comic2/frame8.5/frame8.5.png" id="19_tpwa6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dxkuf"]
 size = Vector2(1565, 1050)
@@ -92,7 +96,7 @@ scale = Vector2(0.14270835, 0.1388889)
 texture = ExtResource("7_3nyfl")
 
 [node name="photo6" type="Sprite2D" parent="museuminside2/TransparencyEffect" unique_id=1918317007]
-position = Vector2(659, -382)
+position = Vector2(-344.00012, -382)
 scale = Vector2(0.050345387, 0.050187733)
 texture = ExtResource("8_e4x5d")
 
@@ -102,17 +106,17 @@ scale = Vector2(0.13404907, 0.12707376)
 texture = ExtResource("9_q8myw")
 
 [node name="photo8" type="Sprite2D" parent="museuminside2/TransparencyEffect" unique_id=745816679]
-position = Vector2(657, -188)
+position = Vector2(-2, -185)
 scale = Vector2(0.09997559, 0.09555012)
 texture = ExtResource("10_tpwa6")
 
 [node name="photo9" type="Sprite2D" parent="museuminside2/TransparencyEffect" unique_id=192500006]
-position = Vector2(-715, 211.00002)
+position = Vector2(-348, -185)
 scale = Vector2(0.059975594, 0.05732074)
 texture = ExtResource("11_jn222")
 
 [node name="photo10" type="Sprite2D" parent="museuminside2/TransparencyEffect" unique_id=538731261]
-position = Vector2(-682, 9)
+position = Vector2(338, -188)
 scale = Vector2(0.09997559, 0.09555012)
 texture = ExtResource("12_5072t")
 
@@ -126,10 +130,30 @@ position = Vector2(-679, -387)
 scale = Vector2(0.059975594, 0.05732074)
 texture = ExtResource("14_jabfn")
 
+[node name="photo14" type="Sprite2D" parent="museuminside2/TransparencyEffect" unique_id=756474137]
+position = Vector2(0, -380)
+scale = Vector2(0.042190652, 0.039448444)
+texture = ExtResource("15_3nyfl")
+
 [node name="photo13" type="Sprite2D" parent="museuminside2/TransparencyEffect" unique_id=1861648889]
-position = Vector2(-1, -380)
+position = Vector2(-670, 9)
 scale = Vector2(0.051664528, 0.049277537)
 texture = ExtResource("15_20i1s")
+
+[node name="Frame10" type="Sprite2D" parent="museuminside2/TransparencyEffect" unique_id=56386740]
+position = Vector2(-695.11115, 209.375)
+scale = Vector2(0.14189813, 0.14189813)
+texture = ExtResource("17_e4x5d")
+
+[node name="Frame11" type="Sprite2D" parent="museuminside2/TransparencyEffect" unique_id=906726505]
+position = Vector2(660.99994, -185)
+scale = Vector2(0.14189813, 0.14189813)
+texture = ExtResource("18_q8myw")
+
+[node name="Frame12" type="Sprite2D" parent="museuminside2/TransparencyEffect" unique_id=2008999839]
+position = Vector2(655, -379)
+scale = Vector2(0.14189813, 0.14189813)
+texture = ExtResource("19_tpwa6")
 
 [node name="2" type="Sprite2D" parent="museuminside2" unique_id=473665319]
 position = Vector2(0, 64)

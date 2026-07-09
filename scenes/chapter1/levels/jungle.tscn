@@ -1501,7 +1501,7 @@ texture = ExtResource("161_igan2")
 texture = ExtResource("162_hhg6g")
 
 [node name="PuzzlePiece6" parent="Puzzles/Puzzle6/DragDropPuzzle3/BuildingBlocks" parent_id_path=PackedInt32Array(789965, 1654234455) index="10" unique_id=652213691]
-position = Vector2(172.25667, -80.60846)
+position = Vector2(214.24553, -81.99972)
 
 [node name="Draggable" parent="Puzzles/Puzzle6/DragDropPuzzle3/BuildingBlocks/PuzzlePiece6" index="0" unique_id=2116105691]
 position = Vector2(-879.5365, -160.81248)

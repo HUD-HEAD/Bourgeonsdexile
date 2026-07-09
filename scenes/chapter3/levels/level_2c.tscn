@@ -376,7 +376,8 @@ position = Vector2(0, -271)
 texture = ExtResource("2_s57i1")
 
 [node name="AreaRevealStore" type="Area2D" parent="." index="1" unique_id=1943666368 node_paths=PackedStringArray("nodes_to_reveal", "nodes_to_hide")]
-position = Vector2(5124, 835)
+position = Vector2(5124, 840.385)
+scale = Vector2(0.9, 0.9)
 collision_layer = 0
 collision_mask = 2
 input_pickable = false
@@ -722,7 +723,6 @@ anim_player = NodePath("../../../AnimationPlayer")
 anim_name = "deactivate_scan"
 
 [node name="DragDropPuzzle8" parent="PuzzleStore" index="3" unique_id=427741748 instance=ExtResource("6_ioa73")]
-visible = false
 position = Vector2(-61, 753)
 scale = Vector2(0.25, 0.25)
 

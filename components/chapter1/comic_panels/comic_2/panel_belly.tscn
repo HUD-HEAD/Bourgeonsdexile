@@ -397,3 +397,5 @@ clickables = [NodePath("../Area2D")]
 [node name="SfxPlayer" parent="." unique_id=679183344 node_paths=PackedStringArray("clickables") instance=ExtResource("5_psjyq")]
 stream = ExtResource("6_ts6dw")
 clickables = [NodePath("../Area2D")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=372997220]
