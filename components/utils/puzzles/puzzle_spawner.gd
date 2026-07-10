@@ -5,7 +5,7 @@ extends Node
 ## Puzzle to solve
 @export var puzzle : DragDropPuzzle
 
-## Spawn a puzzle piece when clicked
+## Spawn puzzle when clicked. If unassigned, puzzle will spawn automatically.
 @export var spawn_trigger: Clickable
 ## Obstacle triggering puzzle activation
 @export var obstacle : Area2D
@@ -18,7 +18,8 @@ func _ready() -> void:
 	puzzle.puzzle_complete.connect(_on_puzzle_complete)
 	
 func _deactivate_puzzle():
-	spawn_trigger.disable()
+	if is_instance_valid(spawn_trigger):
+		spawn_trigger.disable()
 	puzzle.deactivate()
 	puzzle.hide_pieces()
 	
@@ -32,6 +33,10 @@ func _on_obstacle_entered(_area2d : Area2D):
 	_activate_spawn_trigger()
 
 func _activate_spawn_trigger():
+	if !is_instance_valid(spawn_trigger):
+		puzzle.spawn_puzzle()
+		return
+	
 	#Might trigger multiple times
 	if !spawn_trigger.clicked.is_connected(_on_spawner_clicked):
 		spawn_trigger.clicked.connect(_on_spawner_clicked)
