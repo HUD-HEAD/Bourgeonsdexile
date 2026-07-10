@@ -12,3 +12,6 @@ follow_model = true
 [node name="AnimSprite" parent="." index="0" unique_id=689873547]
 sprite_frames = null
 frame_progress = 0.0
+
+[node name="Area2D" parent="." index="1" unique_id=960188442]
+collision_layer = 8
