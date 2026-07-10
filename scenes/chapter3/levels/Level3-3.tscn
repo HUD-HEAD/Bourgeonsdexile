@@ -235,10 +235,11 @@ metadata/_edit_horizontal_guides_ = [-2206.0]
 metadata/_edit_vertical_guides_ = [7963.0]
 
 [node name="Bg" type="Sprite2D" parent="." unique_id=636733600]
-position = Vector2(3988, 480)
 texture = ExtResource("1_llu7i")
+centered = false
 
 [node name="Puzzles" type="Node2D" parent="." unique_id=2093554838]
+position = Vector2(3138, 0)
 
 [node name="Puzzle1" type="Node2D" parent="Puzzles" unique_id=1754884165]
 position = Vector2(-369, 0)
@@ -488,7 +489,7 @@ position = Vector2(-636, 232)
 position = Vector2(-1021, 463)
 
 [node name="Zlata" parent="." unique_id=826116100 instance=ExtResource("3_sb6ig")]
-position = Vector2(-2689, 1029.0001)
+position = Vector2(448.99976, 1029.0001)
 scale = Vector2(2.0799963, 2.0799963)
 play_walking_sfx = true
 walk_speed = 120
@@ -510,12 +511,12 @@ position = Vector2(0, 16.346182)
 shape = SubResource("CircleShape2D_lwr0c")
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=1060597352]
-position = Vector2(11099, 596)
+position = Vector2(14237, 596)
 script = ExtResource("3_a5j32")
 next_scene = "uid://bty624uf5tape"
 
 [node name="Walls" type="Sprite2D" parent="." unique_id=1134852493]
-position = Vector2(-3136, 0)
+position = Vector2(2, 0)
 texture = ExtResource("4_a5j32")
 centered = false
 
@@ -527,14 +528,14 @@ comic = 20
 [node name="Audio" type="Node" parent="." unique_id=1707098790]
 
 [node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=1995490177]
-position = Vector2(-2241, 113)
+position = Vector2(897, 113)
 rect = Rect2(-767, -10, 777, 57)
 script = ExtResource("135_rcnf5")
 loop_name = 2201
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [node name="TriggerLoopZone2" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=689776476]
-position = Vector2(-2234, 182)
+position = Vector2(904, 182)
 rect = Rect2(-767, -10, 777, 57)
 script = ExtResource("135_rcnf5")
 loop_name = 3500
@@ -542,7 +543,7 @@ loop_mode = 2
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [node name="Stop_people_loop" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=1092199033]
-position = Vector2(11076, 760)
+position = Vector2(14214, 760)
 rect = Rect2(-767, -10, 777, 57)
 script = ExtResource("135_rcnf5")
 loop_name = 2201
@@ -550,7 +551,7 @@ loop_mode = 1
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [node name="Stop_steps" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=1725470523]
-position = Vector2(11083, 829)
+position = Vector2(14221, 829)
 rect = Rect2(-767, -10, 777, 57)
 script = ExtResource("135_rcnf5")
 loop_name = 3500
@@ -558,7 +559,7 @@ loop_mode = 1
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [node name="AudioMusicTransition" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=1310494145]
-position = Vector2(-2329, 343)
+position = Vector2(809, 343)
 rect = Rect2(-433, -14, 126, 76)
 script = ExtResource("136_8xjft")
 music_name = 3400
