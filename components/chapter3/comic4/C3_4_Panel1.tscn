@@ -21,9 +21,6 @@ size = Vector2(413, 228.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aucby"]
 size = Vector2(1920, 1080)
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_fe7bx"]
-size = Vector2(50, 50)
-
 [node name="C34Panel1" type="Node2D" unique_id=1800611031]
 
 [node name="museuminside" type="Sprite2D" parent="." unique_id=972873342]
@@ -67,7 +64,7 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 shape = SubResource("RectangleShape2D_bpavt")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pictures/Clickable2" unique_id=1108256961]
-position = Vector2(-7.1109314, 2)
+position = Vector2(-7.1109314, 6)
 scale = Vector2(0.18888889, 0.18888888)
 texture = ExtResource("6_bpavt")
 
@@ -162,7 +159,9 @@ script = ExtResource("4_x3340")
 shape = SubResource("RectangleShape2D_aucby")
 
 [node name="Sprite2D" type="Sprite2D" parent="PicturesBig/Picture2" unique_id=859783746]
-texture = SubResource("PlaceholderTexture2D_fe7bx")
+position = Vector2(3, 7.6293945e-06)
+scale = Vector2(0.8333333, 0.8333333)
+texture = ExtResource("6_bpavt")
 
 [node name="Picture3" type="Area2D" parent="PicturesBig" unique_id=34016147]
 visible = false

@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b0i0o0j5u1ds8" path="res://graphics/chapter1/levels/jungle/environment/junglepieces/3/jungle3_floor.png" id="10_k1umw"]
 [ext_resource type="Texture2D" uid="uid://b83yfl72cdhju" path="res://graphics/chapter1/levels/jungle/environment/junglepieces/2/v2/floor.png" id="10_t8mqy"]
 [ext_resource type="Texture2D" uid="uid://f7lv6snpnokf" path="res://graphics/chapter1/levels/jungle/environment/junglepieces/3/bush.png" id="11_q8svf"]
-[ext_resource type="Texture2D" uid="uid://ckx75on8fpxew" path="res://graphics/chapter1/levels/jungle/environment/junglepieces/4/mockupgarbage4.png" id="14_t8mqy"]
+[ext_resource type="Texture2D" uid="uid://dre7igkdekg6l" path="res://graphics/chapter1/levels/jungle/environment/junglepieces/4/mockupgarbage4b.png" id="11_yh2d4"]
 [ext_resource type="PackedScene" uid="uid://cyyx1fl7vyhle" path="res://components/chapter1/main_characters/jungle_woman.tscn" id="15_td1vu"]
 [ext_resource type="SpriteFrames" uid="uid://bmcc5l21n4h6s" path="res://components/chapter1/main_characters/companion_1_sprite_frames.tres" id="16_17nyf"]
 [ext_resource type="Script" uid="uid://dadhgom8ti1wv" path="res://components/utils/mechanics/goto_next_scene.gd" id="16_aewef"]
@@ -713,7 +713,7 @@ metadata/_edit_group_ = true
 
 [node name="Mockupgarbage4" type="Sprite2D" parent="JungleSprites/Jungle4" unique_id=1820755942]
 position = Vector2(4163, 315)
-texture = ExtResource("14_t8mqy")
+texture = ExtResource("11_yh2d4")
 
 [node name="Water1" type="Sprite2D" parent="JungleSprites" unique_id=1637182483]
 position = Vector2(5180, 852)
@@ -1501,7 +1501,7 @@ texture = ExtResource("161_igan2")
 texture = ExtResource("162_hhg6g")
 
 [node name="PuzzlePiece6" parent="Puzzles/Puzzle6/DragDropPuzzle3/BuildingBlocks" parent_id_path=PackedInt32Array(789965, 1654234455) index="10" unique_id=652213691]
-position = Vector2(172.25667, -80.60846)
+position = Vector2(214.24553, -81.99972)
 
 [node name="Draggable" parent="Puzzles/Puzzle6/DragDropPuzzle3/BuildingBlocks/PuzzlePiece6" index="0" unique_id=2116105691]
 position = Vector2(-879.5365, -160.81248)

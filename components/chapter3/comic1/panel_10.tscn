@@ -42,7 +42,7 @@ z_index = 1
 texture = ExtResource("5_wq72f")
 
 [node name="PuzzlePiece" type="Node2D" parent="." unique_id=282936287 node_paths=PackedStringArray("draggable", "placement_checker")]
-position = Vector2(301, -252)
+position = Vector2(285, 78)
 script = ExtResource("7_rcyu6")
 draggable = NodePath("Draggable")
 placement_checker = NodePath("Draggable/PlacementChecker")

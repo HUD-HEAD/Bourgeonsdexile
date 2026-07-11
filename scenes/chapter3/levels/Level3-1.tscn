@@ -35,6 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://b00vlavg5msia" path="res://graphics/chapter2/levels/goma/npcs/woman_redbag_walk_6fps/woman_redbag_walk_0007.png" id="32_qw6ka"]
 [ext_resource type="Texture2D" uid="uid://pfdn3wsguv3x" path="res://graphics/chapter2/levels/goma/npcs/woman_redbag_walk_6fps/woman_redbag_walk_0008.png" id="33_kkyug"]
 [ext_resource type="Script" uid="uid://slvf74h0laob" path="res://components/utils/comics/npc_movement_controller.gd" id="34_uv8gv"]
+[ext_resource type="Texture2D" uid="uid://de581re2p302h" path="res://graphics/chapter3/levels/CH3_puzzles/3/1_3.png" id="37_kkyug"]
 [ext_resource type="AudioStream" uid="uid://d120cejyuktti" path="res://audio/chapter3/ambient/levels ambience/ringtone_sound.wav" id="45_0ryu3"]
 [ext_resource type="Script" uid="uid://vb2r60a4n4tt" path="res://components/utils/audio/audio integration nodes/trigger_sound_consecutive.gd" id="54_dq5ld"]
 [ext_resource type="AudioStream" uid="uid://dg5l75klvhc8m" path="res://audio/chapter3/ambient/levels ambience/baby_loop_1.wav" id="55_fr66y"]
@@ -485,6 +486,10 @@ position = Vector2(0.5, 51)
 [node name="PuzzlePiece" parent="Puzzles/Puzzle3/DragDropPuzzle3/BuildingBlocks" index="0" unique_id=1667760579]
 position = Vector2(608.5, 210)
 
+[node name="PuzzlePieceSpriteOnClick" parent="Puzzles/Puzzle3/DragDropPuzzle3/BuildingBlocks/PuzzlePiece/Draggable/Visuals" parent_id_path=PackedInt32Array(1283304511, 1667760579, 710902977) index="1" unique_id=991932022]
+position = Vector2(40, 2)
+texture = ExtResource("37_kkyug")
+
 [node name="Receptacle" parent="Puzzles/Puzzle3/DragDropPuzzle3/BuildingBlocks" index="1" unique_id=1559191435]
 position = Vector2(-330, -45)
 
@@ -516,6 +521,7 @@ position = Vector2(-504, -121)
 position = Vector2(187, 72)
 
 [node name="CompletePuzzle" parent="Puzzles/Puzzle3/DragDropPuzzle3" index="2" unique_id=1933061263]
+position = Vector2(-44, 46)
 texture = ExtResource("136_8vc46")
 
 [node name="HidePuzzleOnComplete" type="Node" parent="Puzzles/Puzzle3/DragDropPuzzle3" unique_id=168512400]
@@ -537,20 +543,26 @@ collision_mask = 2
 
 [node name="Puzzle5" parent="Puzzles/Puzzle5" unique_id=1941159865 instance=ExtResource("9_eurov")]
 z_index = 0
-position = Vector2(-18, 587)
-rotation = 2.5954196
+position = Vector2(128, 629.00006)
+rotation = 2.3561945
 
 [node name="BuildingBlocks" parent="Puzzles/Puzzle5/Puzzle5" index="1" unique_id=245013489]
 z_index = 1
 
-[node name="PuzzlePiece" parent="Puzzles/Puzzle5/Puzzle5/BuildingBlocks/FullPieces" parent_id_path=PackedInt32Array(1941159865, 1120986992) index="0" unique_id=729525704]
-position = Vector2(-556.7643, 161.26628)
+[node name="FullPieces" parent="Puzzles/Puzzle5/Puzzle5/BuildingBlocks" index="0" unique_id=1120986992]
+position = Vector2(-50.20417, -86.97455)
 
-[node name="PuzzlePiece2" parent="Puzzles/Puzzle5/Puzzle5/BuildingBlocks/FullPieces" parent_id_path=PackedInt32Array(1941159865, 1120986992) index="1" unique_id=189334816]
-position = Vector2(-239.60303, 330.64838)
+[node name="PuzzlePiece" parent="Puzzles/Puzzle5/Puzzle5/BuildingBlocks/FullPieces" index="0" unique_id=729525704]
+position = Vector2(-45.962494, 673.87317)
 
-[node name="PuzzlePieceHollow" parent="Puzzles/Puzzle5/Puzzle5/BuildingBlocks/HollowPieces" parent_id_path=PackedInt32Array(1941159865, 1500445843) index="0" unique_id=1809332932]
-position = Vector2(-289.11432, 142.56921)
+[node name="PuzzlePiece2" parent="Puzzles/Puzzle5/Puzzle5/BuildingBlocks/FullPieces" index="1" unique_id=189334816]
+position = Vector2(-264.45825, 374.7673)
+
+[node name="HollowPieces" parent="Puzzles/Puzzle5/Puzzle5/BuildingBlocks" index="1" unique_id=1500445843]
+position = Vector2(-50.20417, -86.97455)
+
+[node name="PuzzlePieceHollow" parent="Puzzles/Puzzle5/Puzzle5/BuildingBlocks/HollowPieces" index="0" unique_id=1809332932]
+position = Vector2(-299.10663, 176.07005)
 
 [node name="CheckpointController" type="Node" parent="." unique_id=108560523]
 script = ExtResource("10_ihdby")

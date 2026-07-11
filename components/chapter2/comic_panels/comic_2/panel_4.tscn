@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_pvk7w"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="4_rgcko"]
 [ext_resource type="AudioStream" uid="uid://dpfmhdy8kobsb" path="res://audio/chapter2/ambient/comic 2/panel_2.4_mmm_expression_interactive.wav" id="5_8i877"]
+[ext_resource type="PackedScene" uid="uid://d246c0iqqddvh" path="res://components/chapter1/levels/jungle/rain.tscn" id="7_myeqg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f55js"]
 radius = 416.09735
@@ -17,6 +18,11 @@ texture = ExtResource("1_87dp8")
 
 [node name="Framerain2" type="Sprite2D" parent="." unique_id=419839427]
 texture = ExtResource("3_f55js")
+
+[node name="Rain" parent="." unique_id=153314495 instance=ExtResource("7_myeqg")]
+position = Vector2(4, -553)
+scale = Vector2(0.35, 1)
+amount = 5000
 
 [node name="Clickable" type="Area2D" parent="." unique_id=193204332 node_paths=PackedStringArray("nodes_to_show")]
 position = Vector2(-636, -294)
@@ -40,3 +46,5 @@ metadata/_custom_type_script = "uid://b7avucygxykbp"
 script = ExtResource("4_pvk7w")
 clickables = [NodePath("../Clickable")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=698030745]

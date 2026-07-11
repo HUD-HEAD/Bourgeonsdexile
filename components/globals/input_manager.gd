@@ -5,6 +5,8 @@ var mouse_sensitivity = 1.0
 
 var debug_console : DebugConsole
 
+var confine_mouse : bool
+
 func _ready() -> void:
 	#Can detect input on pause game
 	process_mode = PROCESS_MODE_ALWAYS
@@ -13,15 +15,21 @@ func _ready() -> void:
 	get_viewport().physics_object_picking_first_only = true
 	get_viewport().physics_object_picking_sort = true
 	
+	#Check and apply mouse confined in non-debug builds
+	confine_mouse = !OS.is_debug_build()
+	show_mouse()
+	
 	if OS.has_feature("debug"):
 		debug_console = load("res://components/debug/debug_console.tscn").instantiate()
 		add_child(debug_console)
 
 func show_mouse():
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	Input.mouse_mode = Input.MOUSE_MODE_CONFINED if confine_mouse \
+			else Input.MOUSE_MODE_VISIBLE
 
 func hide_mouse():
-	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN if confine_mouse \
+			else Input.MOUSE_MODE_HIDDEN
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event.is_action_pressed("exit"):

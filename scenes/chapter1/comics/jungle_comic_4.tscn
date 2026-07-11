@@ -77,7 +77,7 @@ position = Vector2(16224, 540)
 position = Vector2(18119, 532)
 
 [node name="PanelTopview" parent="." unique_id=184560352 instance=ExtResource("10_8767r")]
-position = Vector2(20030, 535)
+position = Vector2(20030, 540)
 
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=80231630]
 position = Vector2(23531, 540)

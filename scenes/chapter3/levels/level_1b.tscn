@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://d04q8bsi72b3s" path="res://components/utils/puzzles/puzzle_spawner.gd" id="4_fgowu"]
 [ext_resource type="PackedScene" uid="uid://bjdgt4xmkm6ml" path="res://components/utils/mechanics/obstacle.tscn" id="5_6mkb4"]
 [ext_resource type="PackedScene" uid="uid://bquow8shtm7w3" path="res://components/chapter3/levels/level3.1/drag_drop_puzzle_3.1-4.tscn" id="6_vqma7"]
+[ext_resource type="Texture2D" uid="uid://dldh5ka5yxe1g" path="res://graphics/chapter3/levels/CH3_puzzles/4/full4_complete_filled.png" id="7_1k28x"]
 [ext_resource type="Script" uid="uid://d2wk8l6f6idvx" path="res://components/utils/audio/audio integration nodes/audio_puzzle_controller.gd" id="7_mpuaf"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="7_o2xsi"]
 [ext_resource type="Texture2D" uid="uid://bbxtb156x038j" path="res://graphics/chapter3/levels/bigavenue/npcs/npc_socialworker_stand_5fps/npc_socialworker_stand_0001.png" id="8_to45k"]
@@ -82,7 +83,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 25.0
+"speed": 15.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cbi4r"]
@@ -100,6 +101,9 @@ z_index = 1
 [node name="BuildingOutside" parent="Bg2" parent_id_path=PackedInt32Array(1307761575) index="2" unique_id=271747770]
 visible = true
 z_index = 0
+
+[node name="Squares" parent="Bg2/BuildingOutside" index="0" unique_id=2008682367]
+position = Vector2(421.655, 22.565)
 
 [node name="SceneEnder" parent="." index="1" unique_id=1221118698]
 position = Vector2(1222, 871)
@@ -167,6 +171,9 @@ position = Vector2(733.33356, 428.57153)
 
 [node name="PuzzlePiece5" parent="Puzzle4/DragDropPuzzle4/BuildingBlocks" index="8" unique_id=1022298336]
 position = Vector2(895.2384, -171.42851)
+
+[node name="CompletePuzzle" parent="Puzzle4/DragDropPuzzle4" index="2" unique_id=1933061263]
+texture = ExtResource("7_1k28x")
 
 [node name="PuzzleDecoratorController" type="Node" parent="Puzzle4/DragDropPuzzle4" index="3" unique_id=337144004]
 script = ExtResource("7_mpuaf")

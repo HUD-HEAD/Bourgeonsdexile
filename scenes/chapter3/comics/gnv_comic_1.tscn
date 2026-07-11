@@ -25,6 +25,7 @@
 [ext_resource type="Script" uid="uid://7bwiqecpjuf" path="res://components/utils/comics/autoscroller.gd" id="21_rh3md"]
 
 [node name="JungleComic1" type="Node2D" unique_id=150562309]
+metadata/_edit_vertical_guides_ = [20348.0, 27066.0, 24819.0]
 
 [node name="PaperBackground" type="CanvasLayer" parent="." unique_id=1029947148]
 layer = -1
@@ -98,16 +99,16 @@ position = Vector2(16828, 0)
 position = Vector2(18951, 0)
 
 [node name="PanelDoctors6" parent="Panels" unique_id=1389191379 instance=ExtResource("11_hh7t8")]
-position = Vector2(21187, 0)
+position = Vector2(27886, 2)
 
 [node name="PanelDoctors7" parent="Panels" unique_id=1837064499 instance=ExtResource("12_eg8ad")]
-position = Vector2(23371, 0)
+position = Vector2(21182, 8)
 
 [node name="PanelDoctors8" parent="Panels" unique_id=1860716632 instance=ExtResource("13_lrvjo")]
-position = Vector2(25593, 0)
+position = Vector2(23404, 8)
 
 [node name="PanelDoctors9" parent="Panels" unique_id=1445255210 instance=ExtResource("14_1uikj")]
-position = Vector2(28029, 0)
+position = Vector2(25781, -4)
 
 [node name="PanelDoctors14" parent="Panels" unique_id=455871575 instance=ExtResource("18_agxqu")]
 position = Vector2(30423, 0)
@@ -116,11 +117,11 @@ position = Vector2(30423, 0)
 position = Vector2(32624, 0)
 
 [node name="PanelDoctors11" parent="Panels" unique_id=1284468193 instance=ExtResource("16_xbw0h")]
-position = Vector2(34858, 0)
+position = Vector2(34748, 5)
 
 [node name="PanelPanner" type="Node" parent="." unique_id=1650562923 node_paths=PackedStringArray("panels")]
 script = ExtResource("21_rh3md")
-panels = [NodePath("../Panels/PanelVideo"), NodePath("../Panels/PanelDoctors"), NodePath("../Panels/PanelDoctors12"), NodePath("../Panels/PanelDoctors13"), NodePath("../Panels/PanelBreastfeeding"), NodePath("../Panels/PanelDoctors4"), NodePath("../Panels/PanelDoctors2"), NodePath("../Panels/PanelDoctors3"), NodePath("../Panels/PanelDoctors5"), NodePath("../Panels/PanelDoctors6"), NodePath("../Panels/PanelDoctors7"), NodePath("../Panels/PanelDoctors8"), NodePath("../Panels/PanelDoctors9"), NodePath("../Panels/PanelDoctors14"), NodePath("../Panels/PanelDoctors10"), NodePath("../Panels/PanelDoctors11"), NodePath("../SceneEnder")]
+panels = [NodePath("../Panels/PanelVideo"), NodePath("../Panels/PanelDoctors"), NodePath("../Panels/PanelDoctors12"), NodePath("../Panels/PanelDoctors13"), NodePath("../Panels/PanelBreastfeeding"), NodePath("../Panels/PanelDoctors4"), NodePath("../Panels/PanelDoctors2"), NodePath("../Panels/PanelDoctors3"), NodePath("../Panels/PanelDoctors5"), NodePath("../Panels/PanelDoctors7"), NodePath("../Panels/PanelDoctors8"), NodePath("../Panels/PanelDoctors9"), NodePath("../Panels/PanelDoctors6"), NodePath("../Panels/PanelDoctors14"), NodePath("../Panels/PanelDoctors10"), NodePath("../Panels/PanelDoctors11"), NodePath("../SceneEnder")]
 
 [node name="Audio" type="Node" parent="." unique_id=619569792]
 
