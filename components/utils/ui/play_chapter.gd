@@ -7,7 +7,12 @@ func _ready() -> void:
 	pressed.connect(_on_pressed)
 	
 func lock_button():
-	disabled = !SaveManager.is_chapter_unlock(chapter_index)
+	if !SaveManager.is_chapter_unlock(chapter_index):
+		disabled = true
+		hide()
+	else :
+		disabled = false
+		show()
 
 
 ## Start game
