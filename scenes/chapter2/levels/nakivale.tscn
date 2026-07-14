@@ -67,16 +67,22 @@
 [ext_resource type="Script" uid="uid://qu5hfw1uwm0x" path="res://components/utils/mechanics/area_reveal.gd" id="54_adwnm"]
 [ext_resource type="Script" uid="uid://cwo7l3tuyc7g6" path="res://components/utils/puzzles/puzzle_hide_on_complete.gd" id="60_nm25k"]
 [ext_resource type="Texture2D" uid="uid://dmq8ep724g48y" path="res://graphics/chapter2/levels/nakivale/interior3.png" id="60_ntkgk"]
+[ext_resource type="AudioStream" uid="uid://dfe6xigkhuret" path="res://audio/chapter3/ambient/comic 1/panel_1.9_light_on_off_sound.wav" id="63_wr1ww"]
 [ext_resource type="Script" uid="uid://dk7v012n8q80g" path="res://components/utils/save_system/checkpoint_controller.gd" id="66_f8hwx"]
 [ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="67_osbl6"]
 [ext_resource type="Script" uid="uid://2aadlm17sdsf" path="res://components/utils/audio/audio integration nodes/audio_music_transition.gd" id="68_7agjy"]
 [ext_resource type="Script" uid="uid://brda7473wfj1v" path="res://components/utils/audio/audio integration nodes/audio_loop_zone.gd" id="69_cbojg"]
 [ext_resource type="Script" uid="uid://bvmwxu2au5j5l" path="res://components/utils/audio/audio integration nodes/audio_sfx_zone.gd" id="69_e28ne"]
 [ext_resource type="AudioStream" uid="uid://yao0gfmlaxh7" path="res://audio/chapter2/ambient/comic 2/panel_2.2_people_sound_loop.wav" id="70_61fec"]
+[ext_resource type="Script" uid="uid://ccgnalbw7s5yu" path="res://components/utils/audio/audio integration nodes/audio_stop_sfx_zone.gd" id="74_bcd3f"]
 [ext_resource type="Script" uid="uid://b3txouvcobklf" path="res://components/chapter2/contractions/contraction_wobble/contraction_area.gd" id="74_ss357"]
 [ext_resource type="Script" uid="uid://bf2oac284v575" path="res://components/chapter2/contractions/contraction_wobble/contraction_shader_param.gd" id="75_mwlor"]
 [ext_resource type="PackedScene" uid="uid://xrhjayy04y7b" path="res://components/chapter2/contractions/contraction_wobble/contraction_wobble.tscn" id="76_mwlor"]
 [ext_resource type="Shader" uid="uid://cbk3sn8e1flb4" path="res://components/chapter2/contractions/contraction_wobble/contraction_wobble.gdshader" id="76_u7xie"]
+[ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="77_wmfwn"]
+[ext_resource type="AudioStream" uid="uid://cdjnxbo5efoo8" path="res://audio/chapter2/ambient/comic 4/panel_4.5_4.9_4.13_pain_sound_interactive.wav" id="78_28vgg"]
+[ext_resource type="AudioStream" uid="uid://dg8telg0p3nrb" path="res://audio/chapter2/ambient/comic 4/panel_4.6_4.7_4.8_4.10_4.11_4.12_circle_sound_interactive.wav" id="78_bcd3f"]
+[ext_resource type="AudioStream" uid="uid://bpu5dnphbkpcr" path="res://audio/chapter2/ambient/comic 4/panel_4.7_4.11breathe_sound.wav" id="79_28vgg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_61fec"]
 animations = [{
@@ -166,6 +172,9 @@ size = Vector2(1920, 1080)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0tndx"]
 radius = 130.34146
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wr1ww"]
+size = Vector2(2363, 1121)
 
 [sub_resource type="Resource" id="Resource_mwlor"]
 script = ExtResource("75_mwlor")
@@ -585,6 +594,7 @@ collision_mask = 2
 z_index = 1
 position = Vector2(-1054, 413)
 scale = Vector2(0.25, 0.25)
+resolve_puzzle_stream = ExtResource("63_wr1ww")
 
 [node name="PuzzlePiece" parent="Puzzles/Puzzle3/DragDropPuzzle/BuildingBlocks" parent_id_path=PackedInt32Array(1588097281, 1654234455) index="0" unique_id=1667760579]
 position = Vector2(396, 32)
@@ -749,6 +759,90 @@ script = ExtResource("69_cbojg")
 loop_name = 1100
 metadata/_custom_type_script = "uid://brda7473wfj1v"
 
+[node name="StopSfx" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1727475711 node_paths=PackedStringArray("node_to_disable")]
+position = Vector2(3945, 555)
+rect = Rect2(-62, -54, 111, 100)
+script = ExtResource("74_bcd3f")
+node_to_disable = NodePath("../ContractionAreasSFX/Clickable")
+metadata/_custom_type_script = "uid://ccgnalbw7s5yu"
+
+[node name="StopSfx2" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=867712 node_paths=PackedStringArray("node_to_disable")]
+position = Vector2(5951, 536)
+rect = Rect2(-62, -54, 111, 100)
+script = ExtResource("74_bcd3f")
+node_to_disable = NodePath("../ContractionAreasSFX/Clickable2")
+metadata/_custom_type_script = "uid://ccgnalbw7s5yu"
+
+[node name="ContractionAreasSFX" type="Node" parent="AudioContainer" unique_id=1347779314]
+
+[node name="Clickable" type="Area2D" parent="AudioContainer/ContractionAreasSFX" unique_id=1215225529]
+position = Vector2(2369, 0)
+script = ExtResource("6_isbuh")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AudioContainer/ContractionAreasSFX/Clickable" unique_id=1770670296]
+z_index = 10
+position = Vector2(331.5, 516.5)
+shape = SubResource("RectangleShape2D_wr1ww")
+
+[node name="TriggerSfxOnClick" type="Node" parent="AudioContainer/ContractionAreasSFX/Clickable" unique_id=2034268041 node_paths=PackedStringArray("clickables")]
+script = ExtResource("77_wmfwn")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("78_bcd3f")
+linear_volume = 1.3
+save_sfx_id = true
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
+[node name="TriggerSfxOnClick_pain" type="Node" parent="AudioContainer/ContractionAreasSFX/Clickable" unique_id=20479944 node_paths=PackedStringArray("clickables")]
+script = ExtResource("77_wmfwn")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("79_28vgg")
+linear_volume = 1.3
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="AudioContainer/ContractionAreasSFX" unique_id=35663981]
+position = Vector2(3719, 649)
+rect = Rect2(-10, -10, 52, 56)
+enable_node_path = NodePath("../Clickable")
+
+[node name="VisibleOnScreenEnabler2D2" type="VisibleOnScreenEnabler2D" parent="AudioContainer/ContractionAreasSFX" unique_id=574892295]
+position = Vector2(5710, 504)
+rect = Rect2(-10, -10, 52, 56)
+enable_node_path = NodePath("../Clickable2")
+
+[node name="Clickable2" type="Area2D" parent="AudioContainer/ContractionAreasSFX" unique_id=1449656600]
+position = Vector2(4241, 11)
+script = ExtResource("6_isbuh")
+metadata/_custom_type_script = "uid://ba2byqse4kn1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AudioContainer/ContractionAreasSFX/Clickable2" unique_id=220130196]
+z_index = 10
+position = Vector2(331.5, 516.5)
+shape = SubResource("RectangleShape2D_wr1ww")
+
+[node name="TriggerSfxOnClick" type="Node" parent="AudioContainer/ContractionAreasSFX/Clickable2" unique_id=2044097947 node_paths=PackedStringArray("clickables")]
+script = ExtResource("77_wmfwn")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("78_bcd3f")
+linear_volume = 1.3
+save_sfx_id = true
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
+[node name="TriggerSfxOnClick_pain" type="Node" parent="AudioContainer/ContractionAreasSFX/Clickable2" unique_id=4867797 node_paths=PackedStringArray("clickables")]
+script = ExtResource("77_wmfwn")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("78_28vgg")
+linear_volume = 1.3
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
 [node name="ObstacleContractionArea" parent="." unique_id=362755817 node_paths=PackedStringArray("woman") instance=ExtResource("12_isbuh")]
 position = Vector2(2369, 0)
 collision_mask = 2
@@ -796,3 +890,4 @@ contraction_overlay = NodePath("../Path2D/PathFollow2D/Amani/Camera2D/Contractio
 [editable path="Puzzles/Puzzle4/Puzzle2/BuildingBlocks/HollowPieces/PuzzlePieceHollow2"]
 [editable path="Puzzles/Puzzle4/Puzzle2/BuildingBlocks/HollowPieces/PuzzlePieceHollow3"]
 [editable path="Path2D/PathFollow2D/Companion"]
+[editable path="ContractionController"]
