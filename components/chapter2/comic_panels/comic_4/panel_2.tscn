@@ -48,11 +48,12 @@ metadata/_custom_type_script = "uid://ba2byqse4kn1f"
 shape = SubResource("RectangleShape2D_g7c6u")
 
 [node name="AudioSfxZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=1447371258]
-position = Vector2(117, 234)
+position = Vector2(432, 231)
 rect = Rect2(-151, -134, 307, 144)
 script = ExtResource("6_kj5cj")
 use_audio_stream = true
 stream = ExtResource("7_qh67n")
+linear_volume = 1.4
 metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
 
 [node name="TriggerSfxOnClick" type="Node" parent="." unique_id=609407320 node_paths=PackedStringArray("clickables")]
@@ -61,4 +62,5 @@ clickables = [NodePath("../Clickable")]
 play_sfx_once = true
 use_audio_stream = true
 stream = ExtResource("9_ikg0e")
+linear_volume = 1.4
 metadata/_custom_type_script = "uid://b7avucygxykbp"

@@ -6,6 +6,8 @@ extends Node2D
 #HACK
 @export var node_to_enable : Node
 
+@export var node_to_modulate: Node2D
+
 @export_group("Sound")
 @export var stream: AudioStream
 @export var linear_volume: float = 1
@@ -28,7 +30,10 @@ func _unhandled_input(event: InputEvent) -> void:
 			if invert :
 				added_val = -added_val
 			self_modulate.a = clampf( self_modulate.a - added_val,0,1)
-
+			
+			if node_to_modulate != null:
+				node_to_modulate.self_modulate.a = clampf( self_modulate.a - added_val,0,1)
+			
 			if (!invert && self_modulate.a >= 1.0) or (invert && self_modulate.a <= 0.0):
 				complete()
 				

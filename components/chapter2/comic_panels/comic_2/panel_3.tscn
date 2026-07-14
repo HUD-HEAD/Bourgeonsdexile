@@ -5,21 +5,84 @@
 [ext_resource type="Material" uid="uid://mamd7s33ysol" path="res://scenes/prototyping/lut/mat_lut_rain.tres" id="2_i2khw"]
 [ext_resource type="AudioStream" uid="uid://bj3dfcws2vy1g" path="res://audio/chapter2/ambient/comic 2/panel_2.3_day-night_edited.wav" id="4_0b1bd"]
 [ext_resource type="Script" uid="uid://bxdi7w06ul2j0" path="res://components/utils/comics/pan_modulate.gd" id="4_nm27t"]
+[ext_resource type="Texture2D" uid="uid://cxqstmyec8t80" path="res://graphics/chapter2/comics/comic2/framesky/rain_sky_10fps/rain_sky_0001.png" id="5_unfc0"]
+[ext_resource type="Texture2D" uid="uid://coqg1554gaynt" path="res://graphics/chapter2/comics/comic2/framesky/rain_sky_10fps/rain_sky_0002.png" id="6_c5ioo"]
+[ext_resource type="Texture2D" uid="uid://csabljqut3bh1" path="res://graphics/chapter2/comics/comic2/framesky/rain_sky_10fps/rain_sky_0003.png" id="7_cai5k"]
 [ext_resource type="Script" uid="uid://c6qa3ng0o3ony" path="res://components/utils/audio/audio integration nodes/trigger_loop.gd" id="7_loucv"]
+[ext_resource type="Texture2D" uid="uid://me00hf1v4sht" path="res://graphics/chapter2/comics/comic2/framesky/rain_sky_10fps/rain_sky_0004.png" id="8_i31ks"]
+[ext_resource type="Texture2D" uid="uid://bot4l75g7y5il" path="res://graphics/chapter2/comics/comic2/framesky/rain_sky_10fps/rain_sky_0005.png" id="9_ce0ru"]
+[ext_resource type="Texture2D" uid="uid://b7tq8irx6ror5" path="res://graphics/chapter2/comics/comic2/framesky/rain_sky_10fps/rain_sky_0006.png" id="10_3hhnt"]
+[ext_resource type="Texture2D" uid="uid://vu7csqi6eiid" path="res://graphics/chapter2/comics/comic2/framesky/rain_sky_10fps/rain_sky_0007.png" id="11_deigv"]
+[ext_resource type="Texture2D" uid="uid://d2vslym0h66nx" path="res://graphics/chapter2/comics/comic2/framesky/rain_sky_10fps/rain_sky_0008.png" id="12_deqbx"]
+[ext_resource type="Texture2D" uid="uid://dcmwdahxrgq8r" path="res://graphics/chapter2/comics/comic2/framesky/rain_sky_10fps/rain_sky_0009.png" id="13_rkon7"]
+[ext_resource type="Texture2D" uid="uid://c46f5xvr6cp2j" path="res://graphics/chapter2/comics/comic2/framesky/rain_sky_10fps/rain_sky_0010.png" id="14_vd4p2"]
+[ext_resource type="Texture2D" uid="uid://dy6q7g8eicxfq" path="res://graphics/chapter2/comics/comic2/framesky/rain_sky_10fps/rain_sky_0011.png" id="15_pabba"]
+[ext_resource type="Texture2D" uid="uid://d26w77174yyex" path="res://graphics/chapter2/comics/comic2/framesky/rain_sky_10fps/rain_sky_0012.png" id="16_edmga"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_17ccm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_unfc0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_c5ioo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cai5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_i31ks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ce0ru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_3hhnt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_deigv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_deqbx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rkon7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vd4p2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_pabba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_edmga")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [node name="Panel3" type="Node2D" unique_id=547383153]
 
 [node name="Bg" type="Sprite2D" parent="." unique_id=825403214]
 texture = ExtResource("1_xmlk0")
 
-[node name="OverlayRain" type="Sprite2D" parent="." unique_id=420456436 node_paths=PackedStringArray("node_to_enable", "loop_node_to_play")]
+[node name="OverlayRain" type="Sprite2D" parent="." unique_id=420456436 node_paths=PackedStringArray("node_to_enable", "node_to_modulate", "loop_node_to_play")]
 material = ExtResource("2_i2khw")
 texture = ExtResource("1_xmlk0")
 script = ExtResource("4_nm27t")
 sensitivity = 0.001
 node_to_enable = NodePath("../TransitionerPassive")
+node_to_modulate = NodePath("../AnimatedSprite2D")
 stream = ExtResource("4_0b1bd")
 loop_node_to_play = NodePath("../TriggerLoopZone")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1606505107]
+modulate = Color(1, 1, 1, 0.5882353)
+self_modulate = Color(1, 1, 1, 0)
+sprite_frames = SubResource("SpriteFrames_17ccm")
+autoplay = "default"
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1616104888]
 
