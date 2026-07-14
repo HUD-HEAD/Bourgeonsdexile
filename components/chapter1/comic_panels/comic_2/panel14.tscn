@@ -512,11 +512,15 @@ clickables = [NodePath("..")]
 play_sfx_once = true
 use_audio_stream = true
 stream = ExtResource("96_x3fel")
+linear_volume = 2.0
+min_pitch = 1.05
+max_pitch = 1.05
 metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="TransitionTriggerCounter" type="Node" parent="PregnancyPanel" unique_id=1270788183 node_paths=PackedStringArray("clickables")]
 script = ExtResource("95_fsc76")
 clickables = [NodePath("../Area2D")]
+transition_delay = 3.0
 
 [node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=171429855]
 rect = Rect2(-10, -10, 51, 41)

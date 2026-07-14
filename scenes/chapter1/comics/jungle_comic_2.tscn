@@ -131,6 +131,14 @@ script = ExtResource("21_m63vi")
 music_name = 1300
 metadata/_custom_type_script = "uid://2aadlm17sdsf"
 
+[node name="Trigger_stopMarketLoop" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=582405181]
+position = Vector2(1642, 574)
+rect = Rect2(-65, -10, 75, 79)
+script = ExtResource("20_4uixq")
+loop_name = 1100
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
 [node name="CheckpointController" type="Node" parent="." unique_id=120937431]
 script = ExtResource("21_4uixq")
 comic = 1

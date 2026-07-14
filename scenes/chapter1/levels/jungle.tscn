@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://kkmgx1eqpc4i" path="res://components/chapter1/main_characters/char_reflection.tscn" id="19_c5nq0"]
 [ext_resource type="SpriteFrames" uid="uid://dg15c2titrtgq" path="res://components/chapter1/main_characters/companion_3_sprite_frames.tres" id="19_jh4yo"]
 [ext_resource type="Script" uid="uid://bchnidsm7kci0" path="res://components/chapter1/main_characters/companion.gd" id="20_t8bry"]
+[ext_resource type="AudioStream" uid="uid://dy40n6mckp8l6" path="res://audio/chapter1/ambient/panel_section_2/PANEL_2.8_oh_no_woman.wav" id="20_ups4t"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="21_kdrkc"]
 [ext_resource type="Script" uid="uid://c6535mmpn7tng" path="res://components/chapter1/levels/jungle/rain_starter.gd" id="25_h7yo2"]
 [ext_resource type="PackedScene" uid="uid://mn5d8k3suhx3" path="res://components/chapter1/levels/jungle/puzzle1.tscn" id="28_aav6d"]
@@ -1156,6 +1157,15 @@ puzzle = NodePath("../DragDropPuzzle")
 camera = NodePath("../../../Path2D/PathFollow2D/Leader/Camera2D")
 obstacle_leader = NodePath("../ObstacleLeader")
 
+[node name="AudioSfxZone" type="VisibleOnScreenNotifier2D" parent="Puzzles/Puzzle4" unique_id=1401340510]
+position = Vector2(3047, 492)
+rect = Rect2(-10, -10, 83, 86)
+script = ExtResource("187_nt033")
+delay = 11.0
+use_audio_stream = true
+stream = ExtResource("20_ups4t")
+metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
+
 [node name="Puzzle3" type="Node2D" parent="Puzzles" unique_id=1643202236]
 position = Vector2(13625, 0)
 
@@ -1625,14 +1635,14 @@ metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
 
 [node name="TraumaticMoment_Loop" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1855696257]
 position = Vector2(19142, 334)
-rect = Rect2(-10, -10, 2622, 192)
+rect = Rect2(-10, -10, 2793, 192)
 script = ExtResource("192_b8fep")
 loop_name = 1204
 metadata/_custom_type_script = "uid://brda7473wfj1v"
 
 [node name="WhiteNoise_loop" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=369675775]
 position = Vector2(19142, 334)
-rect = Rect2(-10, -10, 2622, 192)
+rect = Rect2(-10, -10, 4917, 192)
 script = ExtResource("192_b8fep")
 loop_name = 1205
 metadata/_custom_type_script = "uid://brda7473wfj1v"
