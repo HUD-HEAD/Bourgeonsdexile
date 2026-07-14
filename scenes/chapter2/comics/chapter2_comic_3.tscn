@@ -84,6 +84,40 @@ script = ExtResource("12_2w388")
 music_name = 2300
 metadata/_custom_type_script = "uid://2aadlm17sdsf"
 
+[node name="Stop_all__desert_loops" type="Node2D" parent="Audio" unique_id=462333774]
+position = Vector2(1629, 488)
+
+[node name="Bus_moving_loop" type="VisibleOnScreenNotifier2D" parent="Audio/Stop_all__desert_loops" unique_id=2140867081]
+rect = Rect2(-10, -10, 89, 268)
+script = ExtResource("12_1hfo3")
+loop_name = 2205
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="Bus_stop_loop" type="VisibleOnScreenNotifier2D" parent="Audio/Stop_all__desert_loops" unique_id=557152540]
+position = Vector2(0, -284)
+rect = Rect2(-10, -10, 97, 276)
+script = ExtResource("12_1hfo3")
+loop_name = 2206
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="Bus_people_loop" type="VisibleOnScreenNotifier2D" parent="Audio/Stop_all__desert_loops" unique_id=1895059248]
+position = Vector2(0, -446)
+rect = Rect2(-10, -10, 112, 295)
+script = ExtResource("12_1hfo3")
+loop_name = 2207
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="wind_stop_loop2" type="VisibleOnScreenNotifier2D" parent="Audio/Stop_all__desert_loops" unique_id=1022743903]
+position = Vector2(0, 262)
+rect = Rect2(-10, -10, 112, 295)
+script = ExtResource("12_1hfo3")
+loop_name = 2208
+loop_mode = 1
+metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
 [node name="SceneEnder" type="VisibleOnScreenNotifier2D" parent="." unique_id=2114518090]
 position = Vector2(20899, 596)
 script = ExtResource("11_08xu7")
