@@ -157,7 +157,7 @@ shape = SubResource("RectangleShape2D_2k27y")
 
 [node name="TransitionerCounter" type="Node" parent="." unique_id=745698545 node_paths=PackedStringArray("clickables")]
 script = ExtResource("9_lmdhm")
-clickables = [NodePath("../Posters/1/Clickable"), NodePath("../Posters/2/Clickable"), NodePath("../Posters/3/Clickable"), NodePath("../Posters/4/Clickable")]
+clickables = [NodePath("../Posters/4/Clickable")]
 transition_delay = 2.0
 metadata/_custom_type_script = "uid://c44tybeisilbv"
 
