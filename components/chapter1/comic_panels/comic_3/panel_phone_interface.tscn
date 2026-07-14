@@ -31,13 +31,15 @@ texture = ExtResource("2_72xlw")
 script = ExtResource("5_47wdq")
 zoom_in = NodePath("../../Phone/Sprite2D/ZoomIn")
 zoom_out = NodePath("../../Phone/Sprite2D/ZoomOut")
+min_map_scale = 0.65
+max_map_scale = 2.0
 
 [node name="DraggableRestricted" type="Area2D" parent="Mask/Node2D" unique_id=520833436]
 script = ExtResource("4_18wv5")
-left = -415.0
-right = 700.0
-up = -160.0
-down = 150.0
+left = -250.0
+right = 300.0
+up = -40.0
+down = 35.0
 metadata/_custom_type_script = "uid://001fo68fi8nn"
 
 [node name="Map" type="Sprite2D" parent="Mask/Node2D/DraggableRestricted" unique_id=1509479915]
