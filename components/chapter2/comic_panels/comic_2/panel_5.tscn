@@ -4,9 +4,21 @@
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="2_owh8m"]
 [ext_resource type="Texture2D" uid="uid://dtvqsjmfcdnor" path="res://graphics/chapter2/comics/comic2/framefrog/frog2.png" id="3_y32kj"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="4_c5a74"]
+[ext_resource type="Texture2D" uid="uid://bg7jtt5qkujkb" path="res://graphics/chapter2/comics/comic2/framefrog/rain_frogs_10fps/rain_frogs_0001.png" id="4_u1wqw"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="5_cqpku"]
+[ext_resource type="Texture2D" uid="uid://cl2ov15a3tvtr" path="res://graphics/chapter2/comics/comic2/framefrog/rain_frogs_10fps/rain_frogs_0002.png" id="5_hgt1p"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="5_y4te1"]
+[ext_resource type="Texture2D" uid="uid://007bdls8k8rs" path="res://graphics/chapter2/comics/comic2/framefrog/rain_frogs_10fps/rain_frogs_0003.png" id="6_0x4bt"]
 [ext_resource type="AudioStream" uid="uid://csxcfjd0a6055" path="res://audio/chapter2/ambient/comic 2/panel_2.5_frog_sound_interactive.wav" id="6_eboc4"]
+[ext_resource type="Texture2D" uid="uid://dsy4pyjitos4w" path="res://graphics/chapter2/comics/comic2/framefrog/rain_frogs_10fps/rain_frogs_0004.png" id="7_0r461"]
+[ext_resource type="Texture2D" uid="uid://cfmcmadlntg4l" path="res://graphics/chapter2/comics/comic2/framefrog/rain_frogs_10fps/rain_frogs_0005.png" id="8_udpsc"]
+[ext_resource type="Texture2D" uid="uid://djhh0veicgd46" path="res://graphics/chapter2/comics/comic2/framefrog/rain_frogs_10fps/rain_frogs_0006.png" id="9_7msra"]
+[ext_resource type="Texture2D" uid="uid://bb5wt0rxdvvss" path="res://graphics/chapter2/comics/comic2/framefrog/rain_frogs_10fps/rain_frogs_0007.png" id="10_yuuli"]
+[ext_resource type="Texture2D" uid="uid://b32y1clj3cclx" path="res://graphics/chapter2/comics/comic2/framefrog/rain_frogs_10fps/rain_frogs_0008.png" id="11_6gfn5"]
+[ext_resource type="Texture2D" uid="uid://dq7d44o8omjky" path="res://graphics/chapter2/comics/comic2/framefrog/rain_frogs_10fps/rain_frogs_0009.png" id="12_28jay"]
+[ext_resource type="Texture2D" uid="uid://bo8mwnix122t" path="res://graphics/chapter2/comics/comic2/framefrog/rain_frogs_10fps/rain_frogs_0010.png" id="13_e2pt2"]
+[ext_resource type="Texture2D" uid="uid://bvrec2hw7tcfc" path="res://graphics/chapter2/comics/comic2/framefrog/rain_frogs_10fps/rain_frogs_0011.png" id="14_68emf"]
+[ext_resource type="Texture2D" uid="uid://dvifya645i0ub" path="res://graphics/chapter2/comics/comic2/framefrog/rain_frogs_10fps/rain_frogs_0012.png" id="15_2l78j"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c5a74"]
 animations = [{
@@ -22,6 +34,50 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ewmx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_u1wqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hgt1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0x4bt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0r461")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_udpsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7msra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yuuli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_6gfn5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_28jay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_e2pt2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_68emf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_2l78j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y4te1"]
 radius = 174.0
 height = 796.0
@@ -32,6 +88,11 @@ height = 796.0
 sprite_frames = SubResource("SpriteFrames_c5a74")
 script = ExtResource("4_c5a74")
 clickable = NodePath("../Clickable")
+
+[node name="rain" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=1220634277]
+self_modulate = Color(1, 1, 1, 0.5882353)
+sprite_frames = SubResource("SpriteFrames_8ewmx")
+autoplay = "default"
 
 [node name="Clickable" type="Area2D" parent="." unique_id=968729751]
 position = Vector2(87, -285)

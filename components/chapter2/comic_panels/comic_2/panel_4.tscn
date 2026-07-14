@@ -1,12 +1,124 @@
 [gd_scene format=3 uid="uid://b7f0ua4xayqxf"]
 
 [ext_resource type="Texture2D" uid="uid://xuy6cdsntvyl" path="res://graphics/chapter2/comics/comic2/framerain/framerain.png" id="1_87dp8"]
+[ext_resource type="Texture2D" uid="uid://c1pvq3i7q28qb" path="res://graphics/chapter2/comics/comic2/framerain/rain_armdown_10fps/rain_armdown_0001.png" id="2_r6nah"]
+[ext_resource type="Texture2D" uid="uid://1gffwfhdpydt" path="res://graphics/chapter2/comics/comic2/framerain/rain_armdown_10fps/rain_armdown_0002.png" id="3_64bat"]
 [ext_resource type="Texture2D" uid="uid://reatfmtd4clv" path="res://graphics/chapter2/comics/comic2/framerain/framerain2.png" id="3_f55js"]
 [ext_resource type="Script" uid="uid://kg2dr782oebs" path="res://components/utils/comics/click_show.gd" id="3_pvk7w"]
+[ext_resource type="Texture2D" uid="uid://bdtw5f3tmksoy" path="res://graphics/chapter2/comics/comic2/framerain/rain_armdown_10fps/rain_armdown_0003.png" id="4_0qrdh"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_pvk7w"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="4_rgcko"]
 [ext_resource type="AudioStream" uid="uid://dpfmhdy8kobsb" path="res://audio/chapter2/ambient/comic 2/panel_2.4_mmm_expression_interactive.wav" id="5_8i877"]
+[ext_resource type="Texture2D" uid="uid://bc0f0fn722n2m" path="res://graphics/chapter2/comics/comic2/framerain/rain_armdown_10fps/rain_armdown_0004.png" id="5_bgays"]
+[ext_resource type="Texture2D" uid="uid://db6glw1la81d8" path="res://graphics/chapter2/comics/comic2/framerain/rain_armdown_10fps/rain_armdown_0005.png" id="6_4xbwi"]
 [ext_resource type="PackedScene" uid="uid://d246c0iqqddvh" path="res://components/chapter1/levels/jungle/rain.tscn" id="7_myeqg"]
+[ext_resource type="Texture2D" uid="uid://dfnimu5sk6477" path="res://graphics/chapter2/comics/comic2/framerain/rain_armdown_10fps/rain_armdown_0006.png" id="7_vl3m4"]
+[ext_resource type="Texture2D" uid="uid://4h0a5pkxao0i" path="res://graphics/chapter2/comics/comic2/framerain/rain_armdown_10fps/rain_armdown_0007.png" id="8_6v0id"]
+[ext_resource type="Texture2D" uid="uid://c3k1wexake0td" path="res://graphics/chapter2/comics/comic2/framerain/rain_armdown_10fps/rain_armdown_0008.png" id="9_450pq"]
+[ext_resource type="Texture2D" uid="uid://c8vvfu6xm3dxw" path="res://graphics/chapter2/comics/comic2/framerain/rain_armdown_10fps/rain_armdown_0009.png" id="10_jyh67"]
+[ext_resource type="Texture2D" uid="uid://cytly4d0p7q7p" path="res://graphics/chapter2/comics/comic2/framerain/rain_armdown_10fps/rain_armdown_0010.png" id="11_p5moa"]
+[ext_resource type="Texture2D" uid="uid://d0psp765d8dlh" path="res://graphics/chapter2/comics/comic2/framerain/rain_armdown_10fps/rain_armdown_0011.png" id="12_goen7"]
+[ext_resource type="Texture2D" uid="uid://cyju078vw830u" path="res://graphics/chapter2/comics/comic2/framerain/rain_armdown_10fps/rain_armdown_0012.png" id="13_ytis6"]
+[ext_resource type="Texture2D" uid="uid://1g8f40t61wek" path="res://graphics/chapter2/comics/comic2/framerain/rain_armup_10fps/rain_armup_0001.png" id="15_edyx8"]
+[ext_resource type="Texture2D" uid="uid://bjkpdlrx0x1l5" path="res://graphics/chapter2/comics/comic2/framerain/rain_armup_10fps/rain_armup_0002.png" id="16_ybodm"]
+[ext_resource type="Texture2D" uid="uid://3eeiphi2dgon" path="res://graphics/chapter2/comics/comic2/framerain/rain_armup_10fps/rain_armup_0003.png" id="17_7gqnc"]
+[ext_resource type="Texture2D" uid="uid://dsjr3o3nkaydv" path="res://graphics/chapter2/comics/comic2/framerain/rain_armup_10fps/rain_armup_0004.png" id="18_43rsf"]
+[ext_resource type="Texture2D" uid="uid://bisk620kjtqdk" path="res://graphics/chapter2/comics/comic2/framerain/rain_armup_10fps/rain_armup_0005.png" id="19_s50xf"]
+[ext_resource type="Texture2D" uid="uid://dr8epxlxkanrt" path="res://graphics/chapter2/comics/comic2/framerain/rain_armup_10fps/rain_armup_0006.png" id="20_4j5f8"]
+[ext_resource type="Texture2D" uid="uid://wp3ljuug6u5f" path="res://graphics/chapter2/comics/comic2/framerain/rain_armup_10fps/rain_armup_0007.png" id="21_dcv75"]
+[ext_resource type="Texture2D" uid="uid://co5v2bpesc2tc" path="res://graphics/chapter2/comics/comic2/framerain/rain_armup_10fps/rain_armup_0008.png" id="22_jn46d"]
+[ext_resource type="Texture2D" uid="uid://cyonybc3tkh0p" path="res://graphics/chapter2/comics/comic2/framerain/rain_armup_10fps/rain_armup_0009.png" id="23_m1mrp"]
+[ext_resource type="Texture2D" uid="uid://d2wfxhvh68jde" path="res://graphics/chapter2/comics/comic2/framerain/rain_armup_10fps/rain_armup_0010.png" id="24_dpxhh"]
+[ext_resource type="Texture2D" uid="uid://cstdbkogfke2i" path="res://graphics/chapter2/comics/comic2/framerain/rain_armup_10fps/rain_armup_0011.png" id="25_oykt1"]
+[ext_resource type="Texture2D" uid="uid://cuhbw8dk1pgc3" path="res://graphics/chapter2/comics/comic2/framerain/rain_armup_10fps/rain_armup_0012.png" id="26_v12kd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wuy4a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_r6nah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_64bat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0qrdh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bgays")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4xbwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vl3m4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6v0id")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_450pq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jyh67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_p5moa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_goen7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ytis6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_afpx3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_edyx8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ybodm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_7gqnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_43rsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_s50xf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_4j5f8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_dcv75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_jn46d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_m1mrp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_dpxhh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_oykt1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_v12kd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f55js"]
 radius = 416.09735
@@ -16,10 +128,21 @@ radius = 416.09735
 [node name="Framerain" type="Sprite2D" parent="." unique_id=1229464294]
 texture = ExtResource("1_87dp8")
 
+[node name="Framerain_arm_down" type="AnimatedSprite2D" parent="Framerain" unique_id=1640650228]
+self_modulate = Color(1, 1, 1, 0.5882353)
+sprite_frames = SubResource("SpriteFrames_wuy4a")
+autoplay = "default"
+
 [node name="Framerain2" type="Sprite2D" parent="." unique_id=419839427]
 texture = ExtResource("3_f55js")
 
+[node name="Framerain_arm_up" type="AnimatedSprite2D" parent="Framerain2" unique_id=285793296]
+self_modulate = Color(1, 1, 1, 0.5882353)
+sprite_frames = SubResource("SpriteFrames_afpx3")
+autoplay = "default"
+
 [node name="Rain" parent="." unique_id=153314495 instance=ExtResource("7_myeqg")]
+visible = false
 position = Vector2(4, -553)
 scale = Vector2(0.35, 1)
 amount = 5000
