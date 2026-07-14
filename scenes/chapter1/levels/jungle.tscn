@@ -1635,14 +1635,14 @@ metadata/_custom_type_script = "uid://bvmwxu2au5j5l"
 
 [node name="TraumaticMoment_Loop" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=1855696257]
 position = Vector2(19142, 334)
-rect = Rect2(-10, -10, 2622, 192)
+rect = Rect2(-10, -10, 2793, 192)
 script = ExtResource("192_b8fep")
 loop_name = 1204
 metadata/_custom_type_script = "uid://brda7473wfj1v"
 
 [node name="WhiteNoise_loop" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=369675775]
 position = Vector2(19142, 334)
-rect = Rect2(-10, -10, 2622, 192)
+rect = Rect2(-10, -10, 4917, 192)
 script = ExtResource("192_b8fep")
 loop_name = 1205
 metadata/_custom_type_script = "uid://brda7473wfj1v"
