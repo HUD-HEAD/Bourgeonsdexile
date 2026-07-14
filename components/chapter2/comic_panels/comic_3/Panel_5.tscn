@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://dxoaqwqds3ccf" path="res://components/utils/mechanics/click_hide.gd" id="3_g04gt"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="4_g04gt"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_nhovv"]
-[ext_resource type="AudioStream" uid="uid://b0fqufhu03ppv" path="res://audio/chapter2/ambient/comic 3/panel_3.5_belly_sound.wav" id="5_yvknt"]
+[ext_resource type="AudioStream" uid="uid://chp4yothn7faw" path="res://audio/chapter1/ambient/panel_section_3/panel_3.7_relief_sound.wav" id="5_g04gt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1wrmg"]
 size = Vector2(1205, 936)
@@ -36,7 +36,7 @@ shape = SubResource("RectangleShape2D_1wrmg")
 script = ExtResource("4_g04gt")
 clickables = [NodePath("..")]
 use_audio_stream = true
-stream = ExtResource("5_yvknt")
+stream = ExtResource("5_g04gt")
 metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="FirstPose" type="Node2D" parent="Clickable" unique_id=103672865]
