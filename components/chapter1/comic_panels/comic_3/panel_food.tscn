@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://ccxg3iynsji3i" path="res://graphics/chapter1/comics/comic3/frame_food/glass/glass3.png" id="8_bk7fk"]
 [ext_resource type="Texture2D" uid="uid://x5xec0oqww23" path="res://graphics/chapter1/comics/comic3/frame_food/glass/glass4.png" id="9_fgxr1"]
 [ext_resource type="Script" uid="uid://bfudp264xpg4w" path="res://components/utils/comics/next_frame_on_click.gd" id="9_n4mpm"]
+[ext_resource type="AudioStream" uid="uid://ydduv2xrk8am" path="res://audio/chapter1/ambient/panel_section_3/panel_3.8_sound_water_drink_1_sound.wav" id="10_0een7"]
 [ext_resource type="Texture2D" uid="uid://dsvw6n00uxb7d" path="res://graphics/chapter1/comics/comic3/frame_food/fork.png" id="10_v0h4g"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="12_c8x4o"]
 [ext_resource type="Texture2D" uid="uid://dbwmkpn5luvtl" path="res://graphics/chapter1/comics/comic3/frame_food/plate2/plate2_1.png" id="13_4npjt"]
@@ -117,6 +118,13 @@ clickable = NodePath("..")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Glass" unique_id=89482058]
 position = Vector2(1, -58)
 shape = SubResource("CapsuleShape2D_6ig8h")
+
+[node name="TriggerSfxOnClick" type="Node" parent="Glass" unique_id=2020410889 node_paths=PackedStringArray("clickables")]
+script = ExtResource("19_3dhvr")
+clickables = [NodePath("..")]
+use_audio_stream = true
+stream = ExtResource("10_0een7")
+metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="Meal" type="Area2D" parent="." unique_id=784142193]
 position = Vector2(-208, 55)
