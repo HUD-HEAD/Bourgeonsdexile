@@ -1,6 +1,7 @@
 class_name AudioSfxZone
 extends VisibleOnScreenNotifier2D
 
+@export var delay: float = -1
 @export var use_audio_stream: bool = false
 @export var sfx: AudioConfiguration.sfx_type
 @export var stream: AudioStream
@@ -15,7 +16,15 @@ func _ready() -> void:
 		screen_entered.connect(play_stream)
 
 func play_sfx():
-	AudioManager.play_sfx(sfx)
+	if delay <= 0:
+		AudioManager.play_sfx(sfx)
+	else:
+		await get_tree().create_timer(delay).timeout
+		AudioManager.play_sfx(sfx)
 
 func play_stream():
-	AudioManager.play_audio_stream(stream, linear_volume, min_pitch, max_pitch)
+	if delay <= 0:
+		AudioManager.play_audio_stream(stream, linear_volume, min_pitch, max_pitch)
+	else:
+		await get_tree().create_timer(delay).timeout
+		AudioManager.play_audio_stream(stream, linear_volume, min_pitch, max_pitch)
