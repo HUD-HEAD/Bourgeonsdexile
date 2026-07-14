@@ -536,7 +536,7 @@ comic = 6
 [node name="AudioContainer" type="Node" parent="." unique_id=1196178060]
 
 [node name="LoopZone" type="VisibleOnScreenNotifier2D" parent="AudioContainer" unique_id=81881556]
-position = Vector2(89, 49)
+position = Vector2(86, 760)
 rect = Rect2(-10, -10, 4893, 101)
 script = ExtResource("35_sgj77")
 loop_name = 1302
