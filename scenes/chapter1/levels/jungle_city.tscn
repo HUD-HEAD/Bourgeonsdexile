@@ -1349,7 +1349,7 @@ loop_name = 1100
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [node name="TriggerLoopZone2" type="VisibleOnScreenNotifier2D" parent="." unique_id=1549316634]
-position = Vector2(4955, 407)
+position = Vector2(5757, 482)
 rect = Rect2(-65, -10, 75, 79)
 script = ExtResource("238_48jc3")
 loop_name = 1100
