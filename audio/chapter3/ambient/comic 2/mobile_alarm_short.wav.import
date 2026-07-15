@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ddm44lr3vj0bv"
+path="res://.godot/imported/mobile_alarm_short.wav-4caadd3a51eeca68361e3a1d6ad08df1.sample"
+
+[deps]
+
+source_file="res://audio/chapter3/ambient/comic 2/mobile_alarm_short.wav"
+dest_files=["res://.godot/imported/mobile_alarm_short.wav-4caadd3a51eeca68361e3a1d6ad08df1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
