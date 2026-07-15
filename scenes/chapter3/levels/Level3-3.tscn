@@ -527,19 +527,14 @@ comic = 20
 
 [node name="Audio" type="Node" parent="." unique_id=1707098790]
 
-[node name="TriggerLoopZone" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=1995490177]
-position = Vector2(897, 113)
-rect = Rect2(-767, -10, 777, 57)
-script = ExtResource("135_rcnf5")
-loop_name = 2201
-metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
-
-[node name="TriggerLoopZone2" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=689776476]
-position = Vector2(904, 182)
-rect = Rect2(-767, -10, 777, 57)
+[node name="TriggerLoop_walk3" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=64184227]
+top_level = true
+z_index = 15
+position = Vector2(1585, 543)
+rect = Rect2(479, -562, 388, 1118)
 script = ExtResource("135_rcnf5")
 loop_name = 3500
-loop_mode = 2
+loop_mode = 4
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
 
 [node name="Stop_people_loop" type="VisibleOnScreenNotifier2D" parent="Audio" unique_id=1092199033]
