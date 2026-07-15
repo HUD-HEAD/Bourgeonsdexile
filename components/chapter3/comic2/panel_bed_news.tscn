@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="4_du6w7"]
 [ext_resource type="AudioStream" uid="uid://dr4lbncv3wcoi" path="res://audio/chapter3/ambient/comic 2/panel_2.4_mm_stress_sound_interactive.wav" id="5_0glyf"]
 [ext_resource type="Script" uid="uid://bvmwxu2au5j5l" path="res://components/utils/audio/audio integration nodes/audio_sfx_zone.gd" id="5_dgda3"]
+[ext_resource type="AudioStream" uid="uid://ddm44lr3vj0bv" path="res://audio/chapter3/ambient/comic 2/mobile_alarm_short.wav" id="6_0glyf"]
 [ext_resource type="AudioStream" uid="uid://dxn3463nmjybc" path="res://audio/chapter3/ambient/comic 2/panel_2.4_relaxing_sound.wav" id="6_4rdg0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hibxk"]
@@ -37,9 +38,21 @@ use_audio_stream = true
 stream = ExtResource("5_0glyf")
 metadata/_custom_type_script = "uid://b7avucygxykbp"
 
+[node name="TriggerSfxOnClick2" type="Node" parent="Clickable" unique_id=2027284446 node_paths=PackedStringArray("clickables")]
+script = ExtResource("4_du6w7")
+clickables = [NodePath("..")]
+play_sfx_once = true
+use_audio_stream = true
+stream = ExtResource("6_0glyf")
+linear_volume = 0.7
+min_pitch = 0.9
+max_pitch = 0.9
+metadata/_custom_type_script = "uid://b7avucygxykbp"
+
 [node name="TransitionerCounter" type="Node" parent="." unique_id=777541841 node_paths=PackedStringArray("clickables")]
 script = ExtResource("4_17yhj")
 clickables = [NodePath("../Clickable")]
+transition_delay = 3.0
 metadata/_custom_type_script = "uid://c44tybeisilbv"
 
 [node name="AudioSfxZone" type="VisibleOnScreenNotifier2D" parent="." unique_id=1057903838]

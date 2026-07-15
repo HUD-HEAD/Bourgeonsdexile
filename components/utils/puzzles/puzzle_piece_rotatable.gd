@@ -68,7 +68,7 @@ func rotate_custom(offset_degrees : float):
 	draggable.rotate(deg_to_rad(offset_degrees))
 	
 	rotation_interface.global_rotation = 0
-	
+	AudioManager.play_rotate_puzzle_piece()
 	_check_placement()
 
 func hide_rotation_interface():

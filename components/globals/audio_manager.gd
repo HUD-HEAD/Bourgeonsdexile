@@ -37,6 +37,8 @@ var tv_index: int
 const LOOP_POOL_SIZE = 6
 const TV_VOLUMES: Array[float] = [0.7, 1, 1.3, 1.5]
 
+@onready var rotate_piece_sfx : AudioStream = preload("res://audio/chapter2/sfx/rotate_puzzle_1.wav")
+
 # ── Structure ────────────────────────────────────────
 class loop_pool_item:
 	var is_playing: bool
@@ -169,6 +171,9 @@ func play_audio_stream(stream: AudioStream, volume: float = 1, min_pitch: float 
 	if save_sfx_id:
 		last_sfx_id = id
 
+func play_rotate_puzzle_piece():
+	play_audio_stream(rotate_piece_sfx)
+
 func stop_last_sfx_saved():
 	polyphonic_player.stop_stream(last_sfx_id)
 
@@ -191,6 +196,23 @@ func play_loop(key: AudioConfiguration.loop_type) -> AudioStreamPlayer:
 func stop_loop(key: AudioConfiguration.loop_type, fade_in_enable: bool = true, fade_out_volume: float = 0):
 	_free_loop(key, fade_in_enable, fade_out_volume)
 	_check_lullaby(key, false)
+
+func _force_to_play_loop(key: AudioConfiguration.loop_type, save_last_walking: bool = false):
+	var loop: AudioStreamPlayer =  _get_loop_from_pool(key)
+	var loop_info: loop_config = _get_loop(key)
+	
+	_check_lullaby(key, true)
+	
+	if loop != null:
+		loop.volume_linear = loop_info.volume
+		loop.pitch_scale = loop_info.pitch
+		loop.stream = loop_info.stream
+	
+		#loop.play()
+		fade_in(loop, 0, loop_info.volume)
+	
+	if save_last_walking:
+		last_walking_loop = key
 
 func free_walking_loop(key: AudioConfiguration.loop_type, fade_in_enable: bool = true ):
 	last_walking_loop = AudioConfiguration.loop_type.none
@@ -298,6 +320,17 @@ func _get_free_loop(key: AudioConfiguration.loop_type) -> AudioStreamPlayer:
 	assert("No free loops available in the pool.")
 	return null
 
+func _get_loop_from_pool(key: AudioConfiguration.loop_type) -> AudioStreamPlayer:
+	for item in loop_pool:
+		if !item.is_playing:
+			item.loop_type = key
+			item.is_playing = true
+			return item.player_reference
+	
+	assert("No free loops available in the pool.")
+	return null
+
+
 func _free_loop(key: AudioConfiguration.loop_type, fade_in_enable: bool = true, fade_out_volume: float = 0):
 	for item in loop_pool:
 		if item.is_playing && item.loop_type == key:
@@ -309,7 +342,7 @@ func _free_loop(key: AudioConfiguration.loop_type, fade_in_enable: bool = true, 
 			else:
 				item.is_playing = false
 				item.player_reference.stop()
-			break
+			#break
 
 func _stop_loops():
 	for item in loop_pool:

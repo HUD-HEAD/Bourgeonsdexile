@@ -11,7 +11,14 @@ enum trigger_mode{
 	stop_loop,
 	update_last_walk_loop,
 	stop_walking_loop,
+	update_last_walk_loop_on_ready,
 }
+
+func _enter_tree() -> void:
+	if loop_mode == trigger_mode.update_last_walk_loop_on_ready:
+		AudioManager.last_walking_loop = loop_name
+		await get_tree().create_timer(0.1).timeout
+		AudioManager._force_to_play_loop(loop_name)
 
 func _ready() -> void:
 	if start_loop_on_enter_screen:
