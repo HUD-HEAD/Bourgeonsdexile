@@ -37,6 +37,8 @@ var tv_index: int
 const LOOP_POOL_SIZE = 6
 const TV_VOLUMES: Array[float] = [0.7, 1, 1.3, 1.5]
 
+@onready var rotate_piece_sfx : AudioStream = preload("res://audio/chapter2/sfx/rotate_puzzle_1.wav")
+
 # ── Structure ────────────────────────────────────────
 class loop_pool_item:
 	var is_playing: bool
@@ -168,6 +170,9 @@ func play_audio_stream(stream: AudioStream, volume: float = 1, min_pitch: float 
 	var id = polyphonic_player.play_stream(stream, 0, linear_to_db(volume), pitch, 0 as AudioServer.PlaybackType, "Sfx")
 	if save_sfx_id:
 		last_sfx_id = id
+
+func play_rotate_puzzle_piece():
+	play_audio_stream(rotate_piece_sfx)
 
 func stop_last_sfx_saved():
 	polyphonic_player.stop_stream(last_sfx_id)
