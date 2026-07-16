@@ -80,8 +80,8 @@ shape = SubResource("RectangleShape2D_nvgmp")
 [node name="TransitionerCounter" type="Node" parent="." unique_id=1386637364 node_paths=PackedStringArray("clickables")]
 script = ExtResource("8_l50va")
 clickables = [NodePath("../Phone/Sprite2D/ZoomIn"), NodePath("../Phone/Sprite2D/ZoomOut")]
-obstacles_to_clear = 3
-transition_delay = 0.5
+obstacles_to_clear = 4
+transition_delay = 3.0
 metadata/_custom_type_script = "uid://c44tybeisilbv"
 
 [node name="TriggerSfxOnClick" type="Node" parent="." unique_id=1655730162 node_paths=PackedStringArray("clickables")]
