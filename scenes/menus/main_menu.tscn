@@ -22,6 +22,7 @@
 [ext_resource type="Script" uid="uid://b20dyolly8na2" path="res://components/utils/ui/main_menu_visuals.gd" id="15_w3h5g"]
 [ext_resource type="AudioStream" uid="uid://5oal57qd8k25" path="res://audio/chapter1/sfx/click_selection.wav" id="17_a3hrp"]
 [ext_resource type="AudioStream" uid="uid://uea041hlh4dy" path="res://audio/menus/soundtrack/music_main_menu.wav" id="18_25m6f"]
+[ext_resource type="Script" uid="uid://driakv1w2un8a" path="res://components/utils/save_system/build_handler.gd" id="23_555wk"]
 
 [node name="MainMenu" type="CanvasLayer" unique_id=1477541867 node_paths=PackedStringArray("settings", "credits", "quit", "chapters_buttons")]
 script = ExtResource("1_0ettg")
@@ -188,3 +189,9 @@ chapter_buttons = [NodePath("../Fullscreen/PlayNina"), NodePath("../Fullscreen/P
 stream = ExtResource("18_25m6f")
 autoplay = true
 bus = &"Music"
+
+[node name="BuildTypeHandler" type="Node" parent="." unique_id=1400705500 node_paths=PackedStringArray("chapter_pictures", "chapter_buttons")]
+script = ExtResource("23_555wk")
+chapter_pictures = [NodePath("../Center/BackgroundNina"), NodePath("../Center/BackgroundAmani"), NodePath("../Center/BackgroundZlata")]
+chapter_buttons = [NodePath("../Fullscreen/PlayNina"), NodePath("../Fullscreen/PlayAmani"), NodePath("../Fullscreen/PlayZlata")]
+metadata/_custom_type_script = "uid://driakv1w2un8a"
