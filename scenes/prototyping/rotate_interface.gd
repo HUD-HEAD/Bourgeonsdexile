@@ -13,6 +13,13 @@ func _ready() -> void:
 	global_rotation_degrees = 0
 	turn_clockwise.mouse_entered.connect(_on_button_entered)
 	turn_clockwise.mouse_exited.connect(_on_button_exited)
+	
+	#HACK make rotation interface independent from camera zoom
+	#TODO rework
+	if !Engine.is_editor_hint():
+		var camera_zoom : Vector2 = get_viewport().get_camera_2d().zoom
+		turn_clockwise.scale = turn_clockwise.scale/camera_zoom
+		turn_clockwise.position.y = turn_clockwise.position.y/camera_zoom.y
 
 func connect_piece(piece : PuzzlePieceRotatable):
 	turn_clockwise.pressed.connect(piece.rotate_custom.bind(piece.ROTATION_STEP))
