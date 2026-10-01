@@ -51,6 +51,12 @@ func _deferred_goto_scene(path):
 	# Resume game
 	resume_game()
 	print("Loaded ", path)
+	
+	##HACK show return button except in MainMenu
+	if current_scene is MainMenu:
+		PauseController.hide_return()
+	else:
+		PauseController.show_return()
 
 func reload_scene():
 	goto_scene(get_tree().current_scene.scene_file_path)
