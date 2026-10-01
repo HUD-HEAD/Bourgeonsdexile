@@ -76,6 +76,10 @@ func is_chapter_unlock(chapter_id: int) -> bool:
 	return true
 
 func unlock_chapter(chapter_id: int = -1):
+	##Do not unlock chapter in museum build
+	if chapter_enable_museum_build_type:
+		return
+	
 	if chapter_id == -1:
 		chapter_id = last_checkpoint.chapter
 	else:
