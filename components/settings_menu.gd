@@ -7,7 +7,6 @@ class_name SettingsController extends CanvasLayer
 @onready var fullscreen_check = $TextureRect/FullscreenCheck
 @onready var vsync_check = $TextureRect/VsyncCheck
 @onready var close_button = $TextureRect/CloseButton
-@onready var close_credits = $CreditsContainer/CloseButton
 @onready var credits_button = $TextureRect/CreditsButton
 @onready var reset_button = $TextureRect/ResetButton
 @onready var reset_progress_button = $TextureRect/ResetProgressButton
@@ -54,7 +53,6 @@ func _ready() -> void:
 	reset_button.connect("pressed", _on_reset_player_preferences)
 	reset_progress_button.connect("pressed", _on_reset_player_progress)
 	close_button.connect("pressed", _on_close_button_pressed)
-	close_credits.connect("pressed", _on_close_button_pressed)
 	credits_button.connect("pressed", _on_credits_button_pressed)
 	resolution_popup.id_pressed.connect(_on_popup_menu_value_change)
 	resolution_container.connect("pressed", _on_select_resolution_dropdown) 
@@ -213,11 +211,8 @@ func _on_credits_button_pressed() -> void:
 
 # ── Cerrar ────────────────────────────────────────────
 func _on_close_button_pressed() -> void:
-	if credits_container.visible:
-		credits_container.visible = false
-	else :
-		PauseController.settings_enabled = false
-		SceneManager.close_settings()
+	PauseController.settings_enabled = false
+	SceneManager.close_settings()
 
 
 # ── Aplicar valores ───────────────────────────────────

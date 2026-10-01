@@ -1,13 +1,15 @@
 class_name MainMenu extends CanvasLayer
 
+@export var audio_click_chapter : AudioStream
+@export var credits_overlay : Control
+
 @export_group("Buttons")
 @export var settings : BaseButton
 @export var credits : BaseButton
 @export var quit : BaseButton
-
-@export var audio_click_chapter : AudioStream
-
 @export var chapters_buttons: Array[PlayChapterButton]
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_buttons_connect()
@@ -43,4 +45,4 @@ func _on_quit_pressed():
 
 ## Open credits
 func _on_credits_pressed():
-	pass
+	credits_overlay.show()
