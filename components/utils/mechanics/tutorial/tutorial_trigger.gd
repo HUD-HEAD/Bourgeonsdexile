@@ -3,7 +3,7 @@ extends Node2D
 @export var anim_player : AnimationPlayer
 @export var visuals : Node2D
 
-@export var wait_time : float = 5.0
+@export var wait_time : float = 15.0
 @export var visible_notifier : VisibleOnScreenNotifier2D
 
 func _ready() -> void:
