@@ -18,6 +18,7 @@ func _ready() -> void:
 	process_mode = PROCESS_MODE_ALWAYS
 	
 	canvas_layer = CanvasLayer.new()
+	canvas_layer.layer = 100
 	canvas_layer.name = "Canvas"
 	add_child(canvas_layer)
 	

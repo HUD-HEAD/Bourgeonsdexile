@@ -4,6 +4,10 @@ var checkpoints_config: CheckpointConfiguration
 var actual_save_file: SaveFile
 var last_checkpoint :CheckpointData
 
+#Only is true when the build is Museum Type in Build Handler Node on MainMenu scene
+var all_chapters_unlock_museum_build_type: bool
+var chapter_enable_museum_build_type: int
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	checkpoints_config = preload("res://components/utils/save_system/save_system_configurations/checkpoints_configuration.tres")
@@ -57,6 +61,11 @@ func save_last_checkpoint(chapter: int, comic: CheckpointConfiguration.comic_typ
 
 # ── Unlock Chapters ───────────────────────────────────
 func is_chapter_unlock(chapter_id: int) -> bool:
+	if all_chapters_unlock_museum_build_type:
+		if chapter_enable_museum_build_type == chapter_id:
+			return true
+		else:
+			return false 
 	if checkpoints_config.lock_chapters:
 		return actual_save_file.chapter_unlock >= chapter_id
 	

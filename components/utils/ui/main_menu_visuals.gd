@@ -7,9 +7,10 @@ extends Node
 var idx : int = 0
 
 func _ready() -> void:
-	for i in chapter_buttons.size():
-		chapter_buttons[i].mouse_entered.connect(_transition_to.bind(i))
-		_update_button_visuals()
+	if !SaveManager.all_chapters_unlock_museum_build_type:
+		for i in chapter_buttons.size():
+			chapter_buttons[i].mouse_entered.connect(_transition_to.bind(i))
+			_update_button_visuals()
 	
 	for i in chapter_pictures.size():
 		chapter_pictures[i].modulate.a = 0
