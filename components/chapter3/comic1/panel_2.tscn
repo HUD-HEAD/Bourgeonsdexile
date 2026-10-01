@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="5_brvls"]
 [ext_resource type="AudioStream" uid="uid://caxg33babas04" path="res://audio/chapter3/ambient/comic 1/breathing_sound.wav" id="6_brvls"]
 [ext_resource type="Script" uid="uid://7li3hk5ohcss" path="res://components/utils/audio/audio integration nodes/trigger_music_on_click.gd" id="7_d8hbt"]
+[ext_resource type="PackedScene" uid="uid://1itm8eikeop4" path="res://components/utils/mechanics/tutorial/tutorial_click.tscn" id="9_d8hbt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2it3g"]
 animations = [{
@@ -61,3 +62,6 @@ script = ExtResource("5_0gufp")
 clickables = [NodePath("../Clickable")]
 transition_delay = 3.0
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="TutorialClick" parent="." unique_id=1104291269 instance=ExtResource("9_d8hbt")]
+position = Vector2(187, 252)

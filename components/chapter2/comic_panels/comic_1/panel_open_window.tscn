@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c0svmnpyxirkn" path="res://graphics/chapter2/comics/comic1/frameopeningwindows/windowsclosed.png" id="2_cwbrp"]
 [ext_resource type="Texture2D" uid="uid://t051o0cm7vfu" path="res://graphics/chapter2/comics/comic1/frameopeningwindows/windowopen.png" id="3_r5n64"]
 [ext_resource type="Script" uid="uid://c44tybeisilbv" path="res://components/utils/comics/transition_counter.gd" id="4_cwbrp"]
+[ext_resource type="PackedScene" uid="uid://1itm8eikeop4" path="res://components/utils/mechanics/tutorial/tutorial_click.tscn" id="5_r5n64"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qabg4"]
 size = Vector2(479, 361)
@@ -29,3 +30,6 @@ texture = ExtResource("2_cwbrp")
 script = ExtResource("4_cwbrp")
 clickables = [NodePath("../Clickable")]
 metadata/_custom_type_script = "uid://c44tybeisilbv"
+
+[node name="TutorialClick" parent="." unique_id=1104291269 instance=ExtResource("5_r5n64")]
+position = Vector2(-189, -152)

@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://c46f5xvr6cp2j" path="res://graphics/chapter2/comics/comic2/framesky/rain_sky_10fps/rain_sky_0010.png" id="14_vd4p2"]
 [ext_resource type="Texture2D" uid="uid://dy6q7g8eicxfq" path="res://graphics/chapter2/comics/comic2/framesky/rain_sky_10fps/rain_sky_0011.png" id="15_pabba"]
 [ext_resource type="Texture2D" uid="uid://d26w77174yyex" path="res://graphics/chapter2/comics/comic2/framesky/rain_sky_10fps/rain_sky_0012.png" id="16_edmga"]
+[ext_resource type="PackedScene" uid="uid://dyfndyhgc808n" path="res://components/utils/mechanics/tutorial/tutorial_drag_left.tscn" id="19_c5ioo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_17ccm"]
 animations = [{
@@ -97,3 +98,6 @@ script = ExtResource("7_loucv")
 loop_name = 2200
 start_loop_on_enter_screen = false
 metadata/_custom_type_script = "uid://c6qa3ng0o3ony"
+
+[node name="TutorialDragLeft" parent="." unique_id=1104291269 instance=ExtResource("19_c5ioo")]
+position = Vector2(202, -66)

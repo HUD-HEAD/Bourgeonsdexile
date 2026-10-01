@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="3_dov0l"]
 [ext_resource type="PackedScene" uid="uid://bomhqj3lxkka3" path="res://components/utils/comics/scrolling_background.tscn" id="3_xgdjl"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="4_4tme6"]
+[ext_resource type="PackedScene" uid="uid://dyfndyhgc808n" path="res://components/utils/mechanics/tutorial/tutorial_drag_left.tscn" id="5_3cciq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dov0l"]
 size = Vector2(1874, 1164)
@@ -18,7 +19,7 @@ size = Vector2(1874, 1164)
 final_pos_x = -1454
 
 [node name="Background" parent="ScrollingBackground/PanNode" index="0" unique_id=524227348]
-position = Vector2(783, 0)
+position = Vector2(675, 0)
 texture = ExtResource("3_3cciq")
 
 [node name="Clickable_trigger_sfx" type="Area2D" parent="." unique_id=2081867023]
@@ -37,5 +38,7 @@ play_sfx_once = true
 metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1084433065]
+
+[node name="TutorialDragLeft" parent="." unique_id=1104291269 instance=ExtResource("5_3cciq")]
 
 [editable path="ScrollingBackground"]

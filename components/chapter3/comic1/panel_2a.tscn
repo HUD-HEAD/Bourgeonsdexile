@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://d3mq1f3ghf4sf" path="res://components/utils/mechanics/area_entered_enable.gd" id="5_2h6xf"]
 [ext_resource type="Script" uid="uid://u4636s8oa5d0" path="res://components/utils/comics/passive_panel_transitioner.gd" id="6_2h6xf"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="9_4h06k"]
+[ext_resource type="PackedScene" uid="uid://dyfndyhgc808n" path="res://components/utils/mechanics/tutorial/tutorial_drag_left.tscn" id="9_ej67h"]
 [ext_resource type="AudioStream" uid="uid://dxv6jnxqv4sbc" path="res://audio/chapter3/ambient/comic 1/panel_1.3_scissors_sound_interactive.wav" id="10_jx4a4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f4xom"]
@@ -138,3 +139,6 @@ play_sfx_once = true
 use_audio_stream = true
 stream = ExtResource("10_jx4a4")
 metadata/_custom_type_script = "uid://b7avucygxykbp"
+
+[node name="TutorialDragLeft" parent="." unique_id=1104291269 instance=ExtResource("9_ej67h")]
+position = Vector2(637, 231)

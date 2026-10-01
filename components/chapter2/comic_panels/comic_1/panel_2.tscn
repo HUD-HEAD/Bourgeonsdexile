@@ -6,14 +6,15 @@
 [ext_resource type="Shader" uid="uid://rnrjeipt84wq" path="res://scenes/prototyping/swipe_demo/alpha_mask.gdshader" id="3_bmrbi"]
 [ext_resource type="Script" uid="uid://b7avucygxykbp" path="res://components/utils/audio/audio integration nodes/trigger_sfx_on_click.gd" id="4_0e5mv"]
 [ext_resource type="Script" uid="uid://ba2byqse4kn1f" path="res://components/utils/mechanics/clickable.gd" id="5_746g0"]
+[ext_resource type="PackedScene" uid="uid://1itm8eikeop4" path="res://components/utils/mechanics/tutorial/tutorial_click.tscn" id="7_746g0"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_5u0xj"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_pw2x7"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_746g0"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bmrbi"]
 resource_local_to_scene = true
 shader = ExtResource("3_bmrbi")
-shader_parameter/texture_albedo = SubResource("ViewportTexture_5u0xj")
+shader_parameter/texture_albedo = SubResource("ViewportTexture_pw2x7")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0e5mv"]
 size = Vector2(1331, 1015)
@@ -35,7 +36,7 @@ position = Vector2(60, 64)
 texture = ExtResource("3_0e5mv")
 
 [node name="Unblur" parent="SwipePuzzle" index="2" unique_id=1608020792]
-material = SubResource("ShaderMaterial_746g0")
+material = SubResource("ShaderMaterial_bmrbi")
 texture = ExtResource("1_yy3ku")
 
 [node name="SubViewport" parent="SwipePuzzle" index="4" unique_id=1098068814]
@@ -55,5 +56,8 @@ sfx = 2102
 metadata/_custom_type_script = "uid://b7avucygxykbp"
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1665118568]
+
+[node name="TutorialClick" parent="." unique_id=1104291269 instance=ExtResource("7_746g0")]
+position = Vector2(149, 36)
 
 [editable path="SwipePuzzle"]
