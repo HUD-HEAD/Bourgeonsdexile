@@ -52,10 +52,13 @@ func _deferred_goto_scene(path):
 	resume_game()
 	print("Loaded ", path)
 	
+	##HACK show return button except in MainMenu
 	##HACK idle timer activates in scenes that are not main menu
 	if current_scene is MainMenu:
+		PauseController.hide_return()
 		IdleManager.stop_timer()
 	else:
+		PauseController.show_return()
 		IdleManager.start_timer()
 
 func reload_scene():

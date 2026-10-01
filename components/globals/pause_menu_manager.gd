@@ -44,6 +44,8 @@ func _ready() -> void:
 	settings_button.pressed.connect(on_press_settings)
 	main_menu_button.pressed.connect(on_press_main_menu)
 	
+	return_menu.hide()
+	
 	hide_menu()
 	pause_menu.visible = false
 	is_active = false
@@ -93,3 +95,9 @@ func hide_menu():
 	#wait TRANSITION_TIME to disable pause menu
 	await get_tree().create_timer(TRANSITION_TIME).timeout
 	pause_menu.visible = false
+
+func show_return():
+	return_menu.show()
+
+func hide_return():
+	return_menu.hide()
