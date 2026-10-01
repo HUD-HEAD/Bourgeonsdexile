@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cnh31hnfo56ua" path="res://graphics/menus/main_menu/CHAPTER 3/zlata.png" id="7_555wk"]
 [ext_resource type="Texture2D" uid="uid://ct5i3bkbx8svw" path="res://graphics/menus/main_menu/settings.png" id="8_6flho"]
 [ext_resource type="Texture2D" uid="uid://nhtaleop2o5n" path="res://graphics/menus/main_menu/egg1.png" id="8_7ty7c"]
-[ext_resource type="Texture2D" uid="uid://d26lcrjxp7yip" path="res://graphics/menus/main_menu/CHAPTER 3/zlata30.png" id="8_awvna"]
+[ext_resource type="Texture2D" uid="uid://bnu5ei48d6une" path="res://graphics/menus/main_menu/CHAPTER 3/tania30.png" id="8_555wk"]
 [ext_resource type="Texture2D" uid="uid://i1c3pk3cvh0p" path="res://graphics/menus/main_menu/egg2.png" id="9_6xkr4"]
 [ext_resource type="Texture2D" uid="uid://c1iqfkuqt2r1y" path="res://graphics/menus/main_menu/exit.png" id="9_ofye2"]
 [ext_resource type="Texture2D" uid="uid://bfn07djquliir" path="res://graphics/menus/main_menu/egg3.png" id="10_b8wrl"]
@@ -26,10 +26,10 @@
 
 [node name="MainMenu" type="CanvasLayer" unique_id=1477541867 node_paths=PackedStringArray("settings", "credits", "quit", "chapters_buttons")]
 script = ExtResource("1_0ettg")
+audio_click_chapter = ExtResource("17_a3hrp")
 settings = NodePath("Fullscreen/Settings")
 credits = NodePath("Fullscreen/VBoxContainer/Credits")
 quit = NodePath("Fullscreen/Exit")
-audio_click_chapter = ExtResource("17_a3hrp")
 chapters_buttons = [NodePath("Fullscreen/PlayNina"), NodePath("Fullscreen/PlayAmani"), NodePath("Fullscreen/PlayZlata")]
 
 [node name="Center" type="Control" parent="." unique_id=82372461]
@@ -62,7 +62,7 @@ texture = ExtResource("7_555wk")
 
 [node name="Zlata30" type="Sprite2D" parent="Center/BackgroundZlata/PortraitZlata" unique_id=1069966983]
 position = Vector2(-8, 466)
-texture = ExtResource("8_awvna")
+texture = ExtResource("8_555wk")
 
 [node name="BackgroundNina" type="Sprite2D" parent="Center" unique_id=284706347]
 texture = ExtResource("2_duh7t")
