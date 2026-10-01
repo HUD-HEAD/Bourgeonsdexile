@@ -23,13 +23,28 @@
 [ext_resource type="AudioStream" uid="uid://5oal57qd8k25" path="res://audio/chapter1/sfx/click_selection.wav" id="17_a3hrp"]
 [ext_resource type="AudioStream" uid="uid://uea041hlh4dy" path="res://audio/menus/soundtrack/music_main_menu.wav" id="18_25m6f"]
 [ext_resource type="Script" uid="uid://driakv1w2un8a" path="res://components/utils/save_system/build_handler.gd" id="23_555wk"]
+[ext_resource type="Texture2D" uid="uid://cqifo1rr2aeem" path="res://graphics/menus/settings/settingsAdrian/team.png" id="24_jygr6"]
+[ext_resource type="Script" uid="uid://bbiqxr254bujx" path="res://components/utils/ui/auto_scale_component.gd" id="25_n8vdk"]
+[ext_resource type="PackedScene" uid="uid://0yxb6bpcdte" path="res://scenes/menus/credits.tscn" id="26_n8vdk"]
 
-[node name="MainMenu" type="CanvasLayer" unique_id=1477541867 node_paths=PackedStringArray("settings", "credits", "quit", "chapters_buttons")]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6imgi"]
+texture = ExtResource("24_jygr6")
+modulate_color = Color(1, 1, 1, 0.78431374)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1hq2q"]
+texture = ExtResource("24_jygr6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wxcro"]
+texture = ExtResource("24_jygr6")
+modulate_color = Color(1, 1, 1, 0.8627451)
+
+[node name="MainMenu" type="CanvasLayer" unique_id=1477541867 node_paths=PackedStringArray("credits_overlay", "settings", "credits", "quit", "chapters_buttons")]
 script = ExtResource("1_0ettg")
-settings = NodePath("Fullscreen/Settings")
-credits = NodePath("Fullscreen/VBoxContainer/Credits")
-quit = NodePath("Fullscreen/Exit")
 audio_click_chapter = ExtResource("17_a3hrp")
+credits_overlay = NodePath("CreditsContainer")
+settings = NodePath("Fullscreen/Settings")
+credits = NodePath("CreditsButton")
+quit = NodePath("Fullscreen/Exit")
 chapters_buttons = [NodePath("Fullscreen/PlayNina"), NodePath("Fullscreen/PlayAmani"), NodePath("Fullscreen/PlayZlata")]
 
 [node name="Center" type="Control" parent="." unique_id=82372461]
@@ -199,3 +214,25 @@ chapter_idx = 2
 chapter_pictures = [NodePath("../Center/BackgroundNina"), NodePath("../Center/BackgroundAmani"), NodePath("../Center/BackgroundZlata")]
 chapter_buttons = [NodePath("../Fullscreen/PlayNina"), NodePath("../Fullscreen/PlayAmani"), NodePath("../Fullscreen/PlayZlata")]
 metadata/_custom_type_script = "uid://driakv1w2un8a"
+
+[node name="CreditsButton" type="Button" parent="." unique_id=167099725]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -164.5
+offset_top = -116.5
+offset_right = -49.999756
+offset_bottom = -50.0
+grow_horizontal = 0
+grow_vertical = 0
+pivot_offset = Vector2(57, 33)
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_6imgi")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1hq2q")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wxcro")
+script = ExtResource("25_n8vdk")
+
+[node name="CreditsContainer" parent="." unique_id=970946258 instance=ExtResource("26_n8vdk")]
+visible = false
