@@ -140,7 +140,7 @@ position = Vector2(64, 51)
 texture = ExtResource("13_287l7")
 centered = false
 
-[node name="PlayNina" type="TextureButton" parent="Fullscreen" unique_id=207728598]
+[node name="PlayNina" type="TextureButton" parent="Fullscreen" unique_id=207728598 node_paths=PackedStringArray("one_button_pos")]
 layout_mode = 0
 offset_left = 734.0
 offset_top = 498.0
@@ -150,8 +150,9 @@ mouse_default_cursor_shape = 2
 texture_normal = ExtResource("8_7ty7c")
 script = ExtResource("15_8hoqd")
 chapter_scene = "uid://cpvf5agmemtpm"
+one_button_pos = NodePath("../OneButtonPos")
 
-[node name="PlayAmani" type="TextureButton" parent="Fullscreen" unique_id=801460134]
+[node name="PlayAmani" type="TextureButton" parent="Fullscreen" unique_id=801460134 node_paths=PackedStringArray("one_button_pos")]
 layout_mode = 0
 offset_left = 383.0
 offset_top = 329.0
@@ -162,8 +163,9 @@ texture_normal = ExtResource("9_6xkr4")
 script = ExtResource("15_8hoqd")
 chapter_scene = "uid://5tmqeplllvij"
 chapter_index = 1
+one_button_pos = NodePath("../OneButtonPos")
 
-[node name="PlayZlata" type="TextureButton" parent="Fullscreen" unique_id=479857537]
+[node name="PlayZlata" type="TextureButton" parent="Fullscreen" unique_id=479857537 node_paths=PackedStringArray("one_button_pos")]
 layout_mode = 0
 offset_left = 379.0
 offset_top = 750.0
@@ -174,6 +176,7 @@ texture_normal = ExtResource("10_b8wrl")
 script = ExtResource("15_8hoqd")
 chapter_scene = "uid://dgdu011yhqlj2"
 chapter_index = 2
+one_button_pos = NodePath("../OneButtonPos")
 
 [node name="Settings" type="TextureButton" parent="Fullscreen" unique_id=991265530]
 visible = false
@@ -196,6 +199,18 @@ offset_bottom = 1028.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("9_ofye2")
 script = ExtResource("14_maniu")
+
+[node name="OneButtonPos" type="Control" parent="Fullscreen" unique_id=2056749842]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -393.0
+offset_right = -393.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VisualsHandler" type="Node" parent="." unique_id=891412753 node_paths=PackedStringArray("chapter_pictures", "chapter_buttons")]
 script = ExtResource("15_w3h5g")
