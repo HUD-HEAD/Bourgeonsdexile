@@ -21,14 +21,13 @@ func _ready() -> void:
 	canvas_layer.name = "Canvas"
 	add_child(canvas_layer)
 	
-	#NOTICE keep above pause menu for correct input handling
+	
 	return_menu = preload("res://components/utils/ui/return_menu.tscn").instantiate()
 	canvas_layer.add_child(return_menu)
 	
 	pause_menu = pause_menu_scene.instantiate()
 	canvas_layer.add_child(pause_menu)
 	
-
 	
 	#resume_button = $PauseMenu/Canvas/Resume_Button
 	#settings_button = $PauseMenu/Canvas/Settings_Button
