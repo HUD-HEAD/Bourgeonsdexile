@@ -29,6 +29,7 @@ AudioManager="*uid://ciqufic027swg"
 GameManager="*uid://d2wginhwv3f4"
 SaveManager="*uid://dll27e1wao2rl"
 PauseController="*uid://bx5rqpfsa8n7c"
+IdleManager="*uid://dpimoxcpnks40"
 
 [display]
 

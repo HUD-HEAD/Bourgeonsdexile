@@ -51,6 +51,12 @@ func _deferred_goto_scene(path):
 	# Resume game
 	resume_game()
 	print("Loaded ", path)
+	
+	##HACK idle timer activates in scenes that are not main menu
+	if current_scene is MainMenu:
+		IdleManager.stop_timer()
+	else:
+		IdleManager.start_timer()
 
 func reload_scene():
 	goto_scene(get_tree().current_scene.scene_file_path)

@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://dlhna8gw72po4"]
+
+[ext_resource type="Theme" uid="uid://cfm05ud7bccgg" path="res://components/utils/ui/general_theme.tres" id="1_fqcsu"]
+[ext_resource type="Script" uid="uid://betefluqx5xw8" path="res://components/utils/ui/idle_screen.gd" id="1_ony38"]
+[ext_resource type="Texture2D" uid="uid://nhtaleop2o5n" path="res://graphics/menus/main_menu/egg1.png" id="2_5l0dk"]
+[ext_resource type="Texture2D" uid="uid://bxph6dg8vuyh4" path="res://graphics/ui/cursor/pointinghand.png" id="3_ony38"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1900444057 node_paths=PackedStringArray("timer", "progress_bar", "interact_hint")]
+layer = 20
+script = ExtResource("1_ony38")
+timer = NodePath("IdleScreen/Timer")
+progress_bar = NodePath("IdleScreen/Control/TextureProgressBar")
+interact_hint = NodePath("IdleScreen/Control/Pointinghand")
+
+[node name="IdleScreen" type="Control" parent="." unique_id=2094339757]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="ColorRect" type="ColorRect" parent="IdleScreen" unique_id=255318142]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 0, 0, 0.16078432)
+
+[node name="Control" type="Control" parent="IdleScreen" unique_id=4571923]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="IdleScreen/Control" unique_id=2067411572]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = -40.5
+offset_right = 210.0
+offset_bottom = 40.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_fqcsu")
+theme_override_font_sizes/font_size = 72
+text = "Keep playing?
+
+
+
+
+Continuer?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="IdleScreen/Control" unique_id=1220782492]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -95.5
+offset_right = 95.0
+offset_bottom = 95.5
+grow_horizontal = 2
+grow_vertical = 2
+value = 60.0
+fill_mode = 5
+texture_progress = ExtResource("2_5l0dk")
+
+[node name="Pointinghand" type="Sprite2D" parent="IdleScreen/Control" unique_id=1602456492]
+position = Vector2(0, 357)
+texture = ExtResource("3_ony38")
+
+[node name="Timer" type="Timer" parent="IdleScreen" unique_id=1713928946]
+wait_time = 15.0
+one_shot = true
