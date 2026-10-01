@@ -39,6 +39,10 @@ func debug_load_checkpoint():
 
 # ── Save Progress ───────────────────────────────────
 func save_last_checkpoint(chapter: int, comic: CheckpointConfiguration.comic_types, panel: int):
+	##Do not save progress in museum build
+	if all_chapters_unlock_museum_build_type:
+		return
+	
 	last_checkpoint = CheckpointData.new(chapter)
 	last_checkpoint.comic = comic
 	last_checkpoint.panel = panel
