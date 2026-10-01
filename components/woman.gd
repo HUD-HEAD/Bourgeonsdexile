@@ -8,7 +8,7 @@ extends Node2D
 
 @export var play_walking_sfx: bool = false
 
-@export var walk_speed : int = 75
+@export var walk_speed : int = 85
 
 var walking : bool
 var walking_key_anim: String = "walking"
