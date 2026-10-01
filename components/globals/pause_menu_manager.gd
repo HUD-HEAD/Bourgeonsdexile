@@ -12,6 +12,8 @@ extends Node
 var is_active: bool
 var settings_enabled: bool = false
 
+var return_menu : Control
+
 func _ready() -> void:
 	process_mode = PROCESS_MODE_ALWAYS
 	
@@ -19,8 +21,14 @@ func _ready() -> void:
 	canvas_layer.name = "Canvas"
 	add_child(canvas_layer)
 	
+	#NOTICE keep above pause menu for correct input handling
+	return_menu = preload("res://components/utils/ui/return_menu.tscn").instantiate()
+	canvas_layer.add_child(return_menu)
+	
 	pause_menu = pause_menu_scene.instantiate()
 	canvas_layer.add_child(pause_menu)
+	
+
 	
 	#resume_button = $PauseMenu/Canvas/Resume_Button
 	#settings_button = $PauseMenu/Canvas/Settings_Button
@@ -30,8 +38,7 @@ func _ready() -> void:
 	resume_button = $Canvas/PauseMenu/Resume_Button
 	settings_button = $Canvas/PauseMenu/Settings_Button
 	main_menu_button = $Canvas/PauseMenu/MainMenu_Button
-
-
+	
 	
 	resume_button.pressed.connect(on_press_resume)
 	settings_button.pressed.connect(on_press_settings)
