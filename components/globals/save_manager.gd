@@ -12,6 +12,10 @@ var chapter_enable_museum_build_type: int
 func _ready() -> void:
 	checkpoints_config = preload("res://components/utils/save_system/save_system_configurations/checkpoints_configuration.tres")
 	actual_save_file = SaveFile.load_save_file()
+	
+	##HACK Make sure any leftover save file is reset
+	if all_chapters_unlock_museum_build_type:
+		reset_save_file()
 
 # ── Load Game ───────────────────────────────────
 func load_game(chapter: int):
@@ -77,7 +81,7 @@ func is_chapter_unlock(chapter_id: int) -> bool:
 
 func unlock_chapter(chapter_id: int = -1):
 	##Do not unlock chapter in museum build
-	if chapter_enable_museum_build_type:
+	if all_chapters_unlock_museum_build_type:
 		return
 	
 	if chapter_id == -1:
