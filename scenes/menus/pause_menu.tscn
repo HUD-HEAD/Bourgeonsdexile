@@ -45,6 +45,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_vertical_guides_ = [50.0, 184.0]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=2084473745]
 z_index = 100
@@ -53,11 +54,15 @@ texture = ExtResource("1_fwndu")
 
 [node name="Resume_Button" type="Button" parent="." unique_id=1196042830]
 z_index = 101
-layout_mode = 0
-offset_left = 100.0
-offset_top = 180.0
-offset_right = 235.0
-offset_bottom = 310.99988
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = -265.5
+offset_right = 185.0
+offset_bottom = -134.50012
+grow_vertical = 2
 mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_gsnt3")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_2wrho")
@@ -65,11 +70,15 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_gh0u6")
 
 [node name="Settings_Button" type="Button" parent="." unique_id=97382169]
 z_index = 101
-layout_mode = 0
-offset_left = 100.0
-offset_top = 430.0
-offset_right = 235.0
-offset_bottom = 560.9999
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = -65.49994
+offset_right = 185.0
+offset_bottom = 65.49994
+grow_vertical = 2
 mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_eyfc8")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_xiui8")
@@ -77,11 +86,15 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_gqhbq")
 
 [node name="MainMenu_Button" type="Button" parent="." unique_id=1034014931]
 z_index = 101
-layout_mode = 0
-offset_left = 100.0
-offset_top = 680.0
-offset_right = 235.0
-offset_bottom = 810.9999
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = 134.5
+offset_right = 185.0
+offset_bottom = 265.49988
+grow_vertical = 2
 mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_dgi6y")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_dqjbd")
