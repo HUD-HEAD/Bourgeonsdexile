@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://ds1gdssffhjo0" path="res://graphics/menus/settings/settingsAdrian/papers.png" id="14_5fu2g"]
 [ext_resource type="Texture2D" uid="uid://p4yqxm1eixov" path="res://graphics/menus/settings/settingsAdrian/fullscreen.png" id="16_udegp"]
 [ext_resource type="Texture2D" uid="uid://brsf276kfi0nr" path="res://graphics/menus/settings/settingsAdrian/playmusic.png" id="19_hiabw"]
-[ext_resource type="FontFile" uid="uid://cnb7i4tc8c6u2" path="res://graphics/ui/font/font_type.otf" id="27_2ibmv"]
+[ext_resource type="PackedScene" uid="uid://0yxb6bpcdte" path="res://scenes/menus/credits.tscn" id="22_5fu2g"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rrg86"]
 load_path = "res://.godot/imported/grabber.png-475198f4760f482d83ffe3adf0ba9ddb.ctex"
@@ -1220,6 +1220,7 @@ offset_top = 60.0
 offset_right = 179.50018
 offset_bottom = 126.5
 pivot_offset = Vector2(57, 33)
+mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_udegp")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_pt7eq")
 theme_override_styles/hover = SubResource("StyleBoxTexture_fd2q8")
@@ -1353,177 +1354,5 @@ position = Vector2(818.00006, 570)
 scale = Vector2(0.64, 0.64)
 texture = ExtResource("16_udegp")
 
-[node name="CreditsContainer" type="NinePatchRect" parent="." unique_id=322498125]
+[node name="CreditsContainer" parent="." unique_id=970946258 instance=ExtResource("22_5fu2g")]
 visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Background" type="TextureRect" parent="CreditsContainer" unique_id=1246306364]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_hayap")
-
-[node name="BackGround" type="NinePatchRect" parent="CreditsContainer" unique_id=46832164]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -750.0
-offset_top = -513.0
-offset_right = 750.0
-offset_bottom = 490.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_hayap")
-region_rect = Rect2(0, 8.890053, 475.51028, 265.80997)
-patch_margin_top = 38
-patch_margin_bottom = 98
-axis_stretch_vertical = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CreditsContainer" unique_id=1987576778]
-layout_mode = 0
-offset_left = 660.0
-offset_top = 73.545
-offset_right = 660.0
-offset_bottom = 73.545
-
-[node name="Credits" type="ScrollContainer" parent="CreditsContainer" unique_id=1658886980]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -638.0
-offset_top = 56.0
-offset_right = 644.0
-offset_bottom = 1003.0
-grow_horizontal = 2
-theme_override_colors/scroll_hint_vertical_color = Color(0.22799999, 0.236, 0.24, 1)
-scroll_hint_mode = 2
-tile_scroll_hint = true
-
-[node name="Label" type="Label" parent="CreditsContainer/Credits" unique_id=675914694]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("27_2ibmv")
-theme_override_font_sizes/font_size = 18
-text = "CREDITS
-=======
-
-Creative Director — Aida Navarro Redón
-Art Direction — Juana Miquel
-Illustration — Rosalía Armenteros · Sabela Álvarez
-Animation & Design — Léonie Courbat
-Lead Programmer — Claire Delhomme
-Programmer — Adrián Herrera Cosgaya
-Sound Design — Alv_Adina
-Testimonial Coordinator & Mental Health Counselor — Swann Pichon
-Research & Consulting — Nora Doukkali Elamajidi
-Gynaecological Advisor — Dr. Caroline Bensky
-Midwife Advisor — Caterina Montagnoli
-
-Video
-  Chapters 1 & 3 — Maevia Griffiths
-  Chapter 2 — Djiwel Filmz, Tiba Ink & Nora Doukkali
-Trailer — Rio Bravo Trailers
-─────────────────────
-This project was funded by the University of Applied Sciences and Arts
-Western Switzerland (HES-SO) grant \"Open and Participatory Innovation for
-the Benefit of Society\" and developed at the Geneva School of Art and
-Design (HEAD), with the invaluable collaboration of:
-
-Anthony Masure — Head of the Research Institute in Art and Design, HEAD
-Christelle Granite-Nobles — Secretary of the Research Institute in Art
-and Design, HEAD
-
-And in partnership with the Geneva School of Health Sciences (HEdS).
-─────────────────────
-This project was also partly supported by the Swiss National Science
-Foundation project \"The Future of Humanitarian Design,\" hosted at the
-Architecture Design department at HEAD and coordinated by Javier
-Fernández Contreras.
-─────────────────────
-Partners
-International Committee of the Red Cross (ICRC) — Melissa Kiehl, Head of
-Digital External Engagement and Immersive Technologies at the ICRC.
-International Red Cross and Red Crescent Museum (MICR) — Pascal Husmith,
-Director.
-
-In collaboration with
-Geneva University Hospitals (HUG) — Dr. Caroline Bensky & Dr. Noémie
-Cuissart de Grelle.
-CEFAM Association (Reception and Integration Center for Migrant Women and
-Their Preschool Children) — Belkis Tanriverdi, Head of Community
-Programs.
-The women members of CEFAM, for their participation in the Creative
-Workshop \"Voices of Maternity in Migration\" at HUG.
-═════════════════════
-LICENSE
-
-© 2026 HEAD – Genève (Geneva School of Art and Design, HES-SO)
-
-This is an open-source, non-commercial video game, developed with Godot
-Engine.
-
-Code
-  Licensed under the PolyForm Noncommercial License 1.0.0
-  https://polyformproject.org/licenses/noncommercial/1.0.0/
-
-Art & other data assets
-  Licensed under Creative Commons Attribution-NonCommercial-ShareAlike
-  4.0 International (CC BY-NC-SA 4.0)
-  https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-License exception
-  \"contraction_wobble.gdshader\" is adapted from \"eindacor_wavy_circle\"
-  (https://www.shadertoy.com/view/DtfBRf) by Eindacor_DS
-  (https://www.shadertoy.com/user/Eindacor_DS), used under CC BY-NC-SA 3.0
-  (https://creativecommons.org/licenses/by-nc-sa/3.0/deed.en).
-
-Engine
-  Made with Godot Engine (https://godotengine.org)
-  Godot Engine is licensed under the MIT License.
-  https://godotengine.org/license/
-
-  This game includes the following third-party Godot dependencies,
-  included under their respective licenses (see Help > About >
-  Third-party Licenses in the Godot editor for full text):
-    - FreeType — https://freetype.org
-    - mbed TLS — https://www.trustedfirmware.org/projects/mbed-tls/
-
-Fonts
-  Custom typeface created by the team, licensed under CC BY-NC-SA 4.0
-  (see Art & other data assets above).
-
-Sound Credits
-  Pending
-═════════════════════
-Playtesters
-Alberto Coello · Valentine Cuenot · Alvaro Daza · Jorge Miquel ·
-Guadalupe Ordóñez · Pedro Torres
-─────────────────────
-Acknowledgments
-Nuria Baños · Jean Courbat · Chema Esteo · Maria Fraile · Damien Greder ·
-Pau Jiménez · Albert Mesi Mbosa · Odyssa Montag Courbat · Alberto Navarro ·
-Rosa Redón Rubio · Alejandra Rosales
-"
-horizontal_alignment = 1
-
-[node name="CloseButton" type="Button" parent="CreditsContainer" unique_id=498740728]
-layout_mode = 0
-offset_left = 1794.0
-offset_top = 966.0
-offset_right = 1879.0
-offset_bottom = 1047.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_08gdp")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_5fu2g")
-theme_override_styles/hover = SubResource("StyleBoxTexture_hiabw")
-script = ExtResource("10_afkw7")
