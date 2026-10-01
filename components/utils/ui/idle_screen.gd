@@ -26,8 +26,9 @@ func _process(_delta: float) -> void:
 func _on_timer_timeout():
 	print_debug("idle screen timeout")
 	stop_process()
+	AudioManager.reset_audio()
 	SceneManager.goto_scene(ProjectSettings.get_setting("application/run/main_scene"))
-
+	
 
 func animate_hint():
 	var tween = interact_hint.create_tween()
