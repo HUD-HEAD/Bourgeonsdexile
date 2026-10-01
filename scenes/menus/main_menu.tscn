@@ -161,6 +161,7 @@ chapter_scene = "uid://dgdu011yhqlj2"
 chapter_index = 2
 
 [node name="Settings" type="TextureButton" parent="Fullscreen" unique_id=991265530]
+visible = false
 layout_mode = 0
 offset_left = 1795.0
 offset_top = 55.0
@@ -171,6 +172,7 @@ texture_normal = ExtResource("8_6flho")
 script = ExtResource("14_maniu")
 
 [node name="Exit" type="TextureButton" parent="Fullscreen" unique_id=1226304829]
+visible = false
 layout_mode = 0
 offset_left = 1795.0
 offset_top = 952.0
@@ -192,6 +194,8 @@ bus = &"Music"
 
 [node name="BuildTypeHandler" type="Node" parent="." unique_id=1400705500 node_paths=PackedStringArray("chapter_pictures", "chapter_buttons")]
 script = ExtResource("23_555wk")
+build_type = 1
+chapter_idx = 2
 chapter_pictures = [NodePath("../Center/BackgroundNina"), NodePath("../Center/BackgroundAmani"), NodePath("../Center/BackgroundZlata")]
 chapter_buttons = [NodePath("../Fullscreen/PlayNina"), NodePath("../Fullscreen/PlayAmani"), NodePath("../Fullscreen/PlayZlata")]
 metadata/_custom_type_script = "uid://driakv1w2un8a"

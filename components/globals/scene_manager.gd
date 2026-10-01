@@ -76,6 +76,9 @@ func _on_cancel_pressed():
 
 ## Show settings
 func open_settings():
+	##Prevent opening settings several times
+	if is_instance_valid(settings_instance):
+		return
 	var settings_scene = ResourceLoader.load("res://scenes/menus/settings_menu.tscn")
 	settings_instance = settings_scene.instantiate()
 	get_tree().root.add_child(settings_instance)

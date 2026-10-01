@@ -36,10 +36,11 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		if OS.has_feature("debug"):
 			if debug_console.visible:
 				debug_console.toggle()
-		
 		PauseController.show_pause_menu()
-	
-	if OS.has_feature("debug"):
+	##If museum build, open options with special input
+	elif event.is_action_pressed("museum_options") && SaveManager.all_chapters_unlock_museum_build_type:
+		SceneManager.open_settings()
+	elif OS.has_feature("debug"):
 		_debug_inputs(event)
 	
 #TESTING
